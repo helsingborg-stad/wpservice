@@ -1,0 +1,18 @@
+{
+    "name": "helsingborg-stad/wp-service",
+    "description": "simplifies WordPress integration by providing a centralized WpService that exposes global WordPress functions in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
+    "autoload": {
+        "psr-4": {
+            "WpService\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Thor Brink",
+            "email": "thor.brink@helsingborg.se"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    }
+}
