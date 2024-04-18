@@ -1,0 +1,14 @@
+<?php
+
+namespace WpService\FileSystem;
+
+interface GetFileContent
+{
+    /**
+     * Get the content of a file.
+     *
+     * @param string $path The path to the file.
+     * @return string The content of the file.
+     */
+    public function getFileContent(string $path): string;
+}

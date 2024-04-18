@@ -1,0 +1,55 @@
+<?php
+
+namespace WpService;
+
+use WpService\Contracts;
+
+interface WpService extends
+    Contracts\AddAction,
+    Contracts\AddRole,
+    Contracts\AdminNotice,
+    Contracts\ApplyFilters,
+    Contracts\DeletePost,
+    Contracts\DeleteTerm,
+    Contracts\EnqueueScript,
+    Contracts\EnqueueStyle,
+    Contracts\EscHtml,
+    Contracts\GetChildren,
+    Contracts\GetCurrentScreen,
+    Contracts\GetCurrentUser,
+    Contracts\GetEditTermLink,
+    Contracts\GetEnvironmentType,
+    Contracts\GetOption,
+    Contracts\GetPermalink,
+    Contracts\GetPost,
+    Contracts\GetPostMeta,
+    Contracts\GetPostParent,
+    Contracts\GetPosts,
+    Contracts\GetPostTerms,
+    Contracts\GetTerm,
+    Contracts\GetTermMeta,
+    Contracts\GetTerms,
+    Contracts\GetTheId,
+    Contracts\GetThePostThumbnailUrl,
+    Contracts\GetTheTitle,
+    Contracts\GetUsers,
+    Contracts\InsertTerm,
+    Contracts\IsAdmin,
+    Contracts\IsWPError,
+    Contracts\LoadPluginTextDomain,
+    Contracts\NextScheduled,
+    Contracts\PluginBasename,
+    Contracts\PluginDirPath,
+    Contracts\PluginsUrl,
+    Contracts\RegisterPostType,
+    Contracts\RegisterScript,
+    Contracts\RegisterStyle,
+    Contracts\RegisterTaxonomy,
+    Contracts\RemoveMenuPage,
+    Contracts\RemoveSubMenuPage,
+    Contracts\RestEnsureResponse,
+    Contracts\ScheduleEvent,
+    Contracts\SetPostTerms,
+    Contracts\TermExists
+{
+}

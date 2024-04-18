@@ -10,10 +10,32 @@
 		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
 			"packages": "nano,bash-completion"
 		}
-	}
+	},
 
 	// Configure tool-specific properties.
-	// "customizations": {},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ritwickdey.liveserver",
+				"valeryanm.vscode-phpsab"
+			],
+			"settings": {
+				"intelephense.environment.phpVersion": "8.2",
+				"php.validate.run": "onSave",
+				"phpsab.fixerEnable": true,
+				"phpsab.snifferShowSources": true,
+				"phpsab.executablePathCS": "./vendor/bin/phpcs",
+				"editor.formatOnSave": true,
+				"phpsab.allowedAutoRulesets": [
+					"phpcs.xml"
+				],
+				"editor.defaultFormatter": "valeryanm.vscode-phpsab",
+				"[php]": {
+					"editor.defaultFormatter": "valeryanm.vscode-phpsab"
+				}
+			}
+		}
+	}
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [8080]
