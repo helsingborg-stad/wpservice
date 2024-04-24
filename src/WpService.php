@@ -6,6 +6,7 @@ use WpService\Contracts;
 
 interface WpService extends
     Contracts\AddAction,
+    Contracts\AddFilter,
     Contracts\AddRole,
     Contracts\AdminNotice,
     Contracts\ApplyFilters,
