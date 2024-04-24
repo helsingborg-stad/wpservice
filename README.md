@@ -19,6 +19,25 @@ Simplifies WordPress integration by providing a centralized WpService that expos
 
 ## About WpService
 
+Enable the use of global WordPress functions in plugins and themes where applying Interface Segregation. Different flavors of the WordPress Service can be utilized by applying available decorators.
+
+## Getting Started
+
+### Installation
+
+1. Install the package via composer:
+```bash
+composer require helsingborg-stad/wpservice
+```
+
+2. Use the WpService in your plugin or theme:
+```php
+use WpService\Implementations\NativeWpService;
+
+$wpService = new NativeWpService();
+$wpService->getTheId();
+```
+
 ### Built With
 
 * PHP
