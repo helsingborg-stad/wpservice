@@ -1,5 +1,5 @@
 {
-    "name": "helsingborg-stad/wp-service",
+    "name": "helsingborg-stad/wpservice",
     "description": "Simplifies WordPress integration by providing a centralized WpService that exposes global WordPress functions in a streamlined manner. Simplify your development workflow and enhance WordPress integration with ease.",
     "license": "MIT",
     "autoload": {
