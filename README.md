@@ -4,8 +4,9 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![License][license-shield]][license-url]
-![PHP Version](https://img.shields.io/badge/PHP->=8.1-blue)
+
 ![Unit Tests](https://github.com/helsingborg-stad/wpservice/actions/workflows/php-test.yml/badge.svg)
+![PHP Versions][php-versions-shield]
 
 
 # WpService
@@ -18,13 +19,28 @@ Simplifies WordPress integration by providing a centralized WpService that expos
 
 ## About WpService
 
-### Built With
-
-* PHP
+Enable the use of global WordPress functions in plugins and themes where applying Interface Segregation. Different flavors of the WordPress Service can be utilized by applying available decorators.
 
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+### Installation
+
+1. Install the package via composer:
+```bash
+composer require helsingborg-stad/wpservice
+```
+
+2. Use the WpService in your plugin or theme:
+```php
+use WpService\Implementations\NativeWpService;
+
+$wpService = new NativeWpService();
+$wpService->getTheId();
+```
+
+### Built With
+
+* PHP
 
 ## Tests
 
@@ -45,11 +61,6 @@ Contributions are what make the open source community such an amazing place to b
 
 Distributed under the [MIT License][license-url].
 
-## Acknowledgements
-
-- [othneildrew Best README Template](https://github.com/othneildrew/Best-README-Template)
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/helsingborg-stad/api-event-manager
@@ -62,3 +73,4 @@ Distributed under the [MIT License][license-url].
 [issues-url]: https://github.com/helsingborg-stad/wpservice/issues
 [license-shield]: https://img.shields.io/github/license/helsingborg-stad/api-event-manager.svg?style=flat-square
 [license-url]: https://github.com/helsingborg-stad/wpservice/blob/main/LICENSE
+[php-versions-shield]: https://img.shields.io/badge/php-^8.1-777bb3.svg?logo=php&logoColor=white&labelColor=555555
