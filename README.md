@@ -61,11 +61,6 @@ Contributions are what make the open source community such an amazing place to b
 
 Distributed under the [MIT License][license-url].
 
-## Acknowledgements
-
-- [othneildrew Best README Template](https://github.com/othneildrew/Best-README-Template)
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/helsingborg-stad/api-event-manager
