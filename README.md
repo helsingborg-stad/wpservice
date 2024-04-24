@@ -4,8 +4,9 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![License][license-shield]][license-url]
-![PHP Version](https://img.shields.io/badge/PHP->=8.1-blue)
+
 ![Unit Tests](https://github.com/helsingborg-stad/wpservice/actions/workflows/php-test.yml/badge.svg)
+![PHP Versions][php-versions-shield]
 
 
 # WpService
@@ -21,10 +22,6 @@ Simplifies WordPress integration by providing a centralized WpService that expos
 ### Built With
 
 * PHP
-
-## Getting Started
-
-To get a local copy up and running follow these simple steps.
 
 ## Tests
 
@@ -62,3 +59,4 @@ Distributed under the [MIT License][license-url].
 [issues-url]: https://github.com/helsingborg-stad/wpservice/issues
 [license-shield]: https://img.shields.io/github/license/helsingborg-stad/api-event-manager.svg?style=flat-square
 [license-url]: https://github.com/helsingborg-stad/wpservice/blob/main/LICENSE
+[php-versions-shield]: https://img.shields.io/badge/php-^8.1-777bb3.svg?logo=php&logoColor=white&labelColor=555555
