@@ -63,14 +63,14 @@ Distributed under the [MIT License][license-url].
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/helsingborg-stad/api-event-manager
+[contributors-shield]: https://img.shields.io/github/contributors/helsingborg-stad/wpservice
 [contributors-url]: https://github.com/helsingborg-stad/wpservice/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/helsingborg-stad/api-event-manager.svg?style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/helsingborg-stad/wpservice.svg?style=flat-square
 [forks-url]: https://github.com/helsingborg-stad/wpservice/network/members
-[stars-shield]: https://img.shields.io/github/stars/helsingborg-stad/api-event-manager.svg?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/helsingborg-stad/wpservice.svg?style=flat-square
 [stars-url]: https://github.com/helsingborg-stad/wpservice/stargazers
-[issues-shield]: https://img.shields.io/github/issues/helsingborg-stad/api-event-manager.svg?style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/helsingborg-stad/wpservice.svg?style=flat-square
 [issues-url]: https://github.com/helsingborg-stad/wpservice/issues
-[license-shield]: https://img.shields.io/github/license/helsingborg-stad/api-event-manager.svg?style=flat-square
+[license-shield]: https://img.shields.io/github/license/helsingborg-stad/wpservice.svg?style=flat-square
 [license-url]: https://github.com/helsingborg-stad/wpservice/blob/main/LICENSE
 [php-versions-shield]: https://img.shields.io/badge/php-^8.1-777bb3.svg?logo=php&logoColor=white&labelColor=555555
