@@ -464,4 +464,12 @@ class NativeWpService implements WPService
     {
         return esc_html($text);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getPostStatuses(): array
+    {
+        return get_post_statuses();
+    }
 }
