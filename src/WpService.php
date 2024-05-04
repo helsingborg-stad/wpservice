@@ -39,6 +39,7 @@ interface WpService extends
     Contracts\IsAdmin,
     Contracts\IsWPError,
     Contracts\LoadPluginTextDomain,
+    Contracts\Mail,
     Contracts\NextScheduled,
     Contracts\PluginBasename,
     Contracts\PluginDirPath,
