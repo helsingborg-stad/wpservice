@@ -454,4 +454,17 @@ class WpServiceDecorator implements WPService
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function mail(
+        string|array $to,
+        string $subject,
+        string $message,
+        string|array $headers = '',
+        string|array $attachments = array()
+    ): bool {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 }

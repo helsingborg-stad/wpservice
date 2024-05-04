@@ -472,4 +472,17 @@ class NativeWpService implements WPService
     {
         return get_post_statuses();
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function mail(
+        string|array $to,
+        string $subject,
+        string $message,
+        string|array $headers = '',
+        string|array $attachments = array()
+    ): bool {
+        return wp_mail($to, $subject, $message, $headers, $attachments);
+    }
 }
