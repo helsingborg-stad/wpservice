@@ -501,4 +501,12 @@ class NativeWpService implements WPService
     {
         return get_user_meta($userId, $key, $single);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getUserdata(int $userId): WP_User|false
+    {
+        return get_userdata($userId);
+    }
 }

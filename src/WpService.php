@@ -35,6 +35,7 @@ interface WpService extends
     Contracts\GetTheId,
     Contracts\GetThePostThumbnailUrl,
     Contracts\GetTheTitle,
+    Contracts\GetUserdata,
     Contracts\GetUserMeta,
     Contracts\GetUsers,
     Contracts\InsertTerm,

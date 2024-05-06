@@ -483,4 +483,12 @@ class WpServiceDecorator implements WPService
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getUserdata(int $userId): WP_User|false
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 }
