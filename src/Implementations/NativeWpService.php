@@ -485,4 +485,12 @@ class NativeWpService implements WPService
     ): bool {
         return wp_mail($to, $subject, $message, $headers, $attachments);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function doAction(string $hookName, mixed $args): void
+    {
+        do_action($hookName, $args);
+    }
 }

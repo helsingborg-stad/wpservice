@@ -467,4 +467,12 @@ class WpServiceDecorator implements WPService
     ): bool {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function doAction(string $hookName, mixed $args): void
+    {
+        $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 }
