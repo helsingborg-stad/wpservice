@@ -12,6 +12,11 @@
     <rule ref="Squiz.Commenting.FunctionComment.Missing">
         <exclude-pattern>./src/*/*\.test\.php$</exclude-pattern>
     </rule>
+    
+    <!-- Do not require escaping output in tests -->
+    <rule ref="WordPress.Security.EscapeOutput.OutputNotEscaped">
+        <exclude-pattern>./src/*/*\.test\.php$</exclude-pattern>
+    </rule>
 
     <!-- exclude rule -->
     <rule ref="WordPress.Security.EscapeOutput.ExceptionNotEscaped">

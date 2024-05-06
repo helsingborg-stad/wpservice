@@ -10,11 +10,12 @@ namespace WpService\Contracts;
 interface DoAction
 {
     /**
-     * Do an action in WordPress.
+     * Interface for performing an action.
      *
-     * @param string $hookName The name of the action hook.
-     * @param mixed $args Additional arguments passed to the action hook.
+     * @param string $hook_name The name of the action to be executed.
+     * @param mixed  ...$arg Optional. Additional arguments which are
+     * passed on to the functions hooked to the action. Default empty.
      * @return void
      */
-    public function doAction(string $hookName, mixed $args): void;
+    public function doAction(string $hookName, mixed ...$arg): void;
 }
