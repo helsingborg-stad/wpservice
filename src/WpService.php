@@ -12,6 +12,7 @@ interface WpService extends
     Contracts\ApplyFilters,
     Contracts\DeletePost,
     Contracts\DeleteTerm,
+    Contracts\DoAction,
     Contracts\EnqueueScript,
     Contracts\EnqueueStyle,
     Contracts\EscHtml,
