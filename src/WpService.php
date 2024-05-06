@@ -5,6 +5,8 @@ namespace WpService;
 use WpService\Contracts;
 
 interface WpService extends
+    Contracts\__,
+    Contracts\_E,
     Contracts\AddAction,
     Contracts\AddFilter,
     Contracts\AddRole,
