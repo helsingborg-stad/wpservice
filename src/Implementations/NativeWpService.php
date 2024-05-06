@@ -509,4 +509,20 @@ class NativeWpService implements WPService
     {
         return get_userdata($userId);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function __($text, $domain = 'default'): string // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        return __($text, $domain); // phpcs:ignore
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function _e($text, $domain = 'default'): void // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
+    {
+        _e($text, $domain); // phpcs:ignore
+    }
 }
