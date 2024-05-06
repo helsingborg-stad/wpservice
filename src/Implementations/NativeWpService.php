@@ -493,4 +493,12 @@ class NativeWpService implements WPService
     {
         do_action($hookName, ...$arg);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getUserMeta(int $userId, string $key, bool $single = false): mixed
+    {
+        return get_user_meta($userId, $key, $single);
+    }
 }

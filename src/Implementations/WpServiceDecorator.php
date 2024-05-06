@@ -475,4 +475,12 @@ class WpServiceDecorator implements WPService
     {
         $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getUserMeta(int $userId, string $key, bool $single = false): mixed
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 }
