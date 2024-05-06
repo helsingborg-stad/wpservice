@@ -489,8 +489,8 @@ class NativeWpService implements WPService
     /**
      * @inheritDoc
      */
-    public function doAction(string $hookName, mixed $args): void
+    public function doAction(string $hookName, mixed ...$arg): void
     {
-        do_action($hookName, $args);
+        do_action($hookName, ...$arg);
     }
 }
