@@ -525,4 +525,12 @@ class NativeWpService implements WPService
     {
         _e($text, $domain); // phpcs:ignore
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getEditPostLink(int|WP_Post $post, string $context = 'display'): ?string
+    {
+        return get_edit_post_link($post, $context);
+    }
 }

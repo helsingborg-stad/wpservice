@@ -21,6 +21,7 @@ interface WpService extends
     Contracts\GetChildren,
     Contracts\GetCurrentScreen,
     Contracts\GetCurrentUser,
+    Contracts\GetEditPostLink,
     Contracts\GetEditTermLink,
     Contracts\GetEnvironmentType,
     Contracts\GetOption,
