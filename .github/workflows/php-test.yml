@@ -43,7 +43,7 @@ jobs:
       run: composer config --unset extra.installer-paths
 
     - name: Install dependencies
-      run: composer install --prefer-dist
+      run: composer install --prefer-dist --ignore-platform-reqs
 
     - name: Run unit tests
       run: vendor/bin/phpunit
