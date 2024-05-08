@@ -557,4 +557,12 @@ class NativeWpService implements WPService
     {
         return get_stylesheet_directory_uri();
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getBloginfo(string $show, string $filter = 'raw'): string
+    {
+        return get_bloginfo($show, $filter);
+    }
 }
