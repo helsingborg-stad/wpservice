@@ -549,4 +549,12 @@ class NativeWpService implements WPService
     {
         return get_theme_mods();
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getStylesheetDirectoryUri(): string
+    {
+        return get_stylesheet_directory_uri();
+    }
 }
