@@ -18,6 +18,7 @@ interface WpService extends
     Contracts\EnqueueScript,
     Contracts\EnqueueStyle,
     Contracts\EscHtml,
+    Contracts\GetBloginfo,
     Contracts\GetChildren,
     Contracts\GetCurrentScreen,
     Contracts\GetCurrentUser,
