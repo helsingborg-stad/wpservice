@@ -533,4 +533,20 @@ class NativeWpService implements WPService
     {
         return get_edit_post_link($post, $context);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getThemeMod(string $name, mixed $defaultValue = false): mixed
+    {
+        return get_theme_mod($name, $defaultValue);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getThemeMods(): array
+    {
+        return get_theme_mods();
+    }
 }
