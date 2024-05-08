@@ -515,4 +515,20 @@ class WpServiceDecorator implements WPService
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getThemeMod(string $name, mixed $defaultValue = false): mixed
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getThemeMods(): array
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 }
