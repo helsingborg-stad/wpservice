@@ -79,11 +79,7 @@ class ManifestFilePathResolver implements FilePathResolverInterface
     private function getBasePath(): string
     {
         $callerPlugin = $this->getCallerPlugin();
-        if(is_null($callerPlugin)) {
-            throw new Exception('Could not determine the base name of the plugin.');
-        }
-
-        return $this->wpService->pluginDirPath($callerPlugin);
+        return $this->wpService->pluginDirPath($callerPlugin ?? __FILE__);
     }
 
     /**

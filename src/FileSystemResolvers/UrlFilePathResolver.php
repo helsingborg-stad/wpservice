@@ -40,11 +40,7 @@ class UrlFilePathResolver implements FilePathResolverInterface
     private function getBaseName(): string
     {   
         $callerPlugin = $this->getCallerPlugin();
-        if(is_null($callerPlugin)) {
-            throw new Exception('Could not determine the base name of the plugin.');
-        }
-
-        $baseName     = $this->wpService->pluginBasename($callerPlugin);
+        $baseName     = $this->wpService->pluginBasename($callerPlugin ?? __FILE__);
         $explodedPath = explode('/', $baseName);
 
         return rtrim(
