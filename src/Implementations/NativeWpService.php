@@ -565,4 +565,12 @@ class NativeWpService implements WPService
     {
         return get_bloginfo($show, $filter);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function autop(string $text, bool $br = true): string
+    {
+        return wpautop($text, $br);
+    }
 }

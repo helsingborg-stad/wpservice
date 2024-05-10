@@ -12,6 +12,7 @@ interface WpService extends
     Contracts\AddRole,
     Contracts\AdminNotice,
     Contracts\ApplyFilters,
+    Contracts\Autop,
     Contracts\DeletePost,
     Contracts\DeleteTerm,
     Contracts\DoAction,
