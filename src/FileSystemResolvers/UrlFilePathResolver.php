@@ -4,6 +4,7 @@ namespace WpService\FileSystemResolvers;
 
 use WpService\Contracts\PluginBasename;
 use WpService\Contracts\PluginsUrl;
+use Exception;
 
 /**
  * Class UrlFilePathResolver
@@ -37,13 +38,35 @@ class UrlFilePathResolver implements FilePathResolverInterface
      * @return string The base name of the plugin.
      */
     private function getBaseName(): string
-    {
-        $baseName     = $this->wpService->pluginBasename(__FILE__);
+    {   
+        $callerPlugin = $this->getCallerPlugin();
+        if(is_null($callerPlugin)) {
+            throw new Exception('Could not determine the base name of the plugin.');
+        }
+
+        $baseName     = $this->wpService->pluginBasename($callerPlugin);
         $explodedPath = explode('/', $baseName);
 
         return rtrim(
             array_shift($explodedPath),
             DIRECTORY_SEPARATOR
         ) . DIRECTORY_SEPARATOR;
+    }
+
+    /**
+     * Get the file path of the plugin that called the current method.
+     * 
+     * @return string|null The file path of the plugin that called the current method.
+     */
+    private function getCallerPlugin(): ?string {
+        $trace = (new Exception())->getTrace(); 
+        foreach ($trace as $item) {
+            foreach(['wp-content/plugins', 'wp-content/mu-plugins'] as $pluginDir) {
+                if (isset($item['file']) && strpos($item['file'], $pluginDir) !== false) {
+                    return $item['file'];
+                }
+            }
+        }
+        return null;
     }
 }
