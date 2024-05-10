@@ -547,4 +547,12 @@ class WpServiceDecorator implements WPService
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function autop(string $text, bool $br = true): string
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 }
