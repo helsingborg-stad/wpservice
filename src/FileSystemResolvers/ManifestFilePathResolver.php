@@ -5,6 +5,7 @@ namespace WpService\FileSystemResolvers;
 use WpService\Contracts\PluginDirPath;
 use WpService\FileSystem\FileExists;
 use WpService\FileSystem\GetFileContent;
+use Exception;
 
 /**
  * Class ManifestFilePathResolver
@@ -77,7 +78,12 @@ class ManifestFilePathResolver implements FilePathResolverInterface
      */
     private function getBasePath(): string
     {
-        return $this->wpService->pluginDirPath(__FILE__);
+        $callerPlugin = $this->getCallerPlugin();
+        if(is_null($callerPlugin)) {
+            throw new Exception('Could not determine the base name of the plugin.');
+        }
+
+        return $this->wpService->pluginDirPath($callerPlugin);
     }
 
     /**
@@ -88,5 +94,22 @@ class ManifestFilePathResolver implements FilePathResolverInterface
     private function getManifestPath(): string
     {
         return dirname($this->manifestFilePath);
+    }
+
+    /**
+     * Get the file path of the plugin that called the current method.
+     * 
+     * @return string|null The file path of the plugin that called the current method.
+     */
+    private function getCallerPlugin(): ?string {
+        $trace = (new Exception())->getTrace(); 
+        foreach ($trace as $item) {
+            foreach(['wp-content/plugins', 'wp-content/mu-plugins'] as $pluginDir) {
+                if (isset($item['file']) && strpos($item['file'], $pluginDir) !== false) {
+                    return $item['file'];
+                }
+            }
+        }
+        return null;
     }
 }
