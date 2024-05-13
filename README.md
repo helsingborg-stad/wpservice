@@ -38,6 +38,22 @@ $wpService = new NativeWpService();
 $wpService->getTheId();
 ```
 
+## Decorators
+
+### Text Domain Decorator
+Applies default text domain to translation functions.
+
+```php
+use WpService\Implementations\WpServiceWithTextDomain;
+use WpService\Implementations\NativeWpService;
+
+$service = new NativeWpService();
+$service = new WpServiceWithTextDomain($service, 'my-text-domain');
+
+$service->__('Hello World'); // Will automatically use 'my-text-domain' as the text domain.
+```
+
+
 ### Built With
 
 * PHP
