@@ -38,7 +38,7 @@ class UrlFilePathResolver implements FilePathResolverInterface
      * @return string The base name of the plugin.
      */
     private function getBaseName(): string
-    {   
+    {
         $callerPlugin = $this->getCallerPlugin();
         $baseName     = $this->wpService->pluginBasename($callerPlugin ?? __FILE__);
         $explodedPath = explode('/', $baseName);
@@ -51,13 +51,14 @@ class UrlFilePathResolver implements FilePathResolverInterface
 
     /**
      * Get the file path of the plugin that called the current method.
-     * 
+     *
      * @return string|null The file path of the plugin that called the current method.
      */
-    private function getCallerPlugin(): ?string {
-        $trace = (new Exception())->getTrace(); 
+    private function getCallerPlugin(): ?string
+    {
+        $trace = (new Exception())->getTrace();
         foreach ($trace as $item) {
-            foreach(['wp-content/plugins', 'wp-content/mu-plugins'] as $pluginDir) {
+            foreach (['wp-content/plugins', 'wp-content/mu-plugins'] as $pluginDir) {
                 if (isset($item['file']) && strpos($item['file'], $pluginDir) !== false) {
                     return $item['file'];
                 }
