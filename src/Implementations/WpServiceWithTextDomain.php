@@ -18,6 +18,7 @@ class WpServiceWithTextDomain extends WpServiceDecorator
      */
     public function __construct(private WPService $inner, private string $textDomain)
     {
+        parent::__construct($inner);
     }
 
     /**
