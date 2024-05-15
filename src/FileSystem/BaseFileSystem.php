@@ -40,8 +40,8 @@ class BaseFileSystem implements FileSystem
     /**
      * @inheritDoc
      */
-    public function getFileContent(string $file): string
+    public function getFileContent(string $path): string|false
     {
-        return $this->fileSystem->get_contents($file);
+        return $this->fileSystem->get_contents($path);
     }
 }
