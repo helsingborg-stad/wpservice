@@ -559,4 +559,86 @@ class WpServiceLazyDecorator implements WPService
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+
+
+    /**
+     * @inheritDoc
+     */
+    public function cacheAdd(int|string $key, mixed $data, string $group = '', int $expire = 0): bool
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function cacheAddMultiple(array $items, string $group = '', int $expire = 0): array
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function cacheDelete(int|string $key, string $group = ''): bool
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function cacheDeleteMultiple(array $keys, string $group = ''): bool
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function cacheFlush(): bool
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function cacheGet(int|string $key, string $group = '', bool $force = false, ?bool &$found = null): mixed
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function cacheGetMultiple(array $keys, string $group = '', bool $force = false): array
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function cacheReplace(int|string $key, mixed $data, string $group = '', int $expire = 0): bool
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function cacheSet(int|string $key, mixed $data, string $group = '', int $expire = 0): bool
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function cacheSetMultiple(array $items, string $group = '', int $expire = 0): array
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 }
