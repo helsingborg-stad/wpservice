@@ -573,4 +573,84 @@ class NativeWpService implements WPService
     {
         return wpautop($text, $br);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function cacheAdd(int|string $key, mixed $data, string $group = '', int $expire = 0): bool
+    {
+        return wp_cache_add($key, $data, $group, $expire);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function cacheAddMultiple(array $items, string $group = '', int $expire = 0): array
+    {
+        return wp_cache_add_multiple($items, $group, $expire);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function cacheDelete(int|string $key, string $group = ''): bool
+    {
+        return wp_cache_delete($key, $group);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function cacheDeleteMultiple(array $keys, string $group = ''): bool
+    {
+        return wp_cache_delete_multiple($keys, $group);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function cacheFlush(): bool
+    {
+        return wp_cache_flush();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function cacheGet(int|string $key, string $group = '', bool $force = false, ?bool &$found = null): mixed
+    {
+        return wp_cache_get($key, $group, $force, $found);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function cacheGetMultiple(array $keys, string $group = '', bool $force = false): array
+    {
+        return wp_cache_get_multiple($keys, $group, $force);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function cacheReplace(int|string $key, mixed $data, string $group = '', int $expire = 0): bool
+    {
+        return wp_cache_replace($key, $data, $group, $expire);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function cacheSet(int|string $key, mixed $data, string $group = '', int $expire = 0): bool
+    {
+        return wp_cache_set($key, $data, $group, $expire);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function cacheSetMultiple(array $items, string $group = '', int $expire = 0): array
+    {
+        return wp_cache_set_multiple($items, $group, $expire);
+    }
 }
