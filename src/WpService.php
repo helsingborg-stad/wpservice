@@ -72,6 +72,7 @@ interface WpService extends
     Contracts\RemoveMenuPage,
     Contracts\RemoveSubMenuPage,
     Contracts\RestEnsureResponse,
+    Contracts\SanitizeTitle,
     Contracts\ScheduleEvent,
     Contracts\SetPostTerms,
     Contracts\TermExists

@@ -653,4 +653,12 @@ class NativeWpService implements WPService
     {
         return wp_cache_set_multiple($items, $group, $expire);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function sanitizeTitle($title, $fallbackTitle = '', $context = 'save'): string
+    {
+        return sanitize_title($title, $fallbackTitle, $context);
+    }
 }
