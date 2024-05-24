@@ -56,6 +56,7 @@ interface WpService extends
     Contracts\GetUserdata,
     Contracts\GetUserMeta,
     Contracts\GetUsers,
+    Contracts\InsertPost,
     Contracts\InsertTerm,
     Contracts\IsAdmin,
     Contracts\IsWPError,

@@ -661,4 +661,12 @@ class NativeWpService implements WPService
     {
         return sanitize_title($title, $fallbackTitle, $context);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function insertPost($postarr, $wpError = false, $fireAfterHooks = true): int|WP_Error
+    {
+        return wp_insert_post($postarr, $wpError, $fireAfterHooks);
+    }
 }
