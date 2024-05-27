@@ -44,6 +44,7 @@ interface WpService extends
     Contracts\GetPosts,
     Contracts\GetPostStatuses,
     Contracts\GetPostTerms,
+    Contracts\GetPostType,
     Contracts\GetStylesheetDirectoryUri,
     Contracts\GetTerm,
     Contracts\GetTermMeta,
