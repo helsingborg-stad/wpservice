@@ -18,5 +18,9 @@ interface GetPostTypes
      *                               must match; 'not' means no elements may match. Default 'and'.
      * @return string[]|WP_Post_Type[] An array of post type names or objects.
      */
-    public function getPostTypes(array|string $args = array(), string $output = 'names', string $operator = 'and'): array;
+    public function getPostTypes(
+        array|string $args = array(),
+        string $output = 'names',
+        string $operator = 'and'
+    ): array;
 }
