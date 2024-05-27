@@ -719,7 +719,7 @@ class NativeWpService implements WPService
     public function wpRemoteGet(string $url, array $args = []): array|WP_Error
     {
         return wp_remote_get($url, $args);
-    } 
+    }
 
     /**
      * @inheritDoc
