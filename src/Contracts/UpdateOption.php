@@ -7,7 +7,7 @@ interface UpdateOption
     /**
      * Updates the value of an option that was already added.
      * @see https://developer.wordpress.org/reference/functions/update_option/
-     * 
+     *
      * @param string      $option   Name of the option to update. Expected to not be SQL-escaped.
      * @param mixed       $value    Option value. Must be serializable if non-scalar. Expected to not be SQL-escaped.
      * @param string|bool $autoload Optional. Whether to load the option when WordPress starts up. For existing options,
