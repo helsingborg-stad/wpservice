@@ -675,6 +675,9 @@ class NativeWpService implements WPService
      */
     public function mediaSideloadImage($file, $postId = 0, $desc = null, $returnType = 'html'): string|int|WP_Error
     {
+        require_once(ABSPATH . 'wp-admin/includes/media.php');
+        require_once(ABSPATH . 'wp-admin/includes/file.php');
+        require_once(ABSPATH . 'wp-admin/includes/image.php');
         return media_sideload_image($file, $postId, $desc, $returnType);
     }
 }
