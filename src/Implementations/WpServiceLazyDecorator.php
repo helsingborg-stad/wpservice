@@ -673,4 +673,12 @@ class WpServiceLazyDecorator implements WPService
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function setThemeMod(string $name, mixed $value): bool
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 }
