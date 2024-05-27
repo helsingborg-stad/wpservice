@@ -19,8 +19,8 @@ interface GetPostTypes
      * @return string[]|WP_Post_Type[] An array of post type names or objects.
      */
     public function getPostTypes(
-        array|string $args = array(), 
-        string $output = 'names', 
+        array|string $args = array(),
+        string $output = 'names',
         string $operator = 'and'
     ): array;
 }
