@@ -700,4 +700,12 @@ class WpServiceDecorator implements WPService
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpRemoteRetrieveBody(array|WP_Error $response): string
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 }

@@ -82,6 +82,7 @@ interface WpService extends
     Contracts\SetThemeMod,
     Contracts\TermExists,
     Contracts\UpdateOption,
-    Contracts\WpRemoteGet
+    Contracts\WpRemoteGet,
+    Contracts\WpRemoteRetrieveBody
 {
 }

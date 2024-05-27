@@ -720,4 +720,12 @@ class NativeWpService implements WPService
     {
         return wp_remote_get($url, $args);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpRemoteRetrieveBody(array|WP_Error $response): string
+    {
+        return wp_remote_get($url, $args);
+    }
 }
