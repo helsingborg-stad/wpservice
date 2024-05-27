@@ -81,6 +81,7 @@ interface WpService extends
     Contracts\SetPostTerms,
     Contracts\SetThemeMod,
     Contracts\TermExists,
-    Contracts\UpdateOption
+    Contracts\UpdateOption,
+    Contracts\WpRemoteGet
 {
 }

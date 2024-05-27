@@ -712,4 +712,12 @@ class NativeWpService implements WPService
     {
         return update_option($option, $value, $autoload);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpRemoteGet(string $url, array $args = []): array|WP_Error
+    {
+        return wp_remote_get($url, $args);
+    }
 }
