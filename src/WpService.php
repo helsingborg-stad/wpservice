@@ -80,6 +80,7 @@ interface WpService extends
     Contracts\ScheduleEvent,
     Contracts\SetPostTerms,
     Contracts\SetThemeMod,
-    Contracts\TermExists
+    Contracts\TermExists,
+    Contracts\UpdateOption
 {
 }

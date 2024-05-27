@@ -704,4 +704,12 @@ class NativeWpService implements WPService
     {
         return set_theme_mod($name, $value);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function updateOption(string $option, mixed $value, string|bool $autoload = null): bool
+    {
+        return update_option($option, $value, $autoload);
+    }
 }
