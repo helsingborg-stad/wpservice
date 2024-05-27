@@ -78,6 +78,7 @@ interface WpService extends
     Contracts\SanitizeTitle,
     Contracts\ScheduleEvent,
     Contracts\SetPostTerms,
+    Contracts\SetThemeMod,
     Contracts\TermExists
 {
 }
