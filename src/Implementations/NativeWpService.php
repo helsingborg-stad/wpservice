@@ -692,6 +692,14 @@ class NativeWpService implements WPService
     /**
      * @inheritDoc
      */
+    public function getPostTypes(array|string $args = [], string $output = 'names', string $operator = 'and'): array
+    {
+        return get_post_types($args, $output, $operator);
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function setThemeMod(string $name, mixed $value): bool
     {
         return set_theme_mod($name, $value);

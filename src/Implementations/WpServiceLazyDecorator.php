@@ -677,6 +677,14 @@ class WpServiceLazyDecorator implements WPService
     /**
      * @inheritDoc
      */
+    public function getPostTypes(array|string $args = [], string $output = 'names', string $operator = 'and'): array
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function setThemeMod(string $name, mixed $value): bool
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
