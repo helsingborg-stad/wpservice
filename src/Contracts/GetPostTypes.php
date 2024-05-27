@@ -7,8 +7,6 @@ use WP_Post;
 interface GetPostTypes
 {
     /**
-     * Gets a list of all registered post type objects.
-
      * @see https://developer.wordpress.org/reference/functions/get_post_types/
      *
      * @param array|string $args     Optional. An array of key => value arguments to match against
