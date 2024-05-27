@@ -709,7 +709,7 @@ class WpServiceLazyDecorator implements WPService
     /**
      * @inheritDoc
      */
-    public function WpRemoteRetrieveBody(array|WP_Error $response): string
+    public function wpRemoteRetrieveBody(array|WP_Error $response): string
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
