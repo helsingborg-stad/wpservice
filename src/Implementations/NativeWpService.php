@@ -680,4 +680,12 @@ class NativeWpService implements WPService
         require_once(ABSPATH . 'wp-admin/includes/image.php');
         return media_sideload_image($file, $postId, $desc, $returnType);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getPostType(null|int|WP_Post $post = null): string|false
+    {
+        return get_post_type($post);
+    }
 }
