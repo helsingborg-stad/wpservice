@@ -652,4 +652,12 @@ class WpServiceDecorator implements WPService
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function mediaSideloadImage($file, $postId = 0, $desc = null, $returnType = 'html'): string|int|WP_Error
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 }

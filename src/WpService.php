@@ -62,6 +62,7 @@ interface WpService extends
     Contracts\IsWPError,
     Contracts\LoadPluginTextDomain,
     Contracts\Mail,
+    Contracts\MediaSideloadImage,
     Contracts\NextScheduled,
     Contracts\PluginBasename,
     Contracts\PluginDirPath,

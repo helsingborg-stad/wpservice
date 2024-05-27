@@ -669,4 +669,12 @@ class NativeWpService implements WPService
     {
         return wp_insert_post($postarr, $wpError, $fireAfterHooks);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function mediaSideloadImage($file, $postId = 0, $desc = null, $returnType = 'html'): string|int|WP_Error
+    {
+        return media_sideload_image($file, $postId, $desc, $returnType);
+    }
 }
