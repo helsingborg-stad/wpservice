@@ -668,6 +668,14 @@ class WpServiceDecorator implements WPService
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getPostTypes(array|string $args = [], string $output = 'names', string $operator = 'and'): array
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 
     /**
      * @inheritDoc
