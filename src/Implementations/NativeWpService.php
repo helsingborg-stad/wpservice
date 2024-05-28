@@ -726,6 +726,6 @@ class NativeWpService implements WPService
      */
     public function wpRemoteRetrieveBody(array|WP_Error $response): string
     {
-        return wp_remote_get($url, $args);
+        return wp_remote_retrieve_body($response);
     }
 }
