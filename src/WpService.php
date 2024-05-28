@@ -75,14 +75,14 @@ interface WpService extends
     Contracts\RegisterTaxonomy,
     Contracts\RemoveMenuPage,
     Contracts\RemoveSubMenuPage,
+    Contracts\RemoteGet,
+    Contracts\RemoteRetrieveBody,
     Contracts\RestEnsureResponse,
     Contracts\SanitizeTitle,
     Contracts\ScheduleEvent,
     Contracts\SetPostTerms,
     Contracts\SetThemeMod,
     Contracts\TermExists,
-    Contracts\UpdateOption,
-    Contracts\WpRemoteGet,
-    Contracts\WpRemoteRetrieveBody
+    Contracts\UpdateOption
 {
 }
