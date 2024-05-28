@@ -700,6 +700,22 @@ class NativeWpService implements WPService
     /**
      * @inheritDoc
      */
+    public function remoteGet(string $url, array $args = []): array|WP_Error
+    {
+        return wp_remote_get($url, $args);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function remoteRetrieveBody(array|WP_Error $response): string
+    {
+        return wp_remote_retrieve_body($response);
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function setThemeMod(string $name, mixed $value): bool
     {
         return set_theme_mod($name, $value);
@@ -711,21 +727,5 @@ class NativeWpService implements WPService
     public function updateOption(string $option, mixed $value, string|bool $autoload = null): bool
     {
         return update_option($option, $value, $autoload);
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function wpRemoteGet(string $url, array $args = []): array|WP_Error
-    {
-        return wp_remote_get($url, $args);
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function wpRemoteRetrieveBody(array|WP_Error $response): string
-    {
-        return wp_remote_retrieve_body($response);
     }
 }

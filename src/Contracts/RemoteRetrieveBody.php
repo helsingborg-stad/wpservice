@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 use WP_Error;
 
-interface WpRemoteRetrieveBody
+interface RemoteRetrieveBody
 {
     /**
      * Retrieve only the body from the raw response.
@@ -13,5 +13,5 @@ interface WpRemoteRetrieveBody
      * @param array|WP_Error $response HTTP response.
      * @return string The body of the response. Empty string if no body or incorrect parameter given.
      */
-    public function wpRemoteRetrieveBody(array|WP_Error $response): string;
+    public function remoteRetrieveBody(array|WP_Error $response): string;
 }

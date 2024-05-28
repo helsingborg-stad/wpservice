@@ -685,6 +685,22 @@ class WpServiceLazyDecorator implements WPService
     /**
      * @inheritDoc
      */
+    public function remoteGet(string $url, array $args = []): array|WP_Error
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function remoteRetrieveBody(array|WP_Error $response): string
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function setThemeMod(string $name, mixed $value): bool
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
@@ -694,22 +710,6 @@ class WpServiceLazyDecorator implements WPService
      * @inheritDoc
      */
     public function updateOption(string $option, mixed $value, string|bool $autoload = null): bool
-    {
-        return $this->inner->{__FUNCTION__}(...func_get_args());
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function wpRemoteGet(string $url, array $args = []): array|WP_Error
-    {
-        return $this->inner->{__FUNCTION__}(...func_get_args());
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function wpRemoteRetrieveBody(array|WP_Error $response): string
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
