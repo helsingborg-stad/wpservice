@@ -82,6 +82,7 @@ interface WpService extends
     Contracts\ScheduleEvent,
     Contracts\SetPostTerms,
     Contracts\SetThemeMod,
+    Contracts\TaxonomyExists,
     Contracts\TermExists,
     Contracts\UpdateOption
 {

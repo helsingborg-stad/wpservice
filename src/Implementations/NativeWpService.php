@@ -728,4 +728,12 @@ class NativeWpService implements WPService
     {
         return update_option($option, $value, $autoload);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function taxonomyExists(string $taxonomy): bool
+    {
+        return taxonomy_exists($taxonomy);
+    }
 }
