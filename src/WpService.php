@@ -73,6 +73,7 @@ interface WpService extends
     Contracts\RegisterScript,
     Contracts\RegisterStyle,
     Contracts\RegisterTaxonomy,
+    Contracts\RegisterTaxonomyForObjectType,
     Contracts\RemoveMenuPage,
     Contracts\RemoveSubMenuPage,
     Contracts\RemoteGet,

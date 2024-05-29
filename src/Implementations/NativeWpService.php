@@ -736,4 +736,12 @@ class NativeWpService implements WPService
     {
         return taxonomy_exists($taxonomy);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function registerTaxonomyForObjectType(string $taxonomy, string $objectType): bool
+    {
+        return register_taxonomy_for_object_type($taxonomy, $objectType);
+    }
 }
