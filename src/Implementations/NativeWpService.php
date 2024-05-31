@@ -744,4 +744,12 @@ class NativeWpService implements WPService
     {
         return register_taxonomy_for_object_type($taxonomy, $objectType);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function isSingle($post = ''): bool
+    {
+        return is_single($post);
+    }
 }

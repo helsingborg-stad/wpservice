@@ -61,6 +61,7 @@ interface WpService extends
     Contracts\InsertPost,
     Contracts\InsertTerm,
     Contracts\IsAdmin,
+    Contracts\IsSingle,
     Contracts\IsWPError,
     Contracts\LoadPluginTextDomain,
     Contracts\Mail,
