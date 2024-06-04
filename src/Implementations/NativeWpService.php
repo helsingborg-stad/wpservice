@@ -45,9 +45,9 @@ class NativeWpService implements WPService
     /**
      * @inheritDoc
      */
-    public function applyFilters(string $hook_name, mixed $value, mixed $args): mixed
+    public function applyFilters(string $hookName, mixed $value, mixed ...$args): mixed
     {
-        return apply_filters($hook_name, $value, $args);
+        return apply_filters($hookName, $value, $args);
     }
 
     /**

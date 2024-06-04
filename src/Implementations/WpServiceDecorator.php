@@ -54,7 +54,7 @@ class WpServiceDecorator implements WPService
     /**
      * @inheritDoc
      */
-    public function applyFilters(string $hookName, mixed $value, mixed $args): mixed
+    public function applyFilters(string $hookName, mixed $value, mixed ...$args): mixed
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
