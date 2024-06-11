@@ -54,6 +54,21 @@ class WpServiceDecorator implements WPService
     /**
      * @inheritDoc
      */
+    public function addMetaBox(
+        string $id,
+        string $title,
+        callable $callback,
+        string|array|WP_Screen $screen = null,
+        string $context = ‘advanced’,
+        string $priority = ‘default’,
+        array $callback_args = null
+    ): void {
+        $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function applyFilters(string $hookName, mixed $value, mixed ...$args): mixed
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
@@ -298,6 +313,14 @@ class WpServiceDecorator implements WPService
      * @inheritDoc
      */
     public function getCurrentScreen(): ?WP_Screen
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function navMenuDisabledCheck(int|string $nav_menu_selected_id, bool $display = true): string|false
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -729,6 +752,14 @@ class WpServiceDecorator implements WPService
      * @inheritDoc
      */
     public function isSingle($post = ''): bool
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function walkNavMenuTree(array $items, int $depth, object $args): string
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }

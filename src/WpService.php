@@ -9,6 +9,7 @@ interface WpService extends
     Contracts\_E,
     Contracts\AddAction,
     Contracts\AddFilter,
+    Contracts\AddMetaBox,
     Contracts\AddRole,
     Contracts\AdminNotice,
     Contracts\ApplyFilters,
@@ -66,6 +67,7 @@ interface WpService extends
     Contracts\LoadPluginTextDomain,
     Contracts\Mail,
     Contracts\MediaSideloadImage,
+    Contracts\NavMenuDisabledCheck,
     Contracts\NextScheduled,
     Contracts\PluginBasename,
     Contracts\PluginDirPath,
@@ -86,6 +88,7 @@ interface WpService extends
     Contracts\SetThemeMod,
     Contracts\TaxonomyExists,
     Contracts\TermExists,
-    Contracts\UpdateOption
+    Contracts\UpdateOption,
+    Contracts\WalkNavMenuTree
 {
 }
