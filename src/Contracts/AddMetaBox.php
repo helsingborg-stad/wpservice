@@ -37,12 +37,12 @@ interface AddMetaBox
      *                                              to your callback). Default null.
      */
     public function addMetaBox(
-        string $id, 
-        string $title, 
-        callable $callback, 
-        string|array|WP_Screen $screen = null, 
-        string $context = 'advanced', 
-        string $priority = 'default', 
+        string $id,
+        string $title,
+        callable $callback,
+        string|array|WP_Screen $screen = null,
+        string $context = 'advanced',
+        string $priority = 'default',
         array $callback_args = null
     ): void;
 }

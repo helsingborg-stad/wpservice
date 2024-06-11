@@ -55,12 +55,12 @@ class WpServiceDecorator implements WPService
      * @inheritDoc
      */
     public function addMetaBox(
-        string $id, 
-        string $title, 
-        callable $callback, 
-        string|array|WP_Screen $screen = null, 
-        string $context = ‘advanced’, 
-        string $priority = ‘default’, 
+        string $id,
+        string $title,
+        callable $callback,
+        string|array|WP_Screen $screen = null,
+        string $context = ‘advanced’,
+        string $priority = ‘default’,
         array $callback_args = null
     ): void {
         $this->inner->{__FUNCTION__}(...func_get_args());
@@ -320,11 +320,11 @@ class WpServiceDecorator implements WPService
     /**
      * @inheritDoc
      */
-    public function navMenuDisabledCheck(int|string $nav_menu_selected_id, bool $display = true ): string|false
+    public function navMenuDisabledCheck(int|string $nav_menu_selected_id, bool $display = true): string|false
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
-    
+
     /**
      * @inheritDoc
      */
@@ -759,7 +759,7 @@ class WpServiceDecorator implements WPService
     /**
      * @inheritDoc
      */
-    public function walkNavMenuTree(array $items, int $depth, object $args): string 
+    public function walkNavMenuTree(array $items, int $depth, object $args): string
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }

@@ -15,5 +15,5 @@ interface NavMenuDisabledCheck
      * @param bool       $display              Whether to display or just return the string.
      * @return string|false Disabled attribute if at least one menu exists, false if not.
      */
-    public function navMenuDisabledCheck(int|string $nav_menu_selected_id, bool $display = true ): string|false;
+    public function navMenuDisabledCheck(int|string $nav_menu_selected_id, bool $display = true): string|false;
 }
