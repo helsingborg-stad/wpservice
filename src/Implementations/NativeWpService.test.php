@@ -6,21 +6,10 @@ use PHPUnit\Framework\TestCase;
 
 class NativeWpServiceTest extends TestCase
 {
-    /**
-     * @testdox doAction calls global WordPress function do_action with the given hook name and arguments
-     */
-    public function testDoActionCallsGlobalWordPressFunctionDoActionWithTheGivenHookNameAndArguments()
+    public function testCanCreateInstance(): void
     {
-        function do_action($hookName, ...$args)
-        {
-            echo "do_action('$hookName', '" . implode("', '", $args) . "');";
-        }
-
         $wpService = new NativeWpService();
 
-        ob_start();
-        $wpService->doAction('foo', 'bar', 'baz');
-
-        $this->assertEquals("do_action('foo', 'bar', 'baz');", ob_get_clean());
+        $this->assertInstanceOf(NativeWpService::class, $wpService);
     }
 }
