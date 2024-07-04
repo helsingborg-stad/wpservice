@@ -17,8 +17,8 @@ class FakeWpServiceTest extends TestCase
      */
     public function testAddAction()
     {
-        $wpService = new FakeWpService(['addAction' => ['testTag' => true]]);
-        $callable  = fn () => 'foo';
+        $wpService = new FakeWpService(['addAction' => 'testTag']);
+        $callable  = fn () => null;
 
         $result = $wpService->addAction('testTag', $callable, 10, 1);
 
@@ -31,8 +31,9 @@ class FakeWpServiceTest extends TestCase
      */
     public function testAddFilter()
     {
-        $wpService = new FakeWpService(['addFilter' => ['testTag' => true]]);
-        $callable  = fn () => 'foo';
+        $callableReturn = fn($hookName) => $hookName === 'testTag';
+        $wpService      = new FakeWpService(['addFilter' => $callableReturn]);
+        $callable       = fn () => null;
 
         $result = $wpService->addFilter('testTag', $callable, 10, 1);
 
@@ -45,7 +46,8 @@ class FakeWpServiceTest extends TestCase
      */
     public function testApplyFilters()
     {
-        $wpService = new FakeWpService(['applyFilters' => ['testTag' => 'foo']]);
+        $callableReturn = fn($hookName) => $hookName === 'testTag' ? 'foo' : null;
+        $wpService      = new FakeWpService(['applyFilters' => $callableReturn]);
 
         $result = $wpService->applyFilters('testTag', 'bar', 10, 1);
 
@@ -71,7 +73,8 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetPermalink()
     {
-        $wpService = new FakeWpService(['getPermalink' => [1 => 'http://example.com/foo']]);
+        $callableReturn = fn($post) => $post === 1 ? 'http://example.com/foo' : false;
+        $wpService      = new FakeWpService(['getPermalink' => $callableReturn]);
 
         $result = $wpService->getPermalink(1);
 
@@ -84,8 +87,7 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetPost()
     {
-        $post = $this->getWpPost(['ID' => 1]);
-        // $wpService = new FakeWpService(['getPost' => [1 => $post]]);
+        $post      = $this->getWpPost(['ID' => 1]);
         $wpService = new FakeWpService(['getPost' => $post]);
 
         $result = $wpService->getPost(1);
@@ -99,7 +101,8 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetPostMeta()
     {
-        $wpService = new FakeWpService(['getPostMeta' => [1 => ['testKey' => 'foo']]]);
+        $callableReturn = fn($postId, $key) => $postId === 1 && $key === 'testKey' ? 'foo' : null;
+        $wpService      = new FakeWpService(['getPostMeta' => $callableReturn]);
 
         $result = $wpService->getPostMeta(1, 'testKey', true);
 
@@ -112,8 +115,9 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetPostParent()
     {
-        $parent    = $this->getWpPost(['ID' => 1]);
-        $wpService = new FakeWpService(['getPostParent' => [1 => $parent]]);
+        $parent         = $this->getWpPost(['ID' => 1]);
+        $callableReturn = fn($postId) => $postId === 1 ? $parent : null;
+        $wpService      = new FakeWpService(['getPostParent' => $callableReturn]);
 
         $result = $wpService->getPostParent(1);
 
@@ -140,8 +144,9 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetTerm()
     {
-        $term      = $this->getWpTerm(['term_id' => 1]);
-        $wpService = new FakeWpService(['getTerm' => ['testTaxonomy' => [1 => $term]]]);
+        $term           = $this->getWpTerm(['term_id' => 1]);
+        $callableReturn = fn($termId, $taxonomy) => $termId === 1 && $taxonomy === 'testTaxonomy' ? $term : null;
+        $wpService      = new FakeWpService(['getTerm' => $callableReturn]);
 
         $result = $wpService->getTerm(1, 'testTaxonomy');
 
@@ -154,7 +159,8 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetTermMeta()
     {
-        $wpService = new FakeWpService(['getTermMeta' => [1 => ['testKey' => 'foo']]]);
+        $callableReturn = fn($termId, $key) => $termId === 1 && $key === 'testKey' ? 'foo' : null;
+        $wpService      = new FakeWpService(['getTermMeta' => $callableReturn]);
 
         $result = $wpService->getTermMeta(1, 'testKey', true);
 
@@ -194,7 +200,8 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetTheTitle()
     {
-        $wpService = new FakeWpService(['getTheTitle' => [1 => 'Foo']]);
+        $callableReturn = fn($postId) => $postId === 1 ? 'Foo' : null;
+        $wpService      = new FakeWpService(['getTheTitle' => $callableReturn]);
 
         $result = $wpService->getTheTitle(1);
 
@@ -247,7 +254,8 @@ class FakeWpServiceTest extends TestCase
      */
     public function testRemoveMenuPage()
     {
-        $wpService = new FakeWpService(['removeMenuPage' => ['testMenuSlug' => ['removedTestPage']]]);
+        $callableReturn = fn($menuSlug) => $menuSlug === 'testMenuSlug' ? ['removedTestPage'] : null;
+        $wpService      = new FakeWpService(['removeMenuPage' => $callableReturn]);
 
         $result = $wpService->removeMenuPage('testMenuSlug');
 
@@ -260,9 +268,13 @@ class FakeWpServiceTest extends TestCase
      */
     public function testRemoveSubMenuPage()
     {
-        $wpService = new FakeWpService(
-            ['removeSubMenuPage' => ['testParentSlug' => ['testSubMenuSlug' => ['removedTestPage']]]]
-        );
+        $callableReturn = function ($parentSlug, $submenuSlug) {
+            return $parentSlug === 'testParentSlug' && $submenuSlug === 'testSubMenuSlug'
+                ? ['removedTestPage']
+                : null;
+        };
+
+        $wpService = new FakeWpService(['removeSubMenuPage' => $callableReturn]);
 
         $result = $wpService->removeSubMenuPage('testParentSlug', 'testSubMenuSlug');
 
@@ -275,7 +287,8 @@ class FakeWpServiceTest extends TestCase
      */
     public function testTermExistsWithTaxonomyParameter()
     {
-        $wpService = new FakeWpService(['termExists' => ['testTaxonomy' => ['testTerm' => 1]]]);
+        $callableReturn = fn($term, $taxonomy) => $term === 'testTerm' && $taxonomy === 'testTaxonomy' ? 1 : null;
+        $wpService      = new FakeWpService(['termExists' => $callableReturn]);
 
         $result = $wpService->termExists('testTerm', 'testTaxonomy');
 
@@ -301,8 +314,9 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetPostTerms()
     {
-        $terms     = [$this->getWpTerm(['term_id' => 1])];
-        $wpService = new FakeWpService(['getPostTerms' => ['testTaxonomy' => [1 => $terms]]]);
+        $terms          = [$this->getWpTerm(['term_id' => 1])];
+        $callableReturn = fn($postId, $taxonomy) => $postId === 1 && $taxonomy === 'testTaxonomy' ? $terms : null;
+        $wpService      = new FakeWpService(['getPostTerms' => $callableReturn]);
 
         $result = $wpService->getPostTerms(1, 'testTaxonomy');
 
@@ -315,7 +329,13 @@ class FakeWpServiceTest extends TestCase
      */
     public function testInsertTermWithTaxonomyParameter()
     {
-        $wpService = new FakeWpService(['insertTerm' => ['testTaxonomy' => ['testTerm' => ['term_id' => 1]]]]);
+        $callableReturn = function ($term, $taxonomy, $args) {
+            return $term === 'testTerm' && $taxonomy === 'testTaxonomy' && $args === ['testArg' => 'foo']
+                ? ['term_id' => 1]
+                : null;
+        };
+
+        $wpService = new FakeWpService(['insertTerm' => $callableReturn]);
 
         $result = $wpService->insertTerm('testTerm', 'testTaxonomy', ['testArg' => 'foo']);
 
@@ -331,7 +351,8 @@ class FakeWpServiceTest extends TestCase
      */
     public function testInsertTermWithoutTaxonomyParameter()
     {
-        $wpService = new FakeWpService(['insertTerm' => ['testTerm' => ['term_id' => 1]]]);
+        $callableReturn = fn($term) => $term === 'testTerm' ? ['term_id' => 1] : null;
+        $wpService      = new FakeWpService(['insertTerm' => $callableReturn]);
 
         $result = $wpService->insertTerm('testTerm');
 
@@ -344,7 +365,11 @@ class FakeWpServiceTest extends TestCase
      */
     public function testSetPostTerms()
     {
-        $wpService = new FakeWpService(['setPostTerms' => ['testTaxonomy' => [1 => ['term_id' => 1]]]]);
+        $callableReturn = function ($postId, $terms, $taxonomy) {
+            return $postId === 1 && $terms === ['testTerm'] && $taxonomy === 'testTaxonomy' ? ['term_id' => 1] : null;
+        };
+
+        $wpService = new FakeWpService(['setPostTerms' => $callableReturn]);
 
         $result = $wpService->setPostTerms(1, ['testTerm'], 'testTaxonomy');
 
@@ -385,7 +410,11 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetEditTermLink()
     {
-        $wpService = new FakeWpService(['getEditTermLink' => ['testTaxonomy' => [1 => 'http://example.com/foo']]]);
+        $callableReturn = fn($termId, $taxonomy) => $termId === 1 && $taxonomy === 'testTaxonomy'
+            ? 'http://example.com/foo'
+            : false;
+
+        $wpService = new FakeWpService(['getEditTermLink' => $callableReturn]);
 
         $result = $wpService->getEditTermLink(1, 'testTaxonomy');
 
@@ -648,8 +677,9 @@ class FakeWpServiceTest extends TestCase
      */
     public function testAddRoleWithSpecificReturnValue()
     {
-        $role      = $this->getWpRole();
-        $wpService = new FakeWpService(['addRole' => ['testRole' => ['testDisplayName' => $role]]]);
+        $role           = $this->getWpRole();
+        $callableReturn = fn($roleName, $displayName, $capabilities) => $roleName === 'testRole' ? $role : null;
+        $wpService      = new FakeWpService(['addRole' => $callableReturn]);
 
         $result = $wpService->addRole('testRole', 'testDisplayName', ['testCapabilities']);
 
@@ -747,7 +777,8 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetUserMeta()
     {
-        $wpService = new FakeWpService(['getUserMeta' => [1 => ['testKey' => 'testUserMeta']]]);
+        $callableReturn = fn($userId, $key) => $userId === 1 && $key === 'testKey' ? 'testUserMeta' : null;
+        $wpService      = new FakeWpService(['getUserMeta' => $callableReturn]);
 
         $result = $wpService->getUserMeta(1, 'testKey', true);
 
@@ -760,8 +791,9 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetUserdata()
     {
-        $user      = $this->getWpUser(['ID' => 1]);
-        $wpService = new FakeWpService(['getUserdata' => [1 => $user]]);
+        $user           = $this->getWpUser(['ID' => 1]);
+        $callableReturn = fn($userId) => $userId === 1 ? $user : null;
+        $wpService      = new FakeWpService(['getUserdata' => $callableReturn]);
 
         $result = $wpService->getUserdata(1);
 
@@ -799,7 +831,8 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetEditPostLink()
     {
-        $wpService = new FakeWpService(['getEditPostLink' => [1 => 'http://example.com/foo']]);
+        $callableReturn = fn($postId) => $postId === 1 ? 'http://example.com/foo' : false;
+        $wpService      = new FakeWpService(['getEditPostLink' => $callableReturn]);
 
         $result = $wpService->getEditPostLink(1);
 
@@ -1039,7 +1072,8 @@ class FakeWpServiceTest extends TestCase
      */
     public function testMediaSideloadImage()
     {
-        $wpService = new FakeWpService(['mediaSideloadImage' => ['testUrl' => 'testUrlData']]);
+        $callableReturn = fn($url) => $url === 'testUrl' ? 'testUrlData' : null;
+        $wpService      = new FakeWpService(['mediaSideloadImage' => $callableReturn]);
 
         $result = $wpService->mediaSideloadImage('testUrl', 1, 'testDescription');
 
@@ -1052,7 +1086,8 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetPostType()
     {
-        $wpService = new FakeWpService(['getPostType' => [1 => 'foo']]);
+        $callableReturn = fn($postId) => $postId === 1 ? 'foo' : null;
+        $wpService      = new FakeWpService(['getPostType' => $callableReturn]);
 
         $result = $wpService->getPostType(1);
 
@@ -1078,9 +1113,9 @@ class FakeWpServiceTest extends TestCase
      */
     public function testRemoteGet()
     {
-        $wpService = new FakeWpService(['remoteGet' => ['testUrl' => ['testResponse']]]);
-
-        $result = $wpService->remoteGet('testUrl', ['testArg' => 'foo']);
+        $callableReturn = fn($url) => $url === 'testUrl' ? ['testResponse'] : [];
+        $wpService      = new FakeWpService(['remoteGet' => $callableReturn]);
+        $result         = $wpService->remoteGet('testUrl', ['testArg' => 'foo']);
 
         $this->assertEquals(['testUrl', ['testArg' => 'foo']], $wpService->methodCalls['remoteGet'][0]);
         $this->assertEquals(['testResponse'], $result);
@@ -1187,8 +1222,9 @@ class FakeWpServiceTest extends TestCase
      */
     public function testNavMenuDisabledCheck()
     {
-        $navMenuId = 123;
-        $wpService = new FakeWpService(['navMenuDisabledCheck' => [$navMenuId => 'disabled']]);
+        $navMenuId      = 123;
+        $callableReturn = fn($selectedId) => $selectedId === $navMenuId ? 'disabled' : 'enabled';
+        $wpService      = new FakeWpService(['navMenuDisabledCheck' => $callableReturn]);
 
         ob_start();
         $result = $wpService->navMenuDisabledCheck($navMenuId, true);
