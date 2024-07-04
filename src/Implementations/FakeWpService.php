@@ -44,6 +44,14 @@ class FakeWpService implements WPService
         $this->methodCalls[$method][] = $methodArguments;
     }
 
+    /**
+     * Retrieves the return value for a given method.
+     *
+     * @param string $method The name of the method.
+     * @param array $methodArgs The arguments to be passed to the method.
+     * @param mixed $default The default value to return if the method does not have a return value.
+     * @return mixed The return value of the method, or the default value if the method does not have a return value.
+     */
     private function getReturnValue($method, array $methodArgs = [], $default = null): mixed
     {
         if (!isset($this->returnValues[$method])) {

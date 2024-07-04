@@ -268,8 +268,13 @@ class FakeWpServiceTest extends TestCase
      */
     public function testRemoveSubMenuPage()
     {
-        $callableReturn = fn($parentSlug, $submenuSlug) => $parentSlug === 'testParentSlug' && $submenuSlug === 'testSubMenuSlug' ? ['removedTestPage'] : null;
-        $wpService      = new FakeWpService(['removeSubMenuPage' => $callableReturn]);
+        $callableReturn = function ($parentSlug, $submenuSlug) {
+            return $parentSlug === 'testParentSlug' && $submenuSlug === 'testSubMenuSlug'
+                ? ['removedTestPage']
+                : null;
+        };
+
+        $wpService = new FakeWpService(['removeSubMenuPage' => $callableReturn]);
 
         $result = $wpService->removeSubMenuPage('testParentSlug', 'testSubMenuSlug');
 
@@ -324,8 +329,13 @@ class FakeWpServiceTest extends TestCase
      */
     public function testInsertTermWithTaxonomyParameter()
     {
-        $callableReturn = fn($term, $taxonomy, $args) => $term === 'testTerm' && $taxonomy === 'testTaxonomy' && $args === ['testArg' => 'foo'] ? ['term_id' => 1] : null;
-        $wpService      = new FakeWpService(['insertTerm' => $callableReturn]);
+        $callableReturn = function ($term, $taxonomy, $args) {
+            return $term === 'testTerm' && $taxonomy === 'testTaxonomy' && $args === ['testArg' => 'foo']
+                ? ['term_id' => 1]
+                : null;
+        };
+
+        $wpService = new FakeWpService(['insertTerm' => $callableReturn]);
 
         $result = $wpService->insertTerm('testTerm', 'testTaxonomy', ['testArg' => 'foo']);
 
@@ -355,8 +365,11 @@ class FakeWpServiceTest extends TestCase
      */
     public function testSetPostTerms()
     {
-        $callableReturn = fn($postId, $terms, $taxonomy) => $postId === 1 && $terms === ['testTerm'] && $taxonomy === 'testTaxonomy' ? ['term_id' => 1] : null;
-        $wpService      = new FakeWpService(['setPostTerms' => $callableReturn]);
+        $callableReturn = function ($postId, $terms, $taxonomy) {
+            return $postId === 1 && $terms === ['testTerm'] && $taxonomy === 'testTaxonomy' ? ['term_id' => 1] : null;
+        };
+
+        $wpService = new FakeWpService(['setPostTerms' => $callableReturn]);
 
         $result = $wpService->setPostTerms(1, ['testTerm'], 'testTaxonomy');
 
@@ -397,8 +410,11 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetEditTermLink()
     {
-        $callableReturn = fn($termId, $taxonomy) => $termId === 1 && $taxonomy === 'testTaxonomy' ? 'http://example.com/foo' : false;
-        $wpService      = new FakeWpService(['getEditTermLink' => $callableReturn]);
+        $callableReturn = fn($termId, $taxonomy) => $termId === 1 && $taxonomy === 'testTaxonomy'
+            ? 'http://example.com/foo'
+            : false;
+
+        $wpService = new FakeWpService(['getEditTermLink' => $callableReturn]);
 
         $result = $wpService->getEditTermLink(1, 'testTaxonomy');
 
