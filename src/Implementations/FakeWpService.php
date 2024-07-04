@@ -44,14 +44,26 @@ class FakeWpService implements WPService
         $this->methodCalls[$method][] = $methodArguments;
     }
 
+    private function getReturnValue($method, array $methodArgs = [], $default = null): mixed
+    {
+        if (!isset($this->returnValues[$method])) {
+            return $default;
+        }
+
+        if (is_callable($this->returnValues[$method])) {
+            return $this->returnValues[$method](...$methodArgs);
+        }
+
+        return $this->returnValues[$method] ?? $default;
+    }
+
     /**
      * @inheritDoc
      */
     public function addAction(string $tag, callable $function_to_add, int $priority = 10, int $accepted_args = 1): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$tag] ?? $this->returnValues[__FUNCTION__] ?? false;
-        return $this->returnValues[__FUNCTION__][$tag] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -60,7 +72,7 @@ class FakeWpService implements WPService
     public function addFilter(string $tag, callable $function_to_add, int $priority = 10, int $accepted_args = 1): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$tag] ?? $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -69,7 +81,7 @@ class FakeWpService implements WPService
     public function applyFilters(string $hookName, mixed $value, mixed ...$args): mixed
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$hookName] ?? $this->returnValues[__FUNCTION__] ?? $value;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -78,7 +90,7 @@ class FakeWpService implements WPService
     public function deleteTerm(int $term, string $taxonomy, array|string $args = array()): bool|int|WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$taxonomy][$term] ?? $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -87,7 +99,7 @@ class FakeWpService implements WPService
     public function getPermalink(null|int|WP_Post $post = null, bool $leavename = false): string|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$post] ?? $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -99,10 +111,7 @@ class FakeWpService implements WPService
         string $filter = "raw"
     ): WP_Post|array|null {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-
-        return
-            is_array($this->returnValues[__FUNCTION__]) ? $this->returnValues[__FUNCTION__][$post] ?? null
-            : $this->returnValues[__FUNCTION__] ?? null;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -111,12 +120,7 @@ class FakeWpService implements WPService
     public function getPostMeta($postId, $key = '', $single = false): mixed
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-
-        return
-            $this->returnValues[__FUNCTION__][$postId][$key] ??
-            $this->returnValues[__FUNCTION__][$postId] ??
-            $this->returnValues[__FUNCTION__] ??
-            null;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -125,7 +129,7 @@ class FakeWpService implements WPService
     public function getPostParent(int|WP_Post|null $postId): ?WP_Post
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$postId] ?? $this->returnValues[__FUNCTION__] ?? null;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), null);
     }
 
     /**
@@ -134,7 +138,7 @@ class FakeWpService implements WPService
     public function getPosts(?array $args): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? [];
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
     }
 
     /**
@@ -147,7 +151,7 @@ class FakeWpService implements WPService
         string $filter = 'raw'
     ): WP_Term|array|WP_Error|null {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$taxonomy][$term] ?? $this->returnValues[__FUNCTION__] ?? null;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), null);
     }
 
     /**
@@ -156,7 +160,7 @@ class FakeWpService implements WPService
     public function getTermMeta(int $term_id, string $key = '', bool $single = false): mixed
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$term_id][$key] ?? $this->returnValues[__FUNCTION__] ?? null;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -165,7 +169,7 @@ class FakeWpService implements WPService
     public function getTerms(array|string $args = array(), array|string $deprecated = ""): array|string|WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? [];
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
     }
 
     /**
@@ -176,7 +180,7 @@ class FakeWpService implements WPService
         string|array $size = 'post-thumbnail'
     ): string|false {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -185,7 +189,7 @@ class FakeWpService implements WPService
     public function getTheTitle(int|WP_Post $post = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$post] ?? $this->returnValues[__FUNCTION__] ?? '';
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), '');
     }
 
     /**
@@ -194,7 +198,7 @@ class FakeWpService implements WPService
     public function isWPError(mixed $thing): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -219,7 +223,7 @@ class FakeWpService implements WPService
     public function removeMenuPage(string $menuSlug): array|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$menuSlug] ?? $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -228,7 +232,7 @@ class FakeWpService implements WPService
     public function removeSubMenuPage(string $menuSlug, string $submenuSlug): array|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$menuSlug][$submenuSlug] ?? $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -237,12 +241,7 @@ class FakeWpService implements WPService
     public function termExists(int|string $term, string $taxonomy = "", ?int $parentTerm = null): null|int|array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-
-        if (!empty($taxonomy)) {
-            return $this->returnValues[__FUNCTION__][$taxonomy][$term] ?? $this->returnValues[__FUNCTION__] ?? null;
-        }
-
-        return $this->returnValues[__FUNCTION__][$term] ?? $this->returnValues[__FUNCTION__] ?? null;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), null);
     }
 
     /**
@@ -254,7 +253,7 @@ class FakeWpService implements WPService
         array $args = array()
     ): array|WP_Error {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$taxonomy][$post_id] ?? $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
     }
 
     /**
@@ -266,12 +265,7 @@ class FakeWpService implements WPService
         array $args = []
     ): array|WP_Error {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-
-        if (!empty($taxonomy)) {
-            return $this->returnValues[__FUNCTION__][$taxonomy][$term] ?? $this->returnValues[__FUNCTION__] ?? null;
-        }
-
-        return $this->returnValues[__FUNCTION__][$term] ?? $this->returnValues[__FUNCTION__] ?? null;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
     }
 
     /**
@@ -284,7 +278,7 @@ class FakeWpService implements WPService
         bool $append = false
     ): array|false|WP_Error {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$taxonomy][$postId] ?? $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -301,7 +295,7 @@ class FakeWpService implements WPService
     public function getTheId(): int|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -310,7 +304,7 @@ class FakeWpService implements WPService
     public function getEditTermLink(int|WP_Term $term, string $taxonomy = '', string $objectType = ''): ?string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$taxonomy][$term] ?? $this->returnValues[__FUNCTION__] ?? null;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), null);
     }
 
     /**
@@ -319,7 +313,7 @@ class FakeWpService implements WPService
     public function restEnsureResponse($response): WP_REST_Response|WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? null;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), null);
     }
 
     /**
@@ -328,7 +322,7 @@ class FakeWpService implements WPService
     public function getChildren(mixed $args = '', string $output = 'OBJECT'): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? [];
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
     }
 
     /**
@@ -353,7 +347,7 @@ class FakeWpService implements WPService
     public function getCurrentScreen(): ?WP_Screen
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? null;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), null);
     }
 
     /**
@@ -362,10 +356,7 @@ class FakeWpService implements WPService
     public function nextScheduled(string $hook, array $args = []): int|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return
-            $this->returnValues[__FUNCTION__][$hook] ??
-            $this->returnValues[__FUNCTION__] ??
-            false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -379,10 +370,7 @@ class FakeWpService implements WPService
         bool $wpError = false
     ): bool|WP_Error {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return
-            $this->returnValues[__FUNCTION__][$timestamp][$recurrence][$hook] ??
-            $this->returnValues[__FUNCTION__] ??
-            false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -391,10 +379,7 @@ class FakeWpService implements WPService
     public function getOption(string $option, mixed $defaultValue = false): mixed
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return
-            $this->returnValues[__FUNCTION__][$option] ??
-            $this->returnValues[__FUNCTION__] ??
-            $defaultValue;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), null);
     }
 
     /**
@@ -445,7 +430,7 @@ class FakeWpService implements WPService
     public function isAdmin(): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -454,7 +439,7 @@ class FakeWpService implements WPService
     public function getEnvironmentType(): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? '';
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), '');
     }
 
     /**
@@ -463,10 +448,7 @@ class FakeWpService implements WPService
     public function pluginDirPath(string $file): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return
-            $this->returnValues[__FUNCTION__][$file] ??
-            $this->returnValues[__FUNCTION__] ??
-            '';
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), '');
     }
 
     /**
@@ -475,10 +457,7 @@ class FakeWpService implements WPService
     public function pluginsUrl(string $path = '', string $plugin = ''): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return
-            $this->returnValues[__FUNCTION__][$path][$plugin] ??
-            $this->returnValues[__FUNCTION__][$path] ??
-            $this->returnValues[__FUNCTION__] ?? '';
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), '');
     }
 
     /**
@@ -487,7 +466,7 @@ class FakeWpService implements WPService
     public function pluginBasename(string $file): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$file] ?? $this->returnValues[__FUNCTION__] ?? '';
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), '');
     }
 
     /**
@@ -496,11 +475,7 @@ class FakeWpService implements WPService
     public function addRole(string $role, string $displayName, array $capabilities): ?WP_Role
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-
-        return
-            is_array($this->returnValues[__FUNCTION__])
-                ? $this->returnValues[__FUNCTION__][$role][$displayName] ?? null
-                : $this->returnValues[__FUNCTION__] ?? null;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), null);
     }
 
     /**
@@ -509,7 +484,7 @@ class FakeWpService implements WPService
     public function getUsers(array $args): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? [];
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
     }
 
     /**
@@ -518,7 +493,7 @@ class FakeWpService implements WPService
     public function getCurrentUser(): WP_User
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? null;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), null);
     }
 
     /**
@@ -527,7 +502,7 @@ class FakeWpService implements WPService
     public function escHtml(string $text): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $text;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), null) ?? $text;
     }
 
     /**
@@ -536,7 +511,7 @@ class FakeWpService implements WPService
     public function getPostStatuses(): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? [];
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
     }
 
     /**
@@ -550,7 +525,7 @@ class FakeWpService implements WPService
         string|array $attachments = array()
     ): bool {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -567,7 +542,7 @@ class FakeWpService implements WPService
     public function getUserMeta(int $userId, string $key, bool $single = false): mixed
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$userId][$key] ?? $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -576,7 +551,7 @@ class FakeWpService implements WPService
     public function getUserdata(int $userId): WP_User|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$userId] ?? $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -585,7 +560,7 @@ class FakeWpService implements WPService
     public function __($text, $domain = 'default'): string // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $text;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), null) ?? $text;
     }
 
     /**
@@ -594,7 +569,8 @@ class FakeWpService implements WPService
     public function _e($text, $domain = 'default'): void // phpcs:ignore PSR2.Methods.MethodDeclaration.Underscore
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        echo $text; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        $value = $this->getReturnValue(__FUNCTION__, func_get_args(), null) ?? $text;
+        echo $value; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
     }
 
     /**
@@ -603,7 +579,7 @@ class FakeWpService implements WPService
     public function getEditPostLink(int|WP_Post $post, string $context = 'display'): ?string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$post] ?? $this->returnValues[__FUNCTION__] ?? null;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), null);
     }
 
     /**
@@ -612,7 +588,7 @@ class FakeWpService implements WPService
     public function getThemeMod(string $name, mixed $defaultValue = false): mixed
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$name] ?? $this->returnValues[__FUNCTION__] ?? $defaultValue;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), $defaultValue);
     }
 
     /**
@@ -621,7 +597,7 @@ class FakeWpService implements WPService
     public function getThemeMods(): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? [];
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
     }
 
     /**
@@ -630,7 +606,7 @@ class FakeWpService implements WPService
     public function getStylesheetDirectoryUri(): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? '';
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), '');
     }
 
     /**
@@ -639,7 +615,7 @@ class FakeWpService implements WPService
     public function getBloginfo(string $show, string $filter = 'raw'): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? '';
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), '');
     }
 
     /**
@@ -648,7 +624,7 @@ class FakeWpService implements WPService
     public function autop(string $text, bool $br = true): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$text] ?? $this->returnValues[__FUNCTION__] ?? $text;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), null) ?? $text;
     }
 
     /**
@@ -657,7 +633,7 @@ class FakeWpService implements WPService
     public function cacheAdd(int|string $key, mixed $data, string $group = '', int $expire = 0): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? [];
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
     }
 
     /**
@@ -666,7 +642,7 @@ class FakeWpService implements WPService
     public function cacheAddMultiple(array $items, string $group = '', int $expire = 0): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? [];
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
     }
 
     /**
@@ -675,7 +651,7 @@ class FakeWpService implements WPService
     public function cacheDelete(int|string $key, string $group = ''): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -684,7 +660,7 @@ class FakeWpService implements WPService
     public function cacheDeleteMultiple(array $keys, string $group = ''): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -693,7 +669,7 @@ class FakeWpService implements WPService
     public function cacheFlush(): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -702,7 +678,7 @@ class FakeWpService implements WPService
     public function cacheGet(int|string $key, string $group = '', bool $force = false, ?bool &$found = null): mixed
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? null;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), null);
     }
 
     /**
@@ -711,7 +687,7 @@ class FakeWpService implements WPService
     public function cacheGetMultiple(array $keys, string $group = '', bool $force = false): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? [];
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
     }
 
     /**
@@ -720,7 +696,7 @@ class FakeWpService implements WPService
     public function cacheReplace(int|string $key, mixed $data, string $group = '', int $expire = 0): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? [];
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
     }
 
     /**
@@ -729,7 +705,7 @@ class FakeWpService implements WPService
     public function cacheSet(int|string $key, mixed $data, string $group = '', int $expire = 0): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -738,7 +714,7 @@ class FakeWpService implements WPService
     public function cacheSetMultiple(array $items, string $group = '', int $expire = 0): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? [];
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
     }
 
     /**
@@ -747,7 +723,7 @@ class FakeWpService implements WPService
     public function sanitizeTitle($title, $fallbackTitle = '', $context = 'save'): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$title] ?? $this->returnValues[__FUNCTION__] ?? $title;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), null) ?? $title;
     }
 
     /**
@@ -756,7 +732,7 @@ class FakeWpService implements WPService
     public function insertPost($postarr, $wpError = false, $fireAfterHooks = true): int|WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -765,7 +741,7 @@ class FakeWpService implements WPService
     public function mediaSideloadImage($file, $postId = 0, $desc = null, $returnType = 'html'): string|int|WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$file] ?? $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -774,7 +750,7 @@ class FakeWpService implements WPService
     public function getPostType(null|int|WP_Post $post = null): string|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$post] ?? $this->returnValues[__FUNCTION__][$post] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -783,7 +759,7 @@ class FakeWpService implements WPService
     public function getPostTypes(array|string $args = [], string $output = 'names', string $operator = 'and'): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? [];
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
     }
 
     /**
@@ -792,7 +768,7 @@ class FakeWpService implements WPService
     public function remoteGet(string $url, array $args = []): array|WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$url] ?? $this->returnValues[__FUNCTION__] ?? '';
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), '');
     }
 
     /**
@@ -801,7 +777,7 @@ class FakeWpService implements WPService
     public function remoteRetrieveBody(array|WP_Error $response): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? '';
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), '');
     }
 
     /**
@@ -810,7 +786,7 @@ class FakeWpService implements WPService
     public function setThemeMod(string $name, mixed $value): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$name] ?? $this->returnValues[__FUNCTION__] ?? true;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), true);
     }
 
     /**
@@ -819,7 +795,7 @@ class FakeWpService implements WPService
     public function updateOption(string $option, mixed $value, string|bool $autoload = null): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$option] ?? $this->returnValues[__FUNCTION__] ?? true;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), true);
     }
 
     /**
@@ -828,7 +804,7 @@ class FakeWpService implements WPService
     public function taxonomyExists(string $taxonomy): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$taxonomy] ?? $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -837,7 +813,7 @@ class FakeWpService implements WPService
     public function registerTaxonomyForObjectType(string $taxonomy, string $objectType): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$taxonomy][$objectType] ?? $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -846,7 +822,7 @@ class FakeWpService implements WPService
     public function isSingle($post = ''): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__][$post] ?? $this->returnValues[__FUNCTION__] ?? false;
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**
@@ -870,7 +846,7 @@ class FakeWpService implements WPService
     public function navMenuDisabledCheck(int|string $nav_menu_selected_id, bool $display = true): string|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        $value = $this->returnValues[__FUNCTION__][$nav_menu_selected_id] ?? $this->returnValues[__FUNCTION__] ?? false;
+        $value = $this->getReturnValue(__FUNCTION__, func_get_args(), false);
 
         if ($display) {
             echo $value; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -885,6 +861,6 @@ class FakeWpService implements WPService
     public function walkNavMenuTree(array $items, int $depth, object $args): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->returnValues[__FUNCTION__] ?? '';
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), '');
     }
 }

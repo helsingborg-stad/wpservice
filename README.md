@@ -111,8 +111,9 @@ $fakeWpService->getTheTitle(); // Returns 'Test Title'
 $fakeWpService->getTheTitle(321); // Returns 'Test Title'
 $fakeWpService->getTheTitle(123); // Returns 'Test Title'
 
-# Using a specific return value based on what is passed to the function for a specific call to the method.
-$fakeWpService = new FakeWpService(['getTheId' => [123 => 'Test Title']]);
+# Using a callback to determine the return value based on the arguments passed to the method.
+$return         = fn($postId) => $postId === 123 ? 'Test Title' : '';
+$fakeWpService  = new FakeWpService(['getTheId' => $return]);
 $fakeWpService->getTheTitle(); // Returns ''
 $fakeWpService->getTheTitle(321); // Returns ''
 $fakeWpService->getTheTitle(123); // Returns 'Test Title'
