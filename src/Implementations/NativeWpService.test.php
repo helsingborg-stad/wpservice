@@ -3,7 +3,6 @@
 namespace WpService\Implementations;
 
 use PHPUnit\Framework\TestCase;
-use WpService\WpService;
 
 class NativeWpServiceTest extends TestCase
 {
