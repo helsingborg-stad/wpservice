@@ -848,4 +848,43 @@ class FakeWpService implements WPService
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->returnValues[__FUNCTION__][$post] ?? $this->returnValues[__FUNCTION__] ?? false;
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function addMetaBox(
+        string $id,
+        string $title,
+        callable $callback,
+        null|string|array|WP_Screen $screen = null,
+        string $context = 'advanced',
+        string $priority = 'default',
+        ?array $callback_args = null
+    ): void {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function navMenuDisabledCheck(int|string $nav_menu_selected_id, bool $display = true): string|false
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        $value = $this->returnValues[__FUNCTION__][$nav_menu_selected_id] ?? $this->returnValues[__FUNCTION__] ?? false;
+
+        if ($display) {
+            echo $value; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        }
+
+        return $value;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function walkNavMenuTree(array $items, int $depth, object $args): string
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->returnValues[__FUNCTION__] ?? '';
+    }
 }

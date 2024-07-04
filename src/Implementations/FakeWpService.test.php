@@ -644,6 +644,23 @@ class FakeWpServiceTest extends TestCase
     }
 
     /**
+     * @testdox addRole() with specific return value
+     */
+    public function testAddRoleWithSpecificReturnValue()
+    {
+        $role      = $this->getWpRole();
+        $wpService = new FakeWpService(['addRole' => ['testRole' => ['testDisplayName' => $role]]]);
+
+        $result = $wpService->addRole('testRole', 'testDisplayName', ['testCapabilities']);
+
+        $this->assertEquals(
+            ['testRole', 'testDisplayName', ['testCapabilities']],
+            $wpService->methodCalls['addRole'][0]
+        );
+        $this->assertEquals($role, $result);
+    }
+
+    /**
      * @testdox getUsers()
      */
     public function testGetUsers()
@@ -1147,6 +1164,53 @@ class FakeWpServiceTest extends TestCase
 
         $this->assertEquals([], $wpService->methodCalls['isSingle'][0]);
         $this->assertTrue($result);
+    }
+
+    /**
+     * @testdox addMetaBox()
+     */
+    public function testAddMetaBox()
+    {
+        $wpService = new FakeWpService();
+
+        $callable = fn () => null;
+        $wpService->addMetaBox('testId', 'testTitle', $callable, 'testScreen', 'testContext', 'testPriority');
+
+        $this->assertEquals(
+            ['testId', 'testTitle', $callable, 'testScreen', 'testContext', 'testPriority'],
+            $wpService->methodCalls['addMetaBox'][0]
+        );
+    }
+
+    /**
+     * @testdox navMenuDisabledCheck()
+     */
+    public function testNavMenuDisabledCheck()
+    {
+        $navMenuId = 123;
+        $wpService = new FakeWpService(['navMenuDisabledCheck' => [$navMenuId => 'disabled']]);
+
+        ob_start();
+        $result = $wpService->navMenuDisabledCheck($navMenuId, true);
+        $output = ob_get_clean();
+
+        $this->assertEquals([$navMenuId, true], $wpService->methodCalls['navMenuDisabledCheck'][0]);
+        $this->assertEquals('disabled', $result);
+        $this->assertEquals('disabled', $output);
+    }
+
+    /**
+     * @testdox walkNavMenuTree()
+     */
+    public function testWalkNavMenuTree()
+    {
+        $wpService = new FakeWpService(['walkNavMenuTree' => '<nav/>']);
+        $args      = (object)['arg' => 'value'];
+
+        $result = $wpService->walkNavMenuTree(['one', 'two'], false, $args);
+
+        $this->assertEquals([['one', 'two'], false, $args], $wpService->methodCalls['walkNavMenuTree'][0]);
+        $this->assertEquals('<nav/>', $result);
     }
 
     private function getWpScreen(array $properties = []): WP_Screen|MockObject
