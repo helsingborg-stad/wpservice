@@ -45,6 +45,21 @@ class NativeWpService implements WPService
     /**
      * @inheritDoc
      */
+    public function addMetaBox(
+        string $id,
+        string $title,
+        callable $callback,
+        string|array|WP_Screen $screen = null,
+        string $context = ‘advanced’,
+        string $priority = ‘default’,
+        array $callback_args = null
+    ): void {
+        add_meta_box($id, $title, $callback, $screen, $context, $priority, $callback_args);
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function applyFilters(string $hookName, mixed $value, mixed ...$args): mixed
     {
         return apply_filters($hookName, $value, ...$args);
@@ -297,6 +312,14 @@ class NativeWpService implements WPService
     public function getCurrentScreen(): ?WP_Screen
     {
         return get_current_screen();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function navMenuDisabledCheck(int|string $nav_menu_selected_id, bool $display = true): string|false
+    {
+        return wp_nav_menu_disabled_check($nav_menu_selected_id, $display);
     }
 
     /**
@@ -751,5 +774,13 @@ class NativeWpService implements WPService
     public function isSingle($post = ''): bool
     {
         return is_single($post);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function walkNavMenuTree(array $items, int $depth, object $args): string
+    {
+        return walk_nav_menu_tree($items, $depth, $args);
     }
 }
