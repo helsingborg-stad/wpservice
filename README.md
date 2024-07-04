@@ -53,6 +53,70 @@ $service = new WpServiceWithTextDomain($service, 'my-text-domain');
 $service->__('Hello World'); // Will automatically use 'my-text-domain' as the text domain.
 ```
 
+## Using WpService in tests
+To make it easier when testing code that depends on the WpService or parts of it, a FakeWpService implementation is available.
+This implementation is useful when you want to test your code without having to rely on the WordPress functions.
+
+### Example
+Consider that you have the following class that utilizes a part of the WpService:
+
+```php
+use WpService\Contracts\GetTheId;
+
+class MyService
+{
+    public function __construct(private GetTheId $wpService)
+    {
+    }
+
+    public function getCurrentPostId(): int
+    {
+        return $this->wpService->getTheId();
+    }
+}
+```
+
+You can then use FakeWpService in your tests to fake the results of the WpService as well as veifyin the calls made to the WpService functions:
+
+```php
+use WpService\Implementations\FakeWpService;
+use PHPUnit\Framework\TestCase;
+
+class MyServiceTest extends TestCase
+{
+    public function testGetCurrentPostId()
+    {
+        // Given
+        $fakeWpService = new FakeWpService(['getTheId' => 123]);
+        $myService = new MyService($fakeWpService);
+
+        // When
+        $postId = $myService->getCurrentPostId();
+
+        // Then
+        $this->assertEquals([123], $wpService->methodCalls['isSingle'][0]);
+        $this->assertEquals(123, $postId);
+    }
+}
+```
+
+### Passing return values to the FakeWpService
+
+The FakeWpService constructor accepts an array of key-value pairs where the key is the name of the method and the value is the return value of the method.
+
+```php
+# Using a generic return value for all calls to the method.
+$fakeWpService = new FakeWpService(['getTheTitle' => 'Test Title']);
+$fakeWpService->getTheTitle(); // Returns 'Test Title'
+$fakeWpService->getTheTitle(321); // Returns 'Test Title'
+$fakeWpService->getTheTitle(123); // Returns 'Test Title'
+
+# Using a specific return value based on what is passed to the function for a specific call to the method.
+$fakeWpService = new FakeWpService(['getTheId' => [123 => 'Test Title']]);
+$fakeWpService->getTheTitle(); // Returns ''
+$fakeWpService->getTheTitle(321); // Returns ''
+$fakeWpService->getTheTitle(123); // Returns 'Test Title'
+```
 
 ### Built With
 

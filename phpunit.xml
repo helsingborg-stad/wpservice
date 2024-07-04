@@ -8,19 +8,18 @@
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true">
 
-  <coverage processUncoveredFiles="false">
+  <coverage processUncoveredFiles="true">
     <include>
-      <directory suffix=".php">./source/php</directory>
+      <directory suffix=".php">./src</directory>
     </include>
     <exclude>
-      <directory suffix=".test.php">./source/php</directory>
-      <directory suffix=".php">./source/php/AcfFields</directory>
+      <directory suffix=".test.php">./src</directory>
     </exclude>
     <report>
       <text outputFile="php://stdout" showUncoveredFiles="true"/>
-      <html outputDirectory="coverage/phpunit"/>
+      <html outputDirectory=".coverage"/>
+      <clover outputFile="./.coverage/clover.xml"/>
     </report>
-    
   </coverage>
 
   <testsuites>
