@@ -346,6 +346,14 @@ class NativeWpService implements WPService
     /**
      * @inheritDoc
      */
+    public function getObjectTaxonomies(string|array $objectType, string $output = 'names'): array
+    {
+        return get_object_taxonomies($objectType, $output);
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function getOption(string $option, mixed $defaultValue = false): mixed
     {
         return get_option($option, $defaultValue);
