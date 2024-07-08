@@ -37,6 +37,7 @@ interface WpService extends
     Contracts\GetEditPostLink,
     Contracts\GetEditTermLink,
     Contracts\GetEnvironmentType,
+    Contracts\GetObjectTaxonomies,
     Contracts\GetOption,
     Contracts\GetPermalink,
     Contracts\GetPost,

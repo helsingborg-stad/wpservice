@@ -349,6 +349,14 @@ class WpServiceDecorator implements WPService
     /**
      * @inheritDoc
      */
+    public function getObjectTaxonomies(string|array $objectType, string $output = 'names'): array
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function getOption(string $option, mixed $defaultValue = false): mixed
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
