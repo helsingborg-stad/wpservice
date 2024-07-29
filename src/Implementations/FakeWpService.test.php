@@ -145,12 +145,12 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetTaxonomy()
     {
-        $taxonomy = $this->getTaxonomy(['name' => 'testTaxonomy']);
+        $taxonomy       = $this->getTaxonomy(['name' => 'testTaxonomy']);
         $callableReturn = fn($taxonomyName) => $taxonomyName === 'testTaxonomy' ? $taxonomy : false;
-        $wpService = new FakeWpService(['getTaxonomy' => $callableReturn]);
-    
+        $wpService      = new FakeWpService(['getTaxonomy' => $callableReturn]);
+
         $result = $wpService->getTaxonomy('testTaxonomy');
-    
+
         $this->assertEquals(['testTaxonomy'], $wpService->methodCalls['getTaxonomy'][0]);
         $this->assertEquals($taxonomy, $result);
     }

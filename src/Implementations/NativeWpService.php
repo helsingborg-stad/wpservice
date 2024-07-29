@@ -130,7 +130,7 @@ class NativeWpService implements WPService
     {
         return get_taxonomy($taxonomy);
     }
-    
+
     /**
      * @inheritDoc
      */
