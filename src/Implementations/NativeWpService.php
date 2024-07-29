@@ -8,6 +8,7 @@ use WP_Post;
 use WP_REST_Response;
 use WP_Role;
 use WP_Screen;
+use WP_Taxonomy;
 use WP_Term;
 use WP_User;
 
@@ -122,6 +123,14 @@ class NativeWpService implements WPService
         return get_posts($args);
     }
 
+    /**
+     * @inheritDoc
+     */
+    public function getTaxonomy(string $taxonomy): WP_Taxonomy|false
+    {
+        return get_taxonomy($taxonomy);
+    }
+    
     /**
      * @inheritDoc
      */
