@@ -8,7 +8,7 @@ interface GetPostTypeObject
 {
     /**
      * Retrieves a post type object by name.
-     * 
+     *
      * @see https://developer.wordpress.org/reference/functions/get_post_type_object/
      *
      * @param string $post_type The name of a registered post type.

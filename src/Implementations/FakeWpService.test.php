@@ -1115,10 +1115,10 @@ class FakeWpServiceTest extends TestCase
     {
         $postTypeObject = $this->getPostTypeObject(['name' => 'testPostType']);
         $callableReturn = fn($postType) => $postType === 'testPostType' ? $postTypeObject : false;
-        $wpService = new FakeWpService(['getPostTypeObject' => $callableReturn]);
-    
+        $wpService      = new FakeWpService(['getPostTypeObject' => $callableReturn]);
+
         $result = $wpService->getPostTypeObject('testPostType');
-    
+
         $this->assertEquals(['testPostType'], $wpService->methodCalls['getPostTypeObject'][0]);
         $this->assertEquals($postTypeObject, $result);
     }
