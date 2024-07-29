@@ -8,6 +8,7 @@ use WP_Post;
 use WP_REST_Response;
 use WP_Role;
 use WP_Screen;
+use WP_Taxonomy;
 use WP_Term;
 use WP_User;
 
@@ -121,6 +122,14 @@ class WpServiceDecorator implements WPService
      * @inheritDoc
      */
     public function getPosts(?array $args): array
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getTaxonomy(string $taxonomy): WP_Taxonomy|false
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
