@@ -5,6 +5,7 @@ namespace WpService\Implementations;
 use WpService\WpService;
 use WP_Error;
 use WP_Post;
+use WP_Post_Type;
 use WP_REST_Response;
 use WP_Role;
 use WP_Screen;
@@ -726,6 +727,14 @@ class NativeWpService implements WPService
     public function getPostTypes(array|string $args = [], string $output = 'names', string $operator = 'and'): array
     {
         return get_post_types($args, $output, $operator);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getPostTypeObject(string $postType): WP_Post_Type|null
+    {
+        return get_post_type_object($postType);
     }
 
     /**
