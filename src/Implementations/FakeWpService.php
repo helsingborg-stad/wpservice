@@ -5,6 +5,7 @@ namespace WpService\Implementations;
 use WpService\WpService;
 use WP_Error;
 use WP_Post;
+use WP_Post_Type;
 use WP_REST_Response;
 use WP_Role;
 use WP_Screen;
@@ -777,6 +778,15 @@ class FakeWpService implements WPService
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
+    } 
+    
+    /**
+     * @inheritDoc
+     */
+    public function getPostTypeObject(string $post_type): WP_Post_Type|null
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), null);
     }
 
     /**

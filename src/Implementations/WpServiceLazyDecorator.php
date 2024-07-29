@@ -5,6 +5,7 @@ namespace WpService\Implementations;
 use WpService\WpService;
 use WP_Error;
 use WP_Post;
+use WP_Post_Type;
 use WP_REST_Response;
 use WP_Role;
 use WP_Screen;
@@ -709,6 +710,14 @@ class WpServiceLazyDecorator implements WPService
      * @inheritDoc
      */
     public function getPostTypes(array|string $args = [], string $output = 'names', string $operator = 'and'): array
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getPostTypeObject(string $postType): WP_Post_Type|null
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
