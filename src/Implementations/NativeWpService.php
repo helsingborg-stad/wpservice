@@ -791,4 +791,30 @@ class NativeWpService implements WPService
     {
         return walk_nav_menu_tree($items, $depth, $args);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getSubmitButton(
+        string $text = '',
+        string $type = 'primary',
+        string $name = 'submit',
+        bool $wrap = true,
+        array|string $otherAttributes = ''
+    ): string {
+        return get_submit_button($text, $type, $name, $wrap, $otherAttributes);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function submitButton(
+        string $text = '',
+        string $type = 'primary',
+        string $name = 'submit',
+        bool $wrap = true,
+        array|string $otherAttributes = ''
+    ): void {
+        submit_button($text, $type, $name, $wrap, $otherAttributes);
+    }
 }

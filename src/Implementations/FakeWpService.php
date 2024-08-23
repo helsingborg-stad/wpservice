@@ -880,4 +880,33 @@ class FakeWpService implements WPService
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args(), '');
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getSubmitButton(
+        string $text = '',
+        string $type = 'primary',
+        string $name = 'submit',
+        bool $wrap = true,
+        array|string $otherAttributes = ''
+    ): string {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), '');
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function submitButton(
+        string $text = '',
+        string $type = 'primary',
+        string $name = 'submit',
+        bool $wrap = true,
+        array|string $otherAttributes = ''
+    ): void {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        echo $this->getReturnValue(__FUNCTION__, func_get_args(), '');
+    }
 }

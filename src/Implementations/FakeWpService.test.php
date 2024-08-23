@@ -1249,6 +1249,42 @@ class FakeWpServiceTest extends TestCase
         $this->assertEquals('<nav/>', $result);
     }
 
+    /**
+     * @testdox getSubmitButton()
+     */
+    public function testGetSubmitButton()
+    {
+        $wpService = new FakeWpService(['getSubmitButton' => '<button/>']);
+
+        $result = $wpService->getSubmitButton('testText', 'testType', 'testName', 'testWrap', 'testOther');
+
+        $this->assertEquals(
+            ['testText', 'testType', 'testName', 'testWrap', 'testOther'],
+            $wpService->methodCalls['getSubmitButton'][0]
+        );
+        $this->assertEquals('<button/>', $result);
+    }
+
+    /**
+     * @testdox submitButton()
+     */
+    public function testSubmitButton()
+    {
+        $wpService = new FakeWpService(['submitButton' => function () {
+            echo '<button/>';
+        }]);
+
+        ob_start();
+        $wpService->submitButton('testText', 'testType', 'testName', 'testWrap', 'testOther');
+        $output = ob_get_clean();
+
+        $this->assertEquals(
+            ['testText', 'testType', 'testName', 'testWrap', 'testOther'],
+            $wpService->methodCalls['submitButton'][0]
+        );
+        $this->assertEquals('<button/>', $output);
+    }
+
     private function getWpScreen(array $properties = []): WP_Screen|MockObject
     {
         $wpScreen = $this->getMockBuilder('WP_Screen')->disableOriginalConstructor()->getMock();
