@@ -821,7 +821,7 @@ class NativeWpService implements WPService
     /**
      * @inheritDoc
      */
-    public function is_user_logged_in(): bool
+    public function isUserLoggedIn(): bool
     {
         return is_user_logged_in();
     }
