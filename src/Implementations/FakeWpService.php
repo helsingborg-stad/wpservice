@@ -909,4 +909,13 @@ class FakeWpService implements WPService
         // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo $this->getReturnValue(__FUNCTION__, func_get_args(), '');
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function isUserLoggedIn(): bool
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
+    }
 }

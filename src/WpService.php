@@ -92,6 +92,7 @@ interface WpService extends
     Contracts\TaxonomyExists,
     Contracts\TermExists,
     Contracts\UpdateOption,
-    Contracts\WalkNavMenuTree
+    Contracts\WalkNavMenuTree,
+    Contracts\IsUserLoggedIn
 {
 }

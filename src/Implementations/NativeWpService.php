@@ -817,4 +817,12 @@ class NativeWpService implements WPService
     ): void {
         submit_button($text, $type, $name, $wrap, $otherAttributes);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function is_user_logged_in(): bool
+    {
+        return is_user_logged_in();
+    }
 }

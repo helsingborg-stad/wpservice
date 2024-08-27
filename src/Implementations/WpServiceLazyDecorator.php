@@ -802,4 +802,12 @@ class WpServiceLazyDecorator implements WPService
     ): void {
         $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function isUserLoggedIn(): bool
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 }
