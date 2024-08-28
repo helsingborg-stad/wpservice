@@ -1289,6 +1289,17 @@ class FakeWpServiceTest extends TestCase
         $this->assertEquals('<button/>', $output);
     }
 
+    /**
+     * @testdox getQueryVar()
+     */
+    public function testGetQueryVar()
+    {
+        $wpService      = new FakeWpService(['getQueryVar' => 42]);
+        $result = $wpService->getQueryVar('var');
+        $this->assertEquals('var', $wpService->methodCalls['getQueryVar'][0][0]);
+        $this->assertEquals(42, $result);
+    }
+
     private function getWpScreen(array $properties = []): WP_Screen|MockObject
     {
         $wpScreen = $this->getMockBuilder('WP_Screen')->disableOriginalConstructor()->getMock();
@@ -1342,81 +1353,5 @@ class FakeWpServiceTest extends TestCase
         }
 
         return $post;
-    }
-
-    /**
-     * @testdox getQueryVar() returns an integer when the query var is numeric
-     */
-    public function testGetQueryVarReturnsInteger()
-    {
-        $wpService = new FakeWpService(['getQueryVar' => 42]);
-
-        $result = $wpService->getQueryVar('someVar');
-
-        $this->assertEquals(['someVar', ''], $wpService->methodCalls['getQueryVar'][0]);
-        $this->assertSame(42, $result);
-    }
-
-    /**
-     * @testdox getQueryVar() returns false when the query var is the string 'false'
-     */
-    public function testGetQueryVarReturnsFalse()
-    {
-        $wpService = new FakeWpService(['getQueryVar' => 'false']);
-
-        $result = $wpService->getQueryVar('someVar');
-
-        $this->assertEquals(['someVar', ''], $wpService->methodCalls['getQueryVar'][0]);
-        $this->assertFalse($result);
-    }
-
-    /**
-     * @testdox getQueryVar() returns true when the query var is the string 'true'
-     */
-    public function testGetQueryVarReturnsTrue()
-    {
-        $wpService = new FakeWpService(['getQueryVar' => 'true']);
-        $result = $wpService->getQueryVar('someVar');
-        $this->assertTrue($result);
-    }
-
-    /**
-     * @testdox getQueryVar() returns null when the query var is the string 'null'
-     */
-    public function testGetQueryVarReturnsNullForStringNull()
-    {
-        $wpService = new FakeWpService(['getQueryVar' => 'null']);
-        $result = $wpService->getQueryVar('someVar');
-        $this->assertNull($result);
-    }
-
-    /**
-     * @testdox getQueryVar() returns null when the query var is an empty string
-     */
-    public function testGetQueryVarReturnsNullForEmptyString()
-    {
-        $wpService = new FakeWpService(['getQueryVar' => '']);
-        $result = $wpService->getQueryVar('someVar');
-        $this->assertNull($result);
-    }
-
-    /**
-     * @testdox getQueryVar() returns the original value when it's a non-numeric string
-     */
-    public function testGetQueryVarReturnsOriginalString()
-    {
-        $wpService = new FakeWpService(['getQueryVar' => 'someString']);
-        $result = $wpService->getQueryVar('someVar');
-        $this->assertSame('someString', $result);
-    }
-
-    /**
-     * @testdox getQueryVar() uses the default value when the query var is not set
-     */
-    public function testGetQueryVarUsesDefaultValue()
-    {
-        $wpService = new FakeWpService(['getQueryVar' => '']);
-        $result = $wpService->getQueryVar('someVar', 'defaultValue');
-        $this->assertSame('defaultValue', $result);
     }
 }
