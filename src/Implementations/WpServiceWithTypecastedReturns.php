@@ -34,6 +34,10 @@ class WpServiceWithTypecastedReturns extends WpServiceDecorator
     {
         $queryVarValue = $this->inner->{__FUNCTION__}(...func_get_args());
 
+        if ($queryVarValue === $default) {
+            return $default;
+        }
+
         if (is_numeric($queryVarValue)) {
             return (int) $queryVarValue;
         }

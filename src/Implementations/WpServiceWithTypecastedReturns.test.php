@@ -24,6 +24,16 @@ class WpServiceWithTypecastedReturnsTests extends TestCase
         $this->assertEquals($expected, $result);
     }
 
+    public function testGetQueryVarReturnNonTypecastedReturnDefaultValue()
+    {
+        $fakeWpService = new FakeWpService(
+            ['getQueryVar' => fn($queryParam, $default) => $default]
+        );
+        $wpService     = new WpServiceWithTypecastedReturns($fakeWpService);
+        $result        = $wpService->getQueryVar('getQueryVar', '42');
+        $this->assertEquals('42', $result);
+    }
+
     private function provideGetQueryVarTestCases()
     {
         return [
