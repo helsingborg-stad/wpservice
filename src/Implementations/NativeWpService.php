@@ -825,4 +825,29 @@ class NativeWpService implements WPService
     {
         return is_user_logged_in();
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getQueryVar(string $var, mixed $default = ''): mixed
+    {
+        $queryVarValue = get_query_var($var, $default);
+
+        if(is_numeric($queryVarValue)) {
+            return (int) $queryVarValue;
+        }
+        if(is_string($queryVarValue) && strtolower($queryVarValue) === 'false') {
+            return false;
+        }
+        if(is_string($queryVarValue) && strtolower($queryVarValue) === 'true') {
+            return true;
+        }
+        if(is_string($queryVarValue) && strtolower($queryVarValue) === 'null') {
+            return null;
+        }
+        if(is_string($queryVarValue) && empty($queryVarValue)) {
+            return null;
+        }
+        return $queryVarValue; //Default, should be a string
+    }
 }
