@@ -1294,8 +1294,8 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetQueryVar()
     {
-        $wpService      = new FakeWpService(['getQueryVar' => 42]);
-        $result = $wpService->getQueryVar('var');
+        $wpService = new FakeWpService(['getQueryVar' => 42]);
+        $result    = $wpService->getQueryVar('var');
         $this->assertEquals('var', $wpService->methodCalls['getQueryVar'][0][0]);
         $this->assertEquals(42, $result);
     }

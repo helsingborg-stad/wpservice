@@ -34,22 +34,22 @@ class WpServiceWithTypecastedReturns extends WpServiceDecorator
     {
         $queryVarValue = $this->inner->{__FUNCTION__}(...func_get_args());
 
-        if(is_numeric($queryVarValue)) {
+        if (is_numeric($queryVarValue)) {
             return (int) $queryVarValue;
         }
-        if(is_string($queryVarValue) && strtolower($queryVarValue) === 'false') {
+        if (is_string($queryVarValue) && strtolower($queryVarValue) === 'false') {
             return false;
         }
-        if(is_string($queryVarValue) && strtolower($queryVarValue) === 'true') {
+        if (is_string($queryVarValue) && strtolower($queryVarValue) === 'true') {
             return true;
         }
-        if(is_string($queryVarValue) && strtolower($queryVarValue) === 'null') {
+        if (is_string($queryVarValue) && strtolower($queryVarValue) === 'null') {
             return null;
         }
-        if(is_string($queryVarValue) && empty($queryVarValue)) {
+        if (is_string($queryVarValue) && empty($queryVarValue)) {
             return null;
         }
-        
+
         return $queryVarValue; //Default, should be a string
     }
 }

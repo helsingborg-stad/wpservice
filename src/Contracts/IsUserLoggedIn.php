@@ -11,7 +11,7 @@ interface IsUserLoggedIn
 {
     /**
      * Interface for performing is user logged in check.
-     * 
+     *
      * @return bool
      */
     public function isUserLoggedIn(): bool;

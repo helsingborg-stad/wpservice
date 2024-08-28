@@ -3,7 +3,6 @@
 namespace WpService\Implementations;
 
 use PHPUnit\Framework\TestCase;
-use WpService\WpService;
 
 /**
  * Class WpServiceDecorator
@@ -20,8 +19,8 @@ class WpServiceWithTypecastedReturnsTests extends TestCase
         $fakeWpService = new FakeWpService(
             ['getQueryVar' => $input]
         );
-        $wpService = new WpServiceWithTypecastedReturns($fakeWpService);
-        $result = $wpService->getQueryVar('getQueryVar');
+        $wpService     = new WpServiceWithTypecastedReturns($fakeWpService);
+        $result        = $wpService->getQueryVar('getQueryVar');
         $this->assertEquals($expected, $result);
     }
 
