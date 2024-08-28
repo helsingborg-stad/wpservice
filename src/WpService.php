@@ -48,6 +48,7 @@ interface WpService extends
     Contracts\GetPostTerms,
     Contracts\GetPostType,
     Contracts\GetPostTypes,
+    Contracts\GetQueryVar,
     Contracts\GetStylesheetDirectoryUri,
     Contracts\GetSubmitButton,
     Contracts\GetTerm,
@@ -65,6 +66,7 @@ interface WpService extends
     Contracts\InsertTerm,
     Contracts\IsAdmin,
     Contracts\IsSingle,
+    Contracts\IsUserLoggedIn,
     Contracts\IsWPError,
     Contracts\LoadPluginTextDomain,
     Contracts\Mail,
@@ -92,7 +94,6 @@ interface WpService extends
     Contracts\TaxonomyExists,
     Contracts\TermExists,
     Contracts\UpdateOption,
-    Contracts\WalkNavMenuTree,
-    Contracts\IsUserLoggedIn
+    Contracts\WalkNavMenuTree
 {
 }

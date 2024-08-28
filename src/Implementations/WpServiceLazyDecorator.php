@@ -810,4 +810,12 @@ class WpServiceLazyDecorator implements WPService
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getQueryVar(string $var, mixed $default = ''): mixed
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 }

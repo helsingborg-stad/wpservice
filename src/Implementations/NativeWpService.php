@@ -825,4 +825,12 @@ class NativeWpService implements WPService
     {
         return is_user_logged_in();
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getQueryVar(string $var, mixed $default = ''): mixed
+    {
+        return get_query_var($var, $default);
+    }
 }

@@ -819,11 +819,15 @@ class FakeWpServiceTest extends TestCase
      */
     public function test_e() // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     {
+        ob_start(); //Prevent output to the console
+
         $wpService = new FakeWpService();
 
         $wpService->_e('testString', 'testDomain');
 
         $this->assertEquals(['testString', 'testDomain'], $wpService->methodCalls['_e'][0]);
+
+        ob_end_clean(); // Prevent output to the console
     }
 
     /**
@@ -1283,6 +1287,17 @@ class FakeWpServiceTest extends TestCase
             $wpService->methodCalls['submitButton'][0]
         );
         $this->assertEquals('<button/>', $output);
+    }
+
+    /**
+     * @testdox getQueryVar()
+     */
+    public function testGetQueryVar()
+    {
+        $wpService = new FakeWpService(['getQueryVar' => 42]);
+        $result    = $wpService->getQueryVar('var');
+        $this->assertEquals('var', $wpService->methodCalls['getQueryVar'][0][0]);
+        $this->assertEquals(42, $result);
     }
 
     private function getWpScreen(array $properties = []): WP_Screen|MockObject
