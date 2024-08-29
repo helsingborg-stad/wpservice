@@ -818,4 +818,12 @@ class WpServiceLazyDecorator implements WPService
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function updatePostMeta(int $postId, string $metaKey, mixed $metaValue, mixed $prevValue = ''): bool
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 }

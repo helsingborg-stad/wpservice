@@ -1300,6 +1300,19 @@ class FakeWpServiceTest extends TestCase
         $this->assertEquals(42, $result);
     }
 
+    /**
+     * @testdox updatePostMeta()
+     */
+    public function testUpdatePostMeta()
+    {
+        $wpService = new FakeWpService(['updatePostMeta' => true]);
+
+        $result = $wpService->updatePostMeta(1, 'testKey', 'testValue');
+
+        $this->assertEquals([1, 'testKey', 'testValue'], $wpService->methodCalls['updatePostMeta'][0]);
+        $this->assertTrue($result);
+    }
+
     private function getWpScreen(array $properties = []): WP_Screen|MockObject
     {
         $wpScreen = $this->getMockBuilder('WP_Screen')->disableOriginalConstructor()->getMock();
@@ -1354,4 +1367,6 @@ class FakeWpServiceTest extends TestCase
 
         return $post;
     }
+
+    
 }

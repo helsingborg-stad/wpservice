@@ -94,6 +94,7 @@ interface WpService extends
     Contracts\TaxonomyExists,
     Contracts\TermExists,
     Contracts\UpdateOption,
+    Contracts\UpdatePostMeta,
     Contracts\WalkNavMenuTree
 {
 }
