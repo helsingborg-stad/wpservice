@@ -25,6 +25,7 @@ class WpServiceWithTypecastedReturns extends WpServiceDecorator
      */
     public function __construct(private WPService $inner)
     {
+        parent::__construct($inner);
     }
 
     /**
