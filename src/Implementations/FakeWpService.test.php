@@ -1367,6 +1367,4 @@ class FakeWpServiceTest extends TestCase
 
         return $post;
     }
-
-    
 }

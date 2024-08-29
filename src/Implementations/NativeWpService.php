@@ -837,7 +837,8 @@ class NativeWpService implements WPService
     /**
      * @inheritDoc
      */
-    public function updatePostMeta(int $postId, string $metaKey, mixed $metaValue, mixed $prevValue = ''): bool {
+    public function updatePostMeta(int $postId, string $metaKey, mixed $metaValue, mixed $prevValue = ''): bool
+    {
         return update_post_meta($postId, $metaKey, $metaValue, $prevValue);
     }
 }
