@@ -5,6 +5,7 @@ namespace WpService\Implementations;
 use WpService\WpService;
 use WP_Error;
 use WP_Post;
+use WP_Post_Type;
 use WP_REST_Response;
 use WP_Role;
 use WP_Screen;
@@ -823,6 +824,14 @@ class WpServiceLazyDecorator implements WPService
      * @inheritDoc
      */
     public function updatePostMeta(int $postId, string $metaKey, mixed $metaValue, mixed $prevValue = ''): bool
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getPostTypeObject(string $postType): ?WP_Post_Type
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }

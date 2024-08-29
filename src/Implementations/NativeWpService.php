@@ -5,6 +5,7 @@ namespace WpService\Implementations;
 use WpService\WpService;
 use WP_Error;
 use WP_Post;
+use WP_Post_Type;
 use WP_REST_Response;
 use WP_Role;
 use WP_Screen;
@@ -840,5 +841,13 @@ class NativeWpService implements WPService
     public function updatePostMeta(int $postId, string $metaKey, mixed $metaValue, mixed $prevValue = ''): bool
     {
         return update_post_meta($postId, $metaKey, $metaValue, $prevValue);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getPostTypeObject(string $postType): ?WP_Post_Type
+    {
+        return get_post_type_object($postType);
     }
 }

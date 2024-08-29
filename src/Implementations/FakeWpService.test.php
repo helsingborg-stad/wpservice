@@ -1313,6 +1313,21 @@ class FakeWpServiceTest extends TestCase
         $this->assertTrue($result);
     }
 
+    /**
+     * @testdox getPostTypeObject()
+     */
+    public function testGetPostTypeObject()
+    {
+        $postTypeObject = $this->getPostTypeObject('testPostType');
+        $wpService      = new FakeWpService(['getPostTypeObject' => $postTypeObject]);
+
+        $result = $wpService->getPostTypeObject('testPostType');
+
+        $this->assertEquals(['testPostType'], $wpService->methodCalls['getPostTypeObject'][0]);
+        $this->assertEquals($postTypeObject, $result);
+    }
+
+
     private function getWpScreen(array $properties = []): WP_Screen|MockObject
     {
         $wpScreen = $this->getMockBuilder('WP_Screen')->disableOriginalConstructor()->getMock();
@@ -1366,5 +1381,14 @@ class FakeWpServiceTest extends TestCase
         }
 
         return $post;
+    }
+
+    private function getPostTypeObject(string $postType): WP_Post_Type|MockObject
+    {
+        $postTypeObject = $this->getMockBuilder('WP_Post_Type')->disableOriginalConstructor()->getMock();
+
+        $postTypeObject->name = $postType;
+
+        return $postTypeObject;
     }
 }
