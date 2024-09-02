@@ -946,4 +946,40 @@ class FakeWpService implements WPService
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args(), null);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getReadyCronJobs(): array
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function unscheduleEvent(int $timestamp, string $hook, array $args = [], $wpError = false): bool|WP_Error
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function clearScheduledHook(string $hook, array $args = [], $wpError = false): int|false|WP_Error
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), 0);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getCronArray(): array
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
+    }
 }

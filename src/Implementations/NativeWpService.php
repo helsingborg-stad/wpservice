@@ -850,4 +850,36 @@ class NativeWpService implements WPService
     {
         return get_post_type_object($postType);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getReadyCronJobs(): array
+    {
+        return wp_get_ready_cron_jobs();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function unscheduleEvent(int $timestamp, string $hook, array $args = [], $wpError = false): bool|WP_Error
+    {
+        return wp_unschedule_event($timestamp, $hook, $args, $wpError);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function clearScheduledHook(string $hook, array $args = [], $wpError = false): int|false|WP_Error
+    {
+        return wp_clear_scheduled_hook($hook, $args, $wpError);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getCronArray(): array
+    {
+        return _get_cron_array();
+    }
 }
