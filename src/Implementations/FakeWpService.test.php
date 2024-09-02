@@ -1327,6 +1327,58 @@ class FakeWpServiceTest extends TestCase
         $this->assertEquals($postTypeObject, $result);
     }
 
+    /**
+     * @testdox getReadyCronJobs()
+     */
+    public function testGetReadyCronJobs()
+    {
+        $wpService = new FakeWpService(['getReadyCronJobs' => ['testCronJob']]);
+
+        $result = $wpService->getReadyCronJobs();
+
+        $this->assertEquals([], $wpService->methodCalls['getReadyCronJobs'][0]);
+        $this->assertEquals(['testCronJob'], $result);
+    }
+
+    /**
+     * @testdox unscheduleEvent()
+     */
+    public function testUnscheduleEvent()
+    {
+        $timestamp = time();
+        $wpService = new FakeWpService(['unscheduleEvent' => true]);
+
+        $result = $wpService->unscheduleEvent($timestamp, 'testHook');
+
+        $this->assertEquals([$timestamp, 'testHook'], $wpService->methodCalls['unscheduleEvent'][0]);
+        $this->assertTrue($result);
+    }
+
+    /**
+     * @testdox clearScheduledHook()
+     */
+    public function testClearScheduledHook()
+    {
+        $wpService = new FakeWpService(['clearScheduledHook' => 123]);
+
+        $result = $wpService->clearScheduledHook('testHook');
+
+        $this->assertEquals(['testHook'], $wpService->methodCalls['clearScheduledHook'][0]);
+        $this->assertEquals(123, $result);
+    }
+
+    /**
+     * @testdox getCronArray()
+     */
+    public function testGetCronArray()
+    {
+        $wpService = new FakeWpService(['getCronArray' => ['testCronArray']]);
+
+        $result = $wpService->getCronArray();
+
+        $this->assertEquals([], $wpService->methodCalls['getCronArray'][0]);
+        $this->assertEquals(['testCronArray'], $result);
+    }
 
     private function getWpScreen(array $properties = []): WP_Screen|MockObject
     {
