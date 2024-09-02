@@ -1,6 +1,6 @@
 <?php
 
-namespace WpService\WpCronService\WpCronJob;
+namespace WpCronService\WpCronJob;
 
 use PHPUnit\Framework\TestCase;
 

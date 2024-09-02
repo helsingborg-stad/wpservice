@@ -1,6 +1,6 @@
 <?php
 
-namespace WpService\WpCronService;
+namespace WpCronService;
 
 use Generator;
 use WpService\Contracts\AddAction;
@@ -8,7 +8,7 @@ use WpService\Contracts\ClearScheduledHook;
 use WpService\Contracts\GetCronArray;
 use WpService\Contracts\NextScheduled;
 use WpService\Contracts\ScheduleEvent;
-use WpService\WpCronService\WpCronJob\WpCronJobInterface;
+use WpCronService\WpCronJob\WpCronJobInterface;
 
 /**
  * Class WpCronJobManager

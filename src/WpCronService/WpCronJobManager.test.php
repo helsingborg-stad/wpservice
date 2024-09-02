@@ -1,10 +1,10 @@
 <?php
 
-namespace WpService\WpCronService;
+namespace WpCronService;
 
 use PHPUnit\Framework\TestCase;
 use WpService\Implementations\FakeWpService;
-use WpService\WpCronService\WpCronJob\WpCronJob;
+use WpCronService\WpCronJob\WpCronJob;
 
 class WpCronJobManagerTest extends TestCase
 {

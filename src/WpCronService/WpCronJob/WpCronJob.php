@@ -1,6 +1,6 @@
 <?php
 
-namespace WpService\WpCronService\WpCronJob;
+namespace WpCronService\WpCronJob;
 
 /**
  * Represents a WordPress cron job.

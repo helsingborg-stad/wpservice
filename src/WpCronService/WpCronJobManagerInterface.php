@@ -1,8 +1,8 @@
 <?php
 
-namespace WpService\WpCronService;
+namespace WpCronService;
 
-use WpService\WpCronService\WpCronJob\WpCronJobInterface;
+use WpCronService\WpCronJob\WpCronJobInterface;
 
 interface WpCronJobManagerInterface
 {
