@@ -11,6 +11,7 @@ use WP_Role;
 use WP_Screen;
 use WP_Term;
 use WP_User;
+use WP_Taxonomy;
 
 /**
  * Class FakeWpService
@@ -148,6 +149,16 @@ class FakeWpService implements WPService
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getTaxonomy(
+        string $taxonomy
+    ): WP_Taxonomy|false {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 
     /**

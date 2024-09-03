@@ -55,6 +55,7 @@ interface WpService extends
     Contracts\GetReadyCronJobs,
     Contracts\GetSchedules,
     Contracts\GetStylesheetDirectoryUri,
+    Contracts\GetTaxonomy,
     Contracts\GetSubmitButton,
     Contracts\GetTerm,
     Contracts\GetTermMeta,

@@ -7,6 +7,7 @@ use PHPUnit\Framework\TestCase;
 use WP_Post;
 use WP_Role;
 use WP_Screen;
+use WP_Taxonomy;
 use WP_Term;
 use WP_User;
 
@@ -137,6 +138,21 @@ class FakeWpServiceTest extends TestCase
 
         $this->assertEquals([['post_type' => 'testPostType']], $wpService->methodCalls['getPosts'][0]);
         $this->assertEquals($posts, $result);
+    }
+
+    /**
+     * @testdox testGetTaxonomy()
+     */
+    public function testGetTaxonomy()
+    {
+        $taxonomy       = $this->getTaxonomy(['name' => 'testTaxonomy']);
+        $callableReturn = fn($taxonomyName) => $taxonomyName === 'testTaxonomy' ? $taxonomy : false;
+        $wpService      = new FakeWpService(['getTaxonomy' => $callableReturn]);
+
+        $result = $wpService->getTaxonomy('testTaxonomy');
+
+        $this->assertEquals(['testTaxonomy'], $wpService->methodCalls['getTaxonomy'][0]);
+        $this->assertEquals($taxonomy, $result);
     }
 
     /**
@@ -1437,6 +1453,17 @@ class FakeWpServiceTest extends TestCase
         }
 
         return $user;
+    }
+
+    private function getTaxonomy(array $properties): WP_Taxonomy|MockObject
+    {
+        $taxonomy = $this->getMockBuilder('WP_Taxonomy')->disableOriginalConstructor()->getMock();
+
+        foreach ($properties as $property => $value) {
+            @$taxonomy->$property = $value;
+        }
+
+        return $taxonomy;
     }
 
     private function getWpTerm(array $properties): WP_Term|MockObject
