@@ -890,4 +890,12 @@ class NativeWpService implements WPService
     {
         return wp_get_schedules();
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function updatePost(int $postId, array $data): int|WP_Error
+    {
+        return wp_update_post($postId, $data);
+    }
 }

@@ -1393,6 +1393,19 @@ class FakeWpServiceTest extends TestCase
         $this->assertEquals(['testSchedules'], $result);
     }
 
+    /**
+     * @testdox updatePost()
+     */
+    public function testUpdatePost()
+    {
+        $wpService = new FakeWpService(['updatePost' => 1]);
+
+        $result = $wpService->updatePost(1, ['testArg' => 'foo']);
+
+        $this->assertEquals([1, ['testArg' => 'foo']], $wpService->methodCalls['updatePost'][0]);
+        $this->assertEquals(1, $result);
+    }
+
     private function getWpScreen(array $properties = []): WP_Screen|MockObject
     {
         $wpScreen = $this->getMockBuilder('WP_Screen')->disableOriginalConstructor()->getMock();
