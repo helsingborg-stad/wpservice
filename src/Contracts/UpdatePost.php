@@ -14,7 +14,7 @@ interface UpdatePost
      *     Optional. Post data or object. Arrays are expected to be escaped, objects are not.
      *     See wp_insert_post() for accepted arguments.
      *     Default is an empty array.
-     * 
+     *
      *     @type int $ID The post ID.
      *     @type string $post_type The type of post (e.g., 'post', 'page', 'attachment').
      *     @type string $post_title The post title.
@@ -28,7 +28,7 @@ interface UpdatePost
      * }
      * @param bool $WPError Optional. Whether to return a WP_Error on failure. Default is false.
      * @param bool $fireAfterHooks Optional. Whether to fire the after insert hooks. Default is true.
-     * 
+     *
      * @return int|WP_Error|WP_Post The post ID on success, WP_Post object on success for attachments, or WP_Error object on failure.
      */
     public function updatePost(array|object $postArray = [], bool $WPError = false, bool $fireAfterHooks = true): int|WP_Error|WP_Post;
