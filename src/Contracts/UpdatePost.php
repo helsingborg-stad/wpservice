@@ -29,7 +29,12 @@ interface UpdatePost
      * @param bool $WPError Optional. Whether to return a WP_Error on failure. Default is false.
      * @param bool $fireAfterHooks Optional. Whether to fire the after insert hooks. Default is true.
      *
-     * @return int|WP_Error|WP_Post The post ID on success, WP_Post object on success for attachments, or WP_Error object on failure.
+     * @return int|WP_Error|WP_Post The post ID on success, WP_Post object on success
+     *                              for attachments, or WP_Error object on failure.
      */
-    public function updatePost(array|object $postArray = [], bool $WPError = false, bool $fireAfterHooks = true): int|WP_Error|WP_Post;
+    public function updatePost(
+        array|object $postArray = [],
+        bool $WPError = false,
+        bool $fireAfterHooks = true
+    ): int|WP_Error|WP_Post;
 }
