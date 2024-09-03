@@ -7,6 +7,7 @@ use PHPUnit\Framework\TestCase;
 use WP_Post;
 use WP_Role;
 use WP_Screen;
+use WP_Taxonomy;
 use WP_Term;
 use WP_User;
 
@@ -137,6 +138,21 @@ class FakeWpServiceTest extends TestCase
 
         $this->assertEquals([['post_type' => 'testPostType']], $wpService->methodCalls['getPosts'][0]);
         $this->assertEquals($posts, $result);
+    }
+
+    /**
+     * @testdox testGetTaxonomy()
+     */
+    public function testGetTaxonomy()
+    {
+        $taxonomy       = $this->getTaxonomy(['name' => 'testTaxonomy']);
+        $callableReturn = fn($taxonomyName) => $taxonomyName === 'testTaxonomy' ? $taxonomy : false;
+        $wpService      = new FakeWpService(['getTaxonomy' => $callableReturn]);
+
+        $result = $wpService->getTaxonomy('testTaxonomy');
+
+        $this->assertEquals(['testTaxonomy'], $wpService->methodCalls['getTaxonomy'][0]);
+        $this->assertEquals($taxonomy, $result);
     }
 
     /**
@@ -819,11 +835,15 @@ class FakeWpServiceTest extends TestCase
      */
     public function test_e() // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     {
+        ob_start(); //Prevent output to the console
+
         $wpService = new FakeWpService();
 
         $wpService->_e('testString', 'testDomain');
 
         $this->assertEquals(['testString', 'testDomain'], $wpService->methodCalls['_e'][0]);
+
+        ob_end_clean(); // Prevent output to the console
     }
 
     /**
@@ -1249,6 +1269,159 @@ class FakeWpServiceTest extends TestCase
         $this->assertEquals('<nav/>', $result);
     }
 
+    /**
+     * @testdox getSubmitButton()
+     */
+    public function testGetSubmitButton()
+    {
+        $wpService = new FakeWpService(['getSubmitButton' => '<button/>']);
+
+        $result = $wpService->getSubmitButton('testText', 'testType', 'testName', 'testWrap', 'testOther');
+
+        $this->assertEquals(
+            ['testText', 'testType', 'testName', 'testWrap', 'testOther'],
+            $wpService->methodCalls['getSubmitButton'][0]
+        );
+        $this->assertEquals('<button/>', $result);
+    }
+
+    /**
+     * @testdox submitButton()
+     */
+    public function testSubmitButton()
+    {
+        $wpService = new FakeWpService(['submitButton' => function () {
+            echo '<button/>';
+        }]);
+
+        ob_start();
+        $wpService->submitButton('testText', 'testType', 'testName', 'testWrap', 'testOther');
+        $output = ob_get_clean();
+
+        $this->assertEquals(
+            ['testText', 'testType', 'testName', 'testWrap', 'testOther'],
+            $wpService->methodCalls['submitButton'][0]
+        );
+        $this->assertEquals('<button/>', $output);
+    }
+
+    /**
+     * @testdox getQueryVar()
+     */
+    public function testGetQueryVar()
+    {
+        $wpService = new FakeWpService(['getQueryVar' => 42]);
+        $result    = $wpService->getQueryVar('var');
+        $this->assertEquals('var', $wpService->methodCalls['getQueryVar'][0][0]);
+        $this->assertEquals(42, $result);
+    }
+
+    /**
+     * @testdox updatePostMeta()
+     */
+    public function testUpdatePostMeta()
+    {
+        $wpService = new FakeWpService(['updatePostMeta' => true]);
+
+        $result = $wpService->updatePostMeta(1, 'testKey', 'testValue');
+
+        $this->assertEquals([1, 'testKey', 'testValue'], $wpService->methodCalls['updatePostMeta'][0]);
+        $this->assertTrue($result);
+    }
+
+    /**
+     * @testdox getPostTypeObject()
+     */
+    public function testGetPostTypeObject()
+    {
+        $postTypeObject = $this->getPostTypeObject('testPostType');
+        $wpService      = new FakeWpService(['getPostTypeObject' => $postTypeObject]);
+
+        $result = $wpService->getPostTypeObject('testPostType');
+
+        $this->assertEquals(['testPostType'], $wpService->methodCalls['getPostTypeObject'][0]);
+        $this->assertEquals($postTypeObject, $result);
+    }
+
+    /**
+     * @testdox getReadyCronJobs()
+     */
+    public function testGetReadyCronJobs()
+    {
+        $wpService = new FakeWpService(['getReadyCronJobs' => ['testCronJob']]);
+
+        $result = $wpService->getReadyCronJobs();
+
+        $this->assertEquals([], $wpService->methodCalls['getReadyCronJobs'][0]);
+        $this->assertEquals(['testCronJob'], $result);
+    }
+
+    /**
+     * @testdox unscheduleEvent()
+     */
+    public function testUnscheduleEvent()
+    {
+        $timestamp = time();
+        $wpService = new FakeWpService(['unscheduleEvent' => true]);
+
+        $result = $wpService->unscheduleEvent($timestamp, 'testHook');
+
+        $this->assertEquals([$timestamp, 'testHook'], $wpService->methodCalls['unscheduleEvent'][0]);
+        $this->assertTrue($result);
+    }
+
+    /**
+     * @testdox clearScheduledHook()
+     */
+    public function testClearScheduledHook()
+    {
+        $wpService = new FakeWpService(['clearScheduledHook' => 123]);
+
+        $result = $wpService->clearScheduledHook('testHook');
+
+        $this->assertEquals(['testHook'], $wpService->methodCalls['clearScheduledHook'][0]);
+        $this->assertEquals(123, $result);
+    }
+
+    /**
+     * @testdox getCronArray()
+     */
+    public function testGetCronArray()
+    {
+        $wpService = new FakeWpService(['getCronArray' => ['testCronArray']]);
+
+        $result = $wpService->getCronArray();
+
+        $this->assertEquals([], $wpService->methodCalls['getCronArray'][0]);
+        $this->assertEquals(['testCronArray'], $result);
+    }
+
+    /**
+     * @testdox getSchedules()
+     */
+    public function testGetSchedules()
+    {
+        $wpService = new FakeWpService(['getSchedules' => ['testSchedules']]);
+
+        $result = $wpService->getSchedules();
+
+        $this->assertEquals([], $wpService->methodCalls['getSchedules'][0]);
+        $this->assertEquals(['testSchedules'], $result);
+    }
+
+    /**
+     * @testdox updatePost()
+     */
+    public function testUpdatePost()
+    {
+        $wpService = new FakeWpService(['updatePost' => 1]);
+
+        $result = $wpService->updatePost(1, ['testArg' => 'foo']);
+
+        $this->assertEquals([1, ['testArg' => 'foo']], $wpService->methodCalls['updatePost'][0]);
+        $this->assertEquals(1, $result);
+    }
+
     private function getWpScreen(array $properties = []): WP_Screen|MockObject
     {
         $wpScreen = $this->getMockBuilder('WP_Screen')->disableOriginalConstructor()->getMock();
@@ -1282,6 +1455,17 @@ class FakeWpServiceTest extends TestCase
         return $user;
     }
 
+    private function getTaxonomy(array $properties): WP_Taxonomy|MockObject
+    {
+        $taxonomy = $this->getMockBuilder('WP_Taxonomy')->disableOriginalConstructor()->getMock();
+
+        foreach ($properties as $property => $value) {
+            @$taxonomy->$property = $value;
+        }
+
+        return $taxonomy;
+    }
+
     private function getWpTerm(array $properties): WP_Term|MockObject
     {
         $term = $this->getMockBuilder('WP_Term')->disableOriginalConstructor()->getMock();
@@ -1302,5 +1486,14 @@ class FakeWpServiceTest extends TestCase
         }
 
         return $post;
+    }
+
+    private function getPostTypeObject(string $postType): WP_Post_Type|MockObject
+    {
+        $postTypeObject = $this->getMockBuilder('WP_Post_Type')->disableOriginalConstructor()->getMock();
+
+        $postTypeObject->name = $postType;
+
+        return $postTypeObject;
     }
 }

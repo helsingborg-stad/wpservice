@@ -4,7 +4,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "WpService\\": "src/"
+            "WpService\\": "src/",
+            "WpCronService\\": "src/WpCronService/"
         }
     },
     "authors": [
@@ -22,12 +23,14 @@
     },
     "scripts": {
         "test": "XDEBUG_MODE=off ./vendor/bin/phpunit --testdox --no-coverage",
-        "coverage": "XDEBUG_MODE=coverage ./vendor/bin/phpunit --testdox"
+        "coverage": "XDEBUG_MODE=coverage ./vendor/bin/phpunit --testdox",
+        "lint": "./vendor/bin/phpcs",
+        "fix": "./vendor/bin/phpcbf"
     },
     "config": {
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
         }
     },
-    "version": "1.29.0"
+    "version": "1.39.0"
 }

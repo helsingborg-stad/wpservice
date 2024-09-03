@@ -5,9 +5,11 @@ namespace WpService\Implementations;
 use WpService\WpService;
 use WP_Error;
 use WP_Post;
+use WP_Post_Type;
 use WP_REST_Response;
 use WP_Role;
 use WP_Screen;
+use WP_Taxonomy;
 use WP_Term;
 use WP_User;
 
@@ -120,6 +122,14 @@ class NativeWpService implements WPService
     public function getPosts(?array $args): array
     {
         return get_posts($args);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getTaxonomy(string $taxonomy): WP_Taxonomy|false
+    {
+        return get_taxonomy($taxonomy);
     }
 
     /**
@@ -799,5 +809,111 @@ class NativeWpService implements WPService
     public function walkNavMenuTree(array $items, int $depth, object $args): string
     {
         return walk_nav_menu_tree($items, $depth, $args);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getSubmitButton(
+        string $text = '',
+        string $type = 'primary',
+        string $name = 'submit',
+        bool $wrap = true,
+        array|string $otherAttributes = ''
+    ): string {
+        return get_submit_button($text, $type, $name, $wrap, $otherAttributes);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function submitButton(
+        string $text = '',
+        string $type = 'primary',
+        string $name = 'submit',
+        bool $wrap = true,
+        array|string $otherAttributes = ''
+    ): void {
+        submit_button($text, $type, $name, $wrap, $otherAttributes);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function isUserLoggedIn(): bool
+    {
+        return is_user_logged_in();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getQueryVar(string $var, mixed $default = ''): mixed
+    {
+        return get_query_var($var, $default);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function updatePostMeta(int $postId, string $metaKey, mixed $metaValue, mixed $prevValue = ''): bool
+    {
+        return update_post_meta($postId, $metaKey, $metaValue, $prevValue);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getPostTypeObject(string $postType): ?WP_Post_Type
+    {
+        return get_post_type_object($postType);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getReadyCronJobs(): array
+    {
+        return wp_get_ready_cron_jobs();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function unscheduleEvent(int $timestamp, string $hook, array $args = [], $wpError = false): bool|WP_Error
+    {
+        return wp_unschedule_event($timestamp, $hook, $args, $wpError);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function clearScheduledHook(string $hook, array $args = [], $wpError = false): int|false|WP_Error
+    {
+        return wp_clear_scheduled_hook($hook, $args, $wpError);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getCronArray(): array
+    {
+        return _get_cron_array();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getSchedules(): array
+    {
+        return wp_get_schedules();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function updatePost(int $postId, array $data): int|WP_Error
+    {
+        return wp_update_post($postId, $data);
     }
 }
