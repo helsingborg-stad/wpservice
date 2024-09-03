@@ -1422,6 +1422,19 @@ class FakeWpServiceTest extends TestCase
         $this->assertEquals(1, $result);
     }
 
+    /**
+     * @testdox getNavMenuLocations()
+     */
+    public function testGetNavMenuLocations()
+    {
+        $wpService = new FakeWpService(['getNavMenuLocations' => ['testLocations']]);
+
+        $result = $wpService->getNavMenuLocations();
+
+        $this->assertEquals([], $wpService->methodCalls['getNavMenuLocations'][0]);
+        $this->assertEquals(['testLocations'], $result);
+    }
+
     private function getWpScreen(array $properties = []): WP_Screen|MockObject
     {
         $wpScreen = $this->getMockBuilder('WP_Screen')->disableOriginalConstructor()->getMock();
