@@ -1417,9 +1417,9 @@ class FakeWpServiceTest extends TestCase
     {
         $wpService = new FakeWpService(['updatePost' => 1]);
 
-        $result = $wpService->updatePost(1, ['testArg' => 'foo']);
+        $result = $wpService->updatePost(['testArg' => 'foo']);
 
-        $this->assertEquals([1, ['testArg' => 'foo']], $wpService->methodCalls['updatePost'][0]);
+        $this->assertEquals([['testArg' => 'foo']], $wpService->methodCalls['updatePost'][0]);
         $this->assertEquals(1, $result);
     }
 

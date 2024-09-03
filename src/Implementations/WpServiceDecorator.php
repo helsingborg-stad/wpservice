@@ -891,8 +891,11 @@ class WpServiceDecorator implements WPService
     /**
      * @inheritDoc
      */
-    public function updatePost(int $postId, array $data): int|WP_Error
-    {
+    public function updatePost(
+        array|object $postArray = [],
+        bool $WPError = false,
+        bool $fireAfterHooks = true
+    ): int|WP_Error|WP_Post {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
 }
