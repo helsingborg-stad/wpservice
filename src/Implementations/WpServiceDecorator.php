@@ -870,4 +870,13 @@ class WpServiceDecorator implements WPService
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function updatePost(int $postId, array $data): int|WP_Error
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
 }
