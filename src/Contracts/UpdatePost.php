@@ -14,5 +14,5 @@ interface UpdatePost
      *
      * @return bool Post ID on success or wp_error on failure.
      */
-    public function updadatePost(int $postId, array $data): int|WP_Error;
+    public function updatePost(int $postId, array $data): int|WP_Error;
 }
