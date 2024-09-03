@@ -5,6 +5,7 @@ namespace WpService\Implementations;
 use WpService\WpService;
 use WP_Error;
 use WP_Post;
+use WP_Post_Type;
 use WP_REST_Response;
 use WP_Role;
 use WP_Screen;
@@ -890,5 +891,124 @@ class FakeWpService implements WPService
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args(), '');
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getSubmitButton(
+        string $text = '',
+        string $type = 'primary',
+        string $name = 'submit',
+        bool $wrap = true,
+        array|string $otherAttributes = ''
+    ): string {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), '');
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function submitButton(
+        string $text = '',
+        string $type = 'primary',
+        string $name = 'submit',
+        bool $wrap = true,
+        array|string $otherAttributes = ''
+    ): void {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        echo $this->getReturnValue(__FUNCTION__, func_get_args(), '');
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function isUserLoggedIn(): bool
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getQueryVar(string $var, mixed $default = ''): mixed
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), '');
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function updatePostMeta(int $postId, string $metaKey, mixed $metaValue, mixed $prevValue = ''): bool
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getPostTypeObject(string $postType): ?WP_Post_Type
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), null);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getReadyCronJobs(): array
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function unscheduleEvent(int $timestamp, string $hook, array $args = [], $wpError = false): bool|WP_Error
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function clearScheduledHook(string $hook, array $args = [], $wpError = false): int|false|WP_Error
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), 0);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getCronArray(): array
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getSchedules(): array
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function updatePost(int $postId, array $data): int|WP_Error
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 }
