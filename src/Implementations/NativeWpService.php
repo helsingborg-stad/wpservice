@@ -353,6 +353,15 @@ class NativeWpService implements WPService
         return wp_schedule_event($timestamp, $recurrence, $hook, $args, $wpError);
     }
 
+
+    /**
+     * @inheritDoc
+     */
+    public function getNavMenuLocations(): array
+    {
+        return get_nav_menu_locations();
+    }
+
     /**
      * @inheritDoc
      */

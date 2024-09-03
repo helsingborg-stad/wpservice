@@ -359,6 +359,14 @@ class WpServiceDecorator implements WPService
     /**
      * @inheritDoc
      */
+    public function getNavMenuLocations(): array
+    {
+        return get_nav_menu_locations();
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function getObjectTaxonomies(string|array $objectType, string $output = 'names'): array
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());

@@ -396,6 +396,15 @@ class FakeWpService implements WPService
     /**
      * @inheritDoc
      */
+    public function getNavMenuLocations(): array
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function getObjectTaxonomies(string|array $objectType, string $output = 'names'): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args(), []);
