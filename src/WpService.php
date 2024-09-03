@@ -101,6 +101,7 @@ interface WpService extends
     Contracts\UnscheduleEvent,
     Contracts\UpdateOption,
     Contracts\UpdatePostMeta,
+    Contracts\UpdatePost,
     Contracts\WalkNavMenuTree
 {
 }
