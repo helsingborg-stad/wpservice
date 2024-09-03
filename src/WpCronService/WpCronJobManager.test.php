@@ -65,6 +65,17 @@ class WpCronJobManagerTest extends TestCase
         );
     }
 
+    /**
+     * @testdox getPrefix() returns the prefix.
+     */
+    public function testGetPrefix()
+    {
+        $wpService = new FakeWpService();
+        $manager   = new WpCronJobManager('prefix_', $wpService);
+
+        $this->assertEquals('prefix_', $manager->getPrefix());
+    }
+
     private function getCronArray(): array
     {
         return [

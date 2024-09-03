@@ -71,6 +71,14 @@ class WpCronJobManager implements WpCronJobManagerInterface
     }
 
     /**
+     * @inheritDoc
+     */
+    public function getPrefix(): string
+    {
+        return $this->hookPrefix;
+    }
+
+    /**
      * Get all cron jobs.
      *
      * @return Generator<array> [timestamp, hookName, args]
@@ -99,6 +107,6 @@ class WpCronJobManager implements WpCronJobManagerInterface
      */
     private function getPrefixedHookName(string $hookName): string
     {
-        return $this->hookPrefix . $hookName;
+        return $this->getPrefix() . $hookName;
     }
 }

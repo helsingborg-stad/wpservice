@@ -25,4 +25,11 @@ interface WpCronJobManagerInterface
      * Delete all cron jobs.
      */
     public function deleteAll(): void;
+
+    /**
+     * Get the prefix which is appended to the cron events registered in this service.
+     *
+     * @return string The prefix.
+     */
+    public function getPrefix(): string;
 }
