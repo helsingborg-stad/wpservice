@@ -882,4 +882,12 @@ class NativeWpService implements WPService
     {
         return _get_cron_array();
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getSchedules(): array
+    {
+        return wp_get_schedules();
+    }
 }

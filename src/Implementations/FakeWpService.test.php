@@ -1380,6 +1380,19 @@ class FakeWpServiceTest extends TestCase
         $this->assertEquals(['testCronArray'], $result);
     }
 
+    /**
+     * @testdox getSchedules()
+     */
+    public function testGetSchedules()
+    {
+        $wpService = new FakeWpService(['getSchedules' => ['testSchedules']]);
+
+        $result = $wpService->getSchedules();
+
+        $this->assertEquals([], $wpService->methodCalls['getSchedules'][0]);
+        $this->assertEquals(['testSchedules'], $result);
+    }
+
     private function getWpScreen(array $properties = []): WP_Screen|MockObject
     {
         $wpScreen = $this->getMockBuilder('WP_Screen')->disableOriginalConstructor()->getMock();
