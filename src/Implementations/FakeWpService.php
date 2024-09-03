@@ -1015,8 +1015,11 @@ class FakeWpService implements WPService
     /**
      * @inheritDoc
      */
-    public function updatePost(array|object $postArray = [], bool $WPError = false, bool $fireAfterHooks = true): int|WP_Error|WP_Post
-    {
+    public function updatePost(
+        array|object $postArray = [],
+        bool $WPError = false,
+        bool $fireAfterHooks = true
+    ): int|WP_Error|WP_Post {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args(), 0);
     }
