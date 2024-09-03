@@ -89,7 +89,7 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetPost()
     {
-        $post      = $this->getWpPost(['ID' => 1]);
+        $post      = new WP_Post(['ID' => 1]);
         $wpService = new FakeWpService(['getPost' => $post]);
 
         $result = $wpService->getPost(1);
@@ -117,7 +117,7 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetPostParent()
     {
-        $parent         = $this->getWpPost(['ID' => 1]);
+        $parent         = new WP_Post(['ID' => 1]);
         $callableReturn = fn($postId) => $postId === 1 ? $parent : null;
         $wpService      = new FakeWpService(['getPostParent' => $callableReturn]);
 
@@ -132,7 +132,7 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetPosts()
     {
-        $posts     = [$this->getWpPost(['ID' => 1])];
+        $posts     = [new WP_Post(['ID' => 1])];
         $wpService = new FakeWpService(['getPosts' => $posts]);
 
         $result = $wpService->getPosts(['post_type' => 'testPostType']);
@@ -146,7 +146,7 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetTaxonomy()
     {
-        $taxonomy       = $this->getTaxonomy(['name' => 'testTaxonomy']);
+        $taxonomy       = new WP_Taxonomy('testTaxonomy', 'post');
         $callableReturn = fn($taxonomyName) => $taxonomyName === 'testTaxonomy' ? $taxonomy : false;
         $wpService      = new FakeWpService(['getTaxonomy' => $callableReturn]);
 
@@ -161,7 +161,7 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetTerm()
     {
-        $term           = $this->getWpTerm(['term_id' => 1]);
+        $term           = new WP_Term(['term_id' => 1]);
         $callableReturn = fn($termId, $taxonomy) => $termId === 1 && $taxonomy === 'testTaxonomy' ? $term : null;
         $wpService      = new FakeWpService(['getTerm' => $callableReturn]);
 
@@ -190,7 +190,7 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetTerms()
     {
-        $terms     = [$this->getWpTerm(['term_id' => 1])];
+        $terms     = [new WP_Term(['term_id' => 1])];
         $wpService = new FakeWpService(['getTerms' => $terms]);
 
         $result = $wpService->getTerms('testTaxonomy');
@@ -331,7 +331,7 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetPostTerms()
     {
-        $terms          = [$this->getWpTerm(['term_id' => 1])];
+        $terms          = [new WP_Term(['term_id' => 1])];
         $callableReturn = fn($postId, $taxonomy) => $postId === 1 && $taxonomy === 'testTaxonomy' ? $terms : null;
         $wpService      = new FakeWpService(['getPostTerms' => $callableReturn]);
 
@@ -458,7 +458,7 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetChildren()
     {
-        $children  = [$this->getWpPost(['ID' => 1])];
+        $children  = [new WP_Post(['ID' => 1])];
         $wpService = new FakeWpService(['getChildren' => $children]);
 
         $result = $wpService->getChildren(1);
@@ -1335,7 +1335,7 @@ class FakeWpServiceTest extends TestCase
      */
     public function testGetPostTypeObject()
     {
-        $postTypeObject = $this->getPostTypeObject('testPostType');
+        $postTypeObject = new WP_Post_Type('testPostType');
         $wpService      = new FakeWpService(['getPostTypeObject' => $postTypeObject]);
 
         $result = $wpService->getPostTypeObject('testPostType');
@@ -1436,15 +1436,9 @@ class FakeWpServiceTest extends TestCase
         $this->assertEquals(['testLocations'], $result);
     }
 
-    private function getWpScreen(array $properties = []): WP_Screen|MockObject
+    private function getWpScreen(): WP_Screen|MockObject
     {
-        $wpScreen = $this->getMockBuilder('WP_Screen')->disableOriginalConstructor()->getMock();
-
-        foreach ($properties as $property => $value) {
-            @$wpScreen->$property = $value;
-        }
-
-        return $wpScreen;
+        return new WP_Screen();
     }
 
     private function getWpRole(array $properties = []): WP_Role|MockObject
@@ -1467,47 +1461,5 @@ class FakeWpServiceTest extends TestCase
         }
 
         return $user;
-    }
-
-    private function getTaxonomy(array $properties): WP_Taxonomy|MockObject
-    {
-        $taxonomy = $this->getMockBuilder('WP_Taxonomy')->disableOriginalConstructor()->getMock();
-
-        foreach ($properties as $property => $value) {
-            @$taxonomy->$property = $value;
-        }
-
-        return $taxonomy;
-    }
-
-    private function getWpTerm(array $properties): WP_Term|MockObject
-    {
-        $term = $this->getMockBuilder('WP_Term')->disableOriginalConstructor()->getMock();
-
-        foreach ($properties as $property => $value) {
-            @$term->{$property} = $value;
-        }
-
-        return $term;
-    }
-
-    private function getWpPost(array $properties = []): WP_Post|MockObject
-    {
-        $post = $this->getMockBuilder('WP_Post')->disableOriginalConstructor()->getMock();
-
-        foreach ($properties as $property => $value) {
-            @$post->{$property} = $value;
-        }
-
-        return $post;
-    }
-
-    private function getPostTypeObject(string $postType): WP_Post_Type|MockObject
-    {
-        $postTypeObject = $this->getMockBuilder('WP_Post_Type')->disableOriginalConstructor()->getMock();
-
-        @$postTypeObject->name = $postType;
-
-        return $postTypeObject;
     }
 }

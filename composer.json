@@ -19,7 +19,8 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^9.6",
-        "helsingborg-stad/phpcs": "^0.3.5"
+        "helsingborg-stad/phpcs": "^0.3.5",
+        "php-stubs/wordpress-stubs": "^6.6"
     },
     "scripts": {
         "test": "XDEBUG_MODE=off ./vendor/bin/phpunit --testdox --no-coverage",
