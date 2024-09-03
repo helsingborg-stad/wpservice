@@ -5,6 +5,7 @@ namespace WpService\Implementations;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use WP_Post;
+use WP_Post_Type;
 use WP_Role;
 use WP_Screen;
 use WP_Taxonomy;
@@ -1416,9 +1417,9 @@ class FakeWpServiceTest extends TestCase
     {
         $wpService = new FakeWpService(['updatePost' => 1]);
 
-        $result = $wpService->updatePost(1, ['testArg' => 'foo']);
+        $result = $wpService->updatePost(['testArg' => 'foo']);
 
-        $this->assertEquals([1, ['testArg' => 'foo']], $wpService->methodCalls['updatePost'][0]);
+        $this->assertEquals([['testArg' => 'foo']], $wpService->methodCalls['updatePost'][0]);
         $this->assertEquals(1, $result);
     }
 
@@ -1505,7 +1506,7 @@ class FakeWpServiceTest extends TestCase
     {
         $postTypeObject = $this->getMockBuilder('WP_Post_Type')->disableOriginalConstructor()->getMock();
 
-        $postTypeObject->name = $postType;
+        @$postTypeObject->name = $postType;
 
         return $postTypeObject;
     }
