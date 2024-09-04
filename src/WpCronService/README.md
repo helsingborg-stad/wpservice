@@ -25,7 +25,7 @@ The `WpCronJobManager` class is responsible for managing WordPress cron jobs. It
 ### Example Usage of `WpCronJob`
 
 ```php
-$job = new WpCronJob('my_custom_hook', 'hourly', 'my_callback_function', ['arg1', 'arg2']);
+$job = new WpCronJob('my_custom_hook', time(), 'hourly', 'my_callback_function', ['arg1', 'arg2']);
 $jobManager = new WpCronJobManager('my_plugin_prefix_', $wpService);
 
 // Register the job.
