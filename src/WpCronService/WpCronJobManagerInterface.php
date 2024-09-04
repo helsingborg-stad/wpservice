@@ -17,9 +17,9 @@ interface WpCronJobManagerInterface
     /**
      * Delete a cron job.
      *
-     * @param string|WpCronJobInterface $hook The hook name or the cron job to delete.
+     * @param WpCronJobInterface $hook The cron job to delete.
      */
-    public function delete(string|WpCronJobInterface $hook): void;
+    public function delete(WpCronJobInterface $hook): void;
 
     /**
      * Delete all cron jobs.

@@ -51,10 +51,11 @@ class WpCronJobManagerTest extends TestCase
      */
     public function testDelete()
     {
+        $job       = new WpCronJob('test_hook', time(), 'daily', fn() => null, ['arg1', 'arg2']);
         $wpService = new FakeWpService(['getCronArray' => $this->getCronArray()]);
         $manager   = new WpCronJobManager('prefix_', $wpService);
 
-        $manager->delete('test_hook');
+        $manager->delete($job);
 
         $this->assertCount(1, $wpService->methodCalls['clearScheduledHook']);
         $this->assertEquals(

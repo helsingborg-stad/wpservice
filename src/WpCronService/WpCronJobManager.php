@@ -50,14 +50,14 @@ class WpCronJobManager implements WpCronJobManagerInterface
             return;
         }
 
-        $this->delete($hookName);
+        $this->delete($job);
         $this->wpService->scheduleEvent(time(), $job->getSchedule(), $hookName, $job->getArgs());
     }
 
     /**
      * @inheritDoc
      */
-    public function delete(string|WpCronJobInterface $job): void
+    public function delete(WpCronJobInterface $job): void
     {
         $hookName = $job instanceof WpCronJobInterface ? $job->getHookName() : $job;
         $hookName = $this->getPrefixedHookName($hookName);
