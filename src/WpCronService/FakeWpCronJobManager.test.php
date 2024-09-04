@@ -14,9 +14,9 @@ class FakeWpCronJobManagerTest extends TestCase
     {
         $manager = new FakeWpCronJobManager();
         $cronJob = new WpCronJob('test', 'hourly', fn() => null, []);
-        $manager->upsert($cronJob);
-        $this->assertCount(1, $manager->methodCalls['upsert']);
-        $this->assertEquals([$cronJob], $manager->methodCalls['upsert'][0]);
+        $manager->register($cronJob);
+        $this->assertCount(1, $manager->methodCalls['register']);
+        $this->assertEquals([$cronJob], $manager->methodCalls['register'][0]);
     }
 
     /**

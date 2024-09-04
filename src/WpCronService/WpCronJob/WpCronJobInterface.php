@@ -12,11 +12,11 @@ interface WpCronJobInterface
     public function getHookName(): string;
 
     /**
-     * Get the interval.
+     * Get the schedule.
      *
-     * @return string The interval.
+     * @return string The schedule.
      */
-    public function getInterval(): string;
+    public function getSchedule(): string;
 
     /**
      * Get the arguments.

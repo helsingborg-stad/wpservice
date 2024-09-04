@@ -9,7 +9,7 @@ This README serves as documentation for two key classes within the `WpService\Wp
 ## WpCronJob
 
 ### Description
-The `WpCronJob` class represents a WordPress cron job. It encapsulates the information required for a cron job, including the hook name, the interval, the callback function to be executed, and any arguments required by the callback. 
+The `WpCronJob` class represents a WordPress cron job. It encapsulates the information required for a cron job, including the hook name, the schedule, the callback function to be executed, and any arguments required by the callback. 
 
 ---
 
@@ -28,8 +28,8 @@ The `WpCronJobManager` class is responsible for managing WordPress cron jobs. It
 $job = new WpCronJob('my_custom_hook', 'hourly', 'my_callback_function', ['arg1', 'arg2']);
 $jobManager = new WpCronJobManager('my_plugin_prefix_', $wpService);
 
-// Add or update the job
-$jobManager->upsert($job);
+// Register the job.
+$jobManager->register($job);
 
 // Delete a job by hook name
 $jobManager->delete('my_custom_hook');

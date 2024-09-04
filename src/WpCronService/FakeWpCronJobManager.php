@@ -61,7 +61,7 @@ final class FakeWpCronJobManager implements WpCronJobManagerInterface
     /**
      * @inheritDoc
      */
-    public function upsert(WpCronJobInterface $job): void
+    public function register(WpCronJobInterface $job): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }

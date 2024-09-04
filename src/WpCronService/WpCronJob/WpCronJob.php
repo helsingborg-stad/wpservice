@@ -11,13 +11,13 @@ class WpCronJob implements WpCronJobInterface
      * Constructor.
      *
      * @param string $hookName
-     * @param string $interval
+     * @param string $schedule
      * @param mixed $callback Needs to be callable.
      * @param array $args
      */
     public function __construct(
         private string $hookName,
-        private string $interval,
+        private string $schedule,
         private mixed $callback,
         private array $args,
     ) {
@@ -37,9 +37,9 @@ class WpCronJob implements WpCronJobInterface
     /**
      * @inheritDoc
      */
-    public function getInterval(): string
+    public function getSchedule(): string
     {
-        return $this->interval;
+        return $this->schedule;
     }
 
     /**
