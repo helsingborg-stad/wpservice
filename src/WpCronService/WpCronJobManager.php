@@ -34,15 +34,23 @@ class WpCronJobManager implements WpCronJobManagerInterface
     }
 
     /**
-     * @inheritDoc
+     * Register a cron job.
+     * If the job is already registered but with different schedule or arguments, it will be re-registered.
+     * If the job is already registered with the same schedule and arguments, it will not be re-registered.
+     *
+     * @param WpCronJobInterface $job The cron job to register.
      */
-    public function upsert(WpCronJobInterface $job): void
+    public function register(WpCronJobInterface $job): void
     {
         $hookName = $this->getPrefixedHookName($job->getHookName());
+        $this->wpService->addAction($hookName, $job->getCallback());
+
+        if ($this->jobIsAlreadyRegistered($job)) {
+            return;
+        }
 
         $this->delete($hookName);
-        $this->wpService->addAction($hookName, $job->getCallback());
-        $this->wpService->scheduleEvent(time(), $job->getInterval(), $hookName, $job->getArgs());
+        $this->wpService->scheduleEvent(time(), $job->getSchedule(), $hookName, $job->getArgs());
     }
 
     /**
@@ -79,6 +87,29 @@ class WpCronJobManager implements WpCronJobManagerInterface
     }
 
     /**
+     * Check if a job is already registered.
+     * Compare the hook name, interval, and arguments.
+     *
+     * @param WpCronJobInterface $job The job to check.
+     */
+    private function jobIsAlreadyRegistered(WpCronJobInterface $job): bool
+    {
+        $hookName = $this->getPrefixedHookName($job->getHookName());
+
+        foreach ($this->getAllCronJobs() as $cronJob) {
+            if (
+                $cronJob['hookName'] === $hookName &&
+                $cronJob['schedule'] === $job->getSchedule() &&
+                $cronJob['args'] === $job->getArgs()
+            ) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
      * Get all cron jobs.
      *
      * @return Generator<array> [timestamp, hookName, args]
@@ -95,7 +126,7 @@ class WpCronJobManager implements WpCronJobManagerInterface
                     yield [
                         'timestamp' => $timestamp,
                         'hookName'  => $hookName,
-                        'interval'  => $cronJob['interval'],
+                        'schedule'  => $cronJob['schedule'],
                         'args'      => $cronJob['args']];
                 }
             }

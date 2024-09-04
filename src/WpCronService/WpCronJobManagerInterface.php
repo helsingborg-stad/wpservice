@@ -12,7 +12,7 @@ interface WpCronJobManagerInterface
      * @param WpCronJobInterface $job The cron job to register.
      * @return void
      */
-    public function upsert(WpCronJobInterface $job): void;
+    public function register(WpCronJobInterface $job): void;
 
     /**
      * Delete a cron job.

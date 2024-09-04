@@ -9,7 +9,7 @@ use WpCronService\WpCronJob\WpCronJob;
 class WpCronJobManagerTest extends TestCase
 {
     /**
-     * @testdox upsert() should call scheduleEvent() if the cron job is not scheduled.
+     * @testdox register() should call scheduleEvent() if the cron job is not scheduled.
      */
     public function testRegisterCronJobShouldAddACronJobToTheManager()
     {
@@ -17,7 +17,7 @@ class WpCronJobManagerTest extends TestCase
         $wpService = new FakeWpService(['nextScheduled' => false]);
         $manager   = new WpCronJobManager('prefix_', $wpService);
 
-        $manager->upsert($job);
+        $manager->register($job);
 
         $this->assertCount(1, $wpService->methodCalls['addAction']);
         $this->assertCount(1, $wpService->methodCalls['scheduleEvent']);
@@ -26,9 +26,24 @@ class WpCronJobManagerTest extends TestCase
             $wpService->methodCalls['addAction'][0]
         );
         $this->assertEquals(
-            [time(), $job->getInterval(), 'prefix_' . $job->getHookName(), $job->getArgs()],
+            [time(), $job->getSchedule(), 'prefix_' . $job->getHookName(), $job->getArgs()],
             $wpService->methodCalls['scheduleEvent'][0]
         );
+    }
+
+    /**
+     * @testdox register() should not call scheduleEvent() if job already scheduled.
+     */
+    public function testRegisterCronJobShouldNotAddACronJobToTheManagerIfAlreadyScheduled()
+    {
+        $job       = new WpCronJob('test_hook', 'daily', fn() => null, ['arg1', 'arg2']);
+        $wpService = new FakeWpService(['getCronArray' => $this->getCronArray()]);
+        $manager   = new WpCronJobManager('prefix_', $wpService);
+
+        $manager->register($job);
+
+        $this->assertCount(1, $wpService->methodCalls['addAction']);
+        $this->assertArrayNotHasKey('scheduleEvent', $wpService->methodCalls);
     }
 
     /**

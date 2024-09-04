@@ -12,7 +12,7 @@ class WpCronJobTest extends TestCase
     public function testConstructShouldThrowIfCallbackIsNotCallable()
     {
         $this->expectException(\TypeError::class);
-        new WpCronJob('hook', 'interval', 'not_callable', ['arg1', 'arg2']);
+        new WpCronJob('hook', 'schedule', 'not_callable', ['arg1', 'arg2']);
     }
 
     /**
@@ -20,7 +20,7 @@ class WpCronJobTest extends TestCase
      */
     public function testGetHookNameReturnsHookName()
     {
-        $wpCronJob = new WpCronJob('hook', 'interval', fn() => null, ['arg1', 'arg2']);
+        $wpCronJob = new WpCronJob('hook', 'schedule', fn() => null, ['arg1', 'arg2']);
         $this->assertEquals('hook', $wpCronJob->getHookName());
     }
 
@@ -29,8 +29,8 @@ class WpCronJobTest extends TestCase
      */
     public function testGetIntervalReturnsInterval()
     {
-        $wpCronJob = new WpCronJob('hook', 'interval', fn() => null, ['arg1', 'arg2']);
-        $this->assertEquals('interval', $wpCronJob->getInterval());
+        $wpCronJob = new WpCronJob('hook', 'schedule', fn() => null, ['arg1', 'arg2']);
+        $this->assertEquals('schedule', $wpCronJob->getSchedule());
     }
 
     /**
@@ -38,7 +38,7 @@ class WpCronJobTest extends TestCase
      */
     public function testGetArgsReturnsArgs()
     {
-        $wpCronJob = new WpCronJob('hook', 'interval', fn() => null, ['arg1', 'arg2']);
+        $wpCronJob = new WpCronJob('hook', 'schedule', fn() => null, ['arg1', 'arg2']);
         $this->assertEquals(['arg1', 'arg2'], $wpCronJob->getArgs());
     }
 
@@ -48,7 +48,7 @@ class WpCronJobTest extends TestCase
     public function testGetCallbackReturnsCallback()
     {
         $callback  = fn() => null;
-        $wpCronJob = new WpCronJob('hook', 'interval', $callback, ['arg1', 'arg2']);
+        $wpCronJob = new WpCronJob('hook', 'schedule', $callback, ['arg1', 'arg2']);
         $this->assertEquals($callback, $wpCronJob->getCallback());
     }
 }
