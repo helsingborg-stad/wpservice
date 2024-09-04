@@ -13,7 +13,7 @@ class WpCronJobManagerTest extends TestCase
      */
     public function testRegisterCronJobShouldAddACronJobToTheManager()
     {
-        $job       = new WpCronJob('test_hook', 'interval', fn() => null, ['arg1', 'arg2']);
+        $job       = new WpCronJob('test_hook', time(), 'interval', fn() => null, ['arg1', 'arg2']);
         $wpService = new FakeWpService(['nextScheduled' => false]);
         $manager   = new WpCronJobManager('prefix_', $wpService);
 
@@ -36,7 +36,7 @@ class WpCronJobManagerTest extends TestCase
      */
     public function testRegisterCronJobShouldNotAddACronJobToTheManagerIfAlreadyScheduled()
     {
-        $job       = new WpCronJob('test_hook', 'daily', fn() => null, ['arg1', 'arg2']);
+        $job       = new WpCronJob('test_hook', time(), 'daily', fn() => null, ['arg1', 'arg2']);
         $wpService = new FakeWpService(['getCronArray' => $this->getCronArray()]);
         $manager   = new WpCronJobManager('prefix_', $wpService);
 

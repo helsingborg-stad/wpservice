@@ -17,6 +17,7 @@ class WpCronJob implements WpCronJobInterface
      */
     public function __construct(
         private string $hookName,
+        private int $firstOccurenceTimestamp,
         private string $schedule,
         private mixed $callback,
         private array $args,
@@ -32,6 +33,14 @@ class WpCronJob implements WpCronJobInterface
     public function getHookName(): string
     {
         return $this->hookName;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getFirstOccurenceTimestamp(): int
+    {
+        return $this->firstOccurenceTimestamp;
     }
 
     /**
