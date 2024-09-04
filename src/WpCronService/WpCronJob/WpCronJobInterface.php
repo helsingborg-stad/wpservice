@@ -12,6 +12,13 @@ interface WpCronJobInterface
     public function getHookName(): string;
 
     /**
+     * Get the first occurence timestamp.
+     *
+     * @return int The first occurence timestamp.
+     */
+    public function getFirstOccurenceTimestamp(): int;
+
+    /**
      * Get the schedule.
      *
      * @return string The schedule.

@@ -20,7 +20,8 @@ class WpCronJobManager implements WpCronJobManagerInterface
     /**
      * @var WpCronJobInterface[]
      */
-    public array $jobs = [];
+    public array $jobs              = [];
+    private static array $cronArray = [];
 
     /**
      * WpCronJobManager constructor.

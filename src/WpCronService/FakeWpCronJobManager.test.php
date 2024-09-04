@@ -13,7 +13,7 @@ class FakeWpCronJobManagerTest extends TestCase
     public function testUpsert()
     {
         $manager = new FakeWpCronJobManager();
-        $cronJob = new WpCronJob('test', 'hourly', fn() => null, []);
+        $cronJob = new WpCronJob('test', time(), 'hourly', fn() => null, []);
         $manager->register($cronJob);
         $this->assertCount(1, $manager->methodCalls['register']);
         $this->assertEquals([$cronJob], $manager->methodCalls['register'][0]);
@@ -25,7 +25,7 @@ class FakeWpCronJobManagerTest extends TestCase
     public function testDelete()
     {
         $manager = new FakeWpCronJobManager();
-        $cronJob = new WpCronJob('test', 'hourly', fn() => null, []);
+        $cronJob = new WpCronJob('test', time(), 'hourly', fn() => null, []);
         $manager->delete($cronJob);
         $this->assertCount(1, $manager->methodCalls['delete']);
         $this->assertEquals([$cronJob], $manager->methodCalls['delete'][0]);
