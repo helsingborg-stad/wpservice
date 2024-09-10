@@ -919,4 +919,12 @@ class NativeWpService implements WPService
     ): int|WP_Error|WP_Post {
         return wp_update_post($postArray, $WPError, $fireAfterHooks);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getOptions(array $options = []): array
+    {
+        return get_options($options);
+    }
 }

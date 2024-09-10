@@ -898,4 +898,12 @@ class WpServiceDecorator implements WPService
     ): int|WP_Error|WP_Post {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getOptions(array $options = []): array
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 }
