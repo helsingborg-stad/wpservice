@@ -42,6 +42,7 @@ interface WpService extends
     Contracts\GetNavMenuLocations,
     Contracts\GetObjectTaxonomies,
     Contracts\GetOption,
+    Contracts\GetOptions,
     Contracts\GetPermalink,
     Contracts\GetPost,
     Contracts\GetPostMeta,

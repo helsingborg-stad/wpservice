@@ -1436,6 +1436,19 @@ class FakeWpServiceTest extends TestCase
         $this->assertEquals(['testLocations'], $result);
     }
 
+    /**
+     * @testdox getOptions()
+     */
+    public function testGetOptions()
+    {
+        $wpService = new FakeWpService(['getOptions' => ['testOptions']]);
+
+        $result = $wpService->getOptions();
+
+        $this->assertEquals([], $wpService->methodCalls['getOptions'][0]);
+        $this->assertEquals(['testOptions'], $result);
+    }
+
     private function getWpScreen(): WP_Screen|MockObject
     {
         return new WP_Screen();
