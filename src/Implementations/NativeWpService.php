@@ -927,4 +927,12 @@ class NativeWpService implements WPService
     {
         return get_options($options);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function updateAttachmentMetadata(int $attachmentId, array $data): int|false
+    {
+        return wp_update_attachment_metadata($attachmentId, $data);
+    }
 }

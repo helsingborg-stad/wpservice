@@ -102,6 +102,7 @@ interface WpService extends
     Contracts\TaxonomyExists,
     Contracts\TermExists,
     Contracts\UnscheduleEvent,
+    Contracts\UpdateAttachmentMetadata,
     Contracts\UpdateOption,
     Contracts\UpdatePostMeta,
     Contracts\UpdatePost,
