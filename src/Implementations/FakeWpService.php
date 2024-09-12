@@ -1041,4 +1041,13 @@ class FakeWpService implements WPService
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args(), 0);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getAttachmentMetadata(int $attachmentId, bool $unfiltered = false): array|false
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
+    }
 }

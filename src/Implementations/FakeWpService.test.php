@@ -1448,6 +1448,18 @@ class FakeWpServiceTest extends TestCase
             $wpService->methodCalls['updateAttachmentMetadata'][0]
         );
     }
+
+    /**
+     * @testdox getAttachmentMetadata()
+     */
+    public function testGetAttachmentMetadata() 
+    {
+        $wpService = new FakeWpService(['getAttachmentMetadata' => ['testMetadata']]);
+        $result = $wpService->getAttachmentMetadata(1);
+        $this->assertEquals([1], $wpService->methodCalls['getAttachmentMetadata'][0]);
+        $this->assertEquals(['testMetadata'], $result);
+    }
+
     /**
      * @testdox getOptions()
      */
@@ -1460,7 +1472,7 @@ class FakeWpServiceTest extends TestCase
         $this->assertEquals([], $wpService->methodCalls['getOptions'][0]);
         $this->assertEquals(['testOptions'], $result);
     }
-
+    
     private function getWpScreen(): WP_Screen|MockObject
     {
         return new WP_Screen();
