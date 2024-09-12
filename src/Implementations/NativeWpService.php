@@ -943,4 +943,12 @@ class NativeWpService implements WPService
     {
         return wp_get_attachment_metadata($attachmentId, $unfiltered);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getImageEditor(string $path, array $args = []): mixed
+    {
+        return wp_get_image_editor($path, $args);
+    }
 }

@@ -922,4 +922,12 @@ class WpServiceDecorator implements WPService
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getImageEditor(string $path, array $args = []): mixed
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 }

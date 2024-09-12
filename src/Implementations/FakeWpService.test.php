@@ -11,6 +11,7 @@ use WP_Screen;
 use WP_Taxonomy;
 use WP_Term;
 use WP_User;
+use WP_Image_Editor;
 
 class FakeWpServiceTest extends TestCase
 {
@@ -1437,6 +1438,19 @@ class FakeWpServiceTest extends TestCase
     }
 
     /**
+     * @testdox getOptions()
+     */
+    public function testGetOptions()
+    {
+        $wpService = new FakeWpService(['getOptions' => ['testOptions']]);
+
+        $result = $wpService->getOptions();
+
+        $this->assertEquals([], $wpService->methodCalls['getOptions'][0]);
+        $this->assertEquals(['testOptions'], $result);
+    }
+    
+    /**
      * @textdox updateAttachmentMetadata()
      */
     public function testUpdateAttachmentMetadata()
@@ -1461,18 +1475,34 @@ class FakeWpServiceTest extends TestCase
     }
 
     /**
-     * @testdox getOptions()
+     * @testdox getImageEditor()
      */
-    public function testGetOptions()
+    public function testGetImageEditor() 
     {
-        $wpService = new FakeWpService(['getOptions' => ['testOptions']]);
+        // Create a mock WP_Image_Editor object with a path
+        $imageEditor = $this->getWpImageEditor('testPath');
+        
+        // Setup FakeWpService to return the mock image editor
+        $wpService = new FakeWpService(['getImageEditor' => $imageEditor]);
+        
+        // Call the getImageEditor method with 'testPath'
+        $result = $wpService->getImageEditor('testPath');
+        
+        // Assert that the method was called with the correct path
+        $this->assertEquals(['testPath'], $wpService->methodCalls['getImageEditor'][0]);
 
-        $result = $wpService->getOptions();
-
-        $this->assertEquals([], $wpService->methodCalls['getOptions'][0]);
-        $this->assertEquals(['testOptions'], $result);
+        // Assert that the result matches the mock image editor object
+        $this->assertEquals($imageEditor, $result);
     }
-    
+
+    private function getWpImageEditor($path): WP_Image_Editor|MockObject
+    {
+        $mock = $this->getMockBuilder('WP_Image_Editor')
+            ->disableOriginalConstructor()
+            ->getMock();
+        return $mock;
+    }
+
     private function getWpScreen(): WP_Screen|MockObject
     {
         return new WP_Screen();
