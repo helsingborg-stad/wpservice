@@ -4,6 +4,7 @@ namespace WpService\Implementations;
 
 use WpService\WpService;
 use WP_Error;
+use WP_Image_Editor;
 use WP_Post;
 use WP_Post_Type;
 use WP_REST_Response;
@@ -903,6 +904,38 @@ class WpServiceDecorator implements WPService
      * @inheritDoc
      */
     public function getOptions(array $options = []): array
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function updateAttachmentMetadata(int $attachmentId, array $data): int|false
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getAttachmentMetadata(int $attachmentId, bool $unfiltered = false): array|false
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getImageEditor(string $path, array $args = array()): WP_Image_Editor|WP_Error
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getAttachedFile(int $attachmentId, bool $unfiltered = false): string|false
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }

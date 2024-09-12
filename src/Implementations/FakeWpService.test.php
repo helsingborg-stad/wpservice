@@ -11,6 +11,7 @@ use WP_Screen;
 use WP_Taxonomy;
 use WP_Term;
 use WP_User;
+use WP_Image_Editor;
 
 class FakeWpServiceTest extends TestCase
 {
@@ -1447,6 +1448,70 @@ class FakeWpServiceTest extends TestCase
 
         $this->assertEquals([], $wpService->methodCalls['getOptions'][0]);
         $this->assertEquals(['testOptions'], $result);
+    }
+
+    /**
+     * @textdox updateAttachmentMetadata()
+     */
+    public function testUpdateAttachmentMetadata()
+    {
+        $wpService = new FakeWpService(['updateAttachmentMetadata' => true]);
+        $wpService->updateAttachmentMetadata(1, ['testArg' => 'foo']);
+        $this->assertEquals(
+            [1, ['testArg' => 'foo']],
+            $wpService->methodCalls['updateAttachmentMetadata'][0]
+        );
+    }
+
+    /**
+     * @testdox getAttachmentMetadata()
+     */
+    public function testGetAttachmentMetadata()
+    {
+        $wpService = new FakeWpService(['getAttachmentMetadata' => ['testMetadata']]);
+        $result    = $wpService->getAttachmentMetadata(1);
+        $this->assertEquals([1], $wpService->methodCalls['getAttachmentMetadata'][0]);
+        $this->assertEquals(['testMetadata'], $result);
+    }
+
+    /**
+     * @testdox getImageEditor()
+     */
+    public function testGetImageEditor()
+    {
+        // Create a mock WP_Image_Editor object with a path
+        $imageEditor = $this->getWpImageEditor('testPath');
+
+        // Setup FakeWpService to return the mock image editor
+        $wpService = new FakeWpService(['getImageEditor' => $imageEditor]);
+
+        // Call the getImageEditor method with 'testPath'
+        $result = $wpService->getImageEditor('testPath');
+
+        // Assert that the method was called with the correct path
+        $this->assertEquals(['testPath'], $wpService->methodCalls['getImageEditor'][0]);
+
+        // Assert that the result matches the mock image editor object
+        $this->assertEquals($imageEditor, $result);
+    }
+
+    /**
+     * @testdox getAttachedFile()
+     */
+    public function testGetAttachedFile()
+    {
+        $wpService = new FakeWpService(['getAttachedFile' => 'testAttachedFile']);
+        $result    = $wpService->getAttachedFile(1);
+        $this->assertEquals([1], $wpService->methodCalls['getAttachedFile'][0]);
+        $this->assertEquals('testAttachedFile', $result);
+    }
+
+    private function getWpImageEditor($path): WP_Image_Editor|MockObject
+    {
+        $mock = $this->getMockBuilder('WP_Image_Editor')
+            ->disableOriginalConstructor()
+            ->getMock();
+        return $mock;
     }
 
     private function getWpScreen(): WP_Screen|MockObject

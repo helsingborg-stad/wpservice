@@ -31,6 +31,8 @@ interface WpService extends
     Contracts\EnqueueScript,
     Contracts\EnqueueStyle,
     Contracts\EscHtml,
+    Contracts\GetAttachedFile,
+    Contracts\GetAttachmentMetadata,
     Contracts\GetBloginfo,
     Contracts\GetChildren,
     Contracts\GetCronArray,
@@ -39,6 +41,7 @@ interface WpService extends
     Contracts\GetEditPostLink,
     Contracts\GetEditTermLink,
     Contracts\GetEnvironmentType,
+    Contracts\GetImageEditor,
     Contracts\GetNavMenuLocations,
     Contracts\GetObjectTaxonomies,
     Contracts\GetOption,
@@ -57,8 +60,8 @@ interface WpService extends
     Contracts\GetReadyCronJobs,
     Contracts\GetSchedules,
     Contracts\GetStylesheetDirectoryUri,
-    Contracts\GetTaxonomy,
     Contracts\GetSubmitButton,
+    Contracts\GetTaxonomy,
     Contracts\GetTerm,
     Contracts\GetTermMeta,
     Contracts\GetTerms,
@@ -102,9 +105,10 @@ interface WpService extends
     Contracts\TaxonomyExists,
     Contracts\TermExists,
     Contracts\UnscheduleEvent,
+    Contracts\UpdateAttachmentMetadata,
     Contracts\UpdateOption,
-    Contracts\UpdatePostMeta,
     Contracts\UpdatePost,
+    Contracts\UpdatePostMeta,
     Contracts\WalkNavMenuTree
 {
 }

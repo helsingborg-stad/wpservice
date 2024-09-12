@@ -4,6 +4,7 @@ namespace WpService\Implementations;
 
 use WpService\WpService;
 use WP_Error;
+use WP_Image_Editor;
 use WP_Post;
 use WP_Post_Type;
 use WP_REST_Response;
@@ -926,5 +927,37 @@ class NativeWpService implements WPService
     public function getOptions(array $options = []): array
     {
         return get_options($options);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function updateAttachmentMetadata(int $attachmentId, array $data): int|false
+    {
+        return wp_update_attachment_metadata($attachmentId, $data);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getAttachmentMetadata(int $attachmentId, bool $unfiltered = false): array|false
+    {
+        return wp_get_attachment_metadata($attachmentId, $unfiltered);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getImageEditor(string $path, array $args = array()): WP_Image_Editor|WP_Error
+    {
+        return wp_get_image_editor($path, $args);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getAttachedFile(int $attachmentId, $unfiltered = false): string|false
+    {
+        return get_attached_file($attachmentId, $unfiltered);
     }
 }

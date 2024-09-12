@@ -12,6 +12,7 @@ use WP_Screen;
 use WP_Term;
 use WP_User;
 use WP_Taxonomy;
+use WP_Image_Editor;
 
 /**
  * Class FakeWpService
@@ -1031,5 +1032,41 @@ class FakeWpService implements WPService
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function updateAttachmentMetadata(int $attachmentId, array $data): int|false
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), 0);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getAttachmentMetadata(int $attachmentId, bool $unfiltered = false): array|false
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getImageEditor(string $path, array $args = []): WP_Image_Editor|WP_Error
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), null);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getAttachedFile(int $attachmentId, $unfiltered = false): string|false
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
 }
