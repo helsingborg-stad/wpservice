@@ -4,6 +4,7 @@ namespace WpService\Implementations;
 
 use WpService\WpService;
 use WP_Error;
+use WP_Image_Editor;
 use WP_Post;
 use WP_Post_Type;
 use WP_REST_Response;
@@ -926,7 +927,7 @@ class WpServiceDecorator implements WPService
     /**
      * @inheritDoc
      */
-    public function getImageEditor(string $path, array $args = []): mixed
+    public function getImageEditor(string $path, array $args = array()): WP_Image_Editor|WP_Error
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
