@@ -931,7 +931,7 @@ class WpServiceLazyDecorator implements WPService
     /**
      * @inheritDoc
      */
-    public function getAttachedFile(int $attachmentId, $unfiltered = false): string
+    public function getAttachedFile(int $attachmentId, bool $unfiltered = false): string|false
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
