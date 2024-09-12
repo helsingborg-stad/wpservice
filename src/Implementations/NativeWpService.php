@@ -951,4 +951,12 @@ class NativeWpService implements WPService
     {
         return wp_get_image_editor($path, $args);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getAttachedFile(int $attachmentId, $unfiltered = false): string
+    {
+        return get_attached_file($attachmentId, $unfiltered);
+    }
 }

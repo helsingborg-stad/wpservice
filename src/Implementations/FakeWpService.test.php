@@ -1495,6 +1495,17 @@ class FakeWpServiceTest extends TestCase
         $this->assertEquals($imageEditor, $result);
     }
 
+    /**
+     * @testdox getAttachedFile()
+     */
+    public function testGetAttachedFile()
+    {
+        $wpService = new FakeWpService(['getAttachedFile' => 'testAttachedFile']);
+        $result = $wpService->getAttachedFile(1);
+        $this->assertEquals([1], $wpService->methodCalls['getAttachedFile'][0]);
+        $this->assertEquals('testAttachedFile', $result);
+    }
+
     private function getWpImageEditor($path): WP_Image_Editor|MockObject
     {
         $mock = $this->getMockBuilder('WP_Image_Editor')
