@@ -934,7 +934,7 @@ class WpServiceDecorator implements WPService
     /**
      * @inheritDoc
      */
-    public function getAttachedFile(int $attachmentId, $unfiletered = false): string|bool
+    public function getAttachedFile(int $attachmentId, bool $unfiltered = false): string|false
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }

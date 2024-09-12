@@ -955,7 +955,7 @@ class NativeWpService implements WPService
     /**
      * @inheritDoc
      */
-    public function getAttachedFile(int $attachmentId, $unfiltered = false): string
+    public function getAttachedFile(int $attachmentId, $unfiltered = false): string|false
     {
         return get_attached_file($attachmentId, $unfiltered);
     }

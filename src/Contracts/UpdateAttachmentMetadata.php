@@ -2,7 +2,7 @@
 
 namespace WpService\Contracts;
 
-interface updateAttachmentMetadata
+interface UpdateAttachmentMetadata
 {
     /**
      * Updates metadata for an attachment.

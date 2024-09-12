@@ -31,6 +31,7 @@ interface WpService extends
     Contracts\EnqueueScript,
     Contracts\EnqueueStyle,
     Contracts\EscHtml,
+    Contracts\GetAttachedFile,
     Contracts\GetAttachmentMetadata,
     Contracts\GetBloginfo,
     Contracts\GetChildren,
