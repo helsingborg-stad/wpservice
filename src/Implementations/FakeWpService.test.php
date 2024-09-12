@@ -1437,6 +1437,18 @@ class FakeWpServiceTest extends TestCase
     }
 
     /**
+     * @textdox updateAttachmentMetadata()
+     */
+    public function testUpdateAttachmentMetadata()
+    {
+        $wpService = new FakeWpService(['updateAttachmentMetadata' => true]);
+        $wpService->updateAttachmentMetadata(1, ['testArg' => 'foo']);
+        $this->assertEquals(
+            [1, ['testArg' => 'foo']], 
+            $wpService->methodCalls['updateAttachmentMetadata'][0]
+        );
+    }
+    /**
      * @testdox getOptions()
      */
     public function testGetOptions()
@@ -1475,4 +1487,5 @@ class FakeWpServiceTest extends TestCase
 
         return $user;
     }
+    
 }

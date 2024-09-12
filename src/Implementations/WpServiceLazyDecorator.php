@@ -915,7 +915,7 @@ class WpServiceLazyDecorator implements WPService
     /**
      * @inheritDoc
      */
-    public function getAttachmentMetadata(int $attachmentId, array $data): int|false
+    public function updateAttachmentMetadata(int $attachmentId, array $data): int|false
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
