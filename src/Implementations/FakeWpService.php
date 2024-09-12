@@ -1055,7 +1055,7 @@ class FakeWpService implements WPService
     /**
      * @inheritDoc
      */
-    public function getImageEditor(string $path, array $args = []): WP_Image_Editor|WP_Error 
+    public function getImageEditor(string $path, array $args = []): WP_Image_Editor|WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args(), null);
@@ -1069,5 +1069,4 @@ class FakeWpService implements WPService
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
-
 }

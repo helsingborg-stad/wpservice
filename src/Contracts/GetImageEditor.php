@@ -6,5 +6,4 @@ use WP_Term;
 
 interface GetImageEditor
 {
-    
 }
