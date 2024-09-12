@@ -960,4 +960,12 @@ class NativeWpService implements WPService
     {
         return get_attached_file($attachmentId, $unfiltered);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getAttachmentUrl(int $attachmentId): string|false
+    {
+        return wp_get_attachment_url($attachmentId);
+    }
 }

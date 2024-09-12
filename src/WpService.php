@@ -33,6 +33,7 @@ interface WpService extends
     Contracts\EscHtml,
     Contracts\GetAttachedFile,
     Contracts\GetAttachmentMetadata,
+    Contracts\GetAttachmentUrl,
     Contracts\GetBloginfo,
     Contracts\GetChildren,
     Contracts\GetCronArray,

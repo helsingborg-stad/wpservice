@@ -1069,4 +1069,13 @@ class FakeWpService implements WPService
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getAttachmentUrl(int $attachmentId): string|false
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
+    }
 }

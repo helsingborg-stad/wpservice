@@ -1475,6 +1475,17 @@ class FakeWpServiceTest extends TestCase
     }
 
     /**
+     * @testdox getAttachmentUrl()
+     */
+    public function testGetAttachmentUrl()
+    {
+        $wpService = new FakeWpService(['getAttachmentUrl' => 'testUrl']);
+        $result    = $wpService->getAttachmentUrl(1);
+        $this->assertEquals([1], $wpService->methodCalls['getAttachmentUrl'][0]);
+        $this->assertEquals('testUrl', $result);
+    }
+
+    /**
      * @testdox getImageEditor()
      */
     public function testGetImageEditor()
