@@ -1517,6 +1517,18 @@ class FakeWpServiceTest extends TestCase
         $this->assertEquals('testAttachedFile', $result);
     }
 
+    /**
+     * @testdox getPostMimeType()
+     */
+    public function testGetPostMimeType()
+    {
+        $wpService = new FakeWpService(['getPostMimeType' => 'testMimeType']);
+        $result    = $wpService->getPostMimeType(1);
+        $this->assertEquals([1], $wpService->methodCalls['getPostMimeType'][0]);
+        $this->assertEquals('testMimeType', $result);
+    }
+
+
     private function getWpImageEditor($path): WP_Image_Editor|MockObject
     {
         $mock = $this->getMockBuilder('WP_Image_Editor')

@@ -50,6 +50,7 @@ interface WpService extends
     Contracts\GetPermalink,
     Contracts\GetPost,
     Contracts\GetPostMeta,
+    Contracts\GetPostMimeType,
     Contracts\GetPostParent,
     Contracts\GetPosts,
     Contracts\GetPostStatuses,

@@ -968,4 +968,12 @@ class NativeWpService implements WPService
     {
         return wp_get_attachment_url($attachmentId);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getPostMimeType(int|WP_Post $post = null): string|false
+    {
+        return get_post_mime_type($post);
+    }
 }
