@@ -3,6 +3,7 @@
 namespace WpService\Contracts;
 
 use WP_Post;
+
 interface GetPostMimeType
 {
     /**
