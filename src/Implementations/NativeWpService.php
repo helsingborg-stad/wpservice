@@ -984,4 +984,12 @@ class NativeWpService implements WPService
     {
         return get_post_mime_type($post);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getTaxonomies(): array
+    {
+        return get_taxonomies();
+    }
 }
