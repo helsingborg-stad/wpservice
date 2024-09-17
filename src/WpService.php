@@ -111,6 +111,7 @@ interface WpService extends
     Contracts\UpdateOption,
     Contracts\UpdatePost,
     Contracts\UpdatePostMeta,
+    Contracts\UploadDir,
     Contracts\WalkNavMenuTree
 {
 }

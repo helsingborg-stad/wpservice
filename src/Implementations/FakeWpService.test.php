@@ -1461,6 +1461,19 @@ class FakeWpServiceTest extends TestCase
             [1, ['testArg' => 'foo']],
             $wpService->methodCalls['updateAttachmentMetadata'][0]
         );
+    }    
+
+    /**
+     * @textdox uploadDir()
+     */
+    public function testUploadDir()
+    {
+        $wpService = new FakeWpService(['uploadDir' => []]);
+        $result = $wpService->uploadDir(null, true, false);
+        $this->assertEquals(
+            [],
+            $result
+        );
     }
 
     /**
