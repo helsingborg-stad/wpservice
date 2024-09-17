@@ -1541,6 +1541,16 @@ class FakeWpServiceTest extends TestCase
         $this->assertEquals('testMimeType', $result);
     }
 
+    /**
+     * @testdox getTaxonomies()
+     */
+    public function testGetTaxonomies()
+    {
+        $wpService = new FakeWpService(['getTaxonomies' => ['testTaxonomies']]);
+        $result    = $wpService->getTaxonomies();
+        $this->assertEquals([], $wpService->methodCalls['getTaxonomies'][0]);
+        $this->assertEquals(['testTaxonomies'], $result);
+    }
 
     private function getWpImageEditor($path): WP_Image_Editor|MockObject
     {

@@ -64,6 +64,7 @@ interface WpService extends
     Contracts\GetStylesheetDirectoryUri,
     Contracts\GetSubmitButton,
     Contracts\GetTaxonomy,
+    Contracts\GetTaxonomies,
     Contracts\GetTerm,
     Contracts\GetTermMeta,
     Contracts\GetTerms,
