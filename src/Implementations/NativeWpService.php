@@ -940,6 +940,14 @@ class NativeWpService implements WPService
     /**
      * @inheritDoc
      */
+    public function uploadDir(string|null $time = null, bool $createDir = true, bool $refreshCache = false): array
+    {
+        return wp_upload_dir($time, $createDir, $refreshCache);
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function getAttachmentMetadata(int $attachmentId, bool $unfiltered = false): array|false
     {
         return wp_get_attachment_metadata($attachmentId, $unfiltered);

@@ -1464,6 +1464,19 @@ class FakeWpServiceTest extends TestCase
     }
 
     /**
+     * @textdox uploadDir()
+     */
+    public function testUploadDir()
+    {
+        $wpService = new FakeWpService(['uploadDir' => []]);
+        $result    = $wpService->uploadDir(null, true, false);
+        $this->assertEquals(
+            [],
+            $result
+        );
+    }
+
+    /**
      * @testdox getAttachmentMetadata()
      */
     public function testGetAttachmentMetadata()
