@@ -992,4 +992,20 @@ class NativeWpService implements WPService
     {
         return get_taxonomies();
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function verifyNonce(string $nonce, string|int $action = -1): int|false
+    {
+        return wp_verify_nonce($nonce, $action);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function nonceUrl(string $actionUrl, int|string $action = -1, string $name = '_wpnonce'): string
+    {
+        return wp_nonce_url($actionUrl, $action, $name);
+    }
 }

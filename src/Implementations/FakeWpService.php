@@ -1105,4 +1105,22 @@ class FakeWpService implements WPService
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args(), []);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function verifyNonce(string $nonce, string|int $action = -1): int|false
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function nonceUrl(string $actionUrl, int|string $action = -1, string $name = '_wpnonce'): string
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), '');
+    }
 }

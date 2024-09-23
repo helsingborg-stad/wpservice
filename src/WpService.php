@@ -63,8 +63,8 @@ interface WpService extends
     Contracts\GetSchedules,
     Contracts\GetStylesheetDirectoryUri,
     Contracts\GetSubmitButton,
-    Contracts\GetTaxonomy,
     Contracts\GetTaxonomies,
+    Contracts\GetTaxonomy,
     Contracts\GetTerm,
     Contracts\GetTermMeta,
     Contracts\GetTerms,
@@ -87,6 +87,7 @@ interface WpService extends
     Contracts\MediaSideloadImage,
     Contracts\NavMenuDisabledCheck,
     Contracts\NextScheduled,
+    Contracts\NonceUrl,
     Contracts\PluginBasename,
     Contracts\PluginDirPath,
     Contracts\PluginsUrl,
@@ -113,6 +114,7 @@ interface WpService extends
     Contracts\UpdatePost,
     Contracts\UpdatePostMeta,
     Contracts\UploadDir,
+    Contracts\VerifyNonce,
     Contracts\WalkNavMenuTree
 {
 }

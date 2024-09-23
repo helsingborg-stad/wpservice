@@ -976,4 +976,20 @@ class WpServiceLazyDecorator implements WPService
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function verifyNonce(string $nonce, string|int $action = -1): int|false
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function nonceUrl(string $actionUrl, int|string $action = -1, string $name = '_wpnonce'): string
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 }
