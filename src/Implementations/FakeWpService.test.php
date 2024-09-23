@@ -1574,6 +1574,16 @@ class FakeWpServiceTest extends TestCase
         $this->assertEquals('testNonceUrl', $result);
     }
 
+    /**
+     * @testdox safeRedirect()
+     */
+    public function testSafeRedirect()
+    {
+        $wpService = new FakeWpService(['safeRedirect' => null]);
+        $wpService->safeRedirect('testUrl');
+        $this->assertEquals(['testUrl'], $wpService->methodCalls['safeRedirect'][0]);
+    }
+
     private function getWpImageEditor($path): WP_Image_Editor|MockObject
     {
         $mock = $this->getMockBuilder('WP_Image_Editor')

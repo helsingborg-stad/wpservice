@@ -1008,4 +1008,12 @@ class NativeWpService implements WPService
     {
         return wp_nonce_url($actionUrl, $action, $name);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function safeRedirect(string $location, int $status = 302, string|false $xRedirectBy = 'WordPress'): bool
+    {
+        return wp_safe_redirect($location, $status, $xRedirectBy);
+    }
 }

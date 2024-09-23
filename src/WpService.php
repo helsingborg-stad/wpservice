@@ -101,6 +101,7 @@ interface WpService extends
     Contracts\RemoveMenuPage,
     Contracts\RemoveSubMenuPage,
     Contracts\RestEnsureResponse,
+    Contracts\SafeRedirect,
     Contracts\SanitizeTitle,
     Contracts\ScheduleEvent,
     Contracts\SetPostTerms,
