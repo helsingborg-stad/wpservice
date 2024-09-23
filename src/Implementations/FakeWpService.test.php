@@ -1552,6 +1552,28 @@ class FakeWpServiceTest extends TestCase
         $this->assertEquals(['testTaxonomies'], $result);
     }
 
+    /**
+     * @testdox verifyNonce()
+     */
+    public function testVerifyNonce()
+    {
+        $wpService = new FakeWpService(['verifyNonce' => 1]);
+        $result    = $wpService->verifyNonce('testNonce', 'testAction');
+        $this->assertEquals(['testNonce', 'testAction'], $wpService->methodCalls['verifyNonce'][0]);
+        $this->assertEquals(1, $result);
+    }
+
+    /**
+     * @testdox nonceUrl()
+     */
+    public function testNonceUrl()
+    {
+        $wpService = new FakeWpService(['nonceUrl' => 'testNonceUrl']);
+        $result    = $wpService->nonceUrl('testUrl', 'testAction');
+        $this->assertEquals(['testUrl', 'testAction'], $wpService->methodCalls['nonceUrl'][0]);
+        $this->assertEquals('testNonceUrl', $result);
+    }
+
     private function getWpImageEditor($path): WP_Image_Editor|MockObject
     {
         $mock = $this->getMockBuilder('WP_Image_Editor')
