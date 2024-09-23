@@ -987,4 +987,12 @@ class WpServiceDecorator implements WPService
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function safeRedirect(string $location, int $status = 302, string|false $xRedirectBy = 'WordPress'): bool
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 }
