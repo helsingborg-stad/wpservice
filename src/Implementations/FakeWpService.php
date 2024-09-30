@@ -1132,4 +1132,31 @@ class FakeWpService implements WPService
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getTransient(string $transient): mixed
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), null);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setTransient(string $transient, mixed $value, int $expiration): bool
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), true);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function deleteTransient(string $transient): bool
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), true);
+    }
 }

@@ -1016,4 +1016,28 @@ class NativeWpService implements WPService
     {
         return wp_safe_redirect($location, $status, $xRedirectBy);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getTransient(string $transient): mixed
+    {
+        return get_transient($transient);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setTransient(string $transient, mixed $value, int $expiration): bool
+    {
+        return set_transient($transient, $value, $expiration);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function deleteTransient(string $transient): bool
+    {
+        return delete_transient($transient);
+    }
 }

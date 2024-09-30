@@ -1000,4 +1000,28 @@ class WpServiceLazyDecorator implements WPService
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getTransient(string $transient): mixed
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setTransient(string $transient, mixed $value, int $expiration): bool
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function deleteTransient(string $transient): bool
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 }
