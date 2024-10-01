@@ -25,6 +25,7 @@ interface WpService extends
     Contracts\CacheSet,
     Contracts\CacheSetMultiple,
     Contracts\ClearScheduledHook,
+    Contracts\DeleteAttachment,
     Contracts\DeletePost,
     Contracts\DeleteTerm,
     Contracts\DeleteTransient,

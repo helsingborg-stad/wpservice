@@ -1024,4 +1024,12 @@ class WpServiceLazyDecorator implements WPService
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function deleteAttachment(int $postId, bool $forceDelete = false): WP_Post|false|null
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 }
