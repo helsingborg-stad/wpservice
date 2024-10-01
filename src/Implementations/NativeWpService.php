@@ -1040,4 +1040,12 @@ class NativeWpService implements WPService
     {
         return delete_transient($transient);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function deleteAttachment(int $postId, bool $forceDelete = false): WP_Post|false|null
+    {
+        return wp_delete_attachment($postId, $forceDelete);
+    }
 }
