@@ -30,6 +30,7 @@ interface WpService extends
     Contracts\DeleteTerm,
     Contracts\DeleteTransient,
     Contracts\DoAction,
+    Contracts\DoingCron,
     Contracts\EnqueueScript,
     Contracts\EnqueueStyle,
     Contracts\EscHtml,

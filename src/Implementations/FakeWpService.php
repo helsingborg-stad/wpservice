@@ -1168,4 +1168,13 @@ class FakeWpService implements WPService
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args(), null);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function doingCron(): bool
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args(), false);
+    }
 }

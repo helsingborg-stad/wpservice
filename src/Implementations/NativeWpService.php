@@ -1048,4 +1048,12 @@ class NativeWpService implements WPService
     {
         return wp_delete_attachment($postId, $forceDelete);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function doingCron(): bool
+    {
+        return wp_doing_cron();
+    }
 }
