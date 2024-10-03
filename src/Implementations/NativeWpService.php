@@ -1056,4 +1056,12 @@ class NativeWpService implements WPService
     {
         return wp_doing_cron();
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function currentUserCan(string $capability, mixed $args): bool
+    {
+        return current_user_can($capability, $args);
+    }
 }

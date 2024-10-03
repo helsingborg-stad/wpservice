@@ -1035,4 +1035,12 @@ class WpServiceDecorator implements WPService
     {
         return $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function currentUserCan(string $capability, mixed $args): bool
+    {
+        return $this->inner->{__FUNCTION__}(...func_get_args());
+    }
 }
