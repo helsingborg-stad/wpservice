@@ -3,7 +3,9 @@
     <file>./src</file>
     <rule ref="Hbg-WordPress"></rule>
     
-    <!-- Do not require class comments for tests -->
+    <rule ref="Squiz.Commenting.DocCommentAlignment"/>
+    <rule ref="Squiz.Commenting.BlockComment"/>
+    
     <rule ref="Squiz.Commenting.ClassComment.Missing">
         <exclude-pattern>./src/*/*\.test\.php$</exclude-pattern>
     </rule>

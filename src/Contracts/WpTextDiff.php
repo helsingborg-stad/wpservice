@@ -22,13 +22,13 @@ interface WpTextDiff
      * @param string|array $args {
      *     Associative array of options to pass to WP_Text_Diff_Renderer_Table().
      *
-     *     @type string $title           Titles the diff in a manner compatible
+     * @type string $title           Titles the diff in a manner compatible
      *                                   with the output. Default empty.
-     *     @type string $title_left      Change the HTML to the left of the title.
+     * @type string $title_left      Change the HTML to the left of the title.
      *                                   Default empty.
-     *     @type string $title_right     Change the HTML to the right of the title.
+     * @type string $title_right     Change the HTML to the right of the title.
      *                                   Default empty.
-     *     @type bool   $show_split_view True for split view (two columns), false for
+     * @type bool   $show_split_view True for split view (two columns), false for
      *                                   un-split view (single column). Default true.
      * }
      * @return string Empty string if strings are equivalent or HTML with differences.

@@ -17,11 +17,11 @@ interface WpParseAuthCookie
      *     to be valid as they come directly from a client-provided cookie value. If
      *     the cookie value is malformed, false is returned.
      *
-     *     @type string $username   User's username.
-     *     @type string $expiration The time the cookie expires as a UNIX timestamp.
-     *     @type string $token      User's session token used.
-     *     @type string $hmac       The security hash for the cookie.
-     *     @type string $scheme     The cookie scheme to use.
+     * @type string $username   User's username.
+     * @type string $expiration The time the cookie expires as a UNIX timestamp.
+     * @type string $token      User's session token used.
+     * @type string $hmac       The security hash for the cookie.
+     * @type string $scheme     The cookie scheme to use.
      * }
      */
     public function wpParseAuthCookie(string $cookie = '', string $scheme = ''): array|false;

@@ -33,29 +33,29 @@ interface GetAvatar
      * @param array $args {
      *     Optional. Extra arguments to retrieve the avatar.
      *
-     *     @type int          $height        Display height of the avatar in pixels. Defaults to $size.
-     *     @type int          $width         Display width of the avatar in pixels. Defaults to $size.
-     *     @type bool         $force_default Whether to always show the default image, never the Gravatar.
+     * @type int          $height        Display height of the avatar in pixels. Defaults to $size.
+     * @type int          $width         Display width of the avatar in pixels. Defaults to $size.
+     * @type bool         $force_default Whether to always show the default image, never the Gravatar.
      *                                       Default false.
-     *     @type string       $rating        What rating to display avatars up to. Accepts:
+     * @type string       $rating        What rating to display avatars up to. Accepts:
      *                                       - 'G' (suitable for all audiences)
      *                                       - 'PG' (possibly offensive, usually for audiences 13 and above)
      *                                       - 'R' (intended for adult audiences above 17)
      *                                       - 'X' (even more mature than above)
      *                                       Default is the value of the 'avatar_rating' option.
-     *     @type string       $scheme        URL scheme to use. See set_url_scheme() for accepted values.
+     * @type string       $scheme        URL scheme to use. See set_url_scheme() for accepted values.
      *                                       Default null.
-     *     @type array|string $class         Array or string of additional classes to add to the img element.
+     * @type array|string $class         Array or string of additional classes to add to the img element.
      *                                       Default null.
-     *     @type bool         $force_display Whether to always show the avatar - ignores the show_avatars option.
+     * @type bool         $force_display Whether to always show the avatar - ignores the show_avatars option.
      *                                       Default false.
-     *     @type string       $loading       Value for the `loading` attribute.
+     * @type string       $loading       Value for the `loading` attribute.
      *                                       Default null.
-     *     @type string       $fetchpriority Value for the `fetchpriority` attribute.
+     * @type string       $fetchpriority Value for the `fetchpriority` attribute.
      *                                       Default null.
-     *     @type string       $decoding      Value for the `decoding` attribute.
+     * @type string       $decoding      Value for the `decoding` attribute.
      *                                       Default null.
-     *     @type string       $extra_attr    HTML attributes to insert in the IMG element. Is not sanitized.
+     * @type string       $extra_attr    HTML attributes to insert in the IMG element. Is not sanitized.
      *                                       Default empty.
      * }
      * @return string|false `<img>` tag for the user's avatar. False on failure.

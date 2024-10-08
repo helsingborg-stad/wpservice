@@ -17,12 +17,12 @@ class WpServiceDecorator implements \WpService\WpService
     }
 
     /**
- * Reads an unsigned integer with most significant bits first.
- *
- * @param binary string $input     Must be at least $num_bytes-long.
- * @param int $numBytes Number of parsed bytes.
- * @return int                     Value.
- */
+     * Reads an unsigned integer with most significant bits first.
+     *
+     * @param binary string $input     Must be at least $num_bytes-long.
+     * @param int $numBytes Number of parsed bytes.
+     * @return int                     Value.
+     */
     public function readBigEndian(int $numBytes): int
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
@@ -1068,19 +1068,19 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $linkdata {
  *     Elements that make up the link to insert.
  *
- *     @type int    $link_id          Optional. The ID of the existing link if updating.
- *     @type string $link_url         The URL the link points to.
- *     @type string $link_name        The title of the link.
- *     @type string $link_image       Optional. A URL of an image.
- *     @type string $link_target      Optional. The target element for the anchor tag.
- *     @type string $link_description Optional. A short description of the link.
- *     @type string $link_visible     Optional. 'Y' means visible, anything else means not.
- *     @type int    $link_owner       Optional. A user ID.
- *     @type int    $link_rating      Optional. A rating for the link.
- *     @type string $link_rel         Optional. A relationship of the link to you.
- *     @type string $link_notes       Optional. An extended description of or notes on the link.
- *     @type string $link_rss         Optional. A URL of an associated RSS feed.
- *     @type int    $link_category    Optional. The term ID of the link category.
+ * @type int    $link_id          Optional. The ID of the existing link if updating.
+ * @type string $link_url         The URL the link points to.
+ * @type string $link_name        The title of the link.
+ * @type string $link_image       Optional. A URL of an image.
+ * @type string $link_target      Optional. The target element for the anchor tag.
+ * @type string $link_description Optional. A short description of the link.
+ * @type string $link_visible     Optional. 'Y' means visible, anything else means not.
+ * @type int    $link_owner       Optional. A user ID.
+ * @type int    $link_rating      Optional. A rating for the link.
+ * @type string $link_rel         Optional. A relationship of the link to you.
+ * @type string $link_notes       Optional. An extended description of or notes on the link.
+ * @type string $link_rss         Optional. A URL of an associated RSS feed.
+ * @type int    $link_category    Optional. The term ID of the link category.
  *                                    If empty, uses default link category.
  * }
  * @param bool $wpError Optional. Whether to return a WP_Error object on failure. Default false.
@@ -1361,11 +1361,11 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     An array of query and display arguments.
  *
- *     @type int    $max     Number of posts to display.
- *     @type string $status  Post status.
- *     @type string $order   Designates ascending ('ASC') or descending ('DESC') order.
- *     @type string $title   Section title.
- *     @type string $id      The container id.
+ * @type int    $max     Number of posts to display.
+ * @type string $status  Post status.
+ * @type string $order   Designates ascending ('ASC') or descending ('DESC') order.
+ * @type string $title   Section title.
+ * @type string $id      The container id.
  * }
  * @return bool False if no posts were found. True otherwise.
  */
@@ -1610,24 +1610,24 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Arguments for generating the WXR export file for download. Default empty array.
  *
- *     @type string $content    Type of content to export. If set, only the post content of this post type
+ * @type string $content    Type of content to export. If set, only the post content of this post type
  *                              will be exported. Accepts 'all', 'post', 'page', 'attachment', or a defined
  *                              custom post. If an invalid custom post type is supplied, every post type for
  *                              which `can_export` is enabled will be exported instead. If a valid custom post
  *                              type is supplied but `can_export` is disabled, then 'posts' will be exported
  *                              instead. When 'all' is supplied, only post types with `can_export` enabled will
  *                              be exported. Default 'all'.
- *     @type string $author     Author to export content for. Only used when `$content` is 'post', 'page', or
+ * @type string $author     Author to export content for. Only used when `$content` is 'post', 'page', or
  *                              'attachment'. Accepts false (all) or a specific author ID. Default false (all).
- *     @type string $category   Category (slug) to export content for. Used only when `$content` is 'post'. If
+ * @type string $category   Category (slug) to export content for. Used only when `$content` is 'post'. If
  *                              set, only post content assigned to `$category` will be exported. Accepts false
  *                              or a specific category slug. Default is false (all categories).
- *     @type string $start_date Start date to export content from. Expected date format is 'Y-m-d'. Used only
+ * @type string $start_date Start date to export content from. Expected date format is 'Y-m-d'. Used only
  *                              when `$content` is 'post', 'page' or 'attachment'. Default false (since the
  *                              beginning of time).
- *     @type string $end_date   End date to export content to. Expected date format is 'Y-m-d'. Used only when
+ * @type string $end_date   End date to export content to. Expected date format is 'Y-m-d'. Used only when
  *                              `$content` is 'post', 'page' or 'attachment'. Default false (latest publish date).
- *     @type string $status     Post status to export posts for. Used only when `$content` is 'post' or 'page'.
+ * @type string $status     Post status to export posts for. Used only when `$content` is 'post' or 'page'.
  *                              Accepts false (all statuses except 'auto-draft'), or a specific status, i.e.
  *                              'publish', 'pending', 'draft', 'auto-draft', 'future', 'private', 'inherit', or
  *                              'trash'. Default false (all statuses except 'auto-draft').
@@ -1730,11 +1730,11 @@ class WpServiceDecorator implements \WpService\WpService
  *     Args. Note that all of the arg values are already unslashed. They are, however,
  *     coming straight from `$_POST` and are not validated or sanitized in any way.
  *
- *     @type string $file       Relative path to file.
- *     @type string $plugin     Path to the plugin file relative to the plugins directory.
- *     @type string $theme      Theme being edited.
- *     @type string $newcontent New content for the file.
- *     @type string $nonce      Nonce.
+ * @type string $file       Relative path to file.
+ * @type string $plugin     Path to the plugin file relative to the plugins directory.
+ * @type string $theme      Theme being edited.
+ * @type string $newcontent New content for the file.
+ * @type string $nonce      Nonce.
  * }
  * @return true|\WP_Error True on success or `WP_Error` on failure.
  */
@@ -2144,12 +2144,12 @@ class WpServiceDecorator implements \WpService\WpService
  *     i.e. a non-`WP_Image_Editor` image resource or `GdImage` instance,
  *     the function will return true on success, false on failure.
  *
- *     @type string $path      Path to the image file.
- *     @type string $file      Name of the image file.
- *     @type int    $width     Image width.
- *     @type int    $height    Image height.
- *     @type string $mime-type The mime type of the image.
- *     @type int    $filesize  File size of the image.
+ * @type string $path      Path to the image file.
+ * @type string $file      Name of the image file.
+ * @type int    $width     Image width.
+ * @type int    $height    Image height.
+ * @type string $mime-type The mime type of the image.
+ * @type int    $filesize  File size of the image.
  * }
  */
     public function wpSaveImageFile(string $filename, \WP_Image_Editor $image, string $mimeType, int $postId): array|\WP_Error|bool
@@ -3127,13 +3127,13 @@ class WpServiceDecorator implements \WpService\WpService
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * @global array $menu_order
-     * @global array $default_menu_order
-     *
-     * @param array $a
-     * @param array $b
-     * @return int
-     */
+ * @global array $menu_order
+ * @global array $default_menu_order
+ *
+ * @param array $a
+ * @param array $b
+ * @return int
+ */
     public function sortMenu(array $a, array $b): int
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
@@ -3149,10 +3149,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Array of arguments for building the post submit meta box.
  *
- *     @type string   $id       Meta box 'id' attribute.
- *     @type string   $title    Meta box title.
- *     @type callable $callback Meta box display callback.
- *     @type array    $args     Extra meta box arguments.
+ * @type string   $id       Meta box 'id' attribute.
+ * @type string   $title    Meta box title.
+ * @type callable $callback Meta box display callback.
+ * @type array    $args     Extra meta box arguments.
  * }
  */
     public function postSubmitMetaBox(\WP_Post $post, array $args = []): void
@@ -3179,10 +3179,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $box {
  *     Post formats meta box arguments.
  *
- *     @type string   $id       Meta box 'id' attribute.
- *     @type string   $title    Meta box title.
- *     @type callable $callback Meta box display callback.
- *     @type array    $args     Extra meta box arguments.
+ * @type string   $id       Meta box 'id' attribute.
+ * @type string   $title    Meta box title.
+ * @type callable $callback Meta box display callback.
+ * @type array    $args     Extra meta box arguments.
  * }
  */
     public function postFormatMetaBox(\WP_Post $post, array $box): void
@@ -3200,13 +3200,13 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $box {
  *     Tags meta box arguments.
  *
- *     @type string   $id       Meta box 'id' attribute.
- *     @type string   $title    Meta box title.
- *     @type callable $callback Meta box display callback.
- *     @type array    $args {
+ * @type string   $id       Meta box 'id' attribute.
+ * @type string   $title    Meta box title.
+ * @type callable $callback Meta box display callback.
+ * @type array    $args {
  *         Extra meta box arguments.
  *
- *         @type string $taxonomy Taxonomy. Default 'post_tag'.
+ * @type string $taxonomy Taxonomy. Default 'post_tag'.
  *     }
  * }
  */
@@ -3225,13 +3225,13 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $box {
  *     Categories meta box arguments.
  *
- *     @type string   $id       Meta box 'id' attribute.
- *     @type string   $title    Meta box title.
- *     @type callable $callback Meta box display callback.
- *     @type array    $args {
+ * @type string   $id       Meta box 'id' attribute.
+ * @type string   $title    Meta box title.
+ * @type callable $callback Meta box display callback.
+ * @type array    $args {
  *         Extra meta box arguments.
  *
- *         @type string $taxonomy Taxonomy. Default 'category'.
+ * @type string $taxonomy Taxonomy. Default 'category'.
  *     }
  * }
  */
@@ -3845,11 +3845,11 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array|false {
  *     Array of PHP version data. False on failure.
  *
- *     @type string $recommended_version The PHP version recommended by WordPress.
- *     @type string $minimum_version     The minimum required PHP version.
- *     @type bool   $is_supported        Whether the PHP version is actively supported.
- *     @type bool   $is_secure           Whether the PHP version receives security updates.
- *     @type bool   $is_acceptable       Whether the PHP version is still acceptable or warnings
+ * @type string $recommended_version The PHP version recommended by WordPress.
+ * @type string $minimum_version     The minimum required PHP version.
+ * @type bool   $is_supported        Whether the PHP version is actively supported.
+ * @type bool   $is_secure           Whether the PHP version receives security updates.
+ * @type bool   $is_acceptable       Whether the PHP version is still acceptable or warnings
  *                                       should be shown and an update recommended.
  * }
  */
@@ -4081,9 +4081,9 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Array or string of Query parameters. Default empty array.
  *
- *     @type int    $blog_id  The site ID. Default is the current site.
- *     @type array  $links    The tabs to include with (label|url|cap) keys.
- *     @type string $selected The ID of the selected link.
+ * @type int    $blog_id  The site ID. Default is the current site.
+ * @type array  $links    The tabs to include with (label|url|cap) keys.
+ * @type string $selected The ID of the selected link.
  * }
  */
     public function networkEditSiteNav(array $args = []): void
@@ -4190,10 +4190,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $box {
  *     Post type menu item meta box arguments.
  *
- *     @type string       $id       Meta box 'id' attribute.
- *     @type string       $title    Meta box title.
- *     @type callable     $callback Meta box display callback.
- *     @type WP_Post_Type $args     Extra meta box arguments (the post type object for this meta box).
+ * @type string       $id       Meta box 'id' attribute.
+ * @type string       $title    Meta box title.
+ * @type callable     $callback Meta box display callback.
+ * @type WP_Post_Type $args     Extra meta box arguments (the post type object for this meta box).
  * }
  */
     public function wpNavMenuItemPostTypeMetaBox(string $dataObject, array $box): void
@@ -4211,10 +4211,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $box {
  *     Taxonomy menu item meta box arguments.
  *
- *     @type string   $id       Meta box 'id' attribute.
- *     @type string   $title    Meta box title.
- *     @type callable $callback Meta box display callback.
- *     @type object   $args     Extra meta box arguments (the taxonomy object for this meta box).
+ * @type string   $id       Meta box 'id' attribute.
+ * @type string   $title    Meta box title.
+ * @type callable $callback Meta box display callback.
+ * @type object   $args     Extra meta box arguments (the taxonomy object for this meta box).
  * }
  */
     public function wpNavMenuItemTaxonomyMetaBox(string $dataObject, array $box): void
@@ -4428,48 +4428,48 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array|object $args   {
  *     Optional. Array or object of arguments to serialize for the Plugin Info API.
  *
- *     @type string  $slug              The plugin slug. Default empty.
- *     @type int     $per_page          Number of plugins per page. Default 24.
- *     @type int     $page              Number of current page. Default 1.
- *     @type int     $number            Number of tags or categories to be queried.
- *     @type string  $search            A search term. Default empty.
- *     @type string  $tag               Tag to filter plugins. Default empty.
- *     @type string  $author            Username of an plugin author to filter plugins. Default empty.
- *     @type string  $user              Username to query for their favorites. Default empty.
- *     @type string  $browse            Browse view: 'popular', 'new', 'beta', 'recommended'.
- *     @type string  $locale            Locale to provide context-sensitive results. Default is the value
+ * @type string  $slug              The plugin slug. Default empty.
+ * @type int     $per_page          Number of plugins per page. Default 24.
+ * @type int     $page              Number of current page. Default 1.
+ * @type int     $number            Number of tags or categories to be queried.
+ * @type string  $search            A search term. Default empty.
+ * @type string  $tag               Tag to filter plugins. Default empty.
+ * @type string  $author            Username of an plugin author to filter plugins. Default empty.
+ * @type string  $user              Username to query for their favorites. Default empty.
+ * @type string  $browse            Browse view: 'popular', 'new', 'beta', 'recommended'.
+ * @type string  $locale            Locale to provide context-sensitive results. Default is the value
  *                                      of get_locale().
- *     @type string  $installed_plugins Installed plugins to provide context-sensitive results.
- *     @type bool    $is_ssl            Whether links should be returned with https or not. Default false.
- *     @type array   $fields            {
+ * @type string  $installed_plugins Installed plugins to provide context-sensitive results.
+ * @type bool    $is_ssl            Whether links should be returned with https or not. Default false.
+ * @type array   $fields            {
  *         Array of fields which should or should not be returned.
  *
- *         @type bool $short_description Whether to return the plugin short description. Default true.
- *         @type bool $description       Whether to return the plugin full description. Default false.
- *         @type bool $sections          Whether to return the plugin readme sections: description, installation,
+ * @type bool $short_description Whether to return the plugin short description. Default true.
+ * @type bool $description       Whether to return the plugin full description. Default false.
+ * @type bool $sections          Whether to return the plugin readme sections: description, installation,
  *                                       FAQ, screenshots, other notes, and changelog. Default false.
- *         @type bool $tested            Whether to return the 'Compatible up to' value. Default true.
- *         @type bool $requires          Whether to return the required WordPress version. Default true.
- *         @type bool $requires_php      Whether to return the required PHP version. Default true.
- *         @type bool $rating            Whether to return the rating in percent and total number of ratings.
+ * @type bool $tested            Whether to return the 'Compatible up to' value. Default true.
+ * @type bool $requires          Whether to return the required WordPress version. Default true.
+ * @type bool $requires_php      Whether to return the required PHP version. Default true.
+ * @type bool $rating            Whether to return the rating in percent and total number of ratings.
  *                                       Default true.
- *         @type bool $ratings           Whether to return the number of rating for each star (1-5). Default true.
- *         @type bool $downloaded        Whether to return the download count. Default true.
- *         @type bool $downloadlink      Whether to return the download link for the package. Default true.
- *         @type bool $last_updated      Whether to return the date of the last update. Default true.
- *         @type bool $added             Whether to return the date when the plugin was added to the wordpress.org
+ * @type bool $ratings           Whether to return the number of rating for each star (1-5). Default true.
+ * @type bool $downloaded        Whether to return the download count. Default true.
+ * @type bool $downloadlink      Whether to return the download link for the package. Default true.
+ * @type bool $last_updated      Whether to return the date of the last update. Default true.
+ * @type bool $added             Whether to return the date when the plugin was added to the wordpress.org
  *                                       repository. Default true.
- *         @type bool $tags              Whether to return the assigned tags. Default true.
- *         @type bool $compatibility     Whether to return the WordPress compatibility list. Default true.
- *         @type bool $homepage          Whether to return the plugin homepage link. Default true.
- *         @type bool $versions          Whether to return the list of all available versions. Default false.
- *         @type bool $donate_link       Whether to return the donation link. Default true.
- *         @type bool $reviews           Whether to return the plugin reviews. Default false.
- *         @type bool $banners           Whether to return the banner images links. Default false.
- *         @type bool $icons             Whether to return the icon links. Default false.
- *         @type bool $active_installs   Whether to return the number of active installations. Default false.
- *         @type bool $group             Whether to return the assigned group. Default false.
- *         @type bool $contributors      Whether to return the list of contributors. Default false.
+ * @type bool $tags              Whether to return the assigned tags. Default true.
+ * @type bool $compatibility     Whether to return the WordPress compatibility list. Default true.
+ * @type bool $homepage          Whether to return the plugin homepage link. Default true.
+ * @type bool $versions          Whether to return the list of all available versions. Default false.
+ * @type bool $donate_link       Whether to return the donation link. Default true.
+ * @type bool $reviews           Whether to return the plugin reviews. Default false.
+ * @type bool $banners           Whether to return the banner images links. Default false.
+ * @type bool $icons             Whether to return the icon links. Default false.
+ * @type bool $active_installs   Whether to return the number of active installations. Default false.
+ * @type bool $group             Whether to return the assigned group. Default false.
+ * @type bool $contributors      Whether to return the list of contributors. Default false.
  *     }
  * }
  * @return object|array|WP_Error Response object or array on success, WP_Error on failure. See the
@@ -4552,10 +4552,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     Plugin installation status data.
  *
- *     @type string $status  Status of a plugin. Could be one of 'install', 'update_available', 'latest_installed' or 'newer_installed'.
- *     @type string $url     Plugin installation URL.
- *     @type string $version The most recent version of the plugin.
- *     @type string $file    Plugin filename relative to the plugins directory.
+ * @type string $status  Status of a plugin. Could be one of 'install', 'update_available', 'latest_installed' or 'newer_installed'.
+ * @type string $url     Plugin installation URL.
+ * @type string $version The most recent version of the plugin.
+ * @type string $file    Plugin filename relative to the plugins directory.
  * }
  */
     public function installPluginInstallStatus(array|object $api, bool $loop = false): array
@@ -4582,9 +4582,9 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array|object $data           {
  *     An array or object of plugin data. Can be retrieved from the API.
  *
- *     @type string   $slug             The plugin slug.
- *     @type string[] $requires_plugins An array of plugin dependency slugs.
- *     @type string   $version          The plugin's version string. Used when getting the install status.
+ * @type string   $slug             The plugin slug.
+ * @type string[] $requires_plugins An array of plugin dependency slugs.
+ * @type string   $version          The plugin's version string. Used when getting the install status.
  * }
  * @param bool $compatiblePhp   The result of a PHP compatibility check.
  * @param bool $compatibleWp    The result of a WP compatibility check.
@@ -4642,21 +4642,21 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     Plugin data. Values will be empty if not supplied by the plugin.
  *
- *     @type string $Name            Name of the plugin. Should be unique.
- *     @type string $PluginURI       Plugin URI.
- *     @type string $Version         Plugin version.
- *     @type string $Description     Plugin description.
- *     @type string $Author          Plugin author's name.
- *     @type string $AuthorURI       Plugin author's website address (if set).
- *     @type string $TextDomain      Plugin textdomain.
- *     @type string $DomainPath      Plugin's relative directory path to .mo files.
- *     @type bool   $Network         Whether the plugin can only be activated network-wide.
- *     @type string $RequiresWP      Minimum required version of WordPress.
- *     @type string $RequiresPHP     Minimum required version of PHP.
- *     @type string $UpdateURI       ID of the plugin for update purposes, should be a URI.
- *     @type string $RequiresPlugins Comma separated list of dot org plugin slugs.
- *     @type string $Title           Title of the plugin and link to the plugin's site (if set).
- *     @type string $AuthorName      Plugin author's name.
+ * @type string $Name            Name of the plugin. Should be unique.
+ * @type string $PluginURI       Plugin URI.
+ * @type string $Version         Plugin version.
+ * @type string $Description     Plugin description.
+ * @type string $Author          Plugin author's name.
+ * @type string $AuthorURI       Plugin author's website address (if set).
+ * @type string $TextDomain      Plugin textdomain.
+ * @type string $DomainPath      Plugin's relative directory path to .mo files.
+ * @type bool   $Network         Whether the plugin can only be activated network-wide.
+ * @type string $RequiresWP      Minimum required version of WordPress.
+ * @type string $RequiresPHP     Minimum required version of PHP.
+ * @type string $UpdateURI       ID of the plugin for update purposes, should be a URI.
+ * @type string $RequiresPlugins Comma separated list of dot org plugin slugs.
+ * @type string $Title           Title of the plugin and link to the plugin's site (if set).
+ * @type string $AuthorName      Plugin author's name.
  * }
  */
     public function getPluginData(string $pluginFile, bool $markup = true, bool $translate = true): array
@@ -5777,13 +5777,13 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array[] {
  *     Array of meta data arrays for the given post ID.
  *
- *     @type array ...$0 {
+ * @type array ...$0 {
  *         Associative array of meta data.
  *
- *         @type string $meta_key   Meta key.
- *         @type mixed  $meta_value Meta value.
- *         @type string $meta_id    Meta ID as a numeric string.
- *         @type string $post_id    Post ID as a numeric string.
+ * @type string $meta_key   Meta key.
+ * @type mixed  $meta_value Meta value.
+ * @type string $meta_id    Meta ID as a numeric string.
+ * @type string $post_id    Post ID as a numeric string.
  *     }
  * }
  */
@@ -5882,8 +5882,8 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     Array containing the sample permalink with placeholder for the post name, and the post name.
  *
- *     @type string $0 The permalink with placeholder for the post name.
- *     @type string $1 The post name.
+ * @type string $0 The permalink with placeholder for the post name.
+ * @type string $1 The post name.
  * }
  */
     public function getSamplePermalink(int|\WP_Post $post, string|null $title = null, string|null $name = null): array
@@ -5927,8 +5927,8 @@ class WpServiceDecorator implements \WpService\WpService
  *     Array of the lock time and user ID. False if the post does not exist, or there
  *     is no current user.
  *
- *     @type int $0 The current time as a Unix timestamp.
- *     @type int $1 The ID of the current user.
+ * @type int $0 The current time as a Unix timestamp.
+ * @type int $1 The ID of the current user.
  * }
  */
     public function wpSetPostLock(int|\WP_Post $post): array|false
@@ -6074,15 +6074,15 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $groupData {
  *     The group data to render.
  *
- *     @type string $group_label  The user-facing heading for the group, e.g. 'Comments'.
- *     @type array  $items        {
+ * @type string $group_label  The user-facing heading for the group, e.g. 'Comments'.
+ * @type array  $items        {
  *         An array of group items.
  *
- *         @type array  $group_item_data  {
+ * @type array  $group_item_data  {
  *             An array of name-value pairs for the item.
  *
- *             @type string $name   The user-facing name of an item name-value pair, e.g. 'IP Address'.
- *             @type string $value  The user-facing value of an item data pair, e.g. '50.60.70.0'.
+ * @type string $name   The user-facing name of an item name-value pair, e.g. 'IP Address'.
+ * @type string $value  The user-facing value of an item data pair, e.g. '50.60.70.0'.
  *         }
  *     }
  * }
@@ -6316,10 +6316,10 @@ class WpServiceDecorator implements \WpService\WpService
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Install Network.
-     *
-     * @since 3.0.0
-     */
+ * Install Network.
+ *
+ * @since 3.0.0
+ */
     public function installNetwork(): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
@@ -6525,13 +6525,13 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $catarr {
  *     Array of arguments for inserting a new category.
  *
- *     @type int        $cat_ID               Category ID. A non-zero value updates an existing category.
+ * @type int        $cat_ID               Category ID. A non-zero value updates an existing category.
  *                                            Default 0.
- *     @type string     $taxonomy             Taxonomy slug. Default 'category'.
- *     @type string     $cat_name             Category name. Default empty.
- *     @type string     $category_description Category description. Default empty.
- *     @type string     $category_nicename    Category nice (display) name. Default empty.
- *     @type int|string $category_parent      Category parent ID. Default empty.
+ * @type string     $taxonomy             Taxonomy slug. Default 'category'.
+ * @type string     $cat_name             Category name. Default empty.
+ * @type string     $category_description Category description. Default empty.
+ * @type string     $category_nicename    Category nice (display) name. Default empty.
+ * @type int|string $category_parent      Category parent ID. Default empty.
  * }
  * @param bool $wpError Optional. Default false.
  * @return int|\WP_Error The ID number of the new or updated Category on success. Zero or a WP_Error on failure,
@@ -6656,17 +6656,17 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array|string $args {
  *     Optional. Array or string of arguments for generating a terms checklist. Default empty array.
  *
- *     @type int    $descendants_and_self ID of the category to output along with its descendants.
+ * @type int    $descendants_and_self ID of the category to output along with its descendants.
  *                                        Default 0.
- *     @type int[]  $selected_cats        Array of category IDs to mark as checked. Default false.
- *     @type int[]  $popular_cats         Array of category IDs to receive the "popular-category" class.
+ * @type int[]  $selected_cats        Array of category IDs to mark as checked. Default false.
+ * @type int[]  $popular_cats         Array of category IDs to receive the "popular-category" class.
  *                                        Default false.
- *     @type Walker $walker               Walker object to use to build the output. Default empty which
+ * @type Walker $walker               Walker object to use to build the output. Default empty which
  *                                        results in a Walker_Category_Checklist instance being used.
- *     @type string $taxonomy             Taxonomy to generate the checklist for. Default 'category'.
- *     @type bool   $checked_ontop        Whether to move checked items out of the hierarchy and to
+ * @type string $taxonomy             Taxonomy to generate the checklist for. Default 'category'.
+ * @type bool   $checked_ontop        Whether to move checked items out of the hierarchy and to
  *                                        the top of the list. Default true.
- *     @type bool   $echo                 Whether to echo the generated markup. False to return the markup instead
+ * @type bool   $echo                 Whether to echo the generated markup. False to return the markup instead
  *                                        of echoing it. Default true.
  * }
  * @return string HTML list of input elements.
@@ -6883,10 +6883,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $box         {
  *     Custom formats meta box arguments.
  *
- *     @type string   $id           Meta box 'id' attribute.
- *     @type string   $title        Meta box title.
- *     @type callable $old_callback The original callback for this meta box.
- *     @type array    $args         Extra meta box arguments.
+ * @type string   $id           Meta box 'id' attribute.
+ * @type string   $title        Meta box title.
+ * @type callable $old_callback The original callback for this meta box.
+ * @type array    $args         Extra meta box arguments.
  * }
  */
     public function doBlockEditorIncompatibleMetaBox(mixed $dataObject, array $box): void
@@ -6981,10 +6981,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args     {
  *     Arguments used to create the settings section.
  *
- *     @type string $before_section HTML content to prepend to the section's HTML output.
+ * @type string $before_section HTML content to prepend to the section's HTML output.
  *                                  Receives the section's class name as `%s`. Default empty.
- *     @type string $after_section  HTML content to append to the section's HTML output. Default empty.
- *     @type string $section_class  The class name to use for the section. Default empty.
+ * @type string $after_section  HTML content to append to the section's HTML output. Default empty.
+ * @type string $section_class  The class name to use for the section. Default empty.
  * }
  */
     public function addSettingsSection(string $id, string $title, callable $callback, string $page, array $args = []): void
@@ -7019,10 +7019,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Extra arguments that get passed to the callback function.
  *
- *     @type string $label_for When supplied, the setting title will be wrapped
+ * @type string $label_for When supplied, the setting title will be wrapped
  *                             in a `<label>` element, its `for` attribute populated
  *                             with this value.
- *     @type string $class     CSS Class to be added to the `<tr>` element when the
+ * @type string $class     CSS Class to be added to the `<tr>` element when the
  *                             field is output.
  * }
  */
@@ -7118,14 +7118,14 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array[] {
  *     Array of settings error arrays.
  *
- *     @type array ...$0 {
+ * @type array ...$0 {
  *         Associative array of setting error data.
  *
- *         @type string $setting Slug title of the setting to which this error applies.
- *         @type string $code    Slug-name to identify the error. Used as part of 'id' attribute in HTML output.
- *         @type string $message The formatted message text to display to the user (will be shown inside styled
+ * @type string $setting Slug title of the setting to which this error applies.
+ * @type string $code    Slug-name to identify the error. Used as part of 'id' attribute in HTML output.
+ * @type string $message The formatted message text to display to the user (will be shown inside styled
  *                               `<div>` and `<p>` tags).
- *         @type string $type    Optional. Message type, controls HTML class. Possible values include 'error',
+ * @type string $type    Optional. Message type, controls HTML class. Possible values include 'error',
  *                               'success', 'warning', 'info'. Default 'error'.
  *     }
  * }
@@ -7329,12 +7329,12 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Array of star ratings arguments.
  *
- *     @type int|float $rating The rating to display, expressed in either a 0.5 rating increment,
+ * @type int|float $rating The rating to display, expressed in either a 0.5 rating increment,
  *                             or percentage. Default 0.
- *     @type string    $type   Format that the $rating is in. Valid values are 'rating' (default),
+ * @type string    $type   Format that the $rating is in. Valid values are 'rating' (default),
  *                             or, 'percent'. Default 'rating'.
- *     @type int       $number The number of ratings that makes up this rating. Default 0.
- *     @type bool      $echo   Whether to echo the generated markup. False to return the markup instead
+ * @type int       $number The number of ratings that makes up this rating. Default 0.
+ * @type bool      $echo   Whether to echo the generated markup. False to return the markup instead
  *                             of echoing it. Default true.
  * }
  * @return string Star rating HTML.
@@ -7534,39 +7534,39 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array|object $args   {
  *     Optional. Array or object of arguments to serialize for the Themes API. Default empty array.
  *
- *     @type string  $slug     The theme slug. Default empty.
- *     @type int     $per_page Number of themes per page. Default 24.
- *     @type int     $page     Number of current page. Default 1.
- *     @type int     $number   Number of tags to be queried.
- *     @type string  $search   A search term. Default empty.
- *     @type string  $tag      Tag to filter themes. Default empty.
- *     @type string  $author   Username of an author to filter themes. Default empty.
- *     @type string  $user     Username to query for their favorites. Default empty.
- *     @type string  $browse   Browse view: 'featured', 'popular', 'updated', 'favorites'.
- *     @type string  $locale   Locale to provide context-sensitive results. Default is the value of get_locale().
- *     @type array   $fields   {
+ * @type string  $slug     The theme slug. Default empty.
+ * @type int     $per_page Number of themes per page. Default 24.
+ * @type int     $page     Number of current page. Default 1.
+ * @type int     $number   Number of tags to be queried.
+ * @type string  $search   A search term. Default empty.
+ * @type string  $tag      Tag to filter themes. Default empty.
+ * @type string  $author   Username of an author to filter themes. Default empty.
+ * @type string  $user     Username to query for their favorites. Default empty.
+ * @type string  $browse   Browse view: 'featured', 'popular', 'updated', 'favorites'.
+ * @type string  $locale   Locale to provide context-sensitive results. Default is the value of get_locale().
+ * @type array   $fields   {
  *         Array of fields which should or should not be returned.
  *
- *         @type bool $description        Whether to return the theme full description. Default false.
- *         @type bool $sections           Whether to return the theme readme sections: description, installation,
+ * @type bool $description        Whether to return the theme full description. Default false.
+ * @type bool $sections           Whether to return the theme readme sections: description, installation,
  *                                        FAQ, screenshots, other notes, and changelog. Default false.
- *         @type bool $rating             Whether to return the rating in percent and total number of ratings.
+ * @type bool $rating             Whether to return the rating in percent and total number of ratings.
  *                                        Default false.
- *         @type bool $ratings            Whether to return the number of rating for each star (1-5). Default false.
- *         @type bool $downloaded         Whether to return the download count. Default false.
- *         @type bool $downloadlink       Whether to return the download link for the package. Default false.
- *         @type bool $last_updated       Whether to return the date of the last update. Default false.
- *         @type bool $tags               Whether to return the assigned tags. Default false.
- *         @type bool $homepage           Whether to return the theme homepage link. Default false.
- *         @type bool $screenshots        Whether to return the screenshots. Default false.
- *         @type int  $screenshot_count   Number of screenshots to return. Default 1.
- *         @type bool $screenshot_url     Whether to return the URL of the first screenshot. Default false.
- *         @type bool $photon_screenshots Whether to return the screenshots via Photon. Default false.
- *         @type bool $template           Whether to return the slug of the parent theme. Default false.
- *         @type bool $parent             Whether to return the slug, name and homepage of the parent theme. Default false.
- *         @type bool $versions           Whether to return the list of all available versions. Default false.
- *         @type bool $theme_url          Whether to return theme's URL. Default false.
- *         @type bool $extended_author    Whether to return nicename or nicename and display name. Default false.
+ * @type bool $ratings            Whether to return the number of rating for each star (1-5). Default false.
+ * @type bool $downloaded         Whether to return the download count. Default false.
+ * @type bool $downloadlink       Whether to return the download link for the package. Default false.
+ * @type bool $last_updated       Whether to return the date of the last update. Default false.
+ * @type bool $tags               Whether to return the assigned tags. Default false.
+ * @type bool $homepage           Whether to return the theme homepage link. Default false.
+ * @type bool $screenshots        Whether to return the screenshots. Default false.
+ * @type int  $screenshot_count   Number of screenshots to return. Default 1.
+ * @type bool $screenshot_url     Whether to return the URL of the first screenshot. Default false.
+ * @type bool $photon_screenshots Whether to return the screenshots via Photon. Default false.
+ * @type bool $template           Whether to return the slug of the parent theme. Default false.
+ * @type bool $parent             Whether to return the slug, name and homepage of the parent theme. Default false.
+ * @type bool $versions           Whether to return the list of all available versions. Default false.
+ * @type bool $theme_url          Whether to return theme's URL. Default false.
+ * @type bool $extended_author    Whether to return nicename or nicename and display name. Default false.
  *     }
  * }
  * @return object|array|WP_Error Response object or array on success, WP_Error on failure. See the
@@ -8007,10 +8007,10 @@ class WpServiceDecorator implements \WpService\WpService
  *     param {object} data {
  *         Arguments for admin notice.
  *
- *         @type string id        ID of the notice.
- *         @type string className Class names for the notice.
- *         @type string message   The notice's message.
- *         @type string type      The type of update the notice is for. Either 'plugin' or 'theme'.
+ * @type string id        ID of the notice.
+ * @type string className Class names for the notice.
+ * @type string message   The notice's message.
+ * @type string type      The type of update the notice is for. Either 'plugin' or 'theme'.
  *     }
  */
     public function wpPrintAdminNoticeTemplates(): void
@@ -8027,10 +8027,10 @@ class WpServiceDecorator implements \WpService\WpService
  *     param {object} data {
  *         Arguments for the update row
  *
- *         @type string slug    Plugin slug.
- *         @type string plugin  Plugin base name.
- *         @type string colspan The number of table columns this row spans.
- *         @type string content The row content.
+ * @type string slug    Plugin slug.
+ * @type string plugin  Plugin base name.
+ * @type string colspan The number of table columns this row spans.
+ * @type string content The row content.
  *     }
  *
  * The delete template takes one argument with four values:
@@ -8038,10 +8038,10 @@ class WpServiceDecorator implements \WpService\WpService
  *     param {object} data {
  *         Arguments for the update row
  *
- *         @type string slug    Plugin slug.
- *         @type string plugin  Plugin base name.
- *         @type string name    Plugin name.
- *         @type string colspan The number of table columns this row spans.
+ * @type string slug    Plugin slug.
+ * @type string plugin  Plugin base name.
+ * @type string name    Plugin name.
+ * @type string colspan The number of table columns this row spans.
  *     }
  */
     public function wpPrintUpdateRowTemplates(): void
@@ -8263,10 +8263,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $request {
  *     The array of request data. All arguments are optional and may be empty.
  *
- *     @type string $app_name    The suggested name of the application.
- *     @type string $app_id      A UUID provided by the application to uniquely identify it.
- *     @type string $success_url The URL the user will be redirected to after approving the application.
- *     @type string $reject_url  The URL the user will be redirected to after rejecting the application.
+ * @type string $app_name    The suggested name of the application.
+ * @type string $app_id      A UUID provided by the application to uniquely identify it.
+ * @type string $success_url The URL the user will be redirected to after approving the application.
+ * @type string $reject_url  The URL the user will be redirected to after rejecting the application.
  * }
  * @param \WP_User $user The user authorizing the application.
  * @return true|\WP_Error True if the request is valid, a WP_Error object contains errors if not.
@@ -9021,27 +9021,27 @@ class WpServiceDecorator implements \WpService\WpService
  * @param string|array $args {
  *     Optional. Array or string of default arguments.
  *
- *     @type string       $orderby       How to sort the authors. Accepts 'nicename', 'email', 'url', 'registered',
+ * @type string       $orderby       How to sort the authors. Accepts 'nicename', 'email', 'url', 'registered',
  *                                       'user_nicename', 'user_email', 'user_url', 'user_registered', 'name',
  *                                       'display_name', 'post_count', 'ID', 'meta_value', 'user_login'. Default 'name'.
- *     @type string       $order         Sorting direction for $orderby. Accepts 'ASC', 'DESC'. Default 'ASC'.
- *     @type int          $number        Maximum authors to return or display. Default empty (all authors).
- *     @type bool         $optioncount   Show the count in parenthesis next to the author's name. Default false.
- *     @type bool         $exclude_admin Whether to exclude the 'admin' account, if it exists. Default true.
- *     @type bool         $show_fullname Whether to show the author's full name. Default false.
- *     @type bool         $hide_empty    Whether to hide any authors with no posts. Default true.
- *     @type string       $feed          If not empty, show a link to the author's feed and use this text as the alt
+ * @type string       $order         Sorting direction for $orderby. Accepts 'ASC', 'DESC'. Default 'ASC'.
+ * @type int          $number        Maximum authors to return or display. Default empty (all authors).
+ * @type bool         $optioncount   Show the count in parenthesis next to the author's name. Default false.
+ * @type bool         $exclude_admin Whether to exclude the 'admin' account, if it exists. Default true.
+ * @type bool         $show_fullname Whether to show the author's full name. Default false.
+ * @type bool         $hide_empty    Whether to hide any authors with no posts. Default true.
+ * @type string       $feed          If not empty, show a link to the author's feed and use this text as the alt
  *                                       parameter of the link. Default empty.
- *     @type string       $feed_image    If not empty, show a link to the author's feed and use this image URL as
+ * @type string       $feed_image    If not empty, show a link to the author's feed and use this image URL as
  *                                       clickable anchor. Default empty.
- *     @type string       $feed_type     The feed type to link to. Possible values include 'rss2', 'atom'.
+ * @type string       $feed_type     The feed type to link to. Possible values include 'rss2', 'atom'.
  *                                       Default is the value of get_default_feed().
- *     @type bool         $echo          Whether to output the result or instead return it. Default true.
- *     @type string       $style         If 'list', each author is wrapped in an `<li>` element, otherwise the authors
+ * @type bool         $echo          Whether to output the result or instead return it. Default true.
+ * @type string       $style         If 'list', each author is wrapped in an `<li>` element, otherwise the authors
  *                                       will be separated by commas.
- *     @type bool         $html          Whether to list the items in HTML form or plaintext. Default true.
- *     @type int[]|string $exclude       Array or comma/space-separated list of author IDs to exclude. Default empty.
- *     @type int[]|string $include       Array or comma/space-separated list of author IDs to include. Default empty.
+ * @type bool         $html          Whether to list the items in HTML form or plaintext. Default true.
+ * @type int[]|string $exclude       Array or comma/space-separated list of author IDs to exclude. Default empty.
+ * @type int[]|string $include       Array or comma/space-separated list of author IDs to include. Default empty.
  * }
  * @return void|string Void if 'echo' argument is true, list of authors if 'echo' is false.
  */
@@ -9134,8 +9134,8 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $sourceProperties {
  *     The array of arguments that are used to register a source.
  *
- *     @type string   $label              The label of the source.
- *     @type callable $get_value_callback A callback executed when the source is processed during block rendering.
+ * @type string   $label              The label of the source.
+ * @type callable $get_value_callback A callback executed when the source is processed during block rendering.
  *                                        The callback should have the following signature:
  *
  *                                        `function( $source_args, $block_instance, $attribute_name ): mixed`
@@ -9146,7 +9146,7 @@ class WpServiceDecorator implements \WpService\WpService
  *                                            - @param string $attributeName The name of an attribute.
  *                                        The callback has a mixed return type; it may return a string to override
  *                                        the block's original value, null, false to remove an attribute, etc.
- *     @type string[] $uses_context       Optional. Array of values to add to block `uses_context` needed by the source.
+ * @type string[] $uses_context       Optional. Array of values to add to block `uses_context` needed by the source.
  * }
  * @return \WP_Block_Bindings_Source|false Source when the registration was successful, or `false` on failure.
  */
@@ -9393,9 +9393,9 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $options   {
  *     Optional. An associative array of options. Default is empty array.
  *
- *     @type string   $coerce_to        Coerce the value to rem or px. Default `'rem'`.
- *     @type int      $root_size_value  Value of root font size for rem|em <-> px conversion. Default `16`.
- *     @type string[] $acceptable_units An array of font size units. Default `array( 'rem', 'px', 'em' )`;
+ * @type string   $coerce_to        Coerce the value to rem or px. Default `'rem'`.
+ * @type int      $root_size_value  Value of root font size for rem|em <-> px conversion. Default `16`.
+ * @type string[] $acceptable_units An array of font size units. Default `array( 'rem', 'px', 'em' )`;
  * }
  * @return array|null An array consisting of `'value'` and `'unit'` properties on success.
  *                    `null` on failure.
@@ -9419,9 +9419,9 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $preset   {
  *     Required. fontSizes preset value as seen in theme.json.
  *
- *     @type string           $name Name of the font size preset.
- *     @type string           $slug Kebab-case, unique identifier for the font size preset.
- *     @type string|int|float $size CSS font-size value, including units if applicable.
+ * @type string           $name Name of the font size preset.
+ * @type string           $slug Kebab-case, unique identifier for the font size preset.
+ * @type string|int|float $size CSS font-size value, including units if applicable.
  * }
  * @param bool|array $settings Optional Theme JSON settings array that overrides any global theme settings.
  *                             Default is false.
@@ -9443,8 +9443,8 @@ class WpServiceDecorator implements \WpService\WpService
  * @return string[] {
  *     Folder names used by block themes.
  *
- *     @type string $wp_template      Theme-relative directory name for block templates.
- *     @type string $wp_template_part Theme-relative directory name for block template parts.
+ * @type string $wp_template      Theme-relative directory name for block templates.
+ * @type string $wp_template_part Theme-relative directory name for block template parts.
  * }
  */
     public function getBlockThemeFolders(string $themeStylesheet = null): array
@@ -9459,14 +9459,14 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array[] {
  *     The allowed template part area values.
  *
- *     @type array ...$0 {
+ * @type array ...$0 {
  *         Data for the allowed template part area.
  *
- *         @type string $area        Template part area name.
- *         @type string $label       Template part area label.
- *         @type string $description Template part area description.
- *         @type string $icon        Template part area icon.
- *         @type string $area_tag    Template part area tag.
+ * @type string $area        Template part area name.
+ * @type string $label       Template part area label.
+ * @type string $description Template part area description.
+ * @type string $icon        Template part area icon.
+ * @type string $area_tag    Template part area tag.
  *     }
  * }
  */
@@ -9483,11 +9483,11 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array[] {
  *     The default template types.
  *
- *     @type array ...$0 {
+ * @type array ...$0 {
  *         Data for the template type.
  *
- *         @type string $title       Template type title.
- *         @type string $description Template type description.
+ * @type string $title       Template type title.
+ * @type string $description Template type description.
  *    }
  * }
  */
@@ -9503,10 +9503,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $query {
  *     Optional. Arguments to retrieve templates.
  *
- *     @type string[] $slug__in  List of slugs to include.
- *     @type int      $wp_id     Post ID of customized template.
- *     @type string   $area      A 'wp_template_part_area' taxonomy value to filter by (for 'wp_template_part' template type only).
- *     @type string   $post_type Post type to get the templates for.
+ * @type string[] $slug__in  List of slugs to include.
+ * @type int      $wp_id     Post ID of customized template.
+ * @type string   $area      A 'wp_template_part_area' taxonomy value to filter by (for 'wp_template_part' template type only).
+ * @type string   $post_type Post type to get the templates for.
  * }
  * @param string $templateType Template type. Either 'wp_template' or 'wp_template_part'.
  * @return WP_Block_Template[] Array of block templates.
@@ -9951,12 +9951,12 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $block {
  *     A representative array of a single parsed block object. See WP_Block_Parser_Block.
  *
- *     @type string   $blockName    Name of block.
- *     @type array    $attrs        Attributes from block comment delimiters.
- *     @type array[]  $innerBlocks  List of inner blocks. An array of arrays that
+ * @type string   $blockName    Name of block.
+ * @type array    $attrs        Attributes from block comment delimiters.
+ * @type array[]  $innerBlocks  List of inner blocks. An array of arrays that
  *                                  have the same structure as this one.
- *     @type string   $innerHTML    HTML from inside block comment delimiters.
- *     @type array    $innerContent List of string fragments and null markers where
+ * @type string   $innerHTML    HTML from inside block comment delimiters.
+ * @type array    $innerContent List of string fragments and null markers where
  *                                  inner blocks were found.
  * }
  * @return string String of rendered HTML.
@@ -9974,15 +9974,15 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array[] $blocks {
  *     Array of block structures.
  *
- *     @type array ...$0 {
+ * @type array ...$0 {
  *         A representative array of a single parsed block object. See WP_Block_Parser_Block.
  *
- *         @type string   $blockName    Name of block.
- *         @type array    $attrs        Attributes from block comment delimiters.
- *         @type array[]  $innerBlocks  List of inner blocks. An array of arrays that
+ * @type string   $blockName    Name of block.
+ * @type array    $attrs        Attributes from block comment delimiters.
+ * @type array[]  $innerBlocks  List of inner blocks. An array of arrays that
  *                                      have the same structure as this one.
- *         @type string   $innerHTML    HTML from inside block comment delimiters.
- *         @type array    $innerContent List of string fragments and null markers where
+ * @type string   $innerHTML    HTML from inside block comment delimiters.
+ * @type array    $innerContent List of string fragments and null markers where
  *                                      inner blocks were found.
  *     }
  * }
@@ -10115,12 +10115,12 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $parsedBlock {
  *     A representative array of the block being rendered. See WP_Block_Parser_Block.
  *
- *     @type string   $blockName    Name of block.
- *     @type array    $attrs        Attributes from block comment delimiters.
- *     @type array[]  $innerBlocks  List of inner blocks. An array of arrays that
+ * @type string   $blockName    Name of block.
+ * @type array    $attrs        Attributes from block comment delimiters.
+ * @type array[]  $innerBlocks  List of inner blocks. An array of arrays that
  *                                  have the same structure as this one.
- *     @type string   $innerHTML    HTML from inside block comment delimiters.
- *     @type array    $innerContent List of string fragments and null markers where
+ * @type string   $innerHTML    HTML from inside block comment delimiters.
+ * @type array    $innerContent List of string fragments and null markers where
  *                                  inner blocks were found.
  * }
  * @return string String of rendered HTML.
@@ -10138,15 +10138,15 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array[] {
  *     Array of block structures.
  *
- *     @type array ...$0 {
+ * @type array ...$0 {
  *         A representative array of a single parsed block object. See WP_Block_Parser_Block.
  *
- *         @type string   $blockName    Name of block.
- *         @type array    $attrs        Attributes from block comment delimiters.
- *         @type array[]  $innerBlocks  List of inner blocks. An array of arrays that
+ * @type string   $blockName    Name of block.
+ * @type array    $attrs        Attributes from block comment delimiters.
+ * @type array[]  $innerBlocks  List of inner blocks. An array of arrays that
  *                                      have the same structure as this one.
- *         @type string   $innerHTML    HTML from inside block comment delimiters.
- *         @type array    $innerContent List of string fragments and null markers where
+ * @type string   $innerHTML    HTML from inside block comment delimiters.
+ * @type array    $innerContent List of string fragments and null markers where
  *                                      inner blocks were found.
  *     }
  * }
@@ -10474,25 +10474,25 @@ class WpServiceDecorator implements \WpService\WpService
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Handler for updating the has published posts flag when a post is deleted.
-     *
-     * @since 5.9.0
-     *
-     * @param int $postId Deleted post ID.
-     */
+ * Handler for updating the has published posts flag when a post is deleted.
+ *
+ * @since 5.9.0
+ *
+ * @param int $postId Deleted post ID.
+ */
     public function blockCoreCalendarUpdateHasPublishedPostOnDelete(int $postId): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Handler for updating the has published posts flag when a post status changes.
-     *
-     * @since 5.9.0
-     *
-     * @param string $newStatus The status the post is changing to.
-     * @param string $oldStatus The status the post is changing from.
-     * @param \WP_Post $post       Post object.
-     */
+ * Handler for updating the has published posts flag when a post status changes.
+ *
+ * @since 5.9.0
+ *
+ * @param string $newStatus The status the post is changing to.
+ * @param string $oldStatus The status the post is changing from.
+ * @param \WP_Post $post       Post object.
+ */
     public function blockCoreCalendarUpdateHasPublishedPostOnTransitionPostStatus(string $newStatus, string $oldStatus, \WP_Post $post): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
@@ -11584,39 +11584,39 @@ class WpServiceDecorator implements \WpService\WpService
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Returns the menu items for a WordPress menu location.
-     *
-     * @since 5.9.0
-     *
-     * @param string $location The menu location.
-     * @return array Menu items for the location.
-     */
+ * Returns the menu items for a WordPress menu location.
+ *
+ * @since 5.9.0
+ *
+ * @param string $location The menu location.
+ * @return array Menu items for the location.
+ */
     public function blockCoreNavigationGetMenuItemsAtLocation(string $location): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Sorts a standard array of menu items into a nested structure keyed by the
-     * id of the parent menu.
-     *
-     * @since 5.9.0
-     *
-     * @param array $menuItems Menu items to sort.
-     * @return array An array keyed by the id of the parent menu where each element
-     *               is an array of menu items that belong to that parent.
-     */
+ * Sorts a standard array of menu items into a nested structure keyed by the
+ * id of the parent menu.
+ *
+ * @since 5.9.0
+ *
+ * @param array $menuItems Menu items to sort.
+ * @return array An array keyed by the id of the parent menu where each element
+ *               is an array of menu items that belong to that parent.
+ */
     public function blockCoreNavigationSortMenuItemsByParentId(array $menuItems): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Gets the inner blocks for the navigation block from the unstable location attribute.
-     *
-     * @since 6.5.0
-     *
-     * @param array $attributes The block attributes.
-     * @return \WP_Block_List Returns the inner blocks for the navigation block.
-     */
+ * Gets the inner blocks for the navigation block from the unstable location attribute.
+ *
+ * @since 6.5.0
+ *
+ * @param array $attributes The block attributes.
+ * @return \WP_Block_List Returns the inner blocks for the navigation block.
+ */
     public function blockCoreNavigationGetInnerBlocksFromUnstableLocation(array $attributes): \WP_Block_List
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
@@ -13068,38 +13068,38 @@ class WpServiceDecorator implements \WpService\WpService
  * @param string|array $args {
  *     Optional. String or array of arguments to list bookmarks.
  *
- *     @type string       $orderby          How to order the links by. Accepts post fields. Default 'name'.
- *     @type string       $order            Whether to order bookmarks in ascending or descending order.
+ * @type string       $orderby          How to order the links by. Accepts post fields. Default 'name'.
+ * @type string       $order            Whether to order bookmarks in ascending or descending order.
  *                                          Accepts 'ASC' (ascending) or 'DESC' (descending). Default 'ASC'.
- *     @type int          $limit            Amount of bookmarks to display. Accepts 1+ or -1 for all.
+ * @type int          $limit            Amount of bookmarks to display. Accepts 1+ or -1 for all.
  *                                          Default -1.
- *     @type string       $category         Comma-separated list of category IDs to include links from.
+ * @type string       $category         Comma-separated list of category IDs to include links from.
  *                                          Default empty.
- *     @type string       $category_name    Category to retrieve links for by name. Default empty.
- *     @type int|bool     $hide_invisible   Whether to show or hide links marked as 'invisible'. Accepts
+ * @type string       $category_name    Category to retrieve links for by name. Default empty.
+ * @type int|bool     $hide_invisible   Whether to show or hide links marked as 'invisible'. Accepts
  *                                          1|true or 0|false. Default 1|true.
- *     @type int|bool     $show_updated     Whether to display the time the bookmark was last updated.
+ * @type int|bool     $show_updated     Whether to display the time the bookmark was last updated.
  *                                          Accepts 1|true or 0|false. Default 0|false.
- *     @type int|bool     $echo             Whether to echo or return the formatted bookmarks. Accepts
+ * @type int|bool     $echo             Whether to echo or return the formatted bookmarks. Accepts
  *                                          1|true (echo) or 0|false (return). Default 1|true.
- *     @type int|bool     $categorize       Whether to show links listed by category or in a single column.
+ * @type int|bool     $categorize       Whether to show links listed by category or in a single column.
  *                                          Accepts 1|true (by category) or 0|false (one column). Default 1|true.
- *     @type int|bool     $show_description Whether to show the bookmark descriptions. Accepts 1|true or 0|false.
+ * @type int|bool     $show_description Whether to show the bookmark descriptions. Accepts 1|true or 0|false.
  *                                          Default 0|false.
- *     @type string       $title_li         What to show before the links appear. Default 'Bookmarks'.
- *     @type string       $title_before     The HTML or text to prepend to the $title_li string. Default '<h2>'.
- *     @type string       $title_after      The HTML or text to append to the $title_li string. Default '</h2>'.
- *     @type string|array $class            The CSS class or an array of classes to use for the $title_li.
+ * @type string       $title_li         What to show before the links appear. Default 'Bookmarks'.
+ * @type string       $title_before     The HTML or text to prepend to the $title_li string. Default '<h2>'.
+ * @type string       $title_after      The HTML or text to append to the $title_li string. Default '</h2>'.
+ * @type string|array $class            The CSS class or an array of classes to use for the $title_li.
  *                                          Default 'linkcat'.
- *     @type string       $category_before  The HTML or text to prepend to $title_before if $categorize is true.
+ * @type string       $category_before  The HTML or text to prepend to $title_before if $categorize is true.
  *                                          String must contain '%id' and '%class' to inherit the category ID and
  *                                          the $class argument used for formatting in themes.
  *                                          Default '<li id="%id" class="%class">'.
- *     @type string       $category_after   The HTML or text to append to $title_after if $categorize is true.
+ * @type string       $category_after   The HTML or text to append to $title_after if $categorize is true.
  *                                          Default '</li>'.
- *     @type string       $category_orderby How to order the bookmark category based on term scheme if $categorize
+ * @type string       $category_orderby How to order the bookmark category based on term scheme if $categorize
  *                                          is true. Default 'name'.
- *     @type string       $category_order   Whether to order categories in ascending or descending order if
+ * @type string       $category_order   Whether to order categories in ascending or descending order if
  *                                          $categorize is true. Accepts 'ASC' (ascending) or 'DESC' (descending).
  *                                          Default 'ASC'.
  * }
@@ -13156,26 +13156,26 @@ class WpServiceDecorator implements \WpService\WpService
  * @param string|array $args {
  *     Optional. String or array of arguments to retrieve bookmarks.
  *
- *     @type string   $orderby        How to order the links by. Accepts 'id', 'link_id', 'name', 'link_name',
+ * @type string   $orderby        How to order the links by. Accepts 'id', 'link_id', 'name', 'link_name',
  *                                    'url', 'link_url', 'visible', 'link_visible', 'rating', 'link_rating',
  *                                    'owner', 'link_owner', 'updated', 'link_updated', 'notes', 'link_notes',
  *                                    'description', 'link_description', 'length' and 'rand'.
  *                                    When `$orderby` is 'length', orders by the character length of
  *                                    'link_name'. Default 'name'.
- *     @type string   $order          Whether to order bookmarks in ascending or descending order.
+ * @type string   $order          Whether to order bookmarks in ascending or descending order.
  *                                    Accepts 'ASC' (ascending) or 'DESC' (descending). Default 'ASC'.
- *     @type int      $limit          Amount of bookmarks to display. Accepts any positive number or
+ * @type int      $limit          Amount of bookmarks to display. Accepts any positive number or
  *                                    -1 for all.  Default -1.
- *     @type string   $category       Comma-separated list of category IDs to include links from.
+ * @type string   $category       Comma-separated list of category IDs to include links from.
  *                                    Default empty.
- *     @type string   $category_name  Category to retrieve links for by name. Default empty.
- *     @type int|bool $hide_invisible Whether to show or hide links marked as 'invisible'. Accepts
+ * @type string   $category_name  Category to retrieve links for by name. Default empty.
+ * @type int|bool $hide_invisible Whether to show or hide links marked as 'invisible'. Accepts
  *                                    1|true or 0|false. Default 1|true.
- *     @type int|bool $show_updated   Whether to display the time the bookmark was last updated.
+ * @type int|bool $show_updated   Whether to display the time the bookmark was last updated.
  *                                    Accepts 1|true or 0|false. Default 0|false.
- *     @type string   $include        Comma-separated list of bookmark IDs to include. Default empty.
- *     @type string   $exclude        Comma-separated list of bookmark IDs to exclude. Default empty.
- *     @type string   $search         Search terms. Will be SQL-formatted with wildcards before and after
+ * @type string   $include        Comma-separated list of bookmark IDs to include. Default empty.
+ * @type string   $exclude        Comma-separated list of bookmark IDs to exclude. Default empty.
+ * @type string   $search         Search terms. Will be SQL-formatted with wildcards before and after
  *                                    and searched in 'link_url', 'link_name' and 'link_description'.
  *                                    Default empty.
  * }
@@ -13942,9 +13942,9 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Arguments that accompany the requested capability check.
  *
- *     @type string    $0 Requested capability.
- *     @type int       $1 Concerned user ID.
- *     @type mixed  ...$2 Optional second and further parameters, typically object ID.
+ * @type string    $0 Requested capability.
+ * @type int       $1 Concerned user ID.
+ * @type mixed  ...$2 Optional second and further parameters, typically object ID.
  * }
  * @param \WP_User $user    The user object.
  * @return bool[] Filtered array of the user's capabilities.
@@ -14110,37 +14110,37 @@ class WpServiceDecorator implements \WpService\WpService
  *     Optional. Array or string of arguments to generate a categories drop-down element. See WP_Term_Query::__construct()
  *     for information on additional accepted arguments.
  *
- *     @type string       $show_option_all   Text to display for showing all categories. Default empty.
- *     @type string       $show_option_none  Text to display for showing no categories. Default empty.
- *     @type string       $option_none_value Value to use when no category is selected. Default empty.
- *     @type string       $orderby           Which column to use for ordering categories. See get_terms() for a list
+ * @type string       $show_option_all   Text to display for showing all categories. Default empty.
+ * @type string       $show_option_none  Text to display for showing no categories. Default empty.
+ * @type string       $option_none_value Value to use when no category is selected. Default empty.
+ * @type string       $orderby           Which column to use for ordering categories. See get_terms() for a list
  *                                           of accepted values. Default 'id' (term_id).
- *     @type bool         $pad_counts        See get_terms() for an argument description. Default false.
- *     @type bool|int     $show_count        Whether to include post counts. Accepts 0, 1, or their bool equivalents.
+ * @type bool         $pad_counts        See get_terms() for an argument description. Default false.
+ * @type bool|int     $show_count        Whether to include post counts. Accepts 0, 1, or their bool equivalents.
  *                                           Default 0.
- *     @type bool|int     $echo              Whether to echo or return the generated markup. Accepts 0, 1, or their
+ * @type bool|int     $echo              Whether to echo or return the generated markup. Accepts 0, 1, or their
  *                                           bool equivalents. Default 1.
- *     @type bool|int     $hierarchical      Whether to traverse the taxonomy hierarchy. Accepts 0, 1, or their bool
+ * @type bool|int     $hierarchical      Whether to traverse the taxonomy hierarchy. Accepts 0, 1, or their bool
  *                                           equivalents. Default 0.
- *     @type int          $depth             Maximum depth. Default 0.
- *     @type int          $tab_index         Tab index for the select element. Default 0 (no tabindex).
- *     @type string       $name              Value for the 'name' attribute of the select element. Default 'cat'.
- *     @type string       $id                Value for the 'id' attribute of the select element. Defaults to the value
+ * @type int          $depth             Maximum depth. Default 0.
+ * @type int          $tab_index         Tab index for the select element. Default 0 (no tabindex).
+ * @type string       $name              Value for the 'name' attribute of the select element. Default 'cat'.
+ * @type string       $id                Value for the 'id' attribute of the select element. Defaults to the value
  *                                           of `$name`.
- *     @type string       $class             Value for the 'class' attribute of the select element. Default 'postform'.
- *     @type int|string   $selected          Value of the option that should be selected. Default 0.
- *     @type string       $value_field       Term field that should be used to populate the 'value' attribute
+ * @type string       $class             Value for the 'class' attribute of the select element. Default 'postform'.
+ * @type int|string   $selected          Value of the option that should be selected. Default 0.
+ * @type string       $value_field       Term field that should be used to populate the 'value' attribute
  *                                           of the option elements. Accepts any valid term field: 'term_id', 'name',
  *                                           'slug', 'term_group', 'term_taxonomy_id', 'taxonomy', 'description',
  *                                           'parent', 'count'. Default 'term_id'.
- *     @type string|array $taxonomy          Name of the taxonomy or taxonomies to retrieve. Default 'category'.
- *     @type bool         $hide_if_empty     True to skip generating markup if no categories are found.
+ * @type string|array $taxonomy          Name of the taxonomy or taxonomies to retrieve. Default 'category'.
+ * @type bool         $hide_if_empty     True to skip generating markup if no categories are found.
  *                                           Default false (create select element even if no categories are found).
- *     @type bool         $required          Whether the `<select>` element should have the HTML5 'required' attribute.
+ * @type bool         $required          Whether the `<select>` element should have the HTML5 'required' attribute.
  *                                           Default false.
- *     @type Walker       $walker            Walker object to use to build the output. Default empty which results in a
+ * @type Walker       $walker            Walker object to use to build the output. Default empty which results in a
  *                                           Walker_CategoryDropdown instance being used.
- *     @type string       $aria_describedby  The 'id' of an element that contains descriptive text for the select.
+ * @type string       $aria_describedby  The 'id' of an element that contains descriptive text for the select.
  *                                           Default empty string.
  * }
  * @return string HTML dropdown list of categories.
@@ -14161,39 +14161,39 @@ class WpServiceDecorator implements \WpService\WpService
  *     Array of optional arguments. See get_categories(), get_terms(), and WP_Term_Query::__construct()
  *     for information on additional accepted arguments.
  *
- *     @type int|int[]    $current_category      ID of category, or array of IDs of categories, that should get the
+ * @type int|int[]    $current_category      ID of category, or array of IDs of categories, that should get the
  *                                               'current-cat' class. Default 0.
- *     @type int          $depth                 Category depth. Used for tab indentation. Default 0.
- *     @type bool|int     $echo                  Whether to echo or return the generated markup. Accepts 0, 1, or their
+ * @type int          $depth                 Category depth. Used for tab indentation. Default 0.
+ * @type bool|int     $echo                  Whether to echo or return the generated markup. Accepts 0, 1, or their
  *                                               bool equivalents. Default 1.
- *     @type int[]|string $exclude               Array or comma/space-separated string of term IDs to exclude.
+ * @type int[]|string $exclude               Array or comma/space-separated string of term IDs to exclude.
  *                                               If `$hierarchical` is true, descendants of `$exclude` terms will also
  *                                               be excluded; see `$exclude_tree`. See get_terms().
  *                                               Default empty string.
- *     @type int[]|string $exclude_tree          Array or comma/space-separated string of term IDs to exclude, along
+ * @type int[]|string $exclude_tree          Array or comma/space-separated string of term IDs to exclude, along
  *                                               with their descendants. See get_terms(). Default empty string.
- *     @type string       $feed                  Text to use for the feed link. Default 'Feed for all posts filed
+ * @type string       $feed                  Text to use for the feed link. Default 'Feed for all posts filed
  *                                               under [cat name]'.
- *     @type string       $feed_image            URL of an image to use for the feed link. Default empty string.
- *     @type string       $feed_type             Feed type. Used to build feed link. See get_term_feed_link().
+ * @type string       $feed_image            URL of an image to use for the feed link. Default empty string.
+ * @type string       $feed_type             Feed type. Used to build feed link. See get_term_feed_link().
  *                                               Default empty string (default feed).
- *     @type bool         $hide_title_if_empty   Whether to hide the `$title_li` element if there are no terms in
+ * @type bool         $hide_title_if_empty   Whether to hide the `$title_li` element if there are no terms in
  *                                               the list. Default false (title will always be shown).
- *     @type string       $separator             Separator between links. Default '<br />'.
- *     @type bool|int     $show_count            Whether to include post counts. Accepts 0, 1, or their bool equivalents.
+ * @type string       $separator             Separator between links. Default '<br />'.
+ * @type bool|int     $show_count            Whether to include post counts. Accepts 0, 1, or their bool equivalents.
  *                                               Default 0.
- *     @type string       $show_option_all       Text to display for showing all categories. Default empty string.
- *     @type string       $show_option_none      Text to display for the 'no categories' option.
+ * @type string       $show_option_all       Text to display for showing all categories. Default empty string.
+ * @type string       $show_option_none      Text to display for the 'no categories' option.
  *                                               Default 'No categories'.
- *     @type string       $style                 The style used to display the categories list. If 'list', categories
+ * @type string       $style                 The style used to display the categories list. If 'list', categories
  *                                               will be output as an unordered list. If left empty or another value,
  *                                               categories will be output separated by `<br>` tags. Default 'list'.
- *     @type string       $taxonomy              Name of the taxonomy to retrieve. Default 'category'.
- *     @type string       $title_li              Text to use for the list title `<li>` element. Pass an empty string
+ * @type string       $taxonomy              Name of the taxonomy to retrieve. Default 'category'.
+ * @type string       $title_li              Text to use for the list title `<li>` element. Pass an empty string
  *                                               to disable. Default 'Categories'.
- *     @type bool|int     $use_desc_for_title    Whether to use the category description as the title attribute.
+ * @type bool|int     $use_desc_for_title    Whether to use the category description as the title attribute.
  *                                               Accepts 0, 1, or their bool equivalents. Default 0.
- *     @type Walker       $walker                Walker object to use to build the output. Default empty which results
+ * @type Walker       $walker                Walker object to use to build the output. Default empty which results
  *                                               in a Walker_Category instance being used.
  * }
  * @return void|string|false Void if 'echo' argument is true, HTML list of categories if 'echo' is false.
@@ -14217,14 +14217,14 @@ class WpServiceDecorator implements \WpService\WpService
  *     Optional. Array or string of arguments for displaying a tag cloud. See wp_generate_tag_cloud()
  *     and get_terms() for the full lists of arguments that can be passed in `$args`.
  *
- *     @type int    $number    The number of tags to display. Accepts any positive integer
+ * @type int    $number    The number of tags to display. Accepts any positive integer
  *                             or zero to return all. Default 45.
- *     @type string $link      Whether to display term editing links or term permalinks.
+ * @type string $link      Whether to display term editing links or term permalinks.
  *                             Accepts 'edit' and 'view'. Default 'view'.
- *     @type string $post_type The post type. Used to highlight the proper post type menu
+ * @type string $post_type The post type. Used to highlight the proper post type menu
  *                             on the linked edit page. Defaults to the first post type
  *                             associated with the taxonomy.
- *     @type bool   $echo      Whether or not to echo the return value. Default true.
+ * @type bool   $echo      Whether or not to echo the return value. Default true.
  * }
  * @return void|string|string[] Void if 'echo' argument is true, or on failure. Otherwise, tag cloud
  *                              as a string or an array, depending on 'format' argument.
@@ -14256,37 +14256,37 @@ class WpServiceDecorator implements \WpService\WpService
  * @param string|array $args {
  *     Optional. Array or string of arguments for generating a tag cloud.
  *
- *     @type int      $smallest                   Smallest font size used to display tags. Paired
+ * @type int      $smallest                   Smallest font size used to display tags. Paired
  *                                                with the value of `$unit`, to determine CSS text
  *                                                size unit. Default 8 (pt).
- *     @type int      $largest                    Largest font size used to display tags. Paired
+ * @type int      $largest                    Largest font size used to display tags. Paired
  *                                                with the value of `$unit`, to determine CSS text
  *                                                size unit. Default 22 (pt).
- *     @type string   $unit                       CSS text size unit to use with the `$smallest`
+ * @type string   $unit                       CSS text size unit to use with the `$smallest`
  *                                                and `$largest` values. Accepts any valid CSS text
  *                                                size unit. Default 'pt'.
- *     @type int      $number                     The number of tags to return. Accepts any
+ * @type int      $number                     The number of tags to return. Accepts any
  *                                                positive integer or zero to return all.
  *                                                Default 0.
- *     @type string   $format                     Format to display the tag cloud in. Accepts 'flat'
+ * @type string   $format                     Format to display the tag cloud in. Accepts 'flat'
  *                                                (tags separated with spaces), 'list' (tags displayed
  *                                                in an unordered list), or 'array' (returns an array).
  *                                                Default 'flat'.
- *     @type string   $separator                  HTML or text to separate the tags. Default "\n" (newline).
- *     @type string   $orderby                    Value to order tags by. Accepts 'name' or 'count'.
+ * @type string   $separator                  HTML or text to separate the tags. Default "\n" (newline).
+ * @type string   $orderby                    Value to order tags by. Accepts 'name' or 'count'.
  *                                                Default 'name'. The {@see 'tag_cloud_sort'} filter
  *                                                can also affect how tags are sorted.
- *     @type string   $order                      How to order the tags. Accepts 'ASC' (ascending),
+ * @type string   $order                      How to order the tags. Accepts 'ASC' (ascending),
  *                                                'DESC' (descending), or 'RAND' (random). Default 'ASC'.
- *     @type int|bool $filter                     Whether to enable filtering of the final output
+ * @type int|bool $filter                     Whether to enable filtering of the final output
  *                                                via {@see 'wp_generate_tag_cloud'}. Default 1.
- *     @type array    $topic_count_text           Nooped plural text from _n_noop() to supply to
+ * @type array    $topic_count_text           Nooped plural text from _n_noop() to supply to
  *                                                tag counts. Default null.
- *     @type callable $topic_count_text_callback  Callback used to generate nooped plural text for
+ * @type callable $topic_count_text_callback  Callback used to generate nooped plural text for
  *                                                tag counts based on the count. Default null.
- *     @type callable $topic_count_scale_callback Callback used to determine the tag count scaling
+ * @type callable $topic_count_scale_callback Callback used to determine the tag count scaling
  *                                                value. Default default_topic_count_scale().
- *     @type bool|int $show_count                 Whether to display the tag counts. Default 0. Accepts
+ * @type bool|int $show_count                 Whether to display the tag counts. Default 0. Accepts
  *                                                0, 1, or their bool equivalents.
  * }
  * @return string|string[] Tag cloud as a string or an array, depending on 'format' argument.
@@ -14454,11 +14454,11 @@ class WpServiceDecorator implements \WpService\WpService
  * @param string|array $args {
  *     Array of optional arguments.
  *
- *     @type string $format    Use term names or slugs for display. Accepts 'name' or 'slug'.
+ * @type string $format    Use term names or slugs for display. Accepts 'name' or 'slug'.
  *                             Default 'name'.
- *     @type string $separator Separator for between the terms. Default '/'.
- *     @type bool   $link      Whether to format as a link. Default true.
- *     @type bool   $inclusive Include the term to get the parents for. Default true.
+ * @type string $separator Separator for between the terms. Default '/'.
+ * @type bool   $link      Whether to format as a link. Default true.
+ * @type bool   $inclusive Include the term to get the parents for. Default true.
  * }
  * @return string|\WP_Error A list of term parents on success, WP_Error or empty string on failure.
  */
@@ -14563,7 +14563,7 @@ class WpServiceDecorator implements \WpService\WpService
  * @param string|array $args {
  *     Optional. Arguments to retrieve categories. See get_terms() for additional options.
  *
- *     @type string $taxonomy Taxonomy to retrieve terms for. Default 'category'.
+ * @type string $taxonomy Taxonomy to retrieve terms for. Default 'category'.
  * }
  * @return array List of category objects.
  */
@@ -14710,7 +14710,7 @@ class WpServiceDecorator implements \WpService\WpService
  * @param string|array $args {
  *     Optional. Arguments to retrieve tags. See get_terms() for additional options.
  *
- *     @type string $taxonomy Taxonomy to retrieve terms for. Default 'post_tag'.
+ * @type string $taxonomy Taxonomy to retrieve terms for. Default 'post_tag'.
  * }
  * @return WP_Term[]|int|WP_Error Array of 'post_tag' term objects, a count thereof,
  *                                or WP_Error if any of the taxonomies do not exist.
@@ -15203,11 +15203,11 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     An array of optional arguments to override the defaults.
  *
- *     @type string     $type      Passed to get_page_of_comment().
- *     @type int        $page      Current page of comments, for calculating comment pagination.
- *     @type int        $per_page  Per-page value for comment pagination.
- *     @type int        $max_depth Passed to get_page_of_comment().
- *     @type int|string $cpage     Value to use for the comment's "comment-page" or "cpage" value.
+ * @type string     $type      Passed to get_page_of_comment().
+ * @type int        $page      Current page of comments, for calculating comment pagination.
+ * @type int        $per_page  Per-page value for comment pagination.
+ * @type int        $max_depth Passed to get_page_of_comment().
+ * @type int|string $cpage     Value to use for the comment's "comment-page" or "cpage" value.
  *                                 If provided, this value overrides any value calculated from `$page`
  *                                 and `$per_page`.
  * }
@@ -15533,19 +15533,19 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Override default arguments.
  *
- *     @type string $add_below  The first part of the selector used to identify the comment to respond below.
+ * @type string $add_below  The first part of the selector used to identify the comment to respond below.
  *                              The resulting value is passed as the first parameter to addComment.moveForm(),
  *                              concatenated as $add_below-$comment->comment_ID. Default 'comment'.
- *     @type string $respond_id The selector identifying the responding comment. Passed as the third parameter
+ * @type string $respond_id The selector identifying the responding comment. Passed as the third parameter
  *                              to addComment.moveForm(), and appended to the link URL as a hash value.
  *                              Default 'respond'.
- *     @type string $reply_text The text of the Reply link. Default 'Reply'.
- *     @type string $login_text The text of the link to reply if logged out. Default 'Log in to Reply'.
- *     @type int    $max_depth  The max depth of the comment tree. Default 0.
- *     @type int    $depth      The depth of the new comment. Must be greater than 0 and less than the value
+ * @type string $reply_text The text of the Reply link. Default 'Reply'.
+ * @type string $login_text The text of the link to reply if logged out. Default 'Log in to Reply'.
+ * @type int    $max_depth  The max depth of the comment tree. Default 0.
+ * @type int    $depth      The depth of the new comment. Must be greater than 0 and less than the value
  *                              of the 'thread_comments_depth' option set in Settings > Discussion. Default 0.
- *     @type string $before     The text or HTML to add before the reply link. Default empty.
- *     @type string $after      The text or HTML to add after the reply link. Default empty.
+ * @type string $before     The text or HTML to add before the reply link. Default empty.
+ * @type string $after      The text or HTML to add after the reply link. Default empty.
  * }
  * @param int|\WP_Comment $comment Optional. Comment being replied to. Default current comment.
  * @param int|\WP_Post $post    Optional. Post ID or WP_Post object the comment is going to be displayed on.
@@ -15580,16 +15580,16 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Override default arguments.
  *
- *     @type string $add_below  The first part of the selector used to identify the comment to respond below.
+ * @type string $add_below  The first part of the selector used to identify the comment to respond below.
  *                              The resulting value is passed as the first parameter to addComment.moveForm(),
  *                              concatenated as $add_below-$comment->comment_ID. Default is 'post'.
- *     @type string $respond_id The selector identifying the responding comment. Passed as the third parameter
+ * @type string $respond_id The selector identifying the responding comment. Passed as the third parameter
  *                              to addComment.moveForm(), and appended to the link URL as a hash value.
  *                              Default 'respond'.
- *     @type string $reply_text Text of the Reply link. Default is 'Leave a Comment'.
- *     @type string $login_text Text of the link to reply if logged out. Default is 'Log in to leave a Comment'.
- *     @type string $before     Text or HTML to add before the reply link. Default empty.
- *     @type string $after      Text or HTML to add after the reply link. Default empty.
+ * @type string $reply_text Text of the Reply link. Default is 'Leave a Comment'.
+ * @type string $login_text Text of the link to reply if logged out. Default is 'Log in to leave a Comment'.
+ * @type string $before     Text or HTML to add before the reply link. Default empty.
+ * @type string $after      Text or HTML to add after the reply link. Default empty.
  * }
  * @param int|\WP_Post $post    Optional. Post ID or WP_Post object the comment is going to be displayed on.
  *                             Default current post.
@@ -15722,24 +15722,24 @@ class WpServiceDecorator implements \WpService\WpService
  * @param string|array $args {
  *     Optional. Formatting options.
  *
- *     @type object   $walker            Instance of a Walker class to list comments. Default null.
- *     @type int      $max_depth         The maximum comments depth. Default empty.
- *     @type string   $style             The style of list ordering. Accepts 'ul', 'ol', or 'div'.
+ * @type object   $walker            Instance of a Walker class to list comments. Default null.
+ * @type int      $max_depth         The maximum comments depth. Default empty.
+ * @type string   $style             The style of list ordering. Accepts 'ul', 'ol', or 'div'.
  *                                       'div' will result in no additional list markup. Default 'ul'.
- *     @type callable $callback          Callback function to use. Default null.
- *     @type callable $end-callback      Callback function to use at the end. Default null.
- *     @type string   $type              Type of comments to list. Accepts 'all', 'comment',
+ * @type callable $callback          Callback function to use. Default null.
+ * @type callable $end-callback      Callback function to use at the end. Default null.
+ * @type string   $type              Type of comments to list. Accepts 'all', 'comment',
  *                                       'pingback', 'trackback', 'pings'. Default 'all'.
- *     @type int      $page              Page ID to list comments for. Default empty.
- *     @type int      $per_page          Number of comments to list per page. Default empty.
- *     @type int      $avatar_size       Height and width dimensions of the avatar size. Default 32.
- *     @type bool     $reverse_top_level Ordering of the listed comments. If true, will display
+ * @type int      $page              Page ID to list comments for. Default empty.
+ * @type int      $per_page          Number of comments to list per page. Default empty.
+ * @type int      $avatar_size       Height and width dimensions of the avatar size. Default 32.
+ * @type bool     $reverse_top_level Ordering of the listed comments. If true, will display
  *                                       newest comments first. Default null.
- *     @type bool     $reverse_children  Whether to reverse child comments in the list. Default null.
- *     @type string   $format            How to format the comments list. Accepts 'html5', 'xhtml'.
+ * @type bool     $reverse_children  Whether to reverse child comments in the list. Default null.
+ * @type string   $format            How to format the comments list. Accepts 'html5', 'xhtml'.
  *                                       Default 'html5' if the theme supports it.
- *     @type bool     $short_ping        Whether to output short pings. Default false.
- *     @type bool     $echo              Whether to echo the output or return it. Default true.
+ * @type bool     $short_ping        Whether to output short pings. Default false.
+ * @type bool     $echo              Whether to echo the output or return it. Default true.
  * }
  * @param WP_Comment[] $comments Optional. Array of WP_Comment objects. Default null.
  * @return void|string Void if 'echo' argument is true, or no comments to list.
@@ -15773,46 +15773,46 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Default arguments and form fields to override.
  *
- *     @type array $fields {
+ * @type array $fields {
  *         Default comment fields, filterable by default via the {@see 'comment_form_default_fields'} hook.
  *
- *         @type string $author  Comment author field HTML.
- *         @type string $email   Comment author email field HTML.
- *         @type string $url     Comment author URL field HTML.
- *         @type string $cookies Comment cookie opt-in field HTML.
+ * @type string $author  Comment author field HTML.
+ * @type string $email   Comment author email field HTML.
+ * @type string $url     Comment author URL field HTML.
+ * @type string $cookies Comment cookie opt-in field HTML.
  *     }
- *     @type string $comment_field        The comment textarea field HTML.
- *     @type string $must_log_in          HTML element for a 'must be logged in to comment' message.
- *     @type string $logged_in_as         The HTML for the 'logged in as [user]' message, the Edit profile link,
+ * @type string $comment_field        The comment textarea field HTML.
+ * @type string $must_log_in          HTML element for a 'must be logged in to comment' message.
+ * @type string $logged_in_as         The HTML for the 'logged in as [user]' message, the Edit profile link,
  *                                        and the Log out link.
- *     @type string $comment_notes_before HTML element for a message displayed before the comment fields
+ * @type string $comment_notes_before HTML element for a message displayed before the comment fields
  *                                        if the user is not logged in.
  *                                        Default 'Your email address will not be published.'.
- *     @type string $comment_notes_after  HTML element for a message displayed after the textarea field.
- *     @type string $action               The comment form element action attribute. Default '/wp-comments-post.php'.
- *     @type string $id_form              The comment form element id attribute. Default 'commentform'.
- *     @type string $id_submit            The comment submit element id attribute. Default 'submit'.
- *     @type string $class_container      The comment form container class attribute. Default 'comment-respond'.
- *     @type string $class_form           The comment form element class attribute. Default 'comment-form'.
- *     @type string $class_submit         The comment submit element class attribute. Default 'submit'.
- *     @type string $name_submit          The comment submit element name attribute. Default 'submit'.
- *     @type string $title_reply          The translatable 'reply' button label. Default 'Leave a Reply'.
- *     @type string $title_reply_to       The translatable 'reply-to' button label. Default 'Leave a Reply to %s',
+ * @type string $comment_notes_after  HTML element for a message displayed after the textarea field.
+ * @type string $action               The comment form element action attribute. Default '/wp-comments-post.php'.
+ * @type string $id_form              The comment form element id attribute. Default 'commentform'.
+ * @type string $id_submit            The comment submit element id attribute. Default 'submit'.
+ * @type string $class_container      The comment form container class attribute. Default 'comment-respond'.
+ * @type string $class_form           The comment form element class attribute. Default 'comment-form'.
+ * @type string $class_submit         The comment submit element class attribute. Default 'submit'.
+ * @type string $name_submit          The comment submit element name attribute. Default 'submit'.
+ * @type string $title_reply          The translatable 'reply' button label. Default 'Leave a Reply'.
+ * @type string $title_reply_to       The translatable 'reply-to' button label. Default 'Leave a Reply to %s',
  *                                        where %s is the author of the comment being replied to.
- *     @type string $title_reply_before   HTML displayed before the comment form title.
+ * @type string $title_reply_before   HTML displayed before the comment form title.
  *                                        Default: '<h3 id="reply-title" class="comment-reply-title">'.
- *     @type string $title_reply_after    HTML displayed after the comment form title.
+ * @type string $title_reply_after    HTML displayed after the comment form title.
  *                                        Default: '</h3>'.
- *     @type string $cancel_reply_before  HTML displayed before the cancel reply link.
- *     @type string $cancel_reply_after   HTML displayed after the cancel reply link.
- *     @type string $cancel_reply_link    The translatable 'cancel reply' button label. Default 'Cancel reply'.
- *     @type string $label_submit         The translatable 'submit' button label. Default 'Post a comment'.
- *     @type string $submit_button        HTML format for the Submit button.
+ * @type string $cancel_reply_before  HTML displayed before the cancel reply link.
+ * @type string $cancel_reply_after   HTML displayed after the cancel reply link.
+ * @type string $cancel_reply_link    The translatable 'cancel reply' button label. Default 'Cancel reply'.
+ * @type string $label_submit         The translatable 'submit' button label. Default 'Post a comment'.
+ * @type string $submit_button        HTML format for the Submit button.
  *                                        Default: '<input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" />'.
- *     @type string $submit_field         HTML format for the markup surrounding the Submit button and comment hidden
+ * @type string $submit_field         HTML format for the markup surrounding the Submit button and comment hidden
  *                                        fields. Default: '<p class="form-submit">%1$s %2$s</p>', where %1$s is the
  *                                        submit button markup and %2$s is the comment hidden fields.
- *     @type string $format               The comment form format. Default 'xhtml'. Accepts 'xhtml', 'html5'.
+ * @type string $format               The comment form format. Default 'xhtml'. Accepts 'xhtml', 'html5'.
  * }
  * @param int|\WP_Post $post Optional. Post ID or WP_Post object to generate the form for. Default current post.
  */
@@ -15864,9 +15864,9 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args    {
  *     Optional. See WP_Comment_Query::__construct() for information on accepted arguments.
  *
- *     @type int    $status  Comment status to limit results by. Defaults to approved comments.
- *     @type int    $post_id Limit results to those affiliated with a given post ID.
- *     @type string $order   How to order retrieved comments. Default 'ASC'.
+ * @type int    $status  Comment status to limit results by. Defaults to approved comments.
+ * @type int    $post_id Limit results to those affiliated with a given post ID.
+ * @type string $order   How to order retrieved comments. Default 'ASC'.
  * }
  * @return WP_Comment[]|int[]|int The approved comments, or number of comments if `$count`
  *                                argument is true.
@@ -15964,13 +15964,13 @@ class WpServiceDecorator implements \WpService\WpService
  * @return int[] {
  *     The number of comments keyed by their status.
  *
- *     @type int $approved            The number of approved comments.
- *     @type int $awaiting_moderation The number of comments awaiting moderation (a.k.a. pending).
- *     @type int $spam                The number of spam comments.
- *     @type int $trash               The number of trashed comments.
- *     @type int $post-trashed        The number of comments for posts that are in the trash.
- *     @type int $total_comments      The total number of non-trashed comments, including spam.
- *     @type int $all                 The total number of pending or approved comments.
+ * @type int $approved            The number of approved comments.
+ * @type int $awaiting_moderation The number of comments awaiting moderation (a.k.a. pending).
+ * @type int $spam                The number of spam comments.
+ * @type int $trash               The number of trashed comments.
+ * @type int $post-trashed        The number of comments for posts that are in the trash.
+ * @type int $total_comments      The total number of non-trashed comments, including spam.
+ * @type int $all                 The total number of pending or approved comments.
  * }
  */
     public function getCommentCount(int $postId = 0): array
@@ -16203,12 +16203,12 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Array of optional arguments.
  *
- *     @type string     $type      Limit paginated comments to those matching a given type.
+ * @type string     $type      Limit paginated comments to those matching a given type.
  *                                 Accepts 'comment', 'trackback', 'pingback', 'pings'
  *                                 (trackbacks and pingbacks), or 'all'. Default 'all'.
- *     @type int        $per_page  Per-page count to use when calculating pagination.
+ * @type int        $per_page  Per-page count to use when calculating pagination.
  *                                 Defaults to the value of the 'comments_per_page' option.
- *     @type int|string $max_depth If greater than 1, comment page will be determined
+ * @type int|string $max_depth If greater than 1, comment page will be determined
  *                                 for the top-level parent `$comment_id`.
  *                                 Defaults to the value of the 'thread_comments_depth' option.
  * }
@@ -16276,13 +16276,13 @@ class WpServiceDecorator implements \WpService\WpService
  * @return \stdClass {
  *     The number of comments keyed by their status.
  *
- *     @type int $approved       The number of approved comments.
- *     @type int $moderated      The number of comments awaiting moderation (a.k.a. pending).
- *     @type int $spam           The number of spam comments.
- *     @type int $trash          The number of trashed comments.
- *     @type int $post-trashed   The number of comments for posts that are in the trash.
- *     @type int $total_comments The total number of non-trashed comments, including spam.
- *     @type int $all            The total number of pending or approved comments.
+ * @type int $approved       The number of approved comments.
+ * @type int $moderated      The number of comments awaiting moderation (a.k.a. pending).
+ * @type int $spam           The number of spam comments.
+ * @type int $trash          The number of trashed comments.
+ * @type int $post-trashed   The number of comments for posts that are in the trash.
+ * @type int $total_comments The total number of non-trashed comments, including spam.
+ * @type int $all            The total number of pending or approved comments.
  * }
  */
     public function wpCountComments(int $postId = 0): \stdClass
@@ -16407,9 +16407,9 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     An array of current commenter variables.
  *
- *     @type string $comment_author       The name of the current commenter, or an empty string.
- *     @type string $comment_author_email The email address of the current commenter, or an empty string.
- *     @type string $comment_author_url   The URL address of the current commenter, or an empty string.
+ * @type string $comment_author       The name of the current commenter, or an empty string.
+ * @type string $comment_author_email The email address of the current commenter, or an empty string.
+ * @type string $comment_author_url   The URL address of the current commenter, or an empty string.
  * }
  */
     public function wpGetCurrentCommenter(): array
@@ -16443,27 +16443,27 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $commentdata {
  *     Array of arguments for inserting a new comment.
  *
- *     @type string     $comment_agent        The HTTP user agent of the `$comment_author` when
+ * @type string     $comment_agent        The HTTP user agent of the `$comment_author` when
  *                                            the comment was submitted. Default empty.
- *     @type int|string $comment_approved     Whether the comment has been approved. Default 1.
- *     @type string     $comment_author       The name of the author of the comment. Default empty.
- *     @type string     $comment_author_email The email address of the `$comment_author`. Default empty.
- *     @type string     $comment_author_IP    The IP address of the `$comment_author`. Default empty.
- *     @type string     $comment_author_url   The URL address of the `$comment_author`. Default empty.
- *     @type string     $comment_content      The content of the comment. Default empty.
- *     @type string     $comment_date         The date the comment was submitted. To set the date
+ * @type int|string $comment_approved     Whether the comment has been approved. Default 1.
+ * @type string     $comment_author       The name of the author of the comment. Default empty.
+ * @type string     $comment_author_email The email address of the `$comment_author`. Default empty.
+ * @type string     $comment_author_IP    The IP address of the `$comment_author`. Default empty.
+ * @type string     $comment_author_url   The URL address of the `$comment_author`. Default empty.
+ * @type string     $comment_content      The content of the comment. Default empty.
+ * @type string     $comment_date         The date the comment was submitted. To set the date
  *                                            manually, `$comment_date_gmt` must also be specified.
  *                                            Default is the current time.
- *     @type string     $comment_date_gmt     The date the comment was submitted in the GMT timezone.
+ * @type string     $comment_date_gmt     The date the comment was submitted in the GMT timezone.
  *                                            Default is `$comment_date` in the site's GMT timezone.
- *     @type int        $comment_karma        The karma of the comment. Default 0.
- *     @type int        $comment_parent       ID of this comment's parent, if any. Default 0.
- *     @type int        $comment_post_ID      ID of the post that relates to the comment, if any.
+ * @type int        $comment_karma        The karma of the comment. Default 0.
+ * @type int        $comment_parent       ID of this comment's parent, if any. Default 0.
+ * @type int        $comment_post_ID      ID of the post that relates to the comment, if any.
  *                                            Default 0.
- *     @type string     $comment_type         Comment type. Default 'comment'.
- *     @type array      $comment_meta         Optional. Array of key/value pairs to be stored in commentmeta for the
+ * @type string     $comment_type         Comment type. Default 'comment'.
+ * @type array      $comment_meta         Optional. Array of key/value pairs to be stored in commentmeta for the
  *                                            new comment.
- *     @type int        $user_id              ID of the user who submitted the comment. Default 0.
+ * @type int        $user_id              ID of the user who submitted the comment. Default 0.
  * }
  * @return int|false The new comment's ID on success, false on failure.
  */
@@ -16527,21 +16527,21 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $commentdata {
  *     Comment data.
  *
- *     @type string $comment_author       The name of the comment author.
- *     @type string $comment_author_email The comment author email address.
- *     @type string $comment_author_url   The comment author URL.
- *     @type string $comment_content      The content of the comment.
- *     @type string $comment_date         The date the comment was submitted. Default is the current time.
- *     @type string $comment_date_gmt     The date the comment was submitted in the GMT timezone.
+ * @type string $comment_author       The name of the comment author.
+ * @type string $comment_author_email The comment author email address.
+ * @type string $comment_author_url   The comment author URL.
+ * @type string $comment_content      The content of the comment.
+ * @type string $comment_date         The date the comment was submitted. Default is the current time.
+ * @type string $comment_date_gmt     The date the comment was submitted in the GMT timezone.
  *                                        Default is `$comment_date` in the GMT timezone.
- *     @type string $comment_type         Comment type. Default 'comment'.
- *     @type int    $comment_parent       The ID of this comment's parent, if any. Default 0.
- *     @type int    $comment_post_ID      The ID of the post that relates to the comment.
- *     @type int    $user_id              The ID of the user who submitted the comment. Default 0.
- *     @type int    $user_ID              Kept for backward-compatibility. Use `$user_id` instead.
- *     @type string $comment_agent        Comment author user agent. Default is the value of 'HTTP_USER_AGENT'
+ * @type string $comment_type         Comment type. Default 'comment'.
+ * @type int    $comment_parent       The ID of this comment's parent, if any. Default 0.
+ * @type int    $comment_post_ID      The ID of the post that relates to the comment.
+ * @type int    $user_id              The ID of the user who submitted the comment. Default 0.
+ * @type int    $user_ID              Kept for backward-compatibility. Use `$user_id` instead.
+ * @type string $comment_agent        Comment author user agent. Default is the value of 'HTTP_USER_AGENT'
  *                                        in the `$_SERVER` superglobal sent in the original request.
- *     @type string $comment_author_IP    Comment author IP address in IPv4 format. Default is the value of
+ * @type string $comment_author_IP    Comment author IP address in IPv4 format. Default is the value of
  *                                        'REMOTE_ADDR' in the `$_SERVER` superglobal sent in the original request.
  * }
  * @param bool $wpError Should errors be returned as WP_Error objects instead of
@@ -16883,13 +16883,13 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $commentData {
  *     Comment data.
  *
- *     @type string|int $comment_post_ID             The ID of the post that relates to the comment.
- *     @type string     $author                      The name of the comment author.
- *     @type string     $email                       The comment author email address.
- *     @type string     $url                         The comment author URL.
- *     @type string     $comment                     The content of the comment.
- *     @type string|int $comment_parent              The ID of this comment's parent, if any. Default 0.
- *     @type string     $_wp_unfiltered_html_comment The nonce value for allowing unfiltered HTML.
+ * @type string|int $comment_post_ID             The ID of the post that relates to the comment.
+ * @type string     $author                      The name of the comment author.
+ * @type string     $email                       The comment author email address.
+ * @type string     $url                         The comment author URL.
+ * @type string     $comment                     The content of the comment.
+ * @type string|int $comment_parent              The ID of this comment's parent, if any. Default 0.
+ * @type string     $_wp_unfiltered_html_comment The nonce value for allowing unfiltered HTML.
  * }
  * @return \WP_Comment|\WP_Error A WP_Comment object on success, a WP_Error object on failure.
  */
@@ -16919,8 +16919,8 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     An array of personal data.
  *
- *     @type array[] $data An array of personal data arrays.
- *     @type bool    $done Whether the exporter is finished.
+ * @type array[] $data An array of personal data arrays.
+ * @type bool    $done Whether the exporter is finished.
  * }
  */
     public function wpCommentsPersonalDataExporter(string $emailAddress, int $page = 1): array
@@ -16951,10 +16951,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     Data removal results.
  *
- *     @type bool     $items_removed  Whether items were actually removed.
- *     @type bool     $items_retained Whether items were retained.
- *     @type string[] $messages       An array of messages to add to the personal data export file.
- *     @type bool     $done           Whether the eraser is finished.
+ * @type bool     $items_removed  Whether items were actually removed.
+ * @type bool     $items_retained Whether items were retained.
+ * @type string[] $messages       An array of messages to add to the personal data export file.
+ * @type bool     $done           Whether the eraser is finished.
  * }
  */
     public function wpCommentsPersonalDataEraser(string $emailAddress, int $page = 1): array
@@ -17162,11 +17162,11 @@ class WpServiceDecorator implements \WpService\WpService
  * @return object|false {
  *     The event object. False if the event does not exist.
  *
- *     @type string       $hook      Action hook to execute when the event is run.
- *     @type int          $timestamp Unix timestamp (UTC) for when to next run the event.
- *     @type string|false $schedule  How often the event should subsequently recur.
- *     @type array        $args      Array containing each separate argument to pass to the hook's callback function.
- *     @type int          $interval  Optional. The interval time in seconds for the schedule. Only present for recurring events.
+ * @type string       $hook      Action hook to execute when the event is run.
+ * @type int          $timestamp Unix timestamp (UTC) for when to next run the event.
+ * @type string|false $schedule  How often the event should subsequently recur.
+ * @type array        $args      Array containing each separate argument to pass to the hook's callback function.
+ * @type int          $interval  Optional. The interval time in seconds for the schedule. Only present for recurring events.
  * }
  */
     public function wpGetScheduledEvent(string $hook, array $args = [], int|null $timestamp = null): object|false
@@ -17256,11 +17256,11 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     The array of cron schedules keyed by the schedule name.
  *
- *     @type array ...$0 {
+ * @type array ...$0 {
  *         Cron schedule information.
  *
- *         @type int    $interval The schedule interval in seconds.
- *         @type string $display  The schedule display name.
+ * @type int    $interval The schedule interval in seconds.
+ * @type string $display  The schedule display name.
  *     }
  * }
  */
@@ -17413,8 +17413,8 @@ class WpServiceDecorator implements \WpService\WpService
  * @return int[] {
  *     Indexed array of the embed width and height in pixels.
  *
- *     @type int $0 The embed width.
- *     @type int $1 The embed height.
+ * @type int $0 The embed width.
+ * @type int $1 The embed height.
  * }
  */
     public function wpEmbedDefaults(string $url = ''): array
@@ -17432,9 +17432,9 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array|string $args {
  *     Optional. Additional arguments for retrieving embed HTML. Default empty.
  *
- *     @type int|string $width    Optional. The `maxwidth` value passed to the provider URL.
- *     @type int|string $height   Optional. The `maxheight` value passed to the provider URL.
- *     @type bool       $discover Optional. Determines whether to attempt to discover link tags
+ * @type int|string $width    Optional. The `maxwidth` value passed to the provider URL.
+ * @type int|string $height   Optional. The `maxheight` value passed to the provider URL.
+ * @type bool       $discover Optional. Determines whether to attempt to discover link tags
  *                                at the given URL for an oEmbed provider when the provider URL
  *                                is not found in the built-in providers list. Default true.
  * }
@@ -18292,27 +18292,27 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array[][] $fonts {
  *     Optional. The font-families and their font faces. Default empty array.
  *
- *     @type array ...$0 {
+ * @type array ...$0 {
  *         An indexed or associative (keyed by font-family) array of font variations for this font-family.
  *         Each font face has the following structure.
  *
- *         @type array ...$0 {
+ * @type array ...$0 {
  *             The font face properties.
  *
- *             @type string          $font-family             The font-family property.
- *             @type string|string[] $src                     The URL(s) to each resource containing the font data.
- *             @type string          $font-style              Optional. The font-style property. Default 'normal'.
- *             @type string          $font-weight             Optional. The font-weight property. Default '400'.
- *             @type string          $font-display            Optional. The font-display property. Default 'fallback'.
- *             @type string          $ascent-override         Optional. The ascent-override property.
- *             @type string          $descent-override        Optional. The descent-override property.
- *             @type string          $font-stretch            Optional. The font-stretch property.
- *             @type string          $font-variant            Optional. The font-variant property.
- *             @type string          $font-feature-settings   Optional. The font-feature-settings property.
- *             @type string          $font-variation-settings Optional. The font-variation-settings property.
- *             @type string          $line-gap-override       Optional. The line-gap-override property.
- *             @type string          $size-adjust             Optional. The size-adjust property.
- *             @type string          $unicode-range           Optional. The unicode-range property.
+ * @type string          $font-family             The font-family property.
+ * @type string|string[] $src                     The URL(s) to each resource containing the font data.
+ * @type string          $font-style              Optional. The font-style property. Default 'normal'.
+ * @type string          $font-weight             Optional. The font-weight property. Default '400'.
+ * @type string          $font-display            Optional. The font-display property. Default 'fallback'.
+ * @type string          $ascent-override         Optional. The ascent-override property.
+ * @type string          $descent-override        Optional. The descent-override property.
+ * @type string          $font-stretch            Optional. The font-stretch property.
+ * @type string          $font-variant            Optional. The font-variant property.
+ * @type string          $font-feature-settings   Optional. The font-feature-settings property.
+ * @type string          $font-variation-settings Optional. The font-variation-settings property.
+ * @type string          $line-gap-override       Optional. The line-gap-override property.
+ * @type string          $size-adjust             Optional. The size-adjust property.
+ * @type string          $unicode-range           Optional. The unicode-range property.
  *         }
  *     }
  * }
@@ -18334,11 +18334,11 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Font collection data.
  *
- *     @type string       $name          Required. Name of the font collection shown in the Font Library.
- *     @type string       $description   Optional. A short descriptive summary of the font collection. Default empty.
- *     @type array|string $font_families Required. Array of font family definitions that are in the collection,
+ * @type string       $name          Required. Name of the font collection shown in the Font Library.
+ * @type string       $description   Optional. A short descriptive summary of the font collection. Default empty.
+ * @type array|string $font_families Required. Array of font family definitions that are in the collection,
  *                                       or a string containing the path or URL to a JSON file containing the font collection.
- *     @type array        $categories    Optional. Array of categories, each with a name and slug, that are used by the
+ * @type array        $categories    Optional. Array of categories, each with a name and slug, that are used by the
  *                                       fonts in the collection. Default empty.
  * }
  * @return \WP_Font_Collection|\WP_Error A font collection if it was registered
@@ -18386,12 +18386,12 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     Array of information about the font upload directory.
  *
- *     @type string       $path    Base directory and subdirectory or full path to the fonts upload directory.
- *     @type string       $url     Base URL and subdirectory or absolute URL to the fonts upload directory.
- *     @type string       $subdir  Subdirectory
- *     @type string       $basedir Path without subdir.
- *     @type string       $baseurl URL path without subdir.
- *     @type string|false $error   False or error message.
+ * @type string       $path    Base directory and subdirectory or full path to the fonts upload directory.
+ * @type string       $url     Base URL and subdirectory or absolute URL to the fonts upload directory.
+ * @type string       $subdir  Subdirectory
+ * @type string       $basedir Path without subdir.
+ * @type string       $baseurl URL path without subdir.
+ * @type string|false $error   False or error message.
  * }
  */
     public function wpFontDir(bool $createDir = true): array
@@ -20582,8 +20582,8 @@ class WpServiceDecorator implements \WpService\WpService
  * @return int[] {
  *     Week start and end dates as Unix timestamps.
  *
- *     @type int $start The week start date as a Unix timestamp.
- *     @type int $end   The week end date as a Unix timestamp.
+ * @type int $start The week start date as a Unix timestamp.
+ * @type int $end   The week end date as a Unix timestamp.
  * }
  */
     public function getWeekstartend(string $mysqlstring, int|string $startOfWeek = ''): array
@@ -21378,12 +21378,12 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     Array of information about the upload directory.
  *
- *     @type string       $path    Base directory and subdirectory or full path to upload directory.
- *     @type string       $url     Base URL and subdirectory or absolute URL to upload directory.
- *     @type string       $subdir  Subdirectory if uploads use year/month folders option is on.
- *     @type string       $basedir Path without subdir.
- *     @type string       $baseurl URL path without subdir.
- *     @type string|false $error   False or error message.
+ * @type string       $path    Base directory and subdirectory or full path to upload directory.
+ * @type string       $url     Base URL and subdirectory or absolute URL to upload directory.
+ * @type string       $subdir  Subdirectory if uploads use year/month folders option is on.
+ * @type string       $basedir Path without subdir.
+ * @type string       $baseurl URL path without subdir.
+ * @type string|false $error   False or error message.
  * }
  */
     public function wpUploadDir(string|null $time = null, bool $createDir = true, bool $refreshCache = false): array
@@ -21436,10 +21436,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     Information about the newly-uploaded file.
  *
- *     @type string       $file  Filename of the newly-uploaded file.
- *     @type string       $url   URL of the uploaded file.
- *     @type string       $type  File type.
- *     @type string|false $error Error message, if there has been an error.
+ * @type string       $file  Filename of the newly-uploaded file.
+ * @type string       $url   URL of the uploaded file.
+ * @type string       $type  File type.
+ * @type string|false $error Error message, if there has been an error.
  * }
  */
     public function wpUploadBits(string $name, null|string $deprecated, string $bits, string|null $time = null): array
@@ -21485,8 +21485,8 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     Values for the extension and mime type.
  *
- *     @type string|false $ext  File extension, or false if the file doesn't match a mime type.
- *     @type string|false $type File mime type, or false if the file doesn't match a mime type.
+ * @type string|false $ext  File extension, or false if the file doesn't match a mime type.
+ * @type string|false $type File mime type, or false if the file doesn't match a mime type.
  * }
  */
     public function wpCheckFiletype(string $filename, array|null $mimes = null): array
@@ -21513,9 +21513,9 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     Values for the extension, mime type, and corrected filename.
  *
- *     @type string|false $ext             File extension, or false if the file doesn't match a mime type.
- *     @type string|false $type            File mime type, or false if the file doesn't match a mime type.
- *     @type string|false $proper_filename File name with its correct extension, or false if it cannot be determined.
+ * @type string|false $ext             File extension, or false if the file doesn't match a mime type.
+ * @type string|false $type            File mime type, or false if the file doesn't match a mime type.
+ * @type string|false $proper_filename File name with its correct extension, or false if it cannot be determined.
  * }
  */
     public function wpCheckFiletypeAndExt(string $file, string $filename, array|null $mimes = null): array
@@ -21637,19 +21637,19 @@ class WpServiceDecorator implements \WpService\WpService
  *     Optional. Arguments to control behavior. If `$args` is an integer, then it is treated
  *     as the response code. Default empty array.
  *
- *     @type int    $response       The HTTP response code. Default 200 for Ajax requests, 500 otherwise.
- *     @type string $link_url       A URL to include a link to. Only works in combination with $link_text.
+ * @type int    $response       The HTTP response code. Default 200 for Ajax requests, 500 otherwise.
+ * @type string $link_url       A URL to include a link to. Only works in combination with $link_text.
  *                                  Default empty string.
- *     @type string $link_text      A label for the link to include. Only works in combination with $link_url.
+ * @type string $link_text      A label for the link to include. Only works in combination with $link_url.
  *                                  Default empty string.
- *     @type bool   $back_link      Whether to include a link to go back. Default false.
- *     @type string $text_direction The text direction. This is only useful internally, when WordPress is still
+ * @type bool   $back_link      Whether to include a link to go back. Default false.
+ * @type string $text_direction The text direction. This is only useful internally, when WordPress is still
  *                                  loading and the site's locale is not set up yet. Accepts 'rtl' and 'ltr'.
  *                                  Default is the value of is_rtl().
- *     @type string $charset        Character set of the HTML output. Default 'utf-8'.
- *     @type string $code           Error code to use. Default is 'wp_die', or the main error code if $message
+ * @type string $charset        Character set of the HTML output. Default 'utf-8'.
+ * @type string $code           Error code to use. Default is 'wp_die', or the main error code if $message
  *                                  is a WP_Error.
- *     @type bool   $exit           Whether to exit the process after completion. Default true.
+ * @type bool   $exit           Whether to exit the process after completion. Default true.
  * }
  */
     public function wpDie(string|\WP_Error $message = '', string|int $title = '', string|array|int $args = []): void
@@ -21751,7 +21751,7 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $options  {
  *     Optional. Options to be used with `json_decode()`.
  *
- *     @type bool $associative Optional. When `true`, JSON objects will be returned as associative arrays.
+ * @type bool $associative Optional. When `true`, JSON objects will be returned as associative arrays.
  *                             When `false`, JSON objects will be returned as objects. Default false.
  * }
  *
@@ -23054,14 +23054,14 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. An array of arguments for the admin notice. Default empty array.
  *
- *     @type string   $type               Optional. The type of admin notice.
+ * @type string   $type               Optional. The type of admin notice.
  *                                        For example, 'error', 'success', 'warning', 'info'.
  *                                        Default empty string.
- *     @type bool     $dismissible        Optional. Whether the admin notice is dismissible. Default false.
- *     @type string   $id                 Optional. The value of the admin notice's ID attribute. Default empty string.
- *     @type string[] $additional_classes Optional. A string array of class names. Default empty array.
- *     @type string[] $attributes         Optional. Additional attributes for the notice div. Default empty array.
- *     @type bool     $paragraph_wrap     Optional. Whether to wrap the message in paragraph tags. Default true.
+ * @type bool     $dismissible        Optional. Whether the admin notice is dismissible. Default false.
+ * @type string   $id                 Optional. The value of the admin notice's ID attribute. Default empty string.
+ * @type string[] $additional_classes Optional. A string array of class names. Default empty array.
+ * @type string[] $attributes         Optional. Additional attributes for the notice div. Default empty array.
+ * @type bool     $paragraph_wrap     Optional. Whether to wrap the message in paragraph tags. Default true.
  * }
  * @return string The markup for an admin notice.
  */
@@ -23078,14 +23078,14 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. An array of arguments for the admin notice. Default empty array.
  *
- *     @type string   $type               Optional. The type of admin notice.
+ * @type string   $type               Optional. The type of admin notice.
  *                                        For example, 'error', 'success', 'warning', 'info'.
  *                                        Default empty string.
- *     @type bool     $dismissible        Optional. Whether the admin notice is dismissible. Default false.
- *     @type string   $id                 Optional. The value of the admin notice's ID attribute. Default empty string.
- *     @type string[] $additional_classes Optional. A string array of class names. Default empty array.
- *     @type string[] $attributes         Optional. Additional attributes for the notice div. Default empty array.
- *     @type bool     $paragraph_wrap     Optional. Whether to wrap the message in paragraph tags. Default true.
+ * @type bool     $dismissible        Optional. Whether the admin notice is dismissible. Default false.
+ * @type string   $id                 Optional. The value of the admin notice's ID attribute. Default empty string.
+ * @type string[] $additional_classes Optional. A string array of class names. Default empty array.
+ * @type string[] $attributes         Optional. Additional attributes for the notice div. Default empty array.
+ * @type bool     $paragraph_wrap     Optional. Whether to wrap the message in paragraph tags. Default true.
  * }
  */
     public function wpAdminNotice(string $message, array $args = []): void
@@ -23171,8 +23171,8 @@ class WpServiceDecorator implements \WpService\WpService
  *     Optional. An array of additional script loading strategies. Default empty array.
  *     Otherwise, it may be a boolean in which case it determines whether the script is printed in the footer. Default false.
  *
- *     @type string    $strategy     Optional. If provided, may be either 'defer' or 'async'.
- *     @type bool      $in_footer    Optional. Whether to print the script in the footer. Default 'false'.
+ * @type string    $strategy     Optional. If provided, may be either 'defer' or 'async'.
+ * @type bool      $in_footer    Optional. Whether to print the script in the footer. Default 'false'.
  * }
  * @return bool Whether the script has been registered. True on success, false on failure.
  */
@@ -23272,8 +23272,8 @@ class WpServiceDecorator implements \WpService\WpService
  *     Optional. An array of additional script loading strategies. Default empty array.
  *     Otherwise, it may be a boolean in which case it determines whether the script is printed in the footer. Default false.
  *
- *     @type string    $strategy     Optional. If provided, may be either 'defer' or 'async'.
- *     @type bool      $in_footer    Optional. Whether to print the script in the footer. Default 'false'.
+ * @type string    $strategy     Optional. If provided, may be either 'defer' or 'async'.
+ * @type bool      $in_footer    Optional. Whether to print the script in the footer. Default 'false'.
  * }
  */
     public function wpEnqueueScript(string $handle, string $src = '', array $deps = [], string|bool|null $ver = false, array|bool $args = []): void
@@ -23626,8 +23626,8 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Array of display arguments.
  *
- *     @type bool   $echo       Whether to echo or return the form. Default true.
- *     @type string $aria_label ARIA label for the search form. Useful to distinguish
+ * @type bool   $echo       Whether to echo or return the form. Default true.
+ * @type string $aria_label ARIA label for the search form. Useful to distinguish
  *                              multiple search forms on the same page and improve
  *                              accessibility. Default empty.
  * }
@@ -23703,26 +23703,26 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Array of options to control the form output. Default empty array.
  *
- *     @type bool   $echo              Whether to display the login form or return the form HTML code.
+ * @type bool   $echo              Whether to display the login form or return the form HTML code.
  *                                     Default true (echo).
- *     @type string $redirect          URL to redirect to. Must be absolute, as in "https://example.com/mypage/".
+ * @type string $redirect          URL to redirect to. Must be absolute, as in "https://example.com/mypage/".
  *                                     Default is to redirect back to the request URI.
- *     @type string $form_id           ID attribute value for the form. Default 'loginform'.
- *     @type string $label_username    Label for the username or email address field. Default 'Username or Email Address'.
- *     @type string $label_password    Label for the password field. Default 'Password'.
- *     @type string $label_remember    Label for the remember field. Default 'Remember Me'.
- *     @type string $label_log_in      Label for the submit button. Default 'Log In'.
- *     @type string $id_username       ID attribute value for the username field. Default 'user_login'.
- *     @type string $id_password       ID attribute value for the password field. Default 'user_pass'.
- *     @type string $id_remember       ID attribute value for the remember field. Default 'rememberme'.
- *     @type string $id_submit         ID attribute value for the submit button. Default 'wp-submit'.
- *     @type bool   $remember          Whether to display the "rememberme" checkbox in the form.
- *     @type string $value_username    Default value for the username field. Default empty.
- *     @type bool   $value_remember    Whether the "Remember Me" checkbox should be checked by default.
+ * @type string $form_id           ID attribute value for the form. Default 'loginform'.
+ * @type string $label_username    Label for the username or email address field. Default 'Username or Email Address'.
+ * @type string $label_password    Label for the password field. Default 'Password'.
+ * @type string $label_remember    Label for the remember field. Default 'Remember Me'.
+ * @type string $label_log_in      Label for the submit button. Default 'Log In'.
+ * @type string $id_username       ID attribute value for the username field. Default 'user_login'.
+ * @type string $id_password       ID attribute value for the password field. Default 'user_pass'.
+ * @type string $id_remember       ID attribute value for the remember field. Default 'rememberme'.
+ * @type string $id_submit         ID attribute value for the submit button. Default 'wp-submit'.
+ * @type bool   $remember          Whether to display the "rememberme" checkbox in the form.
+ * @type string $value_username    Default value for the username field. Default empty.
+ * @type bool   $value_remember    Whether the "Remember Me" checkbox should be checked by default.
  *                                     Default false (unchecked).
- *     @type bool   $required_username Whether the username field has the 'required' attribute.
+ * @type bool   $required_username Whether the username field has the 'required' attribute.
  *                                     Default false.
- *     @type bool   $required_password Whether the password field has the 'required' attribute.
+ * @type bool   $required_password Whether the password field has the 'required' attribute.
  *                                     Default false.
  *
  * }
@@ -24187,28 +24187,28 @@ class WpServiceDecorator implements \WpService\WpService
  * @param string|array $args {
  *     Default archive links arguments. Optional.
  *
- *     @type string     $type            Type of archive to retrieve. Accepts 'daily', 'weekly', 'monthly',
+ * @type string     $type            Type of archive to retrieve. Accepts 'daily', 'weekly', 'monthly',
  *                                       'yearly', 'postbypost', or 'alpha'. Both 'postbypost' and 'alpha'
  *                                       display the same archive link list as well as post titles instead
  *                                       of displaying dates. The difference between the two is that 'alpha'
  *                                       will order by post title and 'postbypost' will order by post date.
  *                                       Default 'monthly'.
- *     @type string|int $limit           Number of links to limit the query to. Default empty (no limit).
- *     @type string     $format          Format each link should take using the $before and $after args.
+ * @type string|int $limit           Number of links to limit the query to. Default empty (no limit).
+ * @type string     $format          Format each link should take using the $before and $after args.
  *                                       Accepts 'link' (`<link>` tag), 'option' (`<option>` tag), 'html'
  *                                       (`<li>` tag), or a custom format, which generates a link anchor
  *                                       with $before preceding and $after succeeding. Default 'html'.
- *     @type string     $before          Markup to prepend to the beginning of each link. Default empty.
- *     @type string     $after           Markup to append to the end of each link. Default empty.
- *     @type bool       $show_post_count Whether to display the post count alongside the link. Default false.
- *     @type bool|int   $echo            Whether to echo or return the links list. Default 1|true to echo.
- *     @type string     $order           Whether to use ascending or descending order. Accepts 'ASC', or 'DESC'.
+ * @type string     $before          Markup to prepend to the beginning of each link. Default empty.
+ * @type string     $after           Markup to append to the end of each link. Default empty.
+ * @type bool       $show_post_count Whether to display the post count alongside the link. Default false.
+ * @type bool|int   $echo            Whether to echo or return the links list. Default 1|true to echo.
+ * @type string     $order           Whether to use ascending or descending order. Accepts 'ASC', or 'DESC'.
  *                                       Default 'DESC'.
- *     @type string     $post_type       Post type. Default 'post'.
- *     @type string     $year            Year. Default current year.
- *     @type string     $monthnum        Month number. Default current month number.
- *     @type string     $day             Day. Default current day.
- *     @type string     $w               Week. Default current week.
+ * @type string     $post_type       Post type. Default 'post'.
+ * @type string     $year            Year. Default current year.
+ * @type string     $monthnum        Month number. Default current month number.
+ * @type string     $day             Day. Default current day.
+ * @type string     $w               Week. Default current week.
  * }
  * @return void|string Void if 'echo' argument is true, archive links if 'echo' is false.
  */
@@ -24748,14 +24748,14 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Args.
  *
- *     @type string   $type       The MIME type of the file to be edited.
- *     @type string   $file       Filename to be edited. Extension is used to sniff the type. Can be supplied as alternative to `$type` param.
- *     @type WP_Theme $theme      Theme being edited when on the theme file editor.
- *     @type string   $plugin     Plugin being edited when on the plugin file editor.
- *     @type array    $codemirror Additional CodeMirror setting overrides.
- *     @type array    $csslint    CSSLint rule overrides.
- *     @type array    $jshint     JSHint rule overrides.
- *     @type array    $htmlhint   HTMLHint rule overrides.
+ * @type string   $type       The MIME type of the file to be edited.
+ * @type string   $file       Filename to be edited. Extension is used to sniff the type. Can be supplied as alternative to `$type` param.
+ * @type WP_Theme $theme      Theme being edited when on the theme file editor.
+ * @type string   $plugin     Plugin being edited when on the plugin file editor.
+ * @type array    $codemirror Additional CodeMirror setting overrides.
+ * @type array    $csslint    CSSLint rule overrides.
+ * @type array    $jshint     JSHint rule overrides.
+ * @type array    $htmlhint   HTMLHint rule overrides.
  * }
  * @return array|false Settings for the enqueued code editor, or false if the editor was not enqueued.
  */
@@ -24773,14 +24773,14 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Args.
  *
- *     @type string   $type       The MIME type of the file to be edited.
- *     @type string   $file       Filename to be edited. Extension is used to sniff the type. Can be supplied as alternative to `$type` param.
- *     @type WP_Theme $theme      Theme being edited when on the theme file editor.
- *     @type string   $plugin     Plugin being edited when on the plugin file editor.
- *     @type array    $codemirror Additional CodeMirror setting overrides.
- *     @type array    $csslint    CSSLint rule overrides.
- *     @type array    $jshint     JSHint rule overrides.
- *     @type array    $htmlhint   HTMLHint rule overrides.
+ * @type string   $type       The MIME type of the file to be edited.
+ * @type string   $file       Filename to be edited. Extension is used to sniff the type. Can be supplied as alternative to `$type` param.
+ * @type WP_Theme $theme      Theme being edited when on the theme file editor.
+ * @type string   $plugin     Plugin being edited when on the plugin file editor.
+ * @type array    $codemirror Additional CodeMirror setting overrides.
+ * @type array    $csslint    CSSLint rule overrides.
+ * @type array    $jshint     JSHint rule overrides.
+ * @type array    $htmlhint   HTMLHint rule overrides.
  * }
  * @return array|false Settings for the code editor.
  */
@@ -24901,26 +24901,26 @@ class WpServiceDecorator implements \WpService\WpService
  * @param string|array $args {
  *     Optional. Array or string of arguments for generating paginated links for archives.
  *
- *     @type string $base               Base of the paginated url. Default empty.
- *     @type string $format             Format for the pagination structure. Default empty.
- *     @type int    $total              The total amount of pages. Default is the value WP_Query's
+ * @type string $base               Base of the paginated url. Default empty.
+ * @type string $format             Format for the pagination structure. Default empty.
+ * @type int    $total              The total amount of pages. Default is the value WP_Query's
  *                                      `max_num_pages` or 1.
- *     @type int    $current            The current page number. Default is 'paged' query var or 1.
- *     @type string $aria_current       The value for the aria-current attribute. Possible values are 'page',
+ * @type int    $current            The current page number. Default is 'paged' query var or 1.
+ * @type string $aria_current       The value for the aria-current attribute. Possible values are 'page',
  *                                      'step', 'location', 'date', 'time', 'true', 'false'. Default is 'page'.
- *     @type bool   $show_all           Whether to show all pages. Default false.
- *     @type int    $end_size           How many numbers on either the start and the end list edges.
+ * @type bool   $show_all           Whether to show all pages. Default false.
+ * @type int    $end_size           How many numbers on either the start and the end list edges.
  *                                      Default 1.
- *     @type int    $mid_size           How many numbers to either side of the current pages. Default 2.
- *     @type bool   $prev_next          Whether to include the previous and next links in the list. Default true.
- *     @type string $prev_text          The previous page text. Default '&laquo; Previous'.
- *     @type string $next_text          The next page text. Default 'Next &raquo;'.
- *     @type string $type               Controls format of the returned value. Possible values are 'plain',
+ * @type int    $mid_size           How many numbers to either side of the current pages. Default 2.
+ * @type bool   $prev_next          Whether to include the previous and next links in the list. Default true.
+ * @type string $prev_text          The previous page text. Default '&laquo; Previous'.
+ * @type string $next_text          The next page text. Default 'Next &raquo;'.
+ * @type string $type               Controls format of the returned value. Possible values are 'plain',
  *                                      'array' and 'list'. Default is 'plain'.
- *     @type array  $add_args           An array of query args to add. Default false.
- *     @type string $add_fragment       A string to append to each link. Default empty.
- *     @type string $before_page_number A string to appear before the page number. Default empty.
- *     @type string $after_page_number  A string to append after the page number. Default empty.
+ * @type array  $add_args           An array of query args to add. Default false.
+ * @type string $add_fragment       A string to append to each link. Default empty.
+ * @type string $before_page_number A string to appear before the page number. Default empty.
+ * @type string $after_page_number  A string to append after the page number. Default empty.
  * }
  * @return string|string[]|void String of page links or array of page links, depending on 'type' argument.
  *                              Void if total number of pages is less than 2.
@@ -24950,9 +24950,9 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $icons {
  *     Optional. CSS color definitions used to color any SVG icons.
  *
- *     @type string $base    SVG icon base color.
- *     @type string $focus   SVG icon color on focus.
- *     @type string $current SVG icon color of current admin menu link.
+ * @type string $base    SVG icon base color.
+ * @type string $focus   SVG icon color on focus.
+ * @type string $current SVG icon color of current admin menu link.
  * }
  */
     public function wpAdminCssColor(string $key, string $name, string $url, array $colors = [], array $icons = []): void
@@ -25183,9 +25183,9 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $context {
  *     Metadata to know where to retrieve the $path from. Optional.
  *
- *     @type string $block_name Which block to retrieve the settings from.
+ * @type string $block_name Which block to retrieve the settings from.
  *                              If empty, it'll return the settings for the global context.
- *     @type string $origin     Which origin to take data from.
+ * @type string $origin     Which origin to take data from.
  *                              Valid values are 'all' (core, theme, and user) or 'base' (core and theme).
  *                              If empty or unknown, 'all' is used.
  * }
@@ -25209,12 +25209,12 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $context {
  *     Metadata to know where to retrieve the $path from. Optional.
  *
- *     @type string $block_name Which block to retrieve the styles from.
+ * @type string $block_name Which block to retrieve the styles from.
  *                              If empty, it'll return the styles for the global context.
- *     @type string $origin     Which origin to take data from.
+ * @type string $origin     Which origin to take data from.
  *                              Valid values are 'all' (core, theme, and user) or 'base' (core and theme).
  *                              If empty or unknown, 'all' is used.
- *     @type array $transforms Which transformation(s) to apply.
+ * @type array $transforms Which transformation(s) to apply.
  *                              Valid value is array( 'resolve-variables' ).
  *                              If defined, variables are resolved to their value in the styles.
  * }
@@ -25451,16 +25451,16 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array|\WP_Error {
  *     The response array or a WP_Error on failure.
  *
- *     @type string[]                       $headers       Array of response headers keyed by their name.
- *     @type string                         $body          Response body.
- *     @type array                          $response      {
+ * @type string[]                       $headers       Array of response headers keyed by their name.
+ * @type string                         $body          Response body.
+ * @type array                          $response      {
  *         Data about the HTTP response.
  *
- *         @type int|false    $code    HTTP response code.
- *         @type string|false $message HTTP response message.
+ * @type int|false    $code    HTTP response code.
+ * @type string|false $message HTTP response message.
  *     }
- *     @type WP_HTTP_Cookie[]               $cookies       Array of response cookies.
- *     @type WP_HTTP_Requests_Response|null $http_response Raw HTTP response object.
+ * @type WP_HTTP_Cookie[]               $cookies       Array of response cookies.
+ * @type WP_HTTP_Requests_Response|null $http_response Raw HTTP response object.
  * }
  */
     public function wpRemoteRequest(string $url, array $args = []): array|\WP_Error
@@ -26951,12 +26951,12 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     Array of translation information for the strings.
  *
- *     @type string      $0        Singular form to be localized. No longer used.
- *     @type string      $1        Plural form to be localized. No longer used.
- *     @type string      $singular Singular form to be localized.
- *     @type string      $plural   Plural form to be localized.
- *     @type null        $context  Context information for the translators.
- *     @type string|null $domain   Text domain.
+ * @type string      $0        Singular form to be localized. No longer used.
+ * @type string      $1        Plural form to be localized. No longer used.
+ * @type string      $singular Singular form to be localized.
+ * @type string      $plural   Plural form to be localized.
+ * @type null        $context  Context information for the translators.
+ * @type string|null $domain   Text domain.
  * }
  */
     public function _nNoop(string $singular, string $plural, string $domain = null): array
@@ -26989,13 +26989,13 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     Array of translation information for the strings.
  *
- *     @type string      $0        Singular form to be localized. No longer used.
- *     @type string      $1        Plural form to be localized. No longer used.
- *     @type string      $2        Context information for the translators. No longer used.
- *     @type string      $singular Singular form to be localized.
- *     @type string      $plural   Plural form to be localized.
- *     @type string      $context  Context information for the translators.
- *     @type string|null $domain   Text domain.
+ * @type string      $0        Singular form to be localized. No longer used.
+ * @type string      $1        Plural form to be localized. No longer used.
+ * @type string      $2        Context information for the translators. No longer used.
+ * @type string      $singular Singular form to be localized.
+ * @type string      $plural   Plural form to be localized.
+ * @type string      $context  Context information for the translators.
+ * @type string|null $domain   Text domain.
  * }
  */
     public function _nxNoop(string $singular, string $plural, string $context, string $domain = null): array
@@ -27019,10 +27019,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $noopedPlural {
  *     Array that is usually a return value from _n_noop() or _nx_noop().
  *
- *     @type string      $singular Singular form to be localized.
- *     @type string      $plural   Plural form to be localized.
- *     @type string|null $context  Context information for the translators.
- *     @type string|null $domain   Text domain.
+ * @type string      $singular Singular form to be localized.
+ * @type string      $plural   Plural form to be localized.
+ * @type string|null $context  Context information for the translators.
+ * @type string|null $domain   Text domain.
  * }
  * @param int $count         Number of objects.
  * @param string $domain        Optional. Text domain. Unique identifier for retrieving translated strings. If $nooped_plural contains
@@ -27335,19 +27335,19 @@ class WpServiceDecorator implements \WpService\WpService
  * @param string|array $args {
  *     Optional. Array or string of arguments for outputting the language selector.
  *
- *     @type string   $id                           ID attribute of the select element. Default 'locale'.
- *     @type string   $name                         Name attribute of the select element. Default 'locale'.
- *     @type string[] $languages                    List of installed languages, contain only the locales.
+ * @type string   $id                           ID attribute of the select element. Default 'locale'.
+ * @type string   $name                         Name attribute of the select element. Default 'locale'.
+ * @type string[] $languages                    List of installed languages, contain only the locales.
  *                                                  Default empty array.
- *     @type array    $translations                 List of available translations. Default result of
+ * @type array    $translations                 List of available translations. Default result of
  *                                                  wp_get_available_translations().
- *     @type string   $selected                     Language which should be selected. Default empty.
- *     @type bool|int $echo                         Whether to echo the generated markup. Accepts 0, 1, or their
+ * @type string   $selected                     Language which should be selected. Default empty.
+ * @type bool|int $echo                         Whether to echo the generated markup. Accepts 0, 1, or their
  *                                                  boolean equivalents. Default 1.
- *     @type bool     $show_available_translations  Whether to show available translations. Default true.
- *     @type bool     $show_option_site_default     Whether to show an option to fall back to the site's locale. Default false.
- *     @type bool     $show_option_en_us            Whether to show an option for English (United States). Default true.
- *     @type bool     $explicit_option_en_us        Whether the English (United States) option uses an explicit value of en_US
+ * @type bool     $show_available_translations  Whether to show available translations. Default true.
+ * @type bool     $show_option_site_default     Whether to show an option to fall back to the site's locale. Default false.
+ * @type bool     $show_option_en_us            Whether to show an option for English (United States). Default true.
+ * @type bool     $explicit_option_en_us        Whether the English (United States) option uses an explicit value of en_US
  *                                                  instead of an empty value. Default false.
  * }
  * @return string HTML dropdown list of languages.
@@ -28472,10 +28472,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @param string|array $args {
  *     Optional. Arguments to build the post pages link navigation.
  *
- *     @type string $sep      Separator character. Default '&#8212;'.
- *     @type string $prelabel Link text to display for the previous page link.
+ * @type string $sep      Separator character. Default '&#8212;'.
+ * @type string $prelabel Link text to display for the previous page link.
  *                            Default '&laquo; Previous Page'.
- *     @type string $nxtlabel Link text to display for the next page link.
+ * @type string $nxtlabel Link text to display for the next page link.
  *                            Default 'Next Page &raquo;'.
  * }
  * @return string The posts link navigation.
@@ -28508,19 +28508,19 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Default post navigation arguments. Default empty array.
  *
- *     @type string       $prev_text          Anchor text to display in the previous post link.
+ * @type string       $prev_text          Anchor text to display in the previous post link.
  *                                            Default '%title'.
- *     @type string       $next_text          Anchor text to display in the next post link.
+ * @type string       $next_text          Anchor text to display in the next post link.
  *                                            Default '%title'.
- *     @type bool         $in_same_term       Whether link should be in the same taxonomy term.
+ * @type bool         $in_same_term       Whether link should be in the same taxonomy term.
  *                                            Default false.
- *     @type int[]|string $excluded_terms     Array or comma-separated list of excluded term IDs.
+ * @type int[]|string $excluded_terms     Array or comma-separated list of excluded term IDs.
  *                                            Default empty.
- *     @type string       $taxonomy           Taxonomy, if `$in_same_term` is true. Default 'category'.
- *     @type string       $screen_reader_text Screen reader text for the nav element.
+ * @type string       $taxonomy           Taxonomy, if `$in_same_term` is true. Default 'category'.
+ * @type string       $screen_reader_text Screen reader text for the nav element.
  *                                            Default 'Post navigation'.
- *     @type string       $aria_label         ARIA label text for the nav element. Default 'Posts'.
- *     @type string       $class              Custom class for the nav element. Default 'post-navigation'.
+ * @type string       $aria_label         ARIA label text for the nav element. Default 'Posts'.
+ * @type string       $class              Custom class for the nav element. Default 'post-navigation'.
  * }
  * @return string Markup for post links.
  */
@@ -28552,14 +28552,14 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Default posts navigation arguments. Default empty array.
  *
- *     @type string $prev_text          Anchor text to display in the previous posts link.
+ * @type string $prev_text          Anchor text to display in the previous posts link.
  *                                      Default 'Older posts'.
- *     @type string $next_text          Anchor text to display in the next posts link.
+ * @type string $next_text          Anchor text to display in the next posts link.
  *                                      Default 'Newer posts'.
- *     @type string $screen_reader_text Screen reader text for the nav element.
+ * @type string $screen_reader_text Screen reader text for the nav element.
  *                                      Default 'Posts navigation'.
- *     @type string $aria_label         ARIA label text for the nav element. Default 'Posts'.
- *     @type string $class              Custom class for the nav element. Default 'posts-navigation'.
+ * @type string $aria_label         ARIA label text for the nav element. Default 'Posts'.
+ * @type string $class              Custom class for the nav element. Default 'posts-navigation'.
  * }
  * @return string Markup for posts links.
  */
@@ -28591,10 +28591,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Default pagination arguments, see paginate_links().
  *
- *     @type string $screen_reader_text Screen reader text for navigation element.
+ * @type string $screen_reader_text Screen reader text for navigation element.
  *                                      Default 'Posts navigation'.
- *     @type string $aria_label         ARIA label text for the nav element. Default 'Posts'.
- *     @type string $class              Custom class for the nav element. Default 'pagination'.
+ * @type string $aria_label         ARIA label text for the nav element. Default 'Posts'.
+ * @type string $class              Custom class for the nav element. Default 'pagination'.
  * }
  * @return string Markup for pagination links.
  */
@@ -28707,13 +28707,13 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Default comments navigation arguments.
  *
- *     @type string $prev_text          Anchor text to display in the previous comments link.
+ * @type string $prev_text          Anchor text to display in the previous comments link.
  *                                      Default 'Older comments'.
- *     @type string $next_text          Anchor text to display in the next comments link.
+ * @type string $next_text          Anchor text to display in the next comments link.
  *                                      Default 'Newer comments'.
- *     @type string $screen_reader_text Screen reader text for the nav element. Default 'Comments navigation'.
- *     @type string $aria_label         ARIA label text for the nav element. Default 'Comments'.
- *     @type string $class              Custom class for the nav element. Default 'comment-navigation'.
+ * @type string $screen_reader_text Screen reader text for the nav element. Default 'Comments navigation'.
+ * @type string $aria_label         ARIA label text for the nav element. Default 'Comments'.
+ * @type string $class              Custom class for the nav element. Default 'comment-navigation'.
  * }
  * @return string Markup for comments links.
  */
@@ -28744,9 +28744,9 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Default pagination arguments.
  *
- *     @type string $screen_reader_text Screen reader text for the nav element. Default 'Comments navigation'.
- *     @type string $aria_label         ARIA label text for the nav element. Default 'Comments'.
- *     @type string $class              Custom class for the nav element. Default 'comments-pagination'.
+ * @type string $screen_reader_text Screen reader text for the nav element. Default 'Comments navigation'.
+ * @type string $aria_label         ARIA label text for the nav element. Default 'Comments'.
+ * @type string $class              Custom class for the nav element. Default 'comments-pagination'.
  * }
  * @return string Markup for pagination links.
  */
@@ -29144,8 +29144,8 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Arguments to use instead of the default arguments.
  *
- *     @type int    $size           Height and width of the avatar in pixels. Default 96.
- *     @type string $default        URL for the default image or a default type. Accepts:
+ * @type int    $size           Height and width of the avatar in pixels. Default 96.
+ * @type string $default        URL for the default image or a default type. Accepts:
  *                                  - '404' (return a 404 instead of a default image)
  *                                  - 'retro' (a 8-bit arcade-style pixelated face)
  *                                  - 'robohash' (a robot)
@@ -29157,17 +29157,17 @@ class WpServiceDecorator implements \WpService\WpService
  *                                  - 'gravatar_default' (the Gravatar logo)
  *                                  Default is the value of the 'avatar_default' option,
  *                                  with a fallback of 'mystery'.
- *     @type bool   $force_default  Whether to always show the default image, never the Gravatar.
+ * @type bool   $force_default  Whether to always show the default image, never the Gravatar.
  *                                  Default false.
- *     @type string $rating         What rating to display avatars up to. Accepts:
+ * @type string $rating         What rating to display avatars up to. Accepts:
  *                                  - 'G' (suitable for all audiences)
  *                                  - 'PG' (possibly offensive, usually for audiences 13 and above)
  *                                  - 'R' (intended for adult audiences above 17)
  *                                  - 'X' (even more mature than above)
  *                                  Default is the value of the 'avatar_rating' option.
- *     @type string $scheme         URL scheme to use. See set_url_scheme() for accepted values.
+ * @type string $scheme         URL scheme to use. See set_url_scheme() for accepted values.
  *                                  Default null.
- *     @type array  $processed_args When the function returns, the value will be the processed/sanitized $args
+ * @type array  $processed_args When the function returns, the value will be the processed/sanitized $args
  *                                  plus a "found_avatar" guess. Pass as a reference. Default null.
  * }
  * @return string|false The URL of the avatar on success, false on failure.
@@ -29198,10 +29198,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Arguments to use instead of the default arguments.
  *
- *     @type int    $size           Height and width of the avatar in pixels. Default 96.
- *     @type int    $height         Display height of the avatar in pixels. Defaults to $size.
- *     @type int    $width          Display width of the avatar in pixels. Defaults to $size.
- *     @type string $default        URL for the default image or a default type. Accepts:
+ * @type int    $size           Height and width of the avatar in pixels. Default 96.
+ * @type int    $height         Display height of the avatar in pixels. Defaults to $size.
+ * @type int    $width          Display width of the avatar in pixels. Defaults to $size.
+ * @type string $default        URL for the default image or a default type. Accepts:
  *                                  - '404' (return a 404 instead of a default image)
  *                                  - 'retro' (a 8-bit arcade-style pixelated face)
  *                                  - 'robohash' (a robot)
@@ -29213,27 +29213,27 @@ class WpServiceDecorator implements \WpService\WpService
  *                                  - 'gravatar_default' (the Gravatar logo)
  *                                  Default is the value of the 'avatar_default' option,
  *                                  with a fallback of 'mystery'.
- *     @type bool   $force_default  Whether to always show the default image, never the Gravatar.
+ * @type bool   $force_default  Whether to always show the default image, never the Gravatar.
  *                                  Default false.
- *     @type string $rating         What rating to display avatars up to. Accepts:
+ * @type string $rating         What rating to display avatars up to. Accepts:
  *                                  - 'G' (suitable for all audiences)
  *                                  - 'PG' (possibly offensive, usually for audiences 13 and above)
  *                                  - 'R' (intended for adult audiences above 17)
  *                                  - 'X' (even more mature than above)
  *                                  Default is the value of the 'avatar_rating' option.
- *     @type string $scheme         URL scheme to use. See set_url_scheme() for accepted values.
+ * @type string $scheme         URL scheme to use. See set_url_scheme() for accepted values.
  *                                  Default null.
- *     @type array  $processed_args When the function returns, the value will be the processed/sanitized $args
+ * @type array  $processed_args When the function returns, the value will be the processed/sanitized $args
  *                                  plus a "found_avatar" guess. Pass as a reference. Default null.
- *     @type string $extra_attr     HTML attributes to insert in the IMG element. Is not sanitized.
+ * @type string $extra_attr     HTML attributes to insert in the IMG element. Is not sanitized.
  *                                  Default empty.
  * }
  * @return array {
  *     Along with the arguments passed in `$args`, this will contain a couple of extra arguments.
  *
- *     @type bool         $found_avatar True if an avatar was found for this user,
+ * @type bool         $found_avatar True if an avatar was found for this user,
  *                                      false or not set if none was found.
- *     @type string|false $url          The URL of the avatar that was found, or false.
+ * @type string|false $url          The URL of the avatar that was found, or false.
  * }
  */
     public function getAvatarData(mixed $idOrEmail, array $args = null): array
@@ -29989,8 +29989,8 @@ class WpServiceDecorator implements \WpService\WpService
  * @return int[] {
  *     An array of width and height values.
  *
- *     @type int $0 The maximum width in pixels.
- *     @type int $1 The maximum height in pixels.
+ * @type int $0 The maximum width in pixels.
+ * @type int $1 The maximum height in pixels.
  * }
  */
     public function imageConstrainSizeForEditor(int $width, int $height, string|array $size = 'medium', string $context = null): array
@@ -30037,10 +30037,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array|false {
  *     Array of image data, or boolean false if no image is available.
  *
- *     @type string $0 Image source URL.
- *     @type int    $1 Image width in pixels.
- *     @type int    $2 Image height in pixels.
- *     @type bool   $3 Whether the image is a resized image.
+ * @type string $0 Image source URL.
+ * @type int    $1 Image width in pixels.
+ * @type int    $2 Image height in pixels.
+ * @type bool   $3 Whether the image is a resized image.
  * }
  */
     public function imageDownsize(int $id, string|array $size = 'medium'): array|false
@@ -30062,8 +30062,8 @@ class WpServiceDecorator implements \WpService\WpService
  *     If true, image will be cropped to the specified dimensions using center positions.
  *     If an array, the image will be cropped using the array to specify the crop location:
  *
- *     @type string $0 The x crop position. Accepts 'left' 'center', or 'right'.
- *     @type string $1 The y crop position. Accepts 'top', 'center', or 'bottom'.
+ * @type string $0 The x crop position. Accepts 'left' 'center', or 'right'.
+ * @type string $1 The y crop position. Accepts 'top', 'center', or 'bottom'.
  * }
  */
     public function addImageSize(string $name, int $width = 0, int $height = 0, bool|array $crop = false): void
@@ -30110,8 +30110,8 @@ class WpServiceDecorator implements \WpService\WpService
  *     If true, image will be cropped to the specified dimensions using center positions.
  *     If an array, the image will be cropped using the array to specify the crop location:
  *
- *     @type string $0 The x crop position. Accepts 'left' 'center', or 'right'.
- *     @type string $1 The y crop position. Accepts 'top', 'center', or 'bottom'.
+ * @type string $0 The x crop position. Accepts 'left' 'center', or 'right'.
+ * @type string $1 The y crop position. Accepts 'top', 'center', or 'bottom'.
  * }
  */
     public function setPostThumbnailSize(int $width = 0, int $height = 0, bool|array $crop = false): void
@@ -30159,8 +30159,8 @@ class WpServiceDecorator implements \WpService\WpService
  * @return int[] {
  *     An array of width and height values.
  *
- *     @type int $0 The width in pixels.
- *     @type int $1 The height in pixels.
+ * @type int $0 The width in pixels.
+ * @type int $1 The height in pixels.
  * }
  */
     public function wpConstrainDimensions(int $currentWidth, int $currentHeight, int $maxWidth = 0, int $maxHeight = 0): array
@@ -30184,8 +30184,8 @@ class WpServiceDecorator implements \WpService\WpService
  *     If true, image will be cropped to the specified dimensions using center positions.
  *     If an array, the image will be cropped using the array to specify the crop location:
  *
- *     @type string $0 The x crop position. Accepts 'left' 'center', or 'right'.
- *     @type string $1 The y crop position. Accepts 'top', 'center', or 'bottom'.
+ * @type string $0 The x crop position. Accepts 'left' 'center', or 'right'.
+ * @type string $1 The y crop position. Accepts 'top', 'center', or 'bottom'.
  * }
  * @return array|false Returned array matches parameters for `imagecopyresampled()`. False on failure.
  */
@@ -30210,8 +30210,8 @@ class WpServiceDecorator implements \WpService\WpService
  *     If true, image will be cropped to the specified dimensions using center positions.
  *     If an array, the image will be cropped using the array to specify the crop location:
  *
- *     @type string $0 The x crop position. Accepts 'left' 'center', or 'right'.
- *     @type string $1 The y crop position. Accepts 'top', 'center', or 'bottom'.
+ * @type string $0 The x crop position. Accepts 'left' 'center', or 'right'.
+ * @type string $1 The y crop position. Accepts 'top', 'center', or 'bottom'.
  * }
  * @return array|false Metadata array on success. False if no image was created.
  */
@@ -30262,11 +30262,11 @@ class WpServiceDecorator implements \WpService\WpService
  *     Array of file relative path, width, and height on success. Additionally includes absolute
  *     path and URL if registered size is passed to `$size` parameter. False on failure.
  *
- *     @type string $file   Filename of image.
- *     @type int    $width  Width of image in pixels.
- *     @type int    $height Height of image in pixels.
- *     @type string $path   Path of image relative to uploads directory.
- *     @type string $url    URL of image.
+ * @type string $file   Filename of image.
+ * @type int    $width  Width of image in pixels.
+ * @type int    $height Height of image in pixels.
+ * @type string $path   Path of image relative to uploads directory.
+ * @type string $url    URL of image.
  * }
  */
     public function imageGetIntermediateSize(int $postId, string|array $size = 'thumbnail'): array|false
@@ -30310,10 +30310,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array|false {
  *     Array of image data, or boolean false if no image is available.
  *
- *     @type string $0 Image source URL.
- *     @type int    $1 Image width in pixels.
- *     @type int    $2 Image height in pixels.
- *     @type bool   $3 Whether the image is a resized image.
+ * @type string $0 Image source URL.
+ * @type int    $1 Image width in pixels.
+ * @type int    $2 Image height in pixels.
+ * @type bool   $3 Whether the image is a resized image.
  * }
  */
     public function wpGetAttachmentImageSrc(int $attachmentId, string|array $size = 'thumbnail', bool $icon = false): array|false
@@ -30340,20 +30340,20 @@ class WpServiceDecorator implements \WpService\WpService
  * @param string|array $attr {
  *     Optional. Attributes for the image markup.
  *
- *     @type string       $src           Image attachment URL.
- *     @type string       $class         CSS class name or space-separated list of classes.
+ * @type string       $src           Image attachment URL.
+ * @type string       $class         CSS class name or space-separated list of classes.
  *                                       Default `attachment-$size_class size-$size_class`,
  *                                       where `$size_class` is the image size being requested.
- *     @type string       $alt           Image description for the alt attribute.
- *     @type string       $srcset        The 'srcset' attribute value.
- *     @type string       $sizes         The 'sizes' attribute value.
- *     @type string|false $loading       The 'loading' attribute value. Passing a value of false
+ * @type string       $alt           Image description for the alt attribute.
+ * @type string       $srcset        The 'srcset' attribute value.
+ * @type string       $sizes         The 'sizes' attribute value.
+ * @type string|false $loading       The 'loading' attribute value. Passing a value of false
  *                                       will result in the attribute being omitted for the image.
  *                                       Default determined by {@see wp_get_loading_optimization_attributes()}.
- *     @type string       $decoding      The 'decoding' attribute value. Possible values are
+ * @type string       $decoding      The 'decoding' attribute value. Possible values are
  *                                       'async' (default), 'sync', or 'auto'. Passing false or an empty
  *                                       string will result in the attribute being omitted.
- *     @type string       $fetchpriority The 'fetchpriority' attribute value, whether `high`, `low`, or `auto`.
+ * @type string       $fetchpriority The 'fetchpriority' attribute value, whether `high`, `low`, or `auto`.
  *                                       Default determined by {@see wp_get_loading_optimization_attributes()}.
  * }
  * @return string HTML img element or empty string on failure.
@@ -30404,8 +30404,8 @@ class WpServiceDecorator implements \WpService\WpService
  * @param int[] $sizeArray    {
  *     An array of width and height values.
  *
- *     @type int $0 The width in pixels.
- *     @type int $1 The height in pixels.
+ * @type int $0 The width in pixels.
+ * @type int $1 The height in pixels.
  * }
  * @param string $imageSrc     The 'src' of the image.
  * @param array $imageMeta    The image meta data as returned by 'wp_get_attachment_metadata()'.
@@ -30616,13 +30616,13 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $attr {
  *     Attributes of the caption shortcode.
  *
- *     @type string $id         ID of the image and caption container element, i.e. `<figure>` or `<div>`.
- *     @type string $caption_id ID of the caption element, i.e. `<figcaption>` or `<p>`.
- *     @type string $align      Class name that aligns the caption. Default 'alignnone'. Accepts 'alignleft',
+ * @type string $id         ID of the image and caption container element, i.e. `<figure>` or `<div>`.
+ * @type string $caption_id ID of the caption element, i.e. `<figcaption>` or `<p>`.
+ * @type string $align      Class name that aligns the caption. Default 'alignnone'. Accepts 'alignleft',
  *                              'aligncenter', alignright', 'alignnone'.
- *     @type int    $width      The width of the caption, in pixels.
- *     @type string $caption    The caption text.
- *     @type string $class      Additional class name(s) added to the caption container.
+ * @type int    $width      The width of the caption, in pixels.
+ * @type string $caption    The caption text.
+ * @type string $class      Additional class name(s) added to the caption container.
  * }
  * @param string $content Optional. Shortcode content. Default empty string.
  * @return string HTML content to display the caption.
@@ -30661,23 +30661,23 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $attr {
  *     Attributes of the gallery shortcode.
  *
- *     @type string       $order      Order of the images in the gallery. Default 'ASC'. Accepts 'ASC', 'DESC'.
- *     @type string       $orderby    The field to use when ordering the images. Default 'menu_order ID'.
+ * @type string       $order      Order of the images in the gallery. Default 'ASC'. Accepts 'ASC', 'DESC'.
+ * @type string       $orderby    The field to use when ordering the images. Default 'menu_order ID'.
  *                                    Accepts any valid SQL ORDERBY statement.
- *     @type int          $id         Post ID.
- *     @type string       $itemtag    HTML tag to use for each image in the gallery.
+ * @type int          $id         Post ID.
+ * @type string       $itemtag    HTML tag to use for each image in the gallery.
  *                                    Default 'dl', or 'figure' when the theme registers HTML5 gallery support.
- *     @type string       $icontag    HTML tag to use for each image's icon.
+ * @type string       $icontag    HTML tag to use for each image's icon.
  *                                    Default 'dt', or 'div' when the theme registers HTML5 gallery support.
- *     @type string       $captiontag HTML tag to use for each image's caption.
+ * @type string       $captiontag HTML tag to use for each image's caption.
  *                                    Default 'dd', or 'figcaption' when the theme registers HTML5 gallery support.
- *     @type int          $columns    Number of columns of images to display. Default 3.
- *     @type string|int[] $size       Size of the images to display. Accepts any registered image size name, or an array
+ * @type int          $columns    Number of columns of images to display. Default 3.
+ * @type string|int[] $size       Size of the images to display. Accepts any registered image size name, or an array
  *                                    of width and height values in pixels (in that order). Default 'thumbnail'.
- *     @type string       $ids        A comma-separated list of IDs of attachments to display. Default empty.
- *     @type string       $include    A comma-separated list of IDs of attachments to include. Default empty.
- *     @type string       $exclude    A comma-separated list of IDs of attachments to exclude. Default empty.
- *     @type string       $link       What to link each image to. Default empty (links to the attachment page).
+ * @type string       $ids        A comma-separated list of IDs of attachments to display. Default empty.
+ * @type string       $include    A comma-separated list of IDs of attachments to include. Default empty.
+ * @type string       $exclude    A comma-separated list of IDs of attachments to exclude. Default empty.
+ * @type string       $link       What to link each image to. Default empty (links to the attachment page).
  *                                    Accepts 'file', 'none'.
  * }
  * @return string HTML content to display gallery.
@@ -30719,25 +30719,25 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $attr {
  *     Array of default playlist attributes.
  *
- *     @type string  $type         Type of playlist to display. Accepts 'audio' or 'video'. Default 'audio'.
- *     @type string  $order        Designates ascending or descending order of items in the playlist.
+ * @type string  $type         Type of playlist to display. Accepts 'audio' or 'video'. Default 'audio'.
+ * @type string  $order        Designates ascending or descending order of items in the playlist.
  *                                 Accepts 'ASC', 'DESC'. Default 'ASC'.
- *     @type string  $orderby      Any column, or columns, to sort the playlist. If $ids are
+ * @type string  $orderby      Any column, or columns, to sort the playlist. If $ids are
  *                                 passed, this defaults to the order of the $ids array ('post__in').
  *                                 Otherwise default is 'menu_order ID'.
- *     @type int     $id           If an explicit $ids array is not present, this parameter
+ * @type int     $id           If an explicit $ids array is not present, this parameter
  *                                 will determine which attachments are used for the playlist.
  *                                 Default is the current post ID.
- *     @type array   $ids          Create a playlist out of these explicit attachment IDs. If empty,
+ * @type array   $ids          Create a playlist out of these explicit attachment IDs. If empty,
  *                                 a playlist will be created from all $type attachments of $id.
  *                                 Default empty.
- *     @type array   $exclude      List of specific attachment IDs to exclude from the playlist. Default empty.
- *     @type string  $style        Playlist style to use. Accepts 'light' or 'dark'. Default 'light'.
- *     @type bool    $tracklist    Whether to show or hide the playlist. Default true.
- *     @type bool    $tracknumbers Whether to show or hide the numbers next to entries in the playlist. Default true.
- *     @type bool    $images       Show or hide the video or audio thumbnail (Featured Image/post
+ * @type array   $exclude      List of specific attachment IDs to exclude from the playlist. Default empty.
+ * @type string  $style        Playlist style to use. Accepts 'light' or 'dark'. Default 'light'.
+ * @type bool    $tracklist    Whether to show or hide the playlist. Default true.
+ * @type bool    $tracknumbers Whether to show or hide the numbers next to entries in the playlist. Default true.
+ * @type bool    $images       Show or hide the video or audio thumbnail (Featured Image/post
  *                                 thumbnail). Default true.
- *     @type bool    $artists      Whether to show or hide artist name in the playlist. Default true.
+ * @type bool    $artists      Whether to show or hide artist name in the playlist. Default true.
  * }
  *
  * @return string Playlist output. Empty string if the passed type is unsupported.
@@ -30793,12 +30793,12 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $attr {
  *     Attributes of the audio shortcode.
  *
- *     @type string $src      URL to the source of the audio file. Default empty.
- *     @type string $loop     The 'loop' attribute for the `<audio>` element. Default empty.
- *     @type string $autoplay The 'autoplay' attribute for the `<audio>` element. Default empty.
- *     @type string $preload  The 'preload' attribute for the `<audio>` element. Default 'none'.
- *     @type string $class    The 'class' attribute for the `<audio>` element. Default 'wp-audio-shortcode'.
- *     @type string $style    The 'style' attribute for the `<audio>` element. Default 'width: 100%;'.
+ * @type string $src      URL to the source of the audio file. Default empty.
+ * @type string $loop     The 'loop' attribute for the `<audio>` element. Default empty.
+ * @type string $autoplay The 'autoplay' attribute for the `<audio>` element. Default empty.
+ * @type string $preload  The 'preload' attribute for the `<audio>` element. Default 'none'.
+ * @type string $class    The 'class' attribute for the `<audio>` element. Default 'wp-audio-shortcode'.
+ * @type string $style    The 'style' attribute for the `<audio>` element. Default 'width: 100%;'.
  * }
  * @param string $content Shortcode content.
  * @return string|void HTML content to display audio.
@@ -30831,16 +30831,16 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $attr {
  *     Attributes of the shortcode.
  *
- *     @type string $src      URL to the source of the video file. Default empty.
- *     @type int    $height   Height of the video embed in pixels. Default 360.
- *     @type int    $width    Width of the video embed in pixels. Default $content_width or 640.
- *     @type string $poster   The 'poster' attribute for the `<video>` element. Default empty.
- *     @type string $loop     The 'loop' attribute for the `<video>` element. Default empty.
- *     @type string $autoplay The 'autoplay' attribute for the `<video>` element. Default empty.
- *     @type string $muted    The 'muted' attribute for the `<video>` element. Default false.
- *     @type string $preload  The 'preload' attribute for the `<video>` element.
+ * @type string $src      URL to the source of the video file. Default empty.
+ * @type int    $height   Height of the video embed in pixels. Default 360.
+ * @type int    $width    Width of the video embed in pixels. Default $content_width or 640.
+ * @type string $poster   The 'poster' attribute for the `<video>` element. Default empty.
+ * @type string $loop     The 'loop' attribute for the `<video>` element. Default empty.
+ * @type string $autoplay The 'autoplay' attribute for the `<video>` element. Default empty.
+ * @type string $muted    The 'muted' attribute for the `<video>` element. Default false.
+ * @type string $preload  The 'preload' attribute for the `<video>` element.
  *                            Default 'metadata'.
- *     @type string $class    The 'class' attribute for the `<video>` element.
+ * @type string $class    The 'class' attribute for the `<video>` element.
  *                            Default 'wp-video-shortcode'.
  * }
  * @param string $content Shortcode content.
@@ -31021,8 +31021,8 @@ class WpServiceDecorator implements \WpService\WpService
  * @return int[] {
  *     An array of maximum width and height values.
  *
- *     @type int $0 The maximum width in pixels.
- *     @type int $1 The maximum height in pixels.
+ * @type int $0 The maximum width in pixels.
+ * @type int $1 The maximum height in pixels.
  * }
  */
     public function wpExpandDimensions(int $exampleWidth, int $exampleHeight, int $maxWidth, int $maxHeight): array
@@ -31087,42 +31087,42 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array|void {
  *     Array of attachment details, or void if the parameter does not correspond to an attachment.
  *
- *     @type string $alt                   Alt text of the attachment.
- *     @type string $author                ID of the attachment author, as a string.
- *     @type string $authorName            Name of the attachment author.
- *     @type string $caption               Caption for the attachment.
- *     @type array  $compat                Containing item and meta.
- *     @type string $context               Context, whether it's used as the site icon for example.
- *     @type int    $date                  Uploaded date, timestamp in milliseconds.
- *     @type string $dateFormatted         Formatted date (e.g. June 29, 2018).
- *     @type string $description           Description of the attachment.
- *     @type string $editLink              URL to the edit page for the attachment.
- *     @type string $filename              File name of the attachment.
- *     @type string $filesizeHumanReadable Filesize of the attachment in human readable format (e.g. 1 MB).
- *     @type int    $filesizeInBytes       Filesize of the attachment in bytes.
- *     @type int    $height                If the attachment is an image, represents the height of the image in pixels.
- *     @type string $icon                  Icon URL of the attachment (e.g. /wp-includes/images/media/archive.png).
- *     @type int    $id                    ID of the attachment.
- *     @type string $link                  URL to the attachment.
- *     @type int    $menuOrder             Menu order of the attachment post.
- *     @type array  $meta                  Meta data for the attachment.
- *     @type string $mime                  Mime type of the attachment (e.g. image/jpeg or application/zip).
- *     @type int    $modified              Last modified, timestamp in milliseconds.
- *     @type string $name                  Name, same as title of the attachment.
- *     @type array  $nonces                Nonces for update, delete and edit.
- *     @type string $orientation           If the attachment is an image, represents the image orientation
+ * @type string $alt                   Alt text of the attachment.
+ * @type string $author                ID of the attachment author, as a string.
+ * @type string $authorName            Name of the attachment author.
+ * @type string $caption               Caption for the attachment.
+ * @type array  $compat                Containing item and meta.
+ * @type string $context               Context, whether it's used as the site icon for example.
+ * @type int    $date                  Uploaded date, timestamp in milliseconds.
+ * @type string $dateFormatted         Formatted date (e.g. June 29, 2018).
+ * @type string $description           Description of the attachment.
+ * @type string $editLink              URL to the edit page for the attachment.
+ * @type string $filename              File name of the attachment.
+ * @type string $filesizeHumanReadable Filesize of the attachment in human readable format (e.g. 1 MB).
+ * @type int    $filesizeInBytes       Filesize of the attachment in bytes.
+ * @type int    $height                If the attachment is an image, represents the height of the image in pixels.
+ * @type string $icon                  Icon URL of the attachment (e.g. /wp-includes/images/media/archive.png).
+ * @type int    $id                    ID of the attachment.
+ * @type string $link                  URL to the attachment.
+ * @type int    $menuOrder             Menu order of the attachment post.
+ * @type array  $meta                  Meta data for the attachment.
+ * @type string $mime                  Mime type of the attachment (e.g. image/jpeg or application/zip).
+ * @type int    $modified              Last modified, timestamp in milliseconds.
+ * @type string $name                  Name, same as title of the attachment.
+ * @type array  $nonces                Nonces for update, delete and edit.
+ * @type string $orientation           If the attachment is an image, represents the image orientation
  *                                         (landscape or portrait).
- *     @type array  $sizes                 If the attachment is an image, contains an array of arrays
+ * @type array  $sizes                 If the attachment is an image, contains an array of arrays
  *                                         for the images sizes: thumbnail, medium, large, and full.
- *     @type string $status                Post status of the attachment (usually 'inherit').
- *     @type string $subtype               Mime subtype of the attachment (usually the last part, e.g. jpeg or zip).
- *     @type string $title                 Title of the attachment (usually slugified file name without the extension).
- *     @type string $type                  Type of the attachment (usually first part of the mime type, e.g. image).
- *     @type int    $uploadedTo            Parent post to which the attachment was uploaded.
- *     @type string $uploadedToLink        URL to the edit page of the parent post of the attachment.
- *     @type string $uploadedToTitle       Post title of the parent of the attachment.
- *     @type string $url                   Direct URL to the attachment file (from wp-content).
- *     @type int    $width                 If the attachment is an image, represents the width of the image in pixels.
+ * @type string $status                Post status of the attachment (usually 'inherit').
+ * @type string $subtype               Mime subtype of the attachment (usually the last part, e.g. jpeg or zip).
+ * @type string $title                 Title of the attachment (usually slugified file name without the extension).
+ * @type string $type                  Type of the attachment (usually first part of the mime type, e.g. image).
+ * @type int    $uploadedTo            Parent post to which the attachment was uploaded.
+ * @type string $uploadedToLink        URL to the edit page of the parent post of the attachment.
+ * @type string $uploadedToTitle       Post title of the parent of the attachment.
+ * @type string $url                   Direct URL to the attachment file (from wp-content).
+ * @type int    $width                 If the attachment is an image, represents the width of the image in pixels.
  * }
  *
  */
@@ -31143,7 +31143,7 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Arguments for enqueuing media scripts.
  *
- *     @type int|WP_Post $post Post ID or post object.
+ * @type int|WP_Post $post Post ID or post object.
  * }
  */
     public function wpEnqueueMedia(array $args = []): void
@@ -31288,8 +31288,8 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     An array of personal data.
  *
- *     @type array[] $data An array of personal data arrays.
- *     @type bool    $done Whether the exporter is finished.
+ * @type array[] $data An array of personal data arrays.
+ * @type bool    $done Whether the exporter is finished.
  * }
  */
     public function wpMediaPersonalDataExporter(string $emailAddress, int $page = 1): array
@@ -31332,10 +31332,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     An array of AVIF image information.
  *
- *     @type int|false $width        Image width on success, false on failure.
- *     @type int|false $height       Image height on success, false on failure.
- *     @type int|false $bit_depth    Image bit depth on success, false on failure.
- *     @type int|false $num_channels Image number of channels on success, false on failure.
+ * @type int|false $width        Image width on success, false on failure.
+ * @type int|false $height       Image height on success, false on failure.
+ * @type int|false $bit_depth    Image bit depth on success, false on failure.
+ * @type int|false $num_channels Image number of channels on success, false on failure.
  * }
  */
     public function wpGetAvifInfo(string $filename): array
@@ -31351,9 +31351,9 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     An array of WebP image information.
  *
- *     @type int|false    $width  Image width on success, false on failure.
- *     @type int|false    $height Image height on success, false on failure.
- *     @type string|false $type   The WebP type: one of 'lossy', 'lossless' or 'animated-alpha'.
+ * @type int|false    $width  Image width on success, false on failure.
+ * @type int|false    $height Image height on success, false on failure.
+ * @type string|false $type   The WebP type: one of 'lossy', 'lossless' or 'animated-alpha'.
  *                                False on failure.
  * }
  */
@@ -31579,14 +31579,14 @@ class WpServiceDecorator implements \WpService\WpService
  * @return \stdClass|false {
  *     Metadata object, or boolean `false` if the metadata doesn't exist.
  *
- *     @type string $meta_key   The meta key.
- *     @type mixed  $meta_value The unserialized meta value.
- *     @type string $meta_id    Optional. The meta ID when the meta type is any value except 'user'.
- *     @type string $umeta_id   Optional. The meta ID when the meta type is 'user'.
- *     @type string $post_id    Optional. The object ID when the meta type is 'post'.
- *     @type string $comment_id Optional. The object ID when the meta type is 'comment'.
- *     @type string $term_id    Optional. The object ID when the meta type is 'term'.
- *     @type string $user_id    Optional. The object ID when the meta type is 'user'.
+ * @type string $meta_key   The meta key.
+ * @type mixed  $meta_value The unserialized meta value.
+ * @type string $meta_id    Optional. The meta ID when the meta type is any value except 'user'.
+ * @type string $umeta_id   Optional. The meta ID when the meta type is 'user'.
+ * @type string $post_id    Optional. The object ID when the meta type is 'post'.
+ * @type string $comment_id Optional. The object ID when the meta type is 'comment'.
+ * @type string $term_id    Optional. The object ID when the meta type is 'term'.
+ * @type string $user_id    Optional. The object ID when the meta type is 'user'.
  * }
  */
     public function getMetadataByMid(string $metaType, int $metaId): \stdClass|false
@@ -31670,8 +31670,8 @@ class WpServiceDecorator implements \WpService\WpService
  *     Array containing JOIN and WHERE SQL clauses to append to the main query,
  *     or false if no table exists for the requested meta type.
  *
- *     @type string $join  SQL fragment to append to the main JOIN clause.
- *     @type string $where SQL fragment to append to the main WHERE clause.
+ * @type string $join  SQL fragment to append to the main JOIN clause.
+ * @type string $where SQL fragment to append to the main WHERE clause.
  * }
  */
     public function getMetaSql(array $metaQuery, string $type, string $primaryTable, string $primaryIdColumn, object $context = null): array|false
@@ -31734,25 +31734,25 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Data used to describe the meta key when registered.
  *
- *     @type string     $object_subtype    A subtype; e.g. if the object type is "post", the post type. If left empty,
+ * @type string     $object_subtype    A subtype; e.g. if the object type is "post", the post type. If left empty,
  *                                         the meta key will be registered on the entire object type. Default empty.
- *     @type string     $type              The type of data associated with this meta key.
+ * @type string     $type              The type of data associated with this meta key.
  *                                         Valid values are 'string', 'boolean', 'integer', 'number', 'array', and 'object'.
- *     @type string     $description       A description of the data attached to this meta key.
- *     @type bool       $single            Whether the meta key has one value per object, or an array of values per object.
- *     @type mixed      $default           The default value returned from get_metadata() if no value has been set yet.
+ * @type string     $description       A description of the data attached to this meta key.
+ * @type bool       $single            Whether the meta key has one value per object, or an array of values per object.
+ * @type mixed      $default           The default value returned from get_metadata() if no value has been set yet.
  *                                         When using a non-single meta key, the default value is for the first entry.
  *                                         In other words, when calling get_metadata() with `$single` set to `false`,
  *                                         the default value given here will be wrapped in an array.
- *     @type callable   $sanitize_callback A function or method to call when sanitizing `$meta_key` data.
- *     @type callable   $auth_callback     Optional. A function or method to call when performing edit_post_meta,
+ * @type callable   $sanitize_callback A function or method to call when sanitizing `$meta_key` data.
+ * @type callable   $auth_callback     Optional. A function or method to call when performing edit_post_meta,
  *                                         add_post_meta, and delete_post_meta capability checks.
- *     @type bool|array $show_in_rest      Whether data associated with this meta key can be considered public and
+ * @type bool|array $show_in_rest      Whether data associated with this meta key can be considered public and
  *                                         should be accessible via the REST API. A custom post type must also declare
  *                                         support for custom fields for registered meta to be accessible via REST.
  *                                         When registering complex meta values this argument may optionally be an
  *                                         array with 'schema' or 'prepare_callback' keys instead of a boolean.
- *     @type bool       $revisions_enabled Whether to enable revisions support for this meta_key. Can only be used when the
+ * @type bool       $revisions_enabled Whether to enable revisions support for this meta_key. Can only be used when the
  *                                         object type is 'post'.
  * }
  * @param string|array $deprecated Deprecated. Use `$args` instead.
@@ -32189,12 +32189,12 @@ class WpServiceDecorator implements \WpService\WpService
  * @return int[] {
  *     Numbers of sites grouped by site status.
  *
- *     @type int $all      The total number of sites.
- *     @type int $public   The number of public sites.
- *     @type int $archived The number of archived sites.
- *     @type int $mature   The number of mature sites.
- *     @type int $spam     The number of spam sites.
- *     @type int $deleted  The number of deleted sites.
+ * @type int $all      The total number of sites.
+ * @type int $public   The number of public sites.
+ * @type int $archived The number of archived sites.
+ * @type int $mature   The number of mature sites.
+ * @type int $spam     The number of spam sites.
+ * @type int $deleted  The number of deleted sites.
  * }
  */
     public function wpCountSites(int $networkId = null): array
@@ -32256,8 +32256,8 @@ class WpServiceDecorator implements \WpService\WpService
  * @return int[] {
  *     Site and user count for the network.
  *
- *     @type int $blogs Number of sites on the network.
- *     @type int $users Number of users on the network.
+ * @type int $blogs Number of sites on the network.
+ * @type int $users Number of users on the network.
  * }
  */
     public function getSitestats(): array
@@ -32425,10 +32425,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     The array of user name, email, and the error messages.
  *
- *     @type string   $user_name     Sanitized and unique username.
- *     @type string   $orig_username Original username.
- *     @type string   $user_email    User email address.
- *     @type WP_Error $errors        WP_Error object containing any errors found.
+ * @type string   $user_name     Sanitized and unique username.
+ * @type string   $orig_username Original username.
+ * @type string   $user_email    User email address.
+ * @type WP_Error $errors        WP_Error object containing any errors found.
  * }
  */
     public function wpmuValidateUserSignup(string $userName, string $userEmail): array
@@ -32461,12 +32461,12 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     Array of domain, path, site name, site title, user and error messages.
  *
- *     @type string         $domain     Domain for the site.
- *     @type string         $path       Path for the site. Used in subdirectory installations.
- *     @type string         $blogname   The unique site name (slug).
- *     @type string         $blog_title Blog title.
- *     @type string|WP_User $user       By default, an empty string. A user object if provided.
- *     @type WP_Error       $errors     WP_Error containing any errors found.
+ * @type string         $domain     Domain for the site.
+ * @type string         $path       Path for the site. Used in subdirectory installations.
+ * @type string         $blogname   The unique site name (slug).
+ * @type string         $blog_title Blog title.
+ * @type string|WP_User $user       By default, an empty string. A user object if provided.
+ * @type WP_Error       $errors     WP_Error containing any errors found.
  * }
  */
     public function wpmuValidateBlogSignup(string $blogname, string $blogTitle, \WP_User|string $user = ''): array
@@ -32854,7 +32854,7 @@ class WpServiceDecorator implements \WpService\WpService
  * @return string[] {
  *     An array containing the current site's domain.
  *
- *     @type string $0 The current site's domain.
+ * @type string $0 The current site's domain.
  * }
  */
     public function redirectThisSite(array|string $deprecated = ''): array
@@ -32924,8 +32924,8 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array|false $details {
  *     User details. Must at least contain values for the keys listed below.
  *
- *     @type int    $user_id The ID of the user being added to the current blog.
- *     @type string $role    The role to be assigned to the user.
+ * @type int    $user_id The ID of the user being added to the current blog.
+ * @type string $role    The role to be assigned to the user.
  * }
  * @return true|\WP_Error|void True on success or a WP_Error object if the user doesn't exist
  *                            or could not be added. Void if $details array was not provided.
@@ -33363,26 +33363,26 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $data {
  *     Data for the new site that should be inserted.
  *
- *     @type string $domain       Site domain. Default empty string.
- *     @type string $path         Site path. Default '/'.
- *     @type int    $network_id   The site's network ID. Default is the current network ID.
- *     @type string $registered   When the site was registered, in SQL datetime format. Default is
+ * @type string $domain       Site domain. Default empty string.
+ * @type string $path         Site path. Default '/'.
+ * @type int    $network_id   The site's network ID. Default is the current network ID.
+ * @type string $registered   When the site was registered, in SQL datetime format. Default is
  *                                the current time.
- *     @type string $last_updated When the site was last updated, in SQL datetime format. Default is
+ * @type string $last_updated When the site was last updated, in SQL datetime format. Default is
  *                                the value of $registered.
- *     @type int    $public       Whether the site is public. Default 1.
- *     @type int    $archived     Whether the site is archived. Default 0.
- *     @type int    $mature       Whether the site is mature. Default 0.
- *     @type int    $spam         Whether the site is spam. Default 0.
- *     @type int    $deleted      Whether the site is deleted. Default 0.
- *     @type int    $lang_id      The site's language ID. Currently unused. Default 0.
- *     @type int    $user_id      User ID for the site administrator. Passed to the
+ * @type int    $public       Whether the site is public. Default 1.
+ * @type int    $archived     Whether the site is archived. Default 0.
+ * @type int    $mature       Whether the site is mature. Default 0.
+ * @type int    $spam         Whether the site is spam. Default 0.
+ * @type int    $deleted      Whether the site is deleted. Default 0.
+ * @type int    $lang_id      The site's language ID. Currently unused. Default 0.
+ * @type int    $user_id      User ID for the site administrator. Passed to the
  *                                `wp_initialize_site` hook.
- *     @type string $title        Site title. Default is 'Site %d' where %d is the site ID. Passed
+ * @type string $title        Site title. Default is 'Site %d' where %d is the site ID. Passed
  *                                to the `wp_initialize_site` hook.
- *     @type array  $options      Custom option $key => $value pairs to use. Default empty array. Passed
+ * @type array  $options      Custom option $key => $value pairs to use. Default empty array. Passed
  *                                to the `wp_initialize_site` hook.
- *     @type array  $meta         Custom site metadata $key => $value pairs to use. Default empty array.
+ * @type array  $meta         Custom site metadata $key => $value pairs to use. Default empty array.
  *                                Passed to the `wp_initialize_site` hook.
  * }
  * @return int|\WP_Error The new site's ID on success, or error object on failure.
@@ -33552,12 +33552,12 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args    {
  *     Optional. Arguments to modify the initialization behavior.
  *
- *     @type int    $user_id Required. User ID for the site administrator.
- *     @type string $title   Site title. Default is 'Site %d' where %d is the
+ * @type int    $user_id Required. User ID for the site administrator.
+ * @type string $title   Site title. Default is 'Site %d' where %d is the
  *                           site ID.
- *     @type array  $options Custom option $key => $value pairs to use. Default
+ * @type array  $options Custom option $key => $value pairs to use. Default
  *                           empty array.
- *     @type array  $meta    Custom site metadata $key => $value pairs to use.
+ * @type array  $meta    Custom site metadata $key => $value pairs to use.
  *                           Default empty array.
  * }
  * @return true|\WP_Error True on success, or error object on failure.
@@ -33787,35 +33787,35 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Array of nav menu arguments.
  *
- *     @type int|string|WP_Term $menu                 Desired menu. Accepts a menu ID, slug, name, or object.
+ * @type int|string|WP_Term $menu                 Desired menu. Accepts a menu ID, slug, name, or object.
  *                                                    Default empty.
- *     @type string             $menu_class           CSS class to use for the ul element which forms the menu.
+ * @type string             $menu_class           CSS class to use for the ul element which forms the menu.
  *                                                    Default 'menu'.
- *     @type string             $menu_id              The ID that is applied to the ul element which forms the menu.
+ * @type string             $menu_id              The ID that is applied to the ul element which forms the menu.
  *                                                    Default is the menu slug, incremented.
- *     @type string             $container            Whether to wrap the ul, and what to wrap it with.
+ * @type string             $container            Whether to wrap the ul, and what to wrap it with.
  *                                                    Default 'div'.
- *     @type string             $container_class      Class that is applied to the container.
+ * @type string             $container_class      Class that is applied to the container.
  *                                                    Default 'menu-{menu slug}-container'.
- *     @type string             $container_id         The ID that is applied to the container. Default empty.
- *     @type string             $container_aria_label The aria-label attribute that is applied to the container
+ * @type string             $container_id         The ID that is applied to the container. Default empty.
+ * @type string             $container_aria_label The aria-label attribute that is applied to the container
  *                                                    when it's a nav element. Default empty.
- *     @type callable|false     $fallback_cb          If the menu doesn't exist, a callback function will fire.
+ * @type callable|false     $fallback_cb          If the menu doesn't exist, a callback function will fire.
  *                                                    Default is 'wp_page_menu'. Set to false for no fallback.
- *     @type string             $before               Text before the link markup. Default empty.
- *     @type string             $after                Text after the link markup. Default empty.
- *     @type string             $link_before          Text before the link text. Default empty.
- *     @type string             $link_after           Text after the link text. Default empty.
- *     @type bool               $echo                 Whether to echo the menu or return it. Default true.
- *     @type int                $depth                How many levels of the hierarchy are to be included.
+ * @type string             $before               Text before the link markup. Default empty.
+ * @type string             $after                Text after the link markup. Default empty.
+ * @type string             $link_before          Text before the link text. Default empty.
+ * @type string             $link_after           Text after the link text. Default empty.
+ * @type bool               $echo                 Whether to echo the menu or return it. Default true.
+ * @type int                $depth                How many levels of the hierarchy are to be included.
  *                                                    0 means all. Default 0.
  *                                                    Default 0.
- *     @type object             $walker               Instance of a custom walker class. Default empty.
- *     @type string             $theme_location       Theme location to be used. Must be registered with
+ * @type object             $walker               Instance of a custom walker class. Default empty.
+ * @type string             $theme_location       Theme location to be used. Must be registered with
  *                                                    register_nav_menu() in order to be selectable by the user.
- *     @type string             $items_wrap           How the list items should be wrapped. Uses printf() format with
+ * @type string             $items_wrap           How the list items should be wrapped. Uses printf() format with
  *                                                    numbered placeholders. Default is a ul with an id and class.
- *     @type string             $item_spacing         Whether to preserve whitespace within the menu's HTML.
+ * @type string             $item_spacing         Whether to preserve whitespace within the menu's HTML.
  *                                                    Accepts 'preserve' or 'discard'. Default 'preserve'.
  * }
  * @return void|string|false Void if 'echo' argument is true, menu output if 'echo' is false.
@@ -34078,21 +34078,21 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Arguments to pass to get_posts().
  *
- *     @type string $order                  How to order nav menu items as queried with get_posts().
+ * @type string $order                  How to order nav menu items as queried with get_posts().
  *                                          Will be ignored if 'output' is ARRAY_A. Default 'ASC'.
- *     @type string $orderby                Field to order menu items by as retrieved from get_posts().
+ * @type string $orderby                Field to order menu items by as retrieved from get_posts().
  *                                          Supply an orderby field via 'output_key' to affect the
  *                                          output order of nav menu items. Default 'menu_order'.
- *     @type string $post_type              Menu items post type. Default 'nav_menu_item'.
- *     @type string $post_status            Menu items post status. Default 'publish'.
- *     @type string $output                 How to order outputted menu items. Default ARRAY_A.
- *     @type string $output_key             Key to use for ordering the actual menu items that get
+ * @type string $post_type              Menu items post type. Default 'nav_menu_item'.
+ * @type string $post_status            Menu items post status. Default 'publish'.
+ * @type string $output                 How to order outputted menu items. Default ARRAY_A.
+ * @type string $output_key             Key to use for ordering the actual menu items that get
  *                                          returned. Note that that is not a get_posts() argument
  *                                          and will only affect output of menu items processed in
  *                                          this function. Default 'menu_order'.
- *     @type bool   $nopaging               Whether to retrieve all menu items (true) or paginate
+ * @type bool   $nopaging               Whether to retrieve all menu items (true) or paginate
  *                                          (false). Default true.
- *     @type bool   $update_menu_item_cache Whether to update the menu item cache. Default true.
+ * @type bool   $update_menu_item_cache Whether to update the menu item cache. Default true.
  * }
  * @return array|false Array of menu items, otherwise false.
  */
@@ -34894,15 +34894,15 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Data used to describe the setting when registered.
  *
- *     @type string     $type              The type of data associated with this setting.
+ * @type string     $type              The type of data associated with this setting.
  *                                         Valid values are 'string', 'boolean', 'integer', 'number', 'array', and 'object'.
- *     @type string     $label             A label of the data attached to this setting.
- *     @type string     $description       A description of the data attached to this setting.
- *     @type callable   $sanitize_callback A callback function that sanitizes the option's value.
- *     @type bool|array $show_in_rest      Whether data associated with this setting should be included in the REST API.
+ * @type string     $label             A label of the data attached to this setting.
+ * @type string     $description       A description of the data attached to this setting.
+ * @type callable   $sanitize_callback A callback function that sanitizes the option's value.
+ * @type bool|array $show_in_rest      Whether data associated with this setting should be included in the REST API.
  *                                         When registering complex settings, this argument may optionally be an
  *                                         array with a 'schema' key.
- *     @type mixed      $default           Default value when calling `get_option()`.
+ * @type mixed      $default           Default value when calling `get_option()`.
  * }
  */
     public function registerSetting(string $optionGroup, string $optionName, array $args = []): void
@@ -34970,746 +34970,746 @@ class WpServiceDecorator implements \WpService\WpService
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Changes the current user by ID or name.
-     *
-     * Set $id to null and specify a name if you do not know a user's ID.
-     *
-     * Some WordPress functionality is based on the current user and not based on
-     * the signed in user. Therefore, it opens the ability to edit and perform
-     * actions on users who aren't signed in.
-     *
-     * @since 2.0.3
-     *
-     * @global WP_User $current_user The current user object which holds the user data.
-     *
-     * @param int|null $id   User ID.
-     * @param string $name User's username.
-     * @return \WP_User Current user User object.
-     */
+ * Changes the current user by ID or name.
+ *
+ * Set $id to null and specify a name if you do not know a user's ID.
+ *
+ * Some WordPress functionality is based on the current user and not based on
+ * the signed in user. Therefore, it opens the ability to edit and perform
+ * actions on users who aren't signed in.
+ *
+ * @since 2.0.3
+ *
+ * @global WP_User $current_user The current user object which holds the user data.
+ *
+ * @param int|null $id   User ID.
+ * @param string $name User's username.
+ * @return \WP_User Current user User object.
+ */
     public function wpSetCurrentUser(int|null $id, string $name = ''): \WP_User
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Retrieves the current user object.
-     *
-     * Will set the current user, if the current user is not set. The current user
-     * will be set to the logged-in person. If no user is logged-in, then it will
-     * set the current user to 0, which is invalid and won't have any permissions.
-     *
-     * @since 2.0.3
-     *
-     * @see _wp_get_current_user()
-     * @global WP_User $current_user Checks if the current user is set.
-     *
-     * @return \WP_User Current WP_User instance.
-     */
+ * Retrieves the current user object.
+ *
+ * Will set the current user, if the current user is not set. The current user
+ * will be set to the logged-in person. If no user is logged-in, then it will
+ * set the current user to 0, which is invalid and won't have any permissions.
+ *
+ * @since 2.0.3
+ *
+ * @see _wp_get_current_user()
+ * @global WP_User $current_user Checks if the current user is set.
+ *
+ * @return \WP_User Current WP_User instance.
+ */
     public function wpGetCurrentUser(): \WP_User
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Retrieves user info by user ID.
-     *
-     * @since 0.71
-     *
-     * @param int $userId User ID
-     * @return \WP_User|false WP_User object on success, false on failure.
-     */
+ * Retrieves user info by user ID.
+ *
+ * @since 0.71
+ *
+ * @param int $userId User ID
+ * @return \WP_User|false WP_User object on success, false on failure.
+ */
     public function getUserdata(int $userId): \WP_User|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Retrieves user info by a given field.
-     *
-     * @since 2.8.0
-     * @since 4.4.0 Added 'ID' as an alias of 'id' for the `$field` parameter.
-     *
-     * @global WP_User $current_user The current user object which holds the user data.
-     *
-     * @param string $field The field to retrieve the user with. id | ID | slug | email | login.
-     * @param int|string $value A value for $field. A user ID, slug, email address, or login name.
-     * @return \WP_User|false WP_User object on success, false on failure.
-     */
+ * Retrieves user info by a given field.
+ *
+ * @since 2.8.0
+ * @since 4.4.0 Added 'ID' as an alias of 'id' for the `$field` parameter.
+ *
+ * @global WP_User $current_user The current user object which holds the user data.
+ *
+ * @param string $field The field to retrieve the user with. id | ID | slug | email | login.
+ * @param int|string $value A value for $field. A user ID, slug, email address, or login name.
+ * @return \WP_User|false WP_User object on success, false on failure.
+ */
     public function getUserBy(string $field, int|string $value): \WP_User|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Retrieves info for user lists to prevent multiple queries by get_userdata().
-     *
-     * @since 3.0.0
-     *
-     * @global wpdb $wpdb WordPress database abstraction object.
-     *
-     * @param int[] $userIds User ID numbers list
-     */
+ * Retrieves info for user lists to prevent multiple queries by get_userdata().
+ *
+ * @since 3.0.0
+ *
+ * @global wpdb $wpdb WordPress database abstraction object.
+ *
+ * @param int[] $userIds User ID numbers list
+ */
     public function cacheUsers(array $userIds): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Sends an email, similar to PHP's mail function.
-     *
-     * A true return value does not automatically mean that the user received the
-     * email successfully. It just only means that the method used was able to
-     * process the request without any errors.
-     *
-     * The default content type is `text/plain` which does not allow using HTML.
-     * However, you can set the content type of the email by using the
-     * {@see 'wp_mail_content_type'} filter.
-     *
-     * The default charset is based on the charset used on the blog. The charset can
-     * be set using the {@see 'wp_mail_charset'} filter.
-     *
-     * @since 1.2.1
-     * @since 5.5.0 is_email() is used for email validation,
-     *              instead of PHPMailer's default validator.
-     *
-     * @global PHPMailer\PHPMailer\PHPMailer $phpmailer
-     *
-     * @param string|string[] $to          Array or comma-separated list of email addresses to send message.
-     * @param string $subject     Email subject.
-     * @param string $message     Message contents.
-     * @param string|string[] $headers     Optional. Additional headers.
-     * @param string|string[] $attachments Optional. Paths to files to attach.
-     * @return bool Whether the email was sent successfully.
-     */
+ * Sends an email, similar to PHP's mail function.
+ *
+ * A true return value does not automatically mean that the user received the
+ * email successfully. It just only means that the method used was able to
+ * process the request without any errors.
+ *
+ * The default content type is `text/plain` which does not allow using HTML.
+ * However, you can set the content type of the email by using the
+ * {@see 'wp_mail_content_type'} filter.
+ *
+ * The default charset is based on the charset used on the blog. The charset can
+ * be set using the {@see 'wp_mail_charset'} filter.
+ *
+ * @since 1.2.1
+ * @since 5.5.0 is_email() is used for email validation,
+ *              instead of PHPMailer's default validator.
+ *
+ * @global PHPMailer\PHPMailer\PHPMailer $phpmailer
+ *
+ * @param string|string[] $to          Array or comma-separated list of email addresses to send message.
+ * @param string $subject     Email subject.
+ * @param string $message     Message contents.
+ * @param string|string[] $headers     Optional. Additional headers.
+ * @param string|string[] $attachments Optional. Paths to files to attach.
+ * @return bool Whether the email was sent successfully.
+ */
     public function wpMail(string|array $to, string $subject, string $message, string|array $headers = '', string|array $attachments = []): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Authenticates a user, confirming the login credentials are valid.
-     *
-     * @since 2.5.0
-     * @since 4.5.0 `$username` now accepts an email address.
-     *
-     * @param string $username User's username or email address.
-     * @param string $password User's password.
-     * @return \WP_User|\WP_Error WP_User object if the credentials are valid,
-     *                          otherwise WP_Error.
-     */
+ * Authenticates a user, confirming the login credentials are valid.
+ *
+ * @since 2.5.0
+ * @since 4.5.0 `$username` now accepts an email address.
+ *
+ * @param string $username User's username or email address.
+ * @param string $password User's password.
+ * @return \WP_User|\WP_Error WP_User object if the credentials are valid,
+ *                          otherwise WP_Error.
+ */
     public function wpAuthenticate(string $username, string $password): \WP_User|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Logs the current user out.
-     *
-     * @since 2.5.0
-     */
+ * Logs the current user out.
+ *
+ * @since 2.5.0
+ */
     public function wpLogout(): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Validates authentication cookie.
-     *
-     * The checks include making sure that the authentication cookie is set and
-     * pulling in the contents (if $cookie is not used).
-     *
-     * Makes sure the cookie is not expired. Verifies the hash in cookie is what is
-     * should be and compares the two.
-     *
-     * @since 2.5.0
-     *
-     * @global int $login_grace_period
-     *
-     * @param string $cookie Optional. If used, will validate contents instead of cookie's.
-     * @param string $scheme Optional. The cookie scheme to use: 'auth', 'secure_auth', or 'logged_in'.
-     * @return int|false User ID if valid cookie, false if invalid.
-     */
+ * Validates authentication cookie.
+ *
+ * The checks include making sure that the authentication cookie is set and
+ * pulling in the contents (if $cookie is not used).
+ *
+ * Makes sure the cookie is not expired. Verifies the hash in cookie is what is
+ * should be and compares the two.
+ *
+ * @since 2.5.0
+ *
+ * @global int $login_grace_period
+ *
+ * @param string $cookie Optional. If used, will validate contents instead of cookie's.
+ * @param string $scheme Optional. The cookie scheme to use: 'auth', 'secure_auth', or 'logged_in'.
+ * @return int|false User ID if valid cookie, false if invalid.
+ */
     public function wpValidateAuthCookie(string $cookie = '', string $scheme = ''): int|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Generates authentication cookie contents.
-     *
-     * @since 2.5.0
-     * @since 4.0.0 The `$token` parameter was added.
-     *
-     * @param int $userId    User ID.
-     * @param int $expiration The time the cookie expires as a UNIX timestamp.
-     * @param string $scheme     Optional. The cookie scheme to use: 'auth', 'secure_auth', or 'logged_in'.
-     *                           Default 'auth'.
-     * @param string $token      User's session token to use for this cookie.
-     * @return string Authentication cookie contents. Empty string if user does not exist.
-     */
+ * Generates authentication cookie contents.
+ *
+ * @since 2.5.0
+ * @since 4.0.0 The `$token` parameter was added.
+ *
+ * @param int $userId    User ID.
+ * @param int $expiration The time the cookie expires as a UNIX timestamp.
+ * @param string $scheme     Optional. The cookie scheme to use: 'auth', 'secure_auth', or 'logged_in'.
+ *                           Default 'auth'.
+ * @param string $token      User's session token to use for this cookie.
+ * @return string Authentication cookie contents. Empty string if user does not exist.
+ */
     public function wpGenerateAuthCookie(int $userId, int $expiration, string $scheme = 'auth', string $token = ''): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Parses a cookie into its components.
-     *
-     * @since 2.7.0
-     * @since 4.0.0 The `$token` element was added to the return value.
-     *
-     * @param string $cookie Authentication cookie.
-     * @param string $scheme Optional. The cookie scheme to use: 'auth', 'secure_auth', or 'logged_in'.
-     * @return string[]|false {
-     *     Authentication cookie components. None of the components should be assumed
-     *     to be valid as they come directly from a client-provided cookie value. If
-     *     the cookie value is malformed, false is returned.
-     *
-     *     @type string $username   User's username.
-     *     @type string $expiration The time the cookie expires as a UNIX timestamp.
-     *     @type string $token      User's session token used.
-     *     @type string $hmac       The security hash for the cookie.
-     *     @type string $scheme     The cookie scheme to use.
-     * }
-     */
+ * Parses a cookie into its components.
+ *
+ * @since 2.7.0
+ * @since 4.0.0 The `$token` element was added to the return value.
+ *
+ * @param string $cookie Authentication cookie.
+ * @param string $scheme Optional. The cookie scheme to use: 'auth', 'secure_auth', or 'logged_in'.
+ * @return string[]|false {
+ *     Authentication cookie components. None of the components should be assumed
+ *     to be valid as they come directly from a client-provided cookie value. If
+ *     the cookie value is malformed, false is returned.
+ *
+ * @type string $username   User's username.
+ * @type string $expiration The time the cookie expires as a UNIX timestamp.
+ * @type string $token      User's session token used.
+ * @type string $hmac       The security hash for the cookie.
+ * @type string $scheme     The cookie scheme to use.
+ * }
+ */
     public function wpParseAuthCookie(string $cookie = '', string $scheme = ''): array|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Sets the authentication cookies based on user ID.
-     *
-     * The $remember parameter increases the time that the cookie will be kept. The
-     * default the cookie is kept without remembering is two days. When $remember is
-     * set, the cookies will be kept for 14 days or two weeks.
-     *
-     * @since 2.5.0
-     * @since 4.3.0 Added the `$token` parameter.
-     *
-     * @param int $userId  User ID.
-     * @param bool $remember Whether to remember the user.
-     * @param bool|string $secure   Whether the auth cookie should only be sent over HTTPS. Default is an empty
-     *                              string which means the value of `is_ssl()` will be used.
-     * @param string $token    Optional. User's session token to use for this cookie.
-     */
+ * Sets the authentication cookies based on user ID.
+ *
+ * The $remember parameter increases the time that the cookie will be kept. The
+ * default the cookie is kept without remembering is two days. When $remember is
+ * set, the cookies will be kept for 14 days or two weeks.
+ *
+ * @since 2.5.0
+ * @since 4.3.0 Added the `$token` parameter.
+ *
+ * @param int $userId  User ID.
+ * @param bool $remember Whether to remember the user.
+ * @param bool|string $secure   Whether the auth cookie should only be sent over HTTPS. Default is an empty
+ *                              string which means the value of `is_ssl()` will be used.
+ * @param string $token    Optional. User's session token to use for this cookie.
+ */
     public function wpSetAuthCookie(int $userId, bool $remember = false, bool|string $secure = '', string $token = ''): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Removes all of the cookies associated with authentication.
-     *
-     * @since 2.5.0
-     */
+ * Removes all of the cookies associated with authentication.
+ *
+ * @since 2.5.0
+ */
     public function wpClearAuthCookie(): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Determines whether the current visitor is a logged in user.
-     *
-     * For more information on this and similar theme functions, check out
-     * the {@link https://developer.wordpress.org/themes/basics/conditional-tags/
-     * Conditional Tags} article in the Theme Developer Handbook.
-     *
-     * @since 2.0.0
-     *
-     * @return bool True if user is logged in, false if not logged in.
-     */
+ * Determines whether the current visitor is a logged in user.
+ *
+ * For more information on this and similar theme functions, check out
+ * the {@link https://developer.wordpress.org/themes/basics/conditional-tags/
+ * Conditional Tags} article in the Theme Developer Handbook.
+ *
+ * @since 2.0.0
+ *
+ * @return bool True if user is logged in, false if not logged in.
+ */
     public function isUserLoggedIn(): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Checks if a user is logged in, if not it redirects them to the login page.
-     *
-     * When this code is called from a page, it checks to see if the user viewing the page is logged in.
-     * If the user is not logged in, they are redirected to the login page. The user is redirected
-     * in such a way that, upon logging in, they will be sent directly to the page they were originally
-     * trying to access.
-     *
-     * @since 1.5.0
-     */
+ * Checks if a user is logged in, if not it redirects them to the login page.
+ *
+ * When this code is called from a page, it checks to see if the user viewing the page is logged in.
+ * If the user is not logged in, they are redirected to the login page. The user is redirected
+ * in such a way that, upon logging in, they will be sent directly to the page they were originally
+ * trying to access.
+ *
+ * @since 1.5.0
+ */
     public function authRedirect(): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Ensures intent by verifying that a user was referred from another admin page with the correct security nonce.
-     *
-     * This function ensures the user intends to perform a given action, which helps protect against clickjacking style
-     * attacks. It verifies intent, not authorization, therefore it does not verify the user's capabilities. This should
-     * be performed with `current_user_can()` or similar.
-     *
-     * If the nonce value is invalid, the function will exit with an "Are You Sure?" style message.
-     *
-     * @since 1.2.0
-     * @since 2.5.0 The `$query_arg` parameter was added.
-     *
-     * @param int|string $action    The nonce action.
-     * @param string $queryArg Optional. Key to check for nonce in `$_REQUEST`. Default '_wpnonce'.
-     * @return int|false 1 if the nonce is valid and generated between 0-12 hours ago,
-     *                   2 if the nonce is valid and generated between 12-24 hours ago.
-     *                   False if the nonce is invalid.
-     */
+ * Ensures intent by verifying that a user was referred from another admin page with the correct security nonce.
+ *
+ * This function ensures the user intends to perform a given action, which helps protect against clickjacking style
+ * attacks. It verifies intent, not authorization, therefore it does not verify the user's capabilities. This should
+ * be performed with `current_user_can()` or similar.
+ *
+ * If the nonce value is invalid, the function will exit with an "Are You Sure?" style message.
+ *
+ * @since 1.2.0
+ * @since 2.5.0 The `$query_arg` parameter was added.
+ *
+ * @param int|string $action    The nonce action.
+ * @param string $queryArg Optional. Key to check for nonce in `$_REQUEST`. Default '_wpnonce'.
+ * @return int|false 1 if the nonce is valid and generated between 0-12 hours ago,
+ *                   2 if the nonce is valid and generated between 12-24 hours ago.
+ *                   False if the nonce is invalid.
+ */
     public function checkAdminReferer(int|string $action, string $queryArg = '_wpnonce'): int|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Verifies the Ajax request to prevent processing requests external of the blog.
-     *
-     * @since 2.0.3
-     *
-     * @param int|string $action    Action nonce.
-     * @param false|string $queryArg Optional. Key to check for the nonce in `$_REQUEST` (since 2.5). If false,
-     *                                `$_REQUEST` values will be evaluated for '_ajax_nonce', and '_wpnonce'
-     *                                (in that order). Default false.
-     * @param bool $stop      Optional. Whether to stop early when the nonce cannot be verified.
-     *                                Default true.
-     * @return int|false 1 if the nonce is valid and generated between 0-12 hours ago,
-     *                   2 if the nonce is valid and generated between 12-24 hours ago.
-     *                   False if the nonce is invalid.
-     */
+ * Verifies the Ajax request to prevent processing requests external of the blog.
+ *
+ * @since 2.0.3
+ *
+ * @param int|string $action    Action nonce.
+ * @param false|string $queryArg Optional. Key to check for the nonce in `$_REQUEST` (since 2.5). If false,
+ *                                `$_REQUEST` values will be evaluated for '_ajax_nonce', and '_wpnonce'
+ *                                (in that order). Default false.
+ * @param bool $stop      Optional. Whether to stop early when the nonce cannot be verified.
+ *                                Default true.
+ * @return int|false 1 if the nonce is valid and generated between 0-12 hours ago,
+ *                   2 if the nonce is valid and generated between 12-24 hours ago.
+ *                   False if the nonce is invalid.
+ */
     public function checkAjaxReferer(int|string $action, false|string $queryArg = false, bool $stop = true): int|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Redirects to another page.
-     *
-     * Note: wp_redirect() does not exit automatically, and should almost always be
-     * followed by a call to `exit;`:
-     *
-     *     wp_redirect( $url );
-     *     exit;
-     *
-     * Exiting can also be selectively manipulated by using wp_redirect() as a conditional
-     * in conjunction with the {@see 'wp_redirect'} and {@see 'wp_redirect_status'} filters:
-     *
-     *     if ( wp_redirect( $url ) ) {
-     *         exit;
-     *     }
-     *
-     * @since 1.5.1
-     * @since 5.1.0 The `$x_redirect_by` parameter was added.
-     * @since 5.4.0 On invalid status codes, wp_die() is called.
-     *
-     * @global bool $is_IIS
-     *
-     * @param string $location      The path or URL to redirect to.
-     * @param int $status        Optional. HTTP response status code to use. Default '302' (Moved Temporarily).
-     * @param string|false $xRedirectBy Optional. The application doing the redirect or false to omit. Default 'WordPress'.
-     * @return bool False if the redirect was canceled, true otherwise.
-     */
+ * Redirects to another page.
+ *
+ * Note: wp_redirect() does not exit automatically, and should almost always be
+ * followed by a call to `exit;`:
+ *
+ *     wp_redirect( $url );
+ *     exit;
+ *
+ * Exiting can also be selectively manipulated by using wp_redirect() as a conditional
+ * in conjunction with the {@see 'wp_redirect'} and {@see 'wp_redirect_status'} filters:
+ *
+ *     if ( wp_redirect( $url ) ) {
+ *         exit;
+ *     }
+ *
+ * @since 1.5.1
+ * @since 5.1.0 The `$x_redirect_by` parameter was added.
+ * @since 5.4.0 On invalid status codes, wp_die() is called.
+ *
+ * @global bool $is_IIS
+ *
+ * @param string $location      The path or URL to redirect to.
+ * @param int $status        Optional. HTTP response status code to use. Default '302' (Moved Temporarily).
+ * @param string|false $xRedirectBy Optional. The application doing the redirect or false to omit. Default 'WordPress'.
+ * @return bool False if the redirect was canceled, true otherwise.
+ */
     public function wpRedirect(string $location, int $status = 302, string|false $xRedirectBy = 'WordPress'): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Sanitizes a URL for use in a redirect.
-     *
-     * @since 2.3.0
-     *
-     * @param string $location The path to redirect to.
-     * @return string Redirect-sanitized URL.
-     */
+ * Sanitizes a URL for use in a redirect.
+ *
+ * @since 2.3.0
+ *
+ * @param string $location The path to redirect to.
+ * @return string Redirect-sanitized URL.
+ */
     public function wpSanitizeRedirect(string $location): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Performs a safe (local) redirect, using wp_redirect().
-     *
-     * Checks whether the $location is using an allowed host, if it has an absolute
-     * path. A plugin can therefore set or remove allowed host(s) to or from the
-     * list.
-     *
-     * If the host is not allowed, then the redirect defaults to wp-admin on the siteurl
-     * instead. This prevents malicious redirects which redirect to another host,
-     * but only used in a few places.
-     *
-     * Note: wp_safe_redirect() does not exit automatically, and should almost always be
-     * followed by a call to `exit;`:
-     *
-     *     wp_safe_redirect( $url );
-     *     exit;
-     *
-     * Exiting can also be selectively manipulated by using wp_safe_redirect() as a conditional
-     * in conjunction with the {@see 'wp_redirect'} and {@see 'wp_redirect_status'} filters:
-     *
-     *     if ( wp_safe_redirect( $url ) ) {
-     *         exit;
-     *     }
-     *
-     * @since 2.3.0
-     * @since 5.1.0 The return value from wp_redirect() is now passed on, and the `$x_redirect_by` parameter was added.
-     *
-     * @param string $location      The path or URL to redirect to.
-     * @param int $status        Optional. HTTP response status code to use. Default '302' (Moved Temporarily).
-     * @param string|false $xRedirectBy Optional. The application doing the redirect or false to omit. Default 'WordPress'.
-     * @return bool False if the redirect was canceled, true otherwise.
-     */
+ * Performs a safe (local) redirect, using wp_redirect().
+ *
+ * Checks whether the $location is using an allowed host, if it has an absolute
+ * path. A plugin can therefore set or remove allowed host(s) to or from the
+ * list.
+ *
+ * If the host is not allowed, then the redirect defaults to wp-admin on the siteurl
+ * instead. This prevents malicious redirects which redirect to another host,
+ * but only used in a few places.
+ *
+ * Note: wp_safe_redirect() does not exit automatically, and should almost always be
+ * followed by a call to `exit;`:
+ *
+ *     wp_safe_redirect( $url );
+ *     exit;
+ *
+ * Exiting can also be selectively manipulated by using wp_safe_redirect() as a conditional
+ * in conjunction with the {@see 'wp_redirect'} and {@see 'wp_redirect_status'} filters:
+ *
+ *     if ( wp_safe_redirect( $url ) ) {
+ *         exit;
+ *     }
+ *
+ * @since 2.3.0
+ * @since 5.1.0 The return value from wp_redirect() is now passed on, and the `$x_redirect_by` parameter was added.
+ *
+ * @param string $location      The path or URL to redirect to.
+ * @param int $status        Optional. HTTP response status code to use. Default '302' (Moved Temporarily).
+ * @param string|false $xRedirectBy Optional. The application doing the redirect or false to omit. Default 'WordPress'.
+ * @return bool False if the redirect was canceled, true otherwise.
+ */
     public function wpSafeRedirect(string $location, int $status = 302, string|false $xRedirectBy = 'WordPress'): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Validates a URL for use in a redirect.
-     *
-     * Checks whether the $location is using an allowed host, if it has an absolute
-     * path. A plugin can therefore set or remove allowed host(s) to or from the
-     * list.
-     *
-     * If the host is not allowed, then the redirect is to $fallback_url supplied.
-     *
-     * @since 2.8.1
-     *
-     * @param string $location     The redirect to validate.
-     * @param string $fallbackUrl The value to return if $location is not allowed.
-     * @return string Redirect-sanitized URL.
-     */
+ * Validates a URL for use in a redirect.
+ *
+ * Checks whether the $location is using an allowed host, if it has an absolute
+ * path. A plugin can therefore set or remove allowed host(s) to or from the
+ * list.
+ *
+ * If the host is not allowed, then the redirect is to $fallback_url supplied.
+ *
+ * @since 2.8.1
+ *
+ * @param string $location     The redirect to validate.
+ * @param string $fallbackUrl The value to return if $location is not allowed.
+ * @return string Redirect-sanitized URL.
+ */
     public function wpValidateRedirect(string $location, string $fallbackUrl = ''): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Notifies an author (and/or others) of a comment/trackback/pingback on a post.
-     *
-     * @since 1.0.0
-     *
-     * @param int|\WP_Comment $commentId Comment ID or WP_Comment object.
-     * @param string $deprecated Not used.
-     * @return bool True on completion. False if no email addresses were specified.
-     */
+ * Notifies an author (and/or others) of a comment/trackback/pingback on a post.
+ *
+ * @since 1.0.0
+ *
+ * @param int|\WP_Comment $commentId Comment ID or WP_Comment object.
+ * @param string $deprecated Not used.
+ * @return bool True on completion. False if no email addresses were specified.
+ */
     public function wpNotifyPostauthor(int|\WP_Comment $commentId, string $deprecated = null): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Notifies the moderator of the site about a new comment that is awaiting approval.
-     *
-     * @since 1.0.0
-     *
-     * @global wpdb $wpdb WordPress database abstraction object.
-     *
-     * Uses the {@see 'notify_moderator'} filter to determine whether the site moderator
-     * should be notified, overriding the site setting.
-     *
-     * @param int $commentId Comment ID.
-     * @return true Always returns true.
-     */
+ * Notifies the moderator of the site about a new comment that is awaiting approval.
+ *
+ * @since 1.0.0
+ *
+ * @global wpdb $wpdb WordPress database abstraction object.
+ *
+ * Uses the {@see 'notify_moderator'} filter to determine whether the site moderator
+ * should be notified, overriding the site setting.
+ *
+ * @param int $commentId Comment ID.
+ * @return true Always returns true.
+ */
     public function wpNotifyModerator(int $commentId): true
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Notifies the blog admin of a user changing password, normally via email.
-     *
-     * @since 2.7.0
-     *
-     * @param \WP_User $user User object.
-     */
+ * Notifies the blog admin of a user changing password, normally via email.
+ *
+ * @since 2.7.0
+ *
+ * @param \WP_User $user User object.
+ */
     public function wpPasswordChangeNotification(\WP_User $user): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Emails login credentials to a newly-registered user.
-     *
-     * A new user registration notification is also sent to admin email.
-     *
-     * @since 2.0.0
-     * @since 4.3.0 The `$plaintext_pass` parameter was changed to `$notify`.
-     * @since 4.3.1 The `$plaintext_pass` parameter was deprecated. `$notify` added as a third parameter.
-     * @since 4.6.0 The `$notify` parameter accepts 'user' for sending notification only to the user created.
-     *
-     * @param int $userId    User ID.
-     * @param null $deprecated Not used (argument deprecated).
-     * @param string $notify     Optional. Type of notification that should happen. Accepts 'admin' or an empty
-     *                           string (admin only), 'user', or 'both' (admin and user). Default empty.
-     */
+ * Emails login credentials to a newly-registered user.
+ *
+ * A new user registration notification is also sent to admin email.
+ *
+ * @since 2.0.0
+ * @since 4.3.0 The `$plaintext_pass` parameter was changed to `$notify`.
+ * @since 4.3.1 The `$plaintext_pass` parameter was deprecated. `$notify` added as a third parameter.
+ * @since 4.6.0 The `$notify` parameter accepts 'user' for sending notification only to the user created.
+ *
+ * @param int $userId    User ID.
+ * @param null $deprecated Not used (argument deprecated).
+ * @param string $notify     Optional. Type of notification that should happen. Accepts 'admin' or an empty
+ *                           string (admin only), 'user', or 'both' (admin and user). Default empty.
+ */
     public function wpNewUserNotification(int $userId, null $deprecated = null, string $notify = ''): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Returns the time-dependent variable for nonce creation.
-     *
-     * A nonce has a lifespan of two ticks. Nonces in their second tick may be
-     * updated, e.g. by autosave.
-     *
-     * @since 2.5.0
-     * @since 6.1.0 Added `$action` argument.
-     *
-     * @param string|int $action Optional. The nonce action. Default -1.
-     * @return float Float value rounded up to the next highest integer.
-     */
+ * Returns the time-dependent variable for nonce creation.
+ *
+ * A nonce has a lifespan of two ticks. Nonces in their second tick may be
+ * updated, e.g. by autosave.
+ *
+ * @since 2.5.0
+ * @since 6.1.0 Added `$action` argument.
+ *
+ * @param string|int $action Optional. The nonce action. Default -1.
+ * @return float Float value rounded up to the next highest integer.
+ */
     public function wpNonceTick(string|int $action): float
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Verifies that a correct security nonce was used with time limit.
-     *
-     * A nonce is valid for 24 hours (by default).
-     *
-     * @since 2.0.3
-     *
-     * @param string $nonce  Nonce value that was used for verification, usually via a form field.
-     * @param string|int $action Should give context to what is taking place and be the same when nonce was created.
-     * @return int|false 1 if the nonce is valid and generated between 0-12 hours ago,
-     *                   2 if the nonce is valid and generated between 12-24 hours ago.
-     *                   False if the nonce is invalid.
-     */
+ * Verifies that a correct security nonce was used with time limit.
+ *
+ * A nonce is valid for 24 hours (by default).
+ *
+ * @since 2.0.3
+ *
+ * @param string $nonce  Nonce value that was used for verification, usually via a form field.
+ * @param string|int $action Should give context to what is taking place and be the same when nonce was created.
+ * @return int|false 1 if the nonce is valid and generated between 0-12 hours ago,
+ *                   2 if the nonce is valid and generated between 12-24 hours ago.
+ *                   False if the nonce is invalid.
+ */
     public function wpVerifyNonce(string $nonce, string|int $action): int|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Creates a cryptographic token tied to a specific action, user, user session,
-     * and window of time.
-     *
-     * @since 2.0.3
-     * @since 4.0.0 Session tokens were integrated with nonce creation.
-     *
-     * @param string|int $action Scalar value to add context to the nonce.
-     * @return string The token.
-     */
+ * Creates a cryptographic token tied to a specific action, user, user session,
+ * and window of time.
+ *
+ * @since 2.0.3
+ * @since 4.0.0 Session tokens were integrated with nonce creation.
+ *
+ * @param string|int $action Scalar value to add context to the nonce.
+ * @return string The token.
+ */
     public function wpCreateNonce(string|int $action): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Returns a salt to add to hashes.
-     *
-     * Salts are created using secret keys. Secret keys are located in two places:
-     * in the database and in the wp-config.php file. The secret key in the database
-     * is randomly generated and will be appended to the secret keys in wp-config.php.
-     *
-     * The secret keys in wp-config.php should be updated to strong, random keys to maximize
-     * security. Below is an example of how the secret key constants are defined.
-     * Do not paste this example directly into wp-config.php. Instead, have a
-     * {@link https://api.wordpress.org/secret-key/1.1/salt/ secret key created} just
-     * for you.
-     *
-     *     define('AUTH_KEY',         ' Xakm<o xQy rw4EMsLKM-?!T+,PFF})H4lzcW57AF0U@N@< >M%G4Yt>f`z]MON');
-     *     define('SECURE_AUTH_KEY',  'LzJ}op]mr|6+![P}Ak:uNdJCJZd>(Hx.-Mh#Tz)pCIU#uGEnfFz|f ;;eU%/U^O~');
-     *     define('LOGGED_IN_KEY',    '|i|Ux`9<p-h$aFf(qnT:sDO:D1P^wZ$$/Ra@miTJi9G;ddp_<q}6H1)o|a +&JCM');
-     *     define('NONCE_KEY',        '%:R{[P|,s.KuMltH5}cI;/k<Gx~j!f0I)m_sIyu+&NJZ)-iO>z7X>QYR0Z_XnZ@|');
-     *     define('AUTH_SALT',        'eZyT)-Naw]F8CwA*VaW#q*|.)g@o}||wf~@C-YSt}(dh_r6EbI#A,y|nU2{B#JBW');
-     *     define('SECURE_AUTH_SALT', '!=oLUTXh,QW=H `}`L|9/^4-3 STz},T(w}W<I`.JjPi)<Bmf1v,HpGe}T1:Xt7n');
-     *     define('LOGGED_IN_SALT',   '+XSqHc;@Q*K_b|Z?NC[3H!!EONbh.n<+=uKR:>*c(u`g~EJBf#8u#R{mUEZrozmm');
-     *     define('NONCE_SALT',       'h`GXHhD>SLWVfg1(1(N{;.V!MoE(SfbA_ksP@&`+AycHcAV$+?@3q+rxV{%^VyKT');
-     *
-     * Salting passwords helps against tools which has stored hashed values of
-     * common dictionary strings. The added values makes it harder to crack.
-     *
-     * @since 2.5.0
-     *
-     * @link https://api.wordpress.org/secret-key/1.1/salt/ Create secrets for wp-config.php
-     *
-     * @param string $scheme Authentication scheme (auth, secure_auth, logged_in, nonce).
-     * @return string Salt value
-     */
+ * Returns a salt to add to hashes.
+ *
+ * Salts are created using secret keys. Secret keys are located in two places:
+ * in the database and in the wp-config.php file. The secret key in the database
+ * is randomly generated and will be appended to the secret keys in wp-config.php.
+ *
+ * The secret keys in wp-config.php should be updated to strong, random keys to maximize
+ * security. Below is an example of how the secret key constants are defined.
+ * Do not paste this example directly into wp-config.php. Instead, have a
+ * {@link https://api.wordpress.org/secret-key/1.1/salt/ secret key created} just
+ * for you.
+ *
+ *     define('AUTH_KEY',         ' Xakm<o xQy rw4EMsLKM-?!T+,PFF})H4lzcW57AF0U@N@< >M%G4Yt>f`z]MON');
+ *     define('SECURE_AUTH_KEY',  'LzJ}op]mr|6+![P}Ak:uNdJCJZd>(Hx.-Mh#Tz)pCIU#uGEnfFz|f ;;eU%/U^O~');
+ *     define('LOGGED_IN_KEY',    '|i|Ux`9<p-h$aFf(qnT:sDO:D1P^wZ$$/Ra@miTJi9G;ddp_<q}6H1)o|a +&JCM');
+ *     define('NONCE_KEY',        '%:R{[P|,s.KuMltH5}cI;/k<Gx~j!f0I)m_sIyu+&NJZ)-iO>z7X>QYR0Z_XnZ@|');
+ *     define('AUTH_SALT',        'eZyT)-Naw]F8CwA*VaW#q*|.)g@o}||wf~@C-YSt}(dh_r6EbI#A,y|nU2{B#JBW');
+ *     define('SECURE_AUTH_SALT', '!=oLUTXh,QW=H `}`L|9/^4-3 STz},T(w}W<I`.JjPi)<Bmf1v,HpGe}T1:Xt7n');
+ *     define('LOGGED_IN_SALT',   '+XSqHc;@Q*K_b|Z?NC[3H!!EONbh.n<+=uKR:>*c(u`g~EJBf#8u#R{mUEZrozmm');
+ *     define('NONCE_SALT',       'h`GXHhD>SLWVfg1(1(N{;.V!MoE(SfbA_ksP@&`+AycHcAV$+?@3q+rxV{%^VyKT');
+ *
+ * Salting passwords helps against tools which has stored hashed values of
+ * common dictionary strings. The added values makes it harder to crack.
+ *
+ * @since 2.5.0
+ *
+ * @link https://api.wordpress.org/secret-key/1.1/salt/ Create secrets for wp-config.php
+ *
+ * @param string $scheme Authentication scheme (auth, secure_auth, logged_in, nonce).
+ * @return string Salt value
+ */
     public function wpSalt(string $scheme = 'auth'): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Gets hash of given string.
-     *
-     * @since 2.0.3
-     *
-     * @param string $data   Plain text to hash.
-     * @param string $scheme Authentication scheme (auth, secure_auth, logged_in, nonce).
-     * @return string Hash of $data.
-     */
+ * Gets hash of given string.
+ *
+ * @since 2.0.3
+ *
+ * @param string $data   Plain text to hash.
+ * @param string $scheme Authentication scheme (auth, secure_auth, logged_in, nonce).
+ * @return string Hash of $data.
+ */
     public function wpHash(string $data, string $scheme = 'auth'): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Creates a hash (encrypt) of a plain text password.
-     *
-     * For integration with other applications, this function can be overwritten to
-     * instead use the other package password checking algorithm.
-     *
-     * @since 2.5.0
-     *
-     * @global PasswordHash $wp_hasher PHPass object.
-     *
-     * @param string $password Plain text user password to hash.
-     * @return string The hash string of the password.
-     */
+ * Creates a hash (encrypt) of a plain text password.
+ *
+ * For integration with other applications, this function can be overwritten to
+ * instead use the other package password checking algorithm.
+ *
+ * @since 2.5.0
+ *
+ * @global PasswordHash $wp_hasher PHPass object.
+ *
+ * @param string $password Plain text user password to hash.
+ * @return string The hash string of the password.
+ */
     public function wpHashPassword(string $password): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Checks the plaintext password against the encrypted Password.
-     *
-     * Maintains compatibility between old version and the new cookie authentication
-     * protocol using PHPass library. The $hash parameter is the encrypted password
-     * and the function compares the plain text password when encrypted similarly
-     * against the already encrypted password to see if they match.
-     *
-     * For integration with other applications, this function can be overwritten to
-     * instead use the other package password checking algorithm.
-     *
-     * @since 2.5.0
-     *
-     * @global PasswordHash $wp_hasher PHPass object used for checking the password
-     *                                 against the $hash + $password.
-     * @uses PasswordHash::CheckPassword
-     *
-     * @param string $password Plaintext user's password.
-     * @param string $hash     Hash of the user's password to check against.
-     * @param string|int $userId  Optional. User ID.
-     * @return bool False, if the $password does not match the hashed password.
-     */
+ * Checks the plaintext password against the encrypted Password.
+ *
+ * Maintains compatibility between old version and the new cookie authentication
+ * protocol using PHPass library. The $hash parameter is the encrypted password
+ * and the function compares the plain text password when encrypted similarly
+ * against the already encrypted password to see if they match.
+ *
+ * For integration with other applications, this function can be overwritten to
+ * instead use the other package password checking algorithm.
+ *
+ * @since 2.5.0
+ *
+ * @global PasswordHash $wp_hasher PHPass object used for checking the password
+ *                                 against the $hash + $password.
+ * @uses PasswordHash::CheckPassword
+ *
+ * @param string $password Plaintext user's password.
+ * @param string $hash     Hash of the user's password to check against.
+ * @param string|int $userId  Optional. User ID.
+ * @return bool False, if the $password does not match the hashed password.
+ */
     public function wpCheckPassword(string $password, string $hash, string|int $userId = ''): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Generates a random password drawn from the defined set of characters.
-     *
-     * Uses wp_rand() to create passwords with far less predictability
-     * than similar native PHP functions like `rand()` or `mt_rand()`.
-     *
-     * @since 2.5.0
-     *
-     * @param int $length              Optional. The length of password to generate. Default 12.
-     * @param bool $specialChars       Optional. Whether to include standard special characters.
-     *                                  Default true.
-     * @param bool $extraSpecialChars Optional. Whether to include other special characters.
-     *                                  Used when generating secret keys and salts. Default false.
-     * @return string The random password.
-     */
+ * Generates a random password drawn from the defined set of characters.
+ *
+ * Uses wp_rand() to create passwords with far less predictability
+ * than similar native PHP functions like `rand()` or `mt_rand()`.
+ *
+ * @since 2.5.0
+ *
+ * @param int $length              Optional. The length of password to generate. Default 12.
+ * @param bool $specialChars       Optional. Whether to include standard special characters.
+ *                                  Default true.
+ * @param bool $extraSpecialChars Optional. Whether to include other special characters.
+ *                                  Used when generating secret keys and salts. Default false.
+ * @return string The random password.
+ */
     public function wpGeneratePassword(int $length = 12, bool $specialChars = true, bool $extraSpecialChars = false): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Generates a random non-negative number.
-     *
-     * @since 2.6.2
-     * @since 4.4.0 Uses PHP7 random_int() or the random_compat library if available.
-     * @since 6.1.0 Returns zero instead of a random number if both `$min` and `$max` are zero.
-     *
-     * @global string $rnd_value
-     *
-     * @param int $min Optional. Lower limit for the generated number.
-     *                 Accepts positive integers or zero. Defaults to 0.
-     * @param int $max Optional. Upper limit for the generated number.
-     *                 Accepts positive integers. Defaults to 4294967295.
-     * @return int A random non-negative number between min and max.
-     */
+ * Generates a random non-negative number.
+ *
+ * @since 2.6.2
+ * @since 4.4.0 Uses PHP7 random_int() or the random_compat library if available.
+ * @since 6.1.0 Returns zero instead of a random number if both `$min` and `$max` are zero.
+ *
+ * @global string $rnd_value
+ *
+ * @param int $min Optional. Lower limit for the generated number.
+ *                 Accepts positive integers or zero. Defaults to 0.
+ * @param int $max Optional. Upper limit for the generated number.
+ *                 Accepts positive integers. Defaults to 4294967295.
+ * @return int A random non-negative number between min and max.
+ */
     public function wpRand(int $min = null, int $max = null): int
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Updates the user's password with a new encrypted one.
-     *
-     * For integration with other applications, this function can be overwritten to
-     * instead use the other package password checking algorithm.
-     *
-     * Please note: This function should be used sparingly and is really only meant for single-time
-     * application. Leveraging this improperly in a plugin or theme could result in an endless loop
-     * of password resets if precautions are not taken to ensure it does not execute on every page load.
-     *
-     * @since 2.5.0
-     *
-     * @global wpdb $wpdb WordPress database abstraction object.
-     *
-     * @param string $password The plaintext new user password.
-     * @param int $userId  User ID.
-     */
+ * Updates the user's password with a new encrypted one.
+ *
+ * For integration with other applications, this function can be overwritten to
+ * instead use the other package password checking algorithm.
+ *
+ * Please note: This function should be used sparingly and is really only meant for single-time
+ * application. Leveraging this improperly in a plugin or theme could result in an endless loop
+ * of password resets if precautions are not taken to ensure it does not execute on every page load.
+ *
+ * @since 2.5.0
+ *
+ * @global wpdb $wpdb WordPress database abstraction object.
+ *
+ * @param string $password The plaintext new user password.
+ * @param int $userId  User ID.
+ */
     public function wpSetPassword(string $password, int $userId): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Retrieves the avatar `<img>` tag for a user, email address, MD5 hash, comment, or post.
-     *
-     * @since 2.5.0
-     * @since 4.2.0 Added the optional `$args` parameter.
-     * @since 5.5.0 Added the `loading` argument.
-     * @since 6.1.0 Added the `decoding` argument.
-     * @since 6.3.0 Added the `fetchpriority` argument.
-     *
-     * @param mixed $idOrEmail   The avatar to retrieve. Accepts a user ID, Gravatar MD5 hash,
-     *                              user email, WP_User object, WP_Post object, or WP_Comment object.
-     * @param int $size          Optional. Height and width of the avatar in pixels. Default 96.
-     * @param string $defaultValue URL for the default image or a default type. Accepts:
-     *                              - '404' (return a 404 instead of a default image)
-     *                              - 'retro' (a 8-bit arcade-style pixelated face)
-     *                              - 'robohash' (a robot)
-     *                              - 'monsterid' (a monster)
-     *                              - 'wavatar' (a cartoon face)
-     *                              - 'identicon' (the "quilt", a geometric pattern)
-     *                              - 'mystery', 'mm', or 'mysteryman' (The Oyster Man)
-     *                              - 'blank' (transparent GIF)
-     *                              - 'gravatar_default' (the Gravatar logo)
-     *                              Default is the value of the 'avatar_default' option,
-     *                              with a fallback of 'mystery'.
-     * @param string $alt           Optional. Alternative text to use in the avatar image tag.
-     *                              Default empty.
-     * @param array $args {
-     *     Optional. Extra arguments to retrieve the avatar.
-     *
-     *     @type int          $height        Display height of the avatar in pixels. Defaults to $size.
-     *     @type int          $width         Display width of the avatar in pixels. Defaults to $size.
-     *     @type bool         $force_default Whether to always show the default image, never the Gravatar.
-     *                                       Default false.
-     *     @type string       $rating        What rating to display avatars up to. Accepts:
-     *                                       - 'G' (suitable for all audiences)
-     *                                       - 'PG' (possibly offensive, usually for audiences 13 and above)
-     *                                       - 'R' (intended for adult audiences above 17)
-     *                                       - 'X' (even more mature than above)
-     *                                       Default is the value of the 'avatar_rating' option.
-     *     @type string       $scheme        URL scheme to use. See set_url_scheme() for accepted values.
-     *                                       Default null.
-     *     @type array|string $class         Array or string of additional classes to add to the img element.
-     *                                       Default null.
-     *     @type bool         $force_display Whether to always show the avatar - ignores the show_avatars option.
-     *                                       Default false.
-     *     @type string       $loading       Value for the `loading` attribute.
-     *                                       Default null.
-     *     @type string       $fetchpriority Value for the `fetchpriority` attribute.
-     *                                       Default null.
-     *     @type string       $decoding      Value for the `decoding` attribute.
-     *                                       Default null.
-     *     @type string       $extra_attr    HTML attributes to insert in the IMG element. Is not sanitized.
-     *                                       Default empty.
-     * }
-     * @return string|false `<img>` tag for the user's avatar. False on failure.
-     */
+ * Retrieves the avatar `<img>` tag for a user, email address, MD5 hash, comment, or post.
+ *
+ * @since 2.5.0
+ * @since 4.2.0 Added the optional `$args` parameter.
+ * @since 5.5.0 Added the `loading` argument.
+ * @since 6.1.0 Added the `decoding` argument.
+ * @since 6.3.0 Added the `fetchpriority` argument.
+ *
+ * @param mixed $idOrEmail   The avatar to retrieve. Accepts a user ID, Gravatar MD5 hash,
+ *                              user email, WP_User object, WP_Post object, or WP_Comment object.
+ * @param int $size          Optional. Height and width of the avatar in pixels. Default 96.
+ * @param string $defaultValue URL for the default image or a default type. Accepts:
+ *                              - '404' (return a 404 instead of a default image)
+ *                              - 'retro' (a 8-bit arcade-style pixelated face)
+ *                              - 'robohash' (a robot)
+ *                              - 'monsterid' (a monster)
+ *                              - 'wavatar' (a cartoon face)
+ *                              - 'identicon' (the "quilt", a geometric pattern)
+ *                              - 'mystery', 'mm', or 'mysteryman' (The Oyster Man)
+ *                              - 'blank' (transparent GIF)
+ *                              - 'gravatar_default' (the Gravatar logo)
+ *                              Default is the value of the 'avatar_default' option,
+ *                              with a fallback of 'mystery'.
+ * @param string $alt           Optional. Alternative text to use in the avatar image tag.
+ *                              Default empty.
+ * @param array $args {
+ *     Optional. Extra arguments to retrieve the avatar.
+ *
+ * @type int          $height        Display height of the avatar in pixels. Defaults to $size.
+ * @type int          $width         Display width of the avatar in pixels. Defaults to $size.
+ * @type bool         $force_default Whether to always show the default image, never the Gravatar.
+ *                                       Default false.
+ * @type string       $rating        What rating to display avatars up to. Accepts:
+ *                                       - 'G' (suitable for all audiences)
+ *                                       - 'PG' (possibly offensive, usually for audiences 13 and above)
+ *                                       - 'R' (intended for adult audiences above 17)
+ *                                       - 'X' (even more mature than above)
+ *                                       Default is the value of the 'avatar_rating' option.
+ * @type string       $scheme        URL scheme to use. See set_url_scheme() for accepted values.
+ *                                       Default null.
+ * @type array|string $class         Array or string of additional classes to add to the img element.
+ *                                       Default null.
+ * @type bool         $force_display Whether to always show the avatar - ignores the show_avatars option.
+ *                                       Default false.
+ * @type string       $loading       Value for the `loading` attribute.
+ *                                       Default null.
+ * @type string       $fetchpriority Value for the `fetchpriority` attribute.
+ *                                       Default null.
+ * @type string       $decoding      Value for the `decoding` attribute.
+ *                                       Default null.
+ * @type string       $extra_attr    HTML attributes to insert in the IMG element. Is not sanitized.
+ *                                       Default empty.
+ * }
+ * @return string|false `<img>` tag for the user's avatar. False on failure.
+ */
     public function getAvatar(mixed $idOrEmail, int $size = 96, string $defaultValue = '', string $alt = '', array $args = null): string|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
 /**
-     * Displays a human readable HTML representation of the difference between two strings.
-     *
-     * The Diff is available for getting the changes between versions. The output is
-     * HTML, so the primary use is for displaying the changes. If the two strings
-     * are equivalent, then an empty string will be returned.
-     *
-     * @since 2.6.0
-     *
-     * @see wp_parse_args() Used to change defaults to user defined settings.
-     * @uses Text_Diff
-     * @uses WP_Text_Diff_Renderer_Table
-     *
-     * @param string $leftString  "old" (left) version of string.
-     * @param string $rightString "new" (right) version of string.
-     * @param string|array $args {
-     *     Associative array of options to pass to WP_Text_Diff_Renderer_Table().
-     *
-     *     @type string $title           Titles the diff in a manner compatible
-     *                                   with the output. Default empty.
-     *     @type string $title_left      Change the HTML to the left of the title.
-     *                                   Default empty.
-     *     @type string $title_right     Change the HTML to the right of the title.
-     *                                   Default empty.
-     *     @type bool   $show_split_view True for split view (two columns), false for
-     *                                   un-split view (single column). Default true.
-     * }
-     * @return string Empty string if strings are equivalent or HTML with differences.
-     */
+ * Displays a human readable HTML representation of the difference between two strings.
+ *
+ * The Diff is available for getting the changes between versions. The output is
+ * HTML, so the primary use is for displaying the changes. If the two strings
+ * are equivalent, then an empty string will be returned.
+ *
+ * @since 2.6.0
+ *
+ * @see wp_parse_args() Used to change defaults to user defined settings.
+ * @uses Text_Diff
+ * @uses WP_Text_Diff_Renderer_Table
+ *
+ * @param string $leftString  "old" (left) version of string.
+ * @param string $rightString "new" (right) version of string.
+ * @param string|array $args {
+ *     Associative array of options to pass to WP_Text_Diff_Renderer_Table().
+ *
+ * @type string $title           Titles the diff in a manner compatible
+ *                                   with the output. Default empty.
+ * @type string $title_left      Change the HTML to the left of the title.
+ *                                   Default empty.
+ * @type string $title_right     Change the HTML to the right of the title.
+ *                                   Default empty.
+ * @type bool   $show_split_view True for split view (two columns), false for
+ *                                   un-split view (single column). Default true.
+ * }
+ * @return string Empty string if strings are equivalent or HTML with differences.
+ */
     public function wpTextDiff(string $leftString, string $rightString, string|array $args = null): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
@@ -36474,10 +36474,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @param string|array $args {
  *     Title attribute arguments. Optional.
  *
- *     @type string  $before Markup to prepend to the title. Default empty.
- *     @type string  $after  Markup to append to the title. Default empty.
- *     @type bool    $echo   Whether to echo or return the title. Default true for echo.
- *     @type WP_Post $post   Current post object to retrieve the title for.
+ * @type string  $before Markup to prepend to the title. Default empty.
+ * @type string  $after  Markup to append to the title. Default empty.
+ * @type bool    $echo   Whether to echo or return the title. Default true for echo.
+ * @type WP_Post $post   Current post object to retrieve the title for.
  * }
  * @return void|string Void if 'echo' argument is true, the title attribute if 'echo' is false.
  */
@@ -36703,23 +36703,23 @@ class WpServiceDecorator implements \WpService\WpService
  * @param string|array $args {
  *     Optional. Array or string of default arguments.
  *
- *     @type string       $before           HTML or text to prepend to each link. Default is `<p> Pages:`.
- *     @type string       $after            HTML or text to append to each link. Default is `</p>`.
- *     @type string       $link_before      HTML or text to prepend to each link, inside the `<a>` tag.
+ * @type string       $before           HTML or text to prepend to each link. Default is `<p> Pages:`.
+ * @type string       $after            HTML or text to append to each link. Default is `</p>`.
+ * @type string       $link_before      HTML or text to prepend to each link, inside the `<a>` tag.
  *                                          Also prepended to the current item, which is not linked. Default empty.
- *     @type string       $link_after       HTML or text to append to each Pages link inside the `<a>` tag.
+ * @type string       $link_after       HTML or text to append to each Pages link inside the `<a>` tag.
  *                                          Also appended to the current item, which is not linked. Default empty.
- *     @type string       $aria_current     The value for the aria-current attribute. Possible values are 'page',
+ * @type string       $aria_current     The value for the aria-current attribute. Possible values are 'page',
  *                                          'step', 'location', 'date', 'time', 'true', 'false'. Default is 'page'.
- *     @type string       $next_or_number   Indicates whether page numbers should be used. Valid values are number
+ * @type string       $next_or_number   Indicates whether page numbers should be used. Valid values are number
  *                                          and next. Default is 'number'.
- *     @type string       $separator        Text between pagination links. Default is ' '.
- *     @type string       $nextpagelink     Link text for the next page link, if available. Default is 'Next Page'.
- *     @type string       $previouspagelink Link text for the previous page link, if available. Default is 'Previous Page'.
- *     @type string       $pagelink         Format string for page numbers. The % in the parameter string will be
+ * @type string       $separator        Text between pagination links. Default is ' '.
+ * @type string       $nextpagelink     Link text for the next page link, if available. Default is 'Next Page'.
+ * @type string       $previouspagelink Link text for the previous page link, if available. Default is 'Previous Page'.
+ * @type string       $pagelink         Format string for page numbers. The % in the parameter string will be
  *                                          replaced with the page number, so 'Page %' generates "Page 1", "Page 2", etc.
  *                                          Defaults to '%', just the page number.
- *     @type int|bool     $echo             Whether to echo or not. Accepts 1|true or 0|false. Default 1|true.
+ * @type int|bool     $echo             Whether to echo or not. Accepts 1|true or 0|false. Default 1|true.
  * }
  * @return string Formatted output in HTML.
  */
@@ -36752,20 +36752,20 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array|string $args {
  *     Optional. Array or string of arguments to generate a page dropdown. See get_pages() for additional arguments.
  *
- *     @type int          $depth                 Maximum depth. Default 0.
- *     @type int          $child_of              Page ID to retrieve child pages of. Default 0.
- *     @type int|string   $selected              Value of the option that should be selected. Default 0.
- *     @type bool|int     $echo                  Whether to echo or return the generated markup. Accepts 0, 1,
+ * @type int          $depth                 Maximum depth. Default 0.
+ * @type int          $child_of              Page ID to retrieve child pages of. Default 0.
+ * @type int|string   $selected              Value of the option that should be selected. Default 0.
+ * @type bool|int     $echo                  Whether to echo or return the generated markup. Accepts 0, 1,
  *                                               or their bool equivalents. Default 1.
- *     @type string       $name                  Value for the 'name' attribute of the select element.
+ * @type string       $name                  Value for the 'name' attribute of the select element.
  *                                               Default 'page_id'.
- *     @type string       $id                    Value for the 'id' attribute of the select element.
- *     @type string       $class                 Value for the 'class' attribute of the select element. Default: none.
+ * @type string       $id                    Value for the 'id' attribute of the select element.
+ * @type string       $class                 Value for the 'class' attribute of the select element. Default: none.
  *                                               Defaults to the value of `$name`.
- *     @type string       $show_option_none      Text to display for showing no pages. Default empty (does not display).
- *     @type string       $show_option_no_change Text to display for "no change" option. Default empty (does not display).
- *     @type string       $option_none_value     Value to use when no page is selected. Default empty.
- *     @type string       $value_field           Post field used to populate the 'value' attribute of the option
+ * @type string       $show_option_none      Text to display for showing no pages. Default empty (does not display).
+ * @type string       $show_option_no_change Text to display for "no change" option. Default empty (does not display).
+ * @type string       $option_none_value     Value to use when no page is selected. Default empty.
+ * @type string       $value_field           Post field used to populate the 'value' attribute of the option
  *                                               elements. Accepts any valid post field. Default 'ID'.
  * }
  * @return string HTML dropdown list of pages.
@@ -36787,30 +36787,30 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array|string $args {
  *     Optional. Array or string of arguments to generate a list of pages. See get_pages() for additional arguments.
  *
- *     @type int          $child_of     Display only the sub-pages of a single page by ID. Default 0 (all pages).
- *     @type string       $authors      Comma-separated list of author IDs. Default empty (all authors).
- *     @type string       $date_format  PHP date format to use for the listed pages. Relies on the 'show_date' parameter.
+ * @type int          $child_of     Display only the sub-pages of a single page by ID. Default 0 (all pages).
+ * @type string       $authors      Comma-separated list of author IDs. Default empty (all authors).
+ * @type string       $date_format  PHP date format to use for the listed pages. Relies on the 'show_date' parameter.
  *                                      Default is the value of 'date_format' option.
- *     @type int          $depth        Number of levels in the hierarchy of pages to include in the generated list.
+ * @type int          $depth        Number of levels in the hierarchy of pages to include in the generated list.
  *                                      Accepts -1 (any depth), 0 (all pages), 1 (top-level pages only), and n (pages to
  *                                      the given n depth). Default 0.
- *     @type bool         $echo         Whether or not to echo the list of pages. Default true.
- *     @type string       $exclude      Comma-separated list of page IDs to exclude. Default empty.
- *     @type array        $include      Comma-separated list of page IDs to include. Default empty.
- *     @type string       $link_after   Text or HTML to follow the page link label. Default null.
- *     @type string       $link_before  Text or HTML to precede the page link label. Default null.
- *     @type string       $post_type    Post type to query for. Default 'page'.
- *     @type string|array $post_status  Comma-separated list or array of post statuses to include. Default 'publish'.
- *     @type string       $show_date    Whether to display the page publish or modified date for each page. Accepts
+ * @type bool         $echo         Whether or not to echo the list of pages. Default true.
+ * @type string       $exclude      Comma-separated list of page IDs to exclude. Default empty.
+ * @type array        $include      Comma-separated list of page IDs to include. Default empty.
+ * @type string       $link_after   Text or HTML to follow the page link label. Default null.
+ * @type string       $link_before  Text or HTML to precede the page link label. Default null.
+ * @type string       $post_type    Post type to query for. Default 'page'.
+ * @type string|array $post_status  Comma-separated list or array of post statuses to include. Default 'publish'.
+ * @type string       $show_date    Whether to display the page publish or modified date for each page. Accepts
  *                                      'modified' or any other value. An empty value hides the date. Default empty.
- *     @type string       $sort_column  Comma-separated list of column names to sort the pages by. Accepts 'post_author',
+ * @type string       $sort_column  Comma-separated list of column names to sort the pages by. Accepts 'post_author',
  *                                      'post_date', 'post_title', 'post_name', 'post_modified', 'post_modified_gmt',
  *                                      'menu_order', 'post_parent', 'ID', 'rand', or 'comment_count'. Default 'post_title'.
- *     @type string       $title_li     List heading. Passing a null or empty value will result in no heading, and the list
+ * @type string       $title_li     List heading. Passing a null or empty value will result in no heading, and the list
  *                                      will not be wrapped with unordered list `<ul>` tags. Default 'Pages'.
- *     @type string       $item_spacing Whether to preserve whitespace within the menu's HTML. Accepts 'preserve' or 'discard'.
+ * @type string       $item_spacing Whether to preserve whitespace within the menu's HTML. Accepts 'preserve' or 'discard'.
  *                                      Default 'preserve'.
- *     @type Walker       $walker       Walker instance to use for listing pages. Default empty which results in a
+ * @type Walker       $walker       Walker instance to use for listing pages. Default empty which results in a
  *                                      Walker_Page instance being used.
  * }
  * @return void|string Void if 'echo' argument is true, HTML list of pages if 'echo' is false.
@@ -36832,22 +36832,22 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array|string $args {
  *     Optional. Array or string of arguments to generate a page menu. See wp_list_pages() for additional arguments.
  *
- *     @type string          $sort_column  How to sort the list of pages. Accepts post column names.
+ * @type string          $sort_column  How to sort the list of pages. Accepts post column names.
  *                                         Default 'menu_order, post_title'.
- *     @type string          $menu_id      ID for the div containing the page list. Default is empty string.
- *     @type string          $menu_class   Class to use for the element containing the page list. Default 'menu'.
- *     @type string          $container    Element to use for the element containing the page list. Default 'div'.
- *     @type bool            $echo         Whether to echo the list or return it. Accepts true (echo) or false (return).
+ * @type string          $menu_id      ID for the div containing the page list. Default is empty string.
+ * @type string          $menu_class   Class to use for the element containing the page list. Default 'menu'.
+ * @type string          $container    Element to use for the element containing the page list. Default 'div'.
+ * @type bool            $echo         Whether to echo the list or return it. Accepts true (echo) or false (return).
  *                                         Default true.
- *     @type int|bool|string $show_home    Whether to display the link to the home page. Can just enter the text
+ * @type int|bool|string $show_home    Whether to display the link to the home page. Can just enter the text
  *                                         you'd like shown for the home link. 1|true defaults to 'Home'.
- *     @type string          $link_before  The HTML or text to prepend to $show_home text. Default empty.
- *     @type string          $link_after   The HTML or text to append to $show_home text. Default empty.
- *     @type string          $before       The HTML or text to prepend to the menu. Default is '<ul>'.
- *     @type string          $after        The HTML or text to append to the menu. Default is '</ul>'.
- *     @type string          $item_spacing Whether to preserve whitespace within the menu's HTML. Accepts 'preserve'
+ * @type string          $link_before  The HTML or text to prepend to $show_home text. Default empty.
+ * @type string          $link_after   The HTML or text to append to $show_home text. Default empty.
+ * @type string          $before       The HTML or text to prepend to the menu. Default is '<ul>'.
+ * @type string          $after        The HTML or text to append to the menu. Default is '</ul>'.
+ * @type string          $item_spacing Whether to preserve whitespace within the menu's HTML. Accepts 'preserve'
  *                                         or 'discard'. Default 'discard'.
- *     @type Walker          $walker       Walker instance to use for listing pages. Default empty which results in a
+ * @type Walker          $walker       Walker instance to use for listing pages. Default empty which results in a
  *                                         Walker_Page instance being used.
  * }
  * @return void|string Void if 'echo' argument is true, HTML menu if 'echo' is false.
@@ -37310,9 +37310,9 @@ class WpServiceDecorator implements \WpService\WpService
  * @return string[] {
  *     Extended entry info.
  *
- *     @type string $main      Content before the more tag.
- *     @type string $extended  Content after the more tag.
- *     @type string $more_text Custom read more text, or empty string.
+ * @type string $main      Content before the more tag.
+ * @type string $extended  Content after the more tag.
+ * @type string $more_text Custom read more text, or empty string.
  * }
  */
     public function getExtended(string $post): array
@@ -37455,34 +37455,34 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array|string $args {
  *     Optional. Array or string of post status arguments.
  *
- *     @type bool|string $label                     A descriptive name for the post status marked
+ * @type bool|string $label                     A descriptive name for the post status marked
  *                                                  for translation. Defaults to value of $post_status.
- *     @type array|false $label_count               Nooped plural text from _n_noop() to provide the singular
+ * @type array|false $label_count               Nooped plural text from _n_noop() to provide the singular
  *                                                  and plural forms of the label for counts. Default false
  *                                                  which means the `$label` argument will be used for both
  *                                                  the singular and plural forms of this label.
- *     @type bool        $exclude_from_search       Whether to exclude posts with this post status
+ * @type bool        $exclude_from_search       Whether to exclude posts with this post status
  *                                                  from search results. Default is value of $internal.
- *     @type bool        $_builtin                  Whether the status is built-in. Core-use only.
+ * @type bool        $_builtin                  Whether the status is built-in. Core-use only.
  *                                                  Default false.
- *     @type bool        $public                    Whether posts of this status should be shown
+ * @type bool        $public                    Whether posts of this status should be shown
  *                                                  in the front end of the site. Default false.
- *     @type bool        $internal                  Whether the status is for internal use only.
+ * @type bool        $internal                  Whether the status is for internal use only.
  *                                                  Default false.
- *     @type bool        $protected                 Whether posts with this status should be protected.
+ * @type bool        $protected                 Whether posts with this status should be protected.
  *                                                  Default false.
- *     @type bool        $private                   Whether posts with this status should be private.
+ * @type bool        $private                   Whether posts with this status should be private.
  *                                                  Default false.
- *     @type bool        $publicly_queryable        Whether posts with this status should be publicly-
+ * @type bool        $publicly_queryable        Whether posts with this status should be publicly-
  *                                                  queryable. Default is value of $public.
- *     @type bool        $show_in_admin_all_list    Whether to include posts in the edit listing for
+ * @type bool        $show_in_admin_all_list    Whether to include posts in the edit listing for
  *                                                  their post type. Default is the opposite value
  *                                                  of $internal.
- *     @type bool        $show_in_admin_status_list Show in the list of statuses with post counts at
+ * @type bool        $show_in_admin_status_list Show in the list of statuses with post counts at
  *                                                  the top of the edit listings,
  *                                                  e.g. All (12) | Published (9) | My Custom Status (2)
  *                                                  Default is the opposite value of $internal.
- *     @type bool        $date_floating             Whether the post has a floating creation date.
+ * @type bool        $date_floating             Whether the post has a floating creation date.
  *                                                  Default to false.
  * }
  * @return object
@@ -37645,68 +37645,68 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array|string $args {
  *     Array or string of arguments for registering a post type.
  *
- *     @type string       $label                           Name of the post type shown in the menu. Usually plural.
+ * @type string       $label                           Name of the post type shown in the menu. Usually plural.
  *                                                         Default is value of $labels['name'].
- *     @type string[]     $labels                          An array of labels for this post type. If not set, post
+ * @type string[]     $labels                          An array of labels for this post type. If not set, post
  *                                                         labels are inherited for non-hierarchical types and page
  *                                                         labels for hierarchical ones. See get_post_type_labels() for a full
  *                                                         list of supported labels.
- *     @type string       $description                     A short descriptive summary of what the post type is.
+ * @type string       $description                     A short descriptive summary of what the post type is.
  *                                                         Default empty.
- *     @type bool         $public                          Whether a post type is intended for use publicly either via
+ * @type bool         $public                          Whether a post type is intended for use publicly either via
  *                                                         the admin interface or by front-end users. While the default
  *                                                         settings of $exclude_from_search, $publicly_queryable, $show_ui,
  *                                                         and $show_in_nav_menus are inherited from $public, each does not
  *                                                         rely on this relationship and controls a very specific intention.
  *                                                         Default false.
- *     @type bool         $hierarchical                    Whether the post type is hierarchical (e.g. page). Default false.
- *     @type bool         $exclude_from_search             Whether to exclude posts with this post type from front end search
+ * @type bool         $hierarchical                    Whether the post type is hierarchical (e.g. page). Default false.
+ * @type bool         $exclude_from_search             Whether to exclude posts with this post type from front end search
  *                                                         results. Default is the opposite value of $public.
- *     @type bool         $publicly_queryable              Whether queries can be performed on the front end for the post type
+ * @type bool         $publicly_queryable              Whether queries can be performed on the front end for the post type
  *                                                         as part of parse_request(). Endpoints would include:
  *                                                          * ?post_type={post_type_key}
  *                                                          * ?{post_type_key}={single_post_slug}
  *                                                          * ?{post_type_query_var}={single_post_slug}
  *                                                         If not set, the default is inherited from $public.
- *     @type bool         $show_ui                         Whether to generate and allow a UI for managing this post type in the
+ * @type bool         $show_ui                         Whether to generate and allow a UI for managing this post type in the
  *                                                         admin. Default is value of $public.
- *     @type bool|string  $show_in_menu                    Where to show the post type in the admin menu. To work, $show_ui
+ * @type bool|string  $show_in_menu                    Where to show the post type in the admin menu. To work, $show_ui
  *                                                         must be true. If true, the post type is shown in its own top level
  *                                                         menu. If false, no menu is shown. If a string of an existing top
  *                                                         level menu ('tools.php' or 'edit.php?post_type=page', for example), the
  *                                                         post type will be placed as a sub-menu of that.
  *                                                         Default is value of $show_ui.
- *     @type bool         $show_in_nav_menus               Makes this post type available for selection in navigation menus.
+ * @type bool         $show_in_nav_menus               Makes this post type available for selection in navigation menus.
  *                                                         Default is value of $public.
- *     @type bool         $show_in_admin_bar               Makes this post type available via the admin bar. Default is value
+ * @type bool         $show_in_admin_bar               Makes this post type available via the admin bar. Default is value
  *                                                         of $show_in_menu.
- *     @type bool         $show_in_rest                    Whether to include the post type in the REST API. Set this to true
+ * @type bool         $show_in_rest                    Whether to include the post type in the REST API. Set this to true
  *                                                         for the post type to be available in the block editor.
- *     @type string       $rest_base                       To change the base URL of REST API route. Default is $post_type.
- *     @type string       $rest_namespace                  To change the namespace URL of REST API route. Default is wp/v2.
- *     @type string       $rest_controller_class           REST API controller class name. Default is 'WP_REST_Posts_Controller'.
- *     @type string|bool  $autosave_rest_controller_class  REST API controller class name. Default is 'WP_REST_Autosaves_Controller'.
- *     @type string|bool  $revisions_rest_controller_class REST API controller class name. Default is 'WP_REST_Revisions_Controller'.
- *     @type bool         $late_route_registration         A flag to direct the REST API controllers for autosave / revisions
+ * @type string       $rest_base                       To change the base URL of REST API route. Default is $post_type.
+ * @type string       $rest_namespace                  To change the namespace URL of REST API route. Default is wp/v2.
+ * @type string       $rest_controller_class           REST API controller class name. Default is 'WP_REST_Posts_Controller'.
+ * @type string|bool  $autosave_rest_controller_class  REST API controller class name. Default is 'WP_REST_Autosaves_Controller'.
+ * @type string|bool  $revisions_rest_controller_class REST API controller class name. Default is 'WP_REST_Revisions_Controller'.
+ * @type bool         $late_route_registration         A flag to direct the REST API controllers for autosave / revisions
  *                                                         should be registered before/after the post type controller.
- *     @type int          $menu_position                   The position in the menu order the post type should appear. To work,
+ * @type int          $menu_position                   The position in the menu order the post type should appear. To work,
  *                                                         $show_in_menu must be true. Default null (at the bottom).
- *     @type string       $menu_icon                       The URL to the icon to be used for this menu. Pass a base64-encoded
+ * @type string       $menu_icon                       The URL to the icon to be used for this menu. Pass a base64-encoded
  *                                                         SVG using a data URI, which will be colored to match the color scheme
  *                                                         -- this should begin with 'data:image/svg+xml;base64,'. Pass the name
  *                                                         of a Dashicons helper class to use a font icon, e.g.
  *                                                        'dashicons-chart-pie'. Pass 'none' to leave div.wp-menu-image empty
  *                                                         so an icon can be added via CSS. Defaults to use the posts icon.
- *     @type string|array $capability_type                 The string to use to build the read, edit, and delete capabilities.
+ * @type string|array $capability_type                 The string to use to build the read, edit, and delete capabilities.
  *                                                         May be passed as an array to allow for alternative plurals when using
  *                                                         this argument as a base to construct the capabilities, e.g.
  *                                                         array('story', 'stories'). Default 'post'.
- *     @type string[]     $capabilities                    Array of capabilities for this post type. $capability_type is used
+ * @type string[]     $capabilities                    Array of capabilities for this post type. $capability_type is used
  *                                                         as a base to construct capabilities by default.
  *                                                         See get_post_type_capabilities().
- *     @type bool         $map_meta_cap                    Whether to use the internal default meta capability handling.
+ * @type bool         $map_meta_cap                    Whether to use the internal default meta capability handling.
  *                                                         Default false.
- *     @type array|false  $supports                        Core feature(s) the post type supports. Serves as an alias for calling
+ * @type array|false  $supports                        Core feature(s) the post type supports. Serves as an alias for calling
  *                                                         add_post_type_support() directly. Core features include 'title',
  *                                                         'editor', 'comments', 'revisions', 'trackbacks', 'author', 'excerpt',
  *                                                         'page-attributes', 'thumbnail', 'custom-fields', and 'post-formats'.
@@ -37720,37 +37720,37 @@ class WpServiceDecorator implements \WpService\WpService
  *                                                         Example: `array( 'my_feature', array( 'field' => 'value' ) )`.
  *                                                         If false, no features will be added.
  *                                                         Default is an array containing 'title' and 'editor'.
- *     @type callable     $register_meta_box_cb            Provide a callback function that sets up the meta boxes for the
+ * @type callable     $register_meta_box_cb            Provide a callback function that sets up the meta boxes for the
  *                                                         edit form. Do remove_meta_box() and add_meta_box() calls in the
  *                                                         callback. Default null.
- *     @type string[]     $taxonomies                      An array of taxonomy identifiers that will be registered for the
+ * @type string[]     $taxonomies                      An array of taxonomy identifiers that will be registered for the
  *                                                         post type. Taxonomies can be registered later with register_taxonomy()
  *                                                         or register_taxonomy_for_object_type().
  *                                                         Default empty array.
- *     @type bool|string  $has_archive                     Whether there should be post type archives, or if a string, the
+ * @type bool|string  $has_archive                     Whether there should be post type archives, or if a string, the
  *                                                         archive slug to use. Will generate the proper rewrite rules if
  *                                                         $rewrite is enabled. Default false.
- *     @type bool|array   $rewrite                         {
+ * @type bool|array   $rewrite                         {
  *         Triggers the handling of rewrites for this post type. To prevent rewrite, set to false.
  *         Defaults to true, using $post_type as slug. To specify rewrite rules, an array can be
  *         passed with any of these keys:
  *
- *         @type string $slug       Customize the permastruct slug. Defaults to $post_type key.
- *         @type bool   $with_front Whether the permastruct should be prepended with WP_Rewrite::$front.
+ * @type string $slug       Customize the permastruct slug. Defaults to $post_type key.
+ * @type bool   $with_front Whether the permastruct should be prepended with WP_Rewrite::$front.
  *                                  Default true.
- *         @type bool   $feeds      Whether the feed permastruct should be built for this post type.
+ * @type bool   $feeds      Whether the feed permastruct should be built for this post type.
  *                                  Default is value of $has_archive.
- *         @type bool   $pages      Whether the permastruct should provide for pagination. Default true.
- *         @type int    $ep_mask    Endpoint mask to assign. If not specified and permalink_epmask is set,
+ * @type bool   $pages      Whether the permastruct should provide for pagination. Default true.
+ * @type int    $ep_mask    Endpoint mask to assign. If not specified and permalink_epmask is set,
  *                                  inherits from $permalink_epmask. If not specified and permalink_epmask
  *                                  is not set, defaults to EP_PERMALINK.
  *     }
- *     @type string|bool  $query_var                      Sets the query_var key for this post type. Defaults to $post_type
+ * @type string|bool  $query_var                      Sets the query_var key for this post type. Defaults to $post_type
  *                                                        key. If false, a post type cannot be loaded at
  *                                                        ?{query_var}={post_slug}. If specified as a string, the query
  *                                                        ?{query_var_string}={post_slug} will be valid.
- *     @type bool         $can_export                     Whether to allow this post type to be exported. Default true.
- *     @type bool         $delete_with_user               Whether to delete posts of this type when deleting a user.
+ * @type bool         $can_export                     Whether to allow this post type to be exported. Default true.
+ * @type bool         $delete_with_user               Whether to delete posts of this type when deleting a user.
  *                                                          * If true, posts of this type belonging to the user will be moved
  *                                                            to Trash when the user is deleted.
  *                                                          * If false, posts of this type belonging to the user will *not*
@@ -37758,18 +37758,18 @@ class WpServiceDecorator implements \WpService\WpService
  *                                                          * If not set (the default), posts are trashed if post type supports
  *                                                            the 'author' feature. Otherwise posts are not trashed or deleted.
  *                                                        Default null.
- *     @type array        $template                       Array of blocks to use as the default initial state for an editor
+ * @type array        $template                       Array of blocks to use as the default initial state for an editor
  *                                                        session. Each item should be an array containing block name and
  *                                                        optional attributes. Default empty array.
- *     @type string|false $template_lock                  Whether the block template should be locked if $template is set.
+ * @type string|false $template_lock                  Whether the block template should be locked if $template is set.
  *                                                        * If set to 'all', the user is unable to insert new blocks,
  *                                                          move existing blocks and delete blocks.
  *                                                       * If set to 'insert', the user is able to move existing blocks
  *                                                         but is unable to insert new blocks and delete blocks.
  *                                                         Default false.
- *     @type bool         $_builtin                     FOR INTERNAL USE ONLY! True if this post type is a native or
+ * @type bool         $_builtin                     FOR INTERNAL USE ONLY! True if this post type is a native or
  *                                                      "built-in" post_type. Default false.
- *     @type string       $_edit_link                   FOR INTERNAL USE ONLY! URL segment to use for edit link of
+ * @type string       $_edit_link                   FOR INTERNAL USE ONLY! URL segment to use for edit link of
  *                                                      this post type. Default 'post.php?post=%d'.
  * }
  * @return \WP_Post_Type|\WP_Error The registered post type object on success,
@@ -38044,14 +38044,14 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Arguments to retrieve posts. See WP_Query::parse_query() for all available arguments.
  *
- *     @type int        $numberposts      Total number of posts to retrieve. Is an alias of `$posts_per_page`
+ * @type int        $numberposts      Total number of posts to retrieve. Is an alias of `$posts_per_page`
  *                                        in WP_Query. Accepts -1 for all. Default 5.
- *     @type int|string $category         Category ID or comma-separated list of IDs (this or any children).
+ * @type int|string $category         Category ID or comma-separated list of IDs (this or any children).
  *                                        Is an alias of `$cat` in WP_Query. Default 0.
- *     @type int[]      $include          An array of post IDs to retrieve, sticky posts will be included.
+ * @type int[]      $include          An array of post IDs to retrieve, sticky posts will be included.
  *                                        Is an alias of `$post__in` in WP_Query. Default empty array.
- *     @type int[]      $exclude          An array of post IDs not to retrieve. Default empty array.
- *     @type bool       $suppress_filters Whether to suppress filters. Default true.
+ * @type int[]      $exclude          An array of post IDs not to retrieve. Default empty array.
+ * @type bool       $suppress_filters Whether to suppress filters. Default true.
  * }
  * @return WP_Post[]|int[] Array of post objects or post IDs.
  */
@@ -38548,7 +38548,7 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args     {
  *     Optional. Term query parameters. See WP_Term_Query::__construct() for supported arguments.
  *
- *     @type string $fields Term fields to retrieve. Default 'all'.
+ * @type string $fields Term fields to retrieve. Default 'all'.
  * }
  * @return array|\WP_Error Array of WP_Term objects on success or empty array if no terms were found.
  *                        WP_Error object if `$taxonomy` doesn't exist.
@@ -38596,40 +38596,40 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $postarr {
  *     An array of elements that make up a post to update or insert.
  *
- *     @type int    $ID                    The post ID. If equal to something other than 0,
+ * @type int    $ID                    The post ID. If equal to something other than 0,
  *                                         the post with that ID will be updated. Default 0.
- *     @type int    $post_author           The ID of the user who added the post. Default is
+ * @type int    $post_author           The ID of the user who added the post. Default is
  *                                         the current user ID.
- *     @type string $post_date             The date of the post. Default is the current time.
- *     @type string $post_date_gmt         The date of the post in the GMT timezone. Default is
+ * @type string $post_date             The date of the post. Default is the current time.
+ * @type string $post_date_gmt         The date of the post in the GMT timezone. Default is
  *                                         the value of `$post_date`.
- *     @type string $post_content          The post content. Default empty.
- *     @type string $post_content_filtered The filtered post content. Default empty.
- *     @type string $post_title            The post title. Default empty.
- *     @type string $post_excerpt          The post excerpt. Default empty.
- *     @type string $post_status           The post status. Default 'draft'.
- *     @type string $post_type             The post type. Default 'post'.
- *     @type string $comment_status        Whether the post can accept comments. Accepts 'open' or 'closed'.
+ * @type string $post_content          The post content. Default empty.
+ * @type string $post_content_filtered The filtered post content. Default empty.
+ * @type string $post_title            The post title. Default empty.
+ * @type string $post_excerpt          The post excerpt. Default empty.
+ * @type string $post_status           The post status. Default 'draft'.
+ * @type string $post_type             The post type. Default 'post'.
+ * @type string $comment_status        Whether the post can accept comments. Accepts 'open' or 'closed'.
  *                                         Default is the value of 'default_comment_status' option.
- *     @type string $ping_status           Whether the post can accept pings. Accepts 'open' or 'closed'.
+ * @type string $ping_status           Whether the post can accept pings. Accepts 'open' or 'closed'.
  *                                         Default is the value of 'default_ping_status' option.
- *     @type string $post_password         The password to access the post. Default empty.
- *     @type string $post_name             The post name. Default is the sanitized post title
+ * @type string $post_password         The password to access the post. Default empty.
+ * @type string $post_name             The post name. Default is the sanitized post title
  *                                         when creating a new post.
- *     @type string $to_ping               Space or carriage return-separated list of URLs to ping.
+ * @type string $to_ping               Space or carriage return-separated list of URLs to ping.
  *                                         Default empty.
- *     @type string $pinged                Space or carriage return-separated list of URLs that have
+ * @type string $pinged                Space or carriage return-separated list of URLs that have
  *                                         been pinged. Default empty.
- *     @type int    $post_parent           Set this for the post it belongs to, if any. Default 0.
- *     @type int    $menu_order            The order the post should be displayed in. Default 0.
- *     @type string $post_mime_type        The mime type of the post. Default empty.
- *     @type string $guid                  Global Unique ID for referencing the post. Default empty.
- *     @type int    $import_id             The post ID to be used when inserting a new post.
+ * @type int    $post_parent           Set this for the post it belongs to, if any. Default 0.
+ * @type int    $menu_order            The order the post should be displayed in. Default 0.
+ * @type string $post_mime_type        The mime type of the post. Default empty.
+ * @type string $guid                  Global Unique ID for referencing the post. Default empty.
+ * @type int    $import_id             The post ID to be used when inserting a new post.
  *                                         If specified, must not match any existing post ID. Default 0.
- *     @type int[]  $post_category         Array of category IDs.
+ * @type int[]  $post_category         Array of category IDs.
  *                                         Defaults to value of the 'default_category' option.
- *     @type array  $tags_input            Array of tag names, slugs, or IDs. Default empty.
- *     @type array  $tax_input             An array of taxonomy terms keyed by their taxonomy name.
+ * @type array  $tags_input            Array of tag names, slugs, or IDs. Default empty.
+ * @type array  $tax_input             An array of taxonomy terms keyed by their taxonomy name.
  *                                         If the taxonomy is hierarchical, the term list needs to be
  *                                         either an array of term IDs or a comma-separated string of IDs.
  *                                         If the taxonomy is non-hierarchical, the term list can be an array
@@ -38637,8 +38637,8 @@ class WpServiceDecorator implements \WpService\WpService
  *                                         of names or slugs. This is because, in hierarchical taxonomy,
  *                                         child terms can have the same names with different parent terms,
  *                                         so the only way to connect them is using ID. Default empty.
- *     @type array  $meta_input            Array of post meta values keyed by their post meta key. Default empty.
- *     @type string $page_template         Page template to use.
+ * @type array  $meta_input            Array of post meta values keyed by their post meta key. Default empty.
+ * @type string $page_template         Page template to use.
  * }
  * @param bool $wpError         Optional. Whether to return a WP_Error on failure. Default false.
  * @param bool $fireAfterHooks Optional. Whether to fire the after insert hooks. Default true.
@@ -39000,34 +39000,34 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array|string $args {
  *     Optional. Array or string of arguments to retrieve pages.
  *
- *     @type int          $child_of     Page ID to return child and grandchild pages of. Note: The value
+ * @type int          $child_of     Page ID to return child and grandchild pages of. Note: The value
  *                                      of `$hierarchical` has no bearing on whether `$child_of` returns
  *                                      hierarchical results. Default 0, or no restriction.
- *     @type string       $sort_order   How to sort retrieved pages. Accepts 'ASC', 'DESC'. Default 'ASC'.
- *     @type string       $sort_column  What columns to sort pages by, comma-separated. Accepts 'post_author',
+ * @type string       $sort_order   How to sort retrieved pages. Accepts 'ASC', 'DESC'. Default 'ASC'.
+ * @type string       $sort_column  What columns to sort pages by, comma-separated. Accepts 'post_author',
  *                                      'post_date', 'post_title', 'post_name', 'post_modified', 'menu_order',
  *                                      'post_modified_gmt', 'post_parent', 'ID', 'rand', 'comment_count'.
  *                                      'post_' can be omitted for any values that start with it.
  *                                      Default 'post_title'.
- *     @type bool         $hierarchical Whether to return pages hierarchically. If false in conjunction with
+ * @type bool         $hierarchical Whether to return pages hierarchically. If false in conjunction with
  *                                      `$child_of` also being false, both arguments will be disregarded.
  *                                      Default true.
- *     @type int[]        $exclude      Array of page IDs to exclude. Default empty array.
- *     @type int[]        $include      Array of page IDs to include. Cannot be used with `$child_of`,
+ * @type int[]        $exclude      Array of page IDs to exclude. Default empty array.
+ * @type int[]        $include      Array of page IDs to include. Cannot be used with `$child_of`,
  *                                      `$parent`, `$exclude`, `$meta_key`, `$meta_value`, or `$hierarchical`.
  *                                      Default empty array.
- *     @type string       $meta_key     Only include pages with this meta key. Default empty.
- *     @type string       $meta_value   Only include pages with this meta value. Requires `$meta_key`.
+ * @type string       $meta_key     Only include pages with this meta key. Default empty.
+ * @type string       $meta_value   Only include pages with this meta value. Requires `$meta_key`.
  *                                      Default empty.
- *     @type string       $authors      A comma-separated list of author IDs. Default empty.
- *     @type int          $parent       Page ID to return direct children of. Default -1, or no restriction.
- *     @type string|int[] $exclude_tree Comma-separated string or array of page IDs to exclude.
+ * @type string       $authors      A comma-separated list of author IDs. Default empty.
+ * @type int          $parent       Page ID to return direct children of. Default -1, or no restriction.
+ * @type string|int[] $exclude_tree Comma-separated string or array of page IDs to exclude.
  *                                      Default empty array.
- *     @type int          $number       The number of pages to return. Default 0, or all pages.
- *     @type int          $offset       The number of pages to skip before returning. Requires `$number`.
+ * @type int          $number       The number of pages to return. Default 0, or all pages.
+ * @type int          $offset       The number of pages to skip before returning. Requires `$number`.
  *                                      Default 0.
- *     @type string       $post_type    The post type to query. Default 'page'.
- *     @type string|array $post_status  A comma-separated list or array of post statuses to include.
+ * @type string       $post_type    The post type to query. Default 'page'.
+ * @type string|array $post_status  A comma-separated list or array of post statuses to include.
  *                                      Default 'publish'.
  * }
  * @return WP_Post[]|false Array of pages (or hierarchical post type items). Boolean false if the
@@ -39136,13 +39136,13 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array|false {
  *     Attachment metadata. False on failure.
  *
- *     @type int    $width      The width of the attachment.
- *     @type int    $height     The height of the attachment.
- *     @type string $file       The file path relative to `wp-content/uploads`.
- *     @type array  $sizes      Keys are size slugs, each value is an array containing
+ * @type int    $width      The width of the attachment.
+ * @type int    $height     The height of the attachment.
+ * @type string $file       The file path relative to `wp-content/uploads`.
+ * @type array  $sizes      Keys are size slugs, each value is an array containing
  *                              'file', 'width', 'height', and 'mime-type'.
- *     @type array  $image_meta Image metadata.
- *     @type int    $filesize   File size of the attachment.
+ * @type array  $image_meta Image metadata.
+ * @type int    $filesize   File size of the attachment.
  * }
  */
     public function wpGetAttachmentMetadata(int $attachmentId = 0, bool $unfiltered = false): array|false
@@ -40500,13 +40500,13 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. An array of arguments used to handle the registered field.
  *
- *     @type callable|null $get_callback    Optional. The callback function used to retrieve the field value. Default is
+ * @type callable|null $get_callback    Optional. The callback function used to retrieve the field value. Default is
  *                                          'null', the field will not be returned in the response. The function will
  *                                          be passed the prepared object data.
- *     @type callable|null $update_callback Optional. The callback function used to set and update the field value. Default
+ * @type callable|null $update_callback Optional. The callback function used to set and update the field value. Default
  *                                          is 'null', the value cannot be set or updated. The function will be passed
  *                                          the model object, like WP_Post.
- *     @type array|null $schema             Optional. The schema for this field.
+ * @type array|null $schema             Optional. The schema for this field.
  *                                          Default is 'null', no schema entry will be returned.
  * }
  */
@@ -40976,8 +40976,8 @@ class WpServiceDecorator implements \WpService\WpService
  *     Local and UTC datetime strings, in MySQL datetime format (Y-m-d H:i:s),
  *     null on failure.
  *
- *     @type string $0 Local datetime string.
- *     @type string $1 UTC datetime string.
+ * @type string $0 Local datetime string.
+ * @type string $1 UTC datetime string.
  * }
  */
     public function restGetDateWithGmt(string $date, bool $isUtc = false): array|null
@@ -41812,8 +41812,8 @@ class WpServiceDecorator implements \WpService\WpService
  *     Returns associative array with latest revision ID and total count,
  *     or a WP_Error if the post does not exist or revisions are not enabled.
  *
- *     @type int $latest_id The latest revision post ID or 0 if no revisions exist.
- *     @type int $count     The total count of revisions for the given post.
+ * @type int $latest_id The latest revision post ID or 0 if no revisions exist.
+ * @type int $count     The total count of revisions for the given post.
  * }
  */
     public function wpGetLatestRevisionIdAndTotalCount(int|\WP_Post $post = 0): array|\WP_Error
@@ -42814,9 +42814,9 @@ class WpServiceDecorator implements \WpService\WpService
  *     Optional. An array of options to pass to wp_style_engine_get_stylesheet_from_context().
  *     Default empty array.
  *
- *     @type bool $optimize Whether to optimize the CSS output, e.g., combine rules.
+ * @type bool $optimize Whether to optimize the CSS output, e.g., combine rules.
  *                          Default false.
- *     @type bool $prettify Whether to add new lines and indents to output.
+ * @type bool $prettify Whether to add new lines and indents to output.
  *                          Default to whether the `SCRIPT_DEBUG` constant is defined.
  * }
  */
@@ -42837,12 +42837,12 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args       {
  *     An array of arguments. See wp_register_style() for full information about each argument.
  *
- *     @type string           $handle The handle for the stylesheet.
- *     @type string|false     $src    The source URL of the stylesheet.
- *     @type string[]         $deps   Array of registered stylesheet handles this stylesheet depends on.
- *     @type string|bool|null $ver    Stylesheet version number.
- *     @type string           $media  The media for which this stylesheet has been defined.
- *     @type string|null      $path   Absolute path to the stylesheet, so that it can potentially be inlined.
+ * @type string           $handle The handle for the stylesheet.
+ * @type string|false     $src    The source URL of the stylesheet.
+ * @type string[]         $deps   Array of registered stylesheet handles this stylesheet depends on.
+ * @type string|bool|null $ver    Stylesheet version number.
+ * @type string           $media  The media for which this stylesheet has been defined.
+ * @type string|null      $path   Absolute path to the stylesheet, so that it can potentially be inlined.
  * }
  */
     public function wpEnqueueBlockStyle(string $blockName, array $args): void
@@ -42904,15 +42904,15 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $deps    {
  *                                       Optional. List of dependencies.
  *
- *                                       @type string|array ...$0 {
+ * @type string|array ...$0 {
  *                                           An array of script module identifiers of the dependencies of this script
  *                                           module. The dependencies can be strings or arrays. If they are arrays,
  *                                           they need an `id` key with the script module identifier, and can contain
  *                                           an `import` key with either `static` or `dynamic`. By default,
  *                                           dependencies that don't contain an `import` key are considered static.
  *
- *                                           @type string $id     The script module identifier.
- *                                           @type string $import Optional. Import type. May be either `static` or
+ * @type string $id     The script module identifier.
+ * @type string $import Optional. Import type. May be either `static` or
  *                                                                `dynamic`. Defaults to `static`.
  *                                       }
  *                                   }
@@ -42941,15 +42941,15 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $deps    {
  *                                       Optional. List of dependencies.
  *
- *                                       @type string|array ...$0 {
+ * @type string|array ...$0 {
  *                                           An array of script module identifiers of the dependencies of this script
  *                                           module. The dependencies can be strings or arrays. If they are arrays,
  *                                           they need an `id` key with the script module identifier, and can contain
  *                                           an `import` key with either `static` or `dynamic`. By default,
  *                                           dependencies that don't contain an `import` key are considered static.
  *
- *                                           @type string $id     The script module identifier.
- *                                           @type string $import Optional. Import type. May be either `static` or
+ * @type string $id     The script module identifier.
+ * @type string $import Optional. Import type. May be either `static` or
  *                                                                `dynamic`. Defaults to `static`.
  *                                       }
  *                                   }
@@ -43346,25 +43346,25 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $options {
  *     Optional. An array of options. Default empty array.
  *
- *     @type string|null $context                    An identifier describing the origin of the style object,
+ * @type string|null $context                    An identifier describing the origin of the style object,
  *                                                   e.g. 'block-supports' or 'global-styles'. Default null.
  *                                                   When set, the style engine will attempt to store the CSS rules,
  *                                                   where a selector is also passed.
- *     @type bool        $convert_vars_to_classnames Whether to skip converting incoming CSS var patterns,
+ * @type bool        $convert_vars_to_classnames Whether to skip converting incoming CSS var patterns,
  *                                                   e.g. `var:preset|<PRESET_TYPE>|<PRESET_SLUG>`,
  *                                                   to `var( --wp--preset--* )` values. Default false.
- *     @type string      $selector                   Optional. When a selector is passed,
+ * @type string      $selector                   Optional. When a selector is passed,
  *                                                   the value of `$css` in the return value will comprise
  *                                                   a full CSS rule `$selector { ...$css_declarations }`,
  *                                                   otherwise, the value will be a concatenated string
  *                                                   of CSS declarations.
  * }
  * @return array {
- *     @type string   $css          A CSS ruleset or declarations block
+ * @type string   $css          A CSS ruleset or declarations block
  *                                  formatted to be placed in an HTML `style` attribute or tag.
- *     @type string[] $declarations An associative array of CSS definitions,
+ * @type string[] $declarations An associative array of CSS definitions,
  *                                  e.g. `array( "$property" => "$value", "$property" => "$value" )`.
- *     @type string   $classnames   Classnames separated by a space.
+ * @type string   $classnames   Classnames separated by a space.
  * }
  */
     public function wpStyleEngineGetStyles(array $blockStyles, array $options = []): array
@@ -43399,23 +43399,23 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $cssRules {
  *     Required. A collection of CSS rules.
  *
- *     @type array ...$0 {
- *         @type string   $rules_group  A parent CSS selector in the case of nested CSS,
+ * @type array ...$0 {
+ * @type string   $rules_group  A parent CSS selector in the case of nested CSS,
  *                                      or a CSS nested @rule, such as `@media (min-width: 80rem)` or `@layer module`.
- *         @type string   $selector     A CSS selector.
- *         @type string[] $declarations An associative array of CSS definitions,
+ * @type string   $selector     A CSS selector.
+ * @type string[] $declarations An associative array of CSS definitions,
  *                                      e.g. `array( "$property" => "$value", "$property" => "$value" )`.
  *     }
  * }
  * @param array $options {
  *     Optional. An array of options. Default empty array.
  *
- *     @type string|null $context  An identifier describing the origin of the style object,
+ * @type string|null $context  An identifier describing the origin of the style object,
  *                                 e.g. 'block-supports' or 'global-styles'. Default 'block-supports'.
  *                                 When set, the style engine will attempt to store the CSS rules.
- *     @type bool        $optimize Whether to optimize the CSS output, e.g. combine rules.
+ * @type bool        $optimize Whether to optimize the CSS output, e.g. combine rules.
  *                                 Default false.
- *     @type bool        $prettify Whether to add new lines and indents to output.
+ * @type bool        $prettify Whether to add new lines and indents to output.
  *                                 Defaults to whether the `SCRIPT_DEBUG` constant is defined.
  * }
  * @return string A string of compiled CSS declarations, or empty string.
@@ -43433,9 +43433,9 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $options {
  *     Optional. An array of options. Default empty array.
  *
- *     @type bool $optimize Whether to optimize the CSS output, e.g. combine rules.
+ * @type bool $optimize Whether to optimize the CSS output, e.g. combine rules.
  *                          Default false.
- *     @type bool $prettify Whether to add new lines and indents to output.
+ * @type bool $prettify Whether to add new lines and indents to output.
  *                          Defaults to whether the `SCRIPT_DEBUG` constant is defined.
  * }
  * @return string A compiled CSS string.
@@ -43593,82 +43593,82 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array|string $args        {
  *     Optional. Array or query string of arguments for registering a taxonomy.
  *
- *     @type string[]      $labels                An array of labels for this taxonomy. By default, Tag labels are
+ * @type string[]      $labels                An array of labels for this taxonomy. By default, Tag labels are
  *                                                used for non-hierarchical taxonomies, and Category labels are used
  *                                                for hierarchical taxonomies. See accepted values in
  *                                                get_taxonomy_labels(). Default empty array.
- *     @type string        $description           A short descriptive summary of what the taxonomy is for. Default empty.
- *     @type bool          $public                Whether a taxonomy is intended for use publicly either via
+ * @type string        $description           A short descriptive summary of what the taxonomy is for. Default empty.
+ * @type bool          $public                Whether a taxonomy is intended for use publicly either via
  *                                                the admin interface or by front-end users. The default settings
  *                                                of `$publicly_queryable`, `$show_ui`, and `$show_in_nav_menus`
  *                                                are inherited from `$public`.
- *     @type bool          $publicly_queryable    Whether the taxonomy is publicly queryable.
+ * @type bool          $publicly_queryable    Whether the taxonomy is publicly queryable.
  *                                                If not set, the default is inherited from `$public`
- *     @type bool          $hierarchical          Whether the taxonomy is hierarchical. Default false.
- *     @type bool          $show_ui               Whether to generate and allow a UI for managing terms in this taxonomy in
+ * @type bool          $hierarchical          Whether the taxonomy is hierarchical. Default false.
+ * @type bool          $show_ui               Whether to generate and allow a UI for managing terms in this taxonomy in
  *                                                the admin. If not set, the default is inherited from `$public`
  *                                                (default true).
- *     @type bool          $show_in_menu          Whether to show the taxonomy in the admin menu. If true, the taxonomy is
+ * @type bool          $show_in_menu          Whether to show the taxonomy in the admin menu. If true, the taxonomy is
  *                                                shown as a submenu of the object type menu. If false, no menu is shown.
  *                                                `$show_ui` must be true. If not set, default is inherited from `$show_ui`
  *                                                (default true).
- *     @type bool          $show_in_nav_menus     Makes this taxonomy available for selection in navigation menus. If not
+ * @type bool          $show_in_nav_menus     Makes this taxonomy available for selection in navigation menus. If not
  *                                                set, the default is inherited from `$public` (default true).
- *     @type bool          $show_in_rest          Whether to include the taxonomy in the REST API. Set this to true
+ * @type bool          $show_in_rest          Whether to include the taxonomy in the REST API. Set this to true
  *                                                for the taxonomy to be available in the block editor.
- *     @type string        $rest_base             To change the base url of REST API route. Default is $taxonomy.
- *     @type string        $rest_namespace        To change the namespace URL of REST API route. Default is wp/v2.
- *     @type string        $rest_controller_class REST API Controller class name. Default is 'WP_REST_Terms_Controller'.
- *     @type bool          $show_tagcloud         Whether to list the taxonomy in the Tag Cloud Widget controls. If not set,
+ * @type string        $rest_base             To change the base url of REST API route. Default is $taxonomy.
+ * @type string        $rest_namespace        To change the namespace URL of REST API route. Default is wp/v2.
+ * @type string        $rest_controller_class REST API Controller class name. Default is 'WP_REST_Terms_Controller'.
+ * @type bool          $show_tagcloud         Whether to list the taxonomy in the Tag Cloud Widget controls. If not set,
  *                                                the default is inherited from `$show_ui` (default true).
- *     @type bool          $show_in_quick_edit    Whether to show the taxonomy in the quick/bulk edit panel. It not set,
+ * @type bool          $show_in_quick_edit    Whether to show the taxonomy in the quick/bulk edit panel. It not set,
  *                                                the default is inherited from `$show_ui` (default true).
- *     @type bool          $show_admin_column     Whether to display a column for the taxonomy on its post type listing
+ * @type bool          $show_admin_column     Whether to display a column for the taxonomy on its post type listing
  *                                                screens. Default false.
- *     @type bool|callable $meta_box_cb           Provide a callback function for the meta box display. If not set,
+ * @type bool|callable $meta_box_cb           Provide a callback function for the meta box display. If not set,
  *                                                post_categories_meta_box() is used for hierarchical taxonomies, and
  *                                                post_tags_meta_box() is used for non-hierarchical. If false, no meta
  *                                                box is shown.
- *     @type callable      $meta_box_sanitize_cb  Callback function for sanitizing taxonomy data saved from a meta
+ * @type callable      $meta_box_sanitize_cb  Callback function for sanitizing taxonomy data saved from a meta
  *                                                box. If no callback is defined, an appropriate one is determined
  *                                                based on the value of `$meta_box_cb`.
- *     @type string[]      $capabilities {
+ * @type string[]      $capabilities {
  *         Array of capabilities for this taxonomy.
  *
- *         @type string $manage_terms Default 'manage_categories'.
- *         @type string $edit_terms   Default 'manage_categories'.
- *         @type string $delete_terms Default 'manage_categories'.
- *         @type string $assign_terms Default 'edit_posts'.
+ * @type string $manage_terms Default 'manage_categories'.
+ * @type string $edit_terms   Default 'manage_categories'.
+ * @type string $delete_terms Default 'manage_categories'.
+ * @type string $assign_terms Default 'edit_posts'.
  *     }
- *     @type bool|array    $rewrite {
+ * @type bool|array    $rewrite {
  *         Triggers the handling of rewrites for this taxonomy. Default true, using $taxonomy as slug. To prevent
  *         rewrite, set to false. To specify rewrite rules, an array can be passed with any of these keys:
  *
- *         @type string $slug         Customize the permastruct slug. Default `$taxonomy` key.
- *         @type bool   $with_front   Should the permastruct be prepended with WP_Rewrite::$front. Default true.
- *         @type bool   $hierarchical Either hierarchical rewrite tag or not. Default false.
- *         @type int    $ep_mask      Assign an endpoint mask. Default `EP_NONE`.
+ * @type string $slug         Customize the permastruct slug. Default `$taxonomy` key.
+ * @type bool   $with_front   Should the permastruct be prepended with WP_Rewrite::$front. Default true.
+ * @type bool   $hierarchical Either hierarchical rewrite tag or not. Default false.
+ * @type int    $ep_mask      Assign an endpoint mask. Default `EP_NONE`.
  *     }
- *     @type string|bool   $query_var             Sets the query var key for this taxonomy. Default `$taxonomy` key. If
+ * @type string|bool   $query_var             Sets the query var key for this taxonomy. Default `$taxonomy` key. If
  *                                                false, a taxonomy cannot be loaded at `?{query_var}={term_slug}`. If a
  *                                                string, the query `?{query_var}={term_slug}` will be valid.
- *     @type callable      $update_count_callback Works much like a hook, in that it will be called when the count is
+ * @type callable      $update_count_callback Works much like a hook, in that it will be called when the count is
  *                                                updated. Default _update_post_term_count() for taxonomies attached
  *                                                to post types, which confirms that the objects are published before
  *                                                counting them. Default _update_generic_term_count() for taxonomies
  *                                                attached to other object types, such as users.
- *     @type string|array  $default_term {
+ * @type string|array  $default_term {
  *         Default term to be used for the taxonomy.
  *
- *         @type string $name         Name of default term.
- *         @type string $slug         Slug for default term. Default empty.
- *         @type string $description  Description for default term. Default empty.
+ * @type string $name         Name of default term.
+ * @type string $slug         Slug for default term. Default empty.
+ * @type string $description  Description for default term. Default empty.
  *     }
- *     @type bool          $sort                  Whether terms in this taxonomy should be sorted in the order they are
+ * @type bool          $sort                  Whether terms in this taxonomy should be sorted in the order they are
  *                                                provided to `wp_set_object_terms()`. Default null which equates to false.
- *     @type array         $args                  Array of arguments to automatically use inside `wp_get_object_terms()`
+ * @type array         $args                  Array of arguments to automatically use inside `wp_get_object_terms()`
  *                                                for this taxonomy.
- *     @type bool          $_builtin              This taxonomy is a "built-in" taxonomy. INTERNAL USE ONLY!
+ * @type bool          $_builtin              This taxonomy is a "built-in" taxonomy. INTERNAL USE ONLY!
  *                                                Default false.
  * }
  * @return \WP_Taxonomy|\WP_Error The registered taxonomy object on success, WP_Error object on failure.
@@ -43711,55 +43711,55 @@ class WpServiceDecorator implements \WpService\WpService
  *     Taxonomy labels object. The first default value is for non-hierarchical taxonomies
  *     (like tags) and the second one is for hierarchical taxonomies (like categories).
  *
- *     @type string $name                       General name for the taxonomy, usually plural. The same
+ * @type string $name                       General name for the taxonomy, usually plural. The same
  *                                              as and overridden by `$tax->label`. Default 'Tags'/'Categories'.
- *     @type string $singular_name              Name for one object of this taxonomy. Default 'Tag'/'Category'.
- *     @type string $search_items               Default 'Search Tags'/'Search Categories'.
- *     @type string $popular_items              This label is only used for non-hierarchical taxonomies.
+ * @type string $singular_name              Name for one object of this taxonomy. Default 'Tag'/'Category'.
+ * @type string $search_items               Default 'Search Tags'/'Search Categories'.
+ * @type string $popular_items              This label is only used for non-hierarchical taxonomies.
  *                                              Default 'Popular Tags'.
- *     @type string $all_items                  Default 'All Tags'/'All Categories'.
- *     @type string $parent_item                This label is only used for hierarchical taxonomies. Default
+ * @type string $all_items                  Default 'All Tags'/'All Categories'.
+ * @type string $parent_item                This label is only used for hierarchical taxonomies. Default
  *                                              'Parent Category'.
- *     @type string $parent_item_colon          The same as `parent_item`, but with colon `:` in the end.
- *     @type string $name_field_description     Description for the Name field on Edit Tags screen.
+ * @type string $parent_item_colon          The same as `parent_item`, but with colon `:` in the end.
+ * @type string $name_field_description     Description for the Name field on Edit Tags screen.
  *                                              Default 'The name is how it appears on your site'.
- *     @type string $slug_field_description     Description for the Slug field on Edit Tags screen.
+ * @type string $slug_field_description     Description for the Slug field on Edit Tags screen.
  *                                              Default 'The &#8220;slug&#8221; is the URL-friendly version
  *                                              of the name. It is usually all lowercase and contains
  *                                              only letters, numbers, and hyphens'.
- *     @type string $parent_field_description   Description for the Parent field on Edit Tags screen.
+ * @type string $parent_field_description   Description for the Parent field on Edit Tags screen.
  *                                              Default 'Assign a parent term to create a hierarchy.
  *                                              The term Jazz, for example, would be the parent
  *                                              of Bebop and Big Band'.
- *     @type string $desc_field_description     Description for the Description field on Edit Tags screen.
+ * @type string $desc_field_description     Description for the Description field on Edit Tags screen.
  *                                              Default 'The description is not prominent by default;
  *                                              however, some themes may show it'.
- *     @type string $edit_item                  Default 'Edit Tag'/'Edit Category'.
- *     @type string $view_item                  Default 'View Tag'/'View Category'.
- *     @type string $update_item                Default 'Update Tag'/'Update Category'.
- *     @type string $add_new_item               Default 'Add New Tag'/'Add New Category'.
- *     @type string $new_item_name              Default 'New Tag Name'/'New Category Name'.
- *     @type string $template_name              Default 'Tag Archives'/'Category Archives'.
- *     @type string $separate_items_with_commas This label is only used for non-hierarchical taxonomies. Default
+ * @type string $edit_item                  Default 'Edit Tag'/'Edit Category'.
+ * @type string $view_item                  Default 'View Tag'/'View Category'.
+ * @type string $update_item                Default 'Update Tag'/'Update Category'.
+ * @type string $add_new_item               Default 'Add New Tag'/'Add New Category'.
+ * @type string $new_item_name              Default 'New Tag Name'/'New Category Name'.
+ * @type string $template_name              Default 'Tag Archives'/'Category Archives'.
+ * @type string $separate_items_with_commas This label is only used for non-hierarchical taxonomies. Default
  *                                              'Separate tags with commas', used in the meta box.
- *     @type string $add_or_remove_items        This label is only used for non-hierarchical taxonomies. Default
+ * @type string $add_or_remove_items        This label is only used for non-hierarchical taxonomies. Default
  *                                              'Add or remove tags', used in the meta box when JavaScript
  *                                              is disabled.
- *     @type string $choose_from_most_used      This label is only used on non-hierarchical taxonomies. Default
+ * @type string $choose_from_most_used      This label is only used on non-hierarchical taxonomies. Default
  *                                              'Choose from the most used tags', used in the meta box.
- *     @type string $not_found                  Default 'No tags found'/'No categories found', used in
+ * @type string $not_found                  Default 'No tags found'/'No categories found', used in
  *                                              the meta box and taxonomy list table.
- *     @type string $no_terms                   Default 'No tags'/'No categories', used in the posts and media
+ * @type string $no_terms                   Default 'No tags'/'No categories', used in the posts and media
  *                                              list tables.
- *     @type string $filter_by_item             This label is only used for hierarchical taxonomies. Default
+ * @type string $filter_by_item             This label is only used for hierarchical taxonomies. Default
  *                                              'Filter by category', used in the posts list table.
- *     @type string $items_list_navigation      Label for the table pagination hidden heading.
- *     @type string $items_list                 Label for the table hidden heading.
- *     @type string $most_used                  Title for the Most Used tab. Default 'Most Used'.
- *     @type string $back_to_items              Label displayed after a term has been updated.
- *     @type string $item_link                  Used in the block editor. Title for a navigation link block variation.
+ * @type string $items_list_navigation      Label for the table pagination hidden heading.
+ * @type string $items_list                 Label for the table hidden heading.
+ * @type string $most_used                  Title for the Most Used tab. Default 'Most Used'.
+ * @type string $back_to_items              Label displayed after a term has been updated.
+ * @type string $item_link                  Used in the block editor. Title for a navigation link block variation.
  *                                              Default 'Tag Link'/'Category Link'.
- *     @type string $item_link_description      Used in the block editor. Description for a navigation link block
+ * @type string $item_link_description      Used in the block editor. Description for a navigation link block
  *                                              variation. Default 'A link to a tag'/'A link to a category'.
  * }
  */
@@ -43818,7 +43818,7 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array|string $args       {
  *     Change the order of the object IDs.
  *
- *     @type string $order Order to retrieve terms. Accepts 'ASC' or 'DESC'. Default 'ASC'.
+ * @type string $order Order to retrieve terms. Accepts 'ASC' or 'DESC'. Default 'ASC'.
  * }
  * @return string[]|WP_Error An array of object IDs as numeric strings on success,
  *                           WP_Error if the taxonomy does not exist.
@@ -44342,10 +44342,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array|string $args {
  *     Optional. Array of arguments to override the default term ID. Default empty array.
  *
- *     @type int  $default       The term ID to make the default term. This will only override
+ * @type int  $default       The term ID to make the default term. This will only override
  *                               the terms found if there is only one term found. Any other and
  *                               the found terms are used.
- *     @type bool $force_default Optional. Whether to force the supplied term as default to be
+ * @type bool $force_default Optional. Whether to force the supplied term as default to be
  *                               assigned even if the object was not going to be term-less.
  *                               Default false.
  * }
@@ -44427,17 +44427,17 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array|string $args {
  *     Optional. Array or query string of arguments for inserting a term.
  *
- *     @type string $alias_of    Slug of the term to make this term an alias of.
+ * @type string $alias_of    Slug of the term to make this term an alias of.
  *                               Default empty string. Accepts a term slug.
- *     @type string $description The term description. Default empty string.
- *     @type int    $parent      The id of the parent term. Default 0.
- *     @type string $slug        The term slug to use. Default empty string.
+ * @type string $description The term description. Default empty string.
+ * @type int    $parent      The id of the parent term. Default 0.
+ * @type string $slug        The term slug to use. Default empty string.
  * }
  * @return array|\WP_Error {
  *     An array of the new term data, WP_Error otherwise.
  *
- *     @type int        $term_id          The new term ID.
- *     @type int|string $term_taxonomy_id The new term taxonomy ID. Can be a numeric string.
+ * @type int        $term_id          The new term ID.
+ * @type int|string $term_taxonomy_id The new term taxonomy ID. Can be a numeric string.
  * }
  */
     public function wpInsertTerm(string $term, string $taxonomy, array|string $args = []): array|\WP_Error
@@ -44554,11 +44554,11 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Array of arguments for updating a term.
  *
- *     @type string $alias_of    Slug of the term to make this term an alias of.
+ * @type string $alias_of    Slug of the term to make this term an alias of.
  *                               Default empty string. Accepts a term slug.
- *     @type string $description The term description. Default empty string.
- *     @type int    $parent      The id of the parent term. Default 0.
- *     @type string $slug        The term slug to use. Default empty string.
+ * @type string $description The term description. Default empty string.
+ * @type int    $parent      The id of the parent term. Default 0.
+ * @type string $slug        The term slug to use. Default empty string.
  * }
  * @return array|\WP_Error An array containing the `term_id` and `term_taxonomy_id`,
  *                        WP_Error otherwise.
@@ -44788,10 +44788,10 @@ class WpServiceDecorator implements \WpService\WpService
  *     Arguments about which post to use and how to format the output. Shares all of the arguments
  *     supported by get_the_taxonomies(), in addition to the following.
  *
- *     @type int|WP_Post $post   Post ID or object to get taxonomies of. Default current post.
- *     @type string      $before Displays before the taxonomies. Default empty string.
- *     @type string      $sep    Separates each taxonomy. Default is a space.
- *     @type string      $after  Displays after the taxonomies. Default empty string.
+ * @type int|WP_Post $post   Post ID or object to get taxonomies of. Default current post.
+ * @type string      $before Displays before the taxonomies. Default empty string.
+ * @type string      $sep    Separates each taxonomy. Default is a space.
+ * @type string      $after  Displays after the taxonomies. Default empty string.
  * }
  */
     public function theTaxonomies(array $args = []): void
@@ -44810,9 +44810,9 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *           Optional. Arguments about how to format the list of taxonomies. Default empty array.
  *
- *     @type string $template      Template for displaying a taxonomy label and list of terms.
+ * @type string $template      Template for displaying a taxonomy label and list of terms.
  *                                 Default is "Label: Terms."
- *     @type string $term_template Template for displaying a single term in the list. Default is the term name
+ * @type string $term_template Template for displaying a single term in the list. Default is the term name
  *                                 linked to its archive.
  * }
  * @return string[] List of taxonomies.
@@ -45512,15 +45512,15 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. The search arguments.
  *
- *     @type mixed $errors  True to return themes with errors, false to return
+ * @type mixed $errors  True to return themes with errors, false to return
  *                          themes without errors, null to return all themes.
  *                          Default false.
- *     @type mixed $allowed (Multisite) True to return only allowed themes for a site.
+ * @type mixed $allowed (Multisite) True to return only allowed themes for a site.
  *                          False to return only disallowed themes for a site.
  *                          'site' to return only site-allowed themes.
  *                          'network' to return only network-allowed themes.
  *                          Null to return all themes. Default null.
- *     @type int   $blog_id (Multisite) The blog ID used to calculate which themes
+ * @type int   $blog_id (Multisite) The blog ID used to calculate which themes
  *                          are allowed. Default 0, synonymous for the current blog.
  * }
  * @return WP_Theme[] Array of WP_Theme objects.
@@ -46266,9 +46266,9 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Args.
  *
- *     @type string $preprocessed Optional. Pre-processed CSS, stored in `post_content_filtered`.
+ * @type string $preprocessed Optional. Pre-processed CSS, stored in `post_content_filtered`.
  *                                Normally empty string.
- *     @type string $stylesheet   Optional. Stylesheet (child theme) to update.
+ * @type string $stylesheet   Optional. Stylesheet (child theme) to update.
  *                                Defaults to active theme/stylesheet.
  * }
  * @return \WP_Post|\WP_Error Post on success, error on failure.
@@ -46528,25 +46528,25 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Data used to describe the theme.
  *
- *     @type string     $type         The type of data associated with this feature.
+ * @type string     $type         The type of data associated with this feature.
  *                                    Valid values are 'string', 'boolean', 'integer',
  *                                    'number', 'array', and 'object'. Defaults to 'boolean'.
- *     @type bool       $variadic     Does this feature utilize the variadic support
+ * @type bool       $variadic     Does this feature utilize the variadic support
  *                                    of add_theme_support(), or are all arguments specified
  *                                    as the second parameter. Must be used with the "array" type.
- *     @type string     $description  A short description of the feature. Included in
+ * @type string     $description  A short description of the feature. Included in
  *                                    the Themes REST API schema. Intended for developers.
- *     @type bool|array $show_in_rest {
+ * @type bool|array $show_in_rest {
  *         Whether this feature should be included in the Themes REST API endpoint.
  *         Defaults to not being included. When registering an 'array' or 'object' type,
  *         this argument must be an array with the 'schema' key.
  *
- *         @type array    $schema           Specifies the JSON Schema definition describing
+ * @type array    $schema           Specifies the JSON Schema definition describing
  *                                          the feature. If any objects in the schema do not include
  *                                          the 'additionalProperties' keyword, it is set to false.
- *         @type string   $name             An alternate name to be used as the property name
+ * @type string   $name             An alternate name to be used as the property name
  *                                          in the REST API.
- *         @type callable $prepare_callback A function used to format the theme support in the REST API.
+ * @type callable $prepare_callback A function used to format the theme support in the REST API.
  *                                          Receives the raw theme support value.
  *      }
  * }
@@ -46826,9 +46826,9 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $credentials {
  *     Optional. User info in order to sign on.
  *
- *     @type string $user_login    Username.
- *     @type string $user_password User password.
- *     @type bool   $remember      Whether to 'remember' the user. Increases the time
+ * @type string $user_login    Username.
+ * @type string $user_password User password.
+ * @type bool   $remember      Whether to 'remember' the user. Increases the time
  *                                 that the cookie will be kept. Default false.
  * }
  * @param string|bool $secureCookie Optional. Whether to use secure cookie.
@@ -47081,24 +47081,24 @@ class WpServiceDecorator implements \WpService\WpService
  * @param string|array $args {
  *     Optional. Array or string of default arguments.
  *
- *     @type string $orderby       How to sort the users. Accepts 'nicename', 'email', 'url', 'registered',
+ * @type string $orderby       How to sort the users. Accepts 'nicename', 'email', 'url', 'registered',
  *                                 'user_nicename', 'user_email', 'user_url', 'user_registered', 'name',
  *                                 'display_name', 'post_count', 'ID', 'meta_value', 'user_login'. Default 'name'.
- *     @type string $order         Sorting direction for $orderby. Accepts 'ASC', 'DESC'. Default 'ASC'.
- *     @type int    $number        Maximum users to return or display. Default empty (all users).
- *     @type bool   $exclude_admin Whether to exclude the 'admin' account, if it exists. Default false.
- *     @type bool   $show_fullname Whether to show the user's full name. Default false.
- *     @type string $feed          If not empty, show a link to the user's feed and use this text as the alt
+ * @type string $order         Sorting direction for $orderby. Accepts 'ASC', 'DESC'. Default 'ASC'.
+ * @type int    $number        Maximum users to return or display. Default empty (all users).
+ * @type bool   $exclude_admin Whether to exclude the 'admin' account, if it exists. Default false.
+ * @type bool   $show_fullname Whether to show the user's full name. Default false.
+ * @type string $feed          If not empty, show a link to the user's feed and use this text as the alt
  *                                 parameter of the link. Default empty.
- *     @type string $feed_image    If not empty, show a link to the user's feed and use this image URL as
+ * @type string $feed_image    If not empty, show a link to the user's feed and use this image URL as
  *                                 clickable anchor. Default empty.
- *     @type string $feed_type     The feed type to link to, such as 'rss2'. Defaults to default feed type.
- *     @type bool   $echo          Whether to output the result or instead return it. Default true.
- *     @type string $style         If 'list', each user is wrapped in an `<li>` element, otherwise the users
+ * @type string $feed_type     The feed type to link to, such as 'rss2'. Defaults to default feed type.
+ * @type bool   $echo          Whether to output the result or instead return it. Default true.
+ * @type string $style         If 'list', each user is wrapped in an `<li>` element, otherwise the users
  *                                 will be separated by commas.
- *     @type bool   $html          Whether to list the items in HTML form or plaintext. Default true.
- *     @type string $exclude       An array, comma-, or space-separated list of user IDs to exclude. Default empty.
- *     @type string $include       An array, comma-, or space-separated list of user IDs to include. Default empty.
+ * @type bool   $html          Whether to list the items in HTML form or plaintext. Default true.
+ * @type string $exclude       An array, comma-, or space-separated list of user IDs to exclude. Default empty.
+ * @type string $include       An array, comma-, or space-separated list of user IDs to include. Default empty.
  * }
  * @return string|null The output if echo is false. Otherwise null.
  */
@@ -47245,8 +47245,8 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     User counts.
  *
- *     @type int   $total_users Total number of users on the site.
- *     @type int[] $avail_roles Array of user counts keyed by user role.
+ * @type int   $total_users Total number of users on the site.
+ * @type int[] $avail_roles Array of user counts keyed by user role.
  * }
  */
     public function countUsers(string $strategy = 'time', int|null $siteId = null): array
@@ -47358,59 +47358,59 @@ class WpServiceDecorator implements \WpService\WpService
  *     Optional. Array or string of arguments to generate a drop-down of users.
  *     See WP_User_Query::prepare_query() for additional available arguments.
  *
- *     @type string          $show_option_all         Text to show as the drop-down default (all).
+ * @type string          $show_option_all         Text to show as the drop-down default (all).
  *                                                    Default empty.
- *     @type string          $show_option_none        Text to show as the drop-down default when no
+ * @type string          $show_option_none        Text to show as the drop-down default when no
  *                                                    users were found. Default empty.
- *     @type int|string      $option_none_value       Value to use for `$show_option_none` when no users
+ * @type int|string      $option_none_value       Value to use for `$show_option_none` when no users
  *                                                    were found. Default -1.
- *     @type string          $hide_if_only_one_author Whether to skip generating the drop-down
+ * @type string          $hide_if_only_one_author Whether to skip generating the drop-down
  *                                                    if only one user was found. Default empty.
- *     @type string          $orderby                 Field to order found users by. Accepts user fields.
+ * @type string          $orderby                 Field to order found users by. Accepts user fields.
  *                                                    Default 'display_name'.
- *     @type string          $order                   Whether to order users in ascending or descending
+ * @type string          $order                   Whether to order users in ascending or descending
  *                                                    order. Accepts 'ASC' (ascending) or 'DESC' (descending).
  *                                                    Default 'ASC'.
- *     @type int[]|string    $include                 Array or comma-separated list of user IDs to include.
+ * @type int[]|string    $include                 Array or comma-separated list of user IDs to include.
  *                                                    Default empty.
- *     @type int[]|string    $exclude                 Array or comma-separated list of user IDs to exclude.
+ * @type int[]|string    $exclude                 Array or comma-separated list of user IDs to exclude.
  *                                                    Default empty.
- *     @type bool|int        $multi                   Whether to skip the ID attribute on the 'select' element.
+ * @type bool|int        $multi                   Whether to skip the ID attribute on the 'select' element.
  *                                                    Accepts 1|true or 0|false. Default 0|false.
- *     @type string          $show                    User data to display. If the selected item is empty
+ * @type string          $show                    User data to display. If the selected item is empty
  *                                                    then the 'user_login' will be displayed in parentheses.
  *                                                    Accepts any user field, or 'display_name_with_login' to show
  *                                                    the display name with user_login in parentheses.
  *                                                    Default 'display_name'.
- *     @type int|bool        $echo                    Whether to echo or return the drop-down. Accepts 1|true (echo)
+ * @type int|bool        $echo                    Whether to echo or return the drop-down. Accepts 1|true (echo)
  *                                                    or 0|false (return). Default 1|true.
- *     @type int             $selected                Which user ID should be selected. Default 0.
- *     @type bool            $include_selected        Whether to always include the selected user ID in the drop-
+ * @type int             $selected                Which user ID should be selected. Default 0.
+ * @type bool            $include_selected        Whether to always include the selected user ID in the drop-
  *                                                    down. Default false.
- *     @type string          $name                    Name attribute of select element. Default 'user'.
- *     @type string          $id                      ID attribute of the select element. Default is the value of `$name`.
- *     @type string          $class                   Class attribute of the select element. Default empty.
- *     @type int             $blog_id                 ID of blog (Multisite only). Default is ID of the current blog.
- *     @type string          $who                     Deprecated, use `$capability` instead.
+ * @type string          $name                    Name attribute of select element. Default 'user'.
+ * @type string          $id                      ID attribute of the select element. Default is the value of `$name`.
+ * @type string          $class                   Class attribute of the select element. Default empty.
+ * @type int             $blog_id                 ID of blog (Multisite only). Default is ID of the current blog.
+ * @type string          $who                     Deprecated, use `$capability` instead.
  *                                                    Which type of users to query. Accepts only an empty string or
  *                                                    'authors'. Default empty (all users).
- *     @type string|string[] $role                    An array or a comma-separated list of role names that users
+ * @type string|string[] $role                    An array or a comma-separated list of role names that users
  *                                                    must match to be included in results. Note that this is
  *                                                    an inclusive list: users must match *each* role. Default empty.
- *     @type string[]        $role__in                An array of role names. Matched users must have at least one
+ * @type string[]        $role__in                An array of role names. Matched users must have at least one
  *                                                    of these roles. Default empty array.
- *     @type string[]        $role__not_in            An array of role names to exclude. Users matching one or more
+ * @type string[]        $role__not_in            An array of role names to exclude. Users matching one or more
  *                                                    of these roles will not be included in results. Default empty array.
- *     @type string|string[] $capability              An array or a comma-separated list of capability names that users
+ * @type string|string[] $capability              An array or a comma-separated list of capability names that users
  *                                                    must match to be included in results. Note that this is
  *                                                    an inclusive list: users must match *each* capability.
  *                                                    Does NOT work for capabilities not in the database or filtered
  *                                                    via {@see 'map_meta_cap'}. Default empty.
- *     @type string[]        $capability__in          An array of capability names. Matched users must have at least one
+ * @type string[]        $capability__in          An array of capability names. Matched users must have at least one
  *                                                    of these capabilities.
  *                                                    Does NOT work for capabilities not in the database or filtered
  *                                                    via {@see 'map_meta_cap'}. Default empty array.
- *     @type string[]        $capability__not_in      An array of capability names to exclude. Users matching one or more
+ * @type string[]        $capability__not_in      An array of capability names to exclude. Users matching one or more
  *                                                    of these capabilities will not be included in results.
  *                                                    Does NOT work for capabilities not in the database or filtered
  *                                                    via {@see 'map_meta_cap'}. Default empty array.
@@ -47533,46 +47533,46 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array|object|WP_User $userdata {
  *     An array, object, or WP_User object of user data arguments.
  *
- *     @type int    $ID                   User ID. If supplied, the user will be updated.
- *     @type string $user_pass            The plain-text user password for new users.
+ * @type int    $ID                   User ID. If supplied, the user will be updated.
+ * @type string $user_pass            The plain-text user password for new users.
  *                                        Hashed password for existing users.
- *     @type string $user_login           The user's login username.
- *     @type string $user_nicename        The URL-friendly user name.
- *     @type string $user_url             The user URL.
- *     @type string $user_email           The user email address.
- *     @type string $display_name         The user's display name.
+ * @type string $user_login           The user's login username.
+ * @type string $user_nicename        The URL-friendly user name.
+ * @type string $user_url             The user URL.
+ * @type string $user_email           The user email address.
+ * @type string $display_name         The user's display name.
  *                                        Default is the user's username.
- *     @type string $nickname             The user's nickname.
+ * @type string $nickname             The user's nickname.
  *                                        Default is the user's username.
- *     @type string $first_name           The user's first name. For new users, will be used
+ * @type string $first_name           The user's first name. For new users, will be used
  *                                        to build the first part of the user's display name
  *                                        if `$display_name` is not specified.
- *     @type string $last_name            The user's last name. For new users, will be used
+ * @type string $last_name            The user's last name. For new users, will be used
  *                                        to build the second part of the user's display name
  *                                        if `$display_name` is not specified.
- *     @type string $description          The user's biographical description.
- *     @type string $rich_editing         Whether to enable the rich-editor for the user.
+ * @type string $description          The user's biographical description.
+ * @type string $rich_editing         Whether to enable the rich-editor for the user.
  *                                        Accepts 'true' or 'false' as a string literal,
  *                                        not boolean. Default 'true'.
- *     @type string $syntax_highlighting  Whether to enable the rich code editor for the user.
+ * @type string $syntax_highlighting  Whether to enable the rich code editor for the user.
  *                                        Accepts 'true' or 'false' as a string literal,
  *                                        not boolean. Default 'true'.
- *     @type string $comment_shortcuts    Whether to enable comment moderation keyboard
+ * @type string $comment_shortcuts    Whether to enable comment moderation keyboard
  *                                        shortcuts for the user. Accepts 'true' or 'false'
  *                                        as a string literal, not boolean. Default 'false'.
- *     @type string $admin_color          Admin color scheme for the user. Default 'fresh'.
- *     @type bool   $use_ssl              Whether the user should always access the admin over
+ * @type string $admin_color          Admin color scheme for the user. Default 'fresh'.
+ * @type bool   $use_ssl              Whether the user should always access the admin over
  *                                        https. Default false.
- *     @type string $user_registered      Date the user registered in UTC. Format is 'Y-m-d H:i:s'.
- *     @type string $user_activation_key  Password reset key. Default empty.
- *     @type bool   $spam                 Multisite only. Whether the user is marked as spam.
+ * @type string $user_registered      Date the user registered in UTC. Format is 'Y-m-d H:i:s'.
+ * @type string $user_activation_key  Password reset key. Default empty.
+ * @type bool   $spam                 Multisite only. Whether the user is marked as spam.
  *                                        Default false.
- *     @type string $show_admin_bar_front Whether to display the Admin Bar for the user
+ * @type string $show_admin_bar_front Whether to display the Admin Bar for the user
  *                                        on the site's front end. Accepts 'true' or 'false'
  *                                        as a string literal, not boolean. Default 'true'.
- *     @type string $role                 User's role.
- *     @type string $locale               User's locale. Default empty.
- *     @type array  $meta_input           Array of custom user meta values keyed by meta key.
+ * @type string $role                 User's role.
+ * @type string $locale               User's locale. Default empty.
+ * @type array  $meta_input           Array of custom user meta values keyed by meta key.
  *                                        Default empty.
  * }
  * @return int|\WP_Error The newly created user's ID or a WP_Error object if the user could not
@@ -47853,8 +47853,8 @@ class WpServiceDecorator implements \WpService\WpService
  * @return array {
  *     An array of personal data.
  *
- *     @type array[] $data An array of personal data arrays.
- *     @type bool    $done Whether the exporter is finished.
+ * @type array[] $data An array of personal data arrays.
+ * @type bool    $done Whether the exporter is finished.
  * }
  */
     public function wpUserPersonalDataExporter(string $emailAddress): array
@@ -48081,10 +48081,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array|string $args {
  *     Optional. Array or string of arguments for building a sidebar.
  *
- *     @type string $id   The base string of the unique identifier for each sidebar. If provided, and multiple
+ * @type string $id   The base string of the unique identifier for each sidebar. If provided, and multiple
  *                        sidebars are being defined, the ID will have "-2" appended, and so on.
  *                        Default 'sidebar-' followed by the number the sidebar creation is currently at.
- *     @type string $name The name or title for the sidebars displayed in the admin dashboard. If registering
+ * @type string $name The name or title for the sidebars displayed in the admin dashboard. If registering
  *                        more than one sidebar, include '%d' in the string as a placeholder for the uniquely
  *                        assigned number for each sidebar.
  *                        Default 'Sidebar' for the first sidebar, otherwise 'Sidebar %d'.
@@ -48118,31 +48118,31 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array|string $args {
  *     Optional. Array or string of arguments for the sidebar being registered.
  *
- *     @type string $name           The name or title of the sidebar displayed in the Widgets
+ * @type string $name           The name or title of the sidebar displayed in the Widgets
  *                                  interface. Default 'Sidebar $instance'.
- *     @type string $id             The unique identifier by which the sidebar will be called.
+ * @type string $id             The unique identifier by which the sidebar will be called.
  *                                  Default 'sidebar-$instance'.
- *     @type string $description    Description of the sidebar, displayed in the Widgets interface.
+ * @type string $description    Description of the sidebar, displayed in the Widgets interface.
  *                                  Default empty string.
- *     @type string $class          Extra CSS class to assign to the sidebar in the Widgets interface.
+ * @type string $class          Extra CSS class to assign to the sidebar in the Widgets interface.
  *                                  Default empty.
- *     @type string $before_widget  HTML content to prepend to each widget's HTML output when assigned
+ * @type string $before_widget  HTML content to prepend to each widget's HTML output when assigned
  *                                  to this sidebar. Receives the widget's ID attribute as `%1$s`
  *                                  and class name as `%2$s`. Default is an opening list item element.
- *     @type string $after_widget   HTML content to append to each widget's HTML output when assigned
+ * @type string $after_widget   HTML content to append to each widget's HTML output when assigned
  *                                  to this sidebar. Default is a closing list item element.
- *     @type string $before_title   HTML content to prepend to the sidebar title when displayed.
+ * @type string $before_title   HTML content to prepend to the sidebar title when displayed.
  *                                  Default is an opening h2 element.
- *     @type string $after_title    HTML content to append to the sidebar title when displayed.
+ * @type string $after_title    HTML content to append to the sidebar title when displayed.
  *                                  Default is a closing h2 element.
- *     @type string $before_sidebar HTML content to prepend to the sidebar when displayed.
+ * @type string $before_sidebar HTML content to prepend to the sidebar when displayed.
  *                                  Receives the `$id` argument as `%1$s` and `$class` as `%2$s`.
  *                                  Outputs after the {@see 'dynamic_sidebar_before'} action.
  *                                  Default empty string.
- *     @type string $after_sidebar  HTML content to append to the sidebar when displayed.
+ * @type string $after_sidebar  HTML content to append to the sidebar when displayed.
  *                                  Outputs before the {@see 'dynamic_sidebar_after'} action.
  *                                  Default empty string.
- *     @type bool $show_in_rest     Whether to show this sidebar publicly in the REST API.
+ * @type bool $show_in_rest     Whether to show this sidebar publicly in the REST API.
  *                                  Defaults to only showing the sidebar to administrator users.
  * }
  * @return string Sidebar ID added to $wp_registered_sidebars global.
@@ -48202,11 +48202,11 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $options {
  *     Optional. An array of supplementary widget options for the instance.
  *
- *     @type string $classname             Class name for the widget's HTML container. Default is a shortened
+ * @type string $classname             Class name for the widget's HTML container. Default is a shortened
  *                                         version of the output callback name.
- *     @type string $description           Widget description for display in the widget administration
+ * @type string $description           Widget description for display in the widget administration
  *                                         panel and/or theme.
- *     @type bool   $show_instance_in_rest Whether to show the widget's instance settings in the REST API.
+ * @type bool   $show_instance_in_rest Whether to show the widget's instance settings in the REST API.
  *                                         Only available for WP_Widget based widgets.
  * }
  * @param mixed      ...$params       Optional additional parameters to pass to the callback function when it's called.
@@ -48279,10 +48279,10 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $options {
  *     Optional. Array or string of control options. Default empty array.
  *
- *     @type int        $height  Never used. Default 200.
- *     @type int        $width   Width of the fully expanded control form (but try hard to use the default width).
+ * @type int        $height  Never used. Default 200.
+ * @type int        $width   Width of the fully expanded control form (but try hard to use the default width).
  *                               Default 250.
- *     @type int|string $id_base Required for multi-widgets, i.e widgets that allow multiple instances such as the
+ * @type int|string $id_base Required for multi-widgets, i.e widgets that allow multiple instances such as the
  *                               text widget. The widget ID will end up looking like `{$id_base}-{$unique_number}`.
  * }
  * @param mixed      ...$params        Optional additional parameters to pass to the callback function when it's called.
@@ -48432,13 +48432,13 @@ class WpServiceDecorator implements \WpService\WpService
  * @param array $args {
  *     Optional. Array of arguments to configure the display of the widget.
  *
- *     @type string $before_widget HTML content that will be prepended to the widget's HTML output.
+ * @type string $before_widget HTML content that will be prepended to the widget's HTML output.
  *                                 Default `<div class="widget %s">`, where `%s` is the widget's class name.
- *     @type string $after_widget  HTML content that will be appended to the widget's HTML output.
+ * @type string $after_widget  HTML content that will be appended to the widget's HTML output.
  *                                 Default `</div>`.
- *     @type string $before_title  HTML content that will be prepended to the widget's title when displayed.
+ * @type string $before_title  HTML content that will be prepended to the widget's title when displayed.
  *                                 Default `<h2 class="widgettitle">`.
- *     @type string $after_title   HTML content that will be appended to the widget's title when displayed.
+ * @type string $after_title   HTML content that will be appended to the widget's title when displayed.
  *                                 Default `</h2>`.
  * }
  */

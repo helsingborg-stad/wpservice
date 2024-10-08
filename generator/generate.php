@@ -32,6 +32,7 @@ use WpService\Generator\Function\FunctionToString\FunctionToString;
 use WpService\Generator\Function\IsValidFunction\IsPrivateFunction;
 use WpService\Generator\Function\IsValidFunction\IsValidFunction;
 use WpService\Generator\Function\IsValidFunction\FunctionHasDocBlock;
+use WpService\Generator\Function\IsValidFunction\InvalidateDeprecatedFunction;
 use WpService\Generator\Function\Parameter\SanitizeCallbackDefaultInput;
 use WpService\Generator\Function\Parameter\SanitizeIntDefaultInput;
 use WpService\Generator\Function\Parameter\SanitizeStringDefaultInput;
@@ -117,20 +118,15 @@ $allFunctions = array_map(fn($stmt) => CreateFunction::create($stmt, $parameterD
 $functionValidator = IsValidFunction::create();
 $functionValidator = new IsPrivateFunction($functionValidator);
 $functionValidator = new FunctionHasDocBlock($functionValidator);
-// TODO: Add validator that checks @deprecated.
-
-$allFunctions = array_filter($allFunctions, fn($function) =>$functionValidator->isValidFunction($function));
+$functionValidator = new InvalidateDeprecatedFunction($functionValidator);
+$allFunctions      = array_filter($allFunctions, fn($function) =>$functionValidator->isValidFunction($function));
 
 $allFunctions = array_map(fn($function) => new CamelCasedFunction($function), $allFunctions);
-// $allFunctions = array_map(fn($function) => new FunctionWihoutLeadingWpInName($function), $allFunctions);
 $allFunctions = array_map(fn($function) => new ConvertTypedArrayReturnTypeToArray($function), $allFunctions);
 $allFunctions = array_map(fn($function) => new ConvertTypedArrayInputTypeToArray($function), $allFunctions);
 $allFunctions = array_map(fn($function) => new FunctionWithSanitizedTypes($function), $allFunctions);
 $allFunctions = array_map(fn($function) => new FunctionWithNamespacedTypes($function), $allFunctions);
 $allFunctions = array_map(fn($function) => new FunctionWithoutInvalidVoidReturnType($function), $allFunctions);
-
-// TODO: Replace with IsValidFunction decorator above.
-$allFunctions = array_filter($allFunctions, fn($function) => !str_contains($function->getDocBlock(), '@deprecated'));
 
 $libPath                    = dirname(__FILE__) . "/../src";
 $contractsPath              = $libPath . "/Contracts";
