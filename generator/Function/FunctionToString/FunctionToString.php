@@ -16,13 +16,13 @@ class FunctionToString implements FunctionToStringInterface
     {
         $parameters = $this->getParametersString($function);
         return <<<PHP
-        /**
-         * @inheritDoc
-         */
-        public function {$function->getName()}({$parameters}): {$function->getReturnType()}
-        {
-            {$function->getFunctionBody()}
-        }
+            /**
+             * @inheritDoc
+             */
+            public function {$function->getName()}({$parameters}): {$function->getReturnType()}
+            {
+                {$function->getFunctionBody()}
+            }
         PHP;
     }
 

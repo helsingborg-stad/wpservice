@@ -7,23617 +7,23617 @@ namespace WpService\Implementations;
  */
 class NativeWpService implements \WpService\WpService
 {
-    /**
-     * @inheritDoc
-     */
+        /**
+         * @inheritDoc
+         */
     public function readBigEndian(int $numBytes): int
     {
         return read_big_endian($numBytes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function read(\stream $handle, int $numBytes): \binary
     {
         return read($handle, $numBytes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function skip(\stream $handle, int $numBytes): bool
     {
         return skip($handle, $numBytes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doActivateHeader(): void
     {
         do_activate_header();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpmuActivateStylesheet(): void
     {
         wpmu_activate_stylesheet();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function exportAddJs(): void
     {
         export_add_js();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function exportDateOptions(string $postType = 'post'): void
     {
         export_date_options($postType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxNoprivHeartbeat(): void
     {
         wp_ajax_nopriv_heartbeat();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxFetchList(): void
     {
         wp_ajax_fetch_list();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxAjaxTagSearch(): void
     {
         wp_ajax_ajax_tag_search();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxWpCompressionTest(): void
     {
         wp_ajax_wp_compression_test();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxImgeditPreview(): void
     {
         wp_ajax_imgedit_preview();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxOembedCache(): void
     {
         wp_ajax_oembed_cache();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxAutocompleteUser(): void
     {
         wp_ajax_autocomplete_user();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxGetCommunityEvents(): void
     {
         wp_ajax_get_community_events();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxDashboardWidgets(): void
     {
         wp_ajax_dashboard_widgets();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxLoggedIn(): void
     {
         wp_ajax_logged_in();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxDeleteComment(): void
     {
         wp_ajax_delete_comment();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxDeleteTag(): void
     {
         wp_ajax_delete_tag();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxDeleteLink(): void
     {
         wp_ajax_delete_link();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxDeleteMeta(): void
     {
         wp_ajax_delete_meta();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxDeletePost(string $action): void
     {
         wp_ajax_delete_post($action);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxTrashPost(string $action): void
     {
         wp_ajax_trash_post($action);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxUntrashPost(string $action): void
     {
         wp_ajax_untrash_post($action);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxDeletePage(string $action): void
     {
         wp_ajax_delete_page($action);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxDimComment(): void
     {
         wp_ajax_dim_comment();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxAddLinkCategory(string $action): void
     {
         wp_ajax_add_link_category($action);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxAddTag(): void
     {
         wp_ajax_add_tag();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxGetTagcloud(): void
     {
         wp_ajax_get_tagcloud();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxGetComments(string $action): void
     {
         wp_ajax_get_comments($action);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxReplytoComment(string $action): void
     {
         wp_ajax_replyto_comment($action);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxEditComment(): void
     {
         wp_ajax_edit_comment();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxAddMenuItem(): void
     {
         wp_ajax_add_menu_item();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxAddMeta(): void
     {
         wp_ajax_add_meta();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxAddUser(string $action): void
     {
         wp_ajax_add_user($action);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxClosedPostboxes(): void
     {
         wp_ajax_closed_postboxes();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxHiddenColumns(): void
     {
         wp_ajax_hidden_columns();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxUpdateWelcomePanel(): void
     {
         wp_ajax_update_welcome_panel();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxMenuGetMetabox(): void
     {
         wp_ajax_menu_get_metabox();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxWpLinkAjax(): void
     {
         wp_ajax_wp_link_ajax();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxMenuLocationsSave(): void
     {
         wp_ajax_menu_locations_save();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxMetaBoxOrder(): void
     {
         wp_ajax_meta_box_order();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxMenuQuickSearch(): void
     {
         wp_ajax_menu_quick_search();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxGetPermalink(): void
     {
         wp_ajax_get_permalink();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxSamplePermalink(): void
     {
         wp_ajax_sample_permalink();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxInlineSave(): void
     {
         wp_ajax_inline_save();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxInlineSaveTax(): void
     {
         wp_ajax_inline_save_tax();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxFindPosts(): void
     {
         wp_ajax_find_posts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxWidgetsOrder(): void
     {
         wp_ajax_widgets_order();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxSaveWidget(): void
     {
         wp_ajax_save_widget();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxUpdateWidget(): void
     {
         wp_ajax_update_widget();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxDeleteInactiveWidgets(): void
     {
         wp_ajax_delete_inactive_widgets();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxMediaCreateImageSubsizes(): void
     {
         wp_ajax_media_create_image_subsizes();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxUploadAttachment(): void
     {
         wp_ajax_upload_attachment();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxImageEditor(): void
     {
         wp_ajax_image_editor();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxSetPostThumbnail(): void
     {
         wp_ajax_set_post_thumbnail();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxGetPostThumbnailHtml(): void
     {
         wp_ajax_get_post_thumbnail_html();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxSetAttachmentThumbnail(): void
     {
         wp_ajax_set_attachment_thumbnail();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxDateFormat(): void
     {
         wp_ajax_date_format();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxTimeFormat(): void
     {
         wp_ajax_time_format();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxWpRemovePostLock(): void
     {
         wp_ajax_wp_remove_post_lock();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxDismissWpPointer(): void
     {
         wp_ajax_dismiss_wp_pointer();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxGetAttachment(): void
     {
         wp_ajax_get_attachment();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxQueryAttachments(): void
     {
         wp_ajax_query_attachments();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxSaveAttachment(): void
     {
         wp_ajax_save_attachment();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxSaveAttachmentCompat(): void
     {
         wp_ajax_save_attachment_compat();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxSaveAttachmentOrder(): void
     {
         wp_ajax_save_attachment_order();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxSendAttachmentToEditor(): void
     {
         wp_ajax_send_attachment_to_editor();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxSendLinkToEditor(): void
     {
         wp_ajax_send_link_to_editor();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxHeartbeat(): void
     {
         wp_ajax_heartbeat();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxGetRevisionDiffs(): void
     {
         wp_ajax_get_revision_diffs();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxSaveUserColorScheme(): void
     {
         wp_ajax_save_user_color_scheme();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxQueryThemes(): void
     {
         wp_ajax_query_themes();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxParseEmbed(): void
     {
         wp_ajax_parse_embed();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxParseMediaShortcode(): void
     {
         wp_ajax_parse_media_shortcode();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxDestroySessions(): void
     {
         wp_ajax_destroy_sessions();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxCropImage(): void
     {
         wp_ajax_crop_image();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxGeneratePassword(): void
     {
         wp_ajax_generate_password();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxNoprivGeneratePassword(): void
     {
         wp_ajax_nopriv_generate_password();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxSaveWporgUsername(): void
     {
         wp_ajax_save_wporg_username();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxInstallTheme(): void
     {
         wp_ajax_install_theme();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxUpdateTheme(): void
     {
         wp_ajax_update_theme();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxDeleteTheme(): void
     {
         wp_ajax_delete_theme();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxInstallPlugin(): void
     {
         wp_ajax_install_plugin();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxActivatePlugin(): void
     {
         wp_ajax_activate_plugin();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxUpdatePlugin(): void
     {
         wp_ajax_update_plugin();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxDeletePlugin(): void
     {
         wp_ajax_delete_plugin();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxSearchPlugins(): void
     {
         wp_ajax_search_plugins();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxSearchInstallPlugins(): void
     {
         wp_ajax_search_install_plugins();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxEditThemePluginFile(): void
     {
         wp_ajax_edit_theme_plugin_file();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxWpPrivacyExportPersonalData(): void
     {
         wp_ajax_wp_privacy_export_personal_data();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxWpPrivacyErasePersonalData(): void
     {
         wp_ajax_wp_privacy_erase_personal_data();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxHealthCheckSiteStatusResult(): void
     {
         wp_ajax_health_check_site_status_result();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxRestNonce(): void
     {
         wp_ajax_rest_nonce();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxToggleAutoUpdates(): void
     {
         wp_ajax_toggle_auto_updates();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAjaxSendPasswordReset(): void
     {
         wp_ajax_send_password_reset();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addLink(): int|\WP_Error
     {
         return add_link();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function editLink(int $linkId = 0): int|\WP_Error
     {
         return edit_link($linkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getDefaultLinkToEdit(): \stdClass
     {
         return get_default_link_to_edit();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeleteLink(int $linkId): true
     {
         return wp_delete_link($linkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetLinkCats(int $linkId = 0): array
     {
         return wp_get_link_cats($linkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getLinkToEdit(int|\stdClass $link): object
     {
         return get_link_to_edit($link);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInsertLink(array $linkdata, bool $wpError = false): int|\WP_Error
     {
         return wp_insert_link($linkdata, $wpError);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSetLinkCats(int $linkId = 0, array $linkCategories = []): void
     {
         wp_set_link_cats($linkId, $linkCategories);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateLink(array $linkdata): int|\WP_Error
     {
         return wp_update_link($linkdata);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCliArgs(string $param, bool $required = false): mixed
     {
         return get_cli_args($param, $required);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentExists(string $commentAuthor, string $commentDate, string $timezone = 'blog'): string|null
     {
         return comment_exists($commentAuthor, $commentDate, $timezone);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function editComment(): int|\WP_Error
     {
         return edit_comment();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentToEdit(int $id): \WP_Comment|false
     {
         return get_comment_to_edit($id);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPendingCommentsNum(int|array $postId): int|array
     {
         return get_pending_comments_num($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function floatedAdminAvatar(string $name): string
     {
         return floated_admin_avatar($name);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function enqueueCommentHotkeysJs(): void
     {
         enqueue_comment_hotkeys_js();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentFooterDie(string $msg): void
     {
         comment_footer_die($msg);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCredits(string $version = '', string $locale = ''): array|false
     {
         return wp_credits($version, $locale);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCreditsSectionTitle(array $groupData = []): void
     {
         wp_credits_section_title($groupData);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCreditsSectionList(array $credits = [], string $slug = ''): void
     {
         wp_credits_section_list($credits, $slug);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDashboardSetup(): void
     {
         wp_dashboard_setup();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAddDashboardWidget(string $widgetId, string $widgetName, callable $callback, callable $controlCallback = null, array $callbackArgs = null, string $context = 'normal', string $priority = 'core'): void
     {
         wp_add_dashboard_widget($widgetId, $widgetName, $callback, $controlCallback, $callbackArgs, $context, $priority);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDashboard(): void
     {
         wp_dashboard();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDashboardRightNow(): void
     {
         wp_dashboard_right_now();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNetworkDashboardRightNow(): void
     {
         wp_network_dashboard_right_now();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDashboardQuickPress(string|false $errorMsg = false): void
     {
         wp_dashboard_quick_press($errorMsg);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDashboardRecentDrafts(array|false $drafts = false): void
     {
         wp_dashboard_recent_drafts($drafts);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDashboardSiteActivity(): void
     {
         wp_dashboard_site_activity();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDashboardRecentPosts(array $args): bool
     {
         return wp_dashboard_recent_posts($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDashboardRecentComments(int $totalItems = 5): bool
     {
         return wp_dashboard_recent_comments($totalItems);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDashboardRssOutput(string $widgetId): void
     {
         wp_dashboard_rss_output($widgetId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDashboardCachedRssWidget(string $widgetId, callable $callback, array $checkUrls = []): bool
     {
         return wp_dashboard_cached_rss_widget($widgetId, $callback, $checkUrls);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDashboardTriggerWidgetControl(int|false $widgetControlId = false): void
     {
         wp_dashboard_trigger_widget_control($widgetControlId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDashboardRssControl(string $widgetId, array $formInputs = []): void
     {
         wp_dashboard_rss_control($widgetId, $formInputs);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDashboardEventsNews(): void
     {
         wp_dashboard_events_news();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrintCommunityEventsMarkup(): void
     {
         wp_print_community_events_markup();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrintCommunityEventsTemplates(): void
     {
         wp_print_community_events_templates();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDashboardPrimary(): void
     {
         wp_dashboard_primary();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDashboardPrimaryOutput(string $widgetId, array $feeds): void
     {
         wp_dashboard_primary_output($widgetId, $feeds);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDashboardQuota(): mixed
     {
         return wp_dashboard_quota();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDashboardBrowserNag(): void
     {
         wp_dashboard_browser_nag();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function dashboardBrowserNagClass(array $classes): array
     {
         return dashboard_browser_nag_class($classes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCheckBrowserVersion(): array|false
     {
         return wp_check_browser_version();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDashboardPhpNag(): void
     {
         wp_dashboard_php_nag();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function dashboardPhpNagClass(array $classes): array
     {
         return dashboard_php_nag_class($classes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDashboardSiteHealth(): void
     {
         wp_dashboard_site_health();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDashboardEmpty(): void
     {
         wp_dashboard_empty();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpWelcomePanel(): void
     {
         wp_welcome_panel();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function exportWp(array $args = []): void
     {
         export_wp($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getFileDescription(string $file): string
     {
         return get_file_description($file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getHomePath(): string
     {
         return get_home_path();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function listFiles(string $folder = '', int $levels = 100, array $exclusions = [], bool $includeHidden = false): array|false
     {
         return list_files($folder, $levels, $exclusions, $includeHidden);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetPluginFileEditableExtensions(string $plugin): array
     {
         return wp_get_plugin_file_editable_extensions($plugin);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetThemeFileEditableExtensions(\WP_Theme $theme): array
     {
         return wp_get_theme_file_editable_extensions($theme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrintFileEditorTemplates(): void
     {
         wp_print_file_editor_templates();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEditThemePluginFile(array $args): true|\WP_Error
     {
         return wp_edit_theme_plugin_file($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTempnam(string $filename = '', string $dir = ''): string
     {
         return wp_tempnam($filename, $dir);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function validateFileToEdit(string $file, array $allowedFiles = []): mixed
     {
         return validate_file_to_edit($file, $allowedFiles);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpHandleUpload(array $file, array|false $overrides = false, string|null $time = null): array
     {
         return wp_handle_upload($file, $overrides, $time);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpHandleSideload(array $file, array|false $overrides = false, string|null $time = null): array
     {
         return wp_handle_sideload($file, $overrides, $time);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function downloadUrl(string $url, int $timeout = 300, bool $signatureVerification = false): string|\WP_Error
     {
         return download_url($url, $timeout, $signatureVerification);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function verifyFileMd5(string $filename, string $expectedMd5): bool|\WP_Error
     {
         return verify_file_md5($filename, $expectedMd5);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function verifyFileSignature(string $filename, string|array $signatures, string|false $filenameForErrors = false): bool|\WP_Error
     {
         return verify_file_signature($filename, $signatures, $filenameForErrors);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTrustedKeys(): array
     {
         return wp_trusted_keys();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpZipFileIsValid(string $file): bool
     {
         return wp_zip_file_is_valid($file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function unzipFile(string $file, string $to): true|\WP_Error
     {
         return unzip_file($file, $to);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function copyDir(string $from, string $to, array $skipList = []): true|\WP_Error
     {
         return copy_dir($from, $to, $skipList);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function moveDir(string $from, string $to, bool $overwrite = false): true|\WP_Error
     {
         return move_dir($from, $to, $overwrite);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wPFilesystem(array|false $args = false, string|false $context = false, bool $allowRelaxedFileOwnership = false): bool|null
     {
         return WP_Filesystem($args, $context, $allowRelaxedFileOwnership);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getFilesystemMethod(array $args = [], string $context = '', bool $allowRelaxedFileOwnership = false): string
     {
         return get_filesystem_method($args, $context, $allowRelaxedFileOwnership);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function requestFilesystemCredentials(string $formPost, string $type = '', bool|\WP_Error $error = false, string $context = '', array $extraFields = null, bool $allowRelaxedFileOwnership = false): bool|array
     {
         return request_filesystem_credentials($formPost, $type, $error, $context, $extraFields, $allowRelaxedFileOwnership);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrintRequestFilesystemCredentialsModal(): void
     {
         wp_print_request_filesystem_credentials_modal();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpOpcacheInvalidate(string $filepath, bool $force = false): bool
     {
         return wp_opcache_invalidate($filepath, $force);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpOpcacheInvalidateDirectory(string $dir): void
     {
         wp_opcache_invalidate_directory($dir);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpImageEditor(int $postId, false|object $msg = false): void
     {
         wp_image_editor($postId, $msg);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpStreamImage(\WP_Image_Editor $image, string $mimeType, int $attachmentId): bool
     {
         return wp_stream_image($image, $mimeType, $attachmentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSaveImageFile(string $filename, \WP_Image_Editor $image, string $mimeType, int $postId): array|\WP_Error|bool
     {
         return wp_save_image_file($filename, $image, $mimeType, $postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function imageEditApplyChanges(\WP_Image_Editor $image, array $changes): \WP_Image_Editor
     {
         return image_edit_apply_changes($image, $changes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function streamPreviewImage(int $postId): bool
     {
         return stream_preview_image($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRestoreImage(int $postId): \stdClass
     {
         return wp_restore_image($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSaveImage(int $postId): \stdClass
     {
         return wp_save_image($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCropImage(string|int $src, int $srcX, int $srcY, int $srcW, int $srcH, int $dstW, int $dstH, bool $srcAbs = false, string|false $dstFile = false): string|\WP_Error
     {
         return wp_crop_image($src, $srcX, $srcY, $srcW, $srcH, $dstW, $dstH, $srcAbs, $dstFile);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetMissingImageSubsizes(int $attachmentId): array
     {
         return wp_get_missing_image_subsizes($attachmentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateImageSubsizes(int $attachmentId): array|\WP_Error
     {
         return wp_update_image_subsizes($attachmentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCreateImageSubsizes(string $file, int $attachmentId): array
     {
         return wp_create_image_subsizes($file, $attachmentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCopyParentAttachmentProperties(string $cropped, int $parentAttachmentId, string $context = ''): array
     {
         return wp_copy_parent_attachment_properties($cropped, $parentAttachmentId, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGenerateAttachmentMetadata(int $attachmentId, string $file): array
     {
         return wp_generate_attachment_metadata($attachmentId, $file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpExifFrac2dec(string $str): int|float
     {
         return wp_exif_frac2dec($str);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpExifDate2ts(string $str): int|false
     {
         return wp_exif_date2ts($str);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpReadImageMetadata(string $file): array|false
     {
         return wp_read_image_metadata($file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function fileIsValidImage(string $path): bool
     {
         return file_is_valid_image($path);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function fileIsDisplayableImage(string $path): bool
     {
         return file_is_displayable_image($path);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function loadImageToEdit(int $attachmentId, string $mimeType, string|array $size = 'full'): \resource|\GdImage|false
     {
         return load_image_to_edit($attachmentId, $mimeType, $size);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getImporters(): array
     {
         return get_importers();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerImporter(string $id, string $name, string $description, callable $callback): mixed
     {
         return register_importer($id, $name, $description, $callback);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpImportCleanup(string $id): void
     {
         wp_import_cleanup($id);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpImportHandleUpload(): array
     {
         return wp_import_handle_upload();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetPopularImporters(): array
     {
         return wp_get_popular_importers();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerColumnHeaders(string $screen, array $columns): void
     {
         register_column_headers($screen, $columns);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function printColumnHeaders(string|\WP_Screen $screen, bool $withId = true): void
     {
         print_column_headers($screen, $withId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaUploadTabs(): array
     {
         return media_upload_tabs();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateGalleryTab(array $tabs): array
     {
         return update_gallery_tab($tabs);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theMediaUploadTabs(): void
     {
         the_media_upload_tabs();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getImageSendToEditor(int $id, string $caption, string $title, string $align, string $url = '', bool|string $rel = false, string|array $size = 'medium', string $alt = ''): string
     {
         return get_image_send_to_editor($id, $caption, $title, $align, $url, $rel, $size, $alt);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function imageAddCaption(string $html, int $id, string $caption, string $title, string $align, string $url, string $size, string $alt = ''): string
     {
         return image_add_caption($html, $id, $caption, $title, $align, $url, $size, $alt);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaSendToEditor(string $html): void
     {
         media_send_to_editor($html);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaHandleUpload(string $fileId, int $postId, array $postData = [], array $overrides = []): int|\WP_Error
     {
         return media_handle_upload($fileId, $postId, $postData, $overrides);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaHandleSideload(array $fileArray, int $postId = 0, string $desc = null, array $postData = []): int|\WP_Error
     {
         return media_handle_sideload($fileArray, $postId, $desc, $postData);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIframe(callable $contentFunc): void
     {
         wp_iframe($contentFunc);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaButtons(string $editorId = 'content'): void
     {
         media_buttons($editorId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getUploadIframeSrc(string $type = null, int $postId = null, string $tab = null): string
     {
         return get_upload_iframe_src($type, $postId, $tab);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaUploadFormHandler(): mixed
     {
         return media_upload_form_handler();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMediaUploadHandler(): null|string
     {
         return wp_media_upload_handler();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaSideloadImage(string $file, int $postId = 0, string $desc = null, string $returnType = 'html'): string|int|\WP_Error
     {
         return media_sideload_image($file, $postId, $desc, $returnType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaUploadGallery(): string|null
     {
         return media_upload_gallery();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaUploadLibrary(): string|null
     {
         return media_upload_library();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function imageAlignInputFields(\WP_Post $post, string $checked = ''): string
     {
         return image_align_input_fields($post, $checked);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function imageSizeInputFields(\WP_Post $post, bool|string $check = ''): array
     {
         return image_size_input_fields($post, $check);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function imageLinkInputFields(\WP_Post $post, string $urlType = ''): string
     {
         return image_link_input_fields($post, $urlType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCaptionInputTextarea(\WP_Post $editPost): string
     {
         return wp_caption_input_textarea($editPost);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function imageAttachmentFieldsToEdit(array $formFields, object $post): array
     {
         return image_attachment_fields_to_edit($formFields, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaSingleAttachmentFieldsToEdit(array $formFields, \WP_Post $post): array
     {
         return media_single_attachment_fields_to_edit($formFields, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaPostSingleAttachmentFieldsToEdit(array $formFields, \WP_Post $post): array
     {
         return media_post_single_attachment_fields_to_edit($formFields, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function imageMediaSendToEditor(string $html, int $attachmentId, array $attachment): string
     {
         return image_media_send_to_editor($html, $attachmentId, $attachment);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAttachmentFieldsToEdit(\WP_Post $post, array $errors = null): array
     {
         return get_attachment_fields_to_edit($post, $errors);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getMediaItems(int $postId, array $errors): string
     {
         return get_media_items($postId, $errors);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getMediaItem(int $attachmentId, string|array $args = null): string
     {
         return get_media_item($attachmentId, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCompatMediaMarkup(int $attachmentId, array $args = null): array
     {
         return get_compat_media_markup($attachmentId, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaUploadHeader(): void
     {
         media_upload_header();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaUploadForm(array $errors = null): void
     {
         media_upload_form($errors);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaUploadTypeForm(string $type = 'file', array $errors = null, int|\WP_Error $id = null): void
     {
         media_upload_type_form($type, $errors, $id);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaUploadTypeUrlForm(string $type = null, object $errors = null, int $id = null): void
     {
         media_upload_type_url_form($type, $errors, $id);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaUploadGalleryForm(array $errors): void
     {
         media_upload_gallery_form($errors);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaUploadLibraryForm(array $errors): void
     {
         media_upload_library_form($errors);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMediaInsertUrlForm(string $defaultView = 'image'): string
     {
         return wp_media_insert_url_form($defaultView);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaUploadFlashBypass(): void
     {
         media_upload_flash_bypass();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaUploadHtmlBypass(): void
     {
         media_upload_html_bypass();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaUploadTextAfter(): void
     {
         media_upload_text_after();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mediaUploadMaxImageResize(): void
     {
         media_upload_max_image_resize();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function multisiteOverQuotaMessage(): void
     {
         multisite_over_quota_message();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function editFormImageEditor(\WP_Post $post): void
     {
         edit_form_image_editor($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function attachmentSubmitboxMetadata(): void
     {
         attachment_submitbox_metadata();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAddId3TagData(array $metadata, array $data): void
     {
         wp_add_id3_tag_data($metadata, $data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpReadVideoMetadata(string $file): array|false
     {
         return wp_read_video_metadata($file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpReadAudioMetadata(string $file): array|false
     {
         return wp_read_audio_metadata($file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetMediaCreationTimestamp(array $metadata): int|false
     {
         return wp_get_media_creation_timestamp($metadata);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMediaAttachAction(int $parentId, string $action = 'attach'): void
     {
         wp_media_attach_action($parentId, $action);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addCssclass(string $classToAdd, string $classes): string
     {
         return add_cssclass($classToAdd, $classes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addMenuClasses(array $menu): array
     {
         return add_menu_classes($menu);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sortMenu(array $a, array $b): int
     {
         return sort_menu($a, $b);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postSubmitMetaBox(\WP_Post $post, array $args = []): void
     {
         post_submit_meta_box($post, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function attachmentSubmitMetaBox(\WP_Post $post): void
     {
         attachment_submit_meta_box($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postFormatMetaBox(\WP_Post $post, array $box): void
     {
         post_format_meta_box($post, $box);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postTagsMetaBox(\WP_Post $post, array $box): void
     {
         post_tags_meta_box($post, $box);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postCategoriesMetaBox(\WP_Post $post, array $box): void
     {
         post_categories_meta_box($post, $box);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postExcerptMetaBox(\WP_Post $post): void
     {
         post_excerpt_meta_box($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postTrackbackMetaBox(\WP_Post $post): void
     {
         post_trackback_meta_box($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postCustomMetaBox(\WP_Post $post): void
     {
         post_custom_meta_box($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postCommentStatusMetaBox(\WP_Post $post): void
     {
         post_comment_status_meta_box($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postCommentMetaBoxThead(array $result): array
     {
         return post_comment_meta_box_thead($result);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postCommentMetaBox(\WP_Post $post): void
     {
         post_comment_meta_box($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postSlugMetaBox(\WP_Post $post): void
     {
         post_slug_meta_box($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postAuthorMetaBox(\WP_Post $post): void
     {
         post_author_meta_box($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postRevisionsMetaBox(\WP_Post $post): void
     {
         post_revisions_meta_box($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function pageAttributesMetaBox(\WP_Post $post): void
     {
         page_attributes_meta_box($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function linkSubmitMetaBox(object $link): void
     {
         link_submit_meta_box($link);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function linkCategoriesMetaBox(object $link): void
     {
         link_categories_meta_box($link);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function linkTargetMetaBox(object $link): void
     {
         link_target_meta_box($link);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function xfnCheck(string $xfnRelationship, string $xfnValue = '', mixed $deprecated = ''): void
     {
         xfn_check($xfnRelationship, $xfnValue, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function linkXfnMetaBox(object $link): void
     {
         link_xfn_meta_box($link);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function linkAdvancedMetaBox(object $link): void
     {
         link_advanced_meta_box($link);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postThumbnailMetaBox(\WP_Post $post): void
     {
         post_thumbnail_meta_box($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function attachmentId3DataMetaBox(\WP_Post $post): void
     {
         attachment_id3_data_meta_box($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerAndDoPostMetaBoxes(\WP_Post $post): void
     {
         register_and_do_post_meta_boxes($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function gotModRewrite(): bool
     {
         return got_mod_rewrite();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function gotUrlRewrite(): bool
     {
         return got_url_rewrite();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function extractFromMarkers(string $filename, string $marker): array
     {
         return extract_from_markers($filename, $marker);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function insertWithMarkers(string $filename, string $marker, array|string $insertion): bool
     {
         return insert_with_markers($filename, $marker, $insertion);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function saveModRewriteRules(): bool|null
     {
         return save_mod_rewrite_rules();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function iis7SaveUrlRewriteRules(): bool|null
     {
         return iis7_save_url_rewrite_rules();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateRecentlyEdited(string $file): void
     {
         update_recently_edited($file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateHomeSiteurl(string $oldValue, string $value): void
     {
         update_home_siteurl($oldValue, $value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpResetVars(array $vars): void
     {
         wp_reset_vars($vars);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function showMessage(string|\WP_Error $message): void
     {
         show_message($message);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDocLinkParse(string $content): array
     {
         return wp_doc_link_parse($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function setScreenOptions(): void
     {
         set_screen_options();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function iis7RewriteRuleExists(string $filename): bool
     {
         return iis7_rewrite_rule_exists($filename);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function iis7DeleteRewriteRule(string $filename): bool
     {
         return iis7_delete_rewrite_rule($filename);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function iis7AddRewriteRule(string $filename, string $rewriteRule): bool
     {
         return iis7_add_rewrite_rule($filename, $rewriteRule);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function saveDomDocument(\DOMDocument $doc, string $filename): void
     {
         saveDomDocument($doc, $filename);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function adminColorSchemePicker(int $userId): void
     {
         admin_color_scheme_picker($userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpColorSchemeSettings(): void
     {
         wp_color_scheme_settings();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminViewportMeta(): void
     {
         wp_admin_viewport_meta();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCheckLockedPosts(array $response, array $data, string $screenId): array
     {
         return wp_check_locked_posts($response, $data, $screenId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRefreshPostLock(array $response, array $data, string $screenId): array
     {
         return wp_refresh_post_lock($response, $data, $screenId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRefreshPostNonces(array $response, array $data, string $screenId): array
     {
         return wp_refresh_post_nonces($response, $data, $screenId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRefreshMetaboxLoaderNonces(array $response, array $data): array
     {
         return wp_refresh_metabox_loader_nonces($response, $data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRefreshHeartbeatNonces(array $response): array
     {
         return wp_refresh_heartbeat_nonces($response);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpHeartbeatSetSuspension(array $settings): array
     {
         return wp_heartbeat_set_suspension($settings);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function heartbeatAutosave(array $response, array $data): array
     {
         return heartbeat_autosave($response, $data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminCanonicalUrl(): void
     {
         wp_admin_canonical_url();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminHeaders(): void
     {
         wp_admin_headers();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPageReloadOnBackButtonJs(): void
     {
         wp_page_reload_on_back_button_js();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateOptionNewAdminEmail(string $oldValue, string $value): void
     {
         update_option_new_admin_email($oldValue, $value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCheckPhpVersion(): array|false
     {
         return wp_check_php_version();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function checkUploadSize(array $file): array
     {
         return check_upload_size($file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpmuDeleteBlog(int $blogId, bool $drop = false): void
     {
         wpmu_delete_blog($blogId, $drop);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpmuDeleteUser(int $id): bool
     {
         return wpmu_delete_user($id);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function uploadIsUserOverQuota(bool $displayMessage = true): bool
     {
         return upload_is_user_over_quota($displayMessage);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function displaySpaceUsage(): void
     {
         display_space_usage();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function fixImportFormSize(int $size): int
     {
         return fix_import_form_size($size);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function uploadSpaceSetting(int $id): void
     {
         upload_space_setting($id);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function refreshUserDetails(int $id): int|false
     {
         return refresh_user_details($id);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function formatCodeLang(string $code = ''): string
     {
         return format_code_lang($code);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function checkImportNewUsers(string $permission): bool
     {
         return check_import_new_users($permission);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function muDropdownLanguages(array $langFiles = [], string $current = ''): void
     {
         mu_dropdown_languages($langFiles, $current);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function siteAdminNotice(): mixed
     {
         return site_admin_notice();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function avoidBlogPagePermalinkCollision(array $data, array $postarr): array
     {
         return avoid_blog_page_permalink_collision($data, $postarr);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function choosePrimaryBlog(): void
     {
         choose_primary_blog();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function canEditNetwork(int $networkId): bool
     {
         return can_edit_network($networkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function confirmDeleteUsers(array $users): bool
     {
         return confirm_delete_users($users);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function networkSettingsAddJs(): void
     {
         network_settings_add_js();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function networkEditSiteNav(array $args = []): void
     {
         network_edit_site_nav($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSiteScreenHelpTabArgs(): array
     {
         return get_site_screen_help_tab_args();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSiteScreenHelpSidebarContent(): string
     {
         return get_site_screen_help_sidebar_content();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNavMenuSetup(): void
     {
         wp_nav_menu_setup();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInitialNavMenuMetaBoxes(): void
     {
         wp_initial_nav_menu_meta_boxes();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNavMenuPostTypeMetaBoxes(): void
     {
         wp_nav_menu_post_type_meta_boxes();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNavMenuTaxonomyMetaBoxes(): void
     {
         wp_nav_menu_taxonomy_meta_boxes();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNavMenuDisabledCheck(int|string $navMenuSelectedId, bool $display = true): string|false
     {
         return wp_nav_menu_disabled_check($navMenuSelectedId, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNavMenuItemLinkMetaBox(): void
     {
         wp_nav_menu_item_link_meta_box();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNavMenuItemPostTypeMetaBox(string $dataObject, array $box): void
     {
         wp_nav_menu_item_post_type_meta_box($dataObject, $box);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNavMenuItemTaxonomyMetaBox(string $dataObject, array $box): void
     {
         wp_nav_menu_item_taxonomy_meta_box($dataObject, $box);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSaveNavMenuItems(int $menuId = 0, array $menuData = []): array
     {
         return wp_save_nav_menu_items($menuId, $menuData);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetNavMenuToEdit(int $menuId = 0): string|\WP_Error
     {
         return wp_get_nav_menu_to_edit($menuId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNavMenuManageColumns(): array
     {
         return wp_nav_menu_manage_columns();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNavMenuUpdateMenuItems(int|string $navMenuSelectedId, string $navMenuSelectedTitle): array
     {
         return wp_nav_menu_update_menu_items($navMenuSelectedId, $navMenuSelectedTitle);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function networkDomainCheck(): string|false
     {
         return network_domain_check();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function allowSubdomainInstall(): bool
     {
         return allow_subdomain_install();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function allowSubdirectoryInstall(): bool
     {
         return allow_subdirectory_install();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCleanBasedomain(): string
     {
         return get_clean_basedomain();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function networkStep1(false|\WP_Error $errors = false): void
     {
         network_step1($errors);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function networkStep2(false|\WP_Error $errors = false): void
     {
         network_step2($errors);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function optionsDiscussionAddJs(): void
     {
         options_discussion_add_js();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function optionsGeneralAddJs(): void
     {
         options_general_add_js();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function optionsReadingAddJs(): void
     {
         options_reading_add_js();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function optionsReadingBlogCharset(): void
     {
         options_reading_blog_charset();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function pluginsApi(string $action, array|object $args = []): array|object
     {
         return plugins_api($action, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function installPopularTags(array $args = []): array|\WP_Error
     {
         return install_popular_tags($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function installDashboard(): void
     {
         install_dashboard();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function installSearchForm(bool $deprecated = true): void
     {
         install_search_form($deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function installPluginsUpload(): void
     {
         install_plugins_upload();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function installPluginsFavoritesForm(): void
     {
         install_plugins_favorites_form();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function displayPluginsTable(): void
     {
         display_plugins_table();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function installPluginInstallStatus(array|object $api, bool $loop = false): array
     {
         return install_plugin_install_status($api, $loop);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function installPluginInformation(): void
     {
         install_plugin_information();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetPluginActionButton(string $name, array|object $data, bool $compatiblePhp, bool $compatibleWp): string
     {
         return wp_get_plugin_action_button($name, $data, $compatiblePhp, $compatibleWp);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPluginData(string $pluginFile, bool $markup = true, bool $translate = true): array
     {
         return get_plugin_data($pluginFile, $markup, $translate);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPluginFiles(string $plugin): array
     {
         return get_plugin_files($plugin);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPlugins(string $pluginFolder = ''): array
     {
         return get_plugins($pluginFolder);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getMuPlugins(): array
     {
         return get_mu_plugins();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getDropins(): array
     {
         return get_dropins();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isPluginActive(string $plugin): bool
     {
         return is_plugin_active($plugin);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isPluginInactive(string $plugin): bool
     {
         return is_plugin_inactive($plugin);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isPluginActiveForNetwork(string $plugin): bool
     {
         return is_plugin_active_for_network($plugin);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isNetworkOnlyPlugin(string $plugin): bool
     {
         return is_network_only_plugin($plugin);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function activatePlugin(string $plugin, string $redirect = '', bool $networkWide = false, bool $silent = false): null|\WP_Error
     {
         return activate_plugin($plugin, $redirect, $networkWide, $silent);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deactivatePlugins(string|array $plugins, bool $silent = false, bool|null $networkWide = null): void
     {
         deactivate_plugins($plugins, $silent, $networkWide);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function activatePlugins(string|array $plugins, string $redirect = '', bool $networkWide = false, bool $silent = false): true|\WP_Error
     {
         return activate_plugins($plugins, $redirect, $networkWide, $silent);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deletePlugins(array $plugins, string $deprecated = ''): bool|null|\WP_Error
     {
         return delete_plugins($plugins, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function validateActivePlugins(): array
     {
         return validate_active_plugins();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function validatePlugin(string $plugin): int|\WP_Error
     {
         return validate_plugin($plugin);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function validatePluginRequirements(string $plugin): true|\WP_Error
     {
         return validate_plugin_requirements($plugin);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isUninstallablePlugin(string $plugin): bool
     {
         return is_uninstallable_plugin($plugin);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function uninstallPlugin(string $plugin): mixed
     {
         return uninstall_plugin($plugin);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addMenuPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, string $iconUrl = '', int|float $position = null): string
     {
         return add_menu_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $iconUrl, $position);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addSubmenuPage(string $parentSlug, string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int|float $position = null): string|false
     {
         return add_submenu_page($parentSlug, $pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addManagementPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
     {
         return add_management_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addOptionsPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
     {
         return add_options_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addThemePage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
     {
         return add_theme_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addPluginsPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
     {
         return add_plugins_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addUsersPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
     {
         return add_users_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addDashboardPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
     {
         return add_dashboard_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addPostsPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
     {
         return add_posts_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addMediaPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
     {
         return add_media_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addLinksPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
     {
         return add_links_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addPagesPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
     {
         return add_pages_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addCommentsPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
     {
         return add_comments_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeMenuPage(string $menuSlug): array|false
     {
         return remove_menu_page($menuSlug);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeSubmenuPage(string $menuSlug, string $submenuSlug): array|false
     {
         return remove_submenu_page($menuSlug, $submenuSlug);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function menuPageUrl(string $menuSlug, bool $display = true): string
     {
         return menu_page_url($menuSlug, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAdminPageParent(string $parentPage = ''): string
     {
         return get_admin_page_parent($parentPage);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAdminPageTitle(): string
     {
         return get_admin_page_title();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPluginPageHook(string $pluginPage, string $parentPage): string|null
     {
         return get_plugin_page_hook($pluginPage, $parentPage);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPluginPageHookname(string $pluginPage, string $parentPage): string
     {
         return get_plugin_page_hookname($pluginPage, $parentPage);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function userCanAccessAdminPage(): bool
     {
         return user_can_access_admin_page();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function optionUpdateFilter(array $options): array
     {
         return option_update_filter($options);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addAllowedOptions(array $newOptions, string|array $options = ''): array
     {
         return add_allowed_options($newOptions, $options);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeAllowedOptions(array $delOptions, string|array $options = ''): array
     {
         return remove_allowed_options($delOptions, $options);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function settingsFields(string $optionGroup): void
     {
         settings_fields($optionGroup);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCleanPluginsCache(bool $clearUpdateCache = true): void
     {
         wp_clean_plugins_cache($clearUpdateCache);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function pluginSandboxScrape(string $plugin): void
     {
         plugin_sandbox_scrape($plugin);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAddPrivacyPolicyContent(string $pluginName, string $policyText): void
     {
         wp_add_privacy_policy_content($pluginName, $policyText);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isPluginPaused(string $plugin): bool
     {
         return is_plugin_paused($plugin);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetPluginError(string $plugin): array|false
     {
         return wp_get_plugin_error($plugin);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function resumePlugin(string $plugin, string $redirect = ''): true|\WP_Error
     {
         return resume_plugin($plugin, $redirect);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function pausedPluginsNotice(): void
     {
         paused_plugins_notice();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function editPost(array|null $postData = null): int
     {
         return edit_post($postData);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function bulkEditPosts(array|null $postData = null): array
     {
         return bulk_edit_posts($postData);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getDefaultPostToEdit(string $postType = 'post', bool $createInDb = false): \WP_Post
     {
         return get_default_post_to_edit($postType, $createInDb);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postExists(string $title, string $content = '', string $date = '', string $type = '', string $status = ''): int
     {
         return post_exists($title, $content, $date, $type, $status);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpWritePost(): int|\WP_Error
     {
         return wp_write_post();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function writePost(): mixed
     {
         return write_post();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addMeta(int $postId): int|bool
     {
         return add_meta($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deleteMeta(int $mid): bool
     {
         return delete_meta($mid);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getMetaKeys(): array
     {
         return get_meta_keys();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostMetaById(int $mid): object|bool
     {
         return get_post_meta_by_id($mid);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasMeta(int $postId): array
     {
         return has_meta($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateMeta(int $metaId, string $metaKey, string $metaValue): bool
     {
         return update_meta($metaId, $metaKey, $metaValue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAvailablePostStatuses(string $type = 'post'): array
     {
         return get_available_post_statuses($type);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEditPostsQuery(array|false $q = false): array
     {
         return wp_edit_posts_query($q);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEditAttachmentsQueryVars(array|false $q = false): array
     {
         return wp_edit_attachments_query_vars($q);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEditAttachmentsQuery(array|false $q = false): array
     {
         return wp_edit_attachments_query($q);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postboxClasses(string $boxId, string $screenId): string
     {
         return postbox_classes($boxId, $screenId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSamplePermalink(int|\WP_Post $post, string|null $title = null, string|null $name = null): array
     {
         return get_sample_permalink($post, $title, $name);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSamplePermalinkHtml(int|\WP_Post $post, string|null $newTitle = null, string|null $newSlug = null): string
     {
         return get_sample_permalink_html($post, $newTitle, $newSlug);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCheckPostLock(int|\WP_Post $post): int|false
     {
         return wp_check_post_lock($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSetPostLock(int|\WP_Post $post): array|false
     {
         return wp_set_post_lock($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCreatePostAutosave(array|int $postData): int|\WP_Error
     {
         return wp_create_post_autosave($postData);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAutosavePostRevisionedMetaFields(array $newAutosave): void
     {
         wp_autosave_post_revisioned_meta_fields($newAutosave);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postPreview(): string
     {
         return post_preview();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAutosave(array $postData): mixed
     {
         return wp_autosave($postData);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function redirectPost(int|string $postId = ''): void
     {
         redirect_post($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function taxonomyMetaBoxSanitizeCbCheckboxes(string $taxonomy, array $terms): array
     {
         return taxonomy_meta_box_sanitize_cb_checkboxes($taxonomy, $terms);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function taxonomyMetaBoxSanitizeCbInput(string $taxonomy, array|string $terms): array
     {
         return taxonomy_meta_box_sanitize_cb_input($taxonomy, $terms);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlockEditorServerBlockSettings(): array
     {
         return get_block_editor_server_block_settings();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theBlockEditorMetaBoxes(): void
     {
         the_block_editor_meta_boxes();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theBlockEditorMetaBoxPostFormHiddenFields(\WP_Post $post): void
     {
         the_block_editor_meta_box_post_form_hidden_fields($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrivacyGeneratePersonalDataExportGroupHtml(array $groupData, string $groupId = '', int $groupsCount = 1): string
     {
         return wp_privacy_generate_personal_data_export_group_html($groupData, $groupId, $groupsCount);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrivacyGeneratePersonalDataExportFile(int $requestId): void
     {
         wp_privacy_generate_personal_data_export_file($requestId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrivacySendPersonalDataExportEmail(int $requestId): true|\WP_Error
     {
         return wp_privacy_send_personal_data_export_email($requestId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrivacyProcessPersonalDataExportPage(array $response, int $exporterIndex, string $emailAddress, int $page, int $requestId, bool $sendAsEmail, string $exporterKey): array
     {
         return wp_privacy_process_personal_data_export_page($response, $exporterIndex, $emailAddress, $page, $requestId, $sendAsEmail, $exporterKey);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrivacyProcessPersonalDataErasurePage(array $response, int $eraserIndex, string $emailAddress, int $page, int $requestId): array
     {
         return wp_privacy_process_personal_data_erasure_page($response, $eraserIndex, $emailAddress, $page, $requestId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetRevisionUiDiff(\WP_Post|int $post, int $compareFrom, int $compareTo): array|false
     {
         return wp_get_revision_ui_diff($post, $compareFrom, $compareTo);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrepareRevisionsForJs(\WP_Post|int $post, int $selectedRevisionId, int $from = null): array
     {
         return wp_prepare_revisions_for_js($post, $selectedRevisionId, $from);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrintRevisionTemplates(): void
     {
         wp_print_revision_templates();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetDbSchema(string $scope = 'all', int $blogId = null): string
     {
         return wp_get_db_schema($scope, $blogId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function populateOptions(array $options = []): void
     {
         populate_options($options);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function populateRoles(): void
     {
         populate_roles();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function populateRoles160(): void
     {
         populate_roles_160();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function populateRoles210(): void
     {
         populate_roles_210();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function populateRoles230(): void
     {
         populate_roles_230();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function populateRoles250(): void
     {
         populate_roles_250();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function populateRoles260(): void
     {
         populate_roles_260();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function populateRoles270(): void
     {
         populate_roles_270();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function populateRoles280(): void
     {
         populate_roles_280();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function populateRoles300(): void
     {
         populate_roles_300();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function installNetwork(): void
     {
         install_network();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function populateNetwork(int $networkId = 1, string $domain = '', string $email = '', string $siteName = '', string $path = '/', bool $subdomainInstall = false): true|\WP_Error
     {
         return populate_network($networkId, $domain, $email, $siteName, $path, $subdomainInstall);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function populateNetworkMeta(int $networkId, array $meta = []): void
     {
         populate_network_meta($networkId, $meta);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function populateSiteMeta(int $siteId, array $meta = []): void
     {
         populate_site_meta($siteId, $meta);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getColumnHeaders(string|\WP_Screen $screen): array
     {
         return get_column_headers($screen);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getHiddenColumns(string|\WP_Screen $screen): array
     {
         return get_hidden_columns($screen);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function metaBoxPrefs(\WP_Screen $screen): void
     {
         meta_box_prefs($screen);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getHiddenMetaBoxes(string|\WP_Screen $screen): array
     {
         return get_hidden_meta_boxes($screen);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addScreenOption(string $option, mixed $args = []): void
     {
         add_screen_option($option, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCurrentScreen(): \WP_Screen|null
     {
         return get_current_screen();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function setCurrentScreen(string|\WP_Screen $hookName = ''): void
     {
         set_current_screen($hookName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function categoryExists(int|string $catName, int $categoryParent = null): string|null
     {
         return category_exists($catName, $categoryParent);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCategoryToEdit(int $id): object
     {
         return get_category_to_edit($id);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCreateCategory(int|string $catName, int $categoryParent = 0): int|\WP_Error
     {
         return wp_create_category($catName, $categoryParent);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCreateCategories(array $categories, int|string $postId = ''): array
     {
         return wp_create_categories($categories, $postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInsertCategory(array $catarr, bool $wpError = false): int|\WP_Error
     {
         return wp_insert_category($catarr, $wpError);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateCategory(array $catarr): int|false
     {
         return wp_update_category($catarr);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function tagExists(int|string $tagName): mixed
     {
         return tag_exists($tagName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCreateTag(int|string $tagName): array|\WP_Error
     {
         return wp_create_tag($tagName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTagsToEdit(int $postId, string $taxonomy = 'post_tag'): string|false|\WP_Error
     {
         return get_tags_to_edit($postId, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTermsToEdit(int $postId, string $taxonomy = 'post_tag'): string|false|\WP_Error
     {
         return get_terms_to_edit($postId, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCreateTerm(string $tagName, string $taxonomy = 'post_tag'): array|\WP_Error
     {
         return wp_create_term($tagName, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCategoryChecklist(int $postId = 0, int $descendantsAndSelf = 0, array|false $selectedCats = false, array|false $popularCats = false, \Walker $walker = null, bool $checkedOntop = true): void
     {
         wp_category_checklist($postId, $descendantsAndSelf, $selectedCats, $popularCats, $walker, $checkedOntop);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTermsChecklist(int $postId = 0, array|string $args = []): string
     {
         return wp_terms_checklist($postId, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPopularTermsChecklist(string $taxonomy, int $defaultTerm = 0, int $number = 10, bool $display = true): array
     {
         return wp_popular_terms_checklist($taxonomy, $defaultTerm, $number, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpLinkCategoryChecklist(int $linkId = 0): void
     {
         wp_link_category_checklist($linkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getInlineData(\WP_Post $post): void
     {
         get_inline_data($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCommentReply(int $position = 1, bool $checkbox = false, string $mode = 'single', bool $tableRow = true): void
     {
         wp_comment_reply($position, $checkbox, $mode, $tableRow);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCommentTrashnotice(): void
     {
         wp_comment_trashnotice();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function listMeta(array $meta): void
     {
         list_meta($meta);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function metaForm(\WP_Post $post = null): void
     {
         meta_form($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function touchTime(int|bool $edit = 1, int|bool $forPost = 1, int $tabIndex = 0, int|bool $multi = 0): void
     {
         touch_time($edit, $forPost, $tabIndex, $multi);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function pageTemplateDropdown(string $defaultTemplate = '', string $postType = 'page'): void
     {
         page_template_dropdown($defaultTemplate, $postType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function parentDropdown(int $defaultPage = 0, int $parentPage = 0, int $level = 0, int|\WP_Post $post = null): mixed
     {
         return parent_dropdown($defaultPage, $parentPage, $level, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDropdownRoles(string $selected = ''): void
     {
         wp_dropdown_roles($selected);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpImportUploadForm(string $action): void
     {
         wp_import_upload_form($action);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addMetaBox(string $id, string $title, callable $callback, string|array|\WP_Screen $screen = null, string $context = 'advanced', string $priority = 'default', array $callbackArgs = null): void
     {
         add_meta_box($id, $title, $callback, $screen, $context, $priority, $callbackArgs);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doBlockEditorIncompatibleMetaBox(mixed $dataObject, array $box): void
     {
         do_block_editor_incompatible_meta_box($dataObject, $box);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doMetaBoxes(string|\WP_Screen $screen, string $context, mixed $dataObject): int
     {
         return do_meta_boxes($screen, $context, $dataObject);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeMetaBox(string $id, string|array|\WP_Screen $screen, string $context): void
     {
         remove_meta_box($id, $screen, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doAccordionSections(string|object $screen, string $context, mixed $dataObject): int
     {
         return do_accordion_sections($screen, $context, $dataObject);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addSettingsSection(string $id, string $title, callable $callback, string $page, array $args = []): void
     {
         add_settings_section($id, $title, $callback, $page, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addSettingsField(string $id, string $title, callable $callback, string $page, string $section = 'default', array $args = []): void
     {
         add_settings_field($id, $title, $callback, $page, $section, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doSettingsSections(string $page): void
     {
         do_settings_sections($page);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doSettingsFields(string $page, string $section): void
     {
         do_settings_fields($page, $section);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addSettingsError(string $setting, string $code, string $message, string $type = 'error'): void
     {
         add_settings_error($setting, $code, $message, $type);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSettingsErrors(string $setting = '', bool $sanitize = false): array
     {
         return get_settings_errors($setting, $sanitize);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function settingsErrors(string $setting = '', bool $sanitize = false, bool $hideOnUpdate = false): void
     {
         settings_errors($setting, $sanitize, $hideOnUpdate);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function findPostsDiv(string $foundAction = ''): void
     {
         find_posts_div($foundAction);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function thePostPassword(): void
     {
         the_post_password();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function iframeHeader(string $title = '', bool $deprecated = false): void
     {
         iframe_header($title, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function iframeFooter(): void
     {
         iframe_footer();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostStates(\WP_Post $post): array
     {
         return get_post_states($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getMediaStates(\WP_Post $post): array
     {
         return get_media_states($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function compressionTest(): void
     {
         compression_test();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function submitButton(string $text = '', string $type = 'primary', string $name = 'submit', bool $wrap = true, array|string $otherAttributes = ''): void
     {
         submit_button($text, $type, $name, $wrap, $otherAttributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSubmitButton(string $text = '', string $type = 'primary large', string $name = 'submit', bool $wrap = true, array|string $otherAttributes = ''): string
     {
         return get_submit_button($text, $type, $name, $wrap, $otherAttributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function convertToScreen(string $hookName): \WP_Screen
     {
         return convert_to_screen($hookName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpStarRating(array $args = []): string
     {
         return wp_star_rating($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function installThemeSearchForm(bool $typeSelector = true): void
     {
         install_theme_search_form($typeSelector);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function installThemesDashboard(): void
     {
         install_themes_dashboard();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function installThemesUpload(): void
     {
         install_themes_upload();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function displayThemes(): void
     {
         display_themes();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function installThemeInformation(): void
     {
         install_theme_information();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deleteTheme(string $stylesheet, string $redirect = ''): bool|null|\WP_Error
     {
         return delete_theme($stylesheet, $redirect);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPageTemplates(\WP_Post|null $post = null, string $postType = 'page'): array
     {
         return get_page_templates($post, $postType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function themeUpdateAvailable(\WP_Theme $theme): void
     {
         theme_update_available($theme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThemeUpdateAvailable(\WP_Theme $theme): string|false
     {
         return get_theme_update_available($theme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThemeFeatureList(bool $api = true): array
     {
         return get_theme_feature_list($api);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function themesApi(string $action, array|object $args = []): array|object
     {
         return themes_api($action, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrepareThemesForJs(array $themes = null): array
     {
         return wp_prepare_themes_for_js($themes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function customizeThemesPrintTemplates(): void
     {
         customize_themes_print_templates();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isThemePaused(string $theme): bool
     {
         return is_theme_paused($theme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetThemeError(string $theme): array|false
     {
         return wp_get_theme_error($theme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function resumeTheme(string $theme, string $redirect = ''): bool|\WP_Error
     {
         return resume_theme($theme, $redirect);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function pausedThemesNotice(): void
     {
         paused_themes_notice();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function translationsApi(string $type, array|object $args = null): array|\WP_Error
     {
         return translations_api($type, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetAvailableTranslations(): array
     {
         return wp_get_available_translations();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInstallLanguageForm(array $languages): void
     {
         wp_install_language_form($languages);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDownloadLanguagePack(string $download): string|false
     {
         return wp_download_language_pack($download);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCanInstallLanguagePack(): bool
     {
         return wp_can_install_language_pack();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateCore(string $from, string $to): string|\WP_Error
     {
         return update_core($from, $to);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPreferredFromUpdateCore(): object|array|false
     {
         return get_preferred_from_update_core();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCoreUpdates(array $options = []): array|false
     {
         return get_core_updates($options);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function findCoreAutoUpdate(): object|false
     {
         return find_core_auto_update();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCoreChecksums(string $version, string $locale): array|false
     {
         return get_core_checksums($version, $locale);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function dismissCoreUpdate(object $update): bool
     {
         return dismiss_core_update($update);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function undismissCoreUpdate(string $version, string $locale): bool
     {
         return undismiss_core_update($version, $locale);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function findCoreUpdate(string $version, string $locale): object|false
     {
         return find_core_update($version, $locale);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function coreUpdateFooter(string $msg = ''): string
     {
         return core_update_footer($msg);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateNag(): mixed
     {
         return update_nag();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateRightNowMessage(): void
     {
         update_right_now_message();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPluginUpdates(): array
     {
         return get_plugin_updates();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPluginUpdateRows(): void
     {
         wp_plugin_update_rows();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPluginUpdateRow(string $file, array $pluginData): mixed
     {
         return wp_plugin_update_row($file, $pluginData);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThemeUpdates(): array
     {
         return get_theme_updates();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpThemeUpdateRows(): void
     {
         wp_theme_update_rows();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpThemeUpdateRow(string $themeKey, \WP_Theme $theme): mixed
     {
         return wp_theme_update_row($themeKey, $theme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function maintenanceNag(): mixed
     {
         return maintenance_nag();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrintAdminNoticeTemplates(): void
     {
         wp_print_admin_notice_templates();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrintUpdateRowTemplates(): void
     {
         wp_print_update_row_templates();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRecoveryModeNag(): void
     {
         wp_recovery_mode_nag();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsAutoUpdateEnabledForType(string $type): bool
     {
         return wp_is_auto_update_enabled_for_type($type);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsAutoUpdateForcedForItem(string $type, bool|null $update, object $item): bool
     {
         return wp_is_auto_update_forced_for_item($type, $update, $item);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetAutoUpdateMessage(): string
     {
         return wp_get_auto_update_message();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addUser(): int|\WP_Error
     {
         return add_user();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function editUser(int $userId = 0): int|\WP_Error
     {
         return edit_user($userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getEditableRoles(): array
     {
         return get_editable_roles();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getUserToEdit(int $userId): \WP_User|false
     {
         return get_user_to_edit($userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getUsersDrafts(int $userId): array
     {
         return get_users_drafts($userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeleteUser(int $id, int $reassign = null): bool
     {
         return wp_delete_user($id, $reassign);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRevokeUser(int $id): void
     {
         wp_revoke_user($id);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function defaultPasswordNagHandler(false $errors = false): void
     {
         default_password_nag_handler($errors);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function defaultPasswordNagEditUser(int $userID, \WP_User $oldData): void
     {
         default_password_nag_edit_user($userID, $oldData);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function defaultPasswordNag(): void
     {
         default_password_nag();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function useSslPreference(\WP_User $user): void
     {
         use_ssl_preference($user);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function adminCreatedUserEmail(string $text): string
     {
         return admin_created_user_email($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsAuthorizeApplicationPasswordRequestValid(array $request, \WP_User $user): true|\WP_Error
     {
         return wp_is_authorize_application_password_request_valid($request, $user);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsAuthorizeApplicationRedirectUrlValid(string $url): true|\WP_Error
     {
         return wp_is_authorize_application_redirect_url_valid($url);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpListWidgets(): void
     {
         wp_list_widgets();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpListWidgetControls(string $sidebar, string $sidebarName = ''): void
     {
         wp_list_widget_controls($sidebar, $sidebarName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpListWidgetControlsDynamicSidebar(array $params): array
     {
         return wp_list_widget_controls_dynamic_sidebar($params);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function nextWidgetIdNumber(string $idBase): int
     {
         return next_widget_id_number($idBase);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpWidgetControl(array $sidebarArgs): array
     {
         return wp_widget_control($sidebarArgs);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpWidgetsAccessBodyClass(string $classes): string
     {
         return wp_widgets_access_body_class($classes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function displayHeader(string $bodyClasses = ''): void
     {
         display_header($bodyClasses);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function displaySetupForm(string|null $error = null): void
     {
         display_setup_form($error);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNavMenuMaxDepth(string $classes): string
     {
         return wp_nav_menu_max_depth($classes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function setupConfigDisplayHeader(string|array $bodyClasses = []): void
     {
         setup_config_display_header($bodyClasses);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpThemeAutoUpdateSettingTemplate(): string
     {
         return wp_theme_auto_update_setting_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function listCoreUpdate(object $update): void
     {
         list_core_update($update);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function dismissedUpdates(): void
     {
         dismissed_updates();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function coreUpgradePreamble(): void
     {
         core_upgrade_preamble();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function coreAutoUpdatesSettings(): void
     {
         core_auto_updates_settings();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function listPluginUpdates(): void
     {
         list_plugin_updates();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function listThemeUpdates(): void
     {
         list_theme_updates();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function listTranslationUpdates(): void
     {
         list_translation_updates();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doCoreUpgrade(bool $reinstall = false): void
     {
         do_core_upgrade($reinstall);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doDismissCoreUpdate(): void
     {
         do_dismiss_core_update();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doUndismissCoreUpdate(): void
     {
         do_undismiss_core_update();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminBarRender(): void
     {
         wp_admin_bar_render();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminBarWpMenu(\WP_Admin_Bar $wpAdminBar): void
     {
         wp_admin_bar_wp_menu($wpAdminBar);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminBarSidebarToggle(\WP_Admin_Bar $wpAdminBar): void
     {
         wp_admin_bar_sidebar_toggle($wpAdminBar);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminBarMyAccountItem(\WP_Admin_Bar $wpAdminBar): void
     {
         wp_admin_bar_my_account_item($wpAdminBar);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminBarMyAccountMenu(\WP_Admin_Bar $wpAdminBar): void
     {
         wp_admin_bar_my_account_menu($wpAdminBar);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminBarSiteMenu(\WP_Admin_Bar $wpAdminBar): void
     {
         wp_admin_bar_site_menu($wpAdminBar);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminBarEditSiteMenu(\WP_Admin_Bar $wpAdminBar): void
     {
         wp_admin_bar_edit_site_menu($wpAdminBar);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminBarCustomizeMenu(\WP_Admin_Bar $wpAdminBar): void
     {
         wp_admin_bar_customize_menu($wpAdminBar);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminBarMySitesMenu(\WP_Admin_Bar $wpAdminBar): void
     {
         wp_admin_bar_my_sites_menu($wpAdminBar);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminBarShortlinkMenu(\WP_Admin_Bar $wpAdminBar): void
     {
         wp_admin_bar_shortlink_menu($wpAdminBar);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminBarEditMenu(\WP_Admin_Bar $wpAdminBar): void
     {
         wp_admin_bar_edit_menu($wpAdminBar);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminBarNewContentMenu(\WP_Admin_Bar $wpAdminBar): void
     {
         wp_admin_bar_new_content_menu($wpAdminBar);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminBarCommentsMenu(\WP_Admin_Bar $wpAdminBar): void
     {
         wp_admin_bar_comments_menu($wpAdminBar);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminBarAppearanceMenu(\WP_Admin_Bar $wpAdminBar): void
     {
         wp_admin_bar_appearance_menu($wpAdminBar);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminBarUpdatesMenu(\WP_Admin_Bar $wpAdminBar): void
     {
         wp_admin_bar_updates_menu($wpAdminBar);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminBarSearchMenu(\WP_Admin_Bar $wpAdminBar): void
     {
         wp_admin_bar_search_menu($wpAdminBar);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminBarRecoveryModeMenu(\WP_Admin_Bar $wpAdminBar): void
     {
         wp_admin_bar_recovery_mode_menu($wpAdminBar);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminBarAddSecondaryGroups(\WP_Admin_Bar $wpAdminBar): void
     {
         wp_admin_bar_add_secondary_groups($wpAdminBar);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueAdminBarHeaderStyles(): void
     {
         wp_enqueue_admin_bar_header_styles();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueAdminBarBumpStyles(): void
     {
         wp_enqueue_admin_bar_bump_styles();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function showAdminBar(bool $show): void
     {
         show_admin_bar($show);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isAdminBarShowing(): bool
     {
         return is_admin_bar_showing();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheAuthor(string $deprecated = ''): string
     {
         return get_the_author($deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theAuthor(string $deprecated = '', bool $deprecatedEcho = true): string
     {
         return the_author($deprecated, $deprecatedEcho);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheModifiedAuthor(): mixed
     {
         return get_the_modified_author();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theModifiedAuthor(): void
     {
         the_modified_author();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheAuthorMeta(string $field = '', int|false $userId = false): string
     {
         return get_the_author_meta($field, $userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theAuthorMeta(string $field = '', int|false $userId = false): void
     {
         the_author_meta($field, $userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheAuthorLink(): string
     {
         return get_the_author_link();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theAuthorLink(): void
     {
         the_author_link();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheAuthorPosts(): int
     {
         return get_the_author_posts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theAuthorPosts(): void
     {
         the_author_posts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheAuthorPostsLink(): string
     {
         return get_the_author_posts_link();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theAuthorPostsLink(string $deprecated = ''): void
     {
         the_author_posts_link($deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAuthorPostsUrl(int $authorId, string $authorNicename = ''): string
     {
         return get_author_posts_url($authorId, $authorNicename);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpListAuthors(string|array $args = ''): mixed
     {
         return wp_list_authors($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isMultiAuthor(): bool
     {
         return is_multi_author();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockBindingsSource(string $sourceName, array $sourceProperties, array $sourceArgs, \WP_Block $blockInstance, string $attributeName): \WP_Block_Bindings_Source|false
     {
         return register_block_bindings_source($sourceName, $sourceProperties, $sourceArgs, $blockInstance, $attributeName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function unregisterBlockBindingsSource(string $sourceName): \WP_Block_Bindings_Source|false
     {
         return unregister_block_bindings_source($sourceName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAllRegisteredBlockBindingsSources(): array
     {
         return get_all_registered_block_bindings_sources();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlockBindingsSource(string $sourceName): \WP_Block_Bindings_Source|null
     {
         return get_block_bindings_source($sourceName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getDefaultBlockCategories(): array
     {
         return get_default_block_categories();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlockCategories(\WP_Post|\WP_Block_Editor_Context $postOrBlockEditorContext): array
     {
         return get_block_categories($postOrBlockEditorContext);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAllowedBlockTypes(\WP_Block_Editor_Context $blockEditorContext): bool|array
     {
         return get_allowed_block_types($blockEditorContext);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getDefaultBlockEditorSettings(): array
     {
         return get_default_block_editor_settings();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getLegacyWidgetBlockEditorSettings(): array
     {
         return get_legacy_widget_block_editor_settings();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetFirstBlock(array $blocks, string $blockName): array
     {
         return wp_get_first_block($blocks, $blockName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlockEditorSettings(array $customSettings, \WP_Block_Editor_Context $blockEditorContext): array
     {
         return get_block_editor_settings($customSettings, $blockEditorContext);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockEditorRestApiPreload(string|array $preloadPaths, \WP_Block_Editor_Context $blockEditorContext): void
     {
         block_editor_rest_api_preload($preloadPaths, $blockEditorContext);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlockEditorThemeStyles(): array
     {
         return get_block_editor_theme_styles();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getClassicThemeSupportsBlockEditorSettings(): array
     {
         return get_classic_theme_supports_block_editor_settings();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetBlockStyleVariationNameFromClass(string $classString): array|null
     {
         return wp_get_block_style_variation_name_from_class($classString);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRenderElementsClassName(string $blockContent, array $block): string
     {
         return wp_render_elements_class_name($blockContent, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTypographyGetPresetInlineStyleValue(string $styleValue, string $cssProperty): string
     {
         return wp_typography_get_preset_inline_style_value($styleValue, $cssProperty);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRenderTypographySupport(string $blockContent, array $block): string
     {
         return wp_render_typography_support($blockContent, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetTypographyValueAndUnit(string|int|float $rawValue, array $options = []): array|null
     {
         return wp_get_typography_value_and_unit($rawValue, $options);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetTypographyFontSizeValue(array $preset, bool|array $settings = []): string|null
     {
         return wp_get_typography_font_size_value($preset, $settings);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlockThemeFolders(string $themeStylesheet = null): array
     {
         return get_block_theme_folders($themeStylesheet);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAllowedBlockTemplatePartAreas(): array
     {
         return get_allowed_block_template_part_areas();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getDefaultBlockTemplateTypes(): array
     {
         return get_default_block_template_types();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlockTemplates(array $query = [], string $templateType = 'wp_template'): array
     {
         return get_block_templates($query, $templateType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlockTemplate(string $id, string $templateType = 'wp_template'): \WP_Block_Template|null
     {
         return get_block_template($id, $templateType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlockFileTemplate(string $id, string $templateType = 'wp_template'): \WP_Block_Template|null
     {
         return get_block_file_template($id, $templateType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockTemplatePart(string $part): void
     {
         block_template_part($part);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockHeaderArea(): void
     {
         block_header_area();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockFooterArea(): void
     {
         block_footer_area();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsThemeDirectoryIgnored(string $path): bool
     {
         return wp_is_theme_directory_ignored($path);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGenerateBlockTemplatesExportFile(): \WP_Error|string
     {
         return wp_generate_block_templates_export_file();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTemplateHierarchy(string $slug, bool $isCustom = false, string $templatePrefix = ''): array
     {
         return get_template_hierarchy($slug, $isCustom, $templatePrefix);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function locateBlockTemplate(string $template, string $type, array $templates): string
     {
         return locate_block_template($template, $type, $templates);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeBlockAssetPathPrefix(string $assetHandleOrPath): string
     {
         return remove_block_asset_path_prefix($assetHandleOrPath);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function generateBlockAssetHandle(string $blockName, string $fieldName, int $index = 0): string
     {
         return generate_block_asset_handle($blockName, $fieldName, $index);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlockAssetUrl(string $path): string|false
     {
         return get_block_asset_url($path);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockScriptModuleId(array $metadata, string $fieldName, int $index = 0): string|false
     {
         return register_block_script_module_id($metadata, $fieldName, $index);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockScriptHandle(array $metadata, string $fieldName, int $index = 0): string|false
     {
         return register_block_script_handle($metadata, $fieldName, $index);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockStyleHandle(array $metadata, string $fieldName, int $index = 0): string|false
     {
         return register_block_style_handle($metadata, $fieldName, $index);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlockMetadataI18nSchema(): object
     {
         return get_block_metadata_i18n_schema();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockTypeFromMetadata(string $fileOrFolder, array $args = []): \WP_Block_Type|false
     {
         return register_block_type_from_metadata($fileOrFolder, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockType(string|\WP_Block_Type $blockType, array $args = []): \WP_Block_Type|false
     {
         return register_block_type($blockType, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function unregisterBlockType(string|\WP_Block_Type $name): \WP_Block_Type|false
     {
         return unregister_block_type($name);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasBlocks(int|string|\WP_Post|null $post = null): bool
     {
         return has_blocks($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasBlock(string $blockName, int|string|\WP_Post|null $post = null): bool
     {
         return has_block($blockName, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getDynamicBlockNames(): array
     {
         return get_dynamic_block_names();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getHookedBlocks(): array
     {
         return get_hooked_blocks();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function insertHookedBlocksIntoRestResponse(\WP_REST_Response $response, \WP_Post $post): \WP_REST_Response
     {
         return insert_hooked_blocks_into_rest_response($response, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function serializeBlockAttributes(array $blockAttributes): string
     {
         return serialize_block_attributes($blockAttributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function stripCoreBlockNamespace(string|null $blockName = null): string
     {
         return strip_core_block_namespace($blockName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentDelimitedBlockContent(string|null $blockName, array $blockAttributes, string $blockContent): string
     {
         return get_comment_delimited_block_content($blockName, $blockAttributes, $blockContent);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function serializeBlock(array $block): string
     {
         return serialize_block($block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function serializeBlocks(array $blocks): string
     {
         return serialize_blocks($blocks);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function resolvePatternBlocks(array $blocks): array
     {
         return resolve_pattern_blocks($blocks);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function filterBlockContent(string $text, array|string $allowedHtml = 'post', array $allowedProtocols = []): string
     {
         return filter_block_content($text, $allowedHtml, $allowedProtocols);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function filterBlockKses(\WP_Block_Parser_Block $block, array|string $allowedHtml, array $allowedProtocols = []): array
     {
         return filter_block_kses($block, $allowedHtml, $allowedProtocols);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function filterBlockKsesValue(array|string $value, array|string $allowedHtml, array $allowedProtocols = [], array $blockContext = null): array|string
     {
         return filter_block_kses_value($value, $allowedHtml, $allowedProtocols, $blockContext);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function filterBlockCoreTemplatePartAttributes(string $attributeValue, string $attributeName, array|string $allowedHtml): string
     {
         return filter_block_core_template_part_attributes($attributeValue, $attributeName, $allowedHtml);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function excerptRemoveBlocks(string $content): string
     {
         return excerpt_remove_blocks($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function excerptRemoveFootnotes(string $content): string
     {
         return excerpt_remove_footnotes($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlock(array $parsedBlock): string
     {
         return render_block($parsedBlock);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function parseBlocks(string $content): array
     {
         return parse_blocks($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doBlocks(string $content): string
     {
         return do_blocks($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockVersion(string $content): int
     {
         return block_version($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockStyle(string|array $blockName, array $styleProperties): bool
     {
         return register_block_style($blockName, $styleProperties);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function unregisterBlockStyle(string $blockName, string $blockStyleName): bool
     {
         return unregister_block_style($blockName, $blockStyleName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockHasSupport(\WP_Block_Type $blockType, string|array $feature, mixed $defaultValue = false): bool
     {
         return block_has_support($blockType, $feature, $defaultValue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMigrateOldTypographyShape(array $metadata): array
     {
         return wp_migrate_old_typography_shape($metadata);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function buildQueryVarsFromQueryBlock(\WP_Block $block, int $page): array
     {
         return build_query_vars_from_query_block($block, $page);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getQueryPaginationArrow(\WP_Block $block, bool $isNext): string|null
     {
         return get_query_pagination_arrow($block, $isNext);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function buildCommentQueryVarsFromBlock(\WP_Block $block): array
     {
         return build_comment_query_vars_from_block($block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentsPaginationArrow(\WP_Block $block, string $paginationType = 'next'): string|null
     {
         return get_comments_pagination_arrow($block, $paginationType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreArchives(array $attributes): string
     {
         return render_block_core_archives($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreArchives(): void
     {
         register_block_core_archives();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreAvatar(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_avatar($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlockCoreAvatarBorderAttributes(array $attributes): array
     {
         return get_block_core_avatar_border_attributes($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreAvatar(): void
     {
         register_block_core_avatar();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreBlock(array $attributes): string
     {
         return render_block_core_block($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreBlock(): void
     {
         register_block_core_block();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreButton(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_button($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreButton(): void
     {
         register_block_core_button();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreCalendar(array $attributes): string
     {
         return render_block_core_calendar($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreCalendar(): void
     {
         register_block_core_calendar();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreCalendarHasPublishedPosts(): bool
     {
         return block_core_calendar_has_published_posts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreCalendarUpdateHasPublishedPosts(): bool
     {
         return block_core_calendar_update_has_published_posts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreCalendarUpdateHasPublishedPostOnDelete(int $postId): void
     {
         block_core_calendar_update_has_published_post_on_delete($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreCalendarUpdateHasPublishedPostOnTransitionPostStatus(string $newStatus, string $oldStatus, \WP_Post $post): void
     {
         block_core_calendar_update_has_published_post_on_transition_post_status($newStatus, $oldStatus, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreCategories(array $attributes): string
     {
         return render_block_core_categories($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function buildDropdownScriptBlockCoreCategories(string $dropdownId): string
     {
         return build_dropdown_script_block_core_categories($dropdownId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreCategories(): void
     {
         register_block_core_categories();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreCommentAuthorName(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_comment_author_name($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreCommentAuthorName(): void
     {
         register_block_core_comment_author_name();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreCommentContent(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_comment_content($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreCommentContent(): void
     {
         register_block_core_comment_content();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreCommentDate(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_comment_date($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreCommentDate(): void
     {
         register_block_core_comment_date();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreCommentEditLink(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_comment_edit_link($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreCommentEditLink(): void
     {
         register_block_core_comment_edit_link();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreCommentReplyLink(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_comment_reply_link($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreCommentReplyLink(): void
     {
         register_block_core_comment_reply_link();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreCommentTemplateRenderComments(array $comments, \WP_Block $block): string
     {
         return block_core_comment_template_render_comments($comments, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreCommentTemplate(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_comment_template($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreCommentTemplate(): void
     {
         register_block_core_comment_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreCommentsPaginationNext(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_comments_pagination_next($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreCommentsPaginationNext(): void
     {
         register_block_core_comments_pagination_next();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreCommentsPaginationNumbers(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_comments_pagination_numbers($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreCommentsPaginationNumbers(): void
     {
         register_block_core_comments_pagination_numbers();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreCommentsPaginationPrevious(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_comments_pagination_previous($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreCommentsPaginationPrevious(): void
     {
         register_block_core_comments_pagination_previous();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreCommentsPagination(array $attributes, string $content): string
     {
         return render_block_core_comments_pagination($attributes, $content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreCommentsPagination(): void
     {
         register_block_core_comments_pagination();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreCommentsTitle(array $attributes): string
     {
         return render_block_core_comments_title($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreCommentsTitle(): void
     {
         register_block_core_comments_title();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreComments(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_comments($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreComments(): void
     {
         register_block_core_comments();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentsBlockFormDefaults(array $fields): array
     {
         return comments_block_form_defaults($fields);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function enqueueLegacyPostCommentsBlockStyles(string $blockName): void
     {
         enqueue_legacy_post_comments_block_styles($blockName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerLegacyPostCommentsBlock(): void
     {
         register_legacy_post_comments_block();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreCover(array $attributes, string $content): string
     {
         return render_block_core_cover($attributes, $content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreCover(): void
     {
         register_block_core_cover();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreFile(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_file($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreFile(): void
     {
         register_block_core_file();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreFootnotes(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_footnotes($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreFootnotes(): void
     {
         register_block_core_footnotes();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreFootnotesPostMeta(): void
     {
         register_block_core_footnotes_post_meta();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAddFootnotesToRevision(array $fields): array
     {
         return wp_add_footnotes_to_revision($fields);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetFootnotesFromRevision(string $revisionField, string $field, object $revision): string
     {
         return wp_get_footnotes_from_revision($revisionField, $field, $revision);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreGalleryDataIdBackcompatibility(array $parsedBlock): array
     {
         return block_core_gallery_data_id_backcompatibility($parsedBlock);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreGalleryRender(array $attributes, string $content): string
     {
         return block_core_gallery_render($attributes, $content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreGallery(): void
     {
         register_block_core_gallery();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreHeadingRender(array $attributes, string $content): string
     {
         return block_core_heading_render($attributes, $content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreHeading(): void
     {
         register_block_core_heading();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreHomeLinkBuildCssColors(array $context): array
     {
         return block_core_home_link_build_css_colors($context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreHomeLinkBuildCssFontSizes(array $context): array
     {
         return block_core_home_link_build_css_font_sizes($context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreHomeLinkBuildLiWrapperAttributes(array $context): string
     {
         return block_core_home_link_build_li_wrapper_attributes($context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreHomeLink(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_home_link($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreHomeLink(): void
     {
         register_block_core_home_link();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreImage(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_image($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreImageGetLightboxSettings(array $block): array
     {
         return block_core_image_get_lightbox_settings($block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreImageRenderLightbox(string $blockContent, array $block): string
     {
         return block_core_image_render_lightbox($blockContent, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreImagePrintLightboxOverlay(): void
     {
         block_core_image_print_lightbox_overlay();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreImage(): void
     {
         register_block_core_image();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerCoreBlockStyleHandles(): void
     {
         register_core_block_style_handles();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerCoreBlockTypesFromMetadata(): void
     {
         register_core_block_types_from_metadata();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpLatestCommentsDraftOrPostTitle(int|\WP_Post $post = 0): string
     {
         return wp_latest_comments_draft_or_post_title($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreLatestComments(array $attributes = []): string
     {
         return render_block_core_latest_comments($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreLatestComments(): void
     {
         register_block_core_latest_comments();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreLatestPostsGetExcerptLength(): int
     {
         return block_core_latest_posts_get_excerpt_length();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreLatestPosts(array $attributes): string
     {
         return render_block_core_latest_posts($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreLatestPosts(): void
     {
         register_block_core_latest_posts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreLatestPostsMigrateCategories(array $block): array
     {
         return block_core_latest_posts_migrate_categories($block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreLegacyWidget(array $attributes): string
     {
         return render_block_core_legacy_widget($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreLegacyWidget(): void
     {
         register_block_core_legacy_widget();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function handleLegacyWidgetPreviewIframe(): void
     {
         handle_legacy_widget_preview_iframe();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreListRender(array $attributes, string $content): string
     {
         return block_core_list_render($attributes, $content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreList(): void
     {
         register_block_core_list();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreLoginout(array $attributes): string
     {
         return render_block_core_loginout($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreLoginout(): void
     {
         register_block_core_loginout();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreMediaText(array $attributes, string $content): string
     {
         return render_block_core_media_text($attributes, $content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreMediaText(): void
     {
         register_block_core_media_text();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationLinkBuildCssColors(array $context, array $attributes, bool $isSubMenu = false): array
     {
         return block_core_navigation_link_build_css_colors($context, $attributes, $isSubMenu);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationLinkBuildCssFontSizes(array $context): array
     {
         return block_core_navigation_link_build_css_font_sizes($context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationLinkRenderSubmenuIcon(): string
     {
         return block_core_navigation_link_render_submenu_icon();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationLinkMaybeUrldecode(string $url): string
     {
         return block_core_navigation_link_maybe_urldecode($url);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreNavigationLink(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_navigation_link($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function buildVariationForNavigationLink(\WP_Taxonomy|\WP_Post_Type $entity, string $kind): array
     {
         return build_variation_for_navigation_link($entity, $kind);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationLinkFilterVariations(array $variations, \WP_Block_Type $blockType): void
     {
         block_core_navigation_link_filter_variations($variations, $blockType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationLinkBuildVariations(): array
     {
         return block_core_navigation_link_build_variations();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreNavigationLink(): void
     {
         register_block_core_navigation_link();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationSubmenuBuildCssFontSizes(array $context): array
     {
         return block_core_navigation_submenu_build_css_font_sizes($context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationSubmenuRenderSubmenuIcon(): string
     {
         return block_core_navigation_submenu_render_submenu_icon();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreNavigationSubmenu(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_navigation_submenu($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreNavigationSubmenu(): void
     {
         register_block_core_navigation_submenu();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationGetMenuItemsAtLocation(string $location): array
     {
         return block_core_navigation_get_menu_items_at_location($location);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationSortMenuItemsByParentId(array $menuItems): array
     {
         return block_core_navigation_sort_menu_items_by_parent_id($menuItems);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationGetInnerBlocksFromUnstableLocation(array $attributes): \WP_Block_List
     {
         return block_core_navigation_get_inner_blocks_from_unstable_location($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationAddDirectivesToSubmenu(\WP_HTML_Tag_Processor $tags, array $blockAttributes): string
     {
         return block_core_navigation_add_directives_to_submenu($tags, $blockAttributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationBuildCssColors(array $attributes): array
     {
         return block_core_navigation_build_css_colors($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationBuildCssFontSizes(array $attributes): array
     {
         return block_core_navigation_build_css_font_sizes($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationRenderSubmenuIcon(): string
     {
         return block_core_navigation_render_submenu_icon();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationFilterOutEmptyBlocks(array $parsedBlocks): array
     {
         return block_core_navigation_filter_out_empty_blocks($parsedBlocks);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationBlockContainsCoreNavigation(\WP_Block_List $innerBlocks): bool
     {
         return block_core_navigation_block_contains_core_navigation($innerBlocks);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationGetFallbackBlocks(): array
     {
         return block_core_navigation_get_fallback_blocks();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationGetPostIds(\WP_Block_List $innerBlocks): array
     {
         return block_core_navigation_get_post_ids($innerBlocks);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationFromBlockGetPostIds(\WP_Block $block): array
     {
         return block_core_navigation_from_block_get_post_ids($block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreNavigation(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_navigation($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreNavigation(): void
     {
         register_block_core_navigation();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationTypographicPresetsBackcompatibility(array $parsedBlock): array
     {
         return block_core_navigation_typographic_presets_backcompatibility($parsedBlock);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationRemoveSerializedParentBlock(string $serializedBlock): string
     {
         return block_core_navigation_remove_serialized_parent_block($serializedBlock);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationMockParsedBlock(array $innerBlocks, \WP_Post $post): array
     {
         return block_core_navigation_mock_parsed_block($innerBlocks, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationInsertHookedBlocks(array $innerBlocks, \WP_Post $post): string
     {
         return block_core_navigation_insert_hooked_blocks($innerBlocks, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationSetIgnoredHookedBlocksMetadata(array $innerBlocks, \WP_Post $post): string
     {
         return block_core_navigation_set_ignored_hooked_blocks_metadata($innerBlocks, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreNavigationInsertHookedBlocksIntoRestResponse(\WP_REST_Response $response, \WP_Post $post): \WP_REST_Response
     {
         return block_core_navigation_insert_hooked_blocks_into_rest_response($response, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCorePageListItem(): void
     {
         register_block_core_page_list_item();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCorePageListBuildCssColors(array $attributes, array $context): array
     {
         return block_core_page_list_build_css_colors($attributes, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCorePageListBuildCssFontSizes(array $context): array
     {
         return block_core_page_list_build_css_font_sizes($context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCorePageListRenderNestedPageList(bool $openSubmenusOnClick, bool $showSubmenuIcons, bool $isNavigationChild, array $nestedPages, bool $isNested, array $activePageAncestorIds = [], array $colors = [], int $depth = 0): string
     {
         return block_core_page_list_render_nested_page_list($openSubmenusOnClick, $showSubmenuIcons, $isNavigationChild, $nestedPages, $isNested, $activePageAncestorIds, $colors, $depth);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCorePageListNestPages(array $currentLevel, array $children): array
     {
         return block_core_page_list_nest_pages($currentLevel, $children);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCorePageList(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_page_list($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCorePageList(): void
     {
         register_block_core_page_list();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCorePattern(): void
     {
         register_block_core_pattern();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCorePattern(array $attributes): string
     {
         return render_block_core_pattern($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCorePostAuthorBiography(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_post_author_biography($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCorePostAuthorBiography(): void
     {
         register_block_core_post_author_biography();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCorePostAuthorName(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_post_author_name($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCorePostAuthorName(): void
     {
         register_block_core_post_author_name();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCorePostAuthor(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_post_author($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCorePostAuthor(): void
     {
         register_block_core_post_author();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCorePostCommentsForm(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_post_comments_form($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCorePostCommentsForm(): void
     {
         register_block_core_post_comments_form();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postCommentsFormBlockFormDefaults(array $fields): array
     {
         return post_comments_form_block_form_defaults($fields);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCorePostContent(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_post_content($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCorePostContent(): void
     {
         register_block_core_post_content();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCorePostDate(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_post_date($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCorePostDate(): void
     {
         register_block_core_post_date();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCorePostExcerpt(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_post_excerpt($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCorePostExcerpt(): void
     {
         register_block_core_post_excerpt();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCorePostFeaturedImage(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_post_featured_image($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlockCorePostFeaturedImageOverlayElementMarkup(array $attributes): string
     {
         return get_block_core_post_featured_image_overlay_element_markup($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlockCorePostFeaturedImageBorderAttributes(array $attributes): array
     {
         return get_block_core_post_featured_image_border_attributes($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCorePostFeaturedImage(): void
     {
         register_block_core_post_featured_image();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCorePostNavigationLink(array $attributes, string $content): string
     {
         return render_block_core_post_navigation_link($attributes, $content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCorePostNavigationLink(): void
     {
         register_block_core_post_navigation_link();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCorePostTemplateUsesFeaturedImage(\WP_Block_List $innerBlocks): bool
     {
         return block_core_post_template_uses_featured_image($innerBlocks);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCorePostTemplate(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_post_template($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCorePostTemplate(): void
     {
         register_block_core_post_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCorePostTerms(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_post_terms($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCorePostTermsBuildVariations(): array
     {
         return block_core_post_terms_build_variations();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCorePostTerms(): void
     {
         register_block_core_post_terms();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCorePostTitle(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_post_title($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCorePostTitle(): void
     {
         register_block_core_post_title();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreQueryNoResults(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_query_no_results($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreQueryNoResults(): void
     {
         register_block_core_query_no_results();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreQueryPaginationNext(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_query_pagination_next($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreQueryPaginationNext(): void
     {
         register_block_core_query_pagination_next();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreQueryPaginationNumbers(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_query_pagination_numbers($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreQueryPaginationNumbers(): void
     {
         register_block_core_query_pagination_numbers();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreQueryPaginationPrevious(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_query_pagination_previous($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreQueryPaginationPrevious(): void
     {
         register_block_core_query_pagination_previous();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreQueryPagination(array $attributes, string $content): string
     {
         return render_block_core_query_pagination($attributes, $content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreQueryPagination(): void
     {
         register_block_core_query_pagination();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreQueryTitle(array $attributes): string
     {
         return render_block_core_query_title($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreQueryTitle(): void
     {
         register_block_core_query_title();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreQuery(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_query($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreQuery(): void
     {
         register_block_core_query();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreQueryDisableEnhancedPagination(array $parsedBlock): string
     {
         return block_core_query_disable_enhanced_pagination($parsedBlock);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreReadMore(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_read_more($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreReadMore(): void
     {
         register_block_core_read_more();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreRss(array $attributes): string
     {
         return render_block_core_rss($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreRss(): void
     {
         register_block_core_rss();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreSearch(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_search($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreSearch(): void
     {
         register_block_core_search();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function classnamesForBlockCoreSearch(array $attributes): string
     {
         return classnames_for_block_core_search($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function applyBlockCoreSearchBorderStyle(array $attributes, string $property, string $side, array $wrapperStyles, array $buttonStyles, array $inputStyles): void
     {
         apply_block_core_search_border_style($attributes, $property, $side, $wrapperStyles, $buttonStyles, $inputStyles);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function applyBlockCoreSearchBorderStyles(array $attributes, string $property, array $wrapperStyles, array $buttonStyles, array $inputStyles): void
     {
         apply_block_core_search_border_styles($attributes, $property, $wrapperStyles, $buttonStyles, $inputStyles);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function stylesForBlockCoreSearch(array $attributes): array
     {
         return styles_for_block_core_search($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTypographyClassesForBlockCoreSearch(array $attributes): string
     {
         return get_typography_classes_for_block_core_search($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTypographyStylesForBlockCoreSearch(array $attributes): string
     {
         return get_typography_styles_for_block_core_search($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBorderColorClassesForBlockCoreSearch(array $attributes): string
     {
         return get_border_color_classes_for_block_core_search($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getColorClassesForBlockCoreSearch(array $attributes): string
     {
         return get_color_classes_for_block_core_search($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreShortcode(array $attributes, string $content): string
     {
         return render_block_core_shortcode($attributes, $content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreShortcode(): void
     {
         register_block_core_shortcode();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreSiteLogo(array $attributes): string
     {
         return render_block_core_site_logo($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreSiteLogoSetting(): void
     {
         register_block_core_site_logo_setting();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreSiteIconSetting(): void
     {
         register_block_core_site_icon_setting();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreSiteLogo(): void
     {
         register_block_core_site_logo();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreSiteTagline(array $attributes): string
     {
         return render_block_core_site_tagline($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreSiteTagline(): void
     {
         register_block_core_site_tagline();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreSiteTitle(array $attributes): string
     {
         return render_block_core_site_title($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreSiteTitle(): void
     {
         register_block_core_site_title();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreSocialLink(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_social_link($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreSocialLink(): void
     {
         register_block_core_social_link();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreSocialLinkGetIcon(string $service): string
     {
         return block_core_social_link_get_icon($service);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreSocialLinkGetName(string $service): string
     {
         return block_core_social_link_get_name($service);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreSocialLinkServices(string $service = '', string $field = ''): array|string
     {
         return block_core_social_link_services($service, $field);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreSocialLinkGetColorStyles(array $context): string
     {
         return block_core_social_link_get_color_styles($context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function blockCoreSocialLinkGetColorClasses(array $context): string
     {
         return block_core_social_link_get_color_classes($context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreTagCloud(array $attributes): string
     {
         return render_block_core_tag_cloud($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreTagCloud(): void
     {
         register_block_core_tag_cloud();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreTemplatePart(array $attributes): string
     {
         return render_block_core_template_part($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function buildTemplatePartBlockAreaVariations(array $instanceVariations): array
     {
         return build_template_part_block_area_variations($instanceVariations);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function buildTemplatePartBlockInstanceVariations(): array
     {
         return build_template_part_block_instance_variations();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function buildTemplatePartBlockVariations(): array
     {
         return build_template_part_block_variations();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreTemplatePart(): void
     {
         register_block_core_template_part();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreTermDescription(array $attributes): string
     {
         return render_block_core_term_description($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreTermDescription(): void
     {
         register_block_core_term_description();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreWidgetGroup(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_widget_group($attributes, $content, $block);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockCoreWidgetGroup(): void
     {
         register_block_core_widget_group();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function noteSidebarBeingRendered(int|string $index): void
     {
         note_sidebar_being_rendered($index);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function discardSidebarBeingRendered(): void
     {
         discard_sidebar_being_rendered();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpListBookmarks(string|array $args = ''): mixed
     {
         return wp_list_bookmarks($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBookmark(int|\stdClass $bookmark, string $output = OBJECT, string $filter = 'raw'): array|object|null
     {
         return get_bookmark($bookmark, $output, $filter);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBookmarkField(string $field, int $bookmark, string $context = 'display'): string|\WP_Error
     {
         return get_bookmark_field($field, $bookmark, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBookmarks(string|array $args = ''): array
     {
         return get_bookmarks($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeBookmark(\stdClass|array $bookmark, string $context = 'display'): \stdClass|array
     {
         return sanitize_bookmark($bookmark, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeBookmarkField(string $field, mixed $value, int $bookmarkId, string $context): mixed
     {
         return sanitize_bookmark_field($field, $value, $bookmarkId, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function cleanBookmarkCache(int $bookmarkId): void
     {
         clean_bookmark_cache($bookmarkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheInit(): void
     {
         wp_cache_init();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheAdd(int|string $key, mixed $data, string $group = '', int $expire = 0): bool
     {
         return wp_cache_add($key, $data, $group, $expire);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheAddMultiple(array $data, string $group = '', int $expire = 0): array
     {
         return wp_cache_add_multiple($data, $group, $expire);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheReplace(int|string $key, mixed $data, string $group = '', int $expire = 0): bool
     {
         return wp_cache_replace($key, $data, $group, $expire);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheSet(int|string $key, mixed $data, string $group = '', int $expire = 0): bool
     {
         return wp_cache_set($key, $data, $group, $expire);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheSetMultiple(array $data, string $group = '', int $expire = 0): array
     {
         return wp_cache_set_multiple($data, $group, $expire);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheGet(int|string $key, string $group = '', bool $force = false, bool $found = null): mixed
     {
         return wp_cache_get($key, $group, $force, $found);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheGetMultiple(array $keys, string $group = '', bool $force = false): array
     {
         return wp_cache_get_multiple($keys, $group, $force);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheDelete(int|string $key, string $group = ''): bool
     {
         return wp_cache_delete($key, $group);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheDeleteMultiple(array $keys, string $group = ''): array
     {
         return wp_cache_delete_multiple($keys, $group);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheIncr(int|string $key, int $offset = 1, string $group = ''): int|false
     {
         return wp_cache_incr($key, $offset, $group);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheDecr(int|string $key, int $offset = 1, string $group = ''): int|false
     {
         return wp_cache_decr($key, $offset, $group);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheFlush(): bool
     {
         return wp_cache_flush();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheFlushRuntime(): bool
     {
         return wp_cache_flush_runtime();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheFlushGroup(string $group): bool
     {
         return wp_cache_flush_group($group);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheSupports(string $feature): bool
     {
         return wp_cache_supports($feature);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheClose(): true
     {
         return wp_cache_close();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheAddGlobalGroups(string|array $groups): void
     {
         wp_cache_add_global_groups($groups);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheAddNonPersistentGroups(string|array $groups): void
     {
         wp_cache_add_non_persistent_groups($groups);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheSwitchToBlog(int $blogId): void
     {
         wp_cache_switch_to_blog($blogId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function redirectCanonical(string $requestedUrl = null, bool $doRedirect = true): mixed
     {
         return redirect_canonical($requestedUrl, $doRedirect);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function stripFragmentFromUrl(string $url): string
     {
         return strip_fragment_from_url($url);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function redirectGuess404Permalink(): string|false
     {
         return redirect_guess_404_permalink();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRedirectAdminLocations(): void
     {
         wp_redirect_admin_locations();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mapMetaCap(string $cap, int $userId): array
     {
         return map_meta_cap($cap, $userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function currentUserCan(string $capability): bool
     {
         return current_user_can($capability);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function currentUserCanForBlog(int $blogId, string $capability): bool
     {
         return current_user_can_for_blog($blogId, $capability);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function authorCan(int|\WP_Post $post, string $capability): bool
     {
         return author_can($post, $capability);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function userCan(int|\WP_User $user, string $capability): bool
     {
         return user_can($user, $capability);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRoles(): \WP_Roles
     {
         return wp_roles();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getRole(string $role): \WP_Role|null
     {
         return get_role($role);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addRole(string $role, string $displayName, array $capabilities = []): mixed
     {
         return add_role($role, $displayName, $capabilities);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeRole(string $role): void
     {
         remove_role($role);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSuperAdmins(): array
     {
         return get_super_admins();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isSuperAdmin(int|false $userId = false): bool
     {
         return is_super_admin($userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function grantSuperAdmin(int $userId): bool
     {
         return grant_super_admin($userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function revokeSuperAdmin(int $userId): bool
     {
         return revoke_super_admin($userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMaybeGrantInstallLanguagesCap(array $allcaps): array
     {
         return wp_maybe_grant_install_languages_cap($allcaps);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMaybeGrantResumeExtensionsCaps(array $allcaps): array
     {
         return wp_maybe_grant_resume_extensions_caps($allcaps);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMaybeGrantSiteHealthCaps(array $allcaps, array $caps, array $args, \WP_User $user): array
     {
         return wp_maybe_grant_site_health_caps($allcaps, $caps, $args, $user);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCategoryLink(int|object $category): string
     {
         return get_category_link($category);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCategoryParents(int $categoryId, bool $link = false, string $separator = '/', bool $nicename = false, array $deprecated = []): string|\WP_Error
     {
         return get_category_parents($categoryId, $link, $separator, $nicename, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheCategory(int|false $postId = false): array
     {
         return get_the_category($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheCategoryByID(int $catId): string|\WP_Error
     {
         return get_the_category_by_ID($catId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheCategoryList(string $separator = '', string $parents = '', int|false $postId = false): string
     {
         return get_the_category_list($separator, $parents, $postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function inCategory(int|string|array $category, int|\WP_Post $post = null): bool
     {
         return in_category($category, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theCategory(string $separator = '', string $parents = '', int|false $postId = false): void
     {
         the_category($separator, $parents, $postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function categoryDescription(int $category = 0): string
     {
         return category_description($category);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDropdownCategories(array|string $args = ''): string
     {
         return wp_dropdown_categories($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpListCategories(array|string $args = ''): mixed
     {
         return wp_list_categories($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTagCloud(array|string $args = ''): mixed
     {
         return wp_tag_cloud($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function defaultTopicCountScale(int $count): int
     {
         return default_topic_count_scale($count);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGenerateTagCloud(array $tags, string|array $args = ''): string|array
     {
         return wp_generate_tag_cloud($tags, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function walkCategoryTree(): string
     {
         return walk_category_tree();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function walkCategoryDropdownTree(): string
     {
         return walk_category_dropdown_tree();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTagLink(int|object $tag): string
     {
         return get_tag_link($tag);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheTags(int|\WP_Post $post = 0): array|false|\WP_Error
     {
         return get_the_tags($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheTagList(string $before = '', string $sep = '', string $after = '', int $postId = 0): string|false|\WP_Error
     {
         return get_the_tag_list($before, $sep, $after, $postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theTags(string $before = null, string $sep = ', ', string $after = ''): void
     {
         the_tags($before, $sep, $after);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function tagDescription(int $tag = 0): string
     {
         return tag_description($tag);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function termDescription(int $term = 0, null $deprecated = null): string
     {
         return term_description($term, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheTerms(int|\WP_Post $post, string $taxonomy): array|false|\WP_Error
     {
         return get_the_terms($post, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheTermList(int $postId, string $taxonomy, string $before = '', string $sep = '', string $after = ''): string|false|\WP_Error
     {
         return get_the_term_list($postId, $taxonomy, $before, $sep, $after);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTermParentsList(int $termId, string $taxonomy, string|array $args = []): string|\WP_Error
     {
         return get_term_parents_list($termId, $taxonomy, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theTerms(int $postId, string $taxonomy, string $before = '', string $sep = ', ', string $after = ''): mixed
     {
         return the_terms($postId, $taxonomy, $before, $sep, $after);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasCategory(string|int|array $category = '', int|\WP_Post $post = null): bool
     {
         return has_category($category, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasTag(string|int|array $tag = '', int|\WP_Post $post = null): bool
     {
         return has_tag($tag, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasTerm(string|int|array $term = '', string $taxonomy = '', int|\WP_Post $post = null): bool
     {
         return has_term($term, $taxonomy, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCategories(string|array $args = ''): array
     {
         return get_categories($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCategory(int|object $category, string $output = OBJECT, string $filter = 'raw'): array|null|object
     {
         return get_category($category, $output, $filter);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCategoryByPath(string $categoryPath, bool $fullMatch = true, string $output = OBJECT): \WP_Term|array|\WP_Error|null
     {
         return get_category_by_path($categoryPath, $fullMatch, $output);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCategoryBySlug(string $slug): object|false
     {
         return get_category_by_slug($slug);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCatID(string $catName): int
     {
         return get_cat_ID($catName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCatName(int $catId): string
     {
         return get_cat_name($catId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function catIsAncestorOf(int|object $cat1, int|object $cat2): bool
     {
         return cat_is_ancestor_of($cat1, $cat2);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeCategory(object|array $category, string $context = 'display'): object|array
     {
         return sanitize_category($category, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeCategoryField(string $field, mixed $value, int $catId, string $context): mixed
     {
         return sanitize_category_field($field, $value, $catId, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTags(string|array $args = ''): array|int|\WP_Error
     {
         return get_tags($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTag(int|object $tag, string $output = OBJECT, string $filter = 'raw'): \WP_Term|array|\WP_Error|null
     {
         return get_tag($tag, $output, $filter);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function cleanCategoryCache(int $id): void
     {
         clean_category_cache($id);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSimplepieAutoload(string $class): void
     {
         wp_simplepie_autoload($class);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockPatternCategory(string $categoryName, array $categoryProperties): bool
     {
         return register_block_pattern_category($categoryName, $categoryProperties);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function unregisterBlockPatternCategory(string $categoryName): bool
     {
         return unregister_block_pattern_category($categoryName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerBlockPattern(string $patternName, array $patternProperties): bool
     {
         return register_block_pattern($patternName, $patternProperties);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function unregisterBlockPattern(string $patternName): bool
     {
         return unregister_block_pattern($patternName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlockWrapperAttributes(array $extraAttributes = []): string
     {
         return get_block_wrapper_attributes($extraAttributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentAuthor(int|\WP_Comment $commentId = 0): string
     {
         return get_comment_author($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentAuthor(int|\WP_Comment $commentId = 0): void
     {
         comment_author($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentAuthorEmail(int|\WP_Comment $commentId = 0): string
     {
         return get_comment_author_email($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentAuthorEmail(int|\WP_Comment $commentId = 0): void
     {
         comment_author_email($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentAuthorEmailLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment $comment = null): void
     {
         comment_author_email_link($linkText, $before, $after, $comment);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentAuthorEmailLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment $comment = null): string
     {
         return get_comment_author_email_link($linkText, $before, $after, $comment);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentAuthorLink(int|\WP_Comment $commentId = 0): string
     {
         return get_comment_author_link($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentAuthorLink(int|\WP_Comment $commentId = 0): void
     {
         comment_author_link($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentAuthorIP(int|\WP_Comment $commentId = 0): string
     {
         return get_comment_author_IP($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentAuthorIP(int|\WP_Comment $commentId = 0): void
     {
         comment_author_IP($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentAuthorUrl(int|\WP_Comment $commentId = 0): string
     {
         return get_comment_author_url($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentAuthorUrl(int|\WP_Comment $commentId = 0): void
     {
         comment_author_url($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentAuthorUrlLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment $comment = 0): string
     {
         return get_comment_author_url_link($linkText, $before, $after, $comment);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentAuthorUrlLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment $comment = 0): void
     {
         comment_author_url_link($linkText, $before, $after, $comment);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentClass(string|array $cssClass = '', int|\WP_Comment $comment = null, int|\WP_Post $post = null, bool $display = true): mixed
     {
         return comment_class($cssClass, $comment, $post, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentClass(string|array $cssClass = '', int|\WP_Comment $commentId = null, int|\WP_Post $post = null): array
     {
         return get_comment_class($cssClass, $commentId, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentDate(string $format = '', int|\WP_Comment $commentId = 0): string
     {
         return get_comment_date($format, $commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentDate(string $format = '', int|\WP_Comment $commentId = 0): void
     {
         comment_date($format, $commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentExcerpt(int|\WP_Comment $commentId = 0): string
     {
         return get_comment_excerpt($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentExcerpt(int|\WP_Comment $commentId = 0): void
     {
         comment_excerpt($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentID(): string
     {
         return get_comment_ID();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentID(): void
     {
         comment_ID();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentLink(\WP_Comment|int|null $comment = null, array $args = []): string
     {
         return get_comment_link($comment, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentsLink(int|\WP_Post $post = 0): string
     {
         return get_comments_link($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentsLink(string $deprecated = '', string $deprecated2 = ''): void
     {
         comments_link($deprecated, $deprecated2);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentsNumber(int|\WP_Post $post = 0): string|int
     {
         return get_comments_number($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentsNumber(string|false $zero = false, string|false $one = false, string|false $more = false, int|\WP_Post $post = 0): void
     {
         comments_number($zero, $one, $more, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentsNumberText(string|false $zero = false, string|false $one = false, string|false $more = false, int|\WP_Post $post = 0): string
     {
         return get_comments_number_text($zero, $one, $more, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentText(int|\WP_Comment $commentId = 0, array $args = []): string
     {
         return get_comment_text($commentId, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentText(int|\WP_Comment $commentId = 0, array $args = []): void
     {
         comment_text($commentId, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentTime(string $format = '', bool $gmt = false, bool $translate = true, int|\WP_Comment $commentId = 0): string
     {
         return get_comment_time($format, $gmt, $translate, $commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentTime(string $format = '', int|\WP_Comment $commentId = 0): void
     {
         comment_time($format, $commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentType(int|\WP_Comment $commentId = 0): string
     {
         return get_comment_type($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentType(string|false $commenttxt = false, string|false $trackbacktxt = false, string|false $pingbacktxt = false): void
     {
         comment_type($commenttxt, $trackbacktxt, $pingbacktxt);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTrackbackUrl(): string
     {
         return get_trackback_url();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function trackbackUrl(bool $deprecatedEcho = true): mixed
     {
         return trackback_url($deprecatedEcho);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function trackbackRdf(int|string $deprecated = ''): void
     {
         trackback_rdf($deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentsOpen(int|\WP_Post $post = null): bool
     {
         return comments_open($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function pingsOpen(int|\WP_Post $post = null): bool
     {
         return pings_open($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCommentFormUnfilteredHtmlNonce(): void
     {
         wp_comment_form_unfiltered_html_nonce();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentsTemplate(string $file = '/comments.php', bool $separateComments = false): void
     {
         comments_template($file, $separateComments);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentsPopupLink(false|string $zero = false, false|string $one = false, false|string $more = false, string $cssClass = '', false|string $none = false): void
     {
         comments_popup_link($zero, $one, $more, $cssClass, $none);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentReplyLink(array $args = [], int|\WP_Comment $comment = null, int|\WP_Post $post = null): string|false|null
     {
         return get_comment_reply_link($args, $comment, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentReplyLink(array $args = [], int|\WP_Comment $comment = null, int|\WP_Post $post = null): void
     {
         comment_reply_link($args, $comment, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostReplyLink(array $args = [], int|\WP_Post $post = null): string|false|null
     {
         return get_post_reply_link($args, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postReplyLink(array $args = [], int|\WP_Post $post = null): void
     {
         post_reply_link($args, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCancelCommentReplyLink(string $linkText = '', int|\WP_Post|null $post = null): string
     {
         return get_cancel_comment_reply_link($linkText, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function cancelCommentReplyLink(string $linkText = ''): void
     {
         cancel_comment_reply_link($linkText);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentIdFields(int|\WP_Post|null $post = null): string
     {
         return get_comment_id_fields($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentIdFields(int|\WP_Post|null $post = null): void
     {
         comment_id_fields($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentFormTitle(string|false $noReplyText = false, string|false $replyText = false, bool $linkToParent = true, int|\WP_Post|null $post = null): void
     {
         comment_form_title($noReplyText, $replyText, $linkToParent, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpListComments(string|array $args = [], array $comments = null): mixed
     {
         return wp_list_comments($args, $comments);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentForm(array $args = [], int|\WP_Post $post = null): void
     {
         comment_form($args, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function checkComment(string $author, string $email, string $url, string $comment, string $userIp, string $userAgent, string $commentType): bool
     {
         return check_comment($author, $email, $url, $comment, $userIp, $userAgent, $commentType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getApprovedComments(int $postId, array $args = []): array|int
     {
         return get_approved_comments($postId, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getComment(\WP_Comment|string|int $comment = null, string $output = OBJECT): \WP_Comment|array|null
     {
         return get_comment($comment, $output);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getComments(string|array $args = ''): array|int
     {
         return get_comments($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentStatuses(): array
     {
         return get_comment_statuses();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getDefaultCommentStatus(string $postType = 'post', string $commentType = 'comment'): string
     {
         return get_default_comment_status($postType, $commentType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getLastcommentmodified(string $timezone = 'server'): string|false
     {
         return get_lastcommentmodified($timezone);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentCount(int $postId = 0): array
     {
         return get_comment_count($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addCommentMeta(int $commentId, string $metaKey, mixed $metaValue, bool $unique = false): int|false
     {
         return add_comment_meta($commentId, $metaKey, $metaValue, $unique);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deleteCommentMeta(int $commentId, string $metaKey, mixed $metaValue = ''): bool
     {
         return delete_comment_meta($commentId, $metaKey, $metaValue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentMeta(int $commentId, string $key = '', bool $single = false): mixed
     {
         return get_comment_meta($commentId, $key, $single);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpLazyloadCommentMeta(array $commentIds): void
     {
         wp_lazyload_comment_meta($commentIds);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateCommentMeta(int $commentId, string $metaKey, mixed $metaValue, mixed $prevValue = ''): int|bool
     {
         return update_comment_meta($commentId, $metaKey, $metaValue, $prevValue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSetCommentCookies(\WP_Comment $comment, \WP_User $user, bool $cookiesConsent = true): void
     {
         wp_set_comment_cookies($comment, $user, $cookiesConsent);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeCommentCookies(): void
     {
         sanitize_comment_cookies();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAllowComment(array $commentdata, bool $wpError = false): int|string|\WP_Error
     {
         return wp_allow_comment($commentdata, $wpError);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function checkCommentFloodDb(): void
     {
         check_comment_flood_db();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCheckCommentFlood(bool $isFlood, string $ip, string $email, string $date, bool $avoidDie = false): bool
     {
         return wp_check_comment_flood($isFlood, $ip, $email, $date, $avoidDie);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function separateComments(array $comments): array
     {
         return separate_comments($comments);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentPagesCount(array $comments = null, int $perPage = null, bool $threaded = null): int
     {
         return get_comment_pages_count($comments, $perPage, $threaded);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPageOfComment(int $commentId, array $args = []): int|null
     {
         return get_page_of_comment($commentId, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetCommentFieldsMaxLengths(): array
     {
         return wp_get_comment_fields_max_lengths();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCheckCommentDataMaxLengths(array $commentData): \WP_Error|true
     {
         return wp_check_comment_data_max_lengths($commentData);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCheckCommentDisallowedList(string $author, string $email, string $url, string $comment, string $userIp, string $userAgent): bool
     {
         return wp_check_comment_disallowed_list($author, $email, $url, $comment, $userIp, $userAgent);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCountComments(int $postId = 0): \stdClass
     {
         return wp_count_comments($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeleteComment(int|\WP_Comment $commentId, bool $forceDelete = false): bool
     {
         return wp_delete_comment($commentId, $forceDelete);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTrashComment(int|\WP_Comment $commentId): bool
     {
         return wp_trash_comment($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUntrashComment(int|\WP_Comment $commentId): bool
     {
         return wp_untrash_comment($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSpamComment(int|\WP_Comment $commentId): bool
     {
         return wp_spam_comment($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUnspamComment(int|\WP_Comment $commentId): bool
     {
         return wp_unspam_comment($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetCommentStatus(int|\WP_Comment $commentId): string|false
     {
         return wp_get_comment_status($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTransitionCommentStatus(string $newStatus, string $oldStatus, \WP_Comment $comment): void
     {
         wp_transition_comment_status($newStatus, $oldStatus, $comment);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetCurrentCommenter(): array
     {
         return wp_get_current_commenter();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetUnapprovedCommentAuthorEmail(): string
     {
         return wp_get_unapproved_comment_author_email();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInsertComment(array $commentdata): int|false
     {
         return wp_insert_comment($commentdata);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpFilterComment(array $commentdata): array
     {
         return wp_filter_comment($commentdata);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpThrottleCommentFlood(bool $block, int $timeLastcomment, int $timeNewcomment): bool
     {
         return wp_throttle_comment_flood($block, $timeLastcomment, $timeNewcomment);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNewComment(array $commentdata, bool $wpError = false): int|false|\WP_Error
     {
         return wp_new_comment($commentdata, $wpError);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNewCommentNotifyModerator(int $commentId): bool
     {
         return wp_new_comment_notify_moderator($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNewCommentNotifyPostauthor(int $commentId): bool
     {
         return wp_new_comment_notify_postauthor($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSetCommentStatus(int|\WP_Comment $commentId, string $commentStatus, bool $wpError = false): bool|\WP_Error
     {
         return wp_set_comment_status($commentId, $commentStatus, $wpError);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateComment(array $commentarr, bool $wpError = false): int|false|\WP_Error
     {
         return wp_update_comment($commentarr, $wpError);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeferCommentCounting(bool $defer = null): bool
     {
         return wp_defer_comment_counting($defer);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateCommentCount(int|null $postId, bool $doDeferred = false): mixed
     {
         return wp_update_comment_count($postId, $doDeferred);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateCommentCountNow(int $postId): bool
     {
         return wp_update_comment_count_now($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function discoverPingbackServerUri(string $url, string $deprecated = ''): string|false
     {
         return discover_pingback_server_uri($url, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doAllPings(): void
     {
         do_all_pings();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doAllPingbacks(): void
     {
         do_all_pingbacks();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doAllEnclosures(): void
     {
         do_all_enclosures();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doAllTrackbacks(): void
     {
         do_all_trackbacks();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doTrackbacks(int|\WP_Post $post): mixed
     {
         return do_trackbacks($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function genericPing(int $postId = 0): int
     {
         return generic_ping($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function pingback(string $content, int|\WP_Post $post): void
     {
         pingback($content, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function privacyPingFilter(mixed $sites): mixed
     {
         return privacy_ping_filter($sites);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function trackback(string $trackbackUrl, string $title, string $excerpt, int $postId): mixed
     {
         return trackback($trackbackUrl, $title, $excerpt, $postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function weblogPing(string $server = '', string $path = ''): void
     {
         weblog_ping($server, $path);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function pingbackPingSourceUri(string $sourceUri): string
     {
         return pingback_ping_source_uri($sourceUri);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function xmlrpcPingbackError(\IXR_Error $ixrError): \IXR_Error
     {
         return xmlrpc_pingback_error($ixrError);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function cleanCommentCache(int|array $ids): void
     {
         clean_comment_cache($ids);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateCommentCache(array $comments, bool $updateMetaCache = true): void
     {
         update_comment_cache($comments, $updateMetaCache);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpHandleCommentSubmission(array $commentData): \WP_Comment|\WP_Error
     {
         return wp_handle_comment_submission($commentData);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRegisterCommentPersonalDataExporter(array $exporters): array
     {
         return wp_register_comment_personal_data_exporter($exporters);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCommentsPersonalDataExporter(string $emailAddress, int $page = 1): array
     {
         return wp_comments_personal_data_exporter($emailAddress, $page);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRegisterCommentPersonalDataEraser(array $erasers): array
     {
         return wp_register_comment_personal_data_eraser($erasers);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCommentsPersonalDataEraser(string $emailAddress, int $page = 1): array
     {
         return wp_comments_personal_data_eraser($emailAddress, $page);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheSetCommentsLastChanged(): void
     {
         wp_cache_set_comments_last_changed();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpScheduleSingleEvent(int $timestamp, string $hook, array $args = [], bool $wpError = false): bool|\WP_Error
     {
         return wp_schedule_single_event($timestamp, $hook, $args, $wpError);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpScheduleEvent(int $timestamp, string $recurrence, string $hook, array $args = [], bool $wpError = false): bool|\WP_Error
     {
         return wp_schedule_event($timestamp, $recurrence, $hook, $args, $wpError);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRescheduleEvent(int $timestamp, string $recurrence, string $hook, array $args = [], bool $wpError = false): bool|\WP_Error
     {
         return wp_reschedule_event($timestamp, $recurrence, $hook, $args, $wpError);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUnscheduleEvent(int $timestamp, string $hook, array $args = [], bool $wpError = false): bool|\WP_Error
     {
         return wp_unschedule_event($timestamp, $hook, $args, $wpError);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpClearScheduledHook(string $hook, array $args = [], bool $wpError = false): int|false|\WP_Error
     {
         return wp_clear_scheduled_hook($hook, $args, $wpError);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUnscheduleHook(string $hook, bool $wpError = false): int|false|\WP_Error
     {
         return wp_unschedule_hook($hook, $wpError);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetScheduledEvent(string $hook, array $args = [], int|null $timestamp = null): object|false
     {
         return wp_get_scheduled_event($hook, $args, $timestamp);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNextScheduled(string $hook, array $args = []): int|false
     {
         return wp_next_scheduled($hook, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function spawnCron(int $gmtTime = 0): bool
     {
         return spawn_cron($gmtTime);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCron(): mixed
     {
         return wp_cron();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetSchedules(): array
     {
         return wp_get_schedules();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetSchedule(string $hook, array $args = []): string|false
     {
         return wp_get_schedule($hook, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetReadyCronJobs(): array
     {
         return wp_get_ready_cron_jobs();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInitialConstants(): void
     {
         wp_initial_constants();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPluginDirectoryConstants(): void
     {
         wp_plugin_directory_constants();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCookieConstants(): void
     {
         wp_cookie_constants();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSslConstants(): void
     {
         wp_ssl_constants();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpFunctionalityConstants(): void
     {
         wp_functionality_constants();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTemplatingConstants(): void
     {
         wp_templating_constants();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEmbedRegisterHandler(string $id, string $regex, callable $callback, int $priority = 10): void
     {
         wp_embed_register_handler($id, $regex, $callback, $priority);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEmbedUnregisterHandler(string $id, int $priority = 10): void
     {
         wp_embed_unregister_handler($id, $priority);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEmbedDefaults(string $url = ''): array
     {
         return wp_embed_defaults($url);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpOembedGet(string $url, array|string $args = ''): string|false
     {
         return wp_oembed_get($url, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpOembedAddProvider(string $format, string $provider, bool $regex = false): void
     {
         wp_oembed_add_provider($format, $provider, $regex);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpOembedRemoveProvider(string $format): bool
     {
         return wp_oembed_remove_provider($format);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMaybeLoadEmbeds(): void
     {
         wp_maybe_load_embeds();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEmbedHandlerYoutube(array $matches, array $attr, string $url, array $rawattr): string
     {
         return wp_embed_handler_youtube($matches, $attr, $url, $rawattr);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEmbedHandlerAudio(array $matches, array $attr, string $url, array $rawattr): string
     {
         return wp_embed_handler_audio($matches, $attr, $url, $rawattr);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEmbedHandlerVideo(array $matches, array $attr, string $url, array $rawattr): string
     {
         return wp_embed_handler_video($matches, $attr, $url, $rawattr);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpOembedRegisterRoute(): void
     {
         wp_oembed_register_route();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpOembedAddDiscoveryLinks(): void
     {
         wp_oembed_add_discovery_links();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMaybeEnqueueOembedHostJs(string $html): string
     {
         return wp_maybe_enqueue_oembed_host_js($html);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostEmbedUrl(int|\WP_Post $post = null): string|false
     {
         return get_post_embed_url($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getOembedEndpointUrl(string $permalink = '', string $format = 'json'): string
     {
         return get_oembed_endpoint_url($permalink, $format);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostEmbedHtml(int $width, int $height, int|\WP_Post $post = null): string|false
     {
         return get_post_embed_html($width, $height, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getOembedResponseData(\WP_Post|int $post, int $width): array|false
     {
         return get_oembed_response_data($post, $width);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getOembedResponseDataForUrl(string $url, array $args): object|false
     {
         return get_oembed_response_data_for_url($url, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getOembedResponseDataRich(array $data, \WP_Post $post, int $width, int $height): array
     {
         return get_oembed_response_data_rich($data, $post, $width, $height);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpOembedEnsureFormat(string $format): string
     {
         return wp_oembed_ensure_format($format);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpFilterOembedIframeTitleAttribute(string $result, object $data, string $url): string
     {
         return wp_filter_oembed_iframe_title_attribute($result, $data, $url);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpFilterOembedResult(string $result, object $data, string $url): string
     {
         return wp_filter_oembed_result($result, $data, $url);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEmbedExcerptMore(string $moreString): string
     {
         return wp_embed_excerpt_more($moreString);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theExcerptEmbed(): void
     {
         the_excerpt_embed();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEmbedExcerptAttachment(string $content): string
     {
         return wp_embed_excerpt_attachment($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function enqueueEmbedScripts(): void
     {
         enqueue_embed_scripts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueEmbedStyles(): void
     {
         wp_enqueue_embed_styles();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function printEmbedScripts(): void
     {
         print_embed_scripts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function printEmbedCommentsButton(): void
     {
         print_embed_comments_button();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function printEmbedSharingButton(): void
     {
         print_embed_sharing_button();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function printEmbedSharingDialog(): void
     {
         print_embed_sharing_dialog();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theEmbedSiteTitle(): void
     {
         the_embed_site_title();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpFilterPreOembedResult(null|string $result, string $url, array $args): null|string
     {
         return wp_filter_pre_oembed_result($result, $url, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPausedPlugins(): \WP_Paused_Extensions_Storage
     {
         return wp_paused_plugins();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPausedThemes(): \WP_Paused_Extensions_Storage
     {
         return wp_paused_themes();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetExtensionErrorDescription(array $error): string
     {
         return wp_get_extension_error_description($error);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRegisterFatalErrorHandler(): void
     {
         wp_register_fatal_error_handler();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsFatalErrorHandlerEnabled(): bool
     {
         return wp_is_fatal_error_handler_enabled();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRecoveryMode(): \WP_Recovery_Mode
     {
         return wp_recovery_mode();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBloginfoRss(string $show = ''): string
     {
         return get_bloginfo_rss($show);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function bloginfoRss(string $show = ''): void
     {
         bloginfo_rss($show);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getDefaultFeed(): string
     {
         return get_default_feed();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getWpTitleRss(string $deprecated = '&#8211;'): string
     {
         return get_wp_title_rss($deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTitleRss(string $deprecated = '&#8211;'): void
     {
         wp_title_rss($deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheTitleRss(int|\WP_Post $post = 0): string
     {
         return get_the_title_rss($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theTitleRss(): void
     {
         the_title_rss();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheContentFeed(string $feedType = null): string
     {
         return get_the_content_feed($feedType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theContentFeed(string $feedType = null): void
     {
         the_content_feed($feedType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theExcerptRss(): void
     {
         the_excerpt_rss();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function thePermalinkRss(): void
     {
         the_permalink_rss();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentsLinkFeed(): void
     {
         comments_link_feed();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentGuid(int|\WP_Comment $commentId = null): void
     {
         comment_guid($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentGuid(int|\WP_Comment $commentId = null): string|false
     {
         return get_comment_guid($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentLink(int|\WP_Comment $comment = null): void
     {
         comment_link($comment);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentAuthorRss(): string
     {
         return get_comment_author_rss();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentAuthorRss(): void
     {
         comment_author_rss();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function commentTextRss(): void
     {
         comment_text_rss();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheCategoryRss(string $type = null): string
     {
         return get_the_category_rss($type);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theCategoryRss(string $type = null): void
     {
         the_category_rss($type);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function htmlTypeRss(): void
     {
         html_type_rss();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function rssEnclosure(): void
     {
         rss_enclosure();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function atomEnclosure(): void
     {
         atom_enclosure();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function prepAtomTextConstruct(string $data): array
     {
         return prep_atom_text_construct($data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function atomSiteIcon(): void
     {
         atom_site_icon();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function rss2SiteIcon(): void
     {
         rss2_site_icon();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSelfLink(): string
     {
         return get_self_link();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function selfLink(): void
     {
         self_link();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getFeedBuildDate(string $format): string|false
     {
         return get_feed_build_date($format);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function feedContentType(string $type = ''): string
     {
         return feed_content_type($type);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function fetchFeed(string|array $url): \SimplePie|\WP_Error
     {
         return fetch_feed($url);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrintFontFaces(array $fonts = []): void
     {
         wp_print_font_faces($fonts);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRegisterFontCollection(string $slug, array $args): \WP_Font_Collection|\WP_Error
     {
         return wp_register_font_collection($slug, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUnregisterFontCollection(string $slug): bool
     {
         return wp_unregister_font_collection($slug);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetFontDir(): array
     {
         return wp_get_font_dir();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpFontDir(bool $createDir = true): array
     {
         return wp_font_dir($createDir);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wptexturize(string $text, bool $reset = false): string
     {
         return wptexturize($text, $reset);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wptexturizePrimes(string $haystack, string $needle, string $prime, string $openQuote, string $closeQuote): string
     {
         return wptexturize_primes($haystack, $needle, $prime, $openQuote, $closeQuote);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpautop(string $text, bool $br = true): string
     {
         return wpautop($text, $br);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpHtmlSplit(string $input): array
     {
         return wp_html_split($input);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getHtmlSplitRegex(): string
     {
         return get_html_split_regex();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpReplaceInHtmlTags(string $haystack, array $replacePairs): string
     {
         return wp_replace_in_html_tags($haystack, $replacePairs);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function shortcodeUnautop(string $text): string
     {
         return shortcode_unautop($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function seemsUtf8(string $str): bool
     {
         return seems_utf8($str);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSpecialcharsDecode(string $text, string|int $quoteStyle = ENT_NOQUOTES): string
     {
         return wp_specialchars_decode($text, $quoteStyle);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCheckInvalidUtf8(string $text, bool $strip = false): string
     {
         return wp_check_invalid_utf8($text, $strip);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function utf8UriEncode(string $utf8String, int $length = 0, bool $encodeAsciiCharacters = false): string
     {
         return utf8_uri_encode($utf8String, $length, $encodeAsciiCharacters);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeAccents(string $text, string $locale = ''): string
     {
         return remove_accents($text, $locale);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeFileName(string $filename): string
     {
         return sanitize_file_name($filename);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeUser(string $username, bool $strict = false): string
     {
         return sanitize_user($username, $strict);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeKey(string $key): string
     {
         return sanitize_key($key);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeTitle(string $title, string $fallbackTitle = '', string $context = 'save'): string
     {
         return sanitize_title($title, $fallbackTitle, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeTitleForQuery(string $title): string
     {
         return sanitize_title_for_query($title);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeTitleWithDashes(string $title, string $rawTitle = '', string $context = 'display'): string
     {
         return sanitize_title_with_dashes($title, $rawTitle, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeSqlOrderby(string $orderby): string|false
     {
         return sanitize_sql_orderby($orderby);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeHtmlClass(string $classname, string $fallback = ''): string
     {
         return sanitize_html_class($classname, $fallback);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeLocaleName(string $localeName): string
     {
         return sanitize_locale_name($localeName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function convertChars(string $content, string $deprecated = ''): string
     {
         return convert_chars($content, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function convertInvalidEntities(string $content): string
     {
         return convert_invalid_entities($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function balanceTags(string $text, bool $force = false): string
     {
         return balanceTags($text, $force);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function forceBalanceTags(string $text): string
     {
         return force_balance_tags($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function formatToEdit(string $content, bool $richText = false): string
     {
         return format_to_edit($content, $richText);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function zeroise(int $number, int $threshold): string
     {
         return zeroise($number, $threshold);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function backslashit(string $value): string
     {
         return backslashit($value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function trailingslashit(string $value): string
     {
         return trailingslashit($value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function untrailingslashit(string $text): string
     {
         return untrailingslashit($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addslashesGpc(string|array $gpc): string|array
     {
         return addslashes_gpc($gpc);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function stripslashesDeep(mixed $value): mixed
     {
         return stripslashes_deep($value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function stripslashesFromStringsOnly(mixed $value): mixed
     {
         return stripslashes_from_strings_only($value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function urlencodeDeep(mixed $value): mixed
     {
         return urlencode_deep($value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function rawurlencodeDeep(mixed $value): mixed
     {
         return rawurlencode_deep($value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function urldecodeDeep(mixed $value): mixed
     {
         return urldecode_deep($value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function antispambot(string $emailAddress, int $hexEncoding = 0): string
     {
         return antispambot($emailAddress, $hexEncoding);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function makeClickable(string $text): string
     {
         return make_clickable($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRelCallback(array $matches, string $rel): string
     {
         return wp_rel_callback($matches, $rel);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRelNofollow(string $text): string
     {
         return wp_rel_nofollow($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRelUgc(string $text): string
     {
         return wp_rel_ugc($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTargetedLinkRel(string $text): string
     {
         return wp_targeted_link_rel($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTargetedLinkRelCallback(array $matches): string
     {
         return wp_targeted_link_rel_callback($matches);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInitTargetedLinkRelFilters(): void
     {
         wp_init_targeted_link_rel_filters();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRemoveTargetedLinkRelFilters(): void
     {
         wp_remove_targeted_link_rel_filters();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function translateSmiley(array $matches): string
     {
         return translate_smiley($matches);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function convertSmilies(string $text): string
     {
         return convert_smilies($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isEmail(string $email, bool $deprecated = false): string|false
     {
         return is_email($email, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsoDescrambler(string $subject): string
     {
         return wp_iso_descrambler($subject);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getGmtFromDate(string $dateString, string $format = 'Y-m-d H:i:s'): string
     {
         return get_gmt_from_date($dateString, $format);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getDateFromGmt(string $dateString, string $format = 'Y-m-d H:i:s'): string
     {
         return get_date_from_gmt($dateString, $format);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function iso8601TimezoneToOffset(string $timezone): int|float
     {
         return iso8601_timezone_to_offset($timezone);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function iso8601ToDatetime(string $dateString, string $timezone = 'user'): string|false
     {
         return iso8601_to_datetime($dateString, $timezone);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeEmail(string $email): string
     {
         return sanitize_email($email);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function humanTimeDiff(int $from, int $to = 0): string
     {
         return human_time_diff($from, $to);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTrimExcerpt(string $text = '', int|object $post = null): string
     {
         return wp_trim_excerpt($text, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTrimWords(string $text, int $numWords = 55, string $more = null): string
     {
         return wp_trim_words($text, $numWords, $more);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function ent2ncr(string $text): string
     {
         return ent2ncr($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function formatForEditor(string $text, string $defaultEditor = null): string
     {
         return format_for_editor($text, $defaultEditor);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function escSql(string|array $data): string|array
     {
         return esc_sql($data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function escUrl(string $url, array $protocols = null, string $context = 'display'): string
     {
         return esc_url($url, $protocols, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function escUrlRaw(string $url, array $protocols = null): string
     {
         return esc_url_raw($url, $protocols);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeUrl(string $url, array $protocols = null): string
     {
         return sanitize_url($url, $protocols);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function htmlentities2(string $text): string
     {
         return htmlentities2($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function escJs(string $text): string
     {
         return esc_js($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function escHtml(string $text): string
     {
         return esc_html($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function escAttr(string $text): string
     {
         return esc_attr($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function escTextarea(string $text): string
     {
         return esc_textarea($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function escXml(string $text): string
     {
         return esc_xml($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function tagEscape(string $tagName): string
     {
         return tag_escape($tagName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMakeLinkRelative(string $link): string
     {
         return wp_make_link_relative($link);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeOption(string $option, mixed $value): mixed
     {
         return sanitize_option($option, $value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mapDeep(mixed $value, callable $callback): mixed
     {
         return map_deep($value, $callback);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpParseStr(string $inputString, array $result): void
     {
         wp_parse_str($inputString, $result);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPreKsesLessThan(string $content): string
     {
         return wp_pre_kses_less_than($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPreKsesLessThanCallback(array $matches): string
     {
         return wp_pre_kses_less_than_callback($matches);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPreKsesBlockAttributes(string $content, array|string $allowedHtml, array $allowedProtocols): string
     {
         return wp_pre_kses_block_attributes($content, $allowedHtml, $allowedProtocols);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSprintf(string $pattern): string
     {
         return wp_sprintf($pattern);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSprintfL(string $pattern, array $args): string
     {
         return wp_sprintf_l($pattern, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpHtmlExcerpt(string $str, int $count, string $more = null): string
     {
         return wp_html_excerpt($str, $count, $more);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function linksAddBaseUrl(string $content, string $base, array $attrs = []): string
     {
         return links_add_base_url($content, $base, $attrs);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function linksAddTarget(string $content, string $target = '_blank', array $tags = []): string
     {
         return links_add_target($content, $target, $tags);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function normalizeWhitespace(string $str): string
     {
         return normalize_whitespace($str);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpStripAllTags(string $text, bool $removeBreaks = false): string
     {
         return wp_strip_all_tags($text, $removeBreaks);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeTextField(string $str): string
     {
         return sanitize_text_field($str);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeTextareaField(string $str): string
     {
         return sanitize_textarea_field($str);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpBasename(string $path, string $suffix = ''): string
     {
         return wp_basename($path, $suffix);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function capitalPDangit(string $text): string
     {
         return capital_P_dangit($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeMimeType(string $mimeType): string
     {
         return sanitize_mime_type($mimeType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeTrackbackUrls(string $toPing): string
     {
         return sanitize_trackback_urls($toPing);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSlash(string|array $value): string|array
     {
         return wp_slash($value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUnslash(string|array $value): string|array
     {
         return wp_unslash($value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getUrlInContent(string $content): string|false
     {
         return get_url_in_content($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSpacesRegexp(): string
     {
         return wp_spaces_regexp();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueEmojiStyles(): void
     {
         wp_enqueue_emoji_styles();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function printEmojiDetectionScript(): void
     {
         print_emoji_detection_script();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEncodeEmoji(string $content): string
     {
         return wp_encode_emoji($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpStaticizeEmoji(string $text): string
     {
         return wp_staticize_emoji($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpStaticizeEmojiForEmail(array $mail): array
     {
         return wp_staticize_emoji_for_email($mail);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function urlShorten(string $url, int $length = 35): string
     {
         return url_shorten($url, $length);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeHexColor(string $color): mixed
     {
         return sanitize_hex_color($color);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeHexColorNoHash(string $color): string|null
     {
         return sanitize_hex_color_no_hash($color);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function maybeHashHexColor(string $color): string
     {
         return maybe_hash_hex_color($color);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mysql2date(string $format, string $date, bool $translate = true): string|int|false
     {
         return mysql2date($format, $date, $translate);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function currentTime(string $type, int|bool $gmt = 0): int|string
     {
         return current_time($type, $gmt);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function currentDatetime(): \DateTimeImmutable
     {
         return current_datetime();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTimezoneString(): string
     {
         return wp_timezone_string();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTimezone(): \DateTimeZone
     {
         return wp_timezone();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function dateI18n(string $format, int|bool $timestampWithOffset = false, bool $gmt = false): string
     {
         return date_i18n($format, $timestampWithOffset, $gmt);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDate(string $format, int $timestamp = null, \DateTimeZone $timezone = null): string|false
     {
         return wp_date($format, $timestamp, $timezone);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMaybeDeclineDate(string $date, string $format = ''): string
     {
         return wp_maybe_decline_date($date, $format);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function numberFormatI18n(float $number, int $decimals = 0): string
     {
         return number_format_i18n($number, $decimals);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sizeFormat(int|string $bytes, int $decimals = 0): string|false
     {
         return size_format($bytes, $decimals);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function humanReadableDuration(string $duration = ''): string|false
     {
         return human_readable_duration($duration);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getWeekstartend(string $mysqlstring, int|string $startOfWeek = ''): array
     {
         return get_weekstartend($mysqlstring, $startOfWeek);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function maybeSerialize(string|array|object $data): mixed
     {
         return maybe_serialize($data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function maybeUnserialize(string $data): mixed
     {
         return maybe_unserialize($data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isSerialized(string $data, bool $strict = true): bool
     {
         return is_serialized($data, $strict);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isSerializedString(string $data): bool
     {
         return is_serialized_string($data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function xmlrpcGetposttitle(string $content): string
     {
         return xmlrpc_getposttitle($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function xmlrpcGetpostcategory(string $content): string|array
     {
         return xmlrpc_getpostcategory($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function xmlrpcRemovepostdata(string $content): string
     {
         return xmlrpc_removepostdata($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpExtractUrls(string $content): array
     {
         return wp_extract_urls($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doEnclose(string|null $content, int|\WP_Post $post): mixed
     {
         return do_enclose($content, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetHttpHeaders(string $url, bool $deprecated = false): \WpOrg\Requests\Utility\CaseInsensitiveDictionary|false
     {
         return wp_get_http_headers($url, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isNewDay(): int
     {
         return is_new_day();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function buildQuery(array $data): string
     {
         return build_query($data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addQueryArg(string|array $key, string $value, string $url): string
     {
         return add_query_arg($key, $value, $url);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeQueryArg(string|array $key, false|string $query = false): string
     {
         return remove_query_arg($key, $query);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRemovableQueryArgs(): array
     {
         return wp_removable_query_args();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addMagicQuotes(array $inputArray): array
     {
         return add_magic_quotes($inputArray);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRemoteFopen(string $uri): string|false
     {
         return wp_remote_fopen($uri);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wp(string|array $queryVars = ''): void
     {
         wp($queryVars);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getStatusHeaderDesc(int $code): string
     {
         return get_status_header_desc($code);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function statusHeader(int $code, string $description = ''): void
     {
         status_header($code, $description);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetNocacheHeaders(): array
     {
         return wp_get_nocache_headers();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function nocacheHeaders(): void
     {
         nocache_headers();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function cacheJavascriptHeaders(): void
     {
         cache_javascript_headers();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getNumQueries(): int
     {
         return get_num_queries();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function boolFromYn(string $yn): bool
     {
         return bool_from_yn($yn);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doFeed(): void
     {
         do_feed();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doFeedRdf(): void
     {
         do_feed_rdf();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doFeedRss(): void
     {
         do_feed_rss();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doFeedRss2(bool $forComments): void
     {
         do_feed_rss2($forComments);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doFeedAtom(bool $forComments): void
     {
         do_feed_atom($forComments);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doRobots(): void
     {
         do_robots();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doFavicon(): void
     {
         do_favicon();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isBlogInstalled(): bool
     {
         return is_blog_installed();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNonceUrl(string $actionurl, int|string $action, string $name = '_wpnonce'): string
     {
         return wp_nonce_url($actionurl, $action, $name);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNonceField(int|string $action, string $name = '_wpnonce', bool $referer = true, bool $display = true): string
     {
         return wp_nonce_field($action, $name, $referer, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRefererField(bool $display = true): string
     {
         return wp_referer_field($display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpOriginalRefererField(bool $display = true, string $jumpBackTo = 'current'): string
     {
         return wp_original_referer_field($display, $jumpBackTo);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetReferer(): string|false
     {
         return wp_get_referer();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetRawReferer(): string|false
     {
         return wp_get_raw_referer();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetOriginalReferer(): string|false
     {
         return wp_get_original_referer();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMkdirP(string $target): bool
     {
         return wp_mkdir_p($target);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function pathIsAbsolute(string $path): bool
     {
         return path_is_absolute($path);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function pathJoin(string $base, string $path): string
     {
         return path_join($base, $path);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNormalizePath(string $path): string
     {
         return wp_normalize_path($path);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTempDir(): string
     {
         return get_temp_dir();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsWritable(string $path): bool
     {
         return wp_is_writable($path);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function winIsWritable(string $path): bool
     {
         return win_is_writable($path);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetUploadDir(): array
     {
         return wp_get_upload_dir();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUploadDir(string|null $time = null, bool $createDir = true, bool $refreshCache = false): array
     {
         return wp_upload_dir($time, $createDir, $refreshCache);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUniqueFilename(string $dir, string $filename, callable $uniqueFilenameCallback = null): string
     {
         return wp_unique_filename($dir, $filename, $uniqueFilenameCallback);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUploadBits(string $name, null|string $deprecated, string $bits, string|null $time = null): array
     {
         return wp_upload_bits($name, $deprecated, $bits, $time);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpExt2type(string $ext): mixed
     {
         return wp_ext2type($ext);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetDefaultExtensionForMimeType(string $mimeType): string|false
     {
         return wp_get_default_extension_for_mime_type($mimeType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCheckFiletype(string $filename, array|null $mimes = null): array
     {
         return wp_check_filetype($filename, $mimes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCheckFiletypeAndExt(string $file, string $filename, array|null $mimes = null): array
     {
         return wp_check_filetype_and_ext($file, $filename, $mimes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetImageMime(string $file): string|false
     {
         return wp_get_image_mime($file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetMimeTypes(): array
     {
         return wp_get_mime_types();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetExtTypes(): array
     {
         return wp_get_ext_types();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpFilesize(string $path): int
     {
         return wp_filesize($path);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAllowedMimeTypes(int|\WP_User $user = null): array
     {
         return get_allowed_mime_types($user);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNonceAys(string $action): void
     {
         wp_nonce_ays($action);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDie(string|\WP_Error $message = '', string|int $title = '', string|array|int $args = []): void
     {
         wp_die($message, $title, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpJsonEncode(mixed $value, int $flags = 0, int $depth = 512): string|false
     {
         return wp_json_encode($value, $flags, $depth);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSendJson(mixed $response, int $statusCode = null, int $flags = 0): void
     {
         wp_send_json($response, $statusCode, $flags);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSendJsonSuccess(mixed $value = null, int $statusCode = null, int $flags = 0): void
     {
         wp_send_json_success($value, $statusCode, $flags);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSendJsonError(mixed $value = null, int $statusCode = null, int $flags = 0): void
     {
         wp_send_json_error($value, $statusCode, $flags);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCheckJsonpCallback(string $callback): bool
     {
         return wp_check_jsonp_callback($callback);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpJsonFileDecode(string $filename, array $options = []): mixed
     {
         return wp_json_file_decode($filename, $options);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsServingRestRequest(): bool
     {
         return wp_is_serving_rest_request();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function smiliesInit(): void
     {
         smilies_init();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpParseArgs(string|array|object $args, array $defaults = []): array
     {
         return wp_parse_args($args, $defaults);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpParseList(array|string $inputList): array
     {
         return wp_parse_list($inputList);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpParseIdList(array|string $inputList): array
     {
         return wp_parse_id_list($inputList);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpParseSlugList(array|string $inputList): array
     {
         return wp_parse_slug_list($inputList);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpArraySliceAssoc(array $inputArray, array $keys): array
     {
         return wp_array_slice_assoc($inputArray, $keys);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRecursiveKsort(array $inputArray): void
     {
         wp_recursive_ksort($inputArray);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsNumericArray(mixed $data): bool
     {
         return wp_is_numeric_array($data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpFilterObjectList(array $inputList, array $args = [], string $operator = 'and', bool|string $field = false): array
     {
         return wp_filter_object_list($inputList, $args, $operator, $field);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpListFilter(array $inputList, array $args = [], string $operator = 'AND'): array
     {
         return wp_list_filter($inputList, $args, $operator);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpListPluck(array $inputList, int|string $field, int|string $indexKey = null): array
     {
         return wp_list_pluck($inputList, $field, $indexKey);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpListSort(array $inputList, string|array $orderby = [], string $order = 'ASC', bool $preserveKeys = false): array
     {
         return wp_list_sort($inputList, $orderby, $order, $preserveKeys);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMaybeLoadWidgets(): void
     {
         wp_maybe_load_widgets();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpWidgetsAddMenu(): void
     {
         wp_widgets_add_menu();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpObEndFlushAll(): void
     {
         wp_ob_end_flush_all();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deadDb(): void
     {
         dead_db();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function absint(mixed $maybeint): int
     {
         return absint($maybeint);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTriggerError(string $functionName, string $message, int $errorLevel = E_USER_NOTICE): void
     {
         wp_trigger_error($functionName, $message, $errorLevel);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isLighttpdBefore150(): bool
     {
         return is_lighttpd_before_150();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function apacheModLoaded(string $mod, bool $defaultValue = false): bool
     {
         return apache_mod_loaded($mod, $defaultValue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function iis7SupportsPermalinks(): bool
     {
         return iis7_supports_permalinks();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function validateFile(string $file, array $allowedFiles = []): int
     {
         return validate_file($file, $allowedFiles);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function forceSslAdmin(string|bool $force = null): bool
     {
         return force_ssl_admin($force);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGuessUrl(): string
     {
         return wp_guess_url();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSuspendCacheAddition(bool $suspend = null): bool
     {
         return wp_suspend_cache_addition($suspend);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSuspendCacheInvalidation(bool $suspend = true): bool
     {
         return wp_suspend_cache_invalidation($suspend);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isMainSite(int $siteId = null, int $networkId = null): bool
     {
         return is_main_site($siteId, $networkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getMainSiteId(int $networkId = null): int
     {
         return get_main_site_id($networkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isMainNetwork(int $networkId = null): bool
     {
         return is_main_network($networkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getMainNetworkId(): int
     {
         return get_main_network_id();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isSiteMetaSupported(): bool
     {
         return is_site_meta_supported();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTimezoneOverrideOffset(): float|false
     {
         return wp_timezone_override_offset();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTimezoneChoice(string $selectedZone, string $locale = null): string
     {
         return wp_timezone_choice($selectedZone, $locale);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpScheduledDelete(): void
     {
         wp_scheduled_delete();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getFileData(string $file, array $defaultHeaders, string $context = ''): array
     {
         return get_file_data($file, $defaultHeaders, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sendNosniffHeader(): void
     {
         send_nosniff_header();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sendFrameOptionsHeader(): void
     {
         send_frame_options_header();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAllowedProtocols(): array
     {
         return wp_allowed_protocols();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDebugBacktraceSummary(string $ignoreClass = null, int $skipFrames = 0, bool $pretty = true): string|array
     {
         return wp_debug_backtrace_summary($ignoreClass, $skipFrames, $pretty);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsStream(string $path): bool
     {
         return wp_is_stream($path);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCheckdate(int $month, int $day, int $year, string $sourceDate): bool
     {
         return wp_checkdate($month, $day, $year, $sourceDate);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAuthCheckLoad(): void
     {
         wp_auth_check_load();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAuthCheckHtml(): void
     {
         wp_auth_check_html();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAuthCheck(array $response): array
     {
         return wp_auth_check($response);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTagRegex(string $tag): string
     {
         return get_tag_regex($tag);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isUtf8Charset(string|null $blogCharset = null): bool
     {
         return is_utf8_charset($blogCharset);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mbstringBinarySafeEncoding(bool $reset = false): void
     {
         mbstring_binary_safe_encoding($reset);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function resetMbstringEncoding(): void
     {
         reset_mbstring_encoding();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpValidateBoolean(mixed $value): bool
     {
         return wp_validate_boolean($value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeleteFile(string $file): void
     {
         wp_delete_file($file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeleteFileFromDirectory(string $file, string $directory): bool
     {
         return wp_delete_file_from_directory($file, $directory);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPostPreviewJs(): void
     {
         wp_post_preview_js();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function mysqlToRfc3339(string $dateString): string
     {
         return mysql_to_rfc3339($dateString);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRaiseMemoryLimit(string $context = 'admin'): int|string|false
     {
         return wp_raise_memory_limit($context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGenerateUuid4(): string
     {
         return wp_generate_uuid4();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsUuid(mixed $uuid, int $version = null): bool
     {
         return wp_is_uuid($uuid, $version);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUniqueId(string $prefix = ''): string
     {
         return wp_unique_id($prefix);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUniquePrefixedId(string $prefix = ''): string
     {
         return wp_unique_prefixed_id($prefix);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheGetLastChanged(string $group): string
     {
         return wp_cache_get_last_changed($group);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheSetLastChanged(string $group): string
     {
         return wp_cache_set_last_changed($group);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSiteAdminEmailChangeNotification(string $oldEmail, string $newEmail, string $optionName): void
     {
         wp_site_admin_email_change_notification($oldEmail, $newEmail, $optionName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrivacyAnonymizeIp(string $ipAddr, bool $ipv6Fallback = false): string
     {
         return wp_privacy_anonymize_ip($ipAddr, $ipv6Fallback);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrivacyAnonymizeData(string $type, string $data = ''): string
     {
         return wp_privacy_anonymize_data($type, $data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrivacyExportsDir(): string
     {
         return wp_privacy_exports_dir();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrivacyExportsUrl(): string
     {
         return wp_privacy_exports_url();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpScheduleDeleteOldPrivacyExportFiles(): void
     {
         wp_schedule_delete_old_privacy_export_files();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrivacyDeleteOldExportFiles(): void
     {
         wp_privacy_delete_old_export_files();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetUpdatePhpUrl(): string
     {
         return wp_get_update_php_url();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdatePhpAnnotation(string $before = '<p class="description">', string $after = '</p>', bool $display = true): mixed
     {
         return wp_update_php_annotation($before, $after, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetUpdatePhpAnnotation(): string
     {
         return wp_get_update_php_annotation();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetDirectPhpUpdateUrl(): string
     {
         return wp_get_direct_php_update_url();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDirectPhpUpdateButton(): void
     {
         wp_direct_php_update_button();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetUpdateHttpsUrl(): string
     {
         return wp_get_update_https_url();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetDirectUpdateHttpsUrl(): string
     {
         return wp_get_direct_update_https_url();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getDirsize(string $directory, int $maxExecutionTime = null): int|false|null
     {
         return get_dirsize($directory, $maxExecutionTime);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function recurseDirsize(string $directory, string|array $exclude = null, int $maxExecutionTime = null, array $directoryCache = null): int|false|null
     {
         return recurse_dirsize($directory, $exclude, $maxExecutionTime, $directoryCache);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function cleanDirsizeCache(string $path): void
     {
         clean_dirsize_cache($path);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isWpVersionCompatible(string $required): bool
     {
         return is_wp_version_compatible($required);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isPhpVersionCompatible(string $required): bool
     {
         return is_php_version_compatible($required);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpFuzzyNumberMatch(int|float $expected, int|float $actual, int|float $precision = 1): bool
     {
         return wp_fuzzy_number_match($expected, $actual, $precision);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetAdminNotice(string $message, array $args = []): string
     {
         return wp_get_admin_notice($message, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminNotice(string $message, array $args = []): void
     {
         wp_admin_notice($message, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpScripts(): \WP_Scripts
     {
         return wp_scripts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrintScripts(string|array|false $handles = false): array
     {
         return wp_print_scripts($handles);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAddInlineScript(string $handle, string $data, string $position = 'after'): bool
     {
         return wp_add_inline_script($handle, $data, $position);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRegisterScript(string $handle, string|false $src, array $deps = [], string|bool|null $ver = false, array|bool $args = []): bool
     {
         return wp_register_script($handle, $src, $deps, $ver, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpLocalizeScript(string $handle, string $objectName, array $l10n): bool
     {
         return wp_localize_script($handle, $objectName, $l10n);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSetScriptTranslations(string $handle, string $domain = 'default', string $path = ''): bool
     {
         return wp_set_script_translations($handle, $domain, $path);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeregisterScript(string $handle): void
     {
         wp_deregister_script($handle);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueScript(string $handle, string $src = '', array $deps = [], string|bool|null $ver = false, array|bool $args = []): void
     {
         wp_enqueue_script($handle, $src, $deps, $ver, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDequeueScript(string $handle): void
     {
         wp_dequeue_script($handle);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpScriptIs(string $handle, string $status = 'enqueued'): bool
     {
         return wp_script_is($handle, $status);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpScriptAddData(string $handle, string $key, mixed $value): bool
     {
         return wp_script_add_data($handle, $key, $value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpStyles(): \WP_Styles
     {
         return wp_styles();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrintStyles(string|bool|array $handles = false): array
     {
         return wp_print_styles($handles);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAddInlineStyle(string $handle, string $data): bool
     {
         return wp_add_inline_style($handle, $data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRegisterStyle(string $handle, string|false $src, array $deps = [], string|bool|null $ver = false, string $media = 'all'): bool
     {
         return wp_register_style($handle, $src, $deps, $ver, $media);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeregisterStyle(string $handle): void
     {
         wp_deregister_style($handle);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueStyle(string $handle, string $src = '', array $deps = [], string|bool|null $ver = false, string $media = 'all'): void
     {
         wp_enqueue_style($handle, $src, $deps, $ver, $media);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDequeueStyle(string $handle): void
     {
         wp_dequeue_style($handle);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpStyleIs(string $handle, string $status = 'enqueued'): bool
     {
         return wp_style_is($handle, $status);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpStyleAddData(string $handle, string $key, mixed $value): bool
     {
         return wp_style_add_data($handle, $key, $value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getHeader(string $name = null, array $args = []): mixed
     {
         return get_header($name, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getFooter(string $name = null, array $args = []): mixed
     {
         return get_footer($name, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSidebar(string $name = null, array $args = []): mixed
     {
         return get_sidebar($name, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTemplatePart(string $slug, string|null $name = null, array $args = []): mixed
     {
         return get_template_part($slug, $name, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSearchForm(array $args = []): mixed
     {
         return get_search_form($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpLoginout(string $redirect = '', bool $display = true): mixed
     {
         return wp_loginout($redirect, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpLogoutUrl(string $redirect = ''): string
     {
         return wp_logout_url($redirect);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpLoginUrl(string $redirect = '', bool $forceReauth = false): string
     {
         return wp_login_url($redirect, $forceReauth);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRegistrationUrl(): string
     {
         return wp_registration_url();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpLoginForm(array $args = []): mixed
     {
         return wp_login_form($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpLostpasswordUrl(string $redirect = ''): string
     {
         return wp_lostpassword_url($redirect);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRegister(string $before = '<li>', string $after = '</li>', bool $display = true): mixed
     {
         return wp_register($before, $after, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMeta(): void
     {
         wp_meta();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function bloginfo(string $show = ''): void
     {
         bloginfo($show);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBloginfo(string $show = '', string $filter = 'raw'): string
     {
         return get_bloginfo($show, $filter);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSiteIconUrl(int $size = 512, string $url = '', int $blogId = 0): string
     {
         return get_site_icon_url($size, $url, $blogId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function siteIconUrl(int $size = 512, string $url = '', int $blogId = 0): void
     {
         site_icon_url($size, $url, $blogId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasSiteIcon(int $blogId = 0): bool
     {
         return has_site_icon($blogId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasCustomLogo(int $blogId = 0): bool
     {
         return has_custom_logo($blogId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCustomLogo(int $blogId = 0): string
     {
         return get_custom_logo($blogId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theCustomLogo(int $blogId = 0): void
     {
         the_custom_logo($blogId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetDocumentTitle(): string
     {
         return wp_get_document_title();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTitle(string $sep = '&raquo;', bool $display = true, string $seplocation = ''): mixed
     {
         return wp_title($sep, $display, $seplocation);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function singlePostTitle(string $prefix = '', bool $display = true): mixed
     {
         return single_post_title($prefix, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postTypeArchiveTitle(string $prefix = '', bool $display = true): mixed
     {
         return post_type_archive_title($prefix, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function singleCatTitle(string $prefix = '', bool $display = true): mixed
     {
         return single_cat_title($prefix, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function singleTagTitle(string $prefix = '', bool $display = true): mixed
     {
         return single_tag_title($prefix, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function singleTermTitle(string $prefix = '', bool $display = true): mixed
     {
         return single_term_title($prefix, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function singleMonthTitle(string $prefix = '', bool $display = true): mixed
     {
         return single_month_title($prefix, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theArchiveTitle(string $before = '', string $after = ''): void
     {
         the_archive_title($before, $after);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheArchiveTitle(): string
     {
         return get_the_archive_title();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theArchiveDescription(string $before = '', string $after = ''): void
     {
         the_archive_description($before, $after);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheArchiveDescription(): string
     {
         return get_the_archive_description();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThePostTypeDescription(): string
     {
         return get_the_post_type_description();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getArchivesLink(string $url, string $text, string $format = 'html', string $before = '', string $after = '', bool $selected = false): string
     {
         return get_archives_link($url, $text, $format, $before, $after, $selected);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetArchives(string|array $args = ''): mixed
     {
         return wp_get_archives($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function calendarWeekMod(int $num): float
     {
         return calendar_week_mod($num);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCalendar(bool $initial = true, bool $display = true): mixed
     {
         return get_calendar($initial, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deleteGetCalendarCache(): void
     {
         delete_get_calendar_cache();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function allowedTags(): string
     {
         return allowed_tags();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theDateXml(): void
     {
         the_date_xml();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theDate(string $format = '', string $before = '', string $after = '', bool $display = true): mixed
     {
         return the_date($format, $before, $after, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheDate(string $format = '', int|\WP_Post $post = null): string|int|false
     {
         return get_the_date($format, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theModifiedDate(string $format = '', string $before = '', string $after = '', bool $display = true): mixed
     {
         return the_modified_date($format, $before, $after, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheModifiedDate(string $format = '', int|\WP_Post $post = null): string|int|false
     {
         return get_the_modified_date($format, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theTime(string $format = ''): void
     {
         the_time($format);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheTime(string $format = '', int|\WP_Post $post = null): string|int|false
     {
         return get_the_time($format, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostTime(string $format = 'U', bool $gmt = false, int|\WP_Post $post = null, bool $translate = false): string|int|false
     {
         return get_post_time($format, $gmt, $post, $translate);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostDatetime(int|\WP_Post $post = null, string $field = 'date', string $source = 'local'): \DateTimeImmutable|false
     {
         return get_post_datetime($post, $field, $source);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostTimestamp(int|\WP_Post $post = null, string $field = 'date'): int|false
     {
         return get_post_timestamp($post, $field);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theModifiedTime(string $format = ''): void
     {
         the_modified_time($format);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheModifiedTime(string $format = '', int|\WP_Post $post = null): string|int|false
     {
         return get_the_modified_time($format, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostModifiedTime(string $format = 'U', bool $gmt = false, int|\WP_Post $post = null, bool $translate = false): string|int|false
     {
         return get_post_modified_time($format, $gmt, $post, $translate);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theWeekday(): void
     {
         the_weekday();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theWeekdayDate(string $before = '', string $after = ''): void
     {
         the_weekday_date($before, $after);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpHead(): void
     {
         wp_head();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpFooter(): void
     {
         wp_footer();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpBodyOpen(): void
     {
         wp_body_open();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function feedLinks(array $args = []): void
     {
         feed_links($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function feedLinksExtra(array $args = []): void
     {
         feed_links_extra($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function rsdLink(): void
     {
         rsd_link();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpStrictCrossOriginReferrer(): void
     {
         wp_strict_cross_origin_referrer();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSiteIcon(): void
     {
         wp_site_icon();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpResourceHints(): void
     {
         wp_resource_hints();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPreloadResources(): void
     {
         wp_preload_resources();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDependenciesUniqueHosts(): array
     {
         return wp_dependencies_unique_hosts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function userCanRichedit(): bool
     {
         return user_can_richedit();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDefaultEditor(): string
     {
         return wp_default_editor();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEditor(string $content, string $editorId, array $settings = []): void
     {
         wp_editor($content, $editorId, $settings);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueEditor(): void
     {
         wp_enqueue_editor();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueCodeEditor(array $args): array|false
     {
         return wp_enqueue_code_editor($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetCodeEditorSettings(array $args): array|false
     {
         return wp_get_code_editor_settings($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSearchQuery(bool $escaped = true): string
     {
         return get_search_query($escaped);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theSearchQuery(): void
     {
         the_search_query();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getLanguageAttributes(string $doctype = 'html'): string
     {
         return get_language_attributes($doctype);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function languageAttributes(string $doctype = 'html'): void
     {
         language_attributes($doctype);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function paginateLinks(string|array $args = ''): mixed
     {
         return paginate_links($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminCssColor(string $key, string $name, string $url, array $colors = [], array $icons = []): void
     {
         wp_admin_css_color($key, $name, $url, $colors, $icons);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerAdminColorSchemes(): void
     {
         register_admin_color_schemes();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminCssUri(string $file = 'wp-admin'): string
     {
         return wp_admin_css_uri($file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAdminCss(string $file = 'wp-admin', bool $forceEcho = false): void
     {
         wp_admin_css($file, $forceEcho);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addThickbox(): void
     {
         add_thickbox();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGenerator(): void
     {
         wp_generator();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theGenerator(string $type): void
     {
         the_generator($type);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheGenerator(string $type = ''): mixed
     {
         return get_the_generator($type);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function checked(mixed $checked, mixed $current = true, bool $display = true): string
     {
         return checked($checked, $current, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function selected(mixed $selected, mixed $current = true, bool $display = true): string
     {
         return selected($selected, $current, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function disabled(mixed $disabled, mixed $current = true, bool $display = true): string
     {
         return disabled($disabled, $current, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpReadonly(mixed $readonlyValue, mixed $current = true, bool $display = true): string
     {
         return wp_readonly($readonlyValue, $current, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRequiredFieldIndicator(): string
     {
         return wp_required_field_indicator();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRequiredFieldMessage(): string
     {
         return wp_required_field_message();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpHeartbeatSettings(array $settings): array
     {
         return wp_heartbeat_settings($settings);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetGlobalSettings(array $path = [], array $context = []): mixed
     {
         return wp_get_global_settings($path, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetGlobalStyles(array $path = [], array $context = []): mixed
     {
         return wp_get_global_styles($path, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetGlobalStylesheet(array $types = []): string
     {
         return wp_get_global_stylesheet($types);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetGlobalStylesCustomCss(): string
     {
         return wp_get_global_styles_custom_css();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAddGlobalStylesForBlocks(): void
     {
         wp_add_global_styles_for_blocks();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpThemeHasThemeJson(): bool
     {
         return wp_theme_has_theme_json();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCleanThemeJsonCache(): void
     {
         wp_clean_theme_json_cache();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetThemeDirectoryPatternSlugs(): array
     {
         return wp_get_theme_directory_pattern_slugs();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetThemeDataCustomTemplates(): array
     {
         return wp_get_theme_data_custom_templates();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetThemeDataTemplateParts(): array
     {
         return wp_get_theme_data_template_parts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetBlockCssSelector(\WP_Block_Type $blockType, string|array $target = 'root', bool $fallback = false): string|null
     {
         return wp_get_block_css_selector($blockType, $target, $fallback);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSafeRemoteRequest(string $url, array $args = []): array|\WP_Error
     {
         return wp_safe_remote_request($url, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSafeRemoteGet(string $url, array $args = []): array|\WP_Error
     {
         return wp_safe_remote_get($url, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSafeRemotePost(string $url, array $args = []): array|\WP_Error
     {
         return wp_safe_remote_post($url, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSafeRemoteHead(string $url, array $args = []): array|\WP_Error
     {
         return wp_safe_remote_head($url, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRemoteRequest(string $url, array $args = []): array|\WP_Error
     {
         return wp_remote_request($url, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRemoteGet(string $url, array $args = []): array|\WP_Error
     {
         return wp_remote_get($url, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRemotePost(string $url, array $args = []): array|\WP_Error
     {
         return wp_remote_post($url, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRemoteHead(string $url, array $args = []): array|\WP_Error
     {
         return wp_remote_head($url, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRemoteRetrieveHeaders(array|\WP_Error $response): \WpOrg\Requests\Utility\CaseInsensitiveDictionary|array
     {
         return wp_remote_retrieve_headers($response);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRemoteRetrieveHeader(array|\WP_Error $response, string $header): array|string
     {
         return wp_remote_retrieve_header($response, $header);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRemoteRetrieveResponseCode(array|\WP_Error $response): int|string
     {
         return wp_remote_retrieve_response_code($response);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRemoteRetrieveResponseMessage(array|\WP_Error $response): string
     {
         return wp_remote_retrieve_response_message($response);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRemoteRetrieveBody(array|\WP_Error $response): string
     {
         return wp_remote_retrieve_body($response);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRemoteRetrieveCookies(array|\WP_Error $response): array
     {
         return wp_remote_retrieve_cookies($response);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRemoteRetrieveCookie(array|\WP_Error $response, string $name): \WP_Http_Cookie|string
     {
         return wp_remote_retrieve_cookie($response, $name);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRemoteRetrieveCookieValue(array|\WP_Error $response, string $name): string
     {
         return wp_remote_retrieve_cookie_value($response, $name);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpHttpSupports(array $capabilities = [], string $url = null): bool
     {
         return wp_http_supports($capabilities, $url);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getHttpOrigin(): string
     {
         return get_http_origin();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAllowedHttpOrigins(): array
     {
         return get_allowed_http_origins();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isAllowedHttpOrigin(string|null $origin = null): string
     {
         return is_allowed_http_origin($origin);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sendOriginHeaders(): string|false
     {
         return send_origin_headers();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpHttpValidateUrl(string $url): string|false
     {
         return wp_http_validate_url($url);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function allowedHttpRequestHosts(bool $isExternal, string $host): bool
     {
         return allowed_http_request_hosts($isExternal, $host);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function msAllowedHttpRequestHosts(bool $isExternal, string $host): bool
     {
         return ms_allowed_http_request_hosts($isExternal, $host);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpParseUrl(string $url, int $component): mixed
     {
         return wp_parse_url($url, $component);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsUsingHttps(): bool
     {
         return wp_is_using_https();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsHomeUrlUsingHttps(): bool
     {
         return wp_is_home_url_using_https();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsSiteUrlUsingHttps(): bool
     {
         return wp_is_site_url_using_https();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsHttpsSupported(): bool
     {
         return wp_is_https_supported();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpShouldReplaceInsecureHomeUrl(): bool
     {
         return wp_should_replace_insecure_home_url();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpReplaceInsecureHomeUrl(string $content): string
     {
         return wp_replace_insecure_home_url($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateUrlsToHttps(): bool
     {
         return wp_update_urls_to_https();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInteractivity(): \WP_Interactivity_API
     {
         return wp_interactivity();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInteractivityProcessDirectives(string $html): string
     {
         return wp_interactivity_process_directives($html);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInteractivityState(string $storeNamespace = null, array $state = []): array
     {
         return wp_interactivity_state($storeNamespace, $state);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInteractivityConfig(string $storeNamespace, array $config = []): array
     {
         return wp_interactivity_config($storeNamespace, $config);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInteractivityDataWpContext(array $context, string $storeNamespace = ''): string
     {
         return wp_interactivity_data_wp_context($context, $storeNamespace);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInteractivityGetContext(string $storeNamespace = null): array
     {
         return wp_interactivity_get_context($storeNamespace);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKses(string $content, array|string $allowedHtml, array $allowedProtocols = []): string
     {
         return wp_kses($content, $allowedHtml, $allowedProtocols);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesOneAttr(string $attr, string $element): string
     {
         return wp_kses_one_attr($attr, $element);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesAllowedHtml(string|array $context = ''): array
     {
         return wp_kses_allowed_html($context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesHook(string $content, array|string $allowedHtml, array $allowedProtocols): string
     {
         return wp_kses_hook($content, $allowedHtml, $allowedProtocols);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesVersion(): string
     {
         return wp_kses_version();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesSplit(string $content, array|string $allowedHtml, array $allowedProtocols): string
     {
         return wp_kses_split($content, $allowedHtml, $allowedProtocols);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesUriAttributes(): array
     {
         return wp_kses_uri_attributes();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesAttr(string $element, string $attr, array|string $allowedHtml, array $allowedProtocols): string
     {
         return wp_kses_attr($element, $attr, $allowedHtml, $allowedProtocols);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesAttrCheck(string $name, string $value, string $whole, string $vless, string $element, array $allowedHtml): bool
     {
         return wp_kses_attr_check($name, $value, $whole, $vless, $element, $allowedHtml);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesHair(string $attr, array $allowedProtocols): array
     {
         return wp_kses_hair($attr, $allowedProtocols);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesAttrParse(string $element): array|false
     {
         return wp_kses_attr_parse($element);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesHairParse(string $attr): array|false
     {
         return wp_kses_hair_parse($attr);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesCheckAttrVal(string $value, string $vless, string $checkname, mixed $checkvalue): bool
     {
         return wp_kses_check_attr_val($value, $vless, $checkname, $checkvalue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesBadProtocol(string $content, array $allowedProtocols): string
     {
         return wp_kses_bad_protocol($content, $allowedProtocols);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesNoNull(string $content, array $options = null): string
     {
         return wp_kses_no_null($content, $options);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesStripslashes(string $content): string
     {
         return wp_kses_stripslashes($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesArrayLc(array $inarray): array
     {
         return wp_kses_array_lc($inarray);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesHtmlError(string $attr): string
     {
         return wp_kses_html_error($attr);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesBadProtocolOnce(string $content, array $allowedProtocols, int $count = 1): string
     {
         return wp_kses_bad_protocol_once($content, $allowedProtocols, $count);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesNormalizeEntities(string $content, string $context = 'html'): string
     {
         return wp_kses_normalize_entities($content, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesNamedEntities(array $matches): string
     {
         return wp_kses_named_entities($matches);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesXmlNamedEntities(array $matches): string
     {
         return wp_kses_xml_named_entities($matches);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function validUnicode(int $i): bool
     {
         return valid_unicode($i);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesDecodeEntities(string $content): string
     {
         return wp_kses_decode_entities($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpFilterKses(string $data): string
     {
         return wp_filter_kses($data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesData(string $data): string
     {
         return wp_kses_data($data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpFilterPostKses(string $data): string
     {
         return wp_filter_post_kses($data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpFilterGlobalStylesPost(string $data): string
     {
         return wp_filter_global_styles_post($data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesPost(string $data): string
     {
         return wp_kses_post($data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpKsesPostDeep(mixed $data): mixed
     {
         return wp_kses_post_deep($data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpFilterNohtmlKses(string $data): string
     {
         return wp_filter_nohtml_kses($data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function ksesInitFilters(): void
     {
         kses_init_filters();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function ksesRemoveFilters(): void
     {
         kses_remove_filters();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function ksesInit(): void
     {
         kses_init();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function safecssFilterAttr(string $css, string $deprecated = ''): string
     {
         return safecss_filter_attr($css, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getLocale(): string
     {
         return get_locale();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getUserLocale(int|\WP_User $user = 0): string
     {
         return get_user_locale($user);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function determineLocale(): string
     {
         return determine_locale();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function translate(string $text, string $domain = 'default'): string
     {
         return translate($text, $domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function beforeLastBar(string $text): string
     {
         return before_last_bar($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function translateWithGettextContext(string $text, string $context, string $domain = 'default'): string
     {
         return translate_with_gettext_context($text, $context, $domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function __(string $text, string $domain = 'default'): string
     {
         return __($text, $domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function escAttr__(string $text, string $domain = 'default'): string
     {
         return esc_attr__($text, $domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function escHtml__(string $text, string $domain = 'default'): string
     {
         return esc_html__($text, $domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function _e(string $text, string $domain = 'default'): void
     {
         _e($text, $domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function escAttrE(string $text, string $domain = 'default'): void
     {
         esc_attr_e($text, $domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function escHtmlE(string $text, string $domain = 'default'): void
     {
         esc_html_e($text, $domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function _x(string $text, string $context, string $domain = 'default'): string
     {
         return _x($text, $context, $domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function _ex(string $text, string $context, string $domain = 'default'): void
     {
         _ex($text, $context, $domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function escAttrX(string $text, string $context, string $domain = 'default'): string
     {
         return esc_attr_x($text, $context, $domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function escHtmlX(string $text, string $context, string $domain = 'default'): string
     {
         return esc_html_x($text, $context, $domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function _n(string $single, string $plural, int $number, string $domain = 'default'): string
     {
         return _n($single, $plural, $number, $domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function _nx(string $single, string $plural, int $number, string $context, string $domain = 'default'): string
     {
         return _nx($single, $plural, $number, $context, $domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function _nNoop(string $singular, string $plural, string $domain = null): array
     {
         return _n_noop($singular, $plural, $domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function _nxNoop(string $singular, string $plural, string $context, string $domain = null): array
     {
         return _nx_noop($singular, $plural, $context, $domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function translateNoopedPlural(array $noopedPlural, int $count, string $domain = 'default'): string
     {
         return translate_nooped_plural($noopedPlural, $count, $domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function loadTextdomain(string $domain, string $mofile, string $locale = null): bool
     {
         return load_textdomain($domain, $mofile, $locale);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function unloadTextdomain(string $domain, bool $reloadable = false): bool
     {
         return unload_textdomain($domain, $reloadable);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function loadDefaultTextdomain(string $locale = null): bool
     {
         return load_default_textdomain($locale);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function loadPluginTextdomain(string $domain, string|false $deprecated = false, string|false $pluginRelPath = false): bool
     {
         return load_plugin_textdomain($domain, $deprecated, $pluginRelPath);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function loadMupluginTextdomain(string $domain, string $muPluginRelPath = ''): bool
     {
         return load_muplugin_textdomain($domain, $muPluginRelPath);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function loadThemeTextdomain(string $domain, string|false $path = false): bool
     {
         return load_theme_textdomain($domain, $path);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function loadChildThemeTextdomain(string $domain, string|false $path = false): bool
     {
         return load_child_theme_textdomain($domain, $path);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function loadScriptTextdomain(string $handle, string $domain = 'default', string $path = ''): string|false
     {
         return load_script_textdomain($handle, $domain, $path);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function loadScriptTranslations(string|false $file, string $handle, string $domain): string|false
     {
         return load_script_translations($file, $handle, $domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTranslationsForDomain(string $domain): \Translations|\NOOP_Translations
     {
         return get_translations_for_domain($domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isTextdomainLoaded(string $domain): bool
     {
         return is_textdomain_loaded($domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function translateUserRole(string $name, string $domain = 'default'): string
     {
         return translate_user_role($name, $domain);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAvailableLanguages(string $dir = null): array
     {
         return get_available_languages($dir);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetInstalledTranslations(string $type): array
     {
         return wp_get_installed_translations($type);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetPomoFileData(string $poFile): array
     {
         return wp_get_pomo_file_data($poFile);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetL10nPhpFileData(string $phpFile): array
     {
         return wp_get_l10n_php_file_data($phpFile);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDropdownLanguages(string|array $args = []): string
     {
         return wp_dropdown_languages($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isRtl(): bool
     {
         return is_rtl();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function switchToLocale(string $locale): bool
     {
         return switch_to_locale($locale);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function switchToUserLocale(int $userId): bool
     {
         return switch_to_user_locale($userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restorePreviousLocale(): string|false
     {
         return restore_previous_locale();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restoreCurrentLocale(): string|false
     {
         return restore_current_locale();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isLocaleSwitched(): bool
     {
         return is_locale_switched();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetListItemSeparator(): string
     {
         return wp_get_list_item_separator();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetWordCountType(): string
     {
         return wp_get_word_count_type();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function thePermalink(int|\WP_Post $post = 0): void
     {
         the_permalink($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function userTrailingslashit(string $url, string $typeOfUrl = ''): string
     {
         return user_trailingslashit($url, $typeOfUrl);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function permalinkAnchor(string $mode = 'id'): void
     {
         permalink_anchor($mode);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpForcePlainPostPermalink(\WP_Post|int|null $post = null, bool|null $sample = null): bool
     {
         return wp_force_plain_post_permalink($post, $sample);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThePermalink(int|\WP_Post $post = 0, bool $leavename = false): string|false
     {
         return get_the_permalink($post, $leavename);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPermalink(int|\WP_Post $post = 0, bool $leavename = false): string|false
     {
         return get_permalink($post, $leavename);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostPermalink(int|\WP_Post $post = 0, bool $leavename = false, bool $sample = false): string|false
     {
         return get_post_permalink($post, $leavename, $sample);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPageLink(int|\WP_Post|false $post = false, bool $leavename = false, bool $sample = false): string
     {
         return get_page_link($post, $leavename, $sample);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAttachmentLink(int|\WP_Post $post = null, bool $leavename = false): string
     {
         return get_attachment_link($post, $leavename);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getYearLink(int|false $year): string
     {
         return get_year_link($year);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getMonthLink(int|false $year, int|false $month): string
     {
         return get_month_link($year, $month);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getDayLink(int|false $year, int|false $month, int|false $day): string
     {
         return get_day_link($year, $month, $day);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theFeedLink(string $anchor, string $feed = ''): void
     {
         the_feed_link($anchor, $feed);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getFeedLink(string $feed = ''): string
     {
         return get_feed_link($feed);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostCommentsFeedLink(int $postId = 0, string $feed = ''): string
     {
         return get_post_comments_feed_link($postId, $feed);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postCommentsFeedLink(string $linkText = '', int|string $postId = '', string $feed = ''): void
     {
         post_comments_feed_link($linkText, $postId, $feed);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAuthorFeedLink(int $authorId, string $feed = ''): string
     {
         return get_author_feed_link($authorId, $feed);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCategoryFeedLink(int|object $cat, string $feed = ''): string
     {
         return get_category_feed_link($cat, $feed);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTermFeedLink(int|object $term, string $taxonomy = '', string $feed = ''): string|false
     {
         return get_term_feed_link($term, $taxonomy, $feed);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTagFeedLink(int|object $tag, string $feed = ''): string
     {
         return get_tag_feed_link($tag, $feed);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getEditTagLink(int|object $tag, string $taxonomy = 'post_tag'): string
     {
         return get_edit_tag_link($tag, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function editTagLink(string $link = '', string $before = '', string $after = '', \WP_Term $tag = null): void
     {
         edit_tag_link($link, $before, $after, $tag);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getEditTermLink(int|object $term, string $taxonomy = '', string $objectType = ''): string|null
     {
         return get_edit_term_link($term, $taxonomy, $objectType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function editTermLink(string $link = '', string $before = '', string $after = '', int|\WP_Term|null $term = null, bool $display = true): mixed
     {
         return edit_term_link($link, $before, $after, $term, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSearchLink(string $query = ''): string
     {
         return get_search_link($query);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSearchFeedLink(string $searchQuery = '', string $feed = ''): string
     {
         return get_search_feed_link($searchQuery, $feed);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSearchCommentsFeedLink(string $searchQuery = '', string $feed = ''): string
     {
         return get_search_comments_feed_link($searchQuery, $feed);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostTypeArchiveLink(string $postType): string|false
     {
         return get_post_type_archive_link($postType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostTypeArchiveFeedLink(string $postType, string $feed = ''): string|false
     {
         return get_post_type_archive_feed_link($postType, $feed);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPreviewPostLink(int|\WP_Post $post = null, array $queryArgs = [], string $previewLink = ''): string|null
     {
         return get_preview_post_link($post, $queryArgs, $previewLink);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getEditPostLink(int|\WP_Post $post = 0, string $context = 'display'): string|null
     {
         return get_edit_post_link($post, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function editPostLink(string $text = null, string $before = '', string $after = '', int|\WP_Post $post = 0, string $cssClass = 'post-edit-link'): void
     {
         edit_post_link($text, $before, $after, $post, $cssClass);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getDeletePostLink(int|\WP_Post $post = 0, string $deprecated = '', bool $forceDelete = false): mixed
     {
         return get_delete_post_link($post, $deprecated, $forceDelete);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getEditCommentLink(int|\WP_Comment $commentId = 0): mixed
     {
         return get_edit_comment_link($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function editCommentLink(string $text = null, string $before = '', string $after = ''): void
     {
         edit_comment_link($text, $before, $after);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getEditBookmarkLink(int|\stdClass $link = 0): mixed
     {
         return get_edit_bookmark_link($link);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function editBookmarkLink(string $link = '', string $before = '', string $after = '', int $bookmark = null): void
     {
         edit_bookmark_link($link, $before, $after, $bookmark);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getEditUserLink(int $userId = null): string
     {
         return get_edit_user_link($userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPreviousPost(bool $inSameTerm = false, array|string $excludedTerms = '', string $taxonomy = 'category'): \WP_Post|null|string
     {
         return get_previous_post($inSameTerm, $excludedTerms, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getNextPost(bool $inSameTerm = false, array|string $excludedTerms = '', string $taxonomy = 'category'): \WP_Post|null|string
     {
         return get_next_post($inSameTerm, $excludedTerms, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAdjacentPost(bool $inSameTerm = false, array|string $excludedTerms = '', bool $previous = true, string $taxonomy = 'category'): \WP_Post|null|string
     {
         return get_adjacent_post($inSameTerm, $excludedTerms, $previous, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAdjacentPostRelLink(string $title = '%title', bool $inSameTerm = false, array|string $excludedTerms = '', bool $previous = true, string $taxonomy = 'category'): mixed
     {
         return get_adjacent_post_rel_link($title, $inSameTerm, $excludedTerms, $previous, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function adjacentPostsRelLink(string $title = '%title', bool $inSameTerm = false, array|string $excludedTerms = '', string $taxonomy = 'category'): void
     {
         adjacent_posts_rel_link($title, $inSameTerm, $excludedTerms, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function adjacentPostsRelLinkWpHead(): void
     {
         adjacent_posts_rel_link_wp_head();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function nextPostRelLink(string $title = '%title', bool $inSameTerm = false, array|string $excludedTerms = '', string $taxonomy = 'category'): void
     {
         next_post_rel_link($title, $inSameTerm, $excludedTerms, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function prevPostRelLink(string $title = '%title', bool $inSameTerm = false, array|string $excludedTerms = '', string $taxonomy = 'category'): void
     {
         prev_post_rel_link($title, $inSameTerm, $excludedTerms, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBoundaryPost(bool $inSameTerm = false, array|string $excludedTerms = '', bool $start = true, string $taxonomy = 'category'): array|null
     {
         return get_boundary_post($inSameTerm, $excludedTerms, $start, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPreviousPostLink(string $format = '&laquo; %link', string $link = '%title', bool $inSameTerm = false, array|string $excludedTerms = '', string $taxonomy = 'category'): string
     {
         return get_previous_post_link($format, $link, $inSameTerm, $excludedTerms, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function previousPostLink(string $format = '&laquo; %link', string $link = '%title', bool $inSameTerm = false, array|string $excludedTerms = '', string $taxonomy = 'category'): void
     {
         previous_post_link($format, $link, $inSameTerm, $excludedTerms, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getNextPostLink(string $format = '%link &raquo;', string $link = '%title', bool $inSameTerm = false, array|string $excludedTerms = '', string $taxonomy = 'category'): string
     {
         return get_next_post_link($format, $link, $inSameTerm, $excludedTerms, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function nextPostLink(string $format = '%link &raquo;', string $link = '%title', bool $inSameTerm = false, array|string $excludedTerms = '', string $taxonomy = 'category'): void
     {
         next_post_link($format, $link, $inSameTerm, $excludedTerms, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAdjacentPostLink(string $format, string $link, bool $inSameTerm = false, array|string $excludedTerms = '', bool $previous = true, string $taxonomy = 'category'): string
     {
         return get_adjacent_post_link($format, $link, $inSameTerm, $excludedTerms, $previous, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function adjacentPostLink(string $format, string $link, bool $inSameTerm = false, array|string $excludedTerms = '', bool $previous = true, string $taxonomy = 'category'): void
     {
         adjacent_post_link($format, $link, $inSameTerm, $excludedTerms, $previous, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPagenumLink(int $pagenum = 1, bool $escape = true): string
     {
         return get_pagenum_link($pagenum, $escape);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getNextPostsPageLink(int $maxPage = 0): mixed
     {
         return get_next_posts_page_link($maxPage);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function nextPosts(int $maxPage = 0, bool $display = true): mixed
     {
         return next_posts($maxPage, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getNextPostsLink(string $label = null, int $maxPage = 0): mixed
     {
         return get_next_posts_link($label, $maxPage);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function nextPostsLink(string $label = null, int $maxPage = 0): void
     {
         next_posts_link($label, $maxPage);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPreviousPostsPageLink(): mixed
     {
         return get_previous_posts_page_link();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function previousPosts(bool $display = true): mixed
     {
         return previous_posts($display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPreviousPostsLink(string $label = null): mixed
     {
         return get_previous_posts_link($label);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function previousPostsLink(string $label = null): void
     {
         previous_posts_link($label);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostsNavLink(string|array $args = []): string
     {
         return get_posts_nav_link($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postsNavLink(string $sep = '', string $prelabel = '', string $nxtlabel = ''): void
     {
         posts_nav_link($sep, $prelabel, $nxtlabel);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThePostNavigation(array $args = []): string
     {
         return get_the_post_navigation($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function thePostNavigation(array $args = []): void
     {
         the_post_navigation($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThePostsNavigation(array $args = []): string
     {
         return get_the_posts_navigation($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function thePostsNavigation(array $args = []): void
     {
         the_posts_navigation($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThePostsPagination(array $args = []): string
     {
         return get_the_posts_pagination($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function thePostsPagination(array $args = []): void
     {
         the_posts_pagination($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCommentsPagenumLink(int $pagenum = 1, int $maxPage = 0): string
     {
         return get_comments_pagenum_link($pagenum, $maxPage);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getNextCommentsLink(string $label = '', int $maxPage = 0): mixed
     {
         return get_next_comments_link($label, $maxPage);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function nextCommentsLink(string $label = '', int $maxPage = 0): void
     {
         next_comments_link($label, $maxPage);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPreviousCommentsLink(string $label = ''): mixed
     {
         return get_previous_comments_link($label);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function previousCommentsLink(string $label = ''): void
     {
         previous_comments_link($label);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function paginateCommentsLinks(string|array $args = []): mixed
     {
         return paginate_comments_links($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheCommentsNavigation(array $args = []): string
     {
         return get_the_comments_navigation($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theCommentsNavigation(array $args = []): void
     {
         the_comments_navigation($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheCommentsPagination(array $args = []): string
     {
         return get_the_comments_pagination($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theCommentsPagination(array $args = []): void
     {
         the_comments_pagination($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function homeUrl(string $path = '', string|null $scheme = null): string
     {
         return home_url($path, $scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getHomeUrl(int|null $blogId = null, string $path = '', string|null $scheme = null): string
     {
         return get_home_url($blogId, $path, $scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function siteUrl(string $path = '', string|null $scheme = null): string
     {
         return site_url($path, $scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSiteUrl(int|null $blogId = null, string $path = '', string|null $scheme = null): string
     {
         return get_site_url($blogId, $path, $scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function adminUrl(string $path = '', string $scheme = 'admin'): string
     {
         return admin_url($path, $scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAdminUrl(int|null $blogId = null, string $path = '', string $scheme = 'admin'): string
     {
         return get_admin_url($blogId, $path, $scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function includesUrl(string $path = '', string|null $scheme = null): string
     {
         return includes_url($path, $scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function contentUrl(string $path = ''): string
     {
         return content_url($path);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function pluginsUrl(string $path = '', string $plugin = ''): string
     {
         return plugins_url($path, $plugin);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function networkSiteUrl(string $path = '', string|null $scheme = null): string
     {
         return network_site_url($path, $scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function networkHomeUrl(string $path = '', string|null $scheme = null): string
     {
         return network_home_url($path, $scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function networkAdminUrl(string $path = '', string $scheme = 'admin'): string
     {
         return network_admin_url($path, $scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function userAdminUrl(string $path = '', string $scheme = 'admin'): string
     {
         return user_admin_url($path, $scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function selfAdminUrl(string $path = '', string $scheme = 'admin'): string
     {
         return self_admin_url($path, $scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function setUrlScheme(string $url, string|null $scheme = null): string
     {
         return set_url_scheme($url, $scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getDashboardUrl(int $userId = 0, string $path = '', string $scheme = 'admin'): string
     {
         return get_dashboard_url($userId, $path, $scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getEditProfileUrl(int $userId = 0, string $scheme = 'admin'): string
     {
         return get_edit_profile_url($userId, $scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetCanonicalUrl(int|\WP_Post $post = null): string|false
     {
         return wp_get_canonical_url($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function relCanonical(): void
     {
         rel_canonical();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetShortlink(int $id = 0, string $context = 'post', bool $allowSlugs = true): string
     {
         return wp_get_shortlink($id, $context, $allowSlugs);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpShortlinkWpHead(): void
     {
         wp_shortlink_wp_head();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpShortlinkHeader(): void
     {
         wp_shortlink_header();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theShortlink(string $text = '', string $title = '', string $before = '', string $after = ''): void
     {
         the_shortlink($text, $title, $before, $after);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAvatarUrl(mixed $idOrEmail, array $args = null): string|false
     {
         return get_avatar_url($idOrEmail, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isAvatarCommentType(string $commentType): bool
     {
         return is_avatar_comment_type($commentType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAvatarData(mixed $idOrEmail, array $args = null): array
     {
         return get_avatar_data($idOrEmail, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThemeFileUri(string $file = ''): string
     {
         return get_theme_file_uri($file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getParentThemeFileUri(string $file = ''): string
     {
         return get_parent_theme_file_uri($file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThemeFilePath(string $file = ''): string
     {
         return get_theme_file_path($file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getParentThemeFilePath(string $file = ''): string
     {
         return get_parent_theme_file_path($file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPrivacyPolicyUrl(): string
     {
         return get_privacy_policy_url();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function thePrivacyPolicyLink(string $before = '', string $after = ''): void
     {
         the_privacy_policy_link($before, $after);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThePrivacyPolicyLink(string $before = '', string $after = ''): string
     {
         return get_the_privacy_policy_link($before, $after);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInternalHosts(): array
     {
         return wp_internal_hosts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsInternalLink(string $link): bool
     {
         return wp_is_internal_link($link);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetServerProtocol(): string
     {
         return wp_get_server_protocol();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPopulateBasicAuthFromAuthorizationHeader(): void
     {
         wp_populate_basic_auth_from_authorization_header();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetEnvironmentType(): string
     {
         return wp_get_environment_type();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetDevelopmentMode(): string
     {
         return wp_get_development_mode();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsDevelopmentMode(string $mode): bool
     {
         return wp_is_development_mode($mode);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsMaintenanceMode(): bool
     {
         return wp_is_maintenance_mode();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function timerFloat(): float
     {
         return timer_float();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function timerStop(int|bool $display = 0, int $precision = 3): string
     {
         return timer_stop($display, $precision);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function requireWpDb(): void
     {
         require_wp_db();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUsingExtObjectCache(bool $using = null): bool
     {
         return wp_using_ext_object_cache($using);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSkipPausedPlugins(array $plugins): array
     {
         return wp_skip_paused_plugins($plugins);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSkipPausedThemes(array $themes): array
     {
         return wp_skip_paused_themes($themes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsRecoveryMode(): bool
     {
         return wp_is_recovery_mode();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isProtectedEndpoint(): bool
     {
         return is_protected_endpoint();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isProtectedAjaxAction(): bool
     {
         return is_protected_ajax_action();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isLogin(): bool
     {
         return is_login();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isAdmin(): bool
     {
         return is_admin();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isBlogAdmin(): bool
     {
         return is_blog_admin();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isNetworkAdmin(): bool
     {
         return is_network_admin();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isUserAdmin(): bool
     {
         return is_user_admin();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isMultisite(): bool
     {
         return is_multisite();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCurrentBlogId(): int
     {
         return get_current_blog_id();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCurrentNetworkId(): int
     {
         return get_current_network_id();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInstalling(bool $isInstalling = null): bool
     {
         return wp_installing($isInstalling);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isSsl(): bool
     {
         return is_ssl();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpConvertHrToBytes(string $value): int
     {
         return wp_convert_hr_to_bytes($value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsIniValueChangeable(string $setting): bool
     {
         return wp_is_ini_value_changeable($setting);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDoingAjax(): bool
     {
         return wp_doing_ajax();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUsingThemes(): bool
     {
         return wp_using_themes();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDoingCron(): bool
     {
         return wp_doing_cron();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isWpError(mixed $thing): bool
     {
         return is_wp_error($thing);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsFileModAllowed(string $context): bool
     {
         return wp_is_file_mod_allowed($context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpStartScrapingEditedFileErrors(): void
     {
         wp_start_scraping_edited_file_errors();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpFinalizeScrapingEditedFileErrors(string $scrapeKey): void
     {
         wp_finalize_scraping_edited_file_errors($scrapeKey);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsJsonRequest(): bool
     {
         return wp_is_json_request();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsJsonpRequest(): bool
     {
         return wp_is_jsonp_request();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsJsonMediaType(string $mediaType): bool
     {
         return wp_is_json_media_type($mediaType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsXmlRequest(): bool
     {
         return wp_is_xml_request();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsSiteProtectedByBasicAuth(string $context = ''): bool
     {
         return wp_is_site_protected_by_basic_auth($context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUnderscoreAudioTemplate(): void
     {
         wp_underscore_audio_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUnderscoreVideoTemplate(): void
     {
         wp_underscore_video_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrintMediaTemplates(): void
     {
         wp_print_media_templates();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetAdditionalImageSizes(): array
     {
         return wp_get_additional_image_sizes();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function imageConstrainSizeForEditor(int $width, int $height, string|array $size = 'medium', string $context = null): array
     {
         return image_constrain_size_for_editor($width, $height, $size, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function imageHwstring(int|string $width, int|string $height): string
     {
         return image_hwstring($width, $height);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function imageDownsize(int $id, string|array $size = 'medium'): array|false
     {
         return image_downsize($id, $size);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addImageSize(string $name, int $width = 0, int $height = 0, bool|array $crop = false): void
     {
         add_image_size($name, $width, $height, $crop);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasImageSize(string $name): bool
     {
         return has_image_size($name);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeImageSize(string $name): bool
     {
         return remove_image_size($name);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function setPostThumbnailSize(int $width = 0, int $height = 0, bool|array $crop = false): void
     {
         set_post_thumbnail_size($width, $height, $crop);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getImageTag(int $id, string $alt, string $title, string $align, string|array $size = 'medium'): string
     {
         return get_image_tag($id, $alt, $title, $align, $size);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpConstrainDimensions(int $currentWidth, int $currentHeight, int $maxWidth = 0, int $maxHeight = 0): array
     {
         return wp_constrain_dimensions($currentWidth, $currentHeight, $maxWidth, $maxHeight);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function imageResizeDimensions(int $origW, int $origH, int $destW, int $destH, bool|array $crop = false): array|false
     {
         return image_resize_dimensions($origW, $origH, $destW, $destH, $crop);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function imageMakeIntermediateSize(string $file, int $width, int $height, bool|array $crop = false): array|false
     {
         return image_make_intermediate_size($file, $width, $height, $crop);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpImageMatchesRatio(int $sourceWidth, int $sourceHeight, int $targetWidth, int $targetHeight): bool
     {
         return wp_image_matches_ratio($sourceWidth, $sourceHeight, $targetWidth, $targetHeight);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function imageGetIntermediateSize(int $postId, string|array $size = 'thumbnail'): array|false
     {
         return image_get_intermediate_size($postId, $size);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getIntermediateImageSizes(): array
     {
         return get_intermediate_image_sizes();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetRegisteredImageSubsizes(): array
     {
         return wp_get_registered_image_subsizes();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetAttachmentImageSrc(int $attachmentId, string|array $size = 'thumbnail', bool $icon = false): array|false
     {
         return wp_get_attachment_image_src($attachmentId, $size, $icon);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetAttachmentImage(int $attachmentId, string|array $size = 'thumbnail', bool $icon = false, string|array $attr = ''): string
     {
         return wp_get_attachment_image($attachmentId, $size, $icon, $attr);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetAttachmentImageUrl(int $attachmentId, string|array $size = 'thumbnail', bool $icon = false): string|false
     {
         return wp_get_attachment_image_url($attachmentId, $size, $icon);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetAttachmentImageSrcset(int $attachmentId, string|array $size = 'medium', array|null $imageMeta = null): string|false
     {
         return wp_get_attachment_image_srcset($attachmentId, $size, $imageMeta);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCalculateImageSrcset(array $sizeArray, string $imageSrc, array $imageMeta, int $attachmentId = 0): string|false
     {
         return wp_calculate_image_srcset($sizeArray, $imageSrc, $imageMeta, $attachmentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetAttachmentImageSizes(int $attachmentId, string|array $size = 'medium', array|null $imageMeta = null): string|false
     {
         return wp_get_attachment_image_sizes($attachmentId, $size, $imageMeta);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCalculateImageSizes(string|array $size, string|null $imageSrc = null, array|null $imageMeta = null, int $attachmentId = 0): string|false
     {
         return wp_calculate_image_sizes($size, $imageSrc, $imageMeta, $attachmentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpImageFileMatchesImageMeta(string $imageLocation, array $imageMeta, int $attachmentId = 0): bool
     {
         return wp_image_file_matches_image_meta($imageLocation, $imageMeta, $attachmentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpImageSrcGetDimensions(string $imageSrc, array $imageMeta, int $attachmentId = 0): array|false
     {
         return wp_image_src_get_dimensions($imageSrc, $imageMeta, $attachmentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpImageAddSrcsetAndSizes(string $image, array $imageMeta, int $attachmentId): string
     {
         return wp_image_add_srcset_and_sizes($image, $imageMeta, $attachmentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpLazyLoadingEnabled(string $tagName, string $context): bool
     {
         return wp_lazy_loading_enabled($tagName, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpFilterContentTags(string $content, string $context = null): string
     {
         return wp_filter_content_tags($content, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpImgTagAddLoadingOptimizationAttrs(string $image, string $context): string
     {
         return wp_img_tag_add_loading_optimization_attrs($image, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpImgTagAddWidthAndHeightAttr(string $image, string $context, int $attachmentId): string
     {
         return wp_img_tag_add_width_and_height_attr($image, $context, $attachmentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpImgTagAddSrcsetAndSizesAttr(string $image, string $context, int $attachmentId): string
     {
         return wp_img_tag_add_srcset_and_sizes_attr($image, $context, $attachmentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIframeTagAddLoadingAttr(string $iframe, string $context): string
     {
         return wp_iframe_tag_add_loading_attr($iframe, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function imgCaptionShortcode(array $attr, string $content = ''): string
     {
         return img_caption_shortcode($attr, $content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function galleryShortcode(array $attr): string
     {
         return gallery_shortcode($attr);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUnderscorePlaylistTemplates(): void
     {
         wp_underscore_playlist_templates();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPlaylistScripts(string $type): void
     {
         wp_playlist_scripts($type);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPlaylistShortcode(array $attr): string
     {
         return wp_playlist_shortcode($attr);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMediaelementFallback(string $url): string
     {
         return wp_mediaelement_fallback($url);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetAudioExtensions(): array
     {
         return wp_get_audio_extensions();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetAttachmentId3Keys(\WP_Post $attachment, string $context = 'display'): array
     {
         return wp_get_attachment_id3_keys($attachment, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAudioShortcode(array $attr, string $content = ''): mixed
     {
         return wp_audio_shortcode($attr, $content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetVideoExtensions(): array
     {
         return wp_get_video_extensions();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpVideoShortcode(array $attr, string $content = ''): mixed
     {
         return wp_video_shortcode($attr, $content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPreviousImageLink(string|array $size = 'thumbnail', string|false $text = false): string
     {
         return get_previous_image_link($size, $text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function previousImageLink(string|array $size = 'thumbnail', string|false $text = false): void
     {
         previous_image_link($size, $text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getNextImageLink(string|array $size = 'thumbnail', string|false $text = false): string
     {
         return get_next_image_link($size, $text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function nextImageLink(string|array $size = 'thumbnail', string|false $text = false): void
     {
         next_image_link($size, $text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAdjacentImageLink(bool $prev = true, string|array $size = 'thumbnail', bool $text = false): string
     {
         return get_adjacent_image_link($prev, $size, $text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function adjacentImageLink(bool $prev = true, string|array $size = 'thumbnail', bool $text = false): void
     {
         adjacent_image_link($prev, $size, $text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAttachmentTaxonomies(int|array|object $attachment, string $output = 'names'): array
     {
         return get_attachment_taxonomies($attachment, $output);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTaxonomiesForAttachments(string $output = 'names'): array
     {
         return get_taxonomies_for_attachments($output);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isGdImage(\resource|\GdImage|false $image): bool
     {
         return is_gd_image($image);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpImagecreatetruecolor(int $width, int $height): \resource|\GdImage|false
     {
         return wp_imagecreatetruecolor($width, $height);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpExpandDimensions(int $exampleWidth, int $exampleHeight, int $maxWidth, int $maxHeight): array
     {
         return wp_expand_dimensions($exampleWidth, $exampleHeight, $maxWidth, $maxHeight);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMaxUploadSize(): int
     {
         return wp_max_upload_size();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetImageEditor(string $path, array $args = []): \WP_Image_Editor|\WP_Error
     {
         return wp_get_image_editor($path, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpImageEditorSupports(string|array $args = []): bool
     {
         return wp_image_editor_supports($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPluploadDefaultSettings(): void
     {
         wp_plupload_default_settings();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrepareAttachmentForJs(int|\WP_Post $attachment): mixed
     {
         return wp_prepare_attachment_for_js($attachment);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueMedia(array $args = []): void
     {
         wp_enqueue_media($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAttachedMedia(string $type, int|\WP_Post $post = 0): array
     {
         return get_attached_media($type, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getMediaEmbeddedInContent(string $content, array $types = null): array
     {
         return get_media_embedded_in_content($content, $types);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostGalleries(int|\WP_Post $post, bool $html = true): array
     {
         return get_post_galleries($post, $html);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostGallery(int|\WP_Post $post = 0, bool $html = true): string|array
     {
         return get_post_gallery($post, $html);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostGalleriesImages(int|\WP_Post $post = 0): array
     {
         return get_post_galleries_images($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostGalleryImages(int|\WP_Post $post = 0): array
     {
         return get_post_gallery_images($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMaybeGenerateAttachmentMetadata(\WP_Post $attachment): void
     {
         wp_maybe_generate_attachment_metadata($attachment);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function attachmentUrlToPostid(string $url): int
     {
         return attachment_url_to_postid($url);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpviewMediaSandboxStyles(): array
     {
         return wpview_media_sandbox_styles();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRegisterMediaPersonalDataExporter(array $exporters): array
     {
         return wp_register_media_personal_data_exporter($exporters);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMediaPersonalDataExporter(string $emailAddress, int $page = 1): array
     {
         return wp_media_personal_data_exporter($emailAddress, $page);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpShowHeicUploadError(array $pluploadSettings): array
     {
         return wp_show_heic_upload_error($pluploadSettings);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetimagesize(string $filename, array $imageInfo = null): array|false
     {
         return wp_getimagesize($filename, $imageInfo);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetAvifInfo(string $filename): array
     {
         return wp_get_avif_info($filename);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetWebpInfo(string $filename): array
     {
         return wp_get_webp_info($filename);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetLoadingOptimizationAttributes(string $tagName, array $attr, string $context): array
     {
         return wp_get_loading_optimization_attributes($tagName, $attr, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpOmitLoadingAttrThreshold(bool $force = false): int
     {
         return wp_omit_loading_attr_threshold($force);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addMetadata(string $metaType, int $objectId, string $metaKey, mixed $metaValue, bool $unique = false): int|false
     {
         return add_metadata($metaType, $objectId, $metaKey, $metaValue, $unique);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateMetadata(string $metaType, int $objectId, string $metaKey, mixed $metaValue, mixed $prevValue = ''): int|bool
     {
         return update_metadata($metaType, $objectId, $metaKey, $metaValue, $prevValue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deleteMetadata(string $metaType, int $objectId, string $metaKey, mixed $metaValue = '', bool $deleteAll = false): bool
     {
         return delete_metadata($metaType, $objectId, $metaKey, $metaValue, $deleteAll);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getMetadata(string $metaType, int $objectId, string $metaKey = '', bool $single = false): mixed
     {
         return get_metadata($metaType, $objectId, $metaKey, $single);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getMetadataRaw(string $metaType, int $objectId, string $metaKey = '', bool $single = false): mixed
     {
         return get_metadata_raw($metaType, $objectId, $metaKey, $single);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getMetadataDefault(string $metaType, int $objectId, string $metaKey, bool $single = false): mixed
     {
         return get_metadata_default($metaType, $objectId, $metaKey, $single);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function metadataExists(string $metaType, int $objectId, string $metaKey): bool
     {
         return metadata_exists($metaType, $objectId, $metaKey);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getMetadataByMid(string $metaType, int $metaId): \stdClass|false
     {
         return get_metadata_by_mid($metaType, $metaId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateMetadataByMid(string $metaType, int $metaId, string $metaValue, string|false $metaKey = false): bool
     {
         return update_metadata_by_mid($metaType, $metaId, $metaValue, $metaKey);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deleteMetadataByMid(string $metaType, int $metaId): bool
     {
         return delete_metadata_by_mid($metaType, $metaId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateMetaCache(string $metaType, string|array $objectIds): array|false
     {
         return update_meta_cache($metaType, $objectIds);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMetadataLazyloader(): \WP_Metadata_Lazyloader
     {
         return wp_metadata_lazyloader();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getMetaSql(array $metaQuery, string $type, string $primaryTable, string $primaryIdColumn, object $context = null): array|false
     {
         return get_meta_sql($metaQuery, $type, $primaryTable, $primaryIdColumn, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isProtectedMeta(string $metaKey, string $metaType = ''): bool
     {
         return is_protected_meta($metaKey, $metaType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeMeta(string $metaKey, mixed $metaValue, string $objectType, string $objectSubtype = ''): mixed
     {
         return sanitize_meta($metaKey, $metaValue, $objectType, $objectSubtype);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerMeta(string $objectType, string $metaKey, array $args, string|array $deprecated = null): bool
     {
         return register_meta($objectType, $metaKey, $args, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function filterDefaultMetadata(mixed $value, int $objectId, string $metaKey, bool $single, string $metaType): mixed
     {
         return filter_default_metadata($value, $objectId, $metaKey, $single, $metaType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registeredMetaKeyExists(string $objectType, string $metaKey, string $objectSubtype = ''): bool
     {
         return registered_meta_key_exists($objectType, $metaKey, $objectSubtype);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function unregisterMetaKey(string $objectType, string $metaKey, string $objectSubtype = ''): bool
     {
         return unregister_meta_key($objectType, $metaKey, $objectSubtype);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getRegisteredMetaKeys(string $objectType, string $objectSubtype = ''): array
     {
         return get_registered_meta_keys($objectType, $objectSubtype);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getRegisteredMetadata(string $objectType, int $objectId, string $metaKey = ''): mixed
     {
         return get_registered_metadata($objectType, $objectId, $metaKey);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getObjectSubtype(string $objectType, int $objectId): string
     {
         return get_object_subtype($objectType, $objectId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpmuUpdateBlogsDate(): void
     {
         wpmu_update_blogs_date();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlogaddressById(int $blogId): string
     {
         return get_blogaddress_by_id($blogId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlogaddressByName(string $blogname): string
     {
         return get_blogaddress_by_name($blogname);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getIdFromBlogname(string $slug): int|null
     {
         return get_id_from_blogname($slug);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlogDetails(int|string|array $fields = null, bool $getAll = true): \WP_Site|false
     {
         return get_blog_details($fields, $getAll);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function refreshBlogDetails(int $blogId = 0): void
     {
         refresh_blog_details($blogId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateBlogDetails(int $blogId, array $details = []): bool
     {
         return update_blog_details($blogId, $details);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function cleanSiteDetailsCache(int $siteId = 0): void
     {
         clean_site_details_cache($siteId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlogOption(int $id, string $option, mixed $defaultValue = false): mixed
     {
         return get_blog_option($id, $option, $defaultValue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addBlogOption(int $id, string $option, mixed $value): bool
     {
         return add_blog_option($id, $option, $value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deleteBlogOption(int $id, string $option): bool
     {
         return delete_blog_option($id, $option);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateBlogOption(int $id, string $option, mixed $value, mixed $deprecated = null): bool
     {
         return update_blog_option($id, $option, $value, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function switchToBlog(int $newBlogId, bool $deprecated = null): true
     {
         return switch_to_blog($newBlogId, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restoreCurrentBlog(): bool
     {
         return restore_current_blog();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSwitchRolesAndUser(int $newSiteId, int $oldSiteId): void
     {
         wp_switch_roles_and_user($newSiteId, $oldSiteId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function msIsSwitched(): bool
     {
         return ms_is_switched();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isArchived(int $id): string
     {
         return is_archived($id);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateArchived(int $id, string $archived): string
     {
         return update_archived($id, $archived);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateBlogStatus(int $blogId, string $pref, string $value, null $deprecated = null): string|false
     {
         return update_blog_status($blogId, $pref, $value, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlogStatus(int $id, string $pref): bool|string|null
     {
         return get_blog_status($id, $pref);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getLastUpdated(mixed $deprecated = '', int $start = 0, int $quantity = 40): array
     {
         return get_last_updated($deprecated, $start, $quantity);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCountSites(int $networkId = null): array
     {
         return wp_count_sites($networkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function msUploadConstants(): void
     {
         ms_upload_constants();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function msCookieConstants(): void
     {
         ms_cookie_constants();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function msFileConstants(): void
     {
         ms_file_constants();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function msSubdomainConstants(): void
     {
         ms_subdomain_constants();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSitestats(): array
     {
         return get_sitestats();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getActiveBlogForUser(int $userId): mixed
     {
         return get_active_blog_for_user($userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlogCount(int|null $networkId = null): int
     {
         return get_blog_count($networkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlogPost(int $blogId, int $postId): \WP_Post|null
     {
         return get_blog_post($blogId, $postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addUserToBlog(int $blogId, int $userId, string $role): true|\WP_Error
     {
         return add_user_to_blog($blogId, $userId, $role);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeUserFromBlog(int $userId, int $blogId = 0, int $reassign = 0): true|\WP_Error
     {
         return remove_user_from_blog($userId, $blogId, $reassign);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlogPermalink(int $blogId, int $postId): string
     {
         return get_blog_permalink($blogId, $postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlogIdFromUrl(string $domain, string $path = '/'): int
     {
         return get_blog_id_from_url($domain, $path);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isEmailAddressUnsafe(string $userEmail): bool
     {
         return is_email_address_unsafe($userEmail);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpmuValidateUserSignup(string $userName, string $userEmail): array
     {
         return wpmu_validate_user_signup($userName, $userEmail);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpmuValidateBlogSignup(string $blogname, string $blogTitle, \WP_User|string $user = ''): array
     {
         return wpmu_validate_blog_signup($blogname, $blogTitle, $user);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpmuSignupBlog(string $domain, string $path, string $title, string $user, string $userEmail, array $meta = []): void
     {
         wpmu_signup_blog($domain, $path, $title, $user, $userEmail, $meta);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpmuSignupUser(string $user, string $userEmail, array $meta = []): void
     {
         wpmu_signup_user($user, $userEmail, $meta);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpmuSignupBlogNotification(string $domain, string $path, string $title, string $userLogin, string $userEmail, string $key, array $meta = []): bool
     {
         return wpmu_signup_blog_notification($domain, $path, $title, $userLogin, $userEmail, $key, $meta);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpmuSignupUserNotification(string $userLogin, string $userEmail, string $key, array $meta = []): bool
     {
         return wpmu_signup_user_notification($userLogin, $userEmail, $key, $meta);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpmuActivateSignup(string $key): array|\WP_Error
     {
         return wpmu_activate_signup($key);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeleteSignupOnUserDelete(int $id, int|null $reassign, \WP_User $user): void
     {
         wp_delete_signup_on_user_delete($id, $reassign, $user);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpmuCreateUser(string $userName, string $password, string $email): int|false
     {
         return wpmu_create_user($userName, $password, $email);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpmuCreateBlog(string $domain, string $path, string $title, int $userId, array $options = [], int $networkId = 1): int|\WP_Error
     {
         return wpmu_create_blog($domain, $path, $title, $userId, $options, $networkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function newblogNotifySiteadmin(\WP_Site|int $blogId, string $deprecated = ''): bool
     {
         return newblog_notify_siteadmin($blogId, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function newuserNotifySiteadmin(int $userId): bool
     {
         return newuser_notify_siteadmin($userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function domainExists(string $domain, string $path, int $networkId = 1): int|null
     {
         return domain_exists($domain, $path, $networkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpmuWelcomeNotification(int $blogId, int $userId, string $password, string $title, array $meta = []): bool
     {
         return wpmu_welcome_notification($blogId, $userId, $password, $title, $meta);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpmuNewSiteAdminNotification(int $siteId, int $userId): bool
     {
         return wpmu_new_site_admin_notification($siteId, $userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpmuWelcomeUserNotification(int $userId, string $password, array $meta = []): bool
     {
         return wpmu_welcome_user_notification($userId, $password, $meta);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCurrentSite(): \WP_Network
     {
         return get_current_site();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getMostRecentPostOfUser(int $userId): array
     {
         return get_most_recent_post_of_user($userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function checkUploadMimes(array $mimes): array
     {
         return check_upload_mimes($mimes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updatePostsCount(string $deprecated = ''): void
     {
         update_posts_count($deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpmuLogNewRegistrations(\WP_Site|int $blogId, int|array $userId): void
     {
         wpmu_log_new_registrations($blogId, $userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function redirectThisSite(array|string $deprecated = ''): array
     {
         return redirect_this_site($deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function uploadIsFileTooBig(array $upload): string|array
     {
         return upload_is_file_too_big($upload);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function signupNonceFields(): void
     {
         signup_nonce_fields();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function signupNonceCheck(array $result): array
     {
         return signup_nonce_check($result);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function maybeRedirect404(): void
     {
         maybe_redirect_404();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function maybeAddExistingUserToBlog(): void
     {
         maybe_add_existing_user_to_blog();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addExistingUserToBlog(array|false $details = false): mixed
     {
         return add_existing_user_to_blog($details);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addNewUserToBlog(int $userId, string $password, array $meta): void
     {
         add_new_user_to_blog($userId, $password, $meta);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function fixPhpmailerMessageid(\PHPMailer $phpmailer): void
     {
         fix_phpmailer_messageid($phpmailer);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isUserSpammy(string|\WP_User $user = null): bool
     {
         return is_user_spammy($user);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateBlogPublic(int $oldValue, int $value): void
     {
         update_blog_public($oldValue, $value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function usersCanRegisterSignupFilter(): bool
     {
         return users_can_register_signup_filter();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function welcomeUserMsgFilter(string $text): string
     {
         return welcome_user_msg_filter($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function forceSslContent(bool|string $force = ''): bool
     {
         return force_ssl_content($force);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function filterSSL(string $url): string
     {
         return filter_SSL($url);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpScheduleUpdateNetworkCounts(): void
     {
         wp_schedule_update_network_counts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateNetworkCounts(int|null $networkId = null): void
     {
         wp_update_network_counts($networkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMaybeUpdateNetworkSiteCounts(int|null $networkId = null): void
     {
         wp_maybe_update_network_site_counts($networkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMaybeUpdateNetworkUserCounts(int|null $networkId = null): void
     {
         wp_maybe_update_network_user_counts($networkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateNetworkSiteCounts(int|null $networkId = null): void
     {
         wp_update_network_site_counts($networkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateNetworkUserCounts(int|null $networkId = null): void
     {
         wp_update_network_user_counts($networkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSpaceUsed(): int
     {
         return get_space_used();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSpaceAllowed(): int
     {
         return get_space_allowed();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getUploadSpaceAvailable(): int
     {
         return get_upload_space_available();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isUploadSpaceAvailable(): bool
     {
         return is_upload_space_available();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function uploadSizeLimitFilter(int $size): int
     {
         return upload_size_limit_filter($size);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsLargeNetwork(string $using = 'sites', int|null $networkId = null): bool
     {
         return wp_is_large_network($using, $networkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSubdirectoryReservedNames(): array
     {
         return get_subdirectory_reserved_names();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateNetworkOptionNewAdminEmail(string $oldValue, string $value): void
     {
         update_network_option_new_admin_email($oldValue, $value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNetworkAdminEmailChangeNotification(string $optionName, string $newEmail, string $oldEmail, int $networkId): void
     {
         wp_network_admin_email_change_notification($optionName, $newEmail, $oldEmail, $networkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isSubdomainInstall(): bool
     {
         return is_subdomain_install();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function msSiteCheck(): true|string
     {
         return ms_site_check();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getNetworkByPath(string $domain, string $path, int|null $segments = null): \WP_Network|false
     {
         return get_network_by_path($domain, $path, $segments);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSiteByPath(string $domain, string $path, int|null $segments = null): \WP_Site|false
     {
         return get_site_by_path($domain, $path, $segments);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getNetwork(\WP_Network|int|null $network = null): \WP_Network|null
     {
         return get_network($network);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getNetworks(string|array $args = []): array|int
     {
         return get_networks($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function cleanNetworkCache(int|array $ids): void
     {
         clean_network_cache($ids);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateNetworkCache(array $networks): void
     {
         update_network_cache($networks);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInsertSite(array $data): int|\WP_Error
     {
         return wp_insert_site($data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateSite(int $siteId, array $data): int|\WP_Error
     {
         return wp_update_site($siteId, $data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeleteSite(int $siteId): \WP_Site|\WP_Error
     {
         return wp_delete_site($siteId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSite(\WP_Site|int|null $site = null): \WP_Site|null
     {
         return get_site($site);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpLazyloadSiteMeta(array $siteIds): void
     {
         wp_lazyload_site_meta($siteIds);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateSiteCache(array $sites, bool $updateMetaCache = true): void
     {
         update_site_cache($sites, $updateMetaCache);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateSitemetaCache(array $siteIds): array|false
     {
         return update_sitemeta_cache($siteIds);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSites(string|array $args = []): array|int
     {
         return get_sites($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrepareSiteData(array $data, array $defaults, \WP_Site|null $oldSite = null): array|\WP_Error
     {
         return wp_prepare_site_data($data, $defaults, $oldSite);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNormalizeSiteData(array $data): array
     {
         return wp_normalize_site_data($data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpValidateSiteData(\WP_Error $errors, array $data, \WP_Site|null $oldSite = null): void
     {
         wp_validate_site_data($errors, $data, $oldSite);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInitializeSite(int|\WP_Site $siteId, array $args = []): true|\WP_Error
     {
         return wp_initialize_site($siteId, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUninitializeSite(int|\WP_Site $siteId): true|\WP_Error
     {
         return wp_uninitialize_site($siteId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsSiteInitialized(int|\WP_Site $siteId): bool
     {
         return wp_is_site_initialized($siteId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function cleanBlogCache(\WP_Site|int $blog): void
     {
         clean_blog_cache($blog);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addSiteMeta(int $siteId, string $metaKey, mixed $metaValue, bool $unique = false): int|false
     {
         return add_site_meta($siteId, $metaKey, $metaValue, $unique);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deleteSiteMeta(int $siteId, string $metaKey, mixed $metaValue = ''): bool
     {
         return delete_site_meta($siteId, $metaKey, $metaValue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSiteMeta(int $siteId, string $key = '', bool $single = false): mixed
     {
         return get_site_meta($siteId, $key, $single);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateSiteMeta(int $siteId, string $metaKey, mixed $metaValue, mixed $prevValue = ''): int|bool
     {
         return update_site_meta($siteId, $metaKey, $metaValue, $prevValue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deleteSiteMetaByKey(string $metaKey): bool
     {
         return delete_site_meta_by_key($metaKey);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMaybeUpdateNetworkSiteCountsOnUpdate(\WP_Site $newSite, \WP_Site|null $oldSite = null): void
     {
         wp_maybe_update_network_site_counts_on_update($newSite, $oldSite);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMaybeTransitionSiteStatusesOnUpdate(\WP_Site $newSite, \WP_Site|null $oldSite = null): void
     {
         wp_maybe_transition_site_statuses_on_update($newSite, $oldSite);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMaybeCleanNewSiteCacheOnUpdate(\WP_Site $newSite, \WP_Site $oldSite): void
     {
         wp_maybe_clean_new_site_cache_on_update($newSite, $oldSite);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateBlogPublicOptionOnSiteUpdate(int $siteId, string $isPublic): void
     {
         wp_update_blog_public_option_on_site_update($siteId, $isPublic);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheSetSitesLastChanged(): void
     {
         wp_cache_set_sites_last_changed();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCheckSiteMetaSupportPrefilter(mixed $check): mixed
     {
         return wp_check_site_meta_support_prefilter($check);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNavMenu(array $args = []): mixed
     {
         return wp_nav_menu($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function walkNavMenuTree(array $items, int $depth, \stdClass $args): string
     {
         return walk_nav_menu_tree($items, $depth, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNavMenuRemoveMenuItemHasChildrenClass(array $classes, \WP_Post $menuItem, \stdClass|false $args = false, int|false $depth = false): array
     {
         return wp_nav_menu_remove_menu_item_has_children_class($classes, $menuItem, $args, $depth);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetNavMenuObject(int|string|\WP_Term $menu): \WP_Term|false
     {
         return wp_get_nav_menu_object($menu);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isNavMenu(int|string|\WP_Term $menu): bool
     {
         return is_nav_menu($menu);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerNavMenus(array $locations = []): void
     {
         register_nav_menus($locations);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function unregisterNavMenu(string $location): bool
     {
         return unregister_nav_menu($location);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerNavMenu(string $location, string $description): void
     {
         register_nav_menu($location, $description);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getRegisteredNavMenus(): array
     {
         return get_registered_nav_menus();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getNavMenuLocations(): array
     {
         return get_nav_menu_locations();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasNavMenu(string $location): bool
     {
         return has_nav_menu($location);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetNavMenuName(string $location): string
     {
         return wp_get_nav_menu_name($location);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isNavMenuItem(int $menuItemId = 0): bool
     {
         return is_nav_menu_item($menuItemId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCreateNavMenu(string $menuName): int|\WP_Error
     {
         return wp_create_nav_menu($menuName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeleteNavMenu(int|string|\WP_Term $menu): bool|\WP_Error
     {
         return wp_delete_nav_menu($menu);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateNavMenuObject(int $menuId = 0, array $menuData = []): int|\WP_Error
     {
         return wp_update_nav_menu_object($menuId, $menuData);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateNavMenuItem(int $menuId = 0, int $menuItemDbId = 0, array $menuItemData = [], bool $fireAfterHooks = true): int|\WP_Error
     {
         return wp_update_nav_menu_item($menuId, $menuItemDbId, $menuItemData, $fireAfterHooks);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetNavMenus(array $args = []): array
     {
         return wp_get_nav_menus($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetNavMenuItems(int|string|\WP_Term $menu, array $args = []): array|false
     {
         return wp_get_nav_menu_items($menu, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateMenuItemCache(array $menuItems): void
     {
         update_menu_item_cache($menuItems);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSetupNavMenuItem(object $menuItem): object
     {
         return wp_setup_nav_menu_item($menuItem);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetAssociatedNavMenuItems(int $objectId = 0, string $objectType = 'post_type', string $taxonomy = ''): array
     {
         return wp_get_associated_nav_menu_items($objectId, $objectType, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMapNavMenuLocations(array $newNavMenuLocations, array $oldNavMenuLocations): array
     {
         return wp_map_nav_menu_locations($newNavMenuLocations, $oldNavMenuLocations);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getOption(string $option, mixed $defaultValue = false): mixed
     {
         return get_option($option, $defaultValue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrimeOptionCaches(array $options): void
     {
         wp_prime_option_caches($options);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrimeOptionCachesByGroup(string $optionGroup): void
     {
         wp_prime_option_caches_by_group($optionGroup);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getOptions(array $options): array
     {
         return get_options($options);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSetOptionAutoloadValues(array $options): array
     {
         return wp_set_option_autoload_values($options);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSetOptionsAutoload(array $options, string|bool $autoload): array
     {
         return wp_set_options_autoload($options, $autoload);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSetOptionAutoload(string $option, string|bool $autoload): bool
     {
         return wp_set_option_autoload($option, $autoload);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpProtectSpecialOption(string $option): void
     {
         wp_protect_special_option($option);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function formOption(string $option): void
     {
         form_option($option);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpLoadAlloptions(bool $forceCache = false): array
     {
         return wp_load_alloptions($forceCache);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrimeSiteOptionCaches(array $options): void
     {
         wp_prime_site_option_caches($options);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrimeNetworkOptionCaches(int $networkId, array $options): void
     {
         wp_prime_network_option_caches($networkId, $options);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpLoadCoreSiteOptions(int $networkId = null): void
     {
         wp_load_core_site_options($networkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateOption(string $option, mixed $value, bool|null $autoload = null): bool
     {
         return update_option($option, $value, $autoload);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addOption(string $option, mixed $value = '', string $deprecated = '', bool|null $autoload = null): bool
     {
         return add_option($option, $value, $deprecated, $autoload);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deleteOption(string $option): bool
     {
         return delete_option($option);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deleteTransient(string $transient): bool
     {
         return delete_transient($transient);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTransient(string $transient): mixed
     {
         return get_transient($transient);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function setTransient(string $transient, mixed $value, int $expiration = 0): bool
     {
         return set_transient($transient, $value, $expiration);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deleteExpiredTransients(bool $forceDb = false): void
     {
         delete_expired_transients($forceDb);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUserSettings(): void
     {
         wp_user_settings();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getUserSetting(string $name, string|false $defaultValue = false): mixed
     {
         return get_user_setting($name, $defaultValue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function setUserSetting(string $name, string $value): bool|null
     {
         return set_user_setting($name, $value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deleteUserSetting(string $names): bool|null
     {
         return delete_user_setting($names);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAllUserSettings(): array
     {
         return get_all_user_settings();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deleteAllUserSettings(): void
     {
         delete_all_user_settings();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSiteOption(string $option, mixed $defaultValue = false, bool $deprecated = true): mixed
     {
         return get_site_option($option, $defaultValue, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addSiteOption(string $option, mixed $value): bool
     {
         return add_site_option($option, $value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deleteSiteOption(string $option): bool
     {
         return delete_site_option($option);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateSiteOption(string $option, mixed $value): bool
     {
         return update_site_option($option, $value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getNetworkOption(int $networkId, string $option, mixed $defaultValue = false): mixed
     {
         return get_network_option($networkId, $option, $defaultValue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addNetworkOption(int $networkId, string $option, mixed $value): bool
     {
         return add_network_option($networkId, $option, $value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deleteNetworkOption(int $networkId, string $option): bool
     {
         return delete_network_option($networkId, $option);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateNetworkOption(int $networkId, string $option, mixed $value): bool
     {
         return update_network_option($networkId, $option, $value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deleteSiteTransient(string $transient): bool
     {
         return delete_site_transient($transient);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSiteTransient(string $transient): mixed
     {
         return get_site_transient($transient);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function setSiteTransient(string $transient, mixed $value, int $expiration = 0): bool
     {
         return set_site_transient($transient, $value, $expiration);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerInitialSettings(): void
     {
         register_initial_settings();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerSetting(string $optionGroup, string $optionName, array $args = []): void
     {
         register_setting($optionGroup, $optionName, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function unregisterSetting(string $optionGroup, string $optionName, callable $deprecated = null): void
     {
         unregister_setting($optionGroup, $optionName, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getRegisteredSettings(): array
     {
         return get_registered_settings();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function filterDefaultOption(mixed $defaultValue, string $option, bool $passedDefault): mixed
     {
         return filter_default_option($defaultValue, $option, $passedDefault);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAutoloadValuesToAutoload(): array
     {
         return wp_autoload_values_to_autoload();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSetCurrentUser(int|null $id, string $name = ''): \WP_User
     {
         return wp_set_current_user($id, $name);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetCurrentUser(): \WP_User
     {
         return wp_get_current_user();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getUserdata(int $userId): \WP_User|false
     {
         return get_userdata($userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getUserBy(string $field, int|string $value): \WP_User|false
     {
         return get_user_by($field, $value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function cacheUsers(array $userIds): void
     {
         cache_users($userIds);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMail(string|array $to, string $subject, string $message, string|array $headers = '', string|array $attachments = []): bool
     {
         return wp_mail($to, $subject, $message, $headers, $attachments);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAuthenticate(string $username, string $password): \WP_User|\WP_Error
     {
         return wp_authenticate($username, $password);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpLogout(): void
     {
         wp_logout();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpValidateAuthCookie(string $cookie = '', string $scheme = ''): int|false
     {
         return wp_validate_auth_cookie($cookie, $scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGenerateAuthCookie(int $userId, int $expiration, string $scheme = 'auth', string $token = ''): string
     {
         return wp_generate_auth_cookie($userId, $expiration, $scheme, $token);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpParseAuthCookie(string $cookie = '', string $scheme = ''): array|false
     {
         return wp_parse_auth_cookie($cookie, $scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSetAuthCookie(int $userId, bool $remember = false, bool|string $secure = '', string $token = ''): void
     {
         wp_set_auth_cookie($userId, $remember, $secure, $token);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpClearAuthCookie(): void
     {
         wp_clear_auth_cookie();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isUserLoggedIn(): bool
     {
         return is_user_logged_in();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function authRedirect(): void
     {
         auth_redirect();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function checkAdminReferer(int|string $action, string $queryArg = '_wpnonce'): int|false
     {
         return check_admin_referer($action, $queryArg);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function checkAjaxReferer(int|string $action, false|string $queryArg = false, bool $stop = true): int|false
     {
         return check_ajax_referer($action, $queryArg, $stop);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRedirect(string $location, int $status = 302, string|false $xRedirectBy = 'WordPress'): bool
     {
         return wp_redirect($location, $status, $xRedirectBy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSanitizeRedirect(string $location): string
     {
         return wp_sanitize_redirect($location);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSafeRedirect(string $location, int $status = 302, string|false $xRedirectBy = 'WordPress'): bool
     {
         return wp_safe_redirect($location, $status, $xRedirectBy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpValidateRedirect(string $location, string $fallbackUrl = ''): string
     {
         return wp_validate_redirect($location, $fallbackUrl);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNotifyPostauthor(int|\WP_Comment $commentId, string $deprecated = null): bool
     {
         return wp_notify_postauthor($commentId, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNotifyModerator(int $commentId): true
     {
         return wp_notify_moderator($commentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPasswordChangeNotification(\WP_User $user): void
     {
         wp_password_change_notification($user);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNewUserNotification(int $userId, null $deprecated = null, string $notify = ''): void
     {
         wp_new_user_notification($userId, $deprecated, $notify);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpNonceTick(string|int $action): float
     {
         return wp_nonce_tick($action);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpVerifyNonce(string $nonce, string|int $action): int|false
     {
         return wp_verify_nonce($nonce, $action);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCreateNonce(string|int $action): string
     {
         return wp_create_nonce($action);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSalt(string $scheme = 'auth'): string
     {
         return wp_salt($scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpHash(string $data, string $scheme = 'auth'): string
     {
         return wp_hash($data, $scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpHashPassword(string $password): string
     {
         return wp_hash_password($password);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCheckPassword(string $password, string $hash, string|int $userId = ''): bool
     {
         return wp_check_password($password, $hash, $userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGeneratePassword(int $length = 12, bool $specialChars = true, bool $extraSpecialChars = false): string
     {
         return wp_generate_password($length, $specialChars, $extraSpecialChars);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRand(int $min = null, int $max = null): int
     {
         return wp_rand($min, $max);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSetPassword(string $password, int $userId): void
     {
         wp_set_password($password, $userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAvatar(mixed $idOrEmail, int $size = 96, string $defaultValue = '', string $alt = '', array $args = null): string|false
     {
         return get_avatar($idOrEmail, $size, $defaultValue, $alt, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTextDiff(string $leftString, string $rightString, string|array $args = null): string
     {
         return wp_text_diff($leftString, $rightString, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addFilter(string $hookName, callable $callback, int $priority = 10, int $acceptedArgs = 1): true
     {
         return add_filter($hookName, $callback, $priority, $acceptedArgs);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function applyFilters(string $hookName, mixed $value): mixed
     {
         return apply_filters($hookName, $value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function applyFiltersRefArray(string $hookName, array $args): mixed
     {
         return apply_filters_ref_array($hookName, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasFilter(string $hookName, callable|string|array|false $callback = false): bool|int
     {
         return has_filter($hookName, $callback);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeFilter(string $hookName, callable|string|array $callback, int $priority = 10): bool
     {
         return remove_filter($hookName, $callback, $priority);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeAllFilters(string $hookName, int|false $priority = false): true
     {
         return remove_all_filters($hookName, $priority);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function currentFilter(): string
     {
         return current_filter();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doingFilter(string|null $hookName = null): bool
     {
         return doing_filter($hookName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function didFilter(string $hookName): int
     {
         return did_filter($hookName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addAction(string $hookName, callable $callback, int $priority = 10, int $acceptedArgs = 1): true
     {
         return add_action($hookName, $callback, $priority, $acceptedArgs);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doAction(string $hookName): void
     {
         do_action($hookName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doActionRefArray(string $hookName, array $args): void
     {
         do_action_ref_array($hookName, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasAction(string $hookName, callable|string|array|false $callback = false): bool|int
     {
         return has_action($hookName, $callback);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeAction(string $hookName, callable|string|array $callback, int $priority = 10): bool
     {
         return remove_action($hookName, $callback, $priority);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeAllActions(string $hookName, int|false $priority = false): true
     {
         return remove_all_actions($hookName, $priority);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function currentAction(): string
     {
         return current_action();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doingAction(string|null $hookName = null): bool
     {
         return doing_action($hookName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function didAction(string $hookName): int
     {
         return did_action($hookName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function applyFiltersDeprecated(string $hookName, array $args, string $version, string $replacement = '', string $message = ''): mixed
     {
         return apply_filters_deprecated($hookName, $args, $version, $replacement, $message);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doActionDeprecated(string $hookName, array $args, string $version, string $replacement = '', string $message = ''): void
     {
         do_action_deprecated($hookName, $args, $version, $replacement, $message);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function pluginBasename(string $file): string
     {
         return plugin_basename($file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRegisterPluginRealpath(string $file): bool
     {
         return wp_register_plugin_realpath($file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function pluginDirPath(string $file): string
     {
         return plugin_dir_path($file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function pluginDirUrl(string $file): string
     {
         return plugin_dir_url($file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerActivationHook(string $file, callable $callback): void
     {
         register_activation_hook($file, $callback);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerDeactivationHook(string $file, callable $callback): void
     {
         register_deactivation_hook($file, $callback);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerUninstallHook(string $file, callable $callback): void
     {
         register_uninstall_hook($file, $callback);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostFormat(int|\WP_Post|null $post = null): string|false
     {
         return get_post_format($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasPostFormat(string|array $format = [], \WP_Post|int|null $post = null): bool
     {
         return has_post_format($format, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function setPostFormat(int|\WP_Post $post, string $format): array|\WP_Error|false
     {
         return set_post_format($post, $format);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostFormatStrings(): array
     {
         return get_post_format_strings();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostFormatSlugs(): array
     {
         return get_post_format_slugs();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostFormatString(string $slug): string
     {
         return get_post_format_string($slug);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostFormatLink(string $format): string|\WP_Error|false
     {
         return get_post_format_link($format);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theID(): void
     {
         the_ID();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheID(): int|false
     {
         return get_the_ID();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theTitle(string $before = '', string $after = '', bool $display = true): mixed
     {
         return the_title($before, $after, $display);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theTitleAttribute(string|array $args = ''): mixed
     {
         return the_title_attribute($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheTitle(int|\WP_Post $post = 0): string
     {
         return get_the_title($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theGuid(int|\WP_Post $post = 0): void
     {
         the_guid($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheGuid(int|\WP_Post $post = 0): string
     {
         return get_the_guid($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theContent(string $moreLinkText = null, bool $stripTeaser = false): void
     {
         the_content($moreLinkText, $stripTeaser);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheContent(string $moreLinkText = null, bool $stripTeaser = false, int|object $post = null): string
     {
         return get_the_content($moreLinkText, $stripTeaser, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theExcerpt(): void
     {
         the_excerpt();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheExcerpt(int|\WP_Post $post = null): string
     {
         return get_the_excerpt($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasExcerpt(int|\WP_Post $post = 0): bool
     {
         return has_excerpt($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postClass(string|array $cssClass = '', int|\WP_Post $post = null): void
     {
         post_class($cssClass, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostClass(string|array $cssClass = '', int|\WP_Post $post = null): array
     {
         return get_post_class($cssClass, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function bodyClass(string|array $cssClass = ''): void
     {
         body_class($cssClass);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBodyClass(string|array $cssClass = ''): array
     {
         return get_body_class($cssClass);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postPasswordRequired(int|\WP_Post|null $post = null): bool
     {
         return post_password_required($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpLinkPages(string|array $args = ''): string
     {
         return wp_link_pages($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postCustom(string $key = ''): array|string|false
     {
         return post_custom($key);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDropdownPages(array|string $args = ''): string
     {
         return wp_dropdown_pages($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpListPages(array|string $args = ''): mixed
     {
         return wp_list_pages($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPageMenu(array|string $args = []): mixed
     {
         return wp_page_menu($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function walkPageTree(array $pages, int $depth, int $currentPage, array $args): string
     {
         return walk_page_tree($pages, $depth, $currentPage, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function walkPageDropdownTree(): string
     {
         return walk_page_dropdown_tree();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theAttachmentLink(int|\WP_Post $post = 0, bool $fullsize = false, bool $deprecated = false, bool $permalink = false): void
     {
         the_attachment_link($post, $fullsize, $deprecated, $permalink);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetAttachmentLink(int|\WP_Post $post = 0, string|array $size = 'thumbnail', bool $permalink = false, bool $icon = false, string|false $text = false, array|string $attr = ''): string
     {
         return wp_get_attachment_link($post, $size, $permalink, $icon, $text, $attr);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function prependAttachment(string $content): string
     {
         return prepend_attachment($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThePasswordForm(int|\WP_Post $post = 0): string
     {
         return get_the_password_form($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isPageTemplate(string|array $template = ''): bool
     {
         return is_page_template($template);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPageTemplateSlug(int|\WP_Post $post = null): string|false
     {
         return get_page_template_slug($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPostRevisionTitle(int|\WP_Post $revision, bool $link = true): string|false
     {
         return wp_post_revision_title($revision, $link);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPostRevisionTitleExpanded(int|\WP_Post $revision, bool $link = true): string|false
     {
         return wp_post_revision_title_expanded($revision, $link);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpListPostRevisions(int|\WP_Post $post = 0, string $type = 'all'): void
     {
         wp_list_post_revisions($post, $type);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostParent(int|\WP_Post|null $post = null): \WP_Post|null
     {
         return get_post_parent($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasPostParent(int|\WP_Post|null $post = null): bool
     {
         return has_post_parent($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasPostThumbnail(int|\WP_Post $post = null): bool
     {
         return has_post_thumbnail($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostThumbnailId(int|\WP_Post $post = null): int|false
     {
         return get_post_thumbnail_id($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function thePostThumbnail(string|array $size = 'post-thumbnail', string|array $attr = ''): void
     {
         the_post_thumbnail($size, $attr);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updatePostThumbnailCache(\WP_Query $wpQuery = null): void
     {
         update_post_thumbnail_cache($wpQuery);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThePostThumbnail(int|\WP_Post $post = null, string|array $size = 'post-thumbnail', string|array $attr = ''): string
     {
         return get_the_post_thumbnail($post, $size, $attr);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThePostThumbnailUrl(int|\WP_Post $post = null, string|array $size = 'post-thumbnail'): string|false
     {
         return get_the_post_thumbnail_url($post, $size);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function thePostThumbnailUrl(string|array $size = 'post-thumbnail'): void
     {
         the_post_thumbnail_url($size);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThePostThumbnailCaption(int|\WP_Post $post = null): string
     {
         return get_the_post_thumbnail_caption($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function thePostThumbnailCaption(int|\WP_Post $post = null): void
     {
         the_post_thumbnail_caption($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function createInitialPostTypes(): void
     {
         create_initial_post_types();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAttachedFile(int $attachmentId, bool $unfiltered = false): string|false
     {
         return get_attached_file($attachmentId, $unfiltered);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateAttachedFile(int $attachmentId, string $file): bool
     {
         return update_attached_file($attachmentId, $file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getChildren(mixed $args = '', string $output = OBJECT): array
     {
         return get_children($args, $output);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getExtended(string $post): array
     {
         return get_extended($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPost(int|\WP_Post|null $post = null, string $output = OBJECT, string $filter = 'raw'): \WP_Post|array|null
     {
         return get_post($post, $output, $filter);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostAncestors(int|\WP_Post $post): array
     {
         return get_post_ancestors($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostField(string $field, int|\WP_Post $post = null, string $context = 'display'): string
     {
         return get_post_field($field, $post, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostMimeType(int|\WP_Post $post = null): string|false
     {
         return get_post_mime_type($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostStatus(int|\WP_Post $post = null): string|false
     {
         return get_post_status($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostStatuses(): array
     {
         return get_post_statuses();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPageStatuses(): array
     {
         return get_page_statuses();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerPostStatus(string $postStatus, array|string $args = []): object
     {
         return register_post_status($postStatus, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostStatusObject(string $postStatus): \stdClass|null
     {
         return get_post_status_object($postStatus);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostStati(array|string $args = [], string $output = 'names', string $operator = 'and'): array
     {
         return get_post_stati($args, $output, $operator);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isPostTypeHierarchical(string $postType): bool
     {
         return is_post_type_hierarchical($postType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postTypeExists(string $postType): bool
     {
         return post_type_exists($postType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostType(int|\WP_Post|null $post = null): string|false
     {
         return get_post_type($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostTypeObject(string $postType): \WP_Post_Type|null
     {
         return get_post_type_object($postType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostTypes(array|string $args = [], string $output = 'names', string $operator = 'and'): array
     {
         return get_post_types($args, $output, $operator);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerPostType(string $postType, array|string $args = []): \WP_Post_Type|\WP_Error
     {
         return register_post_type($postType, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function unregisterPostType(string $postType): true|\WP_Error
     {
         return unregister_post_type($postType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostTypeCapabilities(object $args): object
     {
         return get_post_type_capabilities($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addPostTypeSupport(string $postType, string|array $feature): void
     {
         add_post_type_support($postType, $feature);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removePostTypeSupport(string $postType, string $feature): void
     {
         remove_post_type_support($postType, $feature);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAllPostTypeSupports(string $postType): array
     {
         return get_all_post_type_supports($postType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function postTypeSupports(string $postType, string $feature): bool
     {
         return post_type_supports($postType, $feature);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostTypesBySupport(array|string $feature, string $operator = 'and'): array
     {
         return get_post_types_by_support($feature, $operator);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function setPostType(int $postId = 0, string $postType = 'post'): int|false
     {
         return set_post_type($postId, $postType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isPostTypeViewable(string|\WP_Post_Type $postType): bool
     {
         return is_post_type_viewable($postType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isPostStatusViewable(string|\stdClass $postStatus): bool
     {
         return is_post_status_viewable($postStatus);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isPostPubliclyViewable(int|\WP_Post|null $post = null): bool
     {
         return is_post_publicly_viewable($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPosts(array $args = null): array
     {
         return get_posts($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addPostMeta(int $postId, string $metaKey, mixed $metaValue, bool $unique = false): int|false
     {
         return add_post_meta($postId, $metaKey, $metaValue, $unique);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deletePostMeta(int $postId, string $metaKey, mixed $metaValue = ''): bool
     {
         return delete_post_meta($postId, $metaKey, $metaValue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostMeta(int $postId, string $key = '', bool $single = false): mixed
     {
         return get_post_meta($postId, $key, $single);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updatePostMeta(int $postId, string $metaKey, mixed $metaValue, mixed $prevValue = ''): int|bool
     {
         return update_post_meta($postId, $metaKey, $metaValue, $prevValue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deletePostMetaByKey(string $postMetaKey): bool
     {
         return delete_post_meta_by_key($postMetaKey);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerPostMeta(string $postType, string $metaKey, array $args): bool
     {
         return register_post_meta($postType, $metaKey, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function unregisterPostMeta(string $postType, string $metaKey): bool
     {
         return unregister_post_meta($postType, $metaKey);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostCustom(int $postId = 0): mixed
     {
         return get_post_custom($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostCustomKeys(int $postId = 0): mixed
     {
         return get_post_custom_keys($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostCustomValues(string $key = '', int $postId = 0): array|null
     {
         return get_post_custom_values($key, $postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isSticky(int $postId = 0): bool
     {
         return is_sticky($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizePost(array|object $post, string $context = 'display'): array|object
     {
         return sanitize_post($post, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizePostField(string $field, mixed $value, int $postId, string $context = 'display'): mixed
     {
         return sanitize_post_field($field, $value, $postId, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function stickPost(int $postId): void
     {
         stick_post($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function unstickPost(int $postId): void
     {
         unstick_post($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCountPosts(string $type = 'post', string $perm = ''): \stdClass
     {
         return wp_count_posts($type, $perm);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCountAttachments(string|array $mimeType = ''): \stdClass
     {
         return wp_count_attachments($mimeType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostMimeTypes(): array
     {
         return get_post_mime_types();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMatchMimeTypes(string|array $wildcardMimeTypes, string|array $realMimeTypes): array
     {
         return wp_match_mime_types($wildcardMimeTypes, $realMimeTypes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPostMimeTypeWhere(string|array $postMimeTypes, string $tableAlias = ''): string
     {
         return wp_post_mime_type_where($postMimeTypes, $tableAlias);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeletePost(int $postId = 0, bool $forceDelete = false): \WP_Post|false|null
     {
         return wp_delete_post($postId, $forceDelete);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTrashPost(int $postId = 0): \WP_Post|false|null
     {
         return wp_trash_post($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUntrashPost(int $postId = 0): \WP_Post|false|null
     {
         return wp_untrash_post($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTrashPostComments(int|\WP_Post|null $post = null): mixed
     {
         return wp_trash_post_comments($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUntrashPostComments(int|\WP_Post|null $post = null): mixed
     {
         return wp_untrash_post_comments($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetPostCategories(int $postId = 0, array $args = []): array|\WP_Error
     {
         return wp_get_post_categories($postId, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetPostTags(int $postId = 0, array $args = []): array|\WP_Error
     {
         return wp_get_post_tags($postId, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetPostTerms(int $postId = 0, string|array $taxonomy = 'post_tag', array $args = []): array|\WP_Error
     {
         return wp_get_post_terms($postId, $taxonomy, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetRecentPosts(array $args = [], string $output = ARRAY_A): array|false
     {
         return wp_get_recent_posts($args, $output);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInsertPost(array $postarr, bool $wpError = false, bool $fireAfterHooks = true): int|\WP_Error
     {
         return wp_insert_post($postarr, $wpError, $fireAfterHooks);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdatePost(array|object $postarr = [], bool $wpError = false, bool $fireAfterHooks = true): int|\WP_Error
     {
         return wp_update_post($postarr, $wpError, $fireAfterHooks);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPublishPost(int|\WP_Post $post): void
     {
         wp_publish_post($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function checkAndPublishFuturePost(int|\WP_Post $post): void
     {
         check_and_publish_future_post($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpResolvePostDate(string $postDate = '', string $postDateGmt = ''): string|false
     {
         return wp_resolve_post_date($postDate, $postDateGmt);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUniquePostSlug(string $slug, int $postId, string $postStatus, string $postType, int $postParent): string
     {
         return wp_unique_post_slug($slug, $postId, $postStatus, $postType, $postParent);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAddPostTags(int $postId = 0, string|array $tags = ''): array|false|\WP_Error
     {
         return wp_add_post_tags($postId, $tags);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSetPostTags(int $postId = 0, string|array $tags = '', bool $append = false): array|false|\WP_Error
     {
         return wp_set_post_tags($postId, $tags, $append);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSetPostTerms(int $postId = 0, string|array $terms = '', string $taxonomy = 'post_tag', bool $append = false): array|false|\WP_Error
     {
         return wp_set_post_terms($postId, $terms, $taxonomy, $append);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSetPostCategories(int $postId = 0, array|int $postCategories = [], bool $append = false): array|false|\WP_Error
     {
         return wp_set_post_categories($postId, $postCategories, $append);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTransitionPostStatus(string $newStatus, string $oldStatus, \WP_Post $post): void
     {
         wp_transition_post_status($newStatus, $oldStatus, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAfterInsertPost(int|\WP_Post $post, bool $update, null|\WP_Post $postBefore): void
     {
         wp_after_insert_post($post, $update, $postBefore);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addPing(int|\WP_Post $post, string|array $uri): int|false
     {
         return add_ping($post, $uri);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getEnclosed(int $postId): array
     {
         return get_enclosed($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPung(int|\WP_Post $post): array|false
     {
         return get_pung($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getToPing(int|\WP_Post $post): array|false
     {
         return get_to_ping($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function trackbackUrlList(string $tbList, int $postId): void
     {
         trackback_url_list($tbList, $postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAllPageIds(): array
     {
         return get_all_page_ids();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPageByPath(string $pagePath, string $output = OBJECT, string|array $postType = 'page'): \WP_Post|array|null
     {
         return get_page_by_path($pagePath, $output, $postType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPageChildren(int $pageId, array $pages): array
     {
         return get_page_children($pageId, $pages);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPageHierarchy(array $pages, int $pageId = 0): array
     {
         return get_page_hierarchy($pages, $pageId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPageUri(int|object $page = 0): string|false
     {
         return get_page_uri($page);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPages(array|string $args = []): array|false
     {
         return get_pages($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isLocalAttachment(string $url): bool
     {
         return is_local_attachment($url);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInsertAttachment(string|array $args, string|false $file = false, int $parentPostId = 0, bool $wpError = false, bool $fireAfterHooks = true): int|\WP_Error
     {
         return wp_insert_attachment($args, $file, $parentPostId, $wpError, $fireAfterHooks);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeleteAttachment(int $postId, bool $forceDelete = false): \WP_Post|false|null
     {
         return wp_delete_attachment($postId, $forceDelete);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeleteAttachmentFiles(int $postId, array $meta, array $backupSizes, string $file): bool
     {
         return wp_delete_attachment_files($postId, $meta, $backupSizes, $file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetAttachmentMetadata(int $attachmentId = 0, bool $unfiltered = false): array|false
     {
         return wp_get_attachment_metadata($attachmentId, $unfiltered);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateAttachmentMetadata(int $attachmentId, array $data): int|false
     {
         return wp_update_attachment_metadata($attachmentId, $data);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetAttachmentUrl(int $attachmentId = 0): string|false
     {
         return wp_get_attachment_url($attachmentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetAttachmentCaption(int $postId = 0): string|false
     {
         return wp_get_attachment_caption($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetAttachmentThumbUrl(int $postId = 0): string|false
     {
         return wp_get_attachment_thumb_url($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAttachmentIs(string $type, int|\WP_Post $post = null): bool
     {
         return wp_attachment_is($type, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAttachmentIsImage(int|\WP_Post $post = null): bool
     {
         return wp_attachment_is_image($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMimeTypeIcon(string|int $mime = 0, string $preferredExt = '.png'): string|false
     {
         return wp_mime_type_icon($mime, $preferredExt);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCheckForChangedSlugs(int $postId, \WP_Post $post, \WP_Post $postBefore): void
     {
         wp_check_for_changed_slugs($postId, $post, $postBefore);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCheckForChangedDates(int $postId, \WP_Post $post, \WP_Post $postBefore): void
     {
         wp_check_for_changed_dates($postId, $post, $postBefore);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPrivatePostsCapSql(string|array $postType): string
     {
         return get_private_posts_cap_sql($postType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostsByAuthorSql(string|array $postType, bool $full = true, int $postAuthor = null, bool $publicOnly = false): string
     {
         return get_posts_by_author_sql($postType, $full, $postAuthor, $publicOnly);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getLastpostdate(string $timezone = 'server', string $postType = 'any'): string
     {
         return get_lastpostdate($timezone, $postType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getLastpostmodified(string $timezone = 'server', string $postType = 'any'): string
     {
         return get_lastpostmodified($timezone, $postType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updatePostCache(array $posts): void
     {
         update_post_cache($posts);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function cleanPostCache(int|\WP_Post $post): void
     {
         clean_post_cache($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updatePostCaches(array $posts, string $postType = 'post', bool $updateTermCache = true, bool $updateMetaCache = true): void
     {
         update_post_caches($posts, $postType, $updateTermCache, $updateMetaCache);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updatePostAuthorCaches(array $posts): void
     {
         update_post_author_caches($posts);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updatePostParentCaches(array $posts): void
     {
         update_post_parent_caches($posts);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updatePostmetaCache(array $postIds): array|false
     {
         return update_postmeta_cache($postIds);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function cleanAttachmentCache(int $id, bool $cleanTerms = false): void
     {
         clean_attachment_cache($id, $cleanTerms);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetPostParentId(int|\WP_Post|null $post = null): int|false
     {
         return wp_get_post_parent_id($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCheckPostHierarchyForLoops(int $postParent, int $postId): int
     {
         return wp_check_post_hierarchy_for_loops($postParent, $postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function setPostThumbnail(int|\WP_Post $post, int $thumbnailId): int|bool
     {
         return set_post_thumbnail($post, $thumbnailId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deletePostThumbnail(int|\WP_Post $post): bool
     {
         return delete_post_thumbnail($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeleteAutoDrafts(): void
     {
         wp_delete_auto_drafts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpQueuePostsForTermMetaLazyload(array $posts): void
     {
         wp_queue_posts_for_term_meta_lazyload($posts);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheSetPostsLastChanged(): void
     {
         wp_cache_set_posts_last_changed();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAvailablePostMimeTypes(string $type = 'attachment'): array
     {
         return get_available_post_mime_types($type);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetOriginalImagePath(int $attachmentId, bool $unfiltered = false): string|false
     {
         return wp_get_original_image_path($attachmentId, $unfiltered);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetOriginalImageUrl(int $attachmentId): string|false
     {
         return wp_get_original_image_url($attachmentId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUntrashPostSetPreviousStatus(string $newStatus, int $postId, string $previousStatus): string
     {
         return wp_untrash_post_set_previous_status($newStatus, $postId, $previousStatus);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function useBlockEditorForPost(int|\WP_Post $post): bool
     {
         return use_block_editor_for_post($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function useBlockEditorForPostType(string $postType): bool
     {
         return use_block_editor_for_post_type($postType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCreateInitialPostMeta(): void
     {
         wp_create_initial_post_meta();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getQueryVar(string $queryVar, mixed $defaultValue = ''): mixed
     {
         return get_query_var($queryVar, $defaultValue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getQueriedObject(): \WP_Term|\WP_Post_Type|\WP_Post|\WP_User|null
     {
         return get_queried_object();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getQueriedObjectId(): int
     {
         return get_queried_object_id();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function setQueryVar(string $queryVar, mixed $value): void
     {
         set_query_var($queryVar, $value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function queryPosts(array|string $query): array
     {
         return query_posts($query);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpResetQuery(): void
     {
         wp_reset_query();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpResetPostdata(): void
     {
         wp_reset_postdata();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isArchive(): bool
     {
         return is_archive();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isPostTypeArchive(string|array $postTypes = ''): bool
     {
         return is_post_type_archive($postTypes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isAttachment(int|string|array $attachment = ''): bool
     {
         return is_attachment($attachment);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isAuthor(int|string|array $author = ''): bool
     {
         return is_author($author);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isCategory(int|string|array $category = ''): bool
     {
         return is_category($category);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isTag(int|string|array $tag = ''): bool
     {
         return is_tag($tag);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isTax(string|array $taxonomy = '', int|string|array $term = ''): bool
     {
         return is_tax($taxonomy, $term);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isDate(): bool
     {
         return is_date();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isDay(): bool
     {
         return is_day();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isFeed(string|array $feeds = ''): bool
     {
         return is_feed($feeds);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isCommentFeed(): bool
     {
         return is_comment_feed();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isFrontPage(): bool
     {
         return is_front_page();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isHome(): bool
     {
         return is_home();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isPrivacyPolicy(): bool
     {
         return is_privacy_policy();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isMonth(): bool
     {
         return is_month();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isPage(int|string|array $page = ''): bool
     {
         return is_page($page);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isPaged(): bool
     {
         return is_paged();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isPreview(): bool
     {
         return is_preview();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isRobots(): bool
     {
         return is_robots();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isFavicon(): bool
     {
         return is_favicon();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isSearch(): bool
     {
         return is_search();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isSingle(int|string|array $post = ''): bool
     {
         return is_single($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isSingular(string|array $postTypes = ''): bool
     {
         return is_singular($postTypes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isTime(): bool
     {
         return is_time();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isTrackback(): bool
     {
         return is_trackback();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isYear(): bool
     {
         return is_year();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function is404(): bool
     {
         return is_404();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isEmbed(): bool
     {
         return is_embed();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isMainQuery(): bool
     {
         return is_main_query();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function havePosts(): bool
     {
         return have_posts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function inTheLoop(): bool
     {
         return in_the_loop();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function rewindPosts(): void
     {
         rewind_posts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function thePost(): void
     {
         the_post();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function haveComments(): bool
     {
         return have_comments();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theComment(): void
     {
         the_comment();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpOldSlugRedirect(): void
     {
         wp_old_slug_redirect();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function setupPostdata(int|object $post): bool
     {
         return setup_postdata($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function generatePostdata(int|object $post): array|false
     {
         return generate_postdata($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerRestRoute(string $routeNamespace, string $route, array $args = [], bool $override = false): bool
     {
         return register_rest_route($routeNamespace, $route, $args, $override);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerRestField(string|array $objectType, string $attribute, array $args = []): void
     {
         register_rest_field($objectType, $attribute, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restApiInit(): void
     {
         rest_api_init();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restApiRegisterRewrites(): void
     {
         rest_api_register_rewrites();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restApiDefaultFilters(): void
     {
         rest_api_default_filters();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function createInitialRestRoutes(): void
     {
         create_initial_rest_routes();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restApiLoaded(): void
     {
         rest_api_loaded();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restGetUrlPrefix(): string
     {
         return rest_get_url_prefix();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getRestUrl(int|null $blogId = null, string $path = '/', string $scheme = 'rest'): string
     {
         return get_rest_url($blogId, $path, $scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restUrl(string $path = '', string $scheme = 'rest'): string
     {
         return rest_url($path, $scheme);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restDoRequest(\WP_REST_Request|string $request): \WP_REST_Response
     {
         return rest_do_request($request);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restGetServer(): \WP_REST_Server
     {
         return rest_get_server();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restEnsureRequest(array|string|\WP_REST_Request $request): \WP_REST_Request
     {
         return rest_ensure_request($request);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restEnsureResponse(mixed $response): \WP_REST_Response|\WP_Error
     {
         return rest_ensure_response($response);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restHandleDeprecatedFunction(string $functionName, string $replacement, string $version): void
     {
         rest_handle_deprecated_function($functionName, $replacement, $version);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restHandleDeprecatedArgument(string $functionName, string $message, string $version): void
     {
         rest_handle_deprecated_argument($functionName, $message, $version);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restHandleDoingItWrong(string $functionName, string $message, string|null $version): void
     {
         rest_handle_doing_it_wrong($functionName, $message, $version);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restSendCorsHeaders(mixed $value): mixed
     {
         return rest_send_cors_headers($value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restHandleOptionsRequest(mixed $response, \WP_REST_Server $handler, \WP_REST_Request $request): \WP_REST_Response
     {
         return rest_handle_options_request($response, $handler, $request);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restSendAllowHeader(\WP_REST_Response $response, \WP_REST_Server $server, \WP_REST_Request $request): \WP_REST_Response
     {
         return rest_send_allow_header($response, $server, $request);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restFilterResponseFields(\WP_REST_Response $response, \WP_REST_Server $server, \WP_REST_Request $request): \WP_REST_Response
     {
         return rest_filter_response_fields($response, $server, $request);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restIsFieldIncluded(string $field, array $fields): bool
     {
         return rest_is_field_included($field, $fields);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restOutputRsd(): void
     {
         rest_output_rsd();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restOutputLinkWpHead(): void
     {
         rest_output_link_wp_head();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restOutputLinkHeader(): void
     {
         rest_output_link_header();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restCookieCheckErrors(mixed $result): mixed
     {
         return rest_cookie_check_errors($result);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restCookieCollectStatus(): void
     {
         rest_cookie_collect_status();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restApplicationPasswordCollectStatus(\WP_Error $userOrError, array $appPassword = []): void
     {
         rest_application_password_collect_status($userOrError, $appPassword);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restGetAuthenticatedAppPassword(): string|null
     {
         return rest_get_authenticated_app_password();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restApplicationPasswordCheckErrors(\WP_Error|null|true $result): \WP_Error|null|true
     {
         return rest_application_password_check_errors($result);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restAddApplicationPasswordsToIndex(\WP_REST_Response $response): \WP_REST_Response
     {
         return rest_add_application_passwords_to_index($response);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restGetAvatarUrls(mixed $idOrEmail): string|array
     {
         return rest_get_avatar_urls($idOrEmail);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restGetAvatarSizes(): array
     {
         return rest_get_avatar_sizes();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restParseDate(string $date, bool $forceUtc = false): int|false
     {
         return rest_parse_date($date, $forceUtc);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restParseHexColor(string $color): string|false
     {
         return rest_parse_hex_color($color);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restGetDateWithGmt(string $date, bool $isUtc = false): array|null
     {
         return rest_get_date_with_gmt($date, $isUtc);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restAuthorizationRequiredCode(): int
     {
         return rest_authorization_required_code();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restValidateRequestArg(mixed $value, \WP_REST_Request $request, string $param): true|\WP_Error
     {
         return rest_validate_request_arg($value, $request, $param);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restSanitizeRequestArg(mixed $value, \WP_REST_Request $request, string $param): mixed
     {
         return rest_sanitize_request_arg($value, $request, $param);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restParseRequestArg(mixed $value, \WP_REST_Request $request, string $param): mixed
     {
         return rest_parse_request_arg($value, $request, $param);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restIsIpAddress(string $ip): string|false
     {
         return rest_is_ip_address($ip);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restSanitizeBoolean(bool|string|int $value): bool
     {
         return rest_sanitize_boolean($value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restIsBoolean(bool|string $maybeBool): bool
     {
         return rest_is_boolean($maybeBool);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restIsInteger(mixed $maybeInteger): bool
     {
         return rest_is_integer($maybeInteger);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restIsArray(mixed $maybeArray): bool
     {
         return rest_is_array($maybeArray);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restSanitizeArray(mixed $maybeArray): array
     {
         return rest_sanitize_array($maybeArray);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restIsObject(mixed $maybeObject): bool
     {
         return rest_is_object($maybeObject);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restSanitizeObject(mixed $maybeObject): array
     {
         return rest_sanitize_object($maybeObject);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restGetBestTypeForValue(mixed $value, array $types): string
     {
         return rest_get_best_type_for_value($value, $types);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restHandleMultiTypeSchema(mixed $value, array $args, string $param = ''): string
     {
         return rest_handle_multi_type_schema($value, $args, $param);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restValidateArrayContainsUniqueItems(array $inputArray): bool
     {
         return rest_validate_array_contains_unique_items($inputArray);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restStabilizeValue(mixed $value): mixed
     {
         return rest_stabilize_value($value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restValidateJsonSchemaPattern(string $pattern, string $value): bool
     {
         return rest_validate_json_schema_pattern($pattern, $value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restFindMatchingPatternPropertySchema(string $property, array $args): array|null
     {
         return rest_find_matching_pattern_property_schema($property, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restFormatCombiningOperationError(string $param, array $error): \WP_Error
     {
         return rest_format_combining_operation_error($param, $error);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restGetCombiningOperationError(array $value, string $param, array $errors): \WP_Error
     {
         return rest_get_combining_operation_error($value, $param, $errors);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restFindAnyMatchingSchema(mixed $value, array $args, string $param): array|\WP_Error
     {
         return rest_find_any_matching_schema($value, $args, $param);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restFindOneMatchingSchema(mixed $value, array $args, string $param, bool $stopAfterFirstMatch = false): array|\WP_Error
     {
         return rest_find_one_matching_schema($value, $args, $param, $stopAfterFirstMatch);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restAreValuesEqual(mixed $value1, mixed $value2): bool
     {
         return rest_are_values_equal($value1, $value2);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restValidateEnum(mixed $value, array $args, string $param): true|\WP_Error
     {
         return rest_validate_enum($value, $args, $param);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restGetAllowedSchemaKeywords(): array
     {
         return rest_get_allowed_schema_keywords();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restValidateValueFromSchema(mixed $value, array $args, string $param = ''): true|\WP_Error
     {
         return rest_validate_value_from_schema($value, $args, $param);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restValidateNullValueFromSchema(mixed $value, string $param): true|\WP_Error
     {
         return rest_validate_null_value_from_schema($value, $param);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restValidateBooleanValueFromSchema(mixed $value, string $param): true|\WP_Error
     {
         return rest_validate_boolean_value_from_schema($value, $param);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restValidateObjectValueFromSchema(mixed $value, array $args, string $param): true|\WP_Error
     {
         return rest_validate_object_value_from_schema($value, $args, $param);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restValidateArrayValueFromSchema(mixed $value, array $args, string $param): true|\WP_Error
     {
         return rest_validate_array_value_from_schema($value, $args, $param);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restValidateNumberValueFromSchema(mixed $value, array $args, string $param): true|\WP_Error
     {
         return rest_validate_number_value_from_schema($value, $args, $param);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restValidateStringValueFromSchema(mixed $value, array $args, string $param): true|\WP_Error
     {
         return rest_validate_string_value_from_schema($value, $args, $param);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restValidateIntegerValueFromSchema(mixed $value, array $args, string $param): true|\WP_Error
     {
         return rest_validate_integer_value_from_schema($value, $args, $param);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restSanitizeValueFromSchema(mixed $value, array $args, string $param = ''): mixed
     {
         return rest_sanitize_value_from_schema($value, $args, $param);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restPreloadApiRequest(array $memo, string $path): array
     {
         return rest_preload_api_request($memo, $path);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restParseEmbedParam(string|array $embed): true|array
     {
         return rest_parse_embed_param($embed);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restFilterResponseByContext(array|object $responseData, array $schema, string $context): array|object
     {
         return rest_filter_response_by_context($responseData, $schema, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restDefaultAdditionalPropertiesToFalse(array $schema): array
     {
         return rest_default_additional_properties_to_false($schema);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restGetRouteForPost(int|\WP_Post $post): string
     {
         return rest_get_route_for_post($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restGetRouteForPostTypeItems(string $postType): string
     {
         return rest_get_route_for_post_type_items($postType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restGetRouteForTerm(int|\WP_Term $term): string
     {
         return rest_get_route_for_term($term);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restGetRouteForTaxonomyItems(string $taxonomy): string
     {
         return rest_get_route_for_taxonomy_items($taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restGetQueriedResourceRoute(): string
     {
         return rest_get_queried_resource_route();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restGetEndpointArgsForSchema(array $schema, string $method): array
     {
         return rest_get_endpoint_args_for_schema($schema, $method);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function restConvertErrorToResponse(\WP_Error $error): \WP_REST_Response
     {
         return rest_convert_error_to_response($error);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsRestEndpoint(): bool
     {
         return wp_is_rest_endpoint();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSavePostRevisionOnInsert(int $postId, \WP_Post $post, bool $update): void
     {
         wp_save_post_revision_on_insert($postId, $post, $update);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSavePostRevision(int $postId): mixed
     {
         return wp_save_post_revision($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetPostAutosave(int $postId, int $userId = 0): \WP_Post|false
     {
         return wp_get_post_autosave($postId, $userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsPostRevision(int|\WP_Post $post): int|false
     {
         return wp_is_post_revision($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsPostAutosave(int|\WP_Post $post): int|false
     {
         return wp_is_post_autosave($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSaveRevisionedMetaFields(int $revisionId, int $postId): void
     {
         wp_save_revisioned_meta_fields($revisionId, $postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetPostRevision(int|\WP_Post $post, string $output = OBJECT, string $filter = 'raw'): \WP_Post|array|null
     {
         return wp_get_post_revision($post, $output, $filter);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRestorePostRevision(int|\WP_Post $revision, array $fields = null): int|false|null
     {
         return wp_restore_post_revision($revision, $fields);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRestorePostRevisionMeta(int $postId, int $revisionId): void
     {
         wp_restore_post_revision_meta($postId, $revisionId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPostRevisionMetaKeys(string $postType): array
     {
         return wp_post_revision_meta_keys($postType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCheckRevisionedMetaFieldsHaveChanged(bool $postHasChanged, \WP_Post $lastRevision, \WP_Post $post): bool
     {
         return wp_check_revisioned_meta_fields_have_changed($postHasChanged, $lastRevision, $post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeletePostRevision(int|\WP_Post $revision): \WP_Post|false|null
     {
         return wp_delete_post_revision($revision);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetPostRevisions(int|\WP_Post $post = 0, array|null $args = null): array
     {
         return wp_get_post_revisions($post, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetLatestRevisionIdAndTotalCount(int|\WP_Post $post = 0): array|\WP_Error
     {
         return wp_get_latest_revision_id_and_total_count($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetPostRevisionsUrl(int|\WP_Post $post = 0): string|null
     {
         return wp_get_post_revisions_url($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRevisionsEnabled(\WP_Post $post): bool
     {
         return wp_revisions_enabled($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRevisionsToKeep(\WP_Post $post): int
     {
         return wp_revisions_to_keep($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addRewriteRule(string $regex, string|array $query, string $after = 'bottom'): void
     {
         add_rewrite_rule($regex, $query, $after);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addRewriteTag(string $tag, string $regex, string $query = ''): void
     {
         add_rewrite_tag($tag, $regex, $query);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeRewriteTag(string $tag): void
     {
         remove_rewrite_tag($tag);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addPermastruct(string $name, string $struct, array $args = []): void
     {
         add_permastruct($name, $struct, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removePermastruct(string $name): void
     {
         remove_permastruct($name);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addFeed(string $feedname, callable $callback): string
     {
         return add_feed($feedname, $callback);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function flushRewriteRules(bool $hard = true): void
     {
         flush_rewrite_rules($hard);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addRewriteEndpoint(string $name, int $places, string|bool $queryVar = true): void
     {
         add_rewrite_endpoint($name, $places, $queryVar);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpResolveNumericSlugConflicts(array $queryVars = []): array
     {
         return wp_resolve_numeric_slug_conflicts($queryVars);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function urlToPostid(string $url): int
     {
         return url_to_postid($url);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRobots(): void
     {
         wp_robots();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRobotsNoindex(array $robots): array
     {
         return wp_robots_noindex($robots);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRobotsNoindexEmbeds(array $robots): array
     {
         return wp_robots_noindex_embeds($robots);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRobotsNoindexSearch(array $robots): array
     {
         return wp_robots_noindex_search($robots);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRobotsNoRobots(array $robots): array
     {
         return wp_robots_no_robots($robots);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRobotsSensitivePage(array $robots): array
     {
         return wp_robots_sensitive_page($robots);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRobotsMaxImagePreviewLarge(array $robots): array
     {
         return wp_robots_max_image_preview_large($robots);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRegisterTinymceScripts(\WP_Scripts $scripts, bool $forceUncompressed = false): void
     {
         wp_register_tinymce_scripts($scripts, $forceUncompressed);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDefaultPackagesVendor(\WP_Scripts $scripts): void
     {
         wp_default_packages_vendor($scripts);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetScriptPolyfill(\WP_Scripts $scripts, array $tests): string
     {
         return wp_get_script_polyfill($scripts, $tests);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRegisterDevelopmentScripts(\WP_Scripts $scripts): void
     {
         wp_register_development_scripts($scripts);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDefaultPackagesScripts(\WP_Scripts $scripts): void
     {
         wp_default_packages_scripts($scripts);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDefaultPackagesInlineScripts(\WP_Scripts $scripts): void
     {
         wp_default_packages_inline_scripts($scripts);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTinymceInlineScripts(): void
     {
         wp_tinymce_inline_scripts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDefaultPackages(\WP_Scripts $scripts): void
     {
         wp_default_packages($scripts);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpScriptsGetSuffix(string $type = ''): string
     {
         return wp_scripts_get_suffix($type);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDefaultScripts(\WP_Scripts $scripts): void
     {
         wp_default_scripts($scripts);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDefaultStyles(\WP_Styles $styles): void
     {
         wp_default_styles($styles);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrototypeBeforeJquery(array $jsArray): array
     {
         return wp_prototype_before_jquery($jsArray);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpJustInTimeScriptLocalization(): void
     {
         wp_just_in_time_script_localization();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpLocalizeJqueryUiDatepicker(): void
     {
         wp_localize_jquery_ui_datepicker();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpLocalizeCommunityEvents(): void
     {
         wp_localize_community_events();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpStyleLoaderSrc(string $src, string $handle): string|false
     {
         return wp_style_loader_src($src, $handle);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function printHeadScripts(): array
     {
         return print_head_scripts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function printFooterScripts(): array
     {
         return print_footer_scripts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrintHeadScripts(): array
     {
         return wp_print_head_scripts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrintFooterScripts(): void
     {
         wp_print_footer_scripts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueScripts(): void
     {
         wp_enqueue_scripts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function printAdminStyles(): array
     {
         return print_admin_styles();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function printLateStyles(): mixed
     {
         return print_late_styles();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function scriptConcatSettings(): void
     {
         script_concat_settings();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCommonBlockScriptsAndStyles(): void
     {
         wp_common_block_scripts_and_styles();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpFilterOutBlockNodes(array $nodes): array
     {
         return wp_filter_out_block_nodes($nodes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueGlobalStyles(): void
     {
         wp_enqueue_global_styles();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueGlobalStylesCustomCss(): void
     {
         wp_enqueue_global_styles_custom_css();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpShouldLoadBlockEditorScriptsAndStyles(): bool
     {
         return wp_should_load_block_editor_scripts_and_styles();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpShouldLoadSeparateCoreBlockAssets(): bool
     {
         return wp_should_load_separate_core_block_assets();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueRegisteredBlockScriptsAndStyles(): void
     {
         wp_enqueue_registered_block_scripts_and_styles();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function enqueueBlockStylesAssets(): void
     {
         enqueue_block_styles_assets();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function enqueueEditorBlockStylesAssets(): void
     {
         enqueue_editor_block_styles_assets();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueEditorBlockDirectoryAssets(): void
     {
         wp_enqueue_editor_block_directory_assets();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueEditorFormatLibraryAssets(): void
     {
         wp_enqueue_editor_format_library_assets();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSanitizeScriptAttributes(array $attributes): string
     {
         return wp_sanitize_script_attributes($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetScriptTag(array $attributes): string
     {
         return wp_get_script_tag($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrintScriptTag(array $attributes): void
     {
         wp_print_script_tag($attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetInlineScriptTag(string $data, array $attributes = []): string
     {
         return wp_get_inline_script_tag($data, $attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpPrintInlineScriptTag(string $data, array $attributes = []): void
     {
         wp_print_inline_script_tag($data, $attributes);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMaybeInlineStyles(): void
     {
         wp_maybe_inline_styles();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueGlobalStylesCssCustomProperties(): void
     {
         wp_enqueue_global_styles_css_custom_properties();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueBlockSupportStyles(string $style, int $priority = 10): void
     {
         wp_enqueue_block_support_styles($style, $priority);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueStoredStyles(array $options = []): void
     {
         wp_enqueue_stored_styles($options);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueBlockStyle(string $blockName, array $args): void
     {
         wp_enqueue_block_style($blockName, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueClassicThemeStyles(): void
     {
         wp_enqueue_classic_theme_styles();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAddEditorClassicThemeStyles(array $editorSettings): array
     {
         return wp_add_editor_classic_theme_styles($editorSettings);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpScriptModules(): \WP_Script_Modules
     {
         return wp_script_modules();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRegisterScriptModule(string $id, string $src, array $deps = [], string|false|null $version = false): void
     {
         wp_register_script_module($id, $src, $deps, $version);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpEnqueueScriptModule(string $id, string $src = '', array $deps = [], string|false|null $version = false): void
     {
         wp_enqueue_script_module($id, $src, $deps, $version);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDequeueScriptModule(string $id): void
     {
         wp_dequeue_script_module($id);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeregisterScriptModule(string $id): void
     {
         wp_deregister_script_module($id);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addShortcode(string $tag, callable $callback): void
     {
         add_shortcode($tag, $callback);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeShortcode(string $tag): void
     {
         remove_shortcode($tag);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeAllShortcodes(): void
     {
         remove_all_shortcodes();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function shortcodeExists(string $tag): bool
     {
         return shortcode_exists($tag);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasShortcode(string $content, string $tag): bool
     {
         return has_shortcode($content, $tag);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getShortcodeTagsInContent(string $content): array
     {
         return get_shortcode_tags_in_content($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function applyShortcodes(string $content, bool $ignoreHtml = false): string
     {
         return apply_shortcodes($content, $ignoreHtml);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doShortcode(string $content, bool $ignoreHtml = false): string
     {
         return do_shortcode($content, $ignoreHtml);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getShortcodeRegex(array $tagnames = null): string
     {
         return get_shortcode_regex($tagnames);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doShortcodesInHtmlTags(string $content, bool $ignoreHtml, array $tagnames): string
     {
         return do_shortcodes_in_html_tags($content, $ignoreHtml, $tagnames);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function unescapeInvalidShortcodes(string $content): string
     {
         return unescape_invalid_shortcodes($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getShortcodeAttsRegex(): string
     {
         return get_shortcode_atts_regex();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function shortcodeParseAtts(string $text): array
     {
         return shortcode_parse_atts($text);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function shortcodeAtts(array $pairs, array $atts, string $shortcode = ''): array
     {
         return shortcode_atts($pairs, $atts, $shortcode);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function stripShortcodes(string $content): string
     {
         return strip_shortcodes($content);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function stripShortcodeTag(array $m): string|false
     {
         return strip_shortcode_tag($m);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSitemapsGetServer(): \WP_Sitemaps
     {
         return wp_sitemaps_get_server();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetSitemapProviders(): array
     {
         return wp_get_sitemap_providers();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRegisterSitemapProvider(string $name, \WP_Sitemaps_Provider $provider): bool
     {
         return wp_register_sitemap_provider($name, $provider);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSitemapsGetMaxUrls(string $objectType): int
     {
         return wp_sitemaps_get_max_urls($objectType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSitemapUrl(string $name, string $subtypeName = '', int $page = 1): string|false
     {
         return get_sitemap_url($name, $subtypeName, $page);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpStyleEngineGetStyles(array $blockStyles, array $options = []): array
     {
         return wp_style_engine_get_styles($blockStyles, $options);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpStyleEngineGetStylesheetFromCssRules(array $cssRules, array $options = []): string
     {
         return wp_style_engine_get_stylesheet_from_css_rules($cssRules, $options);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpStyleEngineGetStylesheetFromContext(string $context, array $options = []): string
     {
         return wp_style_engine_get_stylesheet_from_context($context, $options);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function createInitialTaxonomies(): void
     {
         create_initial_taxonomies();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTaxonomies(array $args = [], string $output = 'names', string $operator = 'and'): array
     {
         return get_taxonomies($args, $output, $operator);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getObjectTaxonomies(string|array|\WP_Post $objectType, string $output = 'names'): array
     {
         return get_object_taxonomies($objectType, $output);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTaxonomy(string $taxonomy): \WP_Taxonomy|false
     {
         return get_taxonomy($taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function taxonomyExists(string $taxonomy): bool
     {
         return taxonomy_exists($taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isTaxonomyHierarchical(string $taxonomy): bool
     {
         return is_taxonomy_hierarchical($taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerTaxonomy(string $taxonomy, array|string $objectType, array|string $args = []): \WP_Taxonomy|\WP_Error
     {
         return register_taxonomy($taxonomy, $objectType, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function unregisterTaxonomy(string $taxonomy): true|\WP_Error
     {
         return unregister_taxonomy($taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTaxonomyLabels(\WP_Taxonomy $tax): object
     {
         return get_taxonomy_labels($tax);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerTaxonomyForObjectType(string $taxonomy, string $objectType): bool
     {
         return register_taxonomy_for_object_type($taxonomy, $objectType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function unregisterTaxonomyForObjectType(string $taxonomy, string $objectType): bool
     {
         return unregister_taxonomy_for_object_type($taxonomy, $objectType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getObjectsInTerm(int|array $termIds, string|array $taxonomies, array|string $args = []): array|\WP_Error
     {
         return get_objects_in_term($termIds, $taxonomies, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTaxSql(array $taxQuery, string $primaryTable, string $primaryIdColumn): array
     {
         return get_tax_sql($taxQuery, $primaryTable, $primaryIdColumn);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTerm(int|object $term, string $taxonomy = '', string $output = OBJECT, string $filter = 'raw'): \WP_Term|array|\WP_Error|null
     {
         return get_term($term, $taxonomy, $output, $filter);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTermBy(string $field, string|int $value, string $taxonomy = '', string $output = OBJECT, string $filter = 'raw'): \WP_Term|array|false
     {
         return get_term_by($field, $value, $taxonomy, $output, $filter);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTermChildren(int $termId, string $taxonomy): array|\WP_Error
     {
         return get_term_children($termId, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTermField(string $field, int|\WP_Term $term, string $taxonomy = '', string $context = 'display'): string|int|null|\WP_Error
     {
         return get_term_field($field, $term, $taxonomy, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTermToEdit(int|object $id, string $taxonomy): string|int|null|\WP_Error
     {
         return get_term_to_edit($id, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTerms(array|string $args = [], array|string $deprecated = ''): array|string|\WP_Error
     {
         return get_terms($args, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addTermMeta(int $termId, string $metaKey, mixed $metaValue, bool $unique = false): int|false|\WP_Error
     {
         return add_term_meta($termId, $metaKey, $metaValue, $unique);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deleteTermMeta(int $termId, string $metaKey, mixed $metaValue = ''): bool
     {
         return delete_term_meta($termId, $metaKey, $metaValue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTermMeta(int $termId, string $key = '', bool $single = false): mixed
     {
         return get_term_meta($termId, $key, $single);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateTermMeta(int $termId, string $metaKey, mixed $metaValue, mixed $prevValue = ''): int|bool|\WP_Error
     {
         return update_term_meta($termId, $metaKey, $metaValue, $prevValue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateTermmetaCache(array $termIds): array|false
     {
         return update_termmeta_cache($termIds);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpLazyloadTermMeta(array $termIds): void
     {
         wp_lazyload_term_meta($termIds);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasTermMeta(int $termId): array|false
     {
         return has_term_meta($termId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerTermMeta(string $taxonomy, string $metaKey, array $args): bool
     {
         return register_term_meta($taxonomy, $metaKey, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function unregisterTermMeta(string $taxonomy, string $metaKey): bool
     {
         return unregister_term_meta($taxonomy, $metaKey);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function termExists(int|string $term, string $taxonomy = '', int $parentTerm = null): mixed
     {
         return term_exists($term, $taxonomy, $parentTerm);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function termIsAncestorOf(int|object $term1, int|object $term2, string $taxonomy): bool
     {
         return term_is_ancestor_of($term1, $term2, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeTerm(array|object $term, string $taxonomy, string $context = 'display'): array|object
     {
         return sanitize_term($term, $taxonomy, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeTermField(string $field, string $value, int $termId, string $taxonomy, string $context): mixed
     {
         return sanitize_term_field($field, $value, $termId, $taxonomy, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCountTerms(array|string $args = [], array|string $deprecated = ''): string|\WP_Error
     {
         return wp_count_terms($args, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeleteObjectTermRelationships(int $objectId, string|array $taxonomies): void
     {
         wp_delete_object_term_relationships($objectId, $taxonomies);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeleteTerm(int $term, string $taxonomy, array|string $args = []): bool|int|\WP_Error
     {
         return wp_delete_term($term, $taxonomy, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeleteCategory(int $catId): bool|int|\WP_Error
     {
         return wp_delete_category($catId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetObjectTerms(int|array $objectIds, string|array $taxonomies, array|string $args = []): array|string|\WP_Error
     {
         return wp_get_object_terms($objectIds, $taxonomies, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInsertTerm(string $term, string $taxonomy, array|string $args = []): array|\WP_Error
     {
         return wp_insert_term($term, $taxonomy, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSetObjectTerms(int $objectId, string|int|array $terms, string $taxonomy, bool $append = false): array|\WP_Error
     {
         return wp_set_object_terms($objectId, $terms, $taxonomy, $append);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAddObjectTerms(int $objectId, string|int|array $terms, array|string $taxonomy): array|\WP_Error
     {
         return wp_add_object_terms($objectId, $terms, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRemoveObjectTerms(int $objectId, string|int|array $terms, string $taxonomy): bool|\WP_Error
     {
         return wp_remove_object_terms($objectId, $terms, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUniqueTermSlug(string $slug, object $term): string
     {
         return wp_unique_term_slug($slug, $term);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateTerm(int $termId, string $taxonomy, array $args = []): array|\WP_Error
     {
         return wp_update_term($termId, $taxonomy, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeferTermCounting(bool $defer = null): bool
     {
         return wp_defer_term_counting($defer);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateTermCount(int|array $terms, string $taxonomy, bool $doDeferred = false): bool
     {
         return wp_update_term_count($terms, $taxonomy, $doDeferred);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateTermCountNow(array $terms, string $taxonomy): true
     {
         return wp_update_term_count_now($terms, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function cleanObjectTermCache(int|array $objectIds, array|string $objectType): void
     {
         clean_object_term_cache($objectIds, $objectType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function cleanTermCache(int|array $ids, string $taxonomy = '', bool $cleanTaxonomy = true): void
     {
         clean_term_cache($ids, $taxonomy, $cleanTaxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function cleanTaxonomyCache(string $taxonomy): void
     {
         clean_taxonomy_cache($taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getObjectTermCache(int $id, string $taxonomy): bool|array|\WP_Error
     {
         return get_object_term_cache($id, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateObjectTermCache(string|array $objectIds, string|array $objectType): mixed
     {
         return update_object_term_cache($objectIds, $objectType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateTermCache(array $terms, string $taxonomy = ''): void
     {
         update_term_cache($terms, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetSplitTerms(int $oldTermId): array
     {
         return wp_get_split_terms($oldTermId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetSplitTerm(int $oldTermId, string $taxonomy): int|false
     {
         return wp_get_split_term($oldTermId, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpTermIsShared(int $termId): bool
     {
         return wp_term_is_shared($termId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTermLink(\WP_Term|int|string $term, string $taxonomy = ''): string|\WP_Error
     {
         return get_term_link($term, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theTaxonomies(array $args = []): void
     {
         the_taxonomies($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTheTaxonomies(int|\WP_Post $post = 0, array $args = []): array
     {
         return get_the_taxonomies($post, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostTaxonomies(int|\WP_Post $post = 0): array
     {
         return get_post_taxonomies($post);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isObjectInTerm(int $objectId, string $taxonomy, int|string|array $terms = null): bool|\WP_Error
     {
         return is_object_in_term($objectId, $taxonomy, $terms);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isObjectInTaxonomy(string $objectType, string $taxonomy): bool
     {
         return is_object_in_taxonomy($objectType, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAncestors(int $objectId = 0, string $objectType = '', string $resourceType = ''): array
     {
         return get_ancestors($objectId, $objectType, $resourceType);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetTermTaxonomyParentId(int $termId, string $taxonomy): int|false
     {
         return wp_get_term_taxonomy_parent_id($termId, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCheckTermHierarchyForLoops(int $parentTerm, int $termId, string $taxonomy): int
     {
         return wp_check_term_hierarchy_for_loops($parentTerm, $termId, $taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isTaxonomyViewable(string|\WP_Taxonomy $taxonomy): bool
     {
         return is_taxonomy_viewable($taxonomy);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isTermPubliclyViewable(int|\WP_Term $term): bool
     {
         return is_term_publicly_viewable($term);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheSetTermsLastChanged(): void
     {
         wp_cache_set_terms_last_changed();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCheckTermMetaSupportPrefilter(mixed $check): mixed
     {
         return wp_check_term_meta_support_prefilter($check);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getQueryTemplate(string $type, array $templates = []): string
     {
         return get_query_template($type, $templates);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getIndexTemplate(): string
     {
         return get_index_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function get404Template(): string
     {
         return get_404_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getArchiveTemplate(): string
     {
         return get_archive_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPostTypeArchiveTemplate(): string
     {
         return get_post_type_archive_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAuthorTemplate(): string
     {
         return get_author_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCategoryTemplate(): string
     {
         return get_category_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTagTemplate(): string
     {
         return get_tag_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTaxonomyTemplate(): string
     {
         return get_taxonomy_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getDateTemplate(): string
     {
         return get_date_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getHomeTemplate(): string
     {
         return get_home_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getFrontPageTemplate(): string
     {
         return get_front_page_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPrivacyPolicyTemplate(): string
     {
         return get_privacy_policy_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPageTemplate(): string
     {
         return get_page_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSearchTemplate(): string
     {
         return get_search_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSingleTemplate(): string
     {
         return get_single_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getEmbedTemplate(): string
     {
         return get_embed_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getSingularTemplate(): string
     {
         return get_singular_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getAttachmentTemplate(): string
     {
         return get_attachment_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSetTemplateGlobals(): void
     {
         wp_set_template_globals();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function locateTemplate(string|array $templateNames, bool $load = false, bool $loadOnce = true, array $args = []): string
     {
         return locate_template($templateNames, $load, $loadOnce, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function loadTemplate(string $templateFile, bool $loadOnce = true, array $args = []): void
     {
         load_template($templateFile, $loadOnce, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetThemePreviewPath(string $currentStylesheet = null): string
     {
         return wp_get_theme_preview_path($currentStylesheet);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAttachThemePreviewMiddleware(): void
     {
         wp_attach_theme_preview_middleware();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInitializeThemePreviewHooks(): void
     {
         wp_initialize_theme_preview_hooks();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSetUniqueSlugOnCreateTemplatePart(int $postId): void
     {
         wp_set_unique_slug_on_create_template_part($postId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetThemes(array $args = []): array
     {
         return wp_get_themes($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetTheme(string $stylesheet = '', string $themeRoot = ''): \WP_Theme
     {
         return wp_get_theme($stylesheet, $themeRoot);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCleanThemesCache(bool $clearUpdateCache = true): void
     {
         wp_clean_themes_cache($clearUpdateCache);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isChildTheme(): bool
     {
         return is_child_theme();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getStylesheet(): string
     {
         return get_stylesheet();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getStylesheetDirectory(): string
     {
         return get_stylesheet_directory();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getStylesheetDirectoryUri(): string
     {
         return get_stylesheet_directory_uri();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getStylesheetUri(): string
     {
         return get_stylesheet_uri();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getLocaleStylesheetUri(): string
     {
         return get_locale_stylesheet_uri();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTemplate(): string
     {
         return get_template();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTemplateDirectory(): string
     {
         return get_template_directory();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getTemplateDirectoryUri(): string
     {
         return get_template_directory_uri();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThemeRoots(): array|string
     {
         return get_theme_roots();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerThemeDirectory(string $directory): bool
     {
         return register_theme_directory($directory);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function searchThemeDirectories(bool $force = false): array|false
     {
         return search_theme_directories($force);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThemeRoot(string $stylesheetOrTemplate = ''): string
     {
         return get_theme_root($stylesheetOrTemplate);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThemeRootUri(string $stylesheetOrTemplate = '', string $themeRoot = ''): string
     {
         return get_theme_root_uri($stylesheetOrTemplate, $themeRoot);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getRawThemeRoot(string $stylesheetOrTemplate, bool $skipCache = false): string
     {
         return get_raw_theme_root($stylesheetOrTemplate, $skipCache);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function localeStylesheet(): void
     {
         locale_stylesheet();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function switchTheme(string $stylesheet): void
     {
         switch_theme($stylesheet);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function validateCurrentTheme(): bool
     {
         return validate_current_theme();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function validateThemeRequirements(string $stylesheet): true|\WP_Error
     {
         return validate_theme_requirements($stylesheet);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThemeMods(): array
     {
         return get_theme_mods();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThemeMod(string $name, mixed $defaultValue = false): mixed
     {
         return get_theme_mod($name, $defaultValue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function setThemeMod(string $name, mixed $value): bool
     {
         return set_theme_mod($name, $value);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeThemeMod(string $name): void
     {
         remove_theme_mod($name);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeThemeMods(): void
     {
         remove_theme_mods();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getHeaderTextcolor(): string
     {
         return get_header_textcolor();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function headerTextcolor(): void
     {
         header_textcolor();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function displayHeaderText(): bool
     {
         return display_header_text();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasHeaderImage(): bool
     {
         return has_header_image();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getHeaderImage(): string|false
     {
         return get_header_image();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getHeaderImageTag(array $attr = []): string
     {
         return get_header_image_tag($attr);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theHeaderImageTag(array $attr = []): void
     {
         the_header_image_tag($attr);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getRandomHeaderImage(): string
     {
         return get_random_header_image();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isRandomHeaderImage(string $type = 'any'): bool
     {
         return is_random_header_image($type);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function headerImage(): void
     {
         header_image();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getUploadedHeaderImages(): array
     {
         return get_uploaded_header_images();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCustomHeader(): object
     {
         return get_custom_header();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerDefaultHeaders(array $headers): void
     {
         register_default_headers($headers);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function unregisterDefaultHeaders(string|array $header): mixed
     {
         return unregister_default_headers($header);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasHeaderVideo(): bool
     {
         return has_header_video();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getHeaderVideoUrl(): string|false
     {
         return get_header_video_url();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theHeaderVideoUrl(): void
     {
         the_header_video_url();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getHeaderVideoSettings(): array
     {
         return get_header_video_settings();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function hasCustomHeader(): bool
     {
         return has_custom_header();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isHeaderVideoActive(): bool
     {
         return is_header_video_active();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCustomHeaderMarkup(): string
     {
         return get_custom_header_markup();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theCustomHeaderMarkup(): void
     {
         the_custom_header_markup();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBackgroundImage(): string
     {
         return get_background_image();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function backgroundImage(): void
     {
         background_image();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBackgroundColor(): string
     {
         return get_background_color();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function backgroundColor(): void
     {
         background_color();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCustomCssCb(): void
     {
         wp_custom_css_cb();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetCustomCssPost(string $stylesheet = ''): \WP_Post|null
     {
         return wp_get_custom_css_post($stylesheet);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetCustomCss(string $stylesheet = ''): string
     {
         return wp_get_custom_css($stylesheet);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateCustomCssPost(string $css, array $args = []): \WP_Post|\WP_Error
     {
         return wp_update_custom_css_post($css, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addEditorStyle(array|string $stylesheet = 'editor-style.css'): void
     {
         add_editor_style($stylesheet);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeEditorStyles(): bool
     {
         return remove_editor_styles();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getEditorStylesheets(): array
     {
         return get_editor_stylesheets();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThemeStarterContent(): array
     {
         return get_theme_starter_content();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addThemeSupport(string $feature): mixed
     {
         return add_theme_support($feature);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getThemeSupport(string $feature): mixed
     {
         return get_theme_support($feature);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function removeThemeSupport(string $feature): mixed
     {
         return remove_theme_support($feature);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function currentThemeSupports(string $feature): bool
     {
         return current_theme_supports($feature);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function requireIfThemeSupports(string $feature, string $file): bool
     {
         return require_if_theme_supports($feature, $file);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerThemeFeature(string $feature, array $args = []): true|\WP_Error
     {
         return register_theme_feature($feature, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getRegisteredThemeFeatures(): array
     {
         return get_registered_theme_features();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getRegisteredThemeFeature(string $feature): array|null
     {
         return get_registered_theme_feature($feature);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function checkThemeSwitched(): void
     {
         check_theme_switched();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCustomizeUrl(string $stylesheet = ''): string
     {
         return wp_customize_url($stylesheet);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCustomizeSupportScript(): void
     {
         wp_customize_support_script();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isCustomizePreview(): bool
     {
         return is_customize_preview();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function createInitialThemeFeatures(): void
     {
         create_initial_theme_features();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsBlockTheme(): bool
     {
         return wp_is_block_theme();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpThemeGetElementClassName(string $element): string
     {
         return wp_theme_get_element_class_name($element);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpVersionCheck(array $extraStats = [], bool $forceCheck = false): void
     {
         wp_version_check($extraStats, $forceCheck);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdatePlugins(array $extraStats = []): void
     {
         wp_update_plugins($extraStats);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateThemes(array $extraStats = []): void
     {
         wp_update_themes($extraStats);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMaybeAutoUpdate(): void
     {
         wp_maybe_auto_update();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetTranslationUpdates(): array
     {
         return wp_get_translation_updates();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetUpdateData(): array
     {
         return wp_get_update_data();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpScheduleUpdateChecks(): void
     {
         wp_schedule_update_checks();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCleanUpdateCache(): void
     {
         wp_clean_update_cache();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDeleteAllTempBackups(): void
     {
         wp_delete_all_temp_backups();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSignon(array $credentials = [], string|bool $secureCookie = ''): \WP_User|\WP_Error
     {
         return wp_signon($credentials, $secureCookie);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAuthenticateUsernamePassword(\WP_User|\WP_Error|null $user, string $username, string $password): \WP_User|\WP_Error
     {
         return wp_authenticate_username_password($user, $username, $password);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAuthenticateEmailPassword(\WP_User|\WP_Error|null $user, string $email, string $password): \WP_User|\WP_Error
     {
         return wp_authenticate_email_password($user, $email, $password);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAuthenticateCookie(\WP_User|\WP_Error|null $user, string $username, string $password): \WP_User|\WP_Error
     {
         return wp_authenticate_cookie($user, $username, $password);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAuthenticateApplicationPassword(\WP_User|\WP_Error|null $inputUser, string $username, string $password): \WP_User|\WP_Error|null
     {
         return wp_authenticate_application_password($inputUser, $username, $password);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpValidateApplicationPassword(int|false $inputUser): int|false
     {
         return wp_validate_application_password($inputUser);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAuthenticateSpamCheck(\WP_User|\WP_Error|null $user): \WP_User|\WP_Error
     {
         return wp_authenticate_spam_check($user);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpValidateLoggedInCookie(int|false $userId): int|false
     {
         return wp_validate_logged_in_cookie($userId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function countUserPosts(int $userid, array|string $postType = 'post', bool $publicOnly = false): string
     {
         return count_user_posts($userid, $postType, $publicOnly);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function countManyUsersPosts(array $users, string|array $postType = 'post', bool $publicOnly = false): array
     {
         return count_many_users_posts($users, $postType, $publicOnly);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getCurrentUserId(): int
     {
         return get_current_user_id();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getUserOption(string $option, int $user = 0, string $deprecated = ''): mixed
     {
         return get_user_option($option, $user, $deprecated);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateUserOption(int $userId, string $optionName, mixed $newvalue, bool $isGlobal = false): int|bool
     {
         return update_user_option($userId, $optionName, $newvalue, $isGlobal);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deleteUserOption(int $userId, string $optionName, bool $isGlobal = false): bool
     {
         return delete_user_option($userId, $optionName, $isGlobal);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getUsers(array $args = []): array
     {
         return get_users($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpListUsers(string|array $args = []): string|null
     {
         return wp_list_users($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getBlogsOfUser(int $userId, bool $all = false): array
     {
         return get_blogs_of_user($userId, $all);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isUserMemberOfBlog(int $userId = 0, int $blogId = 0): bool
     {
         return is_user_member_of_blog($userId, $blogId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function addUserMeta(int $userId, string $metaKey, mixed $metaValue, bool $unique = false): int|false
     {
         return add_user_meta($userId, $metaKey, $metaValue, $unique);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function deleteUserMeta(int $userId, string $metaKey, mixed $metaValue = ''): bool
     {
         return delete_user_meta($userId, $metaKey, $metaValue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getUserMeta(int $userId, string $key = '', bool $single = false): mixed
     {
         return get_user_meta($userId, $key, $single);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateUserMeta(int $userId, string $metaKey, mixed $metaValue, mixed $prevValue = ''): int|bool
     {
         return update_user_meta($userId, $metaKey, $metaValue, $prevValue);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function countUsers(string $strategy = 'time', int|null $siteId = null): array
     {
         return count_users($strategy, $siteId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getUserCount(int|null $networkId = null): int
     {
         return get_user_count($networkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMaybeUpdateUserCounts(int|null $networkId = null): bool
     {
         return wp_maybe_update_user_counts($networkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateUserCounts(int|null $networkId = null): bool
     {
         return wp_update_user_counts($networkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpScheduleUpdateUserCounts(): void
     {
         wp_schedule_update_user_counts();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsLargeUserCount(int|null $networkId = null): bool
     {
         return wp_is_large_user_count($networkId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function setupUserdata(int $forUserId = 0): void
     {
         setup_userdata($forUserId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDropdownUsers(array|string $args = ''): string
     {
         return wp_dropdown_users($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sanitizeUserField(string $field, mixed $value, int $userId, string $context): mixed
     {
         return sanitize_user_field($field, $value, $userId, $context);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function updateUserCaches(object $user): mixed
     {
         return update_user_caches($user);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function cleanUserCache(\WP_User|int $user): void
     {
         clean_user_cache($user);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function usernameExists(string $username): int|false
     {
         return username_exists($username);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function emailExists(string $email): int|false
     {
         return email_exists($email);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function validateUsername(string $username): bool
     {
         return validate_username($username);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpInsertUser(array|object $userdata): int|\WP_Error
     {
         return wp_insert_user($userdata);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUpdateUser(array|object $userdata): int|\WP_Error
     {
         return wp_update_user($userdata);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCreateUser(string $username, string $password, string $email = ''): int|\WP_Error
     {
         return wp_create_user($username, $password, $email);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetUserContactMethods(\WP_User|null $user = null): array
     {
         return wp_get_user_contact_methods($user);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetPasswordHint(): string
     {
         return wp_get_password_hint();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function getPasswordResetKey(\WP_User $user): string|\WP_Error
     {
         return get_password_reset_key($user);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function checkPasswordResetKey(string $key, string $login): \WP_User|\WP_Error
     {
         return check_password_reset_key($key, $login);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function retrievePassword(string $userLogin = null): true|\WP_Error
     {
         return retrieve_password($userLogin);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function resetPassword(\WP_User $user, string $newPass): void
     {
         reset_password($user, $newPass);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerNewUser(string $userLogin, string $userEmail): int|\WP_Error
     {
         return register_new_user($userLogin, $userEmail);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSendNewUserNotifications(int $userId, string $notify = 'both'): void
     {
         wp_send_new_user_notifications($userId, $notify);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetSessionToken(): string
     {
         return wp_get_session_token();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetAllSessions(): array
     {
         return wp_get_all_sessions();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDestroyCurrentSession(): void
     {
         wp_destroy_current_session();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDestroyOtherSessions(): void
     {
         wp_destroy_other_sessions();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpDestroyAllSessions(): void
     {
         wp_destroy_all_sessions();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetUsersWithNoRole(int|null $siteId = null): array
     {
         return wp_get_users_with_no_role($siteId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function sendConfirmationOnProfileEmail(): void
     {
         send_confirmation_on_profile_email();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function newUserEmailAdminNotice(): void
     {
         new_user_email_admin_notice();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRegisterUserPersonalDataExporter(array $exporters): array
     {
         return wp_register_user_personal_data_exporter($exporters);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUserPersonalDataExporter(string $emailAddress): array
     {
         return wp_user_personal_data_exporter($emailAddress);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCreateUserRequest(string $emailAddress = '', string $actionName = '', array $requestData = [], string $status = 'pending'): int|\WP_Error
     {
         return wp_create_user_request($emailAddress, $actionName, $requestData, $status);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUserRequestActionDescription(string $actionName): string
     {
         return wp_user_request_action_description($actionName);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSendUserRequest(string $requestId): true|\WP_Error
     {
         return wp_send_user_request($requestId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGenerateUserRequestKey(int $requestId): string
     {
         return wp_generate_user_request_key($requestId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpValidateUserRequestKey(string $requestId, string $key): true|\WP_Error
     {
         return wp_validate_user_request_key($requestId, $key);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetUserRequest(int $requestId): \WP_User_Request|false
     {
         return wp_get_user_request($requestId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsApplicationPasswordsSupported(): bool
     {
         return wp_is_application_passwords_supported();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsApplicationPasswordsAvailable(): bool
     {
         return wp_is_application_passwords_available();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsApplicationPasswordsAvailableForUser(int|\WP_User $user): bool
     {
         return wp_is_application_passwords_available_for_user($user);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpCacheSetUsersLastChanged(): void
     {
         wp_cache_set_users_last_changed();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsPasswordResetAllowedForUser(int|\WP_User $user): bool|\WP_Error
     {
         return wp_is_password_reset_allowed_for_user($user);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpIsMobile(): bool
     {
         return wp_is_mobile();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerWidget(string|\WP_Widget $widget): void
     {
         register_widget($widget);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function unregisterWidget(string|\WP_Widget $widget): void
     {
         unregister_widget($widget);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerSidebars(int $number = 1, array|string $args = []): void
     {
         register_sidebars($number, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function registerSidebar(array|string $args = []): string
     {
         return register_sidebar($args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function unregisterSidebar(string|int $sidebarId): void
     {
         unregister_sidebar($sidebarId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isRegisteredSidebar(string|int $sidebarId): bool
     {
         return is_registered_sidebar($sidebarId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRegisterSidebarWidget(int|string $id, string $name, callable $outputCallback, array $options = []): void
     {
         wp_register_sidebar_widget($id, $name, $outputCallback, $options);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpWidgetDescription(int|string $id): mixed
     {
         return wp_widget_description($id);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpSidebarDescription(string $id): mixed
     {
         return wp_sidebar_description($id);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUnregisterSidebarWidget(int|string $id): void
     {
         wp_unregister_sidebar_widget($id);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRegisterWidgetControl(int|string $id, string $name, callable $controlCallback, array $options = []): void
     {
         wp_register_widget_control($id, $name, $controlCallback, $options);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUnregisterWidgetControl(int|string $id): void
     {
         wp_unregister_widget_control($id);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function dynamicSidebar(int|string $index = 1): bool
     {
         return dynamic_sidebar($index);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isActiveWidget(callable|false $callback = false, string|false $widgetId = false, string|false $idBase = false, bool $skipInactive = true): string|false
     {
         return is_active_widget($callback, $widgetId, $idBase, $skipInactive);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isDynamicSidebar(): bool
     {
         return is_dynamic_sidebar();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function isActiveSidebar(string|int $index): bool
     {
         return is_active_sidebar($index);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpGetSidebar(string $id): array|null
     {
         return wp_get_sidebar($id);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpConvertWidgetSettings(string $baseName, string $optionName, array $settings): array
     {
         return wp_convert_widget_settings($baseName, $optionName, $settings);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function theWidget(string $widget, array $instance = [], array $args = []): void
     {
         the_widget($widget, $instance, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function retrieveWidgets(string|bool $themeChanged = false): array
     {
         return retrieve_widgets($themeChanged);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpMapSidebarsWidgets(array $existingSidebarsWidgets): array
     {
         return wp_map_sidebars_widgets($existingSidebarsWidgets);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpWidgetRssOutput(string|array|object $rss, array $args = []): void
     {
         wp_widget_rss_output($rss, $args);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpWidgetRssForm(array|string $args, array $inputs = null): void
     {
         wp_widget_rss_form($args, $inputs);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpWidgetRssProcess(array $widgetRss, bool $checkFeed = true): array
     {
         return wp_widget_rss_process($widgetRss, $checkFeed);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpWidgetsInit(): void
     {
         wp_widgets_init();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpUseWidgetsBlockEditor(): bool
     {
         return wp_use_widgets_block_editor();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpParseWidgetId(string $id): array
     {
         return wp_parse_widget_id($id);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpFindWidgetsSidebar(string $widgetId): string|null
     {
         return wp_find_widgets_sidebar($widgetId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpAssignWidgetToSidebar(string $widgetId, string $sidebarId): void
     {
         wp_assign_widget_to_sidebar($widgetId, $sidebarId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRenderWidget(string $widgetId, string $sidebarId): string
     {
         return wp_render_widget($widgetId, $sidebarId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpRenderWidgetControl(string $id): string|null
     {
         return wp_render_widget_control($id);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function loginHeader(string|null $title = null, string $message = '', \WP_Error|null $wpError = null): void
     {
         login_header($title, $message, $wpError);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function loginFooter(string $inputId = ''): void
     {
         login_footer($inputId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpShakeJs(): void
     {
         wp_shake_js();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpLoginViewportMeta(): void
     {
         wp_login_viewport_meta();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function doSignupHeader(): void
     {
         do_signup_header();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function wpmuSignupStylesheet(): void
     {
         wpmu_signup_stylesheet();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function showBlogForm(string $blogname = '', string $blogTitle = '', \WP_Error|string $errors = ''): void
     {
         show_blog_form($blogname, $blogTitle, $errors);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function validateBlogForm(): array
     {
         return validate_blog_form();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function showUserForm(string $userName = '', string $userEmail = '', \WP_Error|string $errors = ''): void
     {
         show_user_form($userName, $userEmail, $errors);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function validateUserForm(): array
     {
         return validate_user_form();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function signupAnotherBlog(string $blogname = '', string $blogTitle = '', \WP_Error|string $errors = ''): void
     {
         signup_another_blog($blogname, $blogTitle, $errors);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function validateAnotherBlogSignup(): null|bool
     {
         return validate_another_blog_signup();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function confirmAnotherBlogSignup(string $domain, string $path, string $blogTitle, string $userName, string $userEmail = '', array $meta = [], int $blogId = 0): void
     {
         confirm_another_blog_signup($domain, $path, $blogTitle, $userName, $userEmail, $meta, $blogId);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function signupUser(string $userName = '', string $userEmail = '', \WP_Error|string $errors = ''): void
     {
         signup_user($userName, $userEmail, $errors);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function validateUserSignup(): bool
     {
         return validate_user_signup();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function confirmUserSignup(string $userName, string $userEmail): void
     {
         confirm_user_signup($userName, $userEmail);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function signupBlog(string $userName = '', string $userEmail = '', string $blogname = '', string $blogTitle = '', \WP_Error|string $errors = ''): void
     {
         signup_blog($userName, $userEmail, $blogname, $blogTitle, $errors);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function validateBlogSignup(): bool
     {
         return validate_blog_signup();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function confirmBlogSignup(string $domain, string $path, string $blogTitle, string $userName = '', string $userEmail = '', array $meta = []): void
     {
         confirm_blog_signup($domain, $path, $blogTitle, $userName, $userEmail, $meta);
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function signupGetAvailableLanguages(): array
     {
         return signup_get_available_languages();
     }
 
-/**
- * @inheritDoc
- */
+    /**
+     * @inheritDoc
+     */
     public function trackbackResponse(int|bool $error = 0, string $errorMessage = ''): void
     {
         trackback_response($error, $errorMessage);

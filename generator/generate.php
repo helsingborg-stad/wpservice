@@ -104,7 +104,7 @@ foreach ($result->getStubStmts() as $stmt) {
 
 $functions_ = array_filter($functions_, fn($stmt) => get_class($stmt) === Function_::class);
 
-/**
+/*
  * Parameter decorators
  */
 $parameterDecorators = [
@@ -138,7 +138,7 @@ $contracts                  = array_map(fn($function) => CreateInterfaceFileFrom
     $functionToDefinitionString->functionToString($function)
 ), $allFunctions);
 
-/**
+/*
  * Create a contract file for each function
  */
 foreach ($contracts as $contract) {
@@ -148,7 +148,7 @@ foreach ($contracts as $contract) {
     echo "Created contract file: {$contractFileName}\n";
 }
 
-/**
+/*
  * Create a service contract file
  */
 $serviceContract         = CreateInterfaceFileThatExtendsOtherInterfaces::create('WpService', $contracts, 'WpService');
@@ -156,7 +156,7 @@ $serviceContractFileName = $serviceContract->getFileName();
 file_put_contents("{$libPath}/{$serviceContractFileName}", $serviceContract->__toString());
 echo "Created contract file: {$serviceContractFileName}\n";
 
-/**
+/*
  * Create a service class file
  */
 $functionToString                   = new FunctionToString();
@@ -169,7 +169,7 @@ $nativeServiceClassPath             = "{$libPath}/Implementations/{$nativeServic
 file_put_contents($nativeServiceClassPath, $nativeServiceClass->__toString());
 echo "Created service class file: {$nativeServiceClassFileName}\n";
 
-/**
+/*
  * Create a service decorator class file
  */
 $functionsWithDecoratorBody            = array_map(fn($function) => new FunctionWithDecoratorFunctionBody($function), $allFunctions);
@@ -181,7 +181,7 @@ $decoratorServiceClassPath             = "{$libPath}/Implementations/{$decorator
 file_put_contents($decoratorServiceClassPath, $decoratorServiceClass->__toString());
 echo "Created service class file: {$decoratorServiceClassFileName}\n";
 
-/**
+/*
  * Create a lazy service decorator class file
  */
 $lazyDecoratorServiceClass         = CreateLazyDecoratorClassFile::create('WpServiceLazyDecorator', 'WpService\Implementations', ['\WpService\WpService'], $functionsWithDecoratorBodiesAsStrings);
@@ -191,7 +191,7 @@ $lazyDecoratorServiceClassPath     = "{$libPath}/Implementations/{$lazyDecorator
 file_put_contents($lazyDecoratorServiceClassPath, $lazyDecoratorServiceClass->__toString());
 echo "Created service class file: {$lazyDecoratorServiceClassFileName}\n";
 
-/**
+/*
  * Create a fake service decorator class file
  */
 $functionsWithFakeBody            = array_map(fn($function) => new FunctionWithFakeFunctionBody($function), $allFunctions);
