@@ -16,7 +16,9 @@ class FunctionToString implements FunctionToStringInterface
     {
         $parameters = $this->getParametersString($function);
         return <<<PHP
-        {$function->getDocBlock()}
+        /**
+         * @inheritDoc
+         */
         public function {$function->getName()}({$parameters}): {$function->getReturnType()}
         {
             {$function->getFunctionBody()}
