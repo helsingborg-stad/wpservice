@@ -14,5 +14,5 @@ interface PrintLateStyles
  *
  * @return array|void
  */
-    public function printLateStyles(): array;
+    public function printLateStyles(): mixed;
 }

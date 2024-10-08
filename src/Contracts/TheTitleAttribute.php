@@ -26,5 +26,5 @@ interface TheTitleAttribute
  * }
  * @return void|string Void if 'echo' argument is true, the title attribute if 'echo' is false.
  */
-    public function theTitleAttribute(string|array $args = ''): string;
+    public function theTitleAttribute(string|array $args = ''): mixed;
 }

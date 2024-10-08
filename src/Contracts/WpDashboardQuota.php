@@ -13,5 +13,5 @@ interface WpDashboardQuota
  *
  * @return true|void True if not multisite, user can't upload files, or the space check option is disabled.
  */
-    public function wpDashboardQuota(): true;
+    public function wpDashboardQuota(): mixed;
 }

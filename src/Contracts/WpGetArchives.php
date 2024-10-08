@@ -44,5 +44,5 @@ interface WpGetArchives
  * }
  * @return void|string Void if 'echo' argument is true, archive links if 'echo' is false.
  */
-    public function wpGetArchives(string|array $args = ''): string;
+    public function wpGetArchives(string|array $args = ''): mixed;
 }

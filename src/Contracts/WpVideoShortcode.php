@@ -32,5 +32,5 @@ interface WpVideoShortcode
  * @param string $content Shortcode content.
  * @return string|void HTML content to display video.
  */
-    public function wpVideoShortcode(array $attr, string $content = ''): string;
+    public function wpVideoShortcode(array $attr, string $content = ''): mixed;
 }

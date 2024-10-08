@@ -29,5 +29,5 @@ interface WpTitle
  * @param string $seplocation Optional. Location of the separator (either 'left' or 'right').
  * @return string|void String when `$display` is false, nothing otherwise.
  */
-    public function wpTitle(string $sep = '&raquo;', bool $display = true, string $seplocation = ''): string;
+    public function wpTitle(string $sep = '&raquo;', bool $display = true, string $seplocation = ''): mixed;
 }

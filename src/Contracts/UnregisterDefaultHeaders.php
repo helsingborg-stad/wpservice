@@ -19,5 +19,5 @@ interface UnregisterDefaultHeaders
  * @return bool|void A single header returns true on success, false on failure.
  *                   There is currently no return value for multiple headers.
  */
-    public function unregisterDefaultHeaders(string|array $header): bool;
+    public function unregisterDefaultHeaders(string|array $header): mixed;
 }

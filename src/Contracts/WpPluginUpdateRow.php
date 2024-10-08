@@ -13,5 +13,5 @@ interface WpPluginUpdateRow
  * @param array $pluginData Plugin information.
  * @return void|false
  */
-    public function wpPluginUpdateRow(string $file, array $pluginData): false;
+    public function wpPluginUpdateRow(string $file, array $pluginData): mixed;
 }

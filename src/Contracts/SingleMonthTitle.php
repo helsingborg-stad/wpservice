@@ -20,5 +20,5 @@ interface SingleMonthTitle
  * @param bool $display Optional. Whether to display or retrieve title. Default true.
  * @return string|false|void False if there's no valid title for the month. Title when retrieving.
  */
-    public function singleMonthTitle(string $prefix = '', bool $display = true): string|false;
+    public function singleMonthTitle(string $prefix = '', bool $display = true): mixed;
 }

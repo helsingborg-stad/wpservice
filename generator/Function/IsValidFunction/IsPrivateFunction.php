@@ -44,6 +44,10 @@ class IsPrivateFunction implements IsValidFunctionInterface
             return true;
         }
 
+        if (str_contains($function->getDocBlock(), '@access private')) {
+            return false;
+        }
+
         return !str_starts_with($function->getOriginalName(), '_');
     }
 }

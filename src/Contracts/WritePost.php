@@ -11,5 +11,5 @@ interface WritePost
  *
  * @return int|void Post ID on success, void on failure.
  */
-    public function writePost(): int;
+    public function writePost(): mixed;
 }

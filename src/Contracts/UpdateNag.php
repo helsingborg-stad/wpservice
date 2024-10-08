@@ -12,5 +12,5 @@ interface UpdateNag
  * @global string $pagenow The filename of the current screen.
  * @return void|false
  */
-    public function updateNag(): false;
+    public function updateNag(): mixed;
 }

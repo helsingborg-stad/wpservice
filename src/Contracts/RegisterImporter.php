@@ -17,5 +17,5 @@ interface RegisterImporter
  * @param callable $callback    Callback to run.
  * @return void|\WP_Error Void on success. WP_Error when $callback is WP_Error.
  */
-    public function registerImporter(string $id, string $name, string $description, callable $callback): \WP_Error;
+    public function registerImporter(string $id, string $name, string $description, callable $callback): mixed;
 }

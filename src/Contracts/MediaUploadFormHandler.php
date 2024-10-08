@@ -11,5 +11,5 @@ interface MediaUploadFormHandler
  *
  * @return null|array|void Array of error messages keyed by attachment ID, null or void on success.
  */
-    public function mediaUploadFormHandler(): null|array;
+    public function mediaUploadFormHandler(): mixed;
 }

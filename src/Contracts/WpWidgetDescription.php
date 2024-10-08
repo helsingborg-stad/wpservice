@@ -18,5 +18,5 @@ interface WpWidgetDescription
  * @param int|string $id Widget ID.
  * @return string|void Widget description, if available.
  */
-    public function wpWidgetDescription(int|string $id): string;
+    public function wpWidgetDescription(int|string $id): mixed;
 }

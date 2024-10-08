@@ -16,5 +16,5 @@ interface GetNextPostsLink
  * @param int $maxPage Optional. Max pages. Default 0.
  * @return string|void HTML-formatted next posts page link.
  */
-    public function getNextPostsLink(string $label = null, int $maxPage = 0): string;
+    public function getNextPostsLink(string $label = null, int $maxPage = 0): mixed;
 }

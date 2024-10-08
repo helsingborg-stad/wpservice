@@ -27,5 +27,5 @@ interface TheDate
  * @param bool $display Optional. Whether to echo the date or return it. Default true.
  * @return string|void String if retrieving.
  */
-    public function theDate(string $format = '', string $before = '', string $after = '', bool $display = true): string;
+    public function theDate(string $format = '', string $before = '', string $after = '', bool $display = true): mixed;
 }

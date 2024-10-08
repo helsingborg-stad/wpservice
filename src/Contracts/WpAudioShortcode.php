@@ -25,5 +25,5 @@ interface WpAudioShortcode
  * @param string $content Shortcode content.
  * @return string|void HTML content to display audio.
  */
-    public function wpAudioShortcode(array $attr, string $content = ''): string;
+    public function wpAudioShortcode(array $attr, string $content = ''): mixed;
 }

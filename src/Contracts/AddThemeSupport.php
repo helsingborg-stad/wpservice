@@ -93,5 +93,5 @@ interface AddThemeSupport
  * @param mixed  ...$args Optional extra arguments to pass along with certain features.
  * @return void|false Void on success, false on failure.
  */
-    public function addThemeSupport(string $feature): false;
+    public function addThemeSupport(string $feature): mixed;
 }

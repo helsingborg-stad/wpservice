@@ -17,5 +17,5 @@ interface GetPreviousPostsPageLink
  *
  * @return string|void The link for the previous posts page.
  */
-    public function getPreviousPostsPageLink(): string;
+    public function getPreviousPostsPageLink(): mixed;
 }

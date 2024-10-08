@@ -12,5 +12,5 @@ interface GetEditCommentLink
  * @param int|\WP_Comment $commentId Optional. Comment ID or WP_Comment object.
  * @return string|void The edit comment link URL for the given comment.
  */
-    public function getEditCommentLink(int|\WP_Comment $commentId = 0): string;
+    public function getEditCommentLink(int|\WP_Comment $commentId = 0): mixed;
 }

@@ -21,5 +21,5 @@ interface UpdateObjectTermCache
  * @return void|false Void on success or if the `$object_ids` parameter is empty,
  *                    false if all of the terms in `$object_ids` are already cached.
  */
-    public function updateObjectTermCache(string|array $objectIds, string|array $objectType): false;
+    public function updateObjectTermCache(string|array $objectIds, string|array $objectType): mixed;
 }

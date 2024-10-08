@@ -23,5 +23,5 @@ interface WpCron
  *                        events needed to be spawned), false if spawning fails for one or more events or
  *                        void if the function registered _wp_cron() to run on the action.
  */
-    public function wpCron(): false|int;
+    public function wpCron(): mixed;
 }

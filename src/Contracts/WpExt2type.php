@@ -12,5 +12,5 @@ interface WpExt2type
  * @param string $ext The extension to search.
  * @return string|void The file type, example: audio, video, document, spreadsheet, etc.
  */
-    public function wpExt2type(string $ext): string;
+    public function wpExt2type(string $ext): mixed;
 }

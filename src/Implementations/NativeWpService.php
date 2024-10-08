@@ -1211,19 +1211,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Outputs the 'disabled' message for the WordPress Link Manager.
- *
- * @since 3.5.0
- * @access private
- *
- * @global string $pagenow The filename of the current screen.
- */
-    public function wpLinkManagerDisabledMessage(): void
-    {
-        wp_link_manager_disabled_message();
-    }
-
-/**
  * Returns value of command line params.
  * Exits when a required param is not set.
  *
@@ -1643,7 +1630,7 @@ class NativeWpService implements \WpService\WpService
  *
  * @return true|void True if not multisite, user can't upload files, or the space check option is disabled.
  */
-    public function wpDashboardQuota(): true
+    public function wpDashboardQuota(): mixed
     {
         return wp_dashboard_quota();
     }
@@ -1930,7 +1917,7 @@ class NativeWpService implements \WpService\WpService
  *                                `$file` must match an entry exactly.
  * @return string|void Returns the file name on success, dies on failure.
  */
-    public function validateFileToEdit(string $file, array $allowedFiles = []): string
+    public function validateFileToEdit(string $file, array $allowedFiles = []): mixed
     {
         return validate_file_to_edit($file, $allowedFiles);
     }
@@ -2604,7 +2591,7 @@ class NativeWpService implements \WpService\WpService
  * @param callable $callback    Callback to run.
  * @return void|\WP_Error Void on success. WP_Error when $callback is WP_Error.
  */
-    public function registerImporter(string $id, string $name, string $description, callable $callback): \WP_Error
+    public function registerImporter(string $id, string $name, string $description, callable $callback): mixed
     {
         return register_importer($id, $name, $description, $callback);
     }
@@ -2858,7 +2845,7 @@ class NativeWpService implements \WpService\WpService
  *
  * @return null|array|void Array of error messages keyed by attachment ID, null or void on success.
  */
-    public function mediaUploadFormHandler(): null|array
+    public function mediaUploadFormHandler(): mixed
     {
         return media_upload_form_handler();
     }
@@ -3840,71 +3827,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Makes a tree structure for the theme file editor's file list.
- *
- * @since 4.9.0
- * @access private
- *
- * @param array $allowedFiles List of theme file paths.
- * @return array Tree structure for listing theme files.
- */
-    public function wpMakeThemeFileTree(array $allowedFiles): array
-    {
-        return wp_make_theme_file_tree($allowedFiles);
-    }
-
-/**
- * Outputs the formatted file list for the theme file editor.
- *
- * @since 4.9.0
- * @access private
- *
- * @global string $relative_file Name of the file being edited relative to the
- *                               theme directory.
- * @global string $stylesheet    The stylesheet name of the theme being edited.
- *
- * @param array|string $tree  List of file/folder paths, or filename.
- * @param int $level The aria-level for the current iteration.
- * @param int $size  The aria-setsize for the current iteration.
- * @param int $index The aria-posinset for the current iteration.
- */
-    public function wpPrintThemeFileTree(array|string $tree, int $level = 2, int $size = 1, int $index = 1): void
-    {
-        wp_print_theme_file_tree($tree, $level, $size, $index);
-    }
-
-/**
- * Makes a tree structure for the plugin file editor's file list.
- *
- * @since 4.9.0
- * @access private
- *
- * @param array $pluginEditableFiles List of plugin file paths.
- * @return array Tree structure for listing plugin files.
- */
-    public function wpMakePluginFileTree(array $pluginEditableFiles): array
-    {
-        return wp_make_plugin_file_tree($pluginEditableFiles);
-    }
-
-/**
- * Outputs the formatted file list for the plugin file editor.
- *
- * @since 4.9.0
- * @access private
- *
- * @param array|string $tree  List of file/folder paths, or filename.
- * @param string $label Name of file or folder to print.
- * @param int $level The aria-level for the current iteration.
- * @param int $size  The aria-setsize for the current iteration.
- * @param int $index The aria-posinset for the current iteration.
- */
-    public function wpPrintPluginFileTree(array|string $tree, string $label = '', int $level = 2, int $size = 1, int $index = 1): void
-    {
-        wp_print_plugin_file_tree($tree, $label, $level, $size, $index);
-    }
-
-/**
  * Flushes rewrite rules if `siteurl`, `home` or `page_on_front` changed.
  *
  * @since 2.1.0
@@ -4388,7 +4310,7 @@ class NativeWpService implements \WpService\WpService
  *
  * @return void|false Void on success. False if the current user is not a super admin.
  */
-    public function siteAdminNotice(): false
+    public function siteAdminNotice(): mixed
     {
         return site_admin_notice();
     }
@@ -5394,7 +5316,7 @@ class NativeWpService implements \WpService\WpService
  * @return true|void True if a plugin's uninstall.php file has been found and included.
  *                   Void otherwise.
  */
-    public function uninstallPlugin(string $plugin): true
+    public function uninstallPlugin(string $plugin): mixed
     {
         return uninstall_plugin($plugin);
     }
@@ -6095,23 +6017,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Renders an admin notice when a plugin was deactivated during an update.
- *
- * Displays an admin notice in case a plugin has been deactivated during an
- * upgrade due to incompatibility with the current version of WordPress.
- *
- * @since 5.8.0
- * @access private
- *
- * @global string $pagenow    The filename of the current screen.
- * @global string $wp_version The WordPress version string.
- */
-    public function deactivatedPluginsNotice(): void
-    {
-        deactivated_plugins_notice();
-    }
-
-/**
  * Updates an existing post with values provided in `$_POST`.
  *
  * If post data is passed as an argument, it is treated as an array of data
@@ -6207,7 +6112,7 @@ class NativeWpService implements \WpService\WpService
  *
  * @return int|void Post ID on success, void on failure.
  */
-    public function writePost(): int
+    public function writePost(): mixed
     {
         return write_post();
     }
@@ -7384,7 +7289,7 @@ class NativeWpService implements \WpService\WpService
  * @param int|\WP_Post $post         Post ID or WP_Post object.
  * @return void|false Void on success, false if the page has no children.
  */
-    public function parentDropdown(int $defaultPage = 0, int $parentPage = 0, int $level = 0, int|\WP_Post $post = null): false
+    public function parentDropdown(int $defaultPage = 0, int $parentPage = 0, int $level = 0, int|\WP_Post $post = null): mixed
     {
         return parent_dropdown($defaultPage, $parentPage, $level, $post);
     }
@@ -8534,7 +8439,7 @@ class NativeWpService implements \WpService\WpService
  * @global string $pagenow The filename of the current screen.
  * @return void|false
  */
-    public function updateNag(): false
+    public function updateNag(): mixed
     {
         return update_nag();
     }
@@ -8580,7 +8485,7 @@ class NativeWpService implements \WpService\WpService
  * @param array $pluginData Plugin information.
  * @return void|false
  */
-    public function wpPluginUpdateRow(string $file, array $pluginData): false
+    public function wpPluginUpdateRow(string $file, array $pluginData): mixed
     {
         return wp_plugin_update_row($file, $pluginData);
     }
@@ -8616,7 +8521,7 @@ class NativeWpService implements \WpService\WpService
  * @param \WP_Theme $theme     Theme object.
  * @return void|false
  */
-    public function wpThemeUpdateRow(string $themeKey, \WP_Theme $theme): false
+    public function wpThemeUpdateRow(string $themeKey, \WP_Theme $theme): mixed
     {
         return wp_theme_update_row($themeKey, $theme);
     }
@@ -8630,7 +8535,7 @@ class NativeWpService implements \WpService\WpService
  *
  * @return void|false
  */
-    public function maintenanceNag(): false
+    public function maintenanceNag(): mixed
     {
         return maintenance_nag();
     }
@@ -8885,15 +8790,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * @since 3.5.0
- * @access private
- */
-    public function deleteUsersAddJs(): void
-    {
-        delete_users_add_js();
-    }
-
-/**
  * Optional SSL preference that can be turned on by hooking to the 'personal_options' action.
  *
  * See the {@see 'personal_options'} action.
@@ -9059,45 +8955,6 @@ class NativeWpService implements \WpService\WpService
     public function displaySetupForm(string|null $error = null): void
     {
         display_setup_form($error);
-    }
-
-/**
- * Starts a new XML tag.
- *
- * Callback function for xml_set_element_handler().
- *
- * @since 0.71
- * @access private
- *
- * @global array $names
- * @global array $urls
- * @global array $targets
- * @global array $descriptions
- * @global array $feeds
- *
- * @param \resource $parser   XML Parser resource.
- * @param string $tagName XML element name.
- * @param array $attrs    XML element attributes.
- */
-    public function startElement(\resource $parser, string $tagName, array $attrs): void
-    {
-        startElement($parser, $tagName, $attrs);
-    }
-
-/**
- * Ends a new XML tag.
- *
- * Callback function for xml_set_element_handler().
- *
- * @since 0.71
- * @access private
- *
- * @param \resource $parser   XML Parser resource.
- * @param string $tagName XML tag name.
- */
-    public function endElement(\resource $parser, string $tagName): void
-    {
-        endElement($parser, $tagName);
     }
 
 /**
@@ -9590,7 +9447,7 @@ class NativeWpService implements \WpService\WpService
  *
  * @return string|void The author's display name, empty string if unknown.
  */
-    public function getTheModifiedAuthor(): string
+    public function getTheModifiedAuthor(): mixed
     {
         return get_the_modified_author();
     }
@@ -9807,7 +9664,7 @@ class NativeWpService implements \WpService\WpService
  * }
  * @return void|string Void if 'echo' argument is true, list of authors if 'echo' is false.
  */
-    public function wpListAuthors(string|array $args = ''): string
+    public function wpListAuthors(string|array $args = ''): mixed
     {
         return wp_list_authors($args);
     }
@@ -10040,22 +9897,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Retrieves Post Content block attributes from the current post template.
- *
- * @since 6.3.0
- * @since 6.4.0 Return null if there is no post content block.
- * @access private
- *
- * @global int $post_ID
- *
- * @return array|null Post Content block attributes array or null if Post Content block doesn't exist.
- */
-    public function wpGetPostContentBlockAttributes(): array|null
-    {
-        return wp_get_post_content_block_attributes();
-    }
-
-/**
  * Returns the contextualized block editor settings for a selected editor context.
  *
  * @since 5.8.0
@@ -10116,100 +9957,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Normalize the pattern properties to camelCase.
- *
- * The API's format is snake_case, `register_block_pattern()` expects camelCase.
- *
- * @since 6.2.0
- * @access private
- *
- * @param array $pattern Pattern as returned from the Pattern Directory API.
- * @return array Normalized pattern.
- */
-    public function wpNormalizeRemoteBlockPattern(array $pattern): array
-    {
-        return wp_normalize_remote_block_pattern($pattern);
-    }
-
-/**
- * Registers the align block attribute for block types that support it.
- *
- * @since 5.6.0
- * @access private
- *
- * @param \WP_Block_Type $blockType Block Type.
- */
-    public function wpRegisterAlignmentSupport(\WP_Block_Type $blockType): void
-    {
-        wp_register_alignment_support($blockType);
-    }
-
-/**
- * Adds CSS classes for block alignment to the incoming attributes array.
- * This will be applied to the block markup in the front-end.
- *
- * @since 5.6.0
- * @access private
- *
- * @param \WP_Block_Type $blockType       Block Type.
- * @param array $blockAttributes Block attributes.
- * @return array Block alignment CSS classes and inline styles.
- */
-    public function wpApplyAlignmentSupport(\WP_Block_Type $blockType, array $blockAttributes): array
-    {
-        return wp_apply_alignment_support($blockType, $blockAttributes);
-    }
-
-/**
- * Registers the style block attribute for block types that support it.
- *
- * @since 6.4.0
- * @access private
- *
- * @param \WP_Block_Type $blockType Block Type.
- */
-    public function wpRegisterBackgroundSupport(\WP_Block_Type $blockType): void
-    {
-        wp_register_background_support($blockType);
-    }
-
-/**
- * Renders the background styles to the block wrapper.
- * This block support uses the `render_block` hook to ensure that
- * it is also applied to non-server-rendered blocks.
- *
- * @since 6.4.0
- * @since 6.5.0 Added support for `backgroundPosition` and `backgroundRepeat` output.
- * @since 6.6.0 Removed requirement for `backgroundImage.source`. A file/url is the default.
- *
- * @access private
- *
- * @param string $blockContent Rendered block content.
- * @param array $block         Block object.
- * @return string Filtered block content.
- */
-    public function wpRenderBackgroundSupport(string $blockContent, array $block): string
-    {
-        return wp_render_background_support($blockContent, $block);
-    }
-
-/**
- * Generate block style variation instance name.
- *
- * @since 6.6.0
- * @access private
- *
- * @param array $block     Block object.
- * @param string $variation Slug for the block style variation.
- *
- * @return string The unique variation name.
- */
-    public function wpCreateBlockStyleVariationInstanceName(array $block, string $variation): string
-    {
-        return wp_create_block_style_variation_instance_name($block, $variation);
-    }
-
-/**
  * Determines the block style variation names within a CSS class string.
  *
  * @since 6.6.0
@@ -10221,296 +9968,6 @@ class NativeWpService implements \WpService\WpService
     public function wpGetBlockStyleVariationNameFromClass(string $classString): array|null
     {
         return wp_get_block_style_variation_name_from_class($classString);
-    }
-
-/**
- * Recursively resolves any `ref` values within a block style variation's data.
- *
- * @since 6.6.0
- * @access private
- *
- * @param array $variationData Reference to the variation data being processed.
- * @param array $themeJson     Theme.json data to retrieve referenced values from.
- */
-    public function wpResolveBlockStyleVariationRefValues(array $variationData, array $themeJson): void
-    {
-        wp_resolve_block_style_variation_ref_values($variationData, $themeJson);
-    }
-
-/**
- * Render the block style variation's styles.
- *
- * In the case of nested blocks with variations applied, we want the parent
- * variation's styles to be rendered before their descendants. This solves the
- * issue of a block type being styled in both the parent and descendant: we want
- * the descendant style to take priority, and this is done by loading it after,
- * in the DOM order. This is why the variation stylesheet generation is in a
- * different filter.
- *
- * @since 6.6.0
- * @access private
- *
- * @param array $parsedBlock The parsed block.
- *
- * @return array The parsed block with block style variation classname added.
- */
-    public function wpRenderBlockStyleVariationSupportStyles(array $parsedBlock): array
-    {
-        return wp_render_block_style_variation_support_styles($parsedBlock);
-    }
-
-/**
- * Ensure the variation block support class name generated and added to
- * block attributes in the `render_block_data` filter gets applied to the
- * block's markup.
- *
- * @see wp_render_block_style_variation_support_styles
- *
- * @since 6.6.0
- * @access private
- *
- * @param string $blockContent Rendered block content.
- * @param array $block         Block object.
- *
- * @return string                Filtered block content.
- */
-    public function wpRenderBlockStyleVariationClassName(string $blockContent, array $block): string
-    {
-        return wp_render_block_style_variation_class_name($blockContent, $block);
-    }
-
-/**
- * Enqueues styles for block style variations.
- *
- * @since 6.6.0
- * @access private
- */
-    public function wpEnqueueBlockStyleVariationStyles(): void
-    {
-        wp_enqueue_block_style_variation_styles();
-    }
-
-/**
- * Registers block style variations read in from theme.json partials.
- *
- * @since 6.6.0
- * @access private
- *
- * @param array $variations Shared block style variations.
- */
-    public function wpRegisterBlockStyleVariationsFromThemeJsonPartials(array $variations): void
-    {
-        wp_register_block_style_variations_from_theme_json_partials($variations);
-    }
-
-/**
- * Registers the style attribute used by the border feature if needed for block
- * types that support borders.
- *
- * @since 5.8.0
- * @since 6.1.0 Improved conditional blocks optimization.
- * @access private
- *
- * @param \WP_Block_Type $blockType Block Type.
- */
-    public function wpRegisterBorderSupport(\WP_Block_Type $blockType): void
-    {
-        wp_register_border_support($blockType);
-    }
-
-/**
- * Adds CSS classes and inline styles for border styles to the incoming
- * attributes array. This will be applied to the block markup in the front-end.
- *
- * @since 5.8.0
- * @since 6.1.0 Implemented the style engine to generate CSS and classnames.
- * @access private
- *
- * @param \WP_Block_Type $blockType       Block type.
- * @param array $blockAttributes Block attributes.
- * @return array Border CSS classes and inline styles.
- */
-    public function wpApplyBorderSupport(\WP_Block_Type $blockType, array $blockAttributes): array
-    {
-        return wp_apply_border_support($blockType, $blockAttributes);
-    }
-
-/**
- * Checks whether the current block type supports the border feature requested.
- *
- * If the `__experimentalBorder` support flag is a boolean `true` all border
- * support features are available. Otherwise, the specific feature's support
- * flag nested under `experimentalBorder` must be enabled for the feature
- * to be opted into.
- *
- * @since 5.8.0
- * @access private
- *
- * @param \WP_Block_Type $blockType    Block type to check for support.
- * @param string $feature       Name of the feature to check support for.
- * @param mixed $defaultValue Fallback value for feature support, defaults to false.
- * @return bool Whether the feature is supported.
- */
-    public function wpHasBorderFeatureSupport(\WP_Block_Type $blockType, string $feature, mixed $defaultValue = false): bool
-    {
-        return wp_has_border_feature_support($blockType, $feature, $defaultValue);
-    }
-
-/**
- * Registers the style and colors block attributes for block types that support it.
- *
- * @since 5.6.0
- * @since 6.1.0 Improved $color_support assignment optimization.
- * @access private
- *
- * @param \WP_Block_Type $blockType Block Type.
- */
-    public function wpRegisterColorsSupport(\WP_Block_Type $blockType): void
-    {
-        wp_register_colors_support($blockType);
-    }
-
-/**
- * Adds CSS classes and inline styles for colors to the incoming attributes array.
- * This will be applied to the block markup in the front-end.
- *
- * @since 5.6.0
- * @since 6.1.0 Implemented the style engine to generate CSS and classnames.
- * @access private
- *
- * @param \WP_Block_Type $blockType       Block type.
- * @param array $blockAttributes Block attributes.
- *
- * @return array Colors CSS classes and inline styles.
- */
-    public function wpApplyColorsSupport(\WP_Block_Type $blockType, array $blockAttributes): array
-    {
-        return wp_apply_colors_support($blockType, $blockAttributes);
-    }
-
-/**
- * Registers the custom classname block attribute for block types that support it.
- *
- * @since 5.6.0
- * @access private
- *
- * @param \WP_Block_Type $blockType Block Type.
- */
-    public function wpRegisterCustomClassnameSupport(\WP_Block_Type $blockType): void
-    {
-        wp_register_custom_classname_support($blockType);
-    }
-
-/**
- * Adds the custom classnames to the output.
- *
- * @since 5.6.0
- * @access private
- *
- * @param \WP_Block_Type $blockType       Block Type.
- * @param array $blockAttributes Block attributes.
- *
- * @return array Block CSS classes and inline styles.
- */
-    public function wpApplyCustomClassnameSupport(\WP_Block_Type $blockType, array $blockAttributes): array
-    {
-        return wp_apply_custom_classname_support($blockType, $blockAttributes);
-    }
-
-/**
- * Registers the style block attribute for block types that support it.
- *
- * @since 5.9.0
- * @access private
- *
- * @param \WP_Block_Type $blockType Block Type.
- */
-    public function wpRegisterDimensionsSupport(\WP_Block_Type $blockType): void
-    {
-        wp_register_dimensions_support($blockType);
-    }
-
-/**
- * Adds CSS classes for block dimensions to the incoming attributes array.
- * This will be applied to the block markup in the front-end.
- *
- * @since 5.9.0
- * @since 6.2.0 Added `minHeight` support.
- * @access private
- *
- * @param \WP_Block_Type $blockType       Block Type.
- * @param array $blockAttributes Block attributes.
- * @return array Block dimensions CSS classes and inline styles.
- */
-    public function wpApplyDimensionsSupport(\WP_Block_Type $blockType, array $blockAttributes): array
-    {
-        return wp_apply_dimensions_support($blockType, $blockAttributes);
-    }
-
-/**
- * Renders server-side dimensions styles to the block wrapper.
- * This block support uses the `render_block` hook to ensure that
- * it is also applied to non-server-rendered blocks.
- *
- * @since 6.5.0
- * @access private
- *
- * @param string $blockContent Rendered block content.
- * @param array $block         Block object.
- * @return string                Filtered block content.
- */
-    public function wpRenderDimensionsSupport(string $blockContent, array $block): string
-    {
-        return wp_render_dimensions_support($blockContent, $block);
-    }
-
-/**
- * Gets the elements class names.
- *
- * @since 6.0.0
- * @access private
- *
- * @param array $block Block object.
- * @return string The unique class name.
- */
-    public function wpGetElementsClassName(array $block): string
-    {
-        return wp_get_elements_class_name($block);
-    }
-
-/**
- * Determines whether an elements class name should be added to the block.
- *
- * @since 6.6.0
- * @access private
- *
- * @param array $block   Block object.
- * @param array $options Per element type options e.g. whether to skip serialization.
- * @return boolean Whether the block needs an elements class name.
- */
-    public function wpShouldAddElementsClassName(array $block, array $options): bool
-    {
-        return wp_should_add_elements_class_name($block, $options);
-    }
-
-/**
- * Render the elements stylesheet and adds elements class name to block as required.
- *
- * In the case of nested blocks we want the parent element styles to be rendered before their descendants.
- * This solves the issue of an element (e.g.: link color) being styled in both the parent and a descendant:
- * we want the descendant style to take priority, and this is done by loading it after, in DOM order.
- *
- * @since 6.0.0
- * @since 6.1.0 Implemented the style engine to generate CSS and classnames.
- * @since 6.6.0 Element block support class and styles are generated via the `render_block_data` filter instead of `pre_render_block`.
- * @access private
- *
- * @param array $parsedBlock The parsed block.
- * @return array The same parsed block with elements classname added if appropriate.
- */
-    public function wpRenderElementsSupportStyles(array $parsedBlock): array
-    {
-        return wp_render_elements_support_styles($parsedBlock);
     }
 
 /**
@@ -10528,283 +9985,6 @@ class NativeWpService implements \WpService\WpService
     public function wpRenderElementsClassName(string $blockContent, array $block): string
     {
         return wp_render_elements_class_name($blockContent, $block);
-    }
-
-/**
- * Gets the generated classname from a given block name.
- *
- * @since 5.6.0
- *
- * @access private
- *
- * @param string $blockName Block Name.
- * @return string Generated classname.
- */
-    public function wpGetBlockDefaultClassname(string $blockName): string
-    {
-        return wp_get_block_default_classname($blockName);
-    }
-
-/**
- * Adds the generated classnames to the output.
- *
- * @since 5.6.0
- *
- * @access private
- *
- * @param \WP_Block_Type $blockType Block Type.
- * @return array Block CSS classes and inline styles.
- */
-    public function wpApplyGeneratedClassnameSupport(\WP_Block_Type $blockType): array
-    {
-        return wp_apply_generated_classname_support($blockType);
-    }
-
-/**
- * Returns layout definitions, keyed by layout type.
- *
- * Provides a common definition of slugs, classnames, base styles, and spacing styles for each layout type.
- * When making changes or additions to layout definitions, the corresponding JavaScript definitions should
- * also be updated.
- *
- * @since 6.3.0
- * @since 6.6.0 Updated specificity for compatibility with 0-1-0 global styles specificity.
- * @access private
- *
- * @return array[] Layout definitions.
- */
-    public function wpGetLayoutDefinitions(): array
-    {
-        return wp_get_layout_definitions();
-    }
-
-/**
- * Registers the layout block attribute for block types that support it.
- *
- * @since 5.8.0
- * @since 6.3.0 Check for layout support via the `layout` key with fallback to `__experimentalLayout`.
- * @access private
- *
- * @param \WP_Block_Type $blockType Block Type.
- */
-    public function wpRegisterLayoutSupport(\WP_Block_Type $blockType): void
-    {
-        wp_register_layout_support($blockType);
-    }
-
-/**
- * Generates the CSS corresponding to the provided layout.
- *
- * @since 5.9.0
- * @since 6.1.0 Added `$block_spacing` param, use style engine to enqueue styles.
- * @since 6.3.0 Added grid layout type.
- * @since 6.6.0 Removed duplicated selector from layout styles.
- *              Enabled negative margins for alignfull children of blocks with custom padding.
- * @access private
- *
- * @param string $selector                      CSS selector.
- * @param array $layout                        Layout object. The one that is passed has already checked
- *                                                            the existence of default block layout.
- * @param bool $hasBlockGapSupport         Optional. Whether the theme has support for the block gap. Default false.
- * @param string|string[]|null $gapValue                     Optional. The block gap value to apply. Default null.
- * @param bool $shouldSkipGapSerialization Optional. Whether to skip applying the user-defined value set in the editor. Default false.
- * @param string $fallbackGapValue            Optional. The block gap value to apply. Default '0.5em'.
- * @param array|null $blockSpacing                 Optional. Custom spacing set on the block. Default null.
- * @return string CSS styles on success. Else, empty string.
- */
-    public function wpGetLayoutStyle(string $selector, array $layout, bool $hasBlockGapSupport = false, string|array|null $gapValue = null, bool $shouldSkipGapSerialization = false, string $fallbackGapValue = '0.5em', array|null $blockSpacing = null): string
-    {
-        return wp_get_layout_style($selector, $layout, $hasBlockGapSupport, $gapValue, $shouldSkipGapSerialization, $fallbackGapValue, $blockSpacing);
-    }
-
-/**
- * Renders the layout config to the block wrapper.
- *
- * @since 5.8.0
- * @since 6.3.0 Adds compound class to layout wrapper for global spacing styles.
- * @since 6.3.0 Check for layout support via the `layout` key with fallback to `__experimentalLayout`.
- * @since 6.6.0 Removed duplicate container class from layout styles.
- * @access private
- *
- * @param string $blockContent Rendered block content.
- * @param array $block         Block object.
- * @return string Filtered block content.
- */
-    public function wpRenderLayoutSupportFlag(string $blockContent, array $block): string
-    {
-        return wp_render_layout_support_flag($blockContent, $block);
-    }
-
-/**
- * Check if the parent block exists and if it has a layout attribute.
- * If it does, add the parent layout to the parsed block
- *
- * @since 6.6.0
- * @access private
- *
- * @param array $parsedBlock The parsed block.
- * @param array $sourceBlock The source block.
- * @param \WP_Block $parentBlock The parent block.
- * @return array The parsed block with parent layout attribute if it exists.
- */
-    public function wpAddParentLayoutToParsedBlock(array $parsedBlock, array $sourceBlock, \WP_Block $parentBlock): array
-    {
-        return wp_add_parent_layout_to_parsed_block($parsedBlock, $sourceBlock, $parentBlock);
-    }
-
-/**
- * For themes without theme.json file, make sure
- * to restore the inner div for the group block
- * to avoid breaking styles relying on that div.
- *
- * @since 5.8.0
- * @access private
- *
- * @param string $blockContent Rendered block content.
- * @param array $block         Block object.
- * @return string Filtered block content.
- */
-    public function wpRestoreGroupInnerContainer(string $blockContent, array $block): string
-    {
-        return wp_restore_group_inner_container($blockContent, $block);
-    }
-
-/**
- * For themes without theme.json file, make sure
- * to restore the outer div for the aligned image block
- * to avoid breaking styles relying on that div.
- *
- * @since 6.0.0
- * @access private
- *
- * @param string $blockContent Rendered block content.
- * @param array $block        Block object.
- * @return string Filtered block content.
- */
-    public function wpRestoreImageOuterContainer(string $blockContent, array $block): string
-    {
-        return wp_restore_image_outer_container($blockContent, $block);
-    }
-
-/**
- * Registers the style block attribute for block types that support it.
- *
- * @since 6.2.0
- * @access private
- *
- * @param \WP_Block_Type $blockType Block Type.
- */
-    public function wpRegisterPositionSupport(\WP_Block_Type $blockType): void
-    {
-        wp_register_position_support($blockType);
-    }
-
-/**
- * Renders position styles to the block wrapper.
- *
- * @since 6.2.0
- * @access private
- *
- * @param string $blockContent Rendered block content.
- * @param array $block         Block object.
- * @return string                Filtered block content.
- */
-    public function wpRenderPositionSupport(string $blockContent, array $block): string
-    {
-        return wp_render_position_support($blockContent, $block);
-    }
-
-/**
- * Registers the style and shadow block attributes for block types that support it.
- *
- * @since 6.3.0
- * @access private
- *
- * @param \WP_Block_Type $blockType Block Type.
- */
-    public function wpRegisterShadowSupport(\WP_Block_Type $blockType): void
-    {
-        wp_register_shadow_support($blockType);
-    }
-
-/**
- * Add CSS classes and inline styles for shadow features to the incoming attributes array.
- * This will be applied to the block markup in the front-end.
- *
- * @since 6.3.0
- * @since 6.6.0 Return early if __experimentalSkipSerialization is true.
- * @access private
- *
- * @param \WP_Block_Type $blockType       Block type.
- * @param array $blockAttributes Block attributes.
- * @return array Shadow CSS classes and inline styles.
- */
-    public function wpApplyShadowSupport(\WP_Block_Type $blockType, array $blockAttributes): array
-    {
-        return wp_apply_shadow_support($blockType, $blockAttributes);
-    }
-
-/**
- * Registers the style block attribute for block types that support it.
- *
- * @since 5.8.0
- * @access private
- *
- * @param \WP_Block_Type $blockType Block Type.
- */
-    public function wpRegisterSpacingSupport(\WP_Block_Type $blockType): void
-    {
-        wp_register_spacing_support($blockType);
-    }
-
-/**
- * Adds CSS classes for block spacing to the incoming attributes array.
- * This will be applied to the block markup in the front-end.
- *
- * @since 5.8.0
- * @since 6.1.0 Implemented the style engine to generate CSS and classnames.
- * @access private
- *
- * @param \WP_Block_Type $blockType       Block Type.
- * @param array $blockAttributes Block attributes.
- * @return array Block spacing CSS classes and inline styles.
- */
-    public function wpApplySpacingSupport(\WP_Block_Type $blockType, array $blockAttributes): array
-    {
-        return wp_apply_spacing_support($blockType, $blockAttributes);
-    }
-
-/**
- * Registers the style and typography block attributes for block types that support it.
- *
- * @since 5.6.0
- * @since 6.3.0 Added support for text-columns.
- * @access private
- *
- * @param \WP_Block_Type $blockType Block Type.
- */
-    public function wpRegisterTypographySupport(\WP_Block_Type $blockType): void
-    {
-        wp_register_typography_support($blockType);
-    }
-
-/**
- * Adds CSS classes and inline styles for typography features such as font sizes
- * to the incoming attributes array. This will be applied to the block markup in
- * the front-end.
- *
- * @since 5.6.0
- * @since 6.1.0 Used the style engine to generate CSS and classnames.
- * @since 6.3.0 Added support for text-columns.
- * @access private
- *
- * @param \WP_Block_Type $blockType       Block type.
- * @param array $blockAttributes Block attributes.
- * @return array Typography CSS classes and inline styles.
- */
-    public function wpApplyTypographySupport(\WP_Block_Type $blockType, array $blockAttributes): array
-    {
-        return wp_apply_typography_support($blockType, $blockAttributes);
     }
 
 /**
@@ -10865,32 +10045,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Internal implementation of CSS clamp() based on available min/max viewport
- * width and min/max font sizes.
- *
- * @since 6.1.0
- * @since 6.3.0 Checks for unsupported min/max viewport values that cause invalid clamp values.
- * @since 6.5.0 Returns early when min and max viewport subtraction is zero to avoid division by zero.
- * @access private
- *
- * @param array $args {
- *     Optional. An associative array of values to calculate a fluid formula
- *     for font size. Default is empty array.
- *
- *     @type string $maximum_viewport_width Maximum size up to which type will have fluidity.
- *     @type string $minimum_viewport_width Minimum viewport size from which type will have fluidity.
- *     @type string $maximum_font_size      Maximum font size for any clamp() calculation.
- *     @type string $minimum_font_size      Minimum font size for any clamp() calculation.
- *     @type int    $scale_factor           A scale factor to determine how fast a font scales within boundaries.
- * }
- * @return string|null A font-size value using clamp() on success, otherwise null.
- */
-    public function wpGetComputedFluidTypographyValue(array $args = []): string|null
-    {
-        return wp_get_computed_fluid_typography_value($args);
-    }
-
-/**
  * Returns a font-size value based on a given font-size preset.
  * Takes into account fluid typography parameters and attempts to return a CSS
  * formula depending on available, valid values.
@@ -10916,24 +10070,6 @@ class NativeWpService implements \WpService\WpService
     public function wpGetTypographyFontSizeValue(array $preset, bool|array $settings = []): string|null
     {
         return wp_get_typography_font_size_value($preset, $settings);
-    }
-
-/**
- * Checks whether serialization of the current block's supported properties
- * should occur.
- *
- * @since 6.0.0
- * @access private
- *
- * @param \WP_Block_Type $blockType  Block type.
- * @param string $featureSet Name of block support feature set..
- * @param string $feature     Optional name of individual feature to check.
- *
- * @return bool Whether to serialize block support styles & classes.
- */
-    public function wpShouldSkipBlockSupportsSerialization(\WP_Block_Type $blockType, string $featureSet, string $feature = null): bool
-    {
-        return wp_should_skip_block_supports_serialization($blockType, $featureSet, $feature);
     }
 
 /**
@@ -11140,27 +10276,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Inject ignoredHookedBlocks metadata attributes into a template or template part.
- *
- * Given an object that represents a `wp_template` or `wp_template_part` post object
- * prepared for inserting or updating the database, locate all blocks that have
- * hooked blocks, and inject a `metadata.ignoredHookedBlocks` attribute into the anchor
- * blocks to reflect the latter.
- *
- * @since 6.5.0
- * @access private
- *
- * @param \stdClass $changes    An object representing a template or template part
- *                                    prepared for inserting or updating the database.
- * @param \WP_REST_Request $deprecated Deprecated. Not used.
- * @return \stdClass|\WP_Error The updated object representing a template or template part.
- */
-    public function injectIgnoredHookedBlocksMetadataAttributes(\stdClass $changes, \WP_REST_Request $deprecated = null): \stdClass|\WP_Error
-    {
-        return inject_ignored_hooked_blocks_metadata_attributes($changes, $deprecated);
-    }
-
-/**
  * Finds a block template with equal or higher specificity than a given PHP template file.
  *
  * Internally, this communicates the block content that needs to be used by the template canvas through a global variable.
@@ -11179,41 +10294,6 @@ class NativeWpService implements \WpService\WpService
     public function locateBlockTemplate(string $template, string $type, array $templates): string
     {
         return locate_block_template($template, $type, $templates);
-    }
-
-/**
- * Returns the correct 'wp_template' to render for the request template type.
- *
- * @access private
- * @since 5.8.0
- * @since 5.9.0 Added the `$fallback_template` parameter.
- *
- * @param string $templateType      The current template type.
- * @param string[] $templateHierarchy The current template hierarchy, ordered by priority.
- * @param string $fallbackTemplate  A PHP fallback template to use if no matching block template is found.
- * @return \WP_Block_Template|null template A template object, or null if none could be found.
- */
-    public function resolveBlockTemplate(string $templateType, array $templateHierarchy, string $fallbackTemplate): \WP_Block_Template|null
-    {
-        return resolve_block_template($templateType, $templateHierarchy, $fallbackTemplate);
-    }
-
-/**
- * Returns the markup for the current template.
- *
- * @access private
- * @since 5.8.0
- *
- * @global string   $_wp_current_template_id
- * @global string   $_wp_current_template_content
- * @global WP_Embed $wp_embed                     WordPress Embed object.
- * @global WP_Query $wp_query                     WordPress Query object.
- *
- * @return string Block template markup.
- */
-    public function getTheBlockTemplateHtml(): string
-    {
-        return get_the_block_template_html();
     }
 
 /**
@@ -11463,113 +10543,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Returns the markup for blocks hooked to the given anchor block in a specific relative position.
- *
- * @since 6.5.0
- * @access private
- *
- * @param array $parsedAnchorBlock The anchor block, in parsed block array format.
- * @param string $relativePosition   The relative position of the hooked blocks.
- *                                                             Can be one of 'before', 'after', 'first_child', or 'last_child'.
- * @param array $hookedBlocks       An array of hooked block types, grouped by anchor block and relative position.
- * @param \WP_Block_Template|\WP_Post|array $context             The block template, template part, or pattern that the anchor block belongs to.
- * @return string
- */
-    public function insertHookedBlocks(array $parsedAnchorBlock, string $relativePosition, array $hookedBlocks, \WP_Block_Template|\WP_Post|array $context): string
-    {
-        return insert_hooked_blocks($parsedAnchorBlock, $relativePosition, $hookedBlocks, $context);
-    }
-
-/**
- * Adds a list of hooked block types to an anchor block's ignored hooked block types.
- *
- * This function is meant for internal use only.
- *
- * @since 6.5.0
- * @access private
- *
- * @param array $parsedAnchorBlock The anchor block, in parsed block array format.
- * @param string $relativePosition   The relative position of the hooked blocks.
- *                                                             Can be one of 'before', 'after', 'first_child', or 'last_child'.
- * @param array $hookedBlocks       An array of hooked block types, grouped by anchor block and relative position.
- * @param \WP_Block_Template|\WP_Post|array $context             The block template, template part, or pattern that the anchor block belongs to.
- * @return string Empty string.
- */
-    public function setIgnoredHookedBlocksMetadata(array $parsedAnchorBlock, string $relativePosition, array $hookedBlocks, \WP_Block_Template|\WP_Post|array $context): string
-    {
-        return set_ignored_hooked_blocks_metadata($parsedAnchorBlock, $relativePosition, $hookedBlocks, $context);
-    }
-
-/**
- * Runs the hooked blocks algorithm on the given content.
- *
- * @since 6.6.0
- * @access private
- *
- * @param string $content  Serialized content.
- * @param \WP_Block_Template|\WP_Post|array $context  A block template, template part, `wp_navigation` post object,
- *                                                  or pattern that the blocks belong to.
- * @param callable $callback A function that will be called for each block to generate
- *                                                  the markup for a given list of blocks that are hooked to it.
- *                                                  Default: 'insert_hooked_blocks'.
- * @return string The serialized markup.
- */
-    public function applyBlockHooksToContent(string $content, \WP_Block_Template|\WP_Post|array $context, callable $callback = null): string
-    {
-        return apply_block_hooks_to_content($content, $context, $callback);
-    }
-
-/**
- * Accepts the serialized markup of a block and its inner blocks, and returns serialized markup of the inner blocks.
- *
- * @since 6.6.0
- * @access private
- *
- * @param string $serializedBlock The serialized markup of a block and its inner blocks.
- * @return string The serialized markup of the inner blocks.
- */
-    public function removeSerializedParentBlock(string $serializedBlock): string
-    {
-        return remove_serialized_parent_block($serializedBlock);
-    }
-
-/**
- * Updates the wp_postmeta with the list of ignored hooked blocks where the inner blocks are stored as post content.
- * Currently only supports `wp_navigation` post types.
- *
- * @since 6.6.0
- * @access private
- *
- * @param \stdClass $post Post object.
- * @return \stdClass The updated post object.
- */
-    public function updateIgnoredHookedBlocksPostmeta(\stdClass $post): \stdClass
-    {
-        return update_ignored_hooked_blocks_postmeta($post);
-    }
-
-/**
- * Returns the markup for blocks hooked to the given anchor block in a specific relative position and then
- * adds a list of hooked block types to an anchor block's ignored hooked block types.
- *
- * This function is meant for internal use only.
- *
- * @since 6.6.0
- * @access private
- *
- * @param array $parsedAnchorBlock The anchor block, in parsed block array format.
- * @param string $relativePosition   The relative position of the hooked blocks.
- *                                                             Can be one of 'before', 'after', 'first_child', or 'last_child'.
- * @param array $hookedBlocks       An array of hooked block types, grouped by anchor block and relative position.
- * @param \WP_Block_Template|\WP_Post|array $context             The block template, template part, or pattern that the anchor block belongs to.
- * @return string
- */
-    public function insertHookedBlocksAndSetIgnoredHookedBlocksMetadata(array $parsedAnchorBlock, string $relativePosition, array $hookedBlocks, \WP_Block_Template|\WP_Post|array $context): string
-    {
-        return insert_hooked_blocks_and_set_ignored_hooked_blocks_metadata($parsedAnchorBlock, $relativePosition, $hookedBlocks, $context);
-    }
-
-/**
  * Hooks into the REST API response for the core/navigation block and adds the first and last inner blocks.
  *
  * @since 6.6.0
@@ -11581,60 +10554,6 @@ class NativeWpService implements \WpService\WpService
     public function insertHookedBlocksIntoRestResponse(\WP_REST_Response $response, \WP_Post $post): \WP_REST_Response
     {
         return insert_hooked_blocks_into_rest_response($response, $post);
-    }
-
-/**
- * Returns a function that injects the theme attribute into, and hooked blocks before, a given block.
- *
- * The returned function can be used as `$pre_callback` argument to `traverse_and_serialize_block(s)`,
- * where it will inject the `theme` attribute into all Template Part blocks, and prepend the markup for
- * any blocks hooked `before` the given block and as its parent's `first_child`, respectively.
- *
- * This function is meant for internal use only.
- *
- * @since 6.4.0
- * @since 6.5.0 Added $callback argument.
- * @access private
- *
- * @param array $hookedBlocks An array of blocks hooked to another given block.
- * @param \WP_Block_Template|\WP_Post|array $context       A block template, template part, `wp_navigation` post object,
- *                                                       or pattern that the blocks belong to.
- * @param callable $callback      A function that will be called for each block to generate
- *                                                       the markup for a given list of blocks that are hooked to it.
- *                                                       Default: 'insert_hooked_blocks'.
- * @return callable A function that returns the serialized markup for the given block,
- *                  including the markup for any hooked blocks before it.
- */
-    public function makeBeforeBlockVisitor(array $hookedBlocks, \WP_Block_Template|\WP_Post|array $context, callable $callback = null): callable
-    {
-        return make_before_block_visitor($hookedBlocks, $context, $callback);
-    }
-
-/**
- * Returns a function that injects the hooked blocks after a given block.
- *
- * The returned function can be used as `$post_callback` argument to `traverse_and_serialize_block(s)`,
- * where it will append the markup for any blocks hooked `after` the given block and as its parent's
- * `last_child`, respectively.
- *
- * This function is meant for internal use only.
- *
- * @since 6.4.0
- * @since 6.5.0 Added $callback argument.
- * @access private
- *
- * @param array $hookedBlocks An array of blocks hooked to another block.
- * @param \WP_Block_Template|\WP_Post|array $context       A block template, template part, `wp_navigation` post object,
- *                                                       or pattern that the blocks belong to.
- * @param callable $callback      A function that will be called for each block to generate
- *                                                       the markup for a given list of blocks that are hooked to it.
- *                                                       Default: 'insert_hooked_blocks'.
- * @return callable A function that returns the serialized markup for the given block,
- *                  including the markup for any hooked blocks after it.
- */
-    public function makeAfterBlockVisitor(array $hookedBlocks, \WP_Block_Template|\WP_Post|array $context, callable $callback = null): callable
-    {
-        return make_after_block_visitor($hookedBlocks, $context, $callback);
     }
 
 /**
@@ -11748,45 +10667,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Traverses a parsed block tree and applies callbacks before and after serializing it.
- *
- * Recursively traverses the block and its inner blocks and applies the two callbacks provided as
- * arguments, the first one before serializing the block, and the second one after serializing it.
- * If either callback returns a string value, it will be prepended and appended to the serialized
- * block markup, respectively.
- *
- * The callbacks will receive a reference to the current block as their first argument, so that they
- * can also modify it, and the current block's parent block as second argument. Finally, the
- * `$pre_callback` receives the previous block, whereas the `$post_callback` receives
- * the next block as third argument.
- *
- * Serialized blocks are returned including comment delimiters, and with all attributes serialized.
- *
- * This function should be used when there is a need to modify the saved block, or to inject markup
- * into the return value. Prefer `serialize_block` when preparing a block to be saved to post content.
- *
- * This function is meant for internal use only.
- *
- * @since 6.4.0
- * @access private
- *
- * @see serialize_block()
- *
- * @param array $block         A representative array of a single parsed block object. See WP_Block_Parser_Block.
- * @param callable $preCallback  Callback to run on each block in the tree before it is traversed and serialized.
- *                                It is called with the following arguments: &$block, $parent_block, $previous_block.
- *                                Its string return value will be prepended to the serialized block markup.
- * @param callable $postCallback Callback to run on each block in the tree after it is traversed and serialized.
- *                                It is called with the following arguments: &$block, $parent_block, $next_block.
- *                                Its string return value will be appended to the serialized block markup.
- * @return string Serialized block markup.
- */
-    public function traverseAndSerializeBlock(array $block, callable $preCallback = null, callable $postCallback = null): string
-    {
-        return traverse_and_serialize_block($block, $preCallback, $postCallback);
-    }
-
-/**
  * Replaces patterns in a block tree with their content.
  *
  * @since 6.6.0
@@ -11798,46 +10678,6 @@ class NativeWpService implements \WpService\WpService
     public function resolvePatternBlocks(array $blocks): array
     {
         return resolve_pattern_blocks($blocks);
-    }
-
-/**
- * Given an array of parsed block trees, applies callbacks before and after serializing them and
- * returns their concatenated output.
- *
- * Recursively traverses the blocks and their inner blocks and applies the two callbacks provided as
- * arguments, the first one before serializing a block, and the second one after serializing.
- * If either callback returns a string value, it will be prepended and appended to the serialized
- * block markup, respectively.
- *
- * The callbacks will receive a reference to the current block as their first argument, so that they
- * can also modify it, and the current block's parent block as second argument. Finally, the
- * `$pre_callback` receives the previous block, whereas the `$post_callback` receives
- * the next block as third argument.
- *
- * Serialized blocks are returned including comment delimiters, and with all attributes serialized.
- *
- * This function should be used when there is a need to modify the saved blocks, or to inject markup
- * into the return value. Prefer `serialize_blocks` when preparing blocks to be saved to post content.
- *
- * This function is meant for internal use only.
- *
- * @since 6.4.0
- * @access private
- *
- * @see serialize_blocks()
- *
- * @param array[] $blocks        An array of parsed blocks. See WP_Block_Parser_Block.
- * @param callable $preCallback  Callback to run on each block in the tree before it is traversed and serialized.
- *                                It is called with the following arguments: &$block, $parent_block, $previous_block.
- *                                Its string return value will be prepended to the serialized block markup.
- * @param callable $postCallback Callback to run on each block in the tree after it is traversed and serialized.
- *                                It is called with the following arguments: &$block, $parent_block, $next_block.
- *                                Its string return value will be appended to the serialized block markup.
- * @return string Serialized block markup.
- */
-    public function traverseAndSerializeBlocks(array $blocks, callable $preCallback = null, callable $postCallback = null): string
-    {
-        return traverse_and_serialize_blocks($blocks, $preCallback, $postCallback);
     }
 
 /**
@@ -13822,20 +12662,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Updates the post meta with the list of ignored hooked blocks when the navigation is created or updated via the REST API.
- *
- * @access private
- * @since 6.5.0
- *
- * @param \stdClass $post Post object.
- * @return \stdClass The updated post object.
- */
-    public function blockCoreNavigationUpdateIgnoreHookedBlocksMeta(\stdClass $post): \stdClass
-    {
-        return block_core_navigation_update_ignore_hooked_blocks_meta($post);
-    }
-
-/**
  * Hooks into the REST API response for the core/navigation block and adds the first and last inner blocks.
  *
  * @since 6.5.0
@@ -15190,7 +14016,7 @@ class NativeWpService implements \WpService\WpService
  * }
  * @return void|string Void if 'echo' argument is true, HTML list of bookmarks if 'echo' is false.
  */
-    public function wpListBookmarks(string|array $args = ''): string
+    public function wpListBookmarks(string|array $args = ''): mixed
     {
         return wp_list_bookmarks($args);
     }
@@ -15715,7 +14541,7 @@ class NativeWpService implements \WpService\WpService
  * @param bool $doRedirect   Optional. Redirect to the new URL.
  * @return string|void The string of the URL, if redirect needed.
  */
-    public function redirectCanonical(string $requestedUrl = null, bool $doRedirect = true): string
+    public function redirectCanonical(string $requestedUrl = null, bool $doRedirect = true): mixed
     {
         return redirect_canonical($requestedUrl, $doRedirect);
     }
@@ -15958,7 +14784,7 @@ class NativeWpService implements \WpService\WpService
  *                             e.g. array( 'edit_posts' => true, 'delete_posts' => false ).
  * @return \WP_Role|void WP_Role object, if the role is added.
  */
-    public function addRole(string $role, string $displayName, array $capabilities = []): \WP_Role
+    public function addRole(string $role, string $displayName, array $capabilities = []): mixed
     {
         return add_role($role, $displayName, $capabilities);
     }
@@ -16340,7 +15166,7 @@ class NativeWpService implements \WpService\WpService
  * @return void|string|false Void if 'echo' argument is true, HTML list of categories if 'echo' is false.
  *                           False if the taxonomy does not exist.
  */
-    public function wpListCategories(array|string $args = ''): string|false
+    public function wpListCategories(array|string $args = ''): mixed
     {
         return wp_list_categories($args);
     }
@@ -16371,7 +15197,7 @@ class NativeWpService implements \WpService\WpService
  * @return void|string|string[] Void if 'echo' argument is true, or on failure. Otherwise, tag cloud
  *                              as a string or an array, depending on 'format' argument.
  */
-    public function wpTagCloud(array|string $args = ''): string|array
+    public function wpTagCloud(array|string $args = ''): mixed
     {
         return wp_tag_cloud($args);
     }
@@ -16634,7 +15460,7 @@ class NativeWpService implements \WpService\WpService
  * @param string $after    Optional. String to use after the terms. Default empty.
  * @return void|false Void on success, false on failure.
  */
-    public function theTerms(int $postId, string $taxonomy, string $before = '', string $sep = ', ', string $after = ''): false
+    public function theTerms(int $postId, string $taxonomy, string $before = '', string $sep = ', ', string $after = ''): mixed
     {
         return the_terms($postId, $taxonomy, $before, $sep, $after);
     }
@@ -17278,7 +16104,7 @@ class NativeWpService implements \WpService\WpService
  *                                   Default true.
  * @return void|string Void if `$display` argument is true, comment classes if `$display` is false.
  */
-    public function commentClass(string|array $cssClass = '', int|\WP_Comment $comment = null, int|\WP_Post $post = null, bool $display = true): string
+    public function commentClass(string|array $cssClass = '', int|\WP_Comment $comment = null, int|\WP_Post $post = null, bool $display = true): mixed
     {
         return comment_class($cssClass, $comment, $post, $display);
     }
@@ -17615,7 +16441,7 @@ class NativeWpService implements \WpService\WpService
  * @return void|string Should only be used to echo the trackback URL, use get_trackback_url()
  *                     for the result instead.
  */
-    public function trackbackUrl(bool $deprecatedEcho = true): string
+    public function trackbackUrl(bool $deprecatedEcho = true): mixed
     {
         return trackback_url($deprecatedEcho);
     }
@@ -17974,7 +16800,7 @@ class NativeWpService implements \WpService\WpService
  * @return void|string Void if 'echo' argument is true, or no comments to list.
  *                     Otherwise, HTML list of comments.
  */
-    public function wpListComments(string|array $args = [], array $comments = null): string
+    public function wpListComments(string|array $args = [], array $comments = null): mixed
     {
         return wp_list_comments($args, $comments);
     }
@@ -18932,7 +17758,7 @@ class NativeWpService implements \WpService\WpService
  * @return bool|void True on success, false on failure or if post with ID does
  *                   not exist.
  */
-    public function wpUpdateCommentCount(int|null $postId, bool $doDeferred = false): bool
+    public function wpUpdateCommentCount(int|null $postId, bool $doDeferred = false): mixed
     {
         return wp_update_comment_count($postId, $doDeferred);
     }
@@ -19022,7 +17848,7 @@ class NativeWpService implements \WpService\WpService
  * @param int|\WP_Post $post Post ID or object to do trackbacks on.
  * @return void|false Returns false on failure.
  */
-    public function doTrackbacks(int|\WP_Post $post): false
+    public function doTrackbacks(int|\WP_Post $post): mixed
     {
         return do_trackbacks($post);
     }
@@ -19082,7 +17908,7 @@ class NativeWpService implements \WpService\WpService
  * @param int $postId       Post ID.
  * @return int|false|void Database query from update.
  */
-    public function trackback(string $trackbackUrl, string $title, string $excerpt, int $postId): int|false
+    public function trackback(string $trackbackUrl, string $title, string $excerpt, int $postId): mixed
     {
         return trackback($trackbackUrl, $title, $excerpt, $postId);
     }
@@ -19527,7 +18353,7 @@ class NativeWpService implements \WpService\WpService
  *                        events needed to be spawned), false if spawning fails for one or more events or
  *                        void if the function registered _wp_cron() to run on the action.
  */
-    public function wpCron(): false|int
+    public function wpCron(): mixed
     {
         return wp_cron();
     }
@@ -22811,7 +21637,7 @@ class NativeWpService implements \WpService\WpService
  * @param string $color
  * @return string|void
  */
-    public function sanitizeHexColor(string $color): string
+    public function sanitizeHexColor(string $color): mixed
     {
         return sanitize_hex_color($color);
     }
@@ -23236,7 +22062,7 @@ class NativeWpService implements \WpService\WpService
  * @param int|\WP_Post $post    Post ID or post object.
  * @return void|false Void on success, false if the post is not found.
  */
-    public function doEnclose(string|null $content, int|\WP_Post $post): false
+    public function doEnclose(string|null $content, int|\WP_Post $post): mixed
     {
         return do_enclose($content, $post);
     }
@@ -24011,7 +22837,7 @@ class NativeWpService implements \WpService\WpService
  * @param string $ext The extension to search.
  * @return string|void The file type, example: audio, video, document, spreadsheet, etc.
  */
-    public function wpExt2type(string $ext): string
+    public function wpExt2type(string $ext): mixed
     {
         return wp_ext2type($ext);
     }
@@ -24972,49 +23798,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Finds hierarchy loops using a callback function that maps object IDs to parent IDs.
- *
- * @since 3.1.0
- * @access private
- *
- * @param callable $callback      Function that accepts ( ID, $callback_args ) and outputs parent_ID.
- * @param int $start         The ID to start the loop check at.
- * @param int $startParent  The parent_ID of $start to use instead of calling $callback( $start ).
- *                                Use null to always use $callback.
- * @param array $callbackArgs Optional. Additional arguments to send to $callback. Default empty array.
- * @return array IDs of all members of loop.
- */
-    public function wpFindHierarchyLoop(callable $callback, int $start, int $startParent, array $callbackArgs = []): array
-    {
-        return wp_find_hierarchy_loop($callback, $start, $startParent, $callbackArgs);
-    }
-
-/**
- * Uses the "The Tortoise and the Hare" algorithm to detect loops.
- *
- * For every step of the algorithm, the hare takes two steps and the tortoise one.
- * If the hare ever laps the tortoise, there must be a loop.
- *
- * @since 3.1.0
- * @access private
- *
- * @param callable $callback      Function that accepts ( ID, callback_arg, ... ) and outputs parent_ID.
- * @param int $start         The ID to start the loop check at.
- * @param array $override      Optional. An array of ( ID => parent_ID, ... ) to use instead of $callback.
- *                                Default empty array.
- * @param array $callbackArgs Optional. Additional arguments to send to $callback. Default empty array.
- * @param bool $returnLoop  Optional. Return loop members or just detect presence of loop? Only set
- *                                to true if you already know the given $start is part of a loop (otherwise
- *                                the returned array might include branches). Default false.
- * @return mixed Scalar ID of some arbitrary member of the loop, or array of IDs of all members of loop if
- *               $_return_loop
- */
-    public function wpFindHierarchyLoopTortoiseHare(callable $callback, int $start, array $override = [], array $callbackArgs = [], bool $returnLoop = false): mixed
-    {
-        return wp_find_hierarchy_loop_tortoise_hare($callback, $start, $override, $callbackArgs, $returnLoop);
-    }
-
-/**
  * Sends a HTTP header to limit rendering of pages to same origin iframes.
  *
  * @since 3.1.3
@@ -25539,23 +24322,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Gets the default URL to learn more about updating the PHP version the site is running on.
- *
- * Do not use this function to retrieve this URL. Instead, use {@see wp_get_update_php_url()} when relying on the URL.
- * This function does not allow modifying the returned URL, and is only used to compare the actually used URL with the
- * default one.
- *
- * @since 5.1.0
- * @access private
- *
- * @return string Default URL to learn more about updating PHP.
- */
-    public function wpGetDefaultUpdatePhpUrl(): string
-    {
-        return wp_get_default_update_php_url();
-    }
-
-/**
  * Prints the default annotation for the web host altering the "Update PHP" page URL.
  *
  * This function is to be used after {@see wp_get_update_php_url()} to display a consistent
@@ -25571,7 +24337,7 @@ class NativeWpService implements \WpService\WpService
  *
  * @return string|void
  */
-    public function wpUpdatePhpAnnotation(string $before = '<p class="description">', string $after = '</p>', bool $display = true): string
+    public function wpUpdatePhpAnnotation(string $before = '<p class="description">', string $after = '</p>', bool $display = true): mixed
     {
         return wp_update_php_annotation($before, $after, $display);
     }
@@ -25636,23 +24402,6 @@ class NativeWpService implements \WpService\WpService
     public function wpGetUpdateHttpsUrl(): string
     {
         return wp_get_update_https_url();
-    }
-
-/**
- * Gets the default URL to learn more about updating the site to use HTTPS.
- *
- * Do not use this function to retrieve this URL. Instead, use {@see wp_get_update_https_url()} when relying on the URL.
- * This function does not allow modifying the returned URL, and is only used to compare the actually used URL with the
- * default one.
- *
- * @since 5.7.0
- * @access private
- *
- * @return string Default URL to learn more about updating to HTTPS.
- */
-    public function wpGetDefaultUpdateHttpsUrl(): string
-    {
-        return wp_get_default_update_https_url();
     }
 
 /**
@@ -26279,7 +25028,7 @@ class NativeWpService implements \WpService\WpService
  *                     Default empty array.
  * @return void|false Void on success, false if the template does not exist.
  */
-    public function getHeader(string $name = null, array $args = []): false
+    public function getHeader(string $name = null, array $args = []): mixed
     {
         return get_header($name, $args);
     }
@@ -26302,7 +25051,7 @@ class NativeWpService implements \WpService\WpService
  *                     Default empty array.
  * @return void|false Void on success, false if the template does not exist.
  */
-    public function getFooter(string $name = null, array $args = []): false
+    public function getFooter(string $name = null, array $args = []): mixed
     {
         return get_footer($name, $args);
     }
@@ -26325,7 +25074,7 @@ class NativeWpService implements \WpService\WpService
  *                     Default empty array.
  * @return void|false Void on success, false if the template does not exist.
  */
-    public function getSidebar(string $name = null, array $args = []): false
+    public function getSidebar(string $name = null, array $args = []): mixed
     {
         return get_sidebar($name, $args);
     }
@@ -26356,7 +25105,7 @@ class NativeWpService implements \WpService\WpService
  *                          Default empty array.
  * @return void|false Void on success, false if the template does not exist.
  */
-    public function getTemplatePart(string $slug, string|null $name = null, array $args = []): false
+    public function getTemplatePart(string $slug, string|null $name = null, array $args = []): mixed
     {
         return get_template_part($slug, $name, $args);
     }
@@ -26391,7 +25140,7 @@ class NativeWpService implements \WpService\WpService
  * }
  * @return void|string Void if 'echo' argument is true, search form HTML if 'echo' is false.
  */
-    public function getSearchForm(array $args = []): string
+    public function getSearchForm(array $args = []): mixed
     {
         return get_search_form($args);
     }
@@ -26408,7 +25157,7 @@ class NativeWpService implements \WpService\WpService
  * @param bool $display  Default to echo and not return the link.
  * @return void|string Void if `$display` argument is true, log in/out link if `$display` is false.
  */
-    public function wpLoginout(string $redirect = '', bool $display = true): string
+    public function wpLoginout(string $redirect = '', bool $display = true): mixed
     {
         return wp_loginout($redirect, $display);
     }
@@ -26491,7 +25240,7 @@ class NativeWpService implements \WpService\WpService
  * }
  * @return void|string Void if 'echo' argument is true, login form HTML if 'echo' is false.
  */
-    public function wpLoginForm(array $args = []): string
+    public function wpLoginForm(array $args = []): mixed
     {
         return wp_login_form($args);
     }
@@ -26523,7 +25272,7 @@ class NativeWpService implements \WpService\WpService
  * @return void|string Void if `$display` argument is true, registration or admin link
  *                     if `$display` is false.
  */
-    public function wpRegister(string $before = '<li>', string $after = '</li>', bool $display = true): string
+    public function wpRegister(string $before = '<li>', string $after = '</li>', bool $display = true): mixed
     {
         return wp_register($before, $after, $display);
     }
@@ -26732,7 +25481,7 @@ class NativeWpService implements \WpService\WpService
  * @param string $seplocation Optional. Location of the separator (either 'left' or 'right').
  * @return string|void String when `$display` is false, nothing otherwise.
  */
-    public function wpTitle(string $sep = '&raquo;', bool $display = true, string $seplocation = ''): string
+    public function wpTitle(string $sep = '&raquo;', bool $display = true, string $seplocation = ''): mixed
     {
         return wp_title($sep, $display, $seplocation);
     }
@@ -26753,7 +25502,7 @@ class NativeWpService implements \WpService\WpService
  * @param bool $display Optional. Whether to display or retrieve title. Default true.
  * @return string|void Title when retrieving.
  */
-    public function singlePostTitle(string $prefix = '', bool $display = true): string
+    public function singlePostTitle(string $prefix = '', bool $display = true): mixed
     {
         return single_post_title($prefix, $display);
     }
@@ -26770,7 +25519,7 @@ class NativeWpService implements \WpService\WpService
  * @param bool $display Optional. Whether to display or retrieve title. Default true.
  * @return string|void Title when retrieving, null when displaying or failure.
  */
-    public function postTypeArchiveTitle(string $prefix = '', bool $display = true): string
+    public function postTypeArchiveTitle(string $prefix = '', bool $display = true): mixed
     {
         return post_type_archive_title($prefix, $display);
     }
@@ -26788,7 +25537,7 @@ class NativeWpService implements \WpService\WpService
  * @param bool $display Optional. Whether to display or retrieve title. Default true.
  * @return string|void Title when retrieving.
  */
-    public function singleCatTitle(string $prefix = '', bool $display = true): string
+    public function singleCatTitle(string $prefix = '', bool $display = true): mixed
     {
         return single_cat_title($prefix, $display);
     }
@@ -26806,7 +25555,7 @@ class NativeWpService implements \WpService\WpService
  * @param bool $display Optional. Whether to display or retrieve title. Default true.
  * @return string|void Title when retrieving.
  */
-    public function singleTagTitle(string $prefix = '', bool $display = true): string
+    public function singleTagTitle(string $prefix = '', bool $display = true): mixed
     {
         return single_tag_title($prefix, $display);
     }
@@ -26824,7 +25573,7 @@ class NativeWpService implements \WpService\WpService
  * @param bool $display Optional. Whether to display or retrieve title. Default true.
  * @return string|void Title when retrieving.
  */
-    public function singleTermTitle(string $prefix = '', bool $display = true): string
+    public function singleTermTitle(string $prefix = '', bool $display = true): mixed
     {
         return single_term_title($prefix, $display);
     }
@@ -26845,7 +25594,7 @@ class NativeWpService implements \WpService\WpService
  * @param bool $display Optional. Whether to display or retrieve title. Default true.
  * @return string|false|void False if there's no valid title for the month. Title when retrieving.
  */
-    public function singleMonthTitle(string $prefix = '', bool $display = true): string|false
+    public function singleMonthTitle(string $prefix = '', bool $display = true): mixed
     {
         return single_month_title($prefix, $display);
     }
@@ -27001,7 +25750,7 @@ class NativeWpService implements \WpService\WpService
  * }
  * @return void|string Void if 'echo' argument is true, archive links if 'echo' is false.
  */
-    public function wpGetArchives(string|array $args = ''): string
+    public function wpGetArchives(string|array $args = ''): mixed
     {
         return wp_get_archives($args);
     }
@@ -27038,7 +25787,7 @@ class NativeWpService implements \WpService\WpService
  * @param bool $display Optional. Whether to display the calendar output. Default true.
  * @return void|string Void if `$display` argument is true, calendar HTML if `$display` is false.
  */
-    public function getCalendar(bool $initial = true, bool $display = true): string
+    public function getCalendar(bool $initial = true, bool $display = true): mixed
     {
         return get_calendar($initial, $display);
     }
@@ -27105,7 +25854,7 @@ class NativeWpService implements \WpService\WpService
  * @param bool $display Optional. Whether to echo the date or return it. Default true.
  * @return string|void String if retrieving.
  */
-    public function theDate(string $format = '', string $before = '', string $after = '', bool $display = true): string
+    public function theDate(string $format = '', string $before = '', string $after = '', bool $display = true): mixed
     {
         return the_date($format, $before, $after, $display);
     }
@@ -27138,7 +25887,7 @@ class NativeWpService implements \WpService\WpService
  * @param bool $display Optional. Whether to echo the date or return it. Default true.
  * @return string|void String if retrieving.
  */
-    public function theModifiedDate(string $format = '', string $before = '', string $after = '', bool $display = true): string
+    public function theModifiedDate(string $format = '', string $before = '', string $after = '', bool $display = true): mixed
     {
         return the_modified_date($format, $before, $after, $display);
     }
@@ -27755,7 +26504,7 @@ class NativeWpService implements \WpService\WpService
  * @return string|string[]|void String of page links or array of page links, depending on 'type' argument.
  *                              Void if total number of pages is less than 2.
  */
-    public function paginateLinks(string|array $args = ''): string|array
+    public function paginateLinks(string|array $args = ''): mixed
     {
         return paginate_links($args);
     }
@@ -27899,7 +26648,7 @@ class NativeWpService implements \WpService\WpService
  * @param string $type The type of generator to return - (html|xhtml|atom|rss2|rdf|comment|export).
  * @return string|void The HTML content for the generator.
  */
-    public function getTheGenerator(string $type = ''): string
+    public function getTheGenerator(string $type = ''): mixed
     {
         return get_the_generator($type);
     }
@@ -28113,20 +26862,6 @@ class NativeWpService implements \WpService\WpService
     public function wpAddGlobalStylesForBlocks(): void
     {
         wp_add_global_styles_for_blocks();
-    }
-
-/**
- * Gets the block name from a given theme.json path.
- *
- * @since 6.3.0
- * @access private
- *
- * @param array $path An array of keys describing the path to a property in theme.json.
- * @return string Identified block name, or empty string if none found.
- */
-    public function wpGetBlockNameFromThemeJsonPath(array $path): string
-    {
-        return wp_get_block_name_from_theme_json_path($path);
     }
 
 /**
@@ -28737,37 +27472,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Runs a remote HTTPS request to detect whether HTTPS supported, and stores potential errors.
- *
- * This internal function is called by a regular Cron hook to ensure HTTPS support is detected and maintained.
- *
- * @since 6.4.0
- * @access private
- */
-    public function wpGetHttpsDetectionErrors(): void
-    {
-        wp_get_https_detection_errors();
-    }
-
-/**
- * Checks whether a given HTML string is likely an output from this WordPress site.
- *
- * This function attempts to check for various common WordPress patterns whether they are included in the HTML string.
- * Since any of these actions may be disabled through third-party code, this function may also return null to indicate
- * that it was not possible to determine ownership.
- *
- * @since 5.7.0
- * @access private
- *
- * @param string $html Full HTML output string, e.g. from a HTTP response.
- * @return bool|null True/false for whether HTML was generated by this site, null if unable to determine.
- */
-    public function wpIsLocalHtmlOutput(string $html): bool|null
-    {
-        return wp_is_local_html_output($html);
-    }
-
-/**
  * Checks whether WordPress should replace old HTTP URLs to the site with their HTTPS counterpart.
  *
  * If a WordPress site had its URL changed from HTTP to HTTPS, by default this will return `true`, causing WordPress to
@@ -28812,24 +27516,6 @@ class NativeWpService implements \WpService\WpService
     public function wpUpdateUrlsToHttps(): bool
     {
         return wp_update_urls_to_https();
-    }
-
-/**
- * Updates the 'https_migration_required' option if needed when the given URL has been updated from HTTP to HTTPS.
- *
- * If this is a fresh site, a migration will not be required, so the option will be set as `false`.
- *
- * This is hooked into the {@see 'update_option_home'} action.
- *
- * @since 5.7.0
- * @access private
- *
- * @param mixed $oldUrl Previous value of the URL option.
- * @param mixed $newUrl New value of the URL option.
- */
-    public function wpUpdateHttpsMigrationRequired(mixed $oldUrl, mixed $newUrl): void
-    {
-        wp_update_https_migration_required($oldUrl, $newUrl);
     }
 
 /**
@@ -29088,36 +27774,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Callback for `wp_kses_split()` for fixing malformed HTML tags.
- *
- * This function does a lot of work. It rejects some very malformed things like
- * `<:::>`. It returns an empty string, if the element isn't allowed (look ma, no
- * `strip_tags()`!). Otherwise it splits the tag into an element and an attribute
- * list.
- *
- * After the tag is split into an element and an attribute list, it is run
- * through another filter which will remove illegal attributes and once that is
- * completed, will be returned.
- *
- * @access private
- * @ignore
- * @since 1.0.0
- * @since 6.6.0 Recognize additional forms of invalid HTML which convert into comments.
- *
- * @param string $content           Content to filter.
- * @param array[]|string $allowedHtml      An array of allowed HTML elements and attributes,
- *                                          or a context name such as 'post'. See wp_kses_allowed_html()
- *                                          for the list of accepted context names.
- * @param string[] $allowedProtocols Array of allowed URL protocols.
- *
- * @return string Fixed HTML element
- */
-    public function wpKsesSplit2(string $content, array|string $allowedHtml, array $allowedProtocols): string
-    {
-        return wp_kses_split2($content, $allowedHtml, $allowedProtocols);
-    }
-
-/**
  * Removes all attributes, if none are allowed for this element.
  *
  * If some are allowed it calls `wp_kses_hair()` to split them further, and then
@@ -29345,26 +28001,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Callback for `wp_kses_bad_protocol_once()` regular expression.
- *
- * This function processes URL protocols, checks to see if they're in the
- * list of allowed protocols or not, and returns different data depending
- * on the answer.
- *
- * @access private
- * @ignore
- * @since 1.0.0
- *
- * @param string $scheme            URI scheme to check against the list of allowed protocols.
- * @param string[] $allowedProtocols Array of allowed URL protocols.
- * @return string Sanitized content.
- */
-    public function wpKsesBadProtocolOnce2(string $scheme, array $allowedProtocols): string
-    {
-        return wp_kses_bad_protocol_once2($scheme, $allowedProtocols);
-    }
-
-/**
  * Converts and fixes HTML entities.
  *
  * This function normalizes HTML entities. It will convert `AT&T` to the correct
@@ -29422,42 +28058,6 @@ class NativeWpService implements \WpService\WpService
     public function wpKsesXmlNamedEntities(array $matches): string
     {
         return wp_kses_xml_named_entities($matches);
-    }
-
-/**
- * Callback for `wp_kses_normalize_entities()` regular expression.
- *
- * This function helps `wp_kses_normalize_entities()` to only accept 16-bit
- * values and nothing more for `&#number;` entities.
- *
- * @access private
- * @ignore
- * @since 1.0.0
- *
- * @param array $matches `preg_replace_callback()` matches array.
- * @return string Correctly encoded entity.
- */
-    public function wpKsesNormalizeEntities2(array $matches): string
-    {
-        return wp_kses_normalize_entities2($matches);
-    }
-
-/**
- * Callback for `wp_kses_normalize_entities()` for regular expression.
- *
- * This function helps `wp_kses_normalize_entities()` to only accept valid Unicode
- * numeric entities in hex form.
- *
- * @since 2.7.0
- * @access private
- * @ignore
- *
- * @param array $matches `preg_replace_callback()` matches array.
- * @return string Correctly encoded entity.
- */
-    public function wpKsesNormalizeEntities3(array $matches): string
-    {
-        return wp_kses_normalize_entities3($matches);
     }
 
 /**
@@ -30564,23 +29164,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Translates the provided settings value using its i18n schema.
- *
- * @since 5.9.0
- * @access private
- *
- * @param string|string[]|array[]|object $i18nSchema I18n schema for the setting.
- * @param string|string[]|array[] $settings    Value for the settings.
- * @param string $textdomain  Textdomain to use with translations.
- *
- * @return string|string[]|array[] Translated settings.
- */
-    public function translateSettingsUsingI18nSchema(string|array|object $i18nSchema, string|array $settings, string $textdomain): string|array
-    {
-        return translate_settings_using_i18n_schema($i18nSchema, $settings, $textdomain);
-    }
-
-/**
  * Retrieves the list item separator based on the locale.
  *
  * @since 6.0.0
@@ -31004,7 +29587,7 @@ class NativeWpService implements \WpService\WpService
  * @param bool $display Optional. Whether or not to echo the return. Default true.
  * @return string|void HTML content.
  */
-    public function editTermLink(string $link = '', string $before = '', string $after = '', int|\WP_Term|null $term = null, bool $display = true): string
+    public function editTermLink(string $link = '', string $before = '', string $after = '', int|\WP_Term|null $term = null, bool $display = true): mixed
     {
         return edit_term_link($link, $before, $after, $term, $display);
     }
@@ -31159,7 +29742,7 @@ class NativeWpService implements \WpService\WpService
  * @param bool $forceDelete Optional. Whether to bypass Trash and force deletion. Default false.
  * @return string|void The delete post link URL for the given post.
  */
-    public function getDeletePostLink(int|\WP_Post $post = 0, string $deprecated = '', bool $forceDelete = false): string
+    public function getDeletePostLink(int|\WP_Post $post = 0, string $deprecated = '', bool $forceDelete = false): mixed
     {
         return get_delete_post_link($post, $deprecated, $forceDelete);
     }
@@ -31172,7 +29755,7 @@ class NativeWpService implements \WpService\WpService
  * @param int|\WP_Comment $commentId Optional. Comment ID or WP_Comment object.
  * @return string|void The edit comment link URL for the given comment.
  */
-    public function getEditCommentLink(int|\WP_Comment $commentId = 0): string
+    public function getEditCommentLink(int|\WP_Comment $commentId = 0): mixed
     {
         return get_edit_comment_link($commentId);
     }
@@ -31199,7 +29782,7 @@ class NativeWpService implements \WpService\WpService
  * @param int|\stdClass $link Optional. Bookmark ID. Default is the ID of the current bookmark.
  * @return string|void The edit bookmark link URL.
  */
-    public function getEditBookmarkLink(int|\stdClass $link = 0): string
+    public function getEditBookmarkLink(int|\stdClass $link = 0): mixed
     {
         return get_edit_bookmark_link($link);
     }
@@ -31309,7 +29892,7 @@ class NativeWpService implements \WpService\WpService
  * @param string $taxonomy       Optional. Taxonomy, if `$in_same_term` is true. Default 'category'.
  * @return string|void The adjacent post relational link URL.
  */
-    public function getAdjacentPostRelLink(string $title = '%title', bool $inSameTerm = false, array|string $excludedTerms = '', bool $previous = true, string $taxonomy = 'category'): string
+    public function getAdjacentPostRelLink(string $title = '%title', bool $inSameTerm = false, array|string $excludedTerms = '', bool $previous = true, string $taxonomy = 'category'): mixed
     {
         return get_adjacent_post_rel_link($title, $inSameTerm, $excludedTerms, $previous, $taxonomy);
     }
@@ -31559,7 +30142,7 @@ class NativeWpService implements \WpService\WpService
  * @param int $maxPage Optional. Max pages. Default 0.
  * @return string|void The link URL for next posts page.
  */
-    public function getNextPostsPageLink(int $maxPage = 0): string
+    public function getNextPostsPageLink(int $maxPage = 0): mixed
     {
         return get_next_posts_page_link($maxPage);
     }
@@ -31573,7 +30156,7 @@ class NativeWpService implements \WpService\WpService
  * @param bool $display  Optional. Whether to echo the link. Default true.
  * @return string|void The link URL for next posts page if `$display = false`.
  */
-    public function nextPosts(int $maxPage = 0, bool $display = true): string
+    public function nextPosts(int $maxPage = 0, bool $display = true): mixed
     {
         return next_posts($maxPage, $display);
     }
@@ -31590,7 +30173,7 @@ class NativeWpService implements \WpService\WpService
  * @param int $maxPage Optional. Max pages. Default 0.
  * @return string|void HTML-formatted next posts page link.
  */
-    public function getNextPostsLink(string $label = null, int $maxPage = 0): string
+    public function getNextPostsLink(string $label = null, int $maxPage = 0): mixed
     {
         return get_next_posts_link($label, $maxPage);
     }
@@ -31621,7 +30204,7 @@ class NativeWpService implements \WpService\WpService
  *
  * @return string|void The link for the previous posts page.
  */
-    public function getPreviousPostsPageLink(): string
+    public function getPreviousPostsPageLink(): mixed
     {
         return get_previous_posts_page_link();
     }
@@ -31634,7 +30217,7 @@ class NativeWpService implements \WpService\WpService
  * @param bool $display Optional. Whether to echo the link. Default true.
  * @return string|void The previous posts page link if `$display = false`.
  */
-    public function previousPosts(bool $display = true): string
+    public function previousPosts(bool $display = true): mixed
     {
         return previous_posts($display);
     }
@@ -31649,7 +30232,7 @@ class NativeWpService implements \WpService\WpService
  * @param string $label Optional. Previous page link text.
  * @return string|void HTML-formatted previous page link.
  */
-    public function getPreviousPostsLink(string $label = null): string
+    public function getPreviousPostsLink(string $label = null): mixed
     {
         return get_previous_posts_link($label);
     }
@@ -31853,7 +30436,7 @@ class NativeWpService implements \WpService\WpService
  * @param int $maxPage Optional. Max page. Default 0.
  * @return string|void HTML-formatted link for the next page of comments.
  */
-    public function getNextCommentsLink(string $label = '', int $maxPage = 0): string
+    public function getNextCommentsLink(string $label = '', int $maxPage = 0): mixed
     {
         return get_next_comments_link($label, $maxPage);
     }
@@ -31879,7 +30462,7 @@ class NativeWpService implements \WpService\WpService
  * @param string $label Optional. Label for comments link text. Default empty.
  * @return string|void HTML-formatted link for the previous page of comments.
  */
-    public function getPreviousCommentsLink(string $label = ''): string
+    public function getPreviousCommentsLink(string $label = ''): mixed
     {
         return get_previous_comments_link($label);
     }
@@ -31910,7 +30493,7 @@ class NativeWpService implements \WpService\WpService
  *                           Otherwise, markup for comment page links or array of comment page links,
  *                           depending on 'type' argument.
  */
-    public function paginateCommentsLinks(string|array $args = []): string|array
+    public function paginateCommentsLinks(string|array $args = []): mixed
     {
         return paginate_comments_links($args);
     }
@@ -32637,20 +31220,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Fixes `$_SERVER` variables for various setups.
- *
- * @since 3.0.0
- * @access private
- *
- * @global string $PHP_SELF The filename of the currently executing script,
- *                          relative to the document root.
- */
-    public function wpFixServerVars(): void
-    {
-        wp_fix_server_vars();
-    }
-
-/**
  * Populates the Basic Auth server details from the Authorization header.
  *
  * Some servers running in CGI or FastCGI mode don't pass the Authorization
@@ -32662,23 +31231,6 @@ class NativeWpService implements \WpService\WpService
     public function wpPopulateBasicAuthFromAuthorizationHeader(): void
     {
         wp_populate_basic_auth_from_authorization_header();
-    }
-
-/**
- * Checks for the required PHP version, and the mysqli extension or
- * a database drop-in.
- *
- * Dies if requirements are not met.
- *
- * @since 3.0.0
- * @access private
- *
- * @global string $required_php_version The required PHP version string.
- * @global string $wp_version           The WordPress version string.
- */
-    public function wpCheckPhpMysqlVersions(): void
-    {
-        wp_check_php_mysql_versions();
     }
 
 /**
@@ -32741,20 +31293,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Dies with a maintenance message when conditions are met.
- *
- * The default message can be replaced by using a drop-in (maintenance.php in
- * the wp-content directory).
- *
- * @since 3.0.0
- * @access private
- */
-    public function wpMaintenance(): void
-    {
-        wp_maintenance();
-    }
-
-/**
  * Checks if maintenance mode is enabled.
  *
  * Checks for a file in the WordPress root directory named ".maintenance".
@@ -32788,22 +31326,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Starts the WordPress micro-timer.
- *
- * @since 0.71
- * @access private
- *
- * @global float $timestart Unix timestamp set at the beginning of the page load.
- * @see timer_stop()
- *
- * @return bool Always returns true.
- */
-    public function timerStart(): bool
-    {
-        return timer_start();
-    }
-
-/**
  * Retrieves or displays the time from the page start to when function is called.
  *
  * @since 0.71
@@ -32824,61 +31346,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Sets PHP error reporting based on WordPress debug settings.
- *
- * Uses three constants: `WP_DEBUG`, `WP_DEBUG_DISPLAY`, and `WP_DEBUG_LOG`.
- * All three can be defined in wp-config.php. By default, `WP_DEBUG` and
- * `WP_DEBUG_LOG` are set to false, and `WP_DEBUG_DISPLAY` is set to true.
- *
- * When `WP_DEBUG` is true, all PHP notices are reported. WordPress will also
- * display internal notices: when a deprecated WordPress function, function
- * argument, or file is used. Deprecated code may be removed from a later
- * version.
- *
- * It is strongly recommended that plugin and theme developers use `WP_DEBUG`
- * in their development environments.
- *
- * `WP_DEBUG_DISPLAY` and `WP_DEBUG_LOG` perform no function unless `WP_DEBUG`
- * is true.
- *
- * When `WP_DEBUG_DISPLAY` is true, WordPress will force errors to be displayed.
- * `WP_DEBUG_DISPLAY` defaults to true. Defining it as null prevents WordPress
- * from changing the global configuration setting. Defining `WP_DEBUG_DISPLAY`
- * as false will force errors to be hidden.
- *
- * When `WP_DEBUG_LOG` is true, errors will be logged to `wp-content/debug.log`.
- * When `WP_DEBUG_LOG` is a valid path, errors will be logged to the specified file.
- *
- * Errors are never displayed for XML-RPC, REST, `ms-files.php`, and Ajax requests.
- *
- * @since 3.0.0
- * @since 5.1.0 `WP_DEBUG_LOG` can be a file path.
- * @access private
- */
-    public function wpDebugMode(): void
-    {
-        wp_debug_mode();
-    }
-
-/**
- * Sets the location of the language directory.
- *
- * To set directory manually, define the `WP_LANG_DIR` constant
- * in wp-config.php.
- *
- * If the language directory exists within `WP_CONTENT_DIR`, it
- * is used. Otherwise the language directory is assumed to live
- * in `WPINC`.
- *
- * @since 3.0.0
- * @access private
- */
-    public function wpSetLangDir(): void
-    {
-        wp_set_lang_dir();
-    }
-
-/**
  * Loads the database class file and instantiates the `$wpdb` global.
  *
  * @since 2.5.0
@@ -32888,23 +31355,6 @@ class NativeWpService implements \WpService\WpService
     public function requireWpDb(): void
     {
         require_wp_db();
-    }
-
-/**
- * Sets the database table prefix and the format specifiers for database
- * table columns.
- *
- * Columns not listed here default to `%s`.
- *
- * @since 3.0.0
- * @access private
- *
- * @global wpdb   $wpdb         WordPress database abstraction object.
- * @global string $table_prefix The database table prefix.
- */
-    public function wpSetWpdbVars(): void
-    {
-        wp_set_wpdb_vars();
     }
 
 /**
@@ -32924,71 +31374,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Starts the WordPress object cache.
- *
- * If an object-cache.php file exists in the wp-content directory,
- * it uses that drop-in as an external object cache.
- *
- * @since 3.0.0
- * @access private
- *
- * @global array $wp_filter Stores all of the filters.
- */
-    public function wpStartObjectCache(): void
-    {
-        wp_start_object_cache();
-    }
-
-/**
- * Redirects to the installer if WordPress is not installed.
- *
- * Dies with an error message when Multisite is enabled.
- *
- * @since 3.0.0
- * @access private
- */
-    public function wpNotInstalled(): void
-    {
-        wp_not_installed();
-    }
-
-/**
- * Retrieves an array of must-use plugin files.
- *
- * The default directory is wp-content/mu-plugins. To change the default
- * directory manually, define `WPMU_PLUGIN_DIR` and `WPMU_PLUGIN_URL`
- * in wp-config.php.
- *
- * @since 3.0.0
- * @access private
- *
- * @return string[] Array of absolute paths of files to include.
- */
-    public function wpGetMuPlugins(): array
-    {
-        return wp_get_mu_plugins();
-    }
-
-/**
- * Retrieves an array of active and valid plugin files.
- *
- * While upgrading or installing WordPress, no plugins are returned.
- *
- * The default directory is `wp-content/plugins`. To change the default
- * directory manually, define `WP_PLUGIN_DIR` and `WP_PLUGIN_URL`
- * in `wp-config.php`.
- *
- * @since 3.0.0
- * @access private
- *
- * @return string[] Array of paths to plugin files relative to the plugins directory.
- */
-    public function wpGetActiveAndValidPlugins(): array
-    {
-        return wp_get_active_and_valid_plugins();
-    }
-
-/**
  * Filters a given list of plugins, removing any paused plugins from it.
  *
  * @since 5.2.0
@@ -33001,25 +31386,6 @@ class NativeWpService implements \WpService\WpService
     public function wpSkipPausedPlugins(array $plugins): array
     {
         return wp_skip_paused_plugins($plugins);
-    }
-
-/**
- * Retrieves an array of active and valid themes.
- *
- * While upgrading or installing WordPress, no themes are returned.
- *
- * @since 5.1.0
- * @access private
- *
- * @global string $pagenow            The filename of the current screen.
- * @global string $wp_stylesheet_path Path to current theme's stylesheet directory.
- * @global string $wp_template_path   Path to current theme's template directory.
- *
- * @return string[] Array of absolute paths to theme directories.
- */
-    public function wpGetActiveAndValidThemes(): array
-    {
-        return wp_get_active_and_valid_themes();
     }
 
 /**
@@ -33075,45 +31441,6 @@ class NativeWpService implements \WpService\WpService
     public function isProtectedAjaxAction(): bool
     {
         return is_protected_ajax_action();
-    }
-
-/**
- * Sets internal encoding.
- *
- * In most cases the default internal encoding is latin1, which is
- * of no use, since we want to use the `mb_` functions for `utf-8` strings.
- *
- * @since 3.0.0
- * @access private
- */
-    public function wpSetInternalEncoding(): void
-    {
-        wp_set_internal_encoding();
-    }
-
-/**
- * Adds magic quotes to `$_GET`, `$_POST`, `$_COOKIE`, and `$_SERVER`.
- *
- * Also forces `$_REQUEST` to be `$_GET + $_POST`. If `$_SERVER`,
- * `$_COOKIE`, or `$_ENV` are needed, use those superglobals directly.
- *
- * @since 3.0.0
- * @access private
- */
-    public function wpMagicQuotes(): void
-    {
-        wp_magic_quotes();
-    }
-
-/**
- * Runs just before PHP shuts down execution.
- *
- * @since 1.2.0
- * @access private
- */
-    public function shutdownActionHook(): void
-    {
-        shutdown_action_hook();
     }
 
 /**
@@ -33247,27 +31574,6 @@ class NativeWpService implements \WpService\WpService
     public function getCurrentNetworkId(): int
     {
         return get_current_network_id();
-    }
-
-/**
- * Attempts an early load of translations.
- *
- * Used for errors encountered during the initial loading process, before
- * the locale has been properly detected and loaded.
- *
- * Designed for unusual load sequences (like setup-config.php) or for when
- * the script will then terminate with an error, otherwise there is a risk
- * that a file can be double-included.
- *
- * @since 3.4.0
- * @access private
- *
- * @global WP_Textdomain_Registry $wp_textdomain_registry WordPress Textdomain Registry.
- * @global WP_Locale              $wp_locale              WordPress date and time locale object.
- */
-    public function wpLoadTranslationsEarly(): void
-    {
-        wp_load_translations_early();
     }
 
 /**
@@ -34419,7 +32725,7 @@ class NativeWpService implements \WpService\WpService
  * @param string $content Shortcode content.
  * @return string|void HTML content to display audio.
  */
-    public function wpAudioShortcode(array $attr, string $content = ''): string
+    public function wpAudioShortcode(array $attr, string $content = ''): mixed
     {
         return wp_audio_shortcode($attr, $content);
     }
@@ -34464,7 +32770,7 @@ class NativeWpService implements \WpService\WpService
  * @param string $content Shortcode content.
  * @return string|void HTML content to display video.
  */
-    public function wpVideoShortcode(array $attr, string $content = ''): string
+    public function wpVideoShortcode(array $attr, string $content = ''): mixed
     {
         return wp_video_shortcode($attr, $content);
     }
@@ -34760,7 +33066,7 @@ class NativeWpService implements \WpService\WpService
  * }
  *
  */
-    public function wpPrepareAttachmentForJs(int|\WP_Post $attachment): array
+    public function wpPrepareAttachmentForJs(int|\WP_Post $attachment): mixed
     {
         return wp_prepare_attachment_for_js($attachment);
     }
@@ -35054,50 +33360,6 @@ class NativeWpService implements \WpService\WpService
     public function wpOmitLoadingAttrThreshold(bool $force = false): int
     {
         return wp_omit_loading_attr_threshold($force);
-    }
-
-/**
- * Increases an internal content media count variable.
- *
- * @since 5.9.0
- * @access private
- *
- * @param int $amount Optional. Amount to increase by. Default 1.
- * @return int The latest content media count, after the increase.
- */
-    public function wpIncreaseContentMediaCount(int $amount = 1): int
-    {
-        return wp_increase_content_media_count($amount);
-    }
-
-/**
- * Determines whether to add `fetchpriority='high'` to loading attributes.
- *
- * @since 6.3.0
- * @access private
- *
- * @param array $loadingAttrs Array of the loading optimization attributes for the element.
- * @param string $tagName      The tag name.
- * @param array $attr          Array of the attributes for the element.
- * @return array Updated loading optimization attributes for the element.
- */
-    public function wpMaybeAddFetchpriorityHighAttr(array $loadingAttrs, string $tagName, array $attr): array
-    {
-        return wp_maybe_add_fetchpriority_high_attr($loadingAttrs, $tagName, $attr);
-    }
-
-/**
- * Accesses a flag that indicates if an element is a possible candidate for `fetchpriority='high'`.
- *
- * @since 6.3.0
- * @access private
- *
- * @param bool $value Optional. Used to change the static variable. Default null.
- * @return bool Returns true if high-priority element was marked already, otherwise false.
- */
-    public function wpHighPriorityElementFlag(bool $value = null): bool
-    {
-        return wp_high_priority_element_flag($value);
     }
 
 /**
@@ -36024,7 +34286,7 @@ class NativeWpService implements \WpService\WpService
  * @param int $userId The unique ID of the user
  * @return \WP_Site|void The blog object
  */
-    public function getActiveBlogForUser(int $userId): \WP_Site
+    public function getActiveBlogForUser(int $userId): mixed
     {
         return get_active_blog_for_user($userId);
     }
@@ -36711,7 +34973,7 @@ class NativeWpService implements \WpService\WpService
  * @return true|\WP_Error|void True on success or a WP_Error object if the user doesn't exist
  *                            or could not be added. Void if $details array was not provided.
  */
-    public function addExistingUserToBlog(array|false $details = false): true|\WP_Error
+    public function addExistingUserToBlog(array|false $details = false): mixed
     {
         return add_existing_user_to_blog($details);
     }
@@ -37044,22 +35306,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Returns array of network plugin files to be included in global scope.
- *
- * The default directory is wp-content/plugins. To change the default directory
- * manually, define `WP_PLUGIN_DIR` and `WP_PLUGIN_URL` in `wp-config.php`.
- *
- * @access private
- * @since 3.1.0
- *
- * @return string[] Array of absolute paths to files to include.
- */
-    public function wpGetActiveNetworkPlugins(): array
-    {
-        return wp_get_active_network_plugins();
-    }
-
-/**
  * Checks status of current blog.
  *
  * Checks if the blog is deleted, inactive, archived, or spammed.
@@ -37117,60 +35363,6 @@ class NativeWpService implements \WpService\WpService
     public function getSiteByPath(string $domain, string $path, int|null $segments = null): \WP_Site|false
     {
         return get_site_by_path($domain, $path, $segments);
-    }
-
-/**
- * Identifies the network and site of a requested domain and path and populates the
- * corresponding network and site global objects as part of the multisite bootstrap process.
- *
- * Prior to 4.6.0, this was a procedural block in `ms-settings.php`. It was wrapped into
- * a function to facilitate unit tests. It should not be used outside of core.
- *
- * Usually, it's easier to query the site first, which then declares its network.
- * In limited situations, we either can or must find the network first.
- *
- * If a network and site are found, a `true` response will be returned so that the
- * request can continue.
- *
- * If neither a network or site is found, `false` or a URL string will be returned
- * so that either an error can be shown or a redirect can occur.
- *
- * @since 4.6.0
- * @access private
- *
- * @global WP_Network $current_site The current network.
- * @global WP_Site    $current_blog The current site.
- *
- * @param string $domain    The requested domain.
- * @param string $path      The requested path.
- * @param bool $subdomain Optional. Whether a subdomain (true) or subdirectory (false) configuration.
- *                          Default false.
- * @return bool|string True if bootstrap successfully populated `$current_blog` and `$current_site`.
- *                     False if bootstrap could not be properly completed.
- *                     Redirect URL if parts exist, but the request as a whole can not be fulfilled.
- */
-    public function msLoadCurrentSiteAndNetwork(string $domain, string $path, bool $subdomain = false): bool|string
-    {
-        return ms_load_current_site_and_network($domain, $path, $subdomain);
-    }
-
-/**
- * Displays a failure message.
- *
- * Used when a blog's tables do not exist. Checks for a missing $wpdb->site table as well.
- *
- * @access private
- * @since 3.0.0
- * @since 4.4.0 The `$domain` and `$path` parameters were added.
- *
- * @global wpdb $wpdb WordPress database abstraction object.
- *
- * @param string $domain The requested domain for the error to reference.
- * @param string $path   The requested path for the error to reference.
- */
-    public function msNotInstalled(string $domain, string $path): void
-    {
-        ms_not_installed($domain, $path);
     }
 
 /**
@@ -37730,7 +35922,7 @@ class NativeWpService implements \WpService\WpService
  * @return void|string|false Void if 'echo' argument is true, menu output if 'echo' is false.
  *                           False if there are no items or no menu was found.
  */
-    public function wpNavMenu(array $args = []): string|false
+    public function wpNavMenu(array $args = []): mixed
     {
         return wp_nav_menu($args);
     }
@@ -38473,53 +36665,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- *  Determines the appropriate autoload value for an option based on input.
- *
- *  This function checks the provided autoload value and returns a standardized value
- *  ('on', 'off', 'auto-on', 'auto-off', or 'auto') based on specific conditions.
- *
- * If no explicit autoload value is provided, the function will check for certain heuristics around the given option.
- * It will return `auto-on` to indicate autoloading, `auto-off` to indicate not autoloading, or `auto` if no clear
- * decision could be made.
- *
- * @since 6.6.0
- * @access private
- *
- * @param string $option          The name of the option.
- * @param mixed $value            The value of the option to check its autoload value.
- * @param mixed $serializedValue The serialized value of the option to check its autoload value.
- * @param bool|null $autoload     The autoload value to check.
- *                                Accepts 'on'|true to enable or 'off'|false to disable, or
- *                                'auto-on', 'auto-off', or 'auto' for internal purposes.
- *                                Any other autoload value will be forced to either 'auto-on',
- *                                'auto-off', or 'auto'.
- *                                'yes' and 'no' are supported for backward compatibility.
- * @return string Returns the original $autoload value if explicit, or 'auto-on', 'auto-off',
- *                or 'auto' depending on default heuristics.
- */
-    public function wpDetermineOptionAutoloadValue(string $option, mixed $value, mixed $serializedValue, bool|null $autoload): string
-    {
-        return wp_determine_option_autoload_value($option, $value, $serializedValue, $autoload);
-    }
-
-/**
- * Filters the default autoload value to disable autoloading if the option value is too large.
- *
- * @since 6.6.0
- * @access private
- *
- * @param bool|null $autoload         The default autoload value to set.
- * @param string $option           The passed option name.
- * @param mixed $value            The passed option value to be saved.
- * @param mixed $serializedValue The passed option value to be saved, in serialized form.
- * @return bool|null Potentially modified $default.
- */
-    public function wpFilterDefaultAutoloadValueViaOptionSize(bool|null $autoload, string $option, mixed $value, mixed $serializedValue): bool|null
-    {
-        return wp_filter_default_autoload_value_via_option_size($autoload, $option, $value, $serializedValue);
-    }
-
-/**
  * Deletes a transient.
  *
  * @since 2.8.0
@@ -38664,23 +36809,6 @@ class NativeWpService implements \WpService\WpService
     public function getAllUserSettings(): array
     {
         return get_all_user_settings();
-    }
-
-/**
- * Private. Sets all user interface settings.
- *
- * @since 2.8.0
- * @access private
- *
- * @global array $_updated_user_settings
- *
- * @param array $userSettings User settings.
- * @return bool|null True if set successfully, false if the current user could not be found.
- *                   Null if the current user is not a member of the site.
- */
-    public function wpSetAllUserSettings(array $userSettings): bool|null
-    {
-        return wp_set_all_user_settings($userSettings);
     }
 
 /**
@@ -40567,7 +38695,7 @@ class NativeWpService implements \WpService\WpService
  * @return void|string Void if `$display` argument is true or the title is empty,
  *                     current post title if `$display` is false.
  */
-    public function theTitle(string $before = '', string $after = '', bool $display = true): string
+    public function theTitle(string $before = '', string $after = '', bool $display = true): mixed
     {
         return the_title($before, $after, $display);
     }
@@ -40594,7 +38722,7 @@ class NativeWpService implements \WpService\WpService
  * }
  * @return void|string Void if 'echo' argument is true, the title attribute if 'echo' is false.
  */
-    public function theTitleAttribute(string|array $args = ''): string
+    public function theTitleAttribute(string|array $args = ''): mixed
     {
         return the_title_attribute($args);
     }
@@ -40945,7 +39073,7 @@ class NativeWpService implements \WpService\WpService
  * }
  * @return void|string Void if 'echo' argument is true, HTML list of pages if 'echo' is false.
  */
-    public function wpListPages(array|string $args = ''): string
+    public function wpListPages(array|string $args = ''): mixed
     {
         return wp_list_pages($args);
     }
@@ -40983,7 +39111,7 @@ class NativeWpService implements \WpService\WpService
  * }
  * @return void|string Void if 'echo' argument is true, HTML menu if 'echo' is false.
  */
-    public function wpPageMenu(array|string $args = []): string
+    public function wpPageMenu(array|string $args = []): mixed
     {
         return wp_page_menu($args);
     }
@@ -42033,87 +40161,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Builds an object with all post type labels out of a post type object.
- *
- * Accepted keys of the label array in the post type object:
- *
- * - `name` - General name for the post type, usually plural. The same and overridden
- *          by `$post_type_object->label`. Default is 'Posts' / 'Pages'.
- * - `singular_name` - Name for one object of this post type. Default is 'Post' / 'Page'.
- * - `add_new` - Label for adding a new item. Default is 'Add New Post' / 'Add New Page'.
- * - `add_new_item` - Label for adding a new singular item. Default is 'Add New Post' / 'Add New Page'.
- * - `edit_item` - Label for editing a singular item. Default is 'Edit Post' / 'Edit Page'.
- * - `new_item` - Label for the new item page title. Default is 'New Post' / 'New Page'.
- * - `view_item` - Label for viewing a singular item. Default is 'View Post' / 'View Page'.
- * - `view_items` - Label for viewing post type archives. Default is 'View Posts' / 'View Pages'.
- * - `search_items` - Label for searching plural items. Default is 'Search Posts' / 'Search Pages'.
- * - `not_found` - Label used when no items are found. Default is 'No posts found' / 'No pages found'.
- * - `not_found_in_trash` - Label used when no items are in the Trash. Default is 'No posts found in Trash' /
- *                        'No pages found in Trash'.
- * - `parent_item_colon` - Label used to prefix parents of hierarchical items. Not used on non-hierarchical
- *                       post types. Default is 'Parent Page:'.
- * - `all_items` - Label to signify all items in a submenu link. Default is 'All Posts' / 'All Pages'.
- * - `archives` - Label for archives in nav menus. Default is 'Post Archives' / 'Page Archives'.
- * - `attributes` - Label for the attributes meta box. Default is 'Post Attributes' / 'Page Attributes'.
- * - `insert_into_item` - Label for the media frame button. Default is 'Insert into post' / 'Insert into page'.
- * - `uploaded_to_this_item` - Label for the media frame filter. Default is 'Uploaded to this post' /
- *                           'Uploaded to this page'.
- * - `featured_image` - Label for the featured image meta box title. Default is 'Featured image'.
- * - `set_featured_image` - Label for setting the featured image. Default is 'Set featured image'.
- * - `remove_featured_image` - Label for removing the featured image. Default is 'Remove featured image'.
- * - `use_featured_image` - Label in the media frame for using a featured image. Default is 'Use as featured image'.
- * - `menu_name` - Label for the menu name. Default is the same as `name`.
- * - `filter_items_list` - Label for the table views hidden heading. Default is 'Filter posts list' /
- *                       'Filter pages list'.
- * - `filter_by_date` - Label for the date filter in list tables. Default is 'Filter by date'.
- * - `items_list_navigation` - Label for the table pagination hidden heading. Default is 'Posts list navigation' /
- *                           'Pages list navigation'.
- * - `items_list` - Label for the table hidden heading. Default is 'Posts list' / 'Pages list'.
- * - `item_published` - Label used when an item is published. Default is 'Post published.' / 'Page published.'
- * - `item_published_privately` - Label used when an item is published with private visibility.
- *                              Default is 'Post published privately.' / 'Page published privately.'
- * - `item_reverted_to_draft` - Label used when an item is switched to a draft.
- *                            Default is 'Post reverted to draft.' / 'Page reverted to draft.'
- * - `item_trashed` - Label used when an item is moved to Trash. Default is 'Post trashed.' / 'Page trashed.'
- * - `item_scheduled` - Label used when an item is scheduled for publishing. Default is 'Post scheduled.' /
- *                    'Page scheduled.'
- * - `item_updated` - Label used when an item is updated. Default is 'Post updated.' / 'Page updated.'
- * - `item_link` - Title for a navigation link block variation. Default is 'Post Link' / 'Page Link'.
- * - `item_link_description` - Description for a navigation link block variation. Default is 'A link to a post.' /
- *                             'A link to a page.'
- *
- * Above, the first default value is for non-hierarchical post types (like posts)
- * and the second one is for hierarchical post types (like pages).
- *
- * Note: To set labels used in post type admin notices, see the {@see 'post_updated_messages'} filter.
- *
- * @since 3.0.0
- * @since 4.3.0 Added the `featured_image`, `set_featured_image`, `remove_featured_image`,
- *              and `use_featured_image` labels.
- * @since 4.4.0 Added the `archives`, `insert_into_item`, `uploaded_to_this_item`, `filter_items_list`,
- *              `items_list_navigation`, and `items_list` labels.
- * @since 4.6.0 Converted the `$post_type` parameter to accept a `WP_Post_Type` object.
- * @since 4.7.0 Added the `view_items` and `attributes` labels.
- * @since 5.0.0 Added the `item_published`, `item_published_privately`, `item_reverted_to_draft`,
- *              `item_scheduled`, and `item_updated` labels.
- * @since 5.7.0 Added the `filter_by_date` label.
- * @since 5.8.0 Added the `item_link` and `item_link_description` labels.
- * @since 6.3.0 Added the `item_trashed` label.
- * @since 6.4.0 Changed default values for the `add_new` label to include the type of content.
- *              This matches `add_new_item` and provides more context for better accessibility.
- * @since 6.6.0 Added the `template_name` label.
- *
- * @access private
- *
- * @param object|WP_Post_Type $postTypeObject Post type object.
- * @return object Object with all the labels as member variables.
- */
-    public function getPostTypeLabels(object $postTypeObject): object
-    {
-        return get_post_type_labels($postTypeObject);
-    }
-
-/**
  * Registers support of certain features for a post type.
  *
  * All core features are directly associated with a functional area of the edit
@@ -42489,7 +40536,7 @@ class NativeWpService implements \WpService\WpService
  * @param int $postId Optional. Post ID. Default is the ID of the global `$post`.
  * @return array|void Array of the keys, if retrieved.
  */
-    public function getPostCustomKeys(int $postId = 0): array
+    public function getPostCustomKeys(int $postId = 0): mixed
     {
         return get_post_custom_keys($postId);
     }
@@ -42781,7 +40828,7 @@ class NativeWpService implements \WpService\WpService
  * @param int|\WP_Post|null $post Optional. Post ID or post object. Defaults to global $post.
  * @return true|void
  */
-    public function wpUntrashPostComments(int|\WP_Post|null $post = null): true
+    public function wpUntrashPostComments(int|\WP_Post|null $post = null): mixed
     {
         return wp_untrash_post_comments($post);
     }
@@ -43902,46 +41949,6 @@ class NativeWpService implements \WpService\WpService
     public function wpQueuePostsForTermMetaLazyload(array $posts): void
     {
         wp_queue_posts_for_term_meta_lazyload($posts);
-    }
-
-/**
- * Adds a suffix if any trashed posts have a given slug.
- *
- * Store its desired (i.e. current) slug so it can try to reclaim it
- * if the post is untrashed.
- *
- * For internal use.
- *
- * @since 4.5.0
- * @access private
- *
- * @param string $postName Post slug.
- * @param int $postId   Optional. Post ID that should be ignored. Default 0.
- */
-    public function wpAddTrashedSuffixToPostNameForTrashedPosts(string $postName, int $postId = 0): void
-    {
-        wp_add_trashed_suffix_to_post_name_for_trashed_posts($postName, $postId);
-    }
-
-/**
- * Adds a trashed suffix for a given post.
- *
- * Store its desired (i.e. current) slug so it can try to reclaim it
- * if the post is untrashed.
- *
- * For internal use.
- *
- * @since 4.5.0
- * @access private
- *
- * @global wpdb $wpdb WordPress database abstraction object.
- *
- * @param \WP_Post $post The post.
- * @return string New slug for the post.
- */
-    public function wpAddTrashedSuffixToPostNameForPost(\WP_Post $post): string
-    {
-        return wp_add_trashed_suffix_to_post_name_for_post($post);
     }
 
 /**
@@ -46172,7 +44179,7 @@ class NativeWpService implements \WpService\WpService
  * @param int $postId The ID of the post to save as a revision.
  * @return int|\WP_Error|void Void or 0 if error, new revision ID, if success.
  */
-    public function wpSavePostRevision(int $postId): int|\WP_Error
+    public function wpSavePostRevision(int $postId): mixed
     {
         return wp_save_post_revision($postId);
     }
@@ -47114,7 +45121,7 @@ class NativeWpService implements \WpService\WpService
  *
  * @return array|void
  */
-    public function printLateStyles(): array
+    public function printLateStyles(): mixed
     {
         return print_late_styles();
     }
@@ -47482,41 +45489,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Removes leading and trailing _empty_ script tags.
- *
- * This is a helper meant to be used for literal script tag construction
- * within `wp_get_inline_script_tag()` or `wp_print_inline_script_tag()`.
- * It removes the literal values of "<script>" and "</script>" from
- * around an inline script after trimming whitespace. Typically this
- * is used in conjunction with output buffering, where `ob_get_clean()`
- * is passed as the `$contents` argument.
- *
- * Example:
- *
- *     // Strips exact literal empty SCRIPT tags.
- *     $js = '<script>sayHello();</script>;
- *     'sayHello();' === wp_remove_surrounding_empty_script_tags( $js );
- *
- *     // Otherwise if anything is different it warns in the JS console.
- *     $js = '<script type="text/javascript">console.log( "hi" );</script>';
- *     'console.error( ... )' === wp_remove_surrounding_empty_script_tags( $js );
- *
- * @since 6.4.0
- * @access private
- *
- * @see wp_print_inline_script_tag()
- * @see wp_get_inline_script_tag()
- *
- * @param string $contents Script body with manually created SCRIPT tag literals.
- * @return string Script body without surrounding script tag literals, or
- *                original contents if both exact literals aren't present.
- */
-    public function wpRemoveSurroundingEmptyScriptTags(string $contents): string
-    {
-        return wp_remove_surrounding_empty_script_tags($contents);
-    }
-
-/**
  * Retrieves the main WP_Script_Modules instance.
  *
  * This function provides access to the WP_Script_Modules instance, creating one
@@ -47799,34 +45771,6 @@ class NativeWpService implements \WpService\WpService
     public function getShortcodeRegex(array $tagnames = null): string
     {
         return get_shortcode_regex($tagnames);
-    }
-
-/**
- * Regular Expression callable for do_shortcode() for calling shortcode hook.
- *
- * @see get_shortcode_regex() for details of the match array contents.
- *
- * @since 2.5.0
- * @access private
- *
- * @global array $shortcode_tags
- *
- * @param array $m {
- *     Regular expression match array.
- *
- *     @type string $0 Entire matched shortcode text.
- *     @type string $1 Optional second opening bracket for escaping shortcodes.
- *     @type string $2 Shortcode name.
- *     @type string $3 Shortcode arguments list.
- *     @type string $4 Optional self closing slash.
- *     @type string $5 Content of a shortcode when it wraps some content.
- *     @type string $6 Optional second closing bracket for escaping shortcodes.
- * }
- * @return string Shortcode output.
- */
-    public function doShortcodeTag(array $m): string
-    {
-        return do_shortcode_tag($m);
     }
 
 /**
@@ -49448,7 +47392,7 @@ class NativeWpService implements \WpService\WpService
  * @return void|false Void on success or if the `$object_ids` parameter is empty,
  *                    false if all of the terms in `$object_ids` are already cached.
  */
-    public function updateObjectTermCache(string|array $objectIds, string|array $objectType): false
+    public function updateObjectTermCache(string|array $objectIds, string|array $objectType): mixed
     {
         return update_object_term_cache($objectIds, $objectType);
     }
@@ -50265,22 +48209,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Set a JavaScript constant for theme activation.
- *
- * Sets the JavaScript global WP_BLOCK_THEME_ACTIVATE_NONCE containing the nonce
- * required to activate a theme. For use within the site editor.
- *
- * @see https://github.com/WordPress/gutenberg/pull/41836
- *
- * @since 6.3.0
- * @access private
- */
-    public function wpBlockThemeActivateNonce(): void
-    {
-        wp_block_theme_activate_nonce();
-    }
-
-/**
  * Add filters and actions to enable Block Theme Previews in the Site Editor.
  *
  * The filters and actions should be added after `pluggable.php` is included as they may
@@ -50306,48 +48234,6 @@ class NativeWpService implements \WpService\WpService
     public function wpSetUniqueSlugOnCreateTemplatePart(int $postId): void
     {
         wp_set_unique_slug_on_create_template_part($postId);
-    }
-
-/**
- * Generates a unique slug for templates.
- *
- * @access private
- * @since 5.8.0
- *
- * @param string $overrideSlug The filtered value of the slug (starts as `null` from apply_filter).
- * @param string $slug          The original/un-filtered slug (post_name).
- * @param int $postId       Post ID.
- * @param string $postStatus   No uniqueness checks are made if the post is still draft or pending.
- * @param string $postType     Post type.
- * @return string The original, desired slug.
- */
-    public function wpFilterWpTemplateUniquePostSlug(string $overrideSlug, string $slug, int $postId, string $postStatus, string $postType): string
-    {
-        return wp_filter_wp_template_unique_post_slug($overrideSlug, $slug, $postId, $postStatus, $postType);
-    }
-
-/**
- * Enqueues the skip-link script & styles.
- *
- * @access private
- * @since 6.4.0
- *
- * @global string $_wp_current_template_content
- */
-    public function wpEnqueueBlockTemplateSkipLink(): void
-    {
-        wp_enqueue_block_template_skip_link();
-    }
-
-/**
- * Enables the block templates (editor mode) for themes with theme.json by default.
- *
- * @access private
- * @since 5.8.0
- */
-    public function wpEnableBlockTemplates(): void
-    {
-        wp_enable_block_templates();
     }
 
 /**
@@ -50977,7 +48863,7 @@ class NativeWpService implements \WpService\WpService
  * @return bool|void A single header returns true on success, false on failure.
  *                   There is currently no return value for multiple headers.
  */
-    public function unregisterDefaultHeaders(string|array $header): bool
+    public function unregisterDefaultHeaders(string|array $header): mixed
     {
         return unregister_default_headers($header);
     }
@@ -51341,7 +49227,7 @@ class NativeWpService implements \WpService\WpService
  * @param mixed  ...$args Optional extra arguments to pass along with certain features.
  * @return void|false Void on success, false on failure.
  */
-    public function addThemeSupport(string $feature): false
+    public function addThemeSupport(string $feature): mixed
     {
         return add_theme_support($feature);
     }
@@ -51384,7 +49270,7 @@ class NativeWpService implements \WpService\WpService
  *                        of possible values.
  * @return bool|void Whether feature was removed.
  */
-    public function removeThemeSupport(string $feature): bool
+    public function removeThemeSupport(string $feature): mixed
     {
         return remove_theme_support($feature);
     }
@@ -52416,7 +50302,7 @@ class NativeWpService implements \WpService\WpService
  * @param object|WP_User $user User object or database row to be cached
  * @return void|false Void on success, false on failure.
  */
-    public function updateUserCaches(object $user): false
+    public function updateUserCaches(object $user): mixed
     {
         return update_user_caches($user);
     }
@@ -52995,23 +50881,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Registers the user meta property for persisted preferences.
- *
- * This property is used to store user preferences across page reloads and is
- * currently used by the block editor for preferences like 'fullscreenMode' and
- * 'fixedToolbar'.
- *
- * @since 6.1.0
- * @access private
- *
- * @global wpdb $wpdb WordPress database abstraction object.
- */
-    public function wpRegisterPersistedPreferencesMeta(): void
-    {
-        wp_register_persisted_preferences_meta();
-    }
-
-/**
  * Sets the last changed time for the 'users' cache group.
  *
  * @since 6.3.0
@@ -53258,7 +51127,7 @@ class NativeWpService implements \WpService\WpService
  * @param int|string $id Widget ID.
  * @return string|void Widget description, if available.
  */
-    public function wpWidgetDescription(int|string $id): string
+    public function wpWidgetDescription(int|string $id): mixed
     {
         return wp_widget_description($id);
     }
@@ -53276,7 +51145,7 @@ class NativeWpService implements \WpService\WpService
  * @param string $id sidebar ID.
  * @return string|void Sidebar description, if available.
  */
-    public function wpSidebarDescription(string $id): string
+    public function wpSidebarDescription(string $id): mixed
     {
         return wp_sidebar_description($id);
     }
@@ -53429,26 +51298,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Retrieve full list of sidebars and their widget instance IDs.
- *
- * Will upgrade sidebar widget list, if needed. Will also save updated list, if
- * needed.
- *
- * @since 2.2.0
- * @access private
- *
- * @global array $_wp_sidebars_widgets
- * @global array $sidebars_widgets
- *
- * @param bool $deprecated Not used (argument deprecated).
- * @return array Upgraded list of widgets to version 3 array format when called from the admin.
- */
-    public function wpGetSidebarsWidgets(bool $deprecated = true): array
-    {
-        return wp_get_sidebars_widgets($deprecated);
-    }
-
-/**
  * Retrieves the registered sidebar with the given ID.
  *
  * @since 5.9.0
@@ -53461,35 +51310,6 @@ class NativeWpService implements \WpService\WpService
     public function wpGetSidebar(string $id): array|null
     {
         return wp_get_sidebar($id);
-    }
-
-/**
- * Set the sidebar widget option to update sidebars.
- *
- * @since 2.2.0
- * @access private
- *
- * @global array $_wp_sidebars_widgets
- * @param array $sidebarsWidgets Sidebar widgets and their settings.
- */
-    public function wpSetSidebarsWidgets(array $sidebarsWidgets): void
-    {
-        wp_set_sidebars_widgets($sidebarsWidgets);
-    }
-
-/**
- * Retrieve default registered sidebars list.
- *
- * @since 2.2.0
- * @access private
- *
- * @global array $wp_registered_sidebars The registered sidebars.
- *
- * @return array
- */
-    public function wpGetWidgetDefaults(): array
-    {
-        return wp_get_widget_defaults();
     }
 
 /**
@@ -53644,19 +51464,6 @@ class NativeWpService implements \WpService\WpService
     }
 
 /**
- * Enables the widgets block editor. This is hooked into 'after_setup_theme' so
- * that the block editor is enabled by default but can be disabled by themes.
- *
- * @since 5.8.0
- *
- * @access private
- */
-    public function wpSetupWidgetsBlockEditor(): void
-    {
-        wp_setup_widgets_block_editor();
-    }
-
-/**
  * Whether or not to use the block editor to manage widgets. Defaults to true
  * unless a theme has removed support for widgets-block-editor or a plugin has
  * filtered the return value of this function.
@@ -53739,29 +51546,6 @@ class NativeWpService implements \WpService\WpService
     public function wpRenderWidgetControl(string $id): string|null
     {
         return wp_render_widget_control($id);
-    }
-
-/**
- * Displays a _doing_it_wrong() message for conflicting widget editor scripts.
- *
- * The 'wp-editor' script module is exposed as window.wp.editor. This overrides
- * the legacy TinyMCE editor module which is required by the widgets editor.
- * Because of that conflict, these two shouldn't be enqueued together.
- * See https://core.trac.wordpress.org/ticket/53569.
- *
- * There is also another conflict related to styles where the block widgets
- * editor is hidden if a block enqueues 'wp-edit-post' stylesheet.
- * See https://core.trac.wordpress.org/ticket/53569.
- *
- * @since 5.8.0
- * @access private
- *
- * @global WP_Scripts $wp_scripts
- * @global WP_Styles  $wp_styles
- */
-    public function wpCheckWidgetEditorDeps(): void
-    {
-        wp_check_widget_editor_deps();
     }
 
 /**

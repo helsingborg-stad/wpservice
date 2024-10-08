@@ -15,5 +15,5 @@ interface WpSavePostRevision
  * @param int $postId The ID of the post to save as a revision.
  * @return int|\WP_Error|void Void or 0 if error, new revision ID, if success.
  */
-    public function wpSavePostRevision(int $postId): int|\WP_Error;
+    public function wpSavePostRevision(int $postId): mixed;
 }

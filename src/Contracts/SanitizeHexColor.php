@@ -15,5 +15,5 @@ interface SanitizeHexColor
  * @param string $color
  * @return string|void
  */
-    public function sanitizeHexColor(string $color): string;
+    public function sanitizeHexColor(string $color): mixed;
 }

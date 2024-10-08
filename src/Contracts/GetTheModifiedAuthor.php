@@ -11,5 +11,5 @@ interface GetTheModifiedAuthor
  *
  * @return string|void The author's display name, empty string if unknown.
  */
-    public function getTheModifiedAuthor(): string;
+    public function getTheModifiedAuthor(): mixed;
 }

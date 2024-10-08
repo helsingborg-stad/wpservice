@@ -34,5 +34,5 @@ interface GetSearchForm
  * }
  * @return void|string Void if 'echo' argument is true, search form HTML if 'echo' is false.
  */
-    public function getSearchForm(array $args = []): string;
+    public function getSearchForm(array $args = []): mixed;
 }

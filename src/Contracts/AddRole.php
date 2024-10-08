@@ -15,5 +15,5 @@ interface AddRole
  *                             e.g. array( 'edit_posts' => true, 'delete_posts' => false ).
  * @return \WP_Role|void WP_Role object, if the role is added.
  */
-    public function addRole(string $role, string $displayName, array $capabilities = []): \WP_Role;
+    public function addRole(string $role, string $displayName, array $capabilities = []): mixed;
 }

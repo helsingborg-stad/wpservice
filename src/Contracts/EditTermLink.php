@@ -16,5 +16,5 @@ interface EditTermLink
  * @param bool $display Optional. Whether or not to echo the return. Default true.
  * @return string|void HTML content.
  */
-    public function editTermLink(string $link = '', string $before = '', string $after = '', int|\WP_Term|null $term = null, bool $display = true): string;
+    public function editTermLink(string $link = '', string $before = '', string $after = '', int|\WP_Term|null $term = null, bool $display = true): mixed;
 }

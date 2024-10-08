@@ -14,5 +14,5 @@ interface SiteAdminNotice
  *
  * @return void|false Void on success. False if the current user is not a super admin.
  */
-    public function siteAdminNotice(): false;
+    public function siteAdminNotice(): mixed;
 }

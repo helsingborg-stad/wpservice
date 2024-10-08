@@ -17,5 +17,5 @@ interface SingleTermTitle
  * @param bool $display Optional. Whether to display or retrieve title. Default true.
  * @return string|void Title when retrieving.
  */
-    public function singleTermTitle(string $prefix = '', bool $display = true): string;
+    public function singleTermTitle(string $prefix = '', bool $display = true): mixed;
 }

@@ -18,5 +18,5 @@ interface RemoveThemeSupport
  *                        of possible values.
  * @return bool|void Whether feature was removed.
  */
-    public function removeThemeSupport(string $feature): bool;
+    public function removeThemeSupport(string $feature): mixed;
 }

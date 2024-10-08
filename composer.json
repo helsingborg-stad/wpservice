@@ -38,7 +38,7 @@
             "rm -rf src/Contracts/* || true",
             "rm generate.log || true",
             "XDEBUG_MODE=off php -f generator/generate.php >> generate.log 2>&1",
-            "XDEBUG_MODE=off ./vendor/bin/phpcbf -d memory_limit=1024M -q >> generate.log 2>&1"
+            "@fix"
         ],
         "post-install-cmd": "mv wordpress ./vendor/wordpress"
     },

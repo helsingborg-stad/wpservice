@@ -40,5 +40,5 @@ interface WpLoginForm
  * }
  * @return void|string Void if 'echo' argument is true, login form HTML if 'echo' is false.
  */
-    public function wpLoginForm(array $args = []): string;
+    public function wpLoginForm(array $args = []): mixed;
 }

@@ -17,5 +17,5 @@ interface WpSidebarDescription
  * @param string $id sidebar ID.
  * @return string|void Sidebar description, if available.
  */
-    public function wpSidebarDescription(string $id): string;
+    public function wpSidebarDescription(string $id): mixed;
 }

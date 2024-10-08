@@ -37,5 +37,5 @@ interface WpPageMenu
  * }
  * @return void|string Void if 'echo' argument is true, HTML menu if 'echo' is false.
  */
-    public function wpPageMenu(array|string $args = []): string;
+    public function wpPageMenu(array|string $args = []): mixed;
 }

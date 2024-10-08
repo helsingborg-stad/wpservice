@@ -117,7 +117,7 @@ $allFunctions = array_map(fn($stmt) => CreateFunction::create($stmt, $parameterD
 $functionValidator = IsValidFunction::create();
 $functionValidator = new IsPrivateFunction($functionValidator);
 $functionValidator = new FunctionHasDocBlock($functionValidator);
-// $functionValidator = new IsDuplicateFunction($allFunctions, $functionValidator);
+// TODO: Add validator that checks @deprecated.
 
 $allFunctions = array_filter($allFunctions, fn($function) =>$functionValidator->isValidFunction($function));
 
@@ -128,9 +128,9 @@ $allFunctions = array_map(fn($function) => new ConvertTypedArrayInputTypeToArray
 $allFunctions = array_map(fn($function) => new FunctionWithSanitizedTypes($function), $allFunctions);
 $allFunctions = array_map(fn($function) => new FunctionWithNamespacedTypes($function), $allFunctions);
 $allFunctions = array_map(fn($function) => new FunctionWithoutInvalidVoidReturnType($function), $allFunctions);
-$allFunctions = array_filter($allFunctions, fn($function) => !str_contains($function->getDocBlock(), '@deprecated'));
 
-// $allFunctions = array_filter($allFunctions, fn($function) => $function->getOriginalName() === 'add_action');
+// TODO: Replace with IsValidFunction decorator above.
+$allFunctions = array_filter($allFunctions, fn($function) => !str_contains($function->getDocBlock(), '@deprecated'));
 
 $libPath                    = dirname(__FILE__) . "/../src";
 $contractsPath              = $libPath . "/Contracts";

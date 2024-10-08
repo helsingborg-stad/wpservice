@@ -15,5 +15,5 @@ interface DoTrackbacks
  * @param int|\WP_Post $post Post ID or object to do trackbacks on.
  * @return void|false Returns false on failure.
  */
-    public function doTrackbacks(int|\WP_Post $post): false;
+    public function doTrackbacks(int|\WP_Post $post): mixed;
 }

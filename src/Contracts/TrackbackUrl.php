@@ -13,5 +13,5 @@ interface TrackbackUrl
  * @return void|string Should only be used to echo the trackback URL, use get_trackback_url()
  *                     for the result instead.
  */
-    public function trackbackUrl(bool $deprecatedEcho = true): string;
+    public function trackbackUrl(bool $deprecatedEcho = true): mixed;
 }

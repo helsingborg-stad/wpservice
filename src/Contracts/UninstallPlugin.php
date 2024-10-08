@@ -15,5 +15,5 @@ interface UninstallPlugin
  * @return true|void True if a plugin's uninstall.php file has been found and included.
  *                   Void otherwise.
  */
-    public function uninstallPlugin(string $plugin): true;
+    public function uninstallPlugin(string $plugin): mixed;
 }

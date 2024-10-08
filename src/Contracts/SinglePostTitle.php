@@ -20,5 +20,5 @@ interface SinglePostTitle
  * @param bool $display Optional. Whether to display or retrieve title. Default true.
  * @return string|void Title when retrieving.
  */
-    public function singlePostTitle(string $prefix = '', bool $display = true): string;
+    public function singlePostTitle(string $prefix = '', bool $display = true): mixed;
 }

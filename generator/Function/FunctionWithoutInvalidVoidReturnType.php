@@ -24,8 +24,9 @@ class FunctionWithoutInvalidVoidReturnType implements FunctionInterface
         $returnType = $this->inner->getReturnType();
         $asArray    = explode('|', $returnType);
 
-        if (count($asArray) > 1) {
-            $asArray = array_filter($asArray, fn($item) => $item !== 'void');
+        if (count($asArray) > 1 && in_array('void', $asArray)) {
+            // $asArray = array_filter($asArray, fn($item) => $item !== 'void');
+            $asArray = ['mixed'];
         }
 
         return implode('|', $asArray);

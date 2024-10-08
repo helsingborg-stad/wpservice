@@ -23,5 +23,5 @@ interface DoEnclose
  * @param int|\WP_Post $post    Post ID or post object.
  * @return void|false Void on success, false if the post is not found.
  */
-    public function doEnclose(string|null $content, int|\WP_Post $post): false;
+    public function doEnclose(string|null $content, int|\WP_Post $post): mixed;
 }

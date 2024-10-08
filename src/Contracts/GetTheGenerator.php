@@ -16,5 +16,5 @@ interface GetTheGenerator
  * @param string $type The type of generator to return - (html|xhtml|atom|rss2|rdf|comment|export).
  * @return string|void The HTML content for the generator.
  */
-    public function getTheGenerator(string $type = ''): string;
+    public function getTheGenerator(string $type = ''): mixed;
 }

@@ -46,5 +46,5 @@ interface WpListComments
  * @return void|string Void if 'echo' argument is true, or no comments to list.
  *                     Otherwise, HTML list of comments.
  */
-    public function wpListComments(string|array $args = [], array $comments = null): string;
+    public function wpListComments(string|array $args = [], array $comments = null): mixed;
 }

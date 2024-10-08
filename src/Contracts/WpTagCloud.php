@@ -30,5 +30,5 @@ interface WpTagCloud
  * @return void|string|string[] Void if 'echo' argument is true, or on failure. Otherwise, tag cloud
  *                              as a string or an array, depending on 'format' argument.
  */
-    public function wpTagCloud(array|string $args = ''): string|array;
+    public function wpTagCloud(array|string $args = ''): mixed;
 }

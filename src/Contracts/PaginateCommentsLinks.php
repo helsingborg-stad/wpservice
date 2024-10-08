@@ -18,5 +18,5 @@ interface PaginateCommentsLinks
  *                           Otherwise, markup for comment page links or array of comment page links,
  *                           depending on 'type' argument.
  */
-    public function paginateCommentsLinks(string|array $args = []): string|array;
+    public function paginateCommentsLinks(string|array $args = []): mixed;
 }

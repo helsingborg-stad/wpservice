@@ -22,5 +22,5 @@ interface GetHeader
  *                     Default empty array.
  * @return void|false Void on success, false if the template does not exist.
  */
-    public function getHeader(string $name = null, array $args = []): false;
+    public function getHeader(string $name = null, array $args = []): mixed;
 }

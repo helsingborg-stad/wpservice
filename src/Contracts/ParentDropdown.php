@@ -18,5 +18,5 @@ interface ParentDropdown
  * @param int|\WP_Post $post         Post ID or WP_Post object.
  * @return void|false Void on success, false if the page has no children.
  */
-    public function parentDropdown(int $defaultPage = 0, int $parentPage = 0, int $level = 0, int|\WP_Post $post = null): false;
+    public function parentDropdown(int $defaultPage = 0, int $parentPage = 0, int $level = 0, int|\WP_Post $post = null): mixed;
 }

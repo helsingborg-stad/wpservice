@@ -18,5 +18,5 @@ interface AddExistingUserToBlog
  * @return true|\WP_Error|void True on success or a WP_Error object if the user doesn't exist
  *                            or could not be added. Void if $details array was not provided.
  */
-    public function addExistingUserToBlog(array|false $details = false): true|\WP_Error;
+    public function addExistingUserToBlog(array|false $details = false): mixed;
 }

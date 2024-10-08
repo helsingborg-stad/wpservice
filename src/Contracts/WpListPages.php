@@ -45,5 +45,5 @@ interface WpListPages
  * }
  * @return void|string Void if 'echo' argument is true, HTML list of pages if 'echo' is false.
  */
-    public function wpListPages(array|string $args = ''): string;
+    public function wpListPages(array|string $args = ''): mixed;
 }

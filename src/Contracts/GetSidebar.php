@@ -22,5 +22,5 @@ interface GetSidebar
  *                     Default empty array.
  * @return void|false Void on success, false if the template does not exist.
  */
-    public function getSidebar(string $name = null, array $args = []): false;
+    public function getSidebar(string $name = null, array $args = []): mixed;
 }

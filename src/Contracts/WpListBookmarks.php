@@ -57,5 +57,5 @@ interface WpListBookmarks
  * }
  * @return void|string Void if 'echo' argument is true, HTML list of bookmarks if 'echo' is false.
  */
-    public function wpListBookmarks(string|array $args = ''): string;
+    public function wpListBookmarks(string|array $args = ''): mixed;
 }

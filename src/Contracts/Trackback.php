@@ -19,5 +19,5 @@ interface Trackback
  * @param int $postId       Post ID.
  * @return int|false|void Database query from update.
  */
-    public function trackback(string $trackbackUrl, string $title, string $excerpt, int $postId): int|false;
+    public function trackback(string $trackbackUrl, string $title, string $excerpt, int $postId): mixed;
 }

@@ -13,5 +13,5 @@ interface MaintenanceNag
  *
  * @return void|false
  */
-    public function maintenanceNag(): false;
+    public function maintenanceNag(): mixed;
 }

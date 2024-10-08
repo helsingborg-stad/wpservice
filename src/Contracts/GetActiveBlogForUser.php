@@ -18,5 +18,5 @@ interface GetActiveBlogForUser
  * @param int $userId The unique ID of the user
  * @return \WP_Site|void The blog object
  */
-    public function getActiveBlogForUser(int $userId): \WP_Site;
+    public function getActiveBlogForUser(int $userId): mixed;
 }
