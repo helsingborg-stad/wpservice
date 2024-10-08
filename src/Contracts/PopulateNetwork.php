@@ -23,5 +23,5 @@ interface PopulateNetwork
  * @return true|\WP_Error True on success, or WP_Error on warning (with the installation otherwise successful,
  *                       so the error code must be checked) or failure.
  */
-    public function populateNetwork(int $networkId, string $domain, string $email, string $siteName, string $path, bool $subdomainInstall): true|\WP_Error;
+    public function populateNetwork(int $networkId = 1, string $domain = '', string $email = '', string $siteName = '', string $path = '/', bool $subdomainInstall = false): true|\WP_Error;
 }

@@ -12,5 +12,5 @@ interface GetPostType
  * @param int|\WP_Post|null $post Optional. Post ID or post object. Default is global $post.
  * @return string|false          Post type on success, false on failure.
  */
-    public function getPostType(int|\WP_Post|null $post): string|false;
+    public function getPostType(int|\WP_Post|null $post = null): string|false;
 }

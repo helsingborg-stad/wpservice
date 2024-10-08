@@ -17,5 +17,5 @@ interface GetCommentAuthorLink
  *                                   Default current comment.
  * @return string The comment author name or HTML link for author's URL.
  */
-    public function getCommentAuthorLink(int|\WP_Comment $commentId): string;
+    public function getCommentAuthorLink(int|\WP_Comment $commentId = 0): string;
 }

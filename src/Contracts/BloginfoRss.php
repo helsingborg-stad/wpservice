@@ -17,5 +17,5 @@ interface BloginfoRss
  *
  * @param string $show See get_bloginfo() for possible values.
  */
-    public function bloginfoRss(string $show): void;
+    public function bloginfoRss(string $show = ''): void;
 }

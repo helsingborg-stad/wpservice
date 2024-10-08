@@ -25,5 +25,5 @@ interface DoingFilter
  *                               which checks if any filter is currently being run.
  * @return bool Whether the filter is currently in the stack.
  */
-    public function doingFilter(string|null $hookName): bool;
+    public function doingFilter(string|null $hookName = null): bool;
 }

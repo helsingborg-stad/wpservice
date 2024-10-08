@@ -20,5 +20,5 @@ interface WpUpdateTermCount
  * @param bool $doDeferred Whether to flush the deferred term counts too. Default false.
  * @return bool If no terms will return false, and if successful will return true.
  */
-    public function wpUpdateTermCount(int|array $terms, string $taxonomy, bool $doDeferred): bool;
+    public function wpUpdateTermCount(int|array $terms, string $taxonomy, bool $doDeferred = false): bool;
 }

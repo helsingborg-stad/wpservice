@@ -22,5 +22,5 @@ interface WpNavMenuRemoveMenuItemHasChildrenClass
  * @param int|false $depth     Depth of menu item. Default false ($depth unspecified when filter is called).
  * @return string[] Modified nav menu classes.
  */
-    public function wpNavMenuRemoveMenuItemHasChildrenClass(array $classes, \WP_Post $menuItem, \stdClass|false $args, int|false $depth): array;
+    public function wpNavMenuRemoveMenuItemHasChildrenClass(array $classes, \WP_Post $menuItem, \stdClass|false $args = false, int|false $depth = false): array;
 }

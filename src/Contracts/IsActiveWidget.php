@@ -35,5 +35,5 @@ interface IsActiveWidget
  * @return string|false ID of the sidebar in which the widget is active,
  *                      false if the widget is not active.
  */
-    public function isActiveWidget(callable|false $callback, string|false $widgetId, string|false $idBase, bool $skipInactive): string|false;
+    public function isActiveWidget(callable|false $callback = false, string|false $widgetId = false, string|false $idBase = false, bool $skipInactive = true): string|false;
 }

@@ -19,5 +19,5 @@ interface WpCacheGetMultiple
  * @return array Array of return values, grouped by key. Each value is either
  *               the cache contents on success, or false on failure.
  */
-    public function wpCacheGetMultiple(array $keys, string $group, bool $force): array;
+    public function wpCacheGetMultiple(array $keys, string $group = '', bool $force = false): array;
 }

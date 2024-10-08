@@ -15,5 +15,5 @@ interface WpGetImageEditor
  * @return \WP_Image_Editor|\WP_Error The WP_Image_Editor object on success,
  *                                  a WP_Error object otherwise.
  */
-    public function wpGetImageEditor(string $path, array $args): \WP_Image_Editor|\WP_Error;
+    public function wpGetImageEditor(string $path, array $args = []): \WP_Image_Editor|\WP_Error;
 }

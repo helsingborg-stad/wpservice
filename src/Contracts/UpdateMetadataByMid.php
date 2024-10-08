@@ -18,5 +18,5 @@ interface UpdateMetadataByMid
  * @param string|false $metaKey   Optional. You can provide a meta key to update it. Default false.
  * @return bool True on successful update, false on failure.
  */
-    public function updateMetadataByMid(string $metaType, int $metaId, string $metaValue, string|false $metaKey): bool;
+    public function updateMetadataByMid(string $metaType, int $metaId, string $metaValue, string|false $metaKey = false): bool;
 }

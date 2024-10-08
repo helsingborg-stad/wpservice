@@ -24,5 +24,5 @@ interface WpGetLayoutStyle
  * @param array|null $blockSpacing                 Optional. Custom spacing set on the block. Default null.
  * @return string CSS styles on success. Else, empty string.
  */
-    public function wpGetLayoutStyle(string $selector, array $layout, bool $hasBlockGapSupport, string|array|null $gapValue, bool $shouldSkipGapSerialization, string $fallbackGapValue, array|null $blockSpacing): string;
+    public function wpGetLayoutStyle(string $selector, array $layout, bool $hasBlockGapSupport = false, string|array|null $gapValue = null, bool $shouldSkipGapSerialization = false, string $fallbackGapValue = '0.5em', array|null $blockSpacing = null): string;
 }

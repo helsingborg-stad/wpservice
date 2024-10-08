@@ -13,5 +13,5 @@ interface RenderBlockCoreLatestComments
  *
  * @return string Returns the post content with latest comments added.
  */
-    public function renderBlockCoreLatestComments(array $attributes): string;
+    public function renderBlockCoreLatestComments(array $attributes = []): string;
 }

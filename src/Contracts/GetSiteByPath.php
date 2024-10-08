@@ -22,5 +22,5 @@ interface GetSiteByPath
  * @param int|null $segments Path segments to use. Defaults to null, or the full path.
  * @return \WP_Site|false Site object if successful. False when no site is found.
  */
-    public function getSiteByPath(string $domain, string $path, int|null $segments): \WP_Site|false;
+    public function getSiteByPath(string $domain, string $path, int|null $segments = null): \WP_Site|false;
 }

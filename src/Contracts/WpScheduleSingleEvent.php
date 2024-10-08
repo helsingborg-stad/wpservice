@@ -35,5 +35,5 @@ interface WpScheduleSingleEvent
  * @param bool $wpError   Optional. Whether to return a WP_Error on failure. Default false.
  * @return bool|\WP_Error True if event successfully scheduled. False or WP_Error on failure.
  */
-    public function wpScheduleSingleEvent(int $timestamp, string $hook, array $args, bool $wpError): bool|\WP_Error;
+    public function wpScheduleSingleEvent(int $timestamp, string $hook, array $args = [], bool $wpError = false): bool|\WP_Error;
 }

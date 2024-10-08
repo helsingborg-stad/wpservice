@@ -14,5 +14,5 @@ interface TheArchiveDescription
  * @param string $before Optional. Content to prepend to the description. Default empty.
  * @param string $after  Optional. Content to append to the description. Default empty.
  */
-    public function theArchiveDescription(string $before, string $after): void;
+    public function theArchiveDescription(string $before = '', string $after = ''): void;
 }

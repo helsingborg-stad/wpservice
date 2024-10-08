@@ -20,5 +20,5 @@ interface PostExists
  * @param string $status  Optional. Post status.
  * @return int Post ID if post exists, 0 otherwise.
  */
-    public function postExists(string $title, string $content, string $date, string $type, string $status): int;
+    public function postExists(string $title, string $content = '', string $date = '', string $type = '', string $status = ''): int;
 }

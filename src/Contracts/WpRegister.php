@@ -18,5 +18,5 @@ interface WpRegister
  * @return void|string Void if `$display` argument is true, registration or admin link
  *                     if `$display` is false.
  */
-    public function wpRegister(string $before, string $after, bool $display): string;
+    public function wpRegister(string $before = '<li>', string $after = '</li>', bool $display = true): string;
 }

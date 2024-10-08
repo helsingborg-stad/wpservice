@@ -85,5 +85,5 @@ interface ThemesApi
  *         {@link https://developer.wordpress.org/reference/functions/themes_api/ function reference article}
  *         for more information on the make-up of possible return objects depending on the value of `$action`.
  */
-    public function themesApi(string $action, array|object $args): array|object;
+    public function themesApi(string $action, array|object $args = []): array|object;
 }

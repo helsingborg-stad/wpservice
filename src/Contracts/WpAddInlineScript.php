@@ -22,5 +22,5 @@ interface WpAddInlineScript
  *                         or after. Default 'after'.
  * @return bool True on success, false on failure.
  */
-    public function wpAddInlineScript(string $handle, string $data, string $position): bool;
+    public function wpAddInlineScript(string $handle, string $data, string $position = 'after'): bool;
 }

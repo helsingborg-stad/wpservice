@@ -15,5 +15,5 @@ interface WpGetNavMenus
  *                    Default empty array.
  * @return WP_Term[] An array of menu objects.
  */
-    public function wpGetNavMenus(array $args): array;
+    public function wpGetNavMenus(array $args = []): array;
 }

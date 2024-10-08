@@ -14,5 +14,5 @@ interface GetSiteIconUrl
  * @param int $blogId Optional. ID of the blog to get the site icon for. Default current blog.
  * @return string Site Icon URL.
  */
-    public function getSiteIconUrl(int $size, string $url, int $blogId): string;
+    public function getSiteIconUrl(int $size = 512, string $url = '', int $blogId = 0): string;
 }

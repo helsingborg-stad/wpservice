@@ -13,5 +13,5 @@ interface WpCheckInvalidUtf8
  * @param bool $strip  Optional. Whether to attempt to strip out invalid UTF8. Default false.
  * @return string The checked text.
  */
-    public function wpCheckInvalidUtf8(string $text, bool $strip): string;
+    public function wpCheckInvalidUtf8(string $text, bool $strip = false): string;
 }

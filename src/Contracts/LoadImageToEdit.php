@@ -16,5 +16,5 @@ interface LoadImageToEdit
  * @return \resource|\GdImage|false The resulting image resource or GdImage instance on success,
  *                                false on failure.
  */
-    public function loadImageToEdit(int $attachmentId, string $mimeType, string|array $size): \resource|\GdImage|false;
+    public function loadImageToEdit(int $attachmentId, string $mimeType, string|array $size = 'full'): \resource|\GdImage|false;
 }

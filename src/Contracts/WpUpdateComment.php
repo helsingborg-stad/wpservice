@@ -22,5 +22,5 @@ interface WpUpdateComment
  * @return int|false|\WP_Error The value 1 if the comment was updated, 0 if not updated.
  *                            False or a WP_Error object on failure.
  */
-    public function wpUpdateComment(array $commentarr, bool $wpError): int|false|\WP_Error;
+    public function wpUpdateComment(array $commentarr, bool $wpError = false): int|false|\WP_Error;
 }

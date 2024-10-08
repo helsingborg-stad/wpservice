@@ -17,5 +17,5 @@ interface EscHtml__
  *                       Default 'default'.
  * @return string Translated text.
  */
-    public function escHtml__(string $text, string $domain): string;
+    public function escHtml__(string $text, string $domain = 'default'): string;
 }

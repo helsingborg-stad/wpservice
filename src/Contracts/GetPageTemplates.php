@@ -14,5 +14,5 @@ interface GetPageTemplates
  * @param string $postType Optional. Post type to get the templates for. Default 'page'.
  * @return string[] Array of template file names keyed by the template header name.
  */
-    public function getPageTemplates(\WP_Post|null $post, string $postType): array;
+    public function getPageTemplates(\WP_Post|null $post = null, string $postType = 'page'): array;
 }

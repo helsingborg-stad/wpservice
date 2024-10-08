@@ -19,5 +19,5 @@ interface UnregisterSetting
  * @param string $optionName  The name of the option to unregister.
  * @param callable $deprecated   Optional. Deprecated.
  */
-    public function unregisterSetting(string $optionGroup, string $optionName, callable $deprecated): void;
+    public function unregisterSetting(string $optionGroup, string $optionName, callable $deprecated = null): void;
 }

@@ -16,5 +16,5 @@ interface WpValidateSiteData
  * @param \WP_Site|null $oldSite The old site object if the data belongs to a site being updated,
  *                               or null if it is a new site being inserted.
  */
-    public function wpValidateSiteData(\WP_Error $errors, array $data, \WP_Site|null $oldSite): void;
+    public function wpValidateSiteData(\WP_Error $errors, array $data, \WP_Site|null $oldSite = null): void;
 }

@@ -17,5 +17,5 @@ interface AddPermastruct
  * @param array $args   Optional. Arguments for building the rules from the permalink structure,
  *                       see WP_Rewrite::add_permastruct() for full details. Default empty array.
  */
-    public function addPermastruct(string $name, string $struct, array $args): void;
+    public function addPermastruct(string $name, string $struct, array $args = []): void;
 }

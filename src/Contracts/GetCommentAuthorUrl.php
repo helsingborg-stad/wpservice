@@ -14,5 +14,5 @@ interface GetCommentAuthorUrl
  *                                   Default current comment.
  * @return string Comment author URL, if provided, an empty string otherwise.
  */
-    public function getCommentAuthorUrl(int|\WP_Comment $commentId): string;
+    public function getCommentAuthorUrl(int|\WP_Comment $commentId = 0): string;
 }

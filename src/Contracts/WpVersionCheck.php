@@ -22,5 +22,5 @@ interface WpVersionCheck
  * @param bool $forceCheck Whether to bypass the transient cache and force a fresh update check.
  *                           Defaults to false, true if $extra_stats is set.
  */
-    public function wpVersionCheck(array $extraStats, bool $forceCheck): void;
+    public function wpVersionCheck(array $extraStats = [], bool $forceCheck = false): void;
 }

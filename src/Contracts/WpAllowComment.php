@@ -21,5 +21,5 @@ interface WpAllowComment
  * @return int|string|\WP_Error Allowed comments return the approval status (0|1|'spam'|'trash').
  *                             If `$wp_error` is true, disallowed comments return a WP_Error.
  */
-    public function wpAllowComment(array $commentdata, bool $wpError): int|string|\WP_Error;
+    public function wpAllowComment(array $commentdata, bool $wpError = false): int|string|\WP_Error;
 }

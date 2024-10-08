@@ -19,5 +19,5 @@ interface WpmuWelcomeUserNotification
  * @param array $meta     Optional. Signup meta data. Default empty array.
  * @return bool
  */
-    public function wpmuWelcomeUserNotification(int $userId, string $password, array $meta): bool;
+    public function wpmuWelcomeUserNotification(int $userId, string $password, array $meta = []): bool;
 }

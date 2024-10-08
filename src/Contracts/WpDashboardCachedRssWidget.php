@@ -22,5 +22,5 @@ interface WpDashboardCachedRssWidget
  * @param mixed    ...$args    Optional additional parameters to pass to the callback function.
  * @return bool True on success, false on failure.
  */
-    public function wpDashboardCachedRssWidget(string $widgetId, callable $callback, array $checkUrls): bool;
+    public function wpDashboardCachedRssWidget(string $widgetId, callable $callback, array $checkUrls = []): bool;
 }

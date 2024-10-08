@@ -21,5 +21,5 @@ interface PostSubmitMetaBox
  *     @type array    $args     Extra meta box arguments.
  * }
  */
-    public function postSubmitMetaBox(\WP_Post $post, array $args): void;
+    public function postSubmitMetaBox(\WP_Post $post, array $args = []): void;
 }

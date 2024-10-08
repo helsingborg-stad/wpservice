@@ -20,5 +20,5 @@ interface ListFiles
  *                                 Default false.
  * @return string[]|false Array of files on success, false on failure.
  */
-    public function listFiles(string $folder, int $levels, array $exclusions, bool $includeHidden): array|false;
+    public function listFiles(string $folder = '', int $levels = 100, array $exclusions = [], bool $includeHidden = false): array|false;
 }

@@ -13,5 +13,5 @@ interface WpGetAttachmentId3Keys
  * @param string $context    Optional. The context. Accepts 'edit', 'display'. Default 'display'.
  * @return string[] Key/value pairs of field keys to labels.
  */
-    public function wpGetAttachmentId3Keys(\WP_Post $attachment, string $context): array;
+    public function wpGetAttachmentId3Keys(\WP_Post $attachment, string $context = 'display'): array;
 }

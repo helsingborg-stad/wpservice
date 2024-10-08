@@ -19,5 +19,5 @@ interface WpGetSidebarsWidgets
  * @param bool $deprecated Not used (argument deprecated).
  * @return array Upgraded list of widgets to version 3 array format when called from the admin.
  */
-    public function wpGetSidebarsWidgets(bool $deprecated): array;
+    public function wpGetSidebarsWidgets(bool $deprecated = true): array;
 }

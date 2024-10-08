@@ -27,5 +27,5 @@ interface WpEnqueueStyle
  *                                 Default 'all'. Accepts media types like 'all', 'print' and 'screen', or media queries like
  *                                 '(orientation: portrait)' and '(max-width: 640px)'.
  */
-    public function wpEnqueueStyle(string $handle, string $src, array $deps, string|bool|null $ver, string $media): void;
+    public function wpEnqueueStyle(string $handle, string $src = '', array $deps = [], string|bool|null $ver = false, string $media = 'all'): void;
 }

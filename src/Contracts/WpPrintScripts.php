@@ -20,5 +20,5 @@ interface WpPrintScripts
  * @param string|string[]|false $handles Optional. Scripts to be printed. Default 'false'.
  * @return string[] On success, an array of handles of processed WP_Dependencies items; otherwise, an empty array.
  */
-    public function wpPrintScripts(string|array|false $handles): array;
+    public function wpPrintScripts(string|array|false $handles = false): array;
 }

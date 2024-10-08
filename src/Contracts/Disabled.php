@@ -18,5 +18,5 @@ interface Disabled
  *                        Default true.
  * @return string HTML attribute or empty string.
  */
-    public function disabled(mixed $disabled, mixed $current, bool $display): string;
+    public function disabled(mixed $disabled, mixed $current = true, bool $display = true): string;
 }

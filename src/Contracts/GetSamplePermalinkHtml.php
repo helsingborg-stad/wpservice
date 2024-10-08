@@ -14,5 +14,5 @@ interface GetSamplePermalinkHtml
  * @param string|null $newSlug  Optional. New slug. Default null.
  * @return string The HTML of the sample permalink slug editor.
  */
-    public function getSamplePermalinkHtml(int|\WP_Post $post, string|null $newTitle, string|null $newSlug): string;
+    public function getSamplePermalinkHtml(int|\WP_Post $post, string|null $newTitle = null, string|null $newSlug = null): string;
 }

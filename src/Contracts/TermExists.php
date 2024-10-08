@@ -26,5 +26,5 @@ interface TermExists
  *               Returns an array of the term ID and the term taxonomy ID if the taxonomy is specified and the pairing exists.
  *               Returns 0 if term ID 0 is passed to the function.
  */
-    public function termExists(int|string $term, string $taxonomy, int $parentTerm): mixed;
+    public function termExists(int|string $term, string $taxonomy = '', int $parentTerm = null): mixed;
 }

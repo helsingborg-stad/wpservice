@@ -14,5 +14,5 @@ interface WpCopyParentAttachmentProperties
  * @param string $context              Control calling the function.
  * @return array Properties of attachment.
  */
-    public function wpCopyParentAttachmentProperties(string $cropped, int $parentAttachmentId, string $context): array;
+    public function wpCopyParentAttachmentProperties(string $cropped, int $parentAttachmentId, string $context = ''): array;
 }

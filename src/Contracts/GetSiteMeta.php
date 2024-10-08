@@ -20,5 +20,5 @@ interface GetSiteMeta
  *               False for an invalid `$site_id` (non-numeric, zero, or negative value).
  *               An empty string if a valid but non-existing site ID is passed.
  */
-    public function getSiteMeta(int $siteId, string $key, bool $single): mixed;
+    public function getSiteMeta(int $siteId, string $key = '', bool $single = false): mixed;
 }

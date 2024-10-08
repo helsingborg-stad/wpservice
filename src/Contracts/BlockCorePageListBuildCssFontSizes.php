@@ -13,5 +13,5 @@ interface BlockCorePageListBuildCssFontSizes
  * @param array $context Navigation block context.
  * @return array Font size CSS classes and inline styles.
  */
-    public function blockCorePageListBuildCssFontSizes(array $context): array;
+public function blockCorePageListBuildCssFontSizes(array $context): array;
 }

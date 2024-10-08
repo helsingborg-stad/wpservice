@@ -15,5 +15,5 @@ interface WpMaybeUpdateNetworkUserCounts
  *
  * @param int|null $networkId ID of the network. Default is the current network.
  */
-    public function wpMaybeUpdateNetworkUserCounts(int|null $networkId): void;
+    public function wpMaybeUpdateNetworkUserCounts(int|null $networkId = null): void;
 }

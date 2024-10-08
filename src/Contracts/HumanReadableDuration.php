@@ -13,5 +13,5 @@ interface HumanReadableDuration
  *                         with a possible prepended negative sign (-).
  * @return string|false A human readable duration string, false on failure.
  */
-    public function humanReadableDuration(string $duration): string|false;
+    public function humanReadableDuration(string $duration = ''): string|false;
 }

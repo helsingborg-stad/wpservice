@@ -14,5 +14,5 @@ interface NetworkAdminUrl
  *                       and is_ssl(). 'http' or 'https' can be passed to force those schemes.
  * @return string Admin URL link with optional path appended.
  */
-    public function networkAdminUrl(string $path, string $scheme): string;
+    public function networkAdminUrl(string $path = '', string $scheme = 'admin'): string;
 }

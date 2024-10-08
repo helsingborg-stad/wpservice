@@ -16,5 +16,5 @@ interface GetAttachmentTaxonomies
  *                                     Default is 'names'.
  * @return string[]|WP_Taxonomy[] List of taxonomies or taxonomy names. Empty array on failure.
  */
-    public function getAttachmentTaxonomies(int|array|object $attachment, string $output): array;
+    public function getAttachmentTaxonomies(int|array|object $attachment, string $output = 'names'): array;
 }

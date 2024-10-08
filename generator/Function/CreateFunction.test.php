@@ -2,7 +2,6 @@
 
 namespace WpService\Generator\Function;
 
-use WpService\Generator\Function\Parameter\CreateParameter;
 use PhpParser\Node\Stmt\Function_;
 use PHPUnit\Framework\TestCase;
 use StubsGenerator\StubsGenerator;
@@ -86,7 +85,7 @@ class CreateFunctionTest extends TestCase
     private function getStubStatementForFunction(string $functionName): Function_
     {
         $generator = new StubsGenerator(StubsGenerator::FUNCTIONS);
-        $finder    = \StubsGenerator\Finder::create()->in(dirname(__FILE__) . '/../../tests/functions');
+        $finder    = \StubsGenerator\Finder::create()->in(dirname(__FILE__) . '/../../testFunctions');
         $filtered  = array_filter($generator->generate($finder)->getStubStmts(), fn($stmt) => $stmt->name->name === $functionName);
         return reset($filtered);
     }

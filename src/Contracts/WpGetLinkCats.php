@@ -12,5 +12,5 @@ interface WpGetLinkCats
  * @param int $linkId Link ID to look up.
  * @return int[] The IDs of the requested link's categories.
  */
-    public function wpGetLinkCats(int $linkId): array;
+    public function wpGetLinkCats(int $linkId = 0): array;
 }

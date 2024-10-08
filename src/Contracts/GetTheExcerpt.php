@@ -13,5 +13,5 @@ interface GetTheExcerpt
  * @param int|\WP_Post $post Optional. Post ID or WP_Post object. Default is global $post.
  * @return string Post excerpt.
  */
-    public function getTheExcerpt(int|\WP_Post $post): string;
+    public function getTheExcerpt(int|\WP_Post $post = null): string;
 }

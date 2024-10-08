@@ -9,5 +9,5 @@ interface OptionsDiscussionAddJs
  *
  * @since 4.2.0
  */
-    public function optionsDiscussionAddJs(): void;
+public function optionsDiscussionAddJs(): void;
 }

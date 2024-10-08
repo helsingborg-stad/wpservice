@@ -15,5 +15,5 @@ interface RestFindOneMatchingSchema
  * @param bool $stopAfterFirstMatch Optional. Whether the process should stop after the first successful match.
  * @return array|\WP_Error                The matching schema or WP_Error instance if the number of matching schemas is not equal to one.
  */
-    public function restFindOneMatchingSchema(mixed $value, array $args, string $param, bool $stopAfterFirstMatch): array|\WP_Error;
+    public function restFindOneMatchingSchema(mixed $value, array $args, string $param, bool $stopAfterFirstMatch = false): array|\WP_Error;
 }

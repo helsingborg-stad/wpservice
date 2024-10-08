@@ -166,5 +166,5 @@ interface RegisterPostType
  * @return \WP_Post_Type|\WP_Error The registered post type object on success,
  *                               WP_Error object on failure.
  */
-    public function registerPostType(string $postType, array|string $args): \WP_Post_Type|\WP_Error;
+    public function registerPostType(string $postType, array|string $args = []): \WP_Post_Type|\WP_Error;
 }

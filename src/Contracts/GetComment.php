@@ -21,5 +21,5 @@ interface GetComment
  *                                       respectively. Default OBJECT.
  * @return \WP_Comment|array|null Depends on $output value.
  */
-    public function getComment(\WP_Comment|string|int $comment, string $output): \WP_Comment|array|null;
+    public function getComment(\WP_Comment|string|int $comment = null, string $output = OBJECT): \WP_Comment|array|null;
 }

@@ -20,5 +20,5 @@ interface GetTemplateHierarchy
  *                                Default empty string.
  * @return string[] The template hierarchy.
  */
-    public function getTemplateHierarchy(string $slug, bool $isCustom, string $templatePrefix): array;
+    public function getTemplateHierarchy(string $slug, bool $isCustom = false, string $templatePrefix = ''): array;
 }

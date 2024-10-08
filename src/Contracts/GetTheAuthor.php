@@ -15,5 +15,5 @@ interface GetTheAuthor
  * @param string $deprecated Deprecated.
  * @return string The author's display name, empty string if unknown.
  */
-    public function getTheAuthor(string $deprecated): string;
+    public function getTheAuthor(string $deprecated = ''): string;
 }

@@ -16,5 +16,5 @@ interface GetTheCategoryRss
  * @param string $type Optional, default is the type returned by get_default_feed().
  * @return string All of the post categories for displaying in the feed.
  */
-    public function getTheCategoryRss(string $type): string;
+    public function getTheCategoryRss(string $type = null): string;
 }

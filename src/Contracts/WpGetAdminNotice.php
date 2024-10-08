@@ -24,5 +24,5 @@ interface WpGetAdminNotice
  * }
  * @return string The markup for an admin notice.
  */
-    public function wpGetAdminNotice(string $message, array $args): string;
+    public function wpGetAdminNotice(string $message, array $args = []): string;
 }

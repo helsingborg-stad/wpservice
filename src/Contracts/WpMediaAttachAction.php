@@ -15,5 +15,5 @@ interface WpMediaAttachAction
  * @param string $action    Optional. Attach/detach action. Accepts 'attach' or 'detach'.
  *                          Default 'attach'.
  */
-    public function wpMediaAttachAction(int $parentId, string $action): void;
+    public function wpMediaAttachAction(int $parentId, string $action = 'attach'): void;
 }

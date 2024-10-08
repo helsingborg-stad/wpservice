@@ -27,5 +27,5 @@ interface DateI18n
  *                                        if timestamp is not provided. Default false.
  * @return string The date, translated if locale specifies it.
  */
-    public function dateI18n(string $format, int|bool $timestampWithOffset, bool $gmt): string;
+    public function dateI18n(string $format, int|bool $timestampWithOffset = false, bool $gmt = false): string;
 }

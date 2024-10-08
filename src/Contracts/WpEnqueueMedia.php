@@ -20,5 +20,5 @@ interface WpEnqueueMedia
  *     @type int|WP_Post $post Post ID or post object.
  * }
  */
-    public function wpEnqueueMedia(array $args): void;
+    public function wpEnqueueMedia(array $args = []): void;
 }

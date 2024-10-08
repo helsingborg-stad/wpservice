@@ -18,5 +18,5 @@ interface GetSiteOption
  * @param bool $deprecated    Whether to use cache. Multisite only. Always set to true.
  * @return mixed Value set for the option.
  */
-    public function getSiteOption(string $option, mixed $defaultValue, bool $deprecated): mixed;
+    public function getSiteOption(string $option, mixed $defaultValue = false, bool $deprecated = true): mixed;
 }

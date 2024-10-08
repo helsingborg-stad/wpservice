@@ -19,5 +19,5 @@ interface CopyDir
  * @param string[] $skipList An array of files/folders to skip copying.
  * @return true|\WP_Error True on success, WP_Error on failure.
  */
-    public function copyDir(string $from, string $to, array $skipList): true|\WP_Error;
+    public function copyDir(string $from, string $to, array $skipList = []): true|\WP_Error;
 }

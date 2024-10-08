@@ -53,5 +53,5 @@ interface RegisterPostStatus
  * }
  * @return object
  */
-    public function registerPostStatus(string $postStatus, array|string $args): object;
+    public function registerPostStatus(string $postStatus, array|string $args = []): object;
 }

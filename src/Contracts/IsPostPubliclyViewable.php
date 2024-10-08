@@ -15,5 +15,5 @@ interface IsPostPubliclyViewable
  * @param int|\WP_Post|null $post Optional. Post ID or post object. Defaults to global $post.
  * @return bool Whether the post is publicly viewable.
  */
-    public function isPostPubliclyViewable(int|\WP_Post|null $post): bool;
+    public function isPostPubliclyViewable(int|\WP_Post|null $post = null): bool;
 }

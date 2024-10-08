@@ -43,5 +43,5 @@ interface ExportWp
  *                              'trash'. Default false (all statuses except 'auto-draft').
  * }
  */
-    public function exportWp(array $args): void;
+    public function exportWp(array $args = []): void;
 }

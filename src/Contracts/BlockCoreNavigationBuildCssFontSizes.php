@@ -14,5 +14,5 @@ interface BlockCoreNavigationBuildCssFontSizes
  *
  * @return array Font size CSS classes and inline styles.
  */
-    public function blockCoreNavigationBuildCssFontSizes(array $attributes): array;
+public function blockCoreNavigationBuildCssFontSizes(array $attributes): array;
 }

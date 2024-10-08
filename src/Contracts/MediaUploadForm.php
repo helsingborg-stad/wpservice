@@ -14,5 +14,5 @@ interface MediaUploadForm
  *
  * @param array $errors
  */
-    public function mediaUploadForm(array $errors): void;
+    public function mediaUploadForm(array $errors = null): void;
 }

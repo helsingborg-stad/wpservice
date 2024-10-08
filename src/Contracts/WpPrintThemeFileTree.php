@@ -19,5 +19,5 @@ interface WpPrintThemeFileTree
  * @param int $size  The aria-setsize for the current iteration.
  * @param int $index The aria-posinset for the current iteration.
  */
-    public function wpPrintThemeFileTree(array|string $tree, int $level, int $size, int $index): void;
+    public function wpPrintThemeFileTree(array|string $tree, int $level = 2, int $size = 1, int $index = 1): void;
 }

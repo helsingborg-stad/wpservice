@@ -24,5 +24,5 @@ interface RemoveAction
  *                                         action callback. Default 10.
  * @return bool Whether the function is removed.
  */
-    public function removeAction(string $hookName, callable|string|array $callback, int $priority): bool;
+    public function removeAction(string $hookName, callable|string|array $callback, int $priority = 10): bool;
 }

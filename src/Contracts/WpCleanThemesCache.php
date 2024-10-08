@@ -10,5 +10,5 @@ interface WpCleanThemesCache
  * @since 3.5.0
  * @param bool $clearUpdateCache Whether to clear the theme updates cache.
  */
-    public function wpCleanThemesCache(bool $clearUpdateCache): void;
+    public function wpCleanThemesCache(bool $clearUpdateCache = true): void;
 }

@@ -19,5 +19,5 @@ interface GetTheTermList
  * @return string|false|\WP_Error A list of terms on success, false if there are no terms,
  *                               WP_Error on failure.
  */
-    public function getTheTermList(int $postId, string $taxonomy, string $before, string $sep, string $after): string|false|\WP_Error;
+    public function getTheTermList(int $postId, string $taxonomy, string $before = '', string $sep = '', string $after = ''): string|false|\WP_Error;
 }

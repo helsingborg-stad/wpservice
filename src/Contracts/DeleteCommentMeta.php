@@ -22,5 +22,5 @@ interface DeleteCommentMeta
  *                           Must be serializable if non-scalar. Default empty string.
  * @return bool True on success, false on failure.
  */
-    public function deleteCommentMeta(int $commentId, string $metaKey, mixed $metaValue): bool;
+    public function deleteCommentMeta(int $commentId, string $metaKey, mixed $metaValue = ''): bool;
 }

@@ -18,5 +18,5 @@ interface WpMediaPersonalDataExporter
  *     @type bool    $done Whether the exporter is finished.
  * }
  */
-    public function wpMediaPersonalDataExporter(string $emailAddress, int $page): array;
+    public function wpMediaPersonalDataExporter(string $emailAddress, int $page = 1): array;
 }

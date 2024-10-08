@@ -18,5 +18,5 @@ interface ApplyShortcodes
  *                            Default false.
  * @return string Content with shortcodes filtered out.
  */
-    public function applyShortcodes(string $content, bool $ignoreHtml): string;
+    public function applyShortcodes(string $content, bool $ignoreHtml = false): string;
 }

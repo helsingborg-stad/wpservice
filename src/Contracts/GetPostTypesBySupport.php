@@ -18,5 +18,5 @@ interface GetPostTypesBySupport
  *                               match. Default 'and'.
  * @return string[] A list of post type names.
  */
-    public function getPostTypesBySupport(array|string $feature, string $operator): array;
+    public function getPostTypesBySupport(array|string $feature, string $operator = 'and'): array;
 }

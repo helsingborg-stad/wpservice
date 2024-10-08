@@ -73,5 +73,5 @@ interface WpInsertPost
  * @param bool $fireAfterHooks Optional. Whether to fire the after insert hooks. Default true.
  * @return int|\WP_Error The post ID on success. The value 0 or WP_Error on failure.
  */
-    public function wpInsertPost(array $postarr, bool $wpError, bool $fireAfterHooks): int|\WP_Error;
+    public function wpInsertPost(array $postarr, bool $wpError = false, bool $fireAfterHooks = true): int|\WP_Error;
 }

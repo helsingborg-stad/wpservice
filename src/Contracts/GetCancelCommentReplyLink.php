@@ -16,5 +16,5 @@ interface GetCancelCommentReplyLink
  *                                    displayed for. Defaults to the current global post.
  * @return string
  */
-    public function getCancelCommentReplyLink(string $linkText, int|\WP_Post|null $post): string;
+    public function getCancelCommentReplyLink(string $linkText = '', int|\WP_Post|null $post = null): string;
 }

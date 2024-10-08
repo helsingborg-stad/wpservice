@@ -16,5 +16,5 @@ interface GetSearchQuery
  *                      Only use when you are later escaping it. Do not use unescaped.
  * @return string
  */
-    public function getSearchQuery(bool $escaped): string;
+    public function getSearchQuery(bool $escaped = true): string;
 }

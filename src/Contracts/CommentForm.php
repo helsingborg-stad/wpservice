@@ -71,5 +71,5 @@ interface CommentForm
  * }
  * @param int|\WP_Post $post Optional. Post ID or WP_Post object to generate the form for. Default current post.
  */
-    public function commentForm(array $args, int|\WP_Post $post): void;
+    public function commentForm(array $args = [], int|\WP_Post $post = null): void;
 }

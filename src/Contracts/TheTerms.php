@@ -16,5 +16,5 @@ interface TheTerms
  * @param string $after    Optional. String to use after the terms. Default empty.
  * @return void|false Void on success, false on failure.
  */
-    public function theTerms(int $postId, string $taxonomy, string $before, string $sep, string $after): false;
+    public function theTerms(int $postId, string $taxonomy, string $before = '', string $sep = ', ', string $after = ''): false;
 }

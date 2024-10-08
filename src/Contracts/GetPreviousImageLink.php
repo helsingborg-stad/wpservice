@@ -16,5 +16,5 @@ interface GetPreviousImageLink
  * @param string|false $text Optional. Link text. Default false.
  * @return string Markup for previous image link.
  */
-    public function getPreviousImageLink(string|array $size, string|false $text): string;
+    public function getPreviousImageLink(string|array $size = 'thumbnail', string|false $text = false): string;
 }

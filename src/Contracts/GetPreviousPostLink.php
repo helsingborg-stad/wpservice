@@ -18,5 +18,5 @@ interface GetPreviousPostLink
  * @param string $taxonomy       Optional. Taxonomy, if `$in_same_term` is true. Default 'category'.
  * @return string The link URL of the previous post in relation to the current post.
  */
-    public function getPreviousPostLink(string $format, string $link, bool $inSameTerm, array|string $excludedTerms, string $taxonomy): string;
+    public function getPreviousPostLink(string $format = '&laquo; %link', string $link = '%title', bool $inSameTerm = false, array|string $excludedTerms = '', string $taxonomy = 'category'): string;
 }

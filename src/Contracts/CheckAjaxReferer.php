@@ -19,5 +19,5 @@ interface CheckAjaxReferer
      *                   2 if the nonce is valid and generated between 12-24 hours ago.
      *                   False if the nonce is invalid.
      */
-    public function checkAjaxReferer(int|string $action, false|string $queryArg, bool $stop): int|false;
+    public function checkAjaxReferer(int|string $action, false|string $queryArg = false, bool $stop = true): int|false;
 }

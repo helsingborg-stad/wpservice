@@ -14,5 +14,5 @@ interface WpPrepareRevisionsForJs
  * @param int $from                 Optional. The revision ID to compare from.
  * @return array An associative array of revision data and related settings.
  */
-    public function wpPrepareRevisionsForJs(\WP_Post|int $post, int $selectedRevisionId, int $from): array;
+public function wpPrepareRevisionsForJs(\WP_Post|int $post, int $selectedRevisionId, int $from = null): array;
 }

@@ -26,5 +26,5 @@ interface RemoveFilter
  *                                         filter callback. Default 10.
  * @return bool Whether the function existed before it was removed.
  */
-    public function removeFilter(string $hookName, callable|string|array $callback, int $priority): bool;
+    public function removeFilter(string $hookName, callable|string|array $callback, int $priority = 10): bool;
 }

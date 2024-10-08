@@ -39,5 +39,5 @@ interface WpUpdateTerm
  * @return array|\WP_Error An array containing the `term_id` and `term_taxonomy_id`,
  *                        WP_Error otherwise.
  */
-    public function wpUpdateTerm(int $termId, string $taxonomy, array $args): array|\WP_Error;
+    public function wpUpdateTerm(int $termId, string $taxonomy, array $args = []): array|\WP_Error;
 }

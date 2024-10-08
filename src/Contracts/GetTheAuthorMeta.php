@@ -45,5 +45,5 @@ interface GetTheAuthorMeta
  * @param int|false $userId Optional. User ID. Defaults to the current post author.
  * @return string The author's field from the current author's DB object, otherwise an empty string.
  */
-    public function getTheAuthorMeta(string $field, int|false $userId): string;
+    public function getTheAuthorMeta(string $field = '', int|false $userId = false): string;
 }

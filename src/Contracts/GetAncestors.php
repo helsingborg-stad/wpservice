@@ -17,5 +17,5 @@ interface GetAncestors
  *                              or 'taxonomy'. Default empty.
  * @return int[] An array of IDs of ancestors from lowest to highest in the hierarchy.
  */
-    public function getAncestors(int $objectId, string $objectType, string $resourceType): array;
+    public function getAncestors(int $objectId = 0, string $objectType = '', string $resourceType = ''): array;
 }

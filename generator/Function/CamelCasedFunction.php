@@ -79,6 +79,14 @@ class CamelCasedFunction implements FunctionInterface
         );
     }
 
+    /**
+     * @inheritDoc
+     */
+    public function __toString(): string
+    {
+        return $this->inner->__toString();
+    }
+
     private function camelCase(string $string): string
     {
         return lcfirst(str_replace(' ', '', ucwords(str_replace(['-', '_'], ' ', $string))));

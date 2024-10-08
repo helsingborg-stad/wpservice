@@ -28,5 +28,5 @@ interface CountUsers
  *     @type int[] $avail_roles Array of user counts keyed by user role.
  * }
  */
-    public function countUsers(string $strategy, int|null $siteId): array;
+    public function countUsers(string $strategy = 'time', int|null $siteId = null): array;
 }

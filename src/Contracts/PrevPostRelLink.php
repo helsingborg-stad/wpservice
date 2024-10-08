@@ -18,5 +18,5 @@ interface PrevPostRelLink
  *                                     Default true.
  * @param string $taxonomy       Optional. Taxonomy, if `$in_same_term` is true. Default 'category'.
  */
-    public function prevPostRelLink(string $title, bool $inSameTerm, array|string $excludedTerms, string $taxonomy): void;
+    public function prevPostRelLink(string $title = '%title', bool $inSameTerm = false, array|string $excludedTerms = '', string $taxonomy = 'category'): void;
 }

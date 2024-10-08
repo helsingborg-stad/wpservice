@@ -21,5 +21,5 @@ interface SanitizePost
  * @return object|WP_Post|array The now sanitized post object or array (will be the
  *                              same type as `$post`).
  */
-    public function sanitizePost(array|object $post, string $context): array|object;
+    public function sanitizePost(array|object $post, string $context = 'display'): array|object;
 }

@@ -36,5 +36,5 @@ interface RegisterSetting
  *     @type mixed      $default           Default value when calling `get_option()`.
  * }
  */
-    public function registerSetting(string $optionGroup, string $optionName, array $args): void;
+    public function registerSetting(string $optionGroup, string $optionName, array $args = []): void;
 }

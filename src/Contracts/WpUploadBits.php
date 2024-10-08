@@ -34,5 +34,5 @@ interface WpUploadBits
  *     @type string|false $error Error message, if there has been an error.
  * }
  */
-    public function wpUploadBits(string $name, null|string $deprecated, string $bits, string|null $time): array;
+    public function wpUploadBits(string $name, null|string $deprecated, string $bits, string|null $time = null): array;
 }

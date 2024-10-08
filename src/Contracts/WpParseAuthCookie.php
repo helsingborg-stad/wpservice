@@ -24,5 +24,5 @@ interface WpParseAuthCookie
      *     @type string $scheme     The cookie scheme to use.
      * }
      */
-    public function wpParseAuthCookie(string $cookie, string $scheme): array|false;
+    public function wpParseAuthCookie(string $cookie = '', string $scheme = ''): array|false;
 }

@@ -27,5 +27,5 @@ interface CommentFormTitle
  * @param int|\WP_Post|null $post           Optional. The post that the comment form is being displayed for.
  *                                          Defaults to the current global post.
  */
-    public function commentFormTitle(string|false $noReplyText, string|false $replyText, bool $linkToParent, int|\WP_Post|null $post): void;
+    public function commentFormTitle(string|false $noReplyText = false, string|false $replyText = false, bool $linkToParent = true, int|\WP_Post|null $post = null): void;
 }

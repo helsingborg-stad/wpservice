@@ -14,5 +14,5 @@ interface GetPostCustomKeys
  * @param int $postId Optional. Post ID. Default is the ID of the global `$post`.
  * @return array|void Array of the keys, if retrieved.
  */
-    public function getPostCustomKeys(int $postId): array;
+    public function getPostCustomKeys(int $postId = 0): array;
 }

@@ -31,5 +31,5 @@ interface Wptexturize
  * @param bool $reset Set to true for unit testing. Translated patterns will reset.
  * @return string The string replaced with HTML entities.
  */
-    public function wptexturize(string $text, bool $reset): string;
+    public function wptexturize(string $text, bool $reset = false): string;
 }

@@ -32,5 +32,5 @@ interface WpEnqueueScript
  *     @type bool      $in_footer    Optional. Whether to print the script in the footer. Default 'false'.
  * }
  */
-    public function wpEnqueueScript(string $handle, string $src, array $deps, string|bool|null $ver, array|bool $args): void;
+    public function wpEnqueueScript(string $handle, string $src = '', array $deps = [], string|bool|null $ver = false, array|bool $args = []): void;
 }

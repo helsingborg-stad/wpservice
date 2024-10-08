@@ -16,5 +16,5 @@ interface RestApplicationPasswordCollectStatus
  * @param \WP_Error $userOrError The authenticated user or error instance.
  * @param array $appPassword  The Application Password used to authenticate.
  */
-    public function restApplicationPasswordCollectStatus(\WP_Error $userOrError, array $appPassword): void;
+    public function restApplicationPasswordCollectStatus(\WP_Error $userOrError, array $appPassword = []): void;
 }

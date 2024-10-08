@@ -11,5 +11,5 @@ interface WpGetGlobalStylesCustomCss
  *
  * @return string The global styles custom CSS.
  */
-    public function wpGetGlobalStylesCustomCss(): string;
+public function wpGetGlobalStylesCustomCss(): string;
 }

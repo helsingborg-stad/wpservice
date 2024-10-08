@@ -17,5 +17,5 @@ interface LoadMupluginTextdomain
  *                                   file resides. Default empty string.
  * @return bool True when textdomain is successfully loaded, false otherwise.
  */
-    public function loadMupluginTextdomain(string $domain, string $muPluginRelPath): bool;
+    public function loadMupluginTextdomain(string $domain, string $muPluginRelPath = ''): bool;
 }

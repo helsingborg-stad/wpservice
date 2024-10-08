@@ -24,5 +24,5 @@ interface ResumeTheme
  * @return bool|\WP_Error True on success, false if `$theme` was not paused,
  *                       `WP_Error` on failure.
  */
-    public function resumeTheme(string $theme, string $redirect): bool|\WP_Error;
+    public function resumeTheme(string $theme, string $redirect = ''): bool|\WP_Error;
 }

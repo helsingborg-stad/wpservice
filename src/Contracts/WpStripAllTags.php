@@ -17,5 +17,5 @@ interface WpStripAllTags
  * @param bool $removeBreaks Optional. Whether to remove left over line breaks and white space chars
  * @return string The processed string.
  */
-    public function wpStripAllTags(string $text, bool $removeBreaks): string;
+    public function wpStripAllTags(string $text, bool $removeBreaks = false): string;
 }

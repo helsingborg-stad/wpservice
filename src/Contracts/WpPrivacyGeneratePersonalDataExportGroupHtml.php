@@ -29,5 +29,5 @@ interface WpPrivacyGeneratePersonalDataExportGroupHtml
  * @param int $groupsCount The number of all groups
  * @return string The HTML for this group and its items.
  */
-    public function wpPrivacyGeneratePersonalDataExportGroupHtml(array $groupData, string $groupId, int $groupsCount): string;
+    public function wpPrivacyGeneratePersonalDataExportGroupHtml(array $groupData, string $groupId = '', int $groupsCount = 1): string;
 }

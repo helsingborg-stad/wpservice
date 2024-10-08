@@ -16,5 +16,5 @@ interface ValidateFileToEdit
  *                                `$file` must match an entry exactly.
  * @return string|void Returns the file name on success, dies on failure.
  */
-    public function validateFileToEdit(string $file, array $allowedFiles): string;
+    public function validateFileToEdit(string $file, array $allowedFiles = []): string;
 }

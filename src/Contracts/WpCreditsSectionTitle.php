@@ -11,5 +11,5 @@ interface WpCreditsSectionTitle
  *
  * @param array $groupData The current contributor group.
  */
-    public function wpCreditsSectionTitle(array $groupData): void;
+    public function wpCreditsSectionTitle(array $groupData = []): void;
 }

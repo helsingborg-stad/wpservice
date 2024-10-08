@@ -19,5 +19,5 @@ interface DynamicSidebar
  * @param int|string $index Optional. Index, name or ID of dynamic sidebar. Default 1.
  * @return bool True, if widget sidebar was found and called. False if not found or not called.
  */
-    public function dynamicSidebar(int|string $index): bool;
+    public function dynamicSidebar(int|string $index = 1): bool;
 }

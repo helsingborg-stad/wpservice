@@ -11,5 +11,5 @@ interface WpCleanPluginsCache
  *
  * @param bool $clearUpdateCache Whether to clear the plugin updates cache. Default true.
  */
-    public function wpCleanPluginsCache(bool $clearUpdateCache): void;
+    public function wpCleanPluginsCache(bool $clearUpdateCache = true): void;
 }

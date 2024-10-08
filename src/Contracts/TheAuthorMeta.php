@@ -15,5 +15,5 @@ interface TheAuthorMeta
  *
  * @see get_the_author_meta()
  */
-    public function theAuthorMeta(string $field, int|false $userId): void;
+    public function theAuthorMeta(string $field = '', int|false $userId = false): void;
 }

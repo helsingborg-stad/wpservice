@@ -14,5 +14,5 @@ interface PopulateSiteMeta
  * @param int $siteId Site ID to populate meta for.
  * @param array $meta    Optional. Custom meta $key => $value pairs to use. Default empty array.
  */
-    public function populateSiteMeta(int $siteId, array $meta): void;
+    public function populateSiteMeta(int $siteId, array $meta = []): void;
 }

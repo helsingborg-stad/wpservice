@@ -12,5 +12,5 @@ interface SetupConfigDisplayHeader
  *
  * @param string|string[] $bodyClasses Class attribute values for the body tag.
  */
-    public function setupConfigDisplayHeader(string|array $bodyClasses): void;
+    public function setupConfigDisplayHeader(string|array $bodyClasses = []): void;
 }

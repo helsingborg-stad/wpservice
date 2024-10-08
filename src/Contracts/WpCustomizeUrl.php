@@ -13,5 +13,5 @@ interface WpCustomizeUrl
  *                           The theme's stylesheet will be urlencoded if necessary.
  * @return string
  */
-    public function wpCustomizeUrl(string $stylesheet): string;
+    public function wpCustomizeUrl(string $stylesheet = ''): string;
 }

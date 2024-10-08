@@ -13,5 +13,5 @@ interface ConvertChars
  * @param string $deprecated Not used.
  * @return string Converted string.
  */
-    public function convertChars(string $content, string $deprecated): string;
+    public function convertChars(string $content, string $deprecated = ''): string;
 }

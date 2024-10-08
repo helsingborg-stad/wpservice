@@ -16,5 +16,5 @@ interface WpCheckJsonpCallback
  * @param string $callback Supplied JSONP callback function name.
  * @return bool Whether the callback function name is valid.
  */
-    public function wpCheckJsonpCallback(string $callback): bool;
+public function wpCheckJsonpCallback(string $callback): bool;
 }

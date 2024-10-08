@@ -20,5 +20,5 @@ interface DeletePostMeta
  *                           Must be serializable if non-scalar. Default empty.
  * @return bool True on success, false on failure.
  */
-    public function deletePostMeta(int $postId, string $metaKey, mixed $metaValue): bool;
+    public function deletePostMeta(int $postId, string $metaKey, mixed $metaValue = ''): bool;
 }

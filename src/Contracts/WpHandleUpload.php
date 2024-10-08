@@ -22,5 +22,5 @@ interface WpHandleUpload
  * @param string|null $time      Optional. Time formatted in 'yyyy/mm'. Default null.
  * @return array See _wp_handle_upload() for return value.
  */
-    public function wpHandleUpload(array $file, array|false $overrides, string|null $time): array;
+    public function wpHandleUpload(array $file, array|false $overrides = false, string|null $time = null): array;
 }

@@ -16,5 +16,5 @@ interface GetPagenumLink
  *                      If set to false, prepares the URL with sanitize_url(). Default true.
  * @return string The link URL for the given page number.
  */
-    public function getPagenumLink(int $pagenum, bool $escape): string;
+    public function getPagenumLink(int $pagenum = 1, bool $escape = true): string;
 }

@@ -22,5 +22,5 @@ interface WpUpdateCustomCssPost
  * }
  * @return \WP_Post|\WP_Error Post on success, error on failure.
  */
-    public function wpUpdateCustomCssPost(string $css, array $args): \WP_Post|\WP_Error;
+public function wpUpdateCustomCssPost(string $css, array $args = []): \WP_Post|\WP_Error;
 }

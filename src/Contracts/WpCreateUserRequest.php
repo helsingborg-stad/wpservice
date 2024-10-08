@@ -21,5 +21,5 @@ interface WpCreateUserRequest
  * @param string $status                  Optional request status (pending or confirmed). Default 'pending'.
  * @return int|\WP_Error                   Returns the request ID if successful, or a WP_Error object on failure.
  */
-    public function wpCreateUserRequest(string $emailAddress, string $actionName, array $requestData, string $status): int|\WP_Error;
+    public function wpCreateUserRequest(string $emailAddress = '', string $actionName = '', array $requestData = [], string $status = 'pending'): int|\WP_Error;
 }

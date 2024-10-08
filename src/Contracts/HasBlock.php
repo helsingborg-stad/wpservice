@@ -21,5 +21,5 @@ interface HasBlock
  *                                            Defaults to global $post.
  * @return bool Whether the post content contains the specified block.
  */
-    public function hasBlock(string $blockName, int|string|\WP_Post|null $post): bool;
+    public function hasBlock(string $blockName, int|string|\WP_Post|null $post = null): bool;
 }

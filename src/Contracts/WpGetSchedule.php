@@ -17,5 +17,5 @@ interface WpGetSchedule
  *                     Default empty array.
  * @return string|false Schedule name on success, false if no schedule.
  */
-    public function wpGetSchedule(string $hook, array $args): string|false;
+    public function wpGetSchedule(string $hook, array $args = []): string|false;
 }

@@ -83,5 +83,5 @@ interface WpDropdownUsers
  * }
  * @return string HTML dropdown list of users.
  */
-    public function wpDropdownUsers(array|string $args): string;
+    public function wpDropdownUsers(array|string $args = ''): string;
 }

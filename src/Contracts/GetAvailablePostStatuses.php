@@ -12,5 +12,5 @@ interface GetAvailablePostStatuses
  * @param string $type The post_type you want the statuses for. Default 'post'.
  * @return string[] An array of all the statuses for the supplied post type.
  */
-    public function getAvailablePostStatuses(string $type): array;
+    public function getAvailablePostStatuses(string $type = 'post'): array;
 }

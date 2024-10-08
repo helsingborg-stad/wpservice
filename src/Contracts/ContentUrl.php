@@ -12,5 +12,5 @@ interface ContentUrl
  * @param string $path Optional. Path relative to the content URL. Default empty.
  * @return string Content URL link with optional path appended.
  */
-    public function contentUrl(string $path): string;
+    public function contentUrl(string $path = ''): string;
 }

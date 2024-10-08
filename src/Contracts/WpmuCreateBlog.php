@@ -31,5 +31,5 @@ interface WpmuCreateBlog
  *                           Default 1.
  * @return int|\WP_Error Returns WP_Error object on failure, the new site ID on success.
  */
-    public function wpmuCreateBlog(string $domain, string $path, string $title, int $userId, array $options, int $networkId): int|\WP_Error;
+    public function wpmuCreateBlog(string $domain, string $path, string $title, int $userId, array $options = [], int $networkId = 1): int|\WP_Error;
 }

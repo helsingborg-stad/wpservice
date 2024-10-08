@@ -20,5 +20,5 @@ interface GetAvailableLanguages
  * @return string[] An array of language codes or an empty array if no languages are present.
  *                  Language codes are formed by stripping the file extension from the language file names.
  */
-    public function getAvailableLanguages(string $dir): array;
+    public function getAvailableLanguages(string $dir = null): array;
 }

@@ -22,5 +22,5 @@ interface CheckAdminReferer
      *                   2 if the nonce is valid and generated between 12-24 hours ago.
      *                   False if the nonce is invalid.
      */
-    public function checkAdminReferer(int|string $action, string $queryArg): int|false;
+    public function checkAdminReferer(int|string $action, string $queryArg = '_wpnonce'): int|false;
 }

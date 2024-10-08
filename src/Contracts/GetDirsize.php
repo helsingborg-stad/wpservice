@@ -18,5 +18,5 @@ interface GetDirsize
  *                                   The timeout is global and is measured from the moment WordPress started to load.
  * @return int|false|null Size in bytes if a valid directory. False if not. Null if timeout.
  */
-    public function getDirsize(string $directory, int $maxExecutionTime): int|false|null;
+    public function getDirsize(string $directory, int $maxExecutionTime = null): int|false|null;
 }

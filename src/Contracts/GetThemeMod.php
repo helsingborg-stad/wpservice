@@ -18,5 +18,5 @@ interface GetThemeMod
  * @param mixed $defaultValue Optional. Theme modification default value. Default false.
  * @return mixed Theme modification value.
  */
-    public function getThemeMod(string $name, mixed $defaultValue): mixed;
+    public function getThemeMod(string $name, mixed $defaultValue = false): mixed;
 }

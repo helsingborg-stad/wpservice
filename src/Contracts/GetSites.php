@@ -17,5 +17,5 @@ interface GetSites
  * @return array|int List of WP_Site objects, a list of site IDs when 'fields' is set to 'ids',
  *                   or the number of sites when 'count' is passed as a query var.
  */
-    public function getSites(string|array $args): array|int;
+    public function getSites(string|array $args = []): array|int;
 }

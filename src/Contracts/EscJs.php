@@ -16,5 +16,5 @@ interface EscJs
  * @param string $text The text to be escaped.
  * @return string Escaped text.
  */
-    public function escJs(string $text): string;
+public function escJs(string $text): string;
 }

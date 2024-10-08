@@ -15,5 +15,5 @@ interface SetUrlScheme
  *                            'login_post', 'admin', 'relative', 'rest', 'rpc', or null. Default null.
  * @return string URL with chosen scheme.
  */
-    public function setUrlScheme(string $url, string|null $scheme): string;
+    public function setUrlScheme(string $url, string|null $scheme = null): string;
 }

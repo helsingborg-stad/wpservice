@@ -8,5 +8,5 @@ interface DeleteUsersAddJs
  * @since 3.5.0
  * @access private
  */
-    public function deleteUsersAddJs(): void;
+public function deleteUsersAddJs(): void;
 }

@@ -20,5 +20,5 @@ interface FilterBlockKsesValue
  * @param array $blockContext     Optional. The block the attribute belongs to, in parsed block array format.
  * @return string[]|string The filtered and sanitized result.
  */
-    public function filterBlockKsesValue(array|string $value, array|string $allowedHtml, array $allowedProtocols, array $blockContext): array|string;
+    public function filterBlockKsesValue(array|string $value, array|string $allowedHtml, array $allowedProtocols = [], array $blockContext = null): array|string;
 }

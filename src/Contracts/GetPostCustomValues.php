@@ -16,5 +16,5 @@ interface GetPostCustomValues
  * @param int $postId Optional. Post ID. Default is the ID of the global `$post`.
  * @return array|null Meta field values.
  */
-    public function getPostCustomValues(string $key, int $postId): array|null;
+    public function getPostCustomValues(string $key = '', int $postId = 0): array|null;
 }

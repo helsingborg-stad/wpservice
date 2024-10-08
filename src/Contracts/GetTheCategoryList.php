@@ -25,5 +25,5 @@ interface GetTheCategoryList
  * @param int $postId   Optional. ID of the post to retrieve categories for. Defaults to the current post.
  * @return string Category list for a post.
  */
-    public function getTheCategoryList(string $separator, string $parents, int|false $postId): string;
+    public function getTheCategoryList(string $separator = '', string $parents = '', int|false $postId = false): string;
 }

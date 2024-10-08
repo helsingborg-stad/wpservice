@@ -29,5 +29,5 @@ interface WpmuSignupBlogNotification
  * @param array $meta       Optional. Signup meta data. By default, contains the requested privacy setting and lang_id.
  * @return bool
  */
-    public function wpmuSignupBlogNotification(string $domain, string $path, string $title, string $userLogin, string $userEmail, string $key, array $meta): bool;
+    public function wpmuSignupBlogNotification(string $domain, string $path, string $title, string $userLogin, string $userEmail, string $key, array $meta = []): bool;
 }

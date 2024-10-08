@@ -17,5 +17,5 @@ interface UpdateCommentCache
  * @param WP_Comment[] $comments          Array of comment objects
  * @param bool $updateMetaCache Whether to update commentmeta cache. Default true.
  */
-    public function updateCommentCache(array $comments, bool $updateMetaCache): void;
+    public function updateCommentCache(array $comments, bool $updateMetaCache = true): void;
 }

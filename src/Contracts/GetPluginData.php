@@ -69,5 +69,5 @@ interface GetPluginData
  *     @type string $AuthorName      Plugin author's name.
  * }
  */
-    public function getPluginData(string $pluginFile, bool $markup, bool $translate): array;
+    public function getPluginData(string $pluginFile, bool $markup = true, bool $translate = true): array;
 }

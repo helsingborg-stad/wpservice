@@ -30,5 +30,5 @@ interface WpGetThemes
  * }
  * @return WP_Theme[] Array of WP_Theme objects.
  */
-    public function wpGetThemes(array $args): array;
+    public function wpGetThemes(array $args = []): array;
 }

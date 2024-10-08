@@ -13,5 +13,5 @@ interface WpCreateTerm
  * @param string $taxonomy Optional. The taxonomy within which to create the term. Default 'post_tag'.
  * @return array|\WP_Error
  */
-    public function wpCreateTerm(string $tagName, string $taxonomy): array|\WP_Error;
+    public function wpCreateTerm(string $tagName, string $taxonomy = 'post_tag'): array|\WP_Error;
 }

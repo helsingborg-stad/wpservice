@@ -25,5 +25,5 @@ interface WpResolveNumericSlugConflicts
  *                          WP::parse_request(). Default empty array.
  * @return array Returns the original array of query vars, with date/post conflicts resolved.
  */
-    public function wpResolveNumericSlugConflicts(array $queryVars): array;
+    public function wpResolveNumericSlugConflicts(array $queryVars = []): array;
 }

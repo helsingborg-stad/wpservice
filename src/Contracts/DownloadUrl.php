@@ -20,5 +20,5 @@ interface DownloadUrl
  *                                       Default false.
  * @return string|\WP_Error Filename on success, WP_Error on failure.
  */
-    public function downloadUrl(string $url, int $timeout, bool $signatureVerification): string|\WP_Error;
+    public function downloadUrl(string $url, int $timeout = 300, bool $signatureVerification = false): string|\WP_Error;
 }

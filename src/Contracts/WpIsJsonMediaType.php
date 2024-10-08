@@ -12,5 +12,5 @@ interface WpIsJsonMediaType
  * @param string $mediaType A Media Type string to check.
  * @return bool True if string is a valid JSON Media Type.
  */
-    public function wpIsJsonMediaType(string $mediaType): bool;
+public function wpIsJsonMediaType(string $mediaType): bool;
 }

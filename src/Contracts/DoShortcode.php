@@ -20,5 +20,5 @@ interface DoShortcode
  *                            Default false.
  * @return string Content with shortcodes filtered out.
  */
-    public function doShortcode(string $content, bool $ignoreHtml): string;
+    public function doShortcode(string $content, bool $ignoreHtml = false): string;
 }

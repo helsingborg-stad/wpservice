@@ -13,5 +13,5 @@ interface GetDefaultCommentStatus
  * @param string $commentType Optional. Comment type. Default 'comment'.
  * @return string Either 'open' or 'closed'.
  */
-    public function getDefaultCommentStatus(string $postType, string $commentType): string;
+    public function getDefaultCommentStatus(string $postType = 'post', string $commentType = 'comment'): string;
 }

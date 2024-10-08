@@ -12,5 +12,5 @@ interface FeedContentType
  * @param string $type Type of feed. Possible values include 'rss', rss2', 'atom', and 'rdf'.
  * @return string Content type for specified feed type.
  */
-    public function feedContentType(string $type): string;
+    public function feedContentType(string $type = ''): string;
 }

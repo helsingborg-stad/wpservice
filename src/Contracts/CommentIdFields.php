@@ -20,5 +20,5 @@ interface CommentIdFields
  * @param int|\WP_Post|null $post Optional. The post the comment is being displayed for.
  *                               Defaults to the current global post.
  */
-    public function commentIdFields(int|\WP_Post|null $post): void;
+    public function commentIdFields(int|\WP_Post|null $post = null): void;
 }

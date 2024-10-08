@@ -18,5 +18,5 @@ interface EscHtmlE
  * @param string $domain Optional. Text domain. Unique identifier for retrieving translated strings.
  *                       Default 'default'.
  */
-    public function escHtmlE(string $text, string $domain): void;
+    public function escHtmlE(string $text, string $domain = 'default'): void;
 }

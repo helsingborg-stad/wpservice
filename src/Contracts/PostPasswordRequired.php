@@ -12,5 +12,5 @@ interface PostPasswordRequired
  * @param int|\WP_Post|null $post An optional post. Global $post used if not provided.
  * @return bool false if a password is not required or the correct password cookie is present, true otherwise.
  */
-    public function postPasswordRequired(int|\WP_Post|null $post): bool;
+    public function postPasswordRequired(int|\WP_Post|null $post = null): bool;
 }

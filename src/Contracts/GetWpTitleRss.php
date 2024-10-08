@@ -13,5 +13,5 @@ interface GetWpTitleRss
  * @param string $deprecated Unused.
  * @return string The document title.
  */
-    public function getWpTitleRss(string $deprecated): string;
+    public function getWpTitleRss(string $deprecated = '&#8211;'): string;
 }

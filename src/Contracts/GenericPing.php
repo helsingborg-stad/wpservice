@@ -12,5 +12,5 @@ interface GenericPing
  * @param int $postId Post ID.
  * @return int Same post ID as provided.
  */
-    public function genericPing(int $postId): int;
+    public function genericPing(int $postId = 0): int;
 }

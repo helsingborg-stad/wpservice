@@ -13,5 +13,5 @@ interface WpEditPostsQuery
  *                       Defaults to the `$_GET` superglobal.
  * @return array
  */
-    public function wpEditPostsQuery(array|false $q): array;
+    public function wpEditPostsQuery(array|false $q = false): array;
 }

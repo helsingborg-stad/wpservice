@@ -20,5 +20,5 @@ interface BlockCorePageListRenderNestedPageList
  *
  * @return string List markup.
  */
-    public function blockCorePageListRenderNestedPageList(bool $openSubmenusOnClick, bool $showSubmenuIcons, bool $isNavigationChild, array $nestedPages, bool $isNested, array $activePageAncestorIds, array $colors, int $depth): string;
+    public function blockCorePageListRenderNestedPageList(bool $openSubmenusOnClick, bool $showSubmenuIcons, bool $isNavigationChild, array $nestedPages, bool $isNested, array $activePageAncestorIds = [], array $colors = [], int $depth = 0): string;
 }

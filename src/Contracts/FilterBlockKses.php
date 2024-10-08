@@ -18,5 +18,5 @@ interface FilterBlockKses
  *                                                 Defaults to the result of wp_allowed_protocols().
  * @return array The filtered and sanitized block object result.
  */
-    public function filterBlockKses(\WP_Block_Parser_Block $block, array|string $allowedHtml, array $allowedProtocols): array;
+    public function filterBlockKses(\WP_Block_Parser_Block $block, array|string $allowedHtml, array $allowedProtocols = []): array;
 }

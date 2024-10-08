@@ -18,5 +18,5 @@ interface WpReadonly
  *                              Default true.
  * @return string HTML attribute or empty string.
  */
-    public function wpReadonly(mixed $readonlyValue, mixed $current, bool $display): string;
+    public function wpReadonly(mixed $readonlyValue, mixed $current = true, bool $display = true): string;
 }

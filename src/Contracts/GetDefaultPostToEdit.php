@@ -13,5 +13,5 @@ interface GetDefaultPostToEdit
  * @param bool $createInDb Optional. Whether to insert the post into database. Default false.
  * @return \WP_Post Post object containing all the default post data as attributes
  */
-    public function getDefaultPostToEdit(string $postType, bool $createInDb): \WP_Post;
+    public function getDefaultPostToEdit(string $postType = 'post', bool $createInDb = false): \WP_Post;
 }

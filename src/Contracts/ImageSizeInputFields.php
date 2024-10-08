@@ -13,5 +13,5 @@ interface ImageSizeInputFields
  * @param bool|string $check
  * @return array
  */
-    public function imageSizeInputFields(\WP_Post $post, bool|string $check): array;
+    public function imageSizeInputFields(\WP_Post $post, bool|string $check = ''): array;
 }

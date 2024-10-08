@@ -12,5 +12,5 @@ interface GetPreviousCommentsLink
  * @param string $label Optional. Label for comments link text. Default empty.
  * @return string|void HTML-formatted link for the previous page of comments.
  */
-    public function getPreviousCommentsLink(string $label): string;
+    public function getPreviousCommentsLink(string $label = ''): string;
 }

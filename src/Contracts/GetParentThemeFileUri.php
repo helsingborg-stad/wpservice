@@ -12,5 +12,5 @@ interface GetParentThemeFileUri
  * @param string $file Optional. File to return the URL for in the template directory.
  * @return string The URL of the file.
  */
-    public function getParentThemeFileUri(string $file): string;
+    public function getParentThemeFileUri(string $file = ''): string;
 }

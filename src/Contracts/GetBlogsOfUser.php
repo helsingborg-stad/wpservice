@@ -18,5 +18,5 @@ interface GetBlogsOfUser
  * @return object[] A list of the user's sites. An empty array if the user doesn't exist
  *                  or belongs to no sites.
  */
-    public function getBlogsOfUser(int $userId, bool $all): array;
+    public function getBlogsOfUser(int $userId, bool $all = false): array;
 }

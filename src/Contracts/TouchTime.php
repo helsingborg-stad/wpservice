@@ -18,5 +18,5 @@ interface TouchTime
  * @param int|bool $multi     Optional. Whether the additional fields and buttons should be added.
  *                            Default 0|false.
  */
-    public function touchTime(int|bool $edit, int|bool $forPost, int $tabIndex, int|bool $multi): void;
+    public function touchTime(int|bool $edit = 1, int|bool $forPost = 1, int $tabIndex = 0, int|bool $multi = 0): void;
 }

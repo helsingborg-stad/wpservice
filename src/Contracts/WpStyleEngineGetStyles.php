@@ -54,5 +54,5 @@ interface WpStyleEngineGetStyles
  *     @type string   $classnames   Classnames separated by a space.
  * }
  */
-    public function wpStyleEngineGetStyles(array $blockStyles, array $options): array;
+    public function wpStyleEngineGetStyles(array $blockStyles, array $options = []): array;
 }

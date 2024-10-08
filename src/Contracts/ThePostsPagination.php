@@ -12,5 +12,5 @@ interface ThePostsPagination
  * @param array $args Optional. See get_the_posts_pagination() for available arguments.
  *                    Default empty array.
  */
-    public function thePostsPagination(array $args): void;
+    public function thePostsPagination(array $args = []): void;
 }

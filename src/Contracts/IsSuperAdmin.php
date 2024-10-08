@@ -12,5 +12,5 @@ interface IsSuperAdmin
  * @param int|false $userId Optional. The ID of a user. Defaults to false, to check the current user.
  * @return bool Whether the user is a site admin.
  */
-    public function isSuperAdmin(int|false $userId): bool;
+    public function isSuperAdmin(int|false $userId = false): bool;
 }

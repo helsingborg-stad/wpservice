@@ -18,5 +18,5 @@ interface Checked
  *                       Default true.
  * @return string HTML attribute or empty string.
  */
-    public function checked(mixed $checked, mixed $current, bool $display): string;
+    public function checked(mixed $checked, mixed $current = true, bool $display = true): string;
 }

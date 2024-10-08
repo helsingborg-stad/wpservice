@@ -37,5 +37,5 @@ interface WpPrintFontFaces
  *     }
  * }
  */
-    public function wpPrintFontFaces(array $fonts): void;
+    public function wpPrintFontFaces(array $fonts = []): void;
 }

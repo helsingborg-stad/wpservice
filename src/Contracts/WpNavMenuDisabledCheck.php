@@ -16,5 +16,5 @@ interface WpNavMenuDisabledCheck
  * @param bool $display              Whether to display or just return the string.
  * @return string|false Disabled attribute if at least one menu exists, false if not.
  */
-    public function wpNavMenuDisabledCheck(int|string $navMenuSelectedId, bool $display): string|false;
+    public function wpNavMenuDisabledCheck(int|string $navMenuSelectedId, bool $display = true): string|false;
 }

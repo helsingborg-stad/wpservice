@@ -17,5 +17,5 @@ interface MenuPageUrl
  * @param bool $display   Optional. Whether or not to display the URL. Default true.
  * @return string The menu page URL.
  */
-    public function menuPageUrl(string $menuSlug, bool $display): string;
+    public function menuPageUrl(string $menuSlug, bool $display = true): string;
 }

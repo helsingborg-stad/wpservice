@@ -31,5 +31,5 @@ interface TranslateNoopedPlural
  *                              a text domain passed to _n_noop() or _nx_noop(), it will override this value. Default 'default'.
  * @return string Either $singular or $plural translated text.
  */
-    public function translateNoopedPlural(array $noopedPlural, int $count, string $domain): string;
+    public function translateNoopedPlural(array $noopedPlural, int $count, string $domain = 'default'): string;
 }

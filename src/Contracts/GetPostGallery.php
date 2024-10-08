@@ -13,5 +13,5 @@ interface GetPostGallery
  * @param bool $html Optional. Whether to return HTML or data. Default is true.
  * @return string|array Gallery data and srcs parsed from the expanded shortcode.
  */
-    public function getPostGallery(int|\WP_Post $post, bool $html): string|array;
+    public function getPostGallery(int|\WP_Post $post = 0, bool $html = true): string|array;
 }

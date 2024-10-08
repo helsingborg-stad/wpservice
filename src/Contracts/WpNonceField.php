@@ -30,5 +30,5 @@ interface WpNonceField
  * @param bool $display Optional. Whether to display or return hidden form field. Default true.
  * @return string Nonce field HTML markup.
  */
-    public function wpNonceField(int|string $action, string $name, bool $referer, bool $display): string;
+    public function wpNonceField(int|string $action, string $name = '_wpnonce', bool $referer = true, bool $display = true): string;
 }

@@ -21,5 +21,5 @@ interface RestGetDateWithGmt
  *     @type string $1 UTC datetime string.
  * }
  */
-    public function restGetDateWithGmt(string $date, bool $isUtc): array|null;
+    public function restGetDateWithGmt(string $date, bool $isUtc = false): array|null;
 }

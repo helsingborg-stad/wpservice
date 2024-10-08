@@ -19,5 +19,5 @@ interface Wpautop
  *                     and `<svg>` tags are not affected. Default true.
  * @return string Text which has been converted into correct paragraph tags.
  */
-    public function wpautop(string $text, bool $br): string;
+    public function wpautop(string $text, bool $br = true): string;
 }

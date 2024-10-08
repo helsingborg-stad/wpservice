@@ -18,5 +18,5 @@ interface WpGetAttachmentImageSizes
  *                                    Default null.
  * @return string|false A valid source size value for use in a 'sizes' attribute or false.
  */
-    public function wpGetAttachmentImageSizes(int $attachmentId, string|array $size, array|null $imageMeta): string|false;
+    public function wpGetAttachmentImageSizes(int $attachmentId, string|array $size = 'medium', array|null $imageMeta = null): string|false;
 }

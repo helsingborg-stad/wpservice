@@ -20,5 +20,5 @@ interface GetLastpostmodified
  * @param string $postType Optional. The post type to check. Default 'any'.
  * @return string The timestamp in 'Y-m-d H:i:s' format, or false on failure.
  */
-    public function getLastpostmodified(string $timezone, string $postType): string;
+    public function getLastpostmodified(string $timezone = 'server', string $postType = 'any'): string;
 }

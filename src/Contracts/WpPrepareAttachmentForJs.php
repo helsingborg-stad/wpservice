@@ -53,5 +53,5 @@ interface WpPrepareAttachmentForJs
  * }
  *
  */
-    public function wpPrepareAttachmentForJs(int|\WP_Post $attachment): array;
+public function wpPrepareAttachmentForJs(int|\WP_Post $attachment): array;
 }

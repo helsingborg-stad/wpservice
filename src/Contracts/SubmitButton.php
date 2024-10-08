@@ -26,5 +26,5 @@ interface SubmitButton
  *                                       e.g. `id="search-submit"`, though the array format is generally preferred.
  *                                       Default empty string.
  */
-    public function submitButton(string $text, string $type, string $name, bool $wrap, array|string $otherAttributes): void;
+    public function submitButton(string $text = '', string $type = 'primary', string $name = 'submit', bool $wrap = true, array|string $otherAttributes = ''): void;
 }

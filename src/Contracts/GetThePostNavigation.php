@@ -31,5 +31,5 @@ interface GetThePostNavigation
  * }
  * @return string Markup for post links.
  */
-    public function getThePostNavigation(array $args): string;
+    public function getThePostNavigation(array $args = []): string;
 }

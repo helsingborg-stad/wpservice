@@ -15,5 +15,5 @@ interface WpPrintInlineScriptTag
  * @param string $data       Data for script tag: JavaScript, importmap, speculationrules, etc.
  * @param array $attributes Optional. Key-value pairs representing `<script>` tag attributes.
  */
-    public function wpPrintInlineScriptTag(string $data, array $attributes): void;
+    public function wpPrintInlineScriptTag(string $data, array $attributes = []): void;
 }

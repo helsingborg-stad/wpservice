@@ -15,5 +15,5 @@ interface WpKsesNoNull
  * @param array $options Set 'slash_zero' => 'keep' when '\0' is allowed. Default is 'remove'.
  * @return string Filtered content.
  */
-    public function wpKsesNoNull(string $content, array $options): string;
+    public function wpKsesNoNull(string $content, array $options = null): string;
 }

@@ -24,5 +24,5 @@ interface WpAddDashboardWidget
  * @param string $priority         Optional. The priority within the context where the box should show.
  *                                   Accepts 'high', 'core', 'default', or 'low'. Default 'core'.
  */
-    public function wpAddDashboardWidget(string $widgetId, string $widgetName, callable $callback, callable $controlCallback, array $callbackArgs, string $context, string $priority): void;
+    public function wpAddDashboardWidget(string $widgetId, string $widgetName, callable $callback, callable $controlCallback = null, array $callbackArgs = null, string $context = 'normal', string $priority = 'core'): void;
 }

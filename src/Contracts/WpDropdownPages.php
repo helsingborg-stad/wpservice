@@ -34,5 +34,5 @@ interface WpDropdownPages
  * }
  * @return string HTML dropdown list of pages.
  */
-    public function wpDropdownPages(array|string $args): string;
+    public function wpDropdownPages(array|string $args = ''): string;
 }

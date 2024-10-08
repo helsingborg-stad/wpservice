@@ -26,5 +26,5 @@ interface WpRegisterStyle
  *                                 '(orientation: portrait)' and '(max-width: 640px)'.
  * @return bool Whether the style has been registered. True on success, false on failure.
  */
-    public function wpRegisterStyle(string $handle, string|false $src, array $deps, string|bool|null $ver, string $media): bool;
+    public function wpRegisterStyle(string $handle, string|false $src, array $deps = [], string|bool|null $ver = false, string $media = 'all'): bool;
 }

@@ -16,5 +16,5 @@ interface HasExcerpt
  * @param int|\WP_Post $post Optional. Post ID or WP_Post object. Default is global $post.
  * @return bool True if the post has a custom excerpt, false otherwise.
  */
-    public function hasExcerpt(int|\WP_Post $post): bool;
+    public function hasExcerpt(int|\WP_Post $post = 0): bool;
 }

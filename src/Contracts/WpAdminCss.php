@@ -24,5 +24,5 @@ interface WpAdminCss
  *                           to wp-admin/. Defaults to 'wp-admin'.
  * @param bool $forceEcho Optional. Force the stylesheet link to be printed rather than enqueued.
  */
-    public function wpAdminCss(string $file, bool $forceEcho): void;
+public function wpAdminCss(string $file = 'wp-admin', bool $forceEcho = false): void;
 }

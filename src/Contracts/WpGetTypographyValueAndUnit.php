@@ -21,5 +21,5 @@ interface WpGetTypographyValueAndUnit
  * @return array|null An array consisting of `'value'` and `'unit'` properties on success.
  *                    `null` on failure.
  */
-    public function wpGetTypographyValueAndUnit(string|int|float $rawValue, array $options): array|null;
+    public function wpGetTypographyValueAndUnit(string|int|float $rawValue, array $options = []): array|null;
 }

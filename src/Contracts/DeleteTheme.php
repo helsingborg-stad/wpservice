@@ -16,5 +16,5 @@ interface DeleteTheme
  * @return bool|null|\WP_Error True on success, false if `$stylesheet` is empty, WP_Error on failure.
  *                            Null if filesystem credentials are required to proceed.
  */
-    public function deleteTheme(string $stylesheet, string $redirect): bool|null|\WP_Error;
+    public function deleteTheme(string $stylesheet, string $redirect = ''): bool|null|\WP_Error;
 }

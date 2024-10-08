@@ -23,5 +23,5 @@ interface WpDeleteUser
  * @param int $reassign Optional. Reassign posts and links to new User ID.
  * @return bool True when finished.
  */
-    public function wpDeleteUser(int $id, int $reassign): bool;
+    public function wpDeleteUser(int $id, int $reassign = null): bool;
 }

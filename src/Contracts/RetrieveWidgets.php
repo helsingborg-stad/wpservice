@@ -27,5 +27,5 @@ interface RetrieveWidgets
  *                                   of 'customize' defers updates for the Customizer.
  * @return array Updated sidebars widgets.
  */
-    public function retrieveWidgets(string|bool $themeChanged): array;
+    public function retrieveWidgets(string|bool $themeChanged = false): array;
 }

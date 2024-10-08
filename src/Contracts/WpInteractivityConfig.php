@@ -19,5 +19,5 @@ interface WpInteractivityConfig
  * @return array The configuration for the specified store namespace. This will be the updated configuration if a
  *               $config argument was provided.
  */
-    public function wpInteractivityConfig(string $storeNamespace, array $config): array;
+    public function wpInteractivityConfig(string $storeNamespace, array $config = []): array;
 }

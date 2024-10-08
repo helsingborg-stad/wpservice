@@ -12,5 +12,5 @@ interface WpDeferTermCounting
  * @param bool $defer Optional. Enable if true, disable if false.
  * @return bool Whether term counting is enabled or disabled.
  */
-    public function wpDeferTermCounting(bool $defer): bool;
+    public function wpDeferTermCounting(bool $defer = null): bool;
 }

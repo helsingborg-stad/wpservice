@@ -12,5 +12,5 @@ interface WpCreditsSectionList
  * @param array $credits The credits groups returned from the API.
  * @param string $slug    The current group to display.
  */
-    public function wpCreditsSectionList(array $credits, string $slug): void;
+    public function wpCreditsSectionList(array $credits = [], string $slug = ''): void;
 }

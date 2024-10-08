@@ -52,5 +52,5 @@ interface GetAvatarData
  *     @type string|false $url          The URL of the avatar that was found, or false.
  * }
  */
-    public function getAvatarData(mixed $idOrEmail, array $args): array;
+    public function getAvatarData(mixed $idOrEmail, array $args = null): array;
 }

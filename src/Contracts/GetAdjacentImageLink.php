@@ -17,5 +17,5 @@ interface GetAdjacentImageLink
  * @param bool $text Optional. Link text. Default false.
  * @return string Markup for image link.
  */
-    public function getAdjacentImageLink(bool $prev, string|array $size, bool $text): string;
+    public function getAdjacentImageLink(bool $prev = true, string|array $size = 'thumbnail', bool $text = false): string;
 }

@@ -15,5 +15,5 @@ interface CommentsPopupLink
  * @param string $cssClass Optional. CSS class to use for comments. Default empty.
  * @param false|string $none      Optional. String to display when comments have been turned off. Default false.
  */
-    public function commentsPopupLink(false|string $zero, false|string $one, false|string $more, string $cssClass, false|string $none): void;
+    public function commentsPopupLink(false|string $zero = false, false|string $one = false, false|string $more = false, string $cssClass = '', false|string $none = false): void;
 }

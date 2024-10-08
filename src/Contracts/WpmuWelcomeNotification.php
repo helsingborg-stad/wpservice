@@ -21,5 +21,5 @@ interface WpmuWelcomeNotification
  * @param array $meta     Optional. Signup meta data. By default, contains the requested privacy setting and lang_id.
  * @return bool Whether the email notification was sent.
  */
-    public function wpmuWelcomeNotification(int $blogId, int $userId, string $password, string $title, array $meta): bool;
+    public function wpmuWelcomeNotification(int $blogId, int $userId, string $password, string $title, array $meta = []): bool;
 }

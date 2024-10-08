@@ -16,5 +16,5 @@ interface StatusHeader
  * @param string $description Optional. A custom description for the HTTP status.
  *                            Defaults to the result of get_status_header_desc() for the given code.
  */
-    public function statusHeader(int $code, string $description): void;
+    public function statusHeader(int $code, string $description = ''): void;
 }

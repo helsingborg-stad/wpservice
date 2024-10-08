@@ -16,5 +16,5 @@ interface GetUploadIframeSrc
  * @param string $tab     Media upload tab.
  * @return string Upload iframe source URL.
  */
-    public function getUploadIframeSrc(string $type, int $postId, string $tab): string;
+    public function getUploadIframeSrc(string $type = null, int $postId = null, string $tab = null): string;
 }

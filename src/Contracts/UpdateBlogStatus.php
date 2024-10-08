@@ -18,5 +18,5 @@ interface UpdateBlogStatus
  * @param null $deprecated Not used.
  * @return string|false $value
  */
-    public function updateBlogStatus(int $blogId, string $pref, string $value, null $deprecated): string|false;
+    public function updateBlogStatus(int $blogId, string $pref, string $value, null $deprecated = null): string|false;
 }

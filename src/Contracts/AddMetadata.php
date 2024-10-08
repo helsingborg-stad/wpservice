@@ -21,5 +21,5 @@ interface AddMetadata
  *                           no change will be made. Default false.
  * @return int|false The meta ID on success, false on failure.
  */
-    public function addMetadata(string $metaType, int $objectId, string $metaKey, mixed $metaValue, bool $unique): int|false;
+    public function addMetadata(string $metaType, int $objectId, string $metaKey, mixed $metaValue, bool $unique = false): int|false;
 }

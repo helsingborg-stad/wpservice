@@ -13,5 +13,5 @@ interface WpPostPreviewJs
  *
  * @global WP_Post $post Global post object.
  */
-    public function wpPostPreviewJs(): void;
+public function wpPostPreviewJs(): void;
 }

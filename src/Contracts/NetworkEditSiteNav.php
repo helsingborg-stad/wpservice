@@ -19,5 +19,5 @@ interface NetworkEditSiteNav
  *     @type string $selected The ID of the selected link.
  * }
  */
-    public function networkEditSiteNav(array $args): void;
+    public function networkEditSiteNav(array $args = []): void;
 }

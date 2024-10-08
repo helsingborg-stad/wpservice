@@ -19,5 +19,5 @@ interface WpGeneratePassword
      *                                  Used when generating secret keys and salts. Default false.
      * @return string The random password.
      */
-    public function wpGeneratePassword(int $length, bool $specialChars, bool $extraSpecialChars): string;
+    public function wpGeneratePassword(int $length = 12, bool $specialChars = true, bool $extraSpecialChars = false): string;
 }

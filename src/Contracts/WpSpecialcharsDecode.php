@@ -24,5 +24,5 @@ interface WpSpecialcharsDecode
  *                                Default is ENT_NOQUOTES.
  * @return string The decoded text without HTML entities.
  */
-    public function wpSpecialcharsDecode(string $text, string|int $quoteStyle): string;
+    public function wpSpecialcharsDecode(string $text, string|int $quoteStyle = ENT_NOQUOTES): string;
 }

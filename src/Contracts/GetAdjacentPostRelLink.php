@@ -21,5 +21,5 @@ interface GetAdjacentPostRelLink
  * @param string $taxonomy       Optional. Taxonomy, if `$in_same_term` is true. Default 'category'.
  * @return string|void The adjacent post relational link URL.
  */
-    public function getAdjacentPostRelLink(string $title, bool $inSameTerm, array|string $excludedTerms, bool $previous, string $taxonomy): string;
+    public function getAdjacentPostRelLink(string $title = '%title', bool $inSameTerm = false, array|string $excludedTerms = '', bool $previous = true, string $taxonomy = 'category'): string;
 }

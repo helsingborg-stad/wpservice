@@ -13,5 +13,5 @@ interface PreviousImageLink
  *                           of width and height values in pixels (in that order). Default 'thumbnail'.
  * @param string|false $text Optional. Link text. Default false.
  */
-    public function previousImageLink(string|array $size, string|false $text): void;
+    public function previousImageLink(string|array $size = 'thumbnail', string|false $text = false): void;
 }

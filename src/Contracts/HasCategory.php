@@ -20,5 +20,5 @@ interface HasCategory
  * @return bool True if the current post has any of the given categories
  *              (or any category, if no category specified). False otherwise.
  */
-    public function hasCategory(string|int|array $category, int|\WP_Post $post): bool;
+    public function hasCategory(string|int|array $category = '', int|\WP_Post $post = null): bool;
 }

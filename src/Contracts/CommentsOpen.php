@@ -16,5 +16,5 @@ interface CommentsOpen
  * @param int|\WP_Post $post Optional. Post ID or WP_Post object. Default current post.
  * @return bool True if the comments are open.
  */
-    public function commentsOpen(int|\WP_Post $post): bool;
+    public function commentsOpen(int|\WP_Post $post = null): bool;
 }

@@ -24,5 +24,5 @@ interface UpdateTermMeta
  *                           is the same as the one that is already in the database.
  *                           WP_Error when term_id is ambiguous between taxonomies.
  */
-    public function updateTermMeta(int $termId, string $metaKey, mixed $metaValue, mixed $prevValue): int|bool|\WP_Error;
+    public function updateTermMeta(int $termId, string $metaKey, mixed $metaValue, mixed $prevValue = ''): int|bool|\WP_Error;
 }

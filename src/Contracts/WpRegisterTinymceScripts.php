@@ -16,5 +16,5 @@ interface WpRegisterTinymceScripts
  * @param \WP_Scripts $scripts            WP_Scripts object.
  * @param bool $forceUncompressed Whether to forcibly prevent gzip compression. Default false.
  */
-    public function wpRegisterTinymceScripts(\WP_Scripts $scripts, bool $forceUncompressed): void;
+    public function wpRegisterTinymceScripts(\WP_Scripts $scripts, bool $forceUncompressed = false): void;
 }

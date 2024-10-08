@@ -20,5 +20,5 @@ interface InstallPluginInstallStatus
  *     @type string $file    Plugin filename relative to the plugins directory.
  * }
  */
-    public function installPluginInstallStatus(array|object $api, bool $loop): array;
+    public function installPluginInstallStatus(array|object $api, bool $loop = false): array;
 }

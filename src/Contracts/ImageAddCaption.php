@@ -19,5 +19,5 @@ interface ImageAddCaption
  * @param string $alt     Image `alt` attribute (not used).
  * @return string The image HTML markup with caption shortcode.
  */
-    public function imageAddCaption(string $html, int $id, string $caption, string $title, string $align, string $url, string $size, string $alt): string;
+    public function imageAddCaption(string $html, int $id, string $caption, string $title, string $align, string $url, string $size, string $alt = ''): string;
 }

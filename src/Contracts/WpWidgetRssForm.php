@@ -16,5 +16,5 @@ interface WpWidgetRssForm
  * @param array|string $args   Values for input fields.
  * @param array $inputs Override default display options.
  */
-    public function wpWidgetRssForm(array|string $args, array $inputs): void;
+    public function wpWidgetRssForm(array|string $args, array $inputs = null): void;
 }

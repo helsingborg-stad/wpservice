@@ -2,16 +2,7 @@
 
 namespace WpService\Implementations;
 
-use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use WP_Post;
-use WP_Post_Type;
-use WP_Role;
-use WP_Screen;
-use WP_Taxonomy;
-use WP_Term;
-use WP_User;
-use WP_Image_Editor;
 
 class FakeWpServiceTest extends TestCase
 {

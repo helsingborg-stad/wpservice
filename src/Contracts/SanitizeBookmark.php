@@ -13,5 +13,5 @@ interface SanitizeBookmark
  * @param string $context  Optional. How to filter the fields. Default 'display'.
  * @return \stdClass|array Same type as $bookmark but with fields sanitized.
  */
-    public function sanitizeBookmark(\stdClass|array $bookmark, string $context): \stdClass|array;
+    public function sanitizeBookmark(\stdClass|array $bookmark, string $context = 'display'): \stdClass|array;
 }

@@ -36,5 +36,5 @@ interface WpSalt
      * @param string $scheme Authentication scheme (auth, secure_auth, logged_in, nonce).
      * @return string Salt value
      */
-    public function wpSalt(string $scheme): string;
+    public function wpSalt(string $scheme = 'auth'): string;
 }

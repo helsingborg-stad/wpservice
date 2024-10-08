@@ -13,5 +13,5 @@ interface DisplaySetupForm
  *
  * @param string|null $error
  */
-    public function displaySetupForm(string|null $error): void;
+    public function displaySetupForm(string|null $error = null): void;
 }

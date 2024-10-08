@@ -16,5 +16,5 @@ interface AdjacentImageLink
  *                           of width and height values in pixels (in that order). Default 'thumbnail'.
  * @param bool $text Optional. Link text. Default false.
  */
-    public function adjacentImageLink(bool $prev, string|array $size, bool $text): void;
+    public function adjacentImageLink(bool $prev = true, string|array $size = 'thumbnail', bool $text = false): void;
 }

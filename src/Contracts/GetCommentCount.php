@@ -23,5 +23,5 @@ interface GetCommentCount
  *     @type int $all                 The total number of pending or approved comments.
  * }
  */
-    public function getCommentCount(int $postId): array;
+    public function getCommentCount(int $postId = 0): array;
 }

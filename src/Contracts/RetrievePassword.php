@@ -17,5 +17,5 @@ interface RetrievePassword
  *                           Defaults to `$_POST['user_login']` if not set.
  * @return true|\WP_Error True when finished, WP_Error object on error.
  */
-    public function retrievePassword(string $userLogin): true|\WP_Error;
+    public function retrievePassword(string $userLogin = null): true|\WP_Error;
 }

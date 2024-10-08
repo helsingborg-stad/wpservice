@@ -42,5 +42,5 @@ interface WpGetAttachmentImage
  * }
  * @return string HTML img element or empty string on failure.
  */
-    public function wpGetAttachmentImage(int $attachmentId, string|array $size, bool $icon, string|array $attr): string;
+    public function wpGetAttachmentImage(int $attachmentId, string|array $size = 'thumbnail', bool $icon = false, string|array $attr = ''): string;
 }

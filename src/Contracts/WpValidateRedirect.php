@@ -19,5 +19,5 @@ interface WpValidateRedirect
      * @param string $fallbackUrl The value to return if $location is not allowed.
      * @return string Redirect-sanitized URL.
      */
-    public function wpValidateRedirect(string $location, string $fallbackUrl): string;
+    public function wpValidateRedirect(string $location, string $fallbackUrl = ''): string;
 }

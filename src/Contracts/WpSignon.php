@@ -36,5 +36,5 @@ interface WpSignon
  * @param string|bool $secureCookie Optional. Whether to use secure cookie.
  * @return \WP_User|\WP_Error WP_User on success, WP_Error on failure.
  */
-    public function wpSignon(array $credentials, string|bool $secureCookie): \WP_User|\WP_Error;
+    public function wpSignon(array $credentials = [], string|bool $secureCookie = ''): \WP_User|\WP_Error;
 }

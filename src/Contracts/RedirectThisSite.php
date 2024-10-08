@@ -17,5 +17,5 @@ interface RedirectThisSite
  *     @type string $0 The current site's domain.
  * }
  */
-    public function redirectThisSite(array|string $deprecated): array;
+    public function redirectThisSite(array|string $deprecated = ''): array;
 }

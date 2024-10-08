@@ -16,5 +16,5 @@ interface WpFuzzyNumberMatch
  * @param int|float $precision Optional. The allowed variation. Default 1.
  * @return bool Whether the numbers match within the specified precision.
  */
-    public function wpFuzzyNumberMatch(int|float $expected, int|float $actual, int|float $precision): bool;
+    public function wpFuzzyNumberMatch(int|float $expected, int|float $actual, int|float $precision = 1): bool;
 }

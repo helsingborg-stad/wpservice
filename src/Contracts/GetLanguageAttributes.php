@@ -15,5 +15,5 @@ interface GetLanguageAttributes
  * @param string $doctype Optional. The type of HTML document. Accepts 'xhtml' or 'html'. Default 'html'.
  * @return string A space-separated list of language attributes.
  */
-    public function getLanguageAttributes(string $doctype): string;
+    public function getLanguageAttributes(string $doctype = 'html'): string;
 }

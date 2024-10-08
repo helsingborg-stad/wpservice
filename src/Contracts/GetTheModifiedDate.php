@@ -14,5 +14,5 @@ interface GetTheModifiedDate
  * @param int|\WP_Post $post   Optional. Post ID or WP_Post object. Default current post.
  * @return string|int|false Date the current post was modified. False on failure.
  */
-    public function getTheModifiedDate(string $format, int|\WP_Post $post): string|int|false;
+    public function getTheModifiedDate(string $format = '', int|\WP_Post $post = null): string|int|false;
 }

@@ -14,5 +14,5 @@ interface WpGetPostParentId
  * @return int|false Post parent ID (which can be 0 if there is no parent),
  *                   or false if the post does not exist.
  */
-    public function wpGetPostParentId(int|\WP_Post|null $post): int|false;
+    public function wpGetPostParentId(int|\WP_Post|null $post = null): int|false;
 }

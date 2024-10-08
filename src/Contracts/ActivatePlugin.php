@@ -32,5 +32,5 @@ interface ActivatePlugin
  * @param bool $silent       Optional. Whether to prevent calling activation hooks. Default false.
  * @return null|\WP_Error Null on success, WP_Error on invalid file.
  */
-    public function activatePlugin(string $plugin, string $redirect, bool $networkWide, bool $silent): null|\WP_Error;
+    public function activatePlugin(string $plugin, string $redirect = '', bool $networkWide = false, bool $silent = false): null|\WP_Error;
 }

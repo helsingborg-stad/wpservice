@@ -15,5 +15,5 @@ interface LanguageAttributes
  *
  * @param string $doctype Optional. The type of HTML document. Accepts 'xhtml' or 'html'. Default 'html'.
  */
-    public function languageAttributes(string $doctype): void;
+    public function languageAttributes(string $doctype = 'html'): void;
 }

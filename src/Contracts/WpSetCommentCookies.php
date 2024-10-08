@@ -15,5 +15,5 @@ interface WpSetCommentCookies
  * @param \WP_User $user            Comment author's user object. The user may not exist.
  * @param bool $cookiesConsent Optional. Comment author's consent to store cookies. Default true.
  */
-    public function wpSetCommentCookies(\WP_Comment $comment, \WP_User $user, bool $cookiesConsent): void;
+    public function wpSetCommentCookies(\WP_Comment $comment, \WP_User $user, bool $cookiesConsent = true): void;
 }

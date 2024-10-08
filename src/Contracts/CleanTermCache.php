@@ -18,5 +18,5 @@ interface CleanTermCache
  * @param bool $cleanTaxonomy Optional. Whether to clean taxonomy wide caches (true), or just individual
  *                                  term object caches (false). Default true.
  */
-    public function cleanTermCache(int|array $ids, string $taxonomy, bool $cleanTaxonomy): void;
+    public function cleanTermCache(int|array $ids, string $taxonomy = '', bool $cleanTaxonomy = true): void;
 }

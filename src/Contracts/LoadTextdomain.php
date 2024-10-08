@@ -25,5 +25,5 @@ interface LoadTextdomain
  * @param string $locale Optional. Locale. Default is the current locale.
  * @return bool True on success, false on failure.
  */
-    public function loadTextdomain(string $domain, string $mofile, string $locale): bool;
+    public function loadTextdomain(string $domain, string $mofile, string $locale = null): bool;
 }

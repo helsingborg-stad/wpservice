@@ -18,5 +18,5 @@ interface UpdatePostsCount
  *
  * @param string $deprecated Not used.
  */
-    public function updatePostsCount(string $deprecated): void;
+    public function updatePostsCount(string $deprecated = ''): void;
 }

@@ -21,5 +21,5 @@ interface _x
  *                        Default 'default'.
  * @return string Translated context string without pipe.
  */
-    public function _x(string $text, string $context, string $domain): string;
+    public function _x(string $text, string $context, string $domain = 'default'): string;
 }

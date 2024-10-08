@@ -14,5 +14,5 @@ interface GetPostEmbedHtml
  * @param int|\WP_Post $post   Optional. Post ID or object. Default is global `$post`.
  * @return string|false Embed code on success, false if post doesn't exist.
  */
-    public function getPostEmbedHtml(int $width, int $height, int|\WP_Post $post): string|false;
+    public function getPostEmbedHtml(int $width, int $height, int|\WP_Post $post = null): string|false;
 }

@@ -13,5 +13,5 @@ interface TheCategoryRss
  *
  * @param string $type Optional, default is the type returned by get_default_feed().
  */
-    public function theCategoryRss(string $type): void;
+    public function theCategoryRss(string $type = null): void;
 }

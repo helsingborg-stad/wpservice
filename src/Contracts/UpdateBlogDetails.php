@@ -13,5 +13,5 @@ interface UpdateBlogDetails
  * @param array $details Array of details keyed by blogs table field names.
  * @return bool True if update succeeds, false otherwise.
  */
-    public function updateBlogDetails(int $blogId, array $details): bool;
+    public function updateBlogDetails(int $blogId, array $details = []): bool;
 }

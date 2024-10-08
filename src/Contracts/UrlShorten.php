@@ -14,5 +14,5 @@ interface UrlShorten
  * @param int $length Optional. Maximum length of the shortened URL. Default 35 characters.
  * @return string Shortened URL.
  */
-    public function urlShorten(string $url, int $length): string;
+    public function urlShorten(string $url, int $length = 35): string;
 }

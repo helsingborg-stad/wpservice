@@ -22,5 +22,5 @@ interface SanitizeTitle
  *                               Default 'save'.
  * @return string The sanitized string.
  */
-    public function sanitizeTitle(string $title, string $fallbackTitle, string $context): string;
+    public function sanitizeTitle(string $title, string $fallbackTitle = '', string $context = 'save'): string;
 }

@@ -16,5 +16,5 @@ interface WpGetBlockCssSelector
  *
  * @return string|null CSS selector or `null` if no selector available.
  */
-    public function wpGetBlockCssSelector(\WP_Block_Type $blockType, string|array $target, bool $fallback): string|null;
+public function wpGetBlockCssSelector(\WP_Block_Type $blockType, string|array $target = 'root', bool $fallback = false): string|null;
 }

@@ -23,5 +23,5 @@ interface MediaSideloadImage
  * @return string|int|\WP_Error Populated HTML img tag, attachment ID, or attachment source
  *                             on success, WP_Error object otherwise.
  */
-    public function mediaSideloadImage(string $file, int $postId, string $desc, string $returnType): string|int|\WP_Error;
+    public function mediaSideloadImage(string $file, int $postId = 0, string $desc = null, string $returnType = 'html'): string|int|\WP_Error;
 }

@@ -12,5 +12,5 @@ interface WpRegisterBlockStyleVariationsFromThemeJsonPartials
  *
  * @param array $variations Shared block style variations.
  */
-    public function wpRegisterBlockStyleVariationsFromThemeJsonPartials(array $variations): void;
+public function wpRegisterBlockStyleVariationsFromThemeJsonPartials(array $variations): void;
 }

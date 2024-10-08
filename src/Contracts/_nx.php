@@ -28,5 +28,5 @@ interface _nx
  *                        Default 'default'.
  * @return string The translated singular or plural form.
  */
-    public function _nx(string $single, string $plural, int $number, string $context, string $domain): string;
+    public function _nx(string $single, string $plural, int $number, string $context, string $domain = 'default'): string;
 }

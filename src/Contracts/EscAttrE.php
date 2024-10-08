@@ -18,5 +18,5 @@ interface EscAttrE
  * @param string $domain Optional. Text domain. Unique identifier for retrieving translated strings.
  *                       Default 'default'.
  */
-    public function escAttrE(string $text, string $domain): void;
+    public function escAttrE(string $text, string $domain = 'default'): void;
 }

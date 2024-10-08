@@ -12,5 +12,5 @@ interface WpLostpasswordUrl
  * @param string $redirect Path to redirect to on login.
  * @return string Lost password URL.
  */
-    public function wpLostpasswordUrl(string $redirect): string;
+    public function wpLostpasswordUrl(string $redirect = ''): string;
 }

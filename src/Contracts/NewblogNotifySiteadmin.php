@@ -17,5 +17,5 @@ interface NewblogNotifySiteadmin
  * @param string $deprecated Not used.
  * @return bool
  */
-    public function newblogNotifySiteadmin(\WP_Site|int $blogId, string $deprecated): bool;
+    public function newblogNotifySiteadmin(\WP_Site|int $blogId, string $deprecated = ''): bool;
 }

@@ -14,5 +14,5 @@ interface EditBookmarkLink
  * @param string $after    Optional. Display after edit link. Default empty.
  * @param int $bookmark Optional. Bookmark ID. Default is the current bookmark.
  */
-    public function editBookmarkLink(string $link, string $before, string $after, int $bookmark): void;
+    public function editBookmarkLink(string $link = '', string $before = '', string $after = '', int $bookmark = null): void;
 }

@@ -17,5 +17,5 @@ interface GetPageLink
  *                               Default false.
  * @return string The page permalink.
  */
-    public function getPageLink(int|\WP_Post|false $post, bool $leavename, bool $sample): string;
+    public function getPageLink(int|\WP_Post|false $post = false, bool $leavename = false, bool $sample = false): string;
 }

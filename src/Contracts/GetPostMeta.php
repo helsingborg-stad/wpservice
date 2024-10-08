@@ -20,5 +20,5 @@ interface GetPostMeta
  *               False for an invalid `$post_id` (non-numeric, zero, or negative value).
  *               An empty string if a valid but non-existing post ID is passed.
  */
-    public function getPostMeta(int $postId, string $key, bool $single): mixed;
+    public function getPostMeta(int $postId, string $key = '', bool $single = false): mixed;
 }

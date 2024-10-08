@@ -17,5 +17,5 @@ interface WpGenerateAuthCookie
      * @param string $token      User's session token to use for this cookie.
      * @return string Authentication cookie contents. Empty string if user does not exist.
      */
-    public function wpGenerateAuthCookie(int $userId, int $expiration, string $scheme, string $token): string;
+    public function wpGenerateAuthCookie(int $userId, int $expiration, string $scheme = 'auth', string $token = ''): string;
 }

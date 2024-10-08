@@ -114,5 +114,5 @@ interface RegisterTaxonomy
  * }
  * @return \WP_Taxonomy|\WP_Error The registered taxonomy object on success, WP_Error object on failure.
  */
-    public function registerTaxonomy(string $taxonomy, array|string $objectType, array|string $args): \WP_Taxonomy|\WP_Error;
+    public function registerTaxonomy(string $taxonomy, array|string $objectType, array|string $args = []): \WP_Taxonomy|\WP_Error;
 }

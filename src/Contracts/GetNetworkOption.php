@@ -18,5 +18,5 @@ interface GetNetworkOption
  * @param mixed $defaultValue Optional. Value to return if the option doesn't exist. Default false.
  * @return mixed Value set for the option.
  */
-    public function getNetworkOption(int $networkId, string $option, mixed $defaultValue): mixed;
+    public function getNetworkOption(int $networkId, string $option, mixed $defaultValue = false): mixed;
 }

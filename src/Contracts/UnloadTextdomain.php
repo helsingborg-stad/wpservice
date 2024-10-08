@@ -17,5 +17,5 @@ interface UnloadTextdomain
  * @param bool $reloadable Whether the text domain can be loaded just-in-time again.
  * @return bool Whether textdomain was unloaded.
  */
-    public function unloadTextdomain(string $domain, bool $reloadable): bool;
+    public function unloadTextdomain(string $domain, bool $reloadable = false): bool;
 }

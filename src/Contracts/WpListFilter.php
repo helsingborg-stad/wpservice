@@ -30,5 +30,5 @@ interface WpListFilter
  *                           match. Default 'AND'.
  * @return array Array of found values.
  */
-    public function wpListFilter(array $inputList, array $args, string $operator): array;
+    public function wpListFilter(array $inputList, array $args = [], string $operator = 'AND'): array;
 }

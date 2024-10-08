@@ -18,5 +18,5 @@ interface WpGetRecentPosts
  * @return array|false Array of recent posts, where the type of each element is determined
  *                     by the `$output` parameter. Empty array on failure.
  */
-    public function wpGetRecentPosts(array $args, string $output): array|false;
+    public function wpGetRecentPosts(array $args = [], string $output = ARRAY_A): array|false;
 }

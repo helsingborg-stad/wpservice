@@ -21,5 +21,5 @@ interface HasTerm
  * @return bool True if the current post has any of the given terms
  *              (or any term, if no term specified). False otherwise.
  */
-    public function hasTerm(string|int|array $term, string $taxonomy, int|\WP_Post $post): bool;
+    public function hasTerm(string|int|array $term = '', string $taxonomy = '', int|\WP_Post $post = null): bool;
 }

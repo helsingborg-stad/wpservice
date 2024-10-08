@@ -23,5 +23,5 @@ interface WpUnscheduleHook
  * @return int|false|\WP_Error On success an integer indicating number of events unscheduled (0 indicates no
  *                            events were registered on the hook), false or WP_Error if unscheduling fails.
  */
-    public function wpUnscheduleHook(string $hook, bool $wpError): int|false|\WP_Error;
+    public function wpUnscheduleHook(string $hook, bool $wpError = false): int|false|\WP_Error;
 }

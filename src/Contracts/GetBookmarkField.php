@@ -14,5 +14,5 @@ interface GetBookmarkField
  * @param string $context  Optional. The context of how the field will be used. Default 'display'.
  * @return string|\WP_Error
  */
-    public function getBookmarkField(string $field, int $bookmark, string $context): string|\WP_Error;
+    public function getBookmarkField(string $field, int $bookmark, string $context = 'display'): string|\WP_Error;
 }

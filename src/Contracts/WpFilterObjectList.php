@@ -32,5 +32,5 @@ interface WpFilterObjectList
  *                                of the entire object. Default false.
  * @return array A list of objects or object fields.
  */
-    public function wpFilterObjectList(array $inputList, array $args, string $operator, bool|string $field): array;
+    public function wpFilterObjectList(array $inputList, array $args = [], string $operator = 'and', bool|string $field = false): array;
 }

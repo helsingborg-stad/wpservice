@@ -13,5 +13,5 @@ interface RegisterNavMenus
  *
  * @param string[] $locations Associative array of menu location identifiers (like a slug) and descriptive text.
  */
-    public function registerNavMenus(array $locations): void;
+    public function registerNavMenus(array $locations = []): void;
 }

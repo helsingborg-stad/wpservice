@@ -16,5 +16,5 @@ interface WpNextScheduled
  *                     Default empty array.
  * @return int|false The Unix timestamp of the next time the event will occur. False if the event doesn't exist.
  */
-    public function wpNextScheduled(string $hook, array $args): int|false;
+    public function wpNextScheduled(string $hook, array $args = []): int|false;
 }

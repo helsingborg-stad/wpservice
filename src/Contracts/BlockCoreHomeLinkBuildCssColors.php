@@ -13,5 +13,5 @@ interface BlockCoreHomeLinkBuildCssColors
  * @param array $context home link block context.
  * @return array Colors CSS classes and inline styles.
  */
-    public function blockCoreHomeLinkBuildCssColors(array $context): array;
+public function blockCoreHomeLinkBuildCssColors(array $context): array;
 }

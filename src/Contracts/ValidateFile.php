@@ -19,5 +19,5 @@ interface ValidateFile
  * @param string[] $allowedFiles Optional. Array of allowed files. Default empty array.
  * @return int 0 means nothing is wrong, greater than 0 means something was wrong.
  */
-    public function validateFile(string $file, array $allowedFiles): int;
+    public function validateFile(string $file, array $allowedFiles = []): int;
 }

@@ -12,5 +12,5 @@ interface WpGetCustomCss
  * @param string $stylesheet Optional. A theme object stylesheet name. Defaults to the active theme.
  * @return string The Custom CSS Post content.
  */
-    public function wpGetCustomCss(string $stylesheet): string;
+public function wpGetCustomCss(string $stylesheet = ''): string;
 }

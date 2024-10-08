@@ -23,5 +23,5 @@ interface GetPostDatetime
  *                            Default 'local'.
  * @return \DateTimeImmutable|false Time object on success, false on failure.
  */
-    public function getPostDatetime(int|\WP_Post $post, string $field, string $source): \DateTimeImmutable|false;
+    public function getPostDatetime(int|\WP_Post $post = null, string $field = 'date', string $source = 'local'): \DateTimeImmutable|false;
 }

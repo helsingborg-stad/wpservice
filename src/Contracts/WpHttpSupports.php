@@ -15,5 +15,5 @@ interface WpHttpSupports
  *
  * @return bool
  */
-    public function wpHttpSupports(array $capabilities, string $url): bool;
+    public function wpHttpSupports(array $capabilities = [], string $url = null): bool;
 }

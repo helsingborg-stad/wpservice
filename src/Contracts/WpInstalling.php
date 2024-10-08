@@ -16,5 +16,5 @@ interface WpInstalling
  * @return bool True if WP is installing, otherwise false. When a `$is_installing` is passed, the function will
  *              report whether WP was in installing mode prior to the change to `$is_installing`.
  */
-    public function wpInstalling(bool $isInstalling): bool;
+    public function wpInstalling(bool $isInstalling = null): bool;
 }

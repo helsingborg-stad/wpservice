@@ -20,5 +20,5 @@ interface WpStyleEngineGetStylesheetFromContext
  * }
  * @return string A compiled CSS string.
  */
-    public function wpStyleEngineGetStylesheetFromContext(string $context, array $options): string;
+    public function wpStyleEngineGetStylesheetFromContext(string $context, array $options = []): string;
 }

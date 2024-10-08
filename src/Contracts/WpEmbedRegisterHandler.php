@@ -19,5 +19,5 @@ interface WpEmbedRegisterHandler
  * @param int $priority Optional. Used to specify the order in which the registered handlers will
  *                           be tested. Default 10.
  */
-    public function wpEmbedRegisterHandler(string $id, string $regex, callable $callback, int $priority): void;
+    public function wpEmbedRegisterHandler(string $id, string $regex, callable $callback, int $priority = 10): void;
 }

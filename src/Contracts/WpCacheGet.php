@@ -20,5 +20,5 @@ interface WpCacheGet
  *                          Disambiguates a return of false, a storable value. Default null.
  * @return mixed|false The cache contents on success, false on failure to retrieve contents.
  */
-    public function wpCacheGet(int|string $key, string $group, bool $force, bool $found): mixed;
+    public function wpCacheGet(int|string $key, string $group = '', bool $force = false, bool $found = null): mixed;
 }

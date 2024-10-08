@@ -17,5 +17,5 @@ interface NetworkStep1
  *
  * @param false|\WP_Error $errors Optional. Error object. Default false.
  */
-    public function networkStep1(false|\WP_Error $errors): void;
+    public function networkStep1(false|\WP_Error $errors = false): void;
 }

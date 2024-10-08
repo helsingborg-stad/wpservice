@@ -27,5 +27,5 @@ interface WpGetTypographyFontSizeValue
  *                             Default is false.
  * @return string|null Font-size value or null if a size is not passed in $preset.
  */
-    public function wpGetTypographyFontSizeValue(array $preset, bool|array $settings): string|null;
+    public function wpGetTypographyFontSizeValue(array $preset, bool|array $settings = []): string|null;
 }

@@ -20,5 +20,5 @@ interface WpWidgetRssProcess
  * @param bool $checkFeed Optional. Whether to check feed for errors. Default true.
  * @return array
  */
-    public function wpWidgetRssProcess(array $widgetRss, bool $checkFeed): array;
+    public function wpWidgetRssProcess(array $widgetRss, bool $checkFeed = true): array;
 }

@@ -36,5 +36,5 @@ interface WpGetNavMenuItems
  * }
  * @return array|false Array of menu items, otherwise false.
  */
-    public function wpGetNavMenuItems(int|string|\WP_Term $menu, array $args): array|false;
+    public function wpGetNavMenuItems(int|string|\WP_Term $menu, array $args = []): array|false;
 }

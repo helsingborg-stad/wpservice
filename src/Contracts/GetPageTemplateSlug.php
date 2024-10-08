@@ -14,5 +14,5 @@ interface GetPageTemplateSlug
  * @return string|false Page template filename. Returns an empty string when the default page template
  *                      is in use. Returns false if the post does not exist.
  */
-    public function getPageTemplateSlug(int|\WP_Post $post): string|false;
+    public function getPageTemplateSlug(int|\WP_Post $post = null): string|false;
 }

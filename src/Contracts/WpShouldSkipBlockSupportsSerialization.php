@@ -17,5 +17,5 @@ interface WpShouldSkipBlockSupportsSerialization
  *
  * @return bool Whether to serialize block support styles & classes.
  */
-    public function wpShouldSkipBlockSupportsSerialization(\WP_Block_Type $blockType, string $featureSet, string $feature): bool;
+    public function wpShouldSkipBlockSupportsSerialization(\WP_Block_Type $blockType, string $featureSet, string $feature = null): bool;
 }

@@ -16,5 +16,5 @@ interface GetTheDate
  * @param int|\WP_Post $post   Optional. Post ID or WP_Post object. Default current post.
  * @return string|int|false Date the current post was written. False on failure.
  */
-    public function getTheDate(string $format, int|\WP_Post $post): string|int|false;
+    public function getTheDate(string $format = '', int|\WP_Post $post = null): string|int|false;
 }

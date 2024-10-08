@@ -16,5 +16,5 @@ interface GetSearchFeedLink
  *                             Default is the value of get_default_feed().
  * @return string The search results feed permalink.
  */
-    public function getSearchFeedLink(string $searchQuery, string $feed): string;
+    public function getSearchFeedLink(string $searchQuery = '', string $feed = ''): string;
 }

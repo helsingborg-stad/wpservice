@@ -41,5 +41,5 @@ interface WpLinkPages
  * }
  * @return string Formatted output in HTML.
  */
-    public function wpLinkPages(string|array $args): string;
+    public function wpLinkPages(string|array $args = ''): string;
 }

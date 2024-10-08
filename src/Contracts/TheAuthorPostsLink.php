@@ -12,5 +12,5 @@ interface TheAuthorPostsLink
  *
  * @param string $deprecated Unused.
  */
-    public function theAuthorPostsLink(string $deprecated): void;
+    public function theAuthorPostsLink(string $deprecated = ''): void;
 }

@@ -13,5 +13,5 @@ interface EditCommentLink
  * @param string $before Optional. Display before edit link. Default empty.
  * @param string $after  Optional. Display after edit link. Default empty.
  */
-    public function editCommentLink(string $text, string $before, string $after): void;
+    public function editCommentLink(string $text = null, string $before = '', string $after = ''): void;
 }

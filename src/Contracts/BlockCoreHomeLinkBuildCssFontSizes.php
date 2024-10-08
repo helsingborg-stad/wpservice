@@ -13,5 +13,5 @@ interface BlockCoreHomeLinkBuildCssFontSizes
  * @param array $context Home link block context.
  * @return array Font size CSS classes and inline styles.
  */
-    public function blockCoreHomeLinkBuildCssFontSizes(array $context): array;
+public function blockCoreHomeLinkBuildCssFontSizes(array $context): array;
 }

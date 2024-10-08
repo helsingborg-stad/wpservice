@@ -14,5 +14,5 @@ interface WpEmbedUnregisterHandler
  * @param string $id       The handler ID that should be removed.
  * @param int $priority Optional. The priority of the handler to be removed. Default 10.
  */
-    public function wpEmbedUnregisterHandler(string $id, int $priority): void;
+    public function wpEmbedUnregisterHandler(string $id, int $priority = 10): void;
 }

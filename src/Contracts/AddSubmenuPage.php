@@ -36,5 +36,5 @@ interface AddSubmenuPage
  * @param int|float $position    Optional. The position in the menu order this item should appear.
  * @return string|false The resulting page's hook_suffix, or false if the user does not have the capability required.
  */
-    public function addSubmenuPage(string $parentSlug, string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback, int|float $position): string|false;
+    public function addSubmenuPage(string $parentSlug, string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int|float $position = null): string|false;
 }

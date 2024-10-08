@@ -13,5 +13,5 @@ interface WpListWidgetControls
  * @param string $sidebar      Sidebar ID.
  * @param string $sidebarName Optional. Sidebar name. Default empty.
  */
-    public function wpListWidgetControls(string $sidebar, string $sidebarName): void;
+    public function wpListWidgetControls(string $sidebar, string $sidebarName = ''): void;
 }

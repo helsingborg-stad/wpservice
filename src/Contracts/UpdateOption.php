@@ -38,5 +38,5 @@ interface UpdateOption
  *                            the autoload value.
  * @return bool True if the value was updated, false otherwise.
  */
-    public function updateOption(string $option, mixed $value, bool|null $autoload): bool;
+    public function updateOption(string $option, mixed $value, bool|null $autoload = null): bool;
 }

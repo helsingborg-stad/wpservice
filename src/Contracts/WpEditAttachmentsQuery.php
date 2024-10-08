@@ -14,5 +14,5 @@ interface WpEditAttachmentsQuery
  *                       Defaults to the `$_GET` superglobal.
  * @return array
  */
-    public function wpEditAttachmentsQuery(array|false $q): array;
+    public function wpEditAttachmentsQuery(array|false $q = false): array;
 }

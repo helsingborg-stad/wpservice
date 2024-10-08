@@ -31,5 +31,5 @@ interface WpMail
      * @param string|string[] $attachments Optional. Paths to files to attach.
      * @return bool Whether the email was sent successfully.
      */
-    public function wpMail(string|array $to, string $subject, string $message, string|array $headers, string|array $attachments): bool;
+    public function wpMail(string|array $to, string $subject, string $message, string|array $headers = '', string|array $attachments = []): bool;
 }

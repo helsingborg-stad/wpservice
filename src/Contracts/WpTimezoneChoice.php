@@ -14,5 +14,5 @@ interface WpTimezoneChoice
  * @param string $locale        Optional. Locale to load the timezones in. Default current site locale.
  * @return string
  */
-    public function wpTimezoneChoice(string $selectedZone, string $locale): string;
+    public function wpTimezoneChoice(string $selectedZone, string $locale = null): string;
 }

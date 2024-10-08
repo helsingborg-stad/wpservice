@@ -16,5 +16,5 @@ interface __
  *                       Default 'default'.
  * @return string Translated text.
  */
-    public function __(string $text, string $domain): string;
+    public function __(string $text, string $domain = 'default'): string;
 }

@@ -16,5 +16,5 @@ interface PingsOpen
  * @param int|\WP_Post $post Optional. Post ID or WP_Post object. Default current post.
  * @return bool True if pings are accepted
  */
-    public function pingsOpen(int|\WP_Post $post): bool;
+    public function pingsOpen(int|\WP_Post $post = null): bool;
 }

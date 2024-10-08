@@ -14,5 +14,5 @@ interface GetSitemapUrl
  * @param int $page         The page of the sitemap. Default 1.
  * @return string|false The sitemap URL or false if the sitemap doesn't exist.
  */
-    public function getSitemapUrl(string $name, string $subtypeName, int $page): string|false;
+    public function getSitemapUrl(string $name, string $subtypeName = '', int $page = 1): string|false;
 }

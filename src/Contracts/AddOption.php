@@ -36,5 +36,5 @@ interface AddOption
  *                              Default is null, which means WordPress will determine the autoload value.
  * @return bool True if the option was added, false otherwise.
  */
-    public function addOption(string $option, mixed $value, string $deprecated, bool|null $autoload): bool;
+    public function addOption(string $option, mixed $value = '', string $deprecated = '', bool|null $autoload = null): bool;
 }

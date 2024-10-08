@@ -14,5 +14,5 @@ interface WpScriptsGetSuffix
  * @param string $type The type of suffix to retrieve.
  * @return string The script suffix.
  */
-    public function wpScriptsGetSuffix(string $type): string;
+    public function wpScriptsGetSuffix(string $type = ''): string;
 }

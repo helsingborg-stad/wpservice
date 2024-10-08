@@ -12,5 +12,5 @@ interface WpPageReloadOnBackButtonJs
  *
  * @since 4.6.0
  */
-    public function wpPageReloadOnBackButtonJs(): void;
+public function wpPageReloadOnBackButtonJs(): void;
 }

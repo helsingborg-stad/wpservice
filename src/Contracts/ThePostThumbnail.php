@@ -22,5 +22,5 @@ interface ThePostThumbnail
  *                           width and height values in pixels (in that order). Default 'post-thumbnail'.
  * @param string|array $attr Optional. Query string or array of attributes. Default empty.
  */
-    public function thePostThumbnail(string|array $size, string|array $attr): void;
+    public function thePostThumbnail(string|array $size = 'post-thumbnail', string|array $attr = ''): void;
 }

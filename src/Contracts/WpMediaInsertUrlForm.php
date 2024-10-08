@@ -12,5 +12,5 @@ interface WpMediaInsertUrlForm
  * @param string $defaultView
  * @return string HTML content of the form.
  */
-    public function wpMediaInsertUrlForm(string $defaultView): string;
+    public function wpMediaInsertUrlForm(string $defaultView = 'image'): string;
 }

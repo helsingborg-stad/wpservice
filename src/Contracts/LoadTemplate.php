@@ -31,5 +31,5 @@ interface LoadTemplate
  * @param array $args           Optional. Additional arguments passed to the template.
  *                               Default empty array.
  */
-    public function loadTemplate(string $templateFile, bool $loadOnce, array $args): void;
+    public function loadTemplate(string $templateFile, bool $loadOnce = true, array $args = []): void;
 }

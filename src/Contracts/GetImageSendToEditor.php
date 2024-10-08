@@ -20,5 +20,5 @@ interface GetImageSendToEditor
  * @param string $alt     Optional. Image alt attribute. Default empty.
  * @return string The HTML output to insert into the editor.
  */
-    public function getImageSendToEditor(int $id, string $caption, string $title, string $align, string $url, bool|string $rel, string|array $size, string $alt): string;
+    public function getImageSendToEditor(int $id, string $caption, string $title, string $align, string $url = '', bool|string $rel = false, string|array $size = 'medium', string $alt = ''): string;
 }

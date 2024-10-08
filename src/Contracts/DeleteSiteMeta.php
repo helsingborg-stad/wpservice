@@ -20,5 +20,5 @@ interface DeleteSiteMeta
  *                           Must be serializable if non-scalar. Default empty.
  * @return bool True on success, false on failure.
  */
-    public function deleteSiteMeta(int $siteId, string $metaKey, mixed $metaValue): bool;
+    public function deleteSiteMeta(int $siteId, string $metaKey, mixed $metaValue = ''): bool;
 }

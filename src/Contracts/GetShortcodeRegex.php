@@ -27,5 +27,5 @@ interface GetShortcodeRegex
  * @param array $tagnames Optional. List of shortcodes to find. Defaults to all registered shortcodes.
  * @return string The shortcode search regular expression
  */
-    public function getShortcodeRegex(array $tagnames): string;
+    public function getShortcodeRegex(array $tagnames = null): string;
 }

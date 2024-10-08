@@ -19,5 +19,5 @@ interface GetRestUrl
  * @param string $scheme  Optional. Sanitization scheme. Default 'rest'.
  * @return string Full URL to the endpoint.
  */
-    public function getRestUrl(int|null $blogId, string $path, string $scheme): string;
+    public function getRestUrl(int|null $blogId = null, string $path = '/', string $scheme = 'rest'): string;
 }

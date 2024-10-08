@@ -19,5 +19,5 @@ interface Translate
  *                       Default 'default'.
  * @return string Translated text.
  */
-    public function translate(string $text, string $domain): string;
+    public function translate(string $text, string $domain = 'default'): string;
 }

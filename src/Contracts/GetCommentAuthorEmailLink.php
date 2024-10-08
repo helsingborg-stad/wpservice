@@ -24,5 +24,5 @@ interface GetCommentAuthorEmailLink
  * @return string HTML markup for the comment author email link. By default, the email address is obfuscated
  *                via the {@see 'comment_email'} filter with antispambot().
  */
-    public function getCommentAuthorEmailLink(string $linkText, string $before, string $after, int|\WP_Comment $comment): string;
+    public function getCommentAuthorEmailLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment $comment = null): string;
 }

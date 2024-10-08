@@ -14,5 +14,5 @@ interface WpTrashPostComments
  * @param int|\WP_Post|null $post Optional. Post ID or post object. Defaults to global $post.
  * @return mixed|void False on failure.
  */
-    public function wpTrashPostComments(int|\WP_Post|null $post): mixed;
+    public function wpTrashPostComments(int|\WP_Post|null $post = null): mixed;
 }

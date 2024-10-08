@@ -12,5 +12,5 @@ interface CoreUpdateFooter
  * @param string $msg
  * @return string
  */
-    public function coreUpdateFooter(string $msg): string;
+    public function coreUpdateFooter(string $msg = ''): string;
 }

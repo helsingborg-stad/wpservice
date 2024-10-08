@@ -42,5 +42,5 @@ interface GetAvatarUrl
  * }
  * @return string|false The URL of the avatar on success, false on failure.
  */
-    public function getAvatarUrl(mixed $idOrEmail, array $args): string|false;
+    public function getAvatarUrl(mixed $idOrEmail, array $args = null): string|false;
 }

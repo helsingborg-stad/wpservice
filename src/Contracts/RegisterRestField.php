@@ -28,5 +28,5 @@ interface RegisterRestField
  *                                          Default is 'null', no schema entry will be returned.
  * }
  */
-    public function registerRestField(string|array $objectType, string $attribute, array $args): void;
+    public function registerRestField(string|array $objectType, string $attribute, array $args = []): void;
 }

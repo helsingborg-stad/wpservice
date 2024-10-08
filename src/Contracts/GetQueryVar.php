@@ -17,5 +17,5 @@ interface GetQueryVar
  *                              Default empty string.
  * @return mixed Contents of the query variable.
  */
-    public function getQueryVar(string $queryVar, mixed $defaultValue): mixed;
+    public function getQueryVar(string $queryVar, mixed $defaultValue = ''): mixed;
 }

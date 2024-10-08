@@ -17,5 +17,5 @@ interface GetTaxonomiesForAttachments
  *                       Default 'names'.
  * @return string[]|WP_Taxonomy[] Array of names or objects of registered taxonomies for attachments.
  */
-    public function getTaxonomiesForAttachments(string $output): array;
+    public function getTaxonomiesForAttachments(string $output = 'names'): array;
 }

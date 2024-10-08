@@ -17,5 +17,5 @@ interface GetNetwork
  * @param \WP_Network|int|null $network Optional. Network to retrieve. Default is the current network.
  * @return \WP_Network|null The network object or null if not found.
  */
-    public function getNetwork(\WP_Network|int|null $network): \WP_Network|null;
+    public function getNetwork(\WP_Network|int|null $network = null): \WP_Network|null;
 }

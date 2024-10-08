@@ -24,5 +24,5 @@ interface IsPage
  *                                        to check against. Default empty.
  * @return bool Whether the query is for an existing single page.
  */
-    public function isPage(int|string|array $page): bool;
+    public function isPage(int|string|array $page = ''): bool;
 }

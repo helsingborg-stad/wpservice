@@ -21,5 +21,5 @@ interface WpSetCurrentUser
      * @param string $name User's username.
      * @return \WP_User Current user User object.
      */
-    public function wpSetCurrentUser(int|null $id, string $name): \WP_User;
+    public function wpSetCurrentUser(int|null $id, string $name = ''): \WP_User;
 }

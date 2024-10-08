@@ -23,5 +23,5 @@ interface GetAdjacentPost
  * @return \WP_Post|null|string Post object if successful. Null if global `$post` is not set.
  *                             Empty string if no corresponding post exists.
  */
-    public function getAdjacentPost(bool $inSameTerm, array|string $excludedTerms, bool $previous, string $taxonomy): \WP_Post|null|string;
+    public function getAdjacentPost(bool $inSameTerm = false, array|string $excludedTerms = '', bool $previous = true, string $taxonomy = 'category'): \WP_Post|null|string;
 }

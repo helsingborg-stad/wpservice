@@ -19,5 +19,5 @@ interface LoadScriptTextdomain
  * @return string|false The translated strings in JSON encoding on success,
  *                      false if the script textdomain could not be loaded.
  */
-    public function loadScriptTextdomain(string $handle, string $domain, string $path): string|false;
+    public function loadScriptTextdomain(string $handle, string $domain = 'default', string $path = ''): string|false;
 }

@@ -20,5 +20,5 @@ interface WpJsonFileDecode
  * @return mixed Returns the value encoded in JSON in appropriate PHP type.
  *               `null` is returned if the file is not found, or its content can't be decoded.
  */
-    public function wpJsonFileDecode(string $filename, array $options): mixed;
+public function wpJsonFileDecode(string $filename, array $options = []): mixed;
 }

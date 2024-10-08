@@ -22,5 +22,5 @@ interface CommentAuthorEmailLink
  * @param string $after     Optional. Text or HTML to display after the email link. Default empty.
  * @param int|\WP_Comment $comment   Optional. Comment ID or WP_Comment object. Default is the current comment.
  */
-    public function commentAuthorEmailLink(string $linkText, string $before, string $after, int|\WP_Comment $comment): void;
+    public function commentAuthorEmailLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment $comment = null): void;
 }

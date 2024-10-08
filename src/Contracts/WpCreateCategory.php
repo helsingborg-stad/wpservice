@@ -13,5 +13,5 @@ interface WpCreateCategory
  * @param int $categoryParent Optional. ID of parent category.
  * @return int|\WP_Error
  */
-    public function wpCreateCategory(int|string $catName, int $categoryParent): int|\WP_Error;
+    public function wpCreateCategory(int|string $catName, int $categoryParent = 0): int|\WP_Error;
 }

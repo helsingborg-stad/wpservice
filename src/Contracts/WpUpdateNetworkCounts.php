@@ -12,5 +12,5 @@ interface WpUpdateNetworkCounts
  *
  * @param int|null $networkId ID of the network. Default is the current network.
  */
-    public function wpUpdateNetworkCounts(int|null $networkId): void;
+    public function wpUpdateNetworkCounts(int|null $networkId = null): void;
 }

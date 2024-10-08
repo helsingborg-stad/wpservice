@@ -11,5 +11,5 @@ interface GetCompatMediaMarkup
  * @param array $args
  * @return array
  */
-    public function getCompatMediaMarkup(int $attachmentId, array $args): array;
+    public function getCompatMediaMarkup(int $attachmentId, array $args = null): array;
 }

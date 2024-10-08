@@ -22,5 +22,5 @@ interface WpIsSiteProtectedByBasicAuth
  *                        Defaults to the current context.
  * @return bool Whether the site is protected by Basic Auth.
  */
-    public function wpIsSiteProtectedByBasicAuth(string $context): bool;
+    public function wpIsSiteProtectedByBasicAuth(string $context = ''): bool;
 }

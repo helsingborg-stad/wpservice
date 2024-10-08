@@ -17,5 +17,5 @@ interface GetCategoryParents
  * @param array $deprecated  Not used.
  * @return string|\WP_Error A list of category parents on success, WP_Error on failure.
  */
-    public function getCategoryParents(int $categoryId, bool $link, string $separator, bool $nicename, array $deprecated): string|\WP_Error;
+    public function getCategoryParents(int $categoryId, bool $link = false, string $separator = '/', bool $nicename = false, array $deprecated = []): string|\WP_Error;
 }

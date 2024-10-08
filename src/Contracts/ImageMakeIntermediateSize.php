@@ -26,5 +26,5 @@ interface ImageMakeIntermediateSize
  * }
  * @return array|false Metadata array on success. False if no image was created.
  */
-    public function imageMakeIntermediateSize(string $file, int $width, int $height, bool|array $crop): array|false;
+    public function imageMakeIntermediateSize(string $file, int $width, int $height, bool|array $crop = false): array|false;
 }

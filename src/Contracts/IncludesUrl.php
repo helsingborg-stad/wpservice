@@ -14,5 +14,5 @@ interface IncludesUrl
  *                            'http', 'https', or 'relative'. Default null.
  * @return string Includes URL link with optional path appended.
  */
-    public function includesUrl(string $path, string|null $scheme): string;
+    public function includesUrl(string $path = '', string|null $scheme = null): string;
 }

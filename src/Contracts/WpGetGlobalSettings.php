@@ -22,5 +22,5 @@ interface WpGetGlobalSettings
  * }
  * @return mixed The settings array or individual setting value to retrieve.
  */
-    public function wpGetGlobalSettings(array $path, array $context): mixed;
+    public function wpGetGlobalSettings(array $path = [], array $context = []): mixed;
 }

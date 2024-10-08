@@ -13,5 +13,5 @@ interface UpdateSiteCache
  * @param array $sites             Array of site objects.
  * @param bool $updateMetaCache Whether to update site meta cache. Default true.
  */
-    public function updateSiteCache(array $sites, bool $updateMetaCache): void;
+    public function updateSiteCache(array $sites, bool $updateMetaCache = true): void;
 }

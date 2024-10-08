@@ -13,5 +13,5 @@ interface WpEditAttachmentsQueryVars
  *                       Defaults to the `$_GET` superglobal.
  * @return array The parsed query vars.
  */
-    public function wpEditAttachmentsQueryVars(array|false $q): array;
+    public function wpEditAttachmentsQueryVars(array|false $q = false): array;
 }

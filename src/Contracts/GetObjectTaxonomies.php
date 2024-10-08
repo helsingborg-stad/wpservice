@@ -25,5 +25,5 @@ interface GetObjectTaxonomies
  *                                             'names' or 'objects'. Default 'names'.
  * @return string[]|WP_Taxonomy[] The names or objects of all taxonomies of `$object_type`.
  */
-    public function getObjectTaxonomies(string|array|\WP_Post $objectType, string $output): array;
+    public function getObjectTaxonomies(string|array|\WP_Post $objectType, string $output = 'names'): array;
 }

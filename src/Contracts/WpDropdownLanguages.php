@@ -36,5 +36,5 @@ interface WpDropdownLanguages
  * }
  * @return string HTML dropdown list of languages.
  */
-    public function wpDropdownLanguages(string|array $args): string;
+    public function wpDropdownLanguages(string|array $args = []): string;
 }

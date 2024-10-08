@@ -25,5 +25,5 @@ interface UpdateUserOption
  * @return int|bool User meta ID if the option didn't exist, true on successful update,
  *                  false on failure.
  */
-    public function updateUserOption(int $userId, string $optionName, mixed $newvalue, bool $isGlobal): int|bool;
+    public function updateUserOption(int $userId, string $optionName, mixed $newvalue, bool $isGlobal = false): int|bool;
 }

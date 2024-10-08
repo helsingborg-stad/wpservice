@@ -12,5 +12,5 @@ interface AddScreenOption
  * @param string $option An option name.
  * @param mixed $args   Option-dependent arguments.
  */
-    public function addScreenOption(string $option, mixed $args): void;
+    public function addScreenOption(string $option, mixed $args = []): void;
 }

@@ -12,5 +12,5 @@ interface InstallPopularTags
  * @param array $args
  * @return array|\WP_Error
  */
-    public function installPopularTags(array $args): array|\WP_Error;
+    public function installPopularTags(array $args = []): array|\WP_Error;
 }

@@ -16,5 +16,5 @@ interface UnregisterMetaKey
  * @param string $objectSubtype Optional. The subtype of the object type. Default empty string.
  * @return bool True if successful. False if the meta key was not registered.
  */
-    public function unregisterMetaKey(string $objectType, string $metaKey, string $objectSubtype): bool;
+    public function unregisterMetaKey(string $objectType, string $metaKey, string $objectSubtype = ''): bool;
 }

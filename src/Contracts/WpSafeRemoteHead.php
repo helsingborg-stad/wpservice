@@ -24,5 +24,5 @@ interface WpSafeRemoteHead
  *                     See WP_Http::request() for information on accepted arguments.
  * @return array|\WP_Error The response or WP_Error on failure.
  */
-    public function wpSafeRemoteHead(string $url, array $args): array|\WP_Error;
+    public function wpSafeRemoteHead(string $url, array $args = []): array|\WP_Error;
 }

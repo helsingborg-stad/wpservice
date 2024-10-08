@@ -17,5 +17,5 @@ interface DiscoverPingbackServerUri
  * @param string $deprecated Not Used.
  * @return string|false String containing URI on success, false on failure.
  */
-    public function discoverPingbackServerUri(string $url, string $deprecated): string|false;
+    public function discoverPingbackServerUri(string $url, string $deprecated = ''): string|false;
 }

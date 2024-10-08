@@ -21,5 +21,5 @@ interface WpCountSites
  *     @type int $deleted  The number of deleted sites.
  * }
  */
-    public function wpCountSites(int $networkId): array;
+    public function wpCountSites(int $networkId = null): array;
 }

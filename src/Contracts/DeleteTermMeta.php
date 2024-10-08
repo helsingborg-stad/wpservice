@@ -16,5 +16,5 @@ interface DeleteTermMeta
  *                           Must be serializable if non-scalar. Default empty.
  * @return bool True on success, false on failure.
  */
-    public function deleteTermMeta(int $termId, string $metaKey, mixed $metaValue): bool;
+    public function deleteTermMeta(int $termId, string $metaKey, mixed $metaValue = ''): bool;
 }

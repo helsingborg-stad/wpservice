@@ -16,5 +16,5 @@ interface GetUserCount
  * @param int|null $networkId ID of the network. Defaults to the current network.
  * @return int Number of active users on the network.
  */
-    public function getUserCount(int|null $networkId): int;
+    public function getUserCount(int|null $networkId = null): int;
 }

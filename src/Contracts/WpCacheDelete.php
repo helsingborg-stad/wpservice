@@ -16,5 +16,5 @@ interface WpCacheDelete
  * @param string $group Optional. Where the cache contents are grouped. Default empty.
  * @return bool True on successful removal, false on failure.
  */
-    public function wpCacheDelete(int|string $key, string $group): bool;
+    public function wpCacheDelete(int|string $key, string $group = ''): bool;
 }

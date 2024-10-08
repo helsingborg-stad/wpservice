@@ -20,5 +20,5 @@ interface EditPost
  *                              Defaults to the `$_POST` superglobal.
  * @return int Post ID.
  */
-    public function editPost(array|null $postData): int;
+    public function editPost(array|null $postData = null): int;
 }

@@ -56,5 +56,5 @@ interface WpDropdownCategories
  * }
  * @return string HTML dropdown list of categories.
  */
-    public function wpDropdownCategories(array|string $args): string;
+    public function wpDropdownCategories(array|string $args = ''): string;
 }

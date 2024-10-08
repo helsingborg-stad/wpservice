@@ -16,5 +16,5 @@ interface SignupUser
  * @param string $userEmail The user's email.
  * @param \WP_Error|string $errors     A WP_Error object containing existing errors. Defaults to empty string.
  */
-    public function signupUser(string $userName, string $userEmail, \WP_Error|string $errors): void;
+    public function signupUser(string $userName = '', string $userEmail = '', \WP_Error|string $errors = ''): void;
 }

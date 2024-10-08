@@ -17,5 +17,5 @@ interface WpUniqueId
  * @param string $prefix Prefix for the returned ID.
  * @return string Unique ID.
  */
-    public function wpUniqueId(string $prefix): string;
+    public function wpUniqueId(string $prefix = ''): string;
 }

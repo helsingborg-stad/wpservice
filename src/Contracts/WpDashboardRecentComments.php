@@ -12,5 +12,5 @@ interface WpDashboardRecentComments
  * @param int $totalItems Optional. Number of comments to query. Default 5.
  * @return bool False if no comments were found. True otherwise.
  */
-    public function wpDashboardRecentComments(int $totalItems): bool;
+    public function wpDashboardRecentComments(int $totalItems = 5): bool;
 }

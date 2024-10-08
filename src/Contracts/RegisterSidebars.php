@@ -30,5 +30,5 @@ interface RegisterSidebars
  *                        Default 'Sidebar' for the first sidebar, otherwise 'Sidebar %d'.
  * }
  */
-    public function registerSidebars(int $number, array|string $args): void;
+    public function registerSidebars(int $number = 1, array|string $args = []): void;
 }

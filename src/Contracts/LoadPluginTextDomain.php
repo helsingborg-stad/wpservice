@@ -21,5 +21,5 @@ interface LoadPluginTextdomain
  *                                      Default false.
  * @return bool True when textdomain is successfully loaded, false otherwise.
  */
-    public function loadPluginTextdomain(string $domain, string|false $deprecated, string|false $pluginRelPath): bool;
+    public function loadPluginTextdomain(string $domain, string|false $deprecated = false, string|false $pluginRelPath = false): bool;
 }

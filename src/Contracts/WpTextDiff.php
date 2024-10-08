@@ -33,5 +33,5 @@ interface WpTextDiff
      * }
      * @return string Empty string if strings are equivalent or HTML with differences.
      */
-    public function wpTextDiff(string $leftString, string $rightString, string|array $args): string;
+    public function wpTextDiff(string $leftString, string $rightString, string|array $args = null): string;
 }

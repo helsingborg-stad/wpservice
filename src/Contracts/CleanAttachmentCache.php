@@ -19,5 +19,5 @@ interface CleanAttachmentCache
  * @param int $id          The attachment ID in the cache to clean.
  * @param bool $cleanTerms Optional. Whether to clean terms cache. Default false.
  */
-    public function cleanAttachmentCache(int $id, bool $cleanTerms): void;
+    public function cleanAttachmentCache(int $id, bool $cleanTerms = false): void;
 }

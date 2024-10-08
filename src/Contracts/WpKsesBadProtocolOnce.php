@@ -17,5 +17,5 @@ interface WpKsesBadProtocolOnce
  * @param int $count             Depth of call recursion to this function.
  * @return string Sanitized content.
  */
-    public function wpKsesBadProtocolOnce(string $content, array $allowedProtocols, int $count): string;
+    public function wpKsesBadProtocolOnce(string $content, array $allowedProtocols, int $count = 1): string;
 }

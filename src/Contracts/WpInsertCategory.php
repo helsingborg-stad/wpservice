@@ -26,5 +26,5 @@ interface WpInsertCategory
  * @return int|\WP_Error The ID number of the new or updated Category on success. Zero or a WP_Error on failure,
  *                      depending on param `$wp_error`.
  */
-    public function wpInsertCategory(array $catarr, bool $wpError): int|\WP_Error;
+    public function wpInsertCategory(array $catarr, bool $wpError = false): int|\WP_Error;
 }

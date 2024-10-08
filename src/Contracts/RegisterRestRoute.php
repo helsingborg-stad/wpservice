@@ -21,5 +21,5 @@ interface RegisterRestRoute
  *                                false merges (with newer overriding if duplicate keys exist). Default false.
  * @return bool True on success, false on error.
  */
-    public function registerRestRoute(string $routeNamespace, string $route, array $args, bool $override): bool;
+    public function registerRestRoute(string $routeNamespace, string $route, array $args = [], bool $override = false): bool;
 }

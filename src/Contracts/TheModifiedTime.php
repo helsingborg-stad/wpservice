@@ -13,5 +13,5 @@ interface TheModifiedTime
  *                       was modified. Accepts 'G', 'U', or PHP date format.
  *                       Defaults to the 'time_format' option.
  */
-    public function theModifiedTime(string $format): void;
+    public function theModifiedTime(string $format = ''): void;
 }

@@ -20,5 +20,5 @@ interface WpUpdatePlugins
  *
  * @param array $extraStats Extra statistics to report to the WordPress.org API.
  */
-    public function wpUpdatePlugins(array $extraStats): void;
+    public function wpUpdatePlugins(array $extraStats = []): void;
 }

@@ -20,5 +20,5 @@ interface GetCommentPagesCount
  *                               of `thread_comments` option.
  * @return int Number of comment pages.
  */
-    public function getCommentPagesCount(array $comments, int $perPage, bool $threaded): int;
+    public function getCommentPagesCount(array $comments = null, int $perPage = null, bool $threaded = null): int;
 }

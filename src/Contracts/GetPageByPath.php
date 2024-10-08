@@ -18,5 +18,5 @@ interface GetPageByPath
  * @param string|array $postType Optional. Post type or array of post types. Default 'page'.
  * @return \WP_Post|array|null WP_Post (or array) on success, or null on failure.
  */
-    public function getPageByPath(string $pagePath, string $output, string|array $postType): \WP_Post|array|null;
+    public function getPageByPath(string $pagePath, string $output = OBJECT, string|array $postType = 'page'): \WP_Post|array|null;
 }

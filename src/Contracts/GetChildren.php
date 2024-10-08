@@ -55,5 +55,5 @@ interface GetChildren
  *                       respectively. Default OBJECT.
  * @return WP_Post[]|array[]|int[] Array of post objects, arrays, or IDs, depending on `$output`.
  */
-    public function getChildren(mixed $args, string $output): array;
+    public function getChildren(mixed $args = '', string $output = OBJECT): array;
 }

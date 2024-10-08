@@ -12,5 +12,5 @@ interface WpTitleRss
  *
  * @param string $deprecated Unused.
  */
-    public function wpTitleRss(string $deprecated): void;
+    public function wpTitleRss(string $deprecated = '&#8211;'): void;
 }

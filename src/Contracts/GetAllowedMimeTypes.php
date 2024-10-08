@@ -13,5 +13,5 @@ interface GetAllowedMimeTypes
  * @return string[] Array of mime types keyed by the file extension regex corresponding
  *                  to those types.
  */
-    public function getAllowedMimeTypes(int|\WP_User $user): array;
+    public function getAllowedMimeTypes(int|\WP_User $user = null): array;
 }

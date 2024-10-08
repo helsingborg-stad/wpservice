@@ -21,5 +21,5 @@ interface WpDeleteComment
  * @param bool $forceDelete Whether to bypass Trash and force deletion. Default false.
  * @return bool True on success, false on failure.
  */
-    public function wpDeleteComment(int|\WP_Comment $commentId, bool $forceDelete): bool;
+    public function wpDeleteComment(int|\WP_Comment $commentId, bool $forceDelete = false): bool;
 }

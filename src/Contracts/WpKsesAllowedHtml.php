@@ -19,5 +19,5 @@ interface WpKsesAllowedHtml
  *                              'pre_user_description', or an array of allowed HTML elements and attributes.
  * @return array Array of allowed HTML tags and their allowed attributes.
  */
-    public function wpKsesAllowedHtml(string|array $context): array;
+    public function wpKsesAllowedHtml(string|array $context = ''): array;
 }

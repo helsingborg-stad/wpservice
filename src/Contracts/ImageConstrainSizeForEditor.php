@@ -36,5 +36,5 @@ interface ImageConstrainSizeForEditor
  *     @type int $1 The maximum height in pixels.
  * }
  */
-    public function imageConstrainSizeForEditor(int $width, int $height, string|array $size, string $context): array;
+    public function imageConstrainSizeForEditor(int $width, int $height, string|array $size = 'medium', string $context = null): array;
 }

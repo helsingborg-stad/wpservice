@@ -18,5 +18,5 @@ interface WpCommentsPersonalDataExporter
  *     @type bool    $done Whether the exporter is finished.
  * }
  */
-    public function wpCommentsPersonalDataExporter(string $emailAddress, int $page): array;
+    public function wpCommentsPersonalDataExporter(string $emailAddress, int $page = 1): array;
 }

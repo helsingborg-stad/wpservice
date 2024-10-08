@@ -39,5 +39,5 @@ interface _nxNoop
  *     @type string|null $domain   Text domain.
  * }
  */
-    public function _nxNoop(string $singular, string $plural, string $context, string $domain): array;
+    public function _nxNoop(string $singular, string $plural, string $context, string $domain = null): array;
 }

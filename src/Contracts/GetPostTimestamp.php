@@ -17,5 +17,5 @@ interface GetPostTimestamp
  *                           Default 'date'.
  * @return int|false Unix timestamp on success, false on failure.
  */
-    public function getPostTimestamp(int|\WP_Post $post, string $field): int|false;
+    public function getPostTimestamp(int|\WP_Post $post = null, string $field = 'date'): int|false;
 }

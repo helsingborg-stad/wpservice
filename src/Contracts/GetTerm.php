@@ -50,5 +50,5 @@ interface GetTerm
  * @return \WP_Term|array|\WP_Error|null WP_Term instance (or array) on success, depending on the `$output` value.
  *                                     WP_Error if `$taxonomy` does not exist. Null for miscellaneous failure.
  */
-    public function getTerm(int|object $term, string $taxonomy, string $output, string $filter): \WP_Term|array|\WP_Error|null;
+    public function getTerm(int|object $term, string $taxonomy = '', string $output = OBJECT, string $filter = 'raw'): \WP_Term|array|\WP_Error|null;
 }

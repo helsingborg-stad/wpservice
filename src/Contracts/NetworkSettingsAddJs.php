@@ -9,5 +9,5 @@ interface NetworkSettingsAddJs
  *
  * @since 4.1.0
  */
-    public function networkSettingsAddJs(): void;
+public function networkSettingsAddJs(): void;
 }

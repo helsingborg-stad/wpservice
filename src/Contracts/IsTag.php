@@ -22,5 +22,5 @@ interface IsTag
  *                                       to check against. Default empty.
  * @return bool Whether the query is for an existing tag archive page.
  */
-    public function isTag(int|string|array $tag): bool;
+    public function isTag(int|string|array $tag = ''): bool;
 }

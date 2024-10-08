@@ -14,5 +14,5 @@ interface TheArchiveTitle
  * @param string $before Optional. Content to prepend to the title. Default empty.
  * @param string $after  Optional. Content to append to the title. Default empty.
  */
-    public function theArchiveTitle(string $before, string $after): void;
+    public function theArchiveTitle(string $before = '', string $after = ''): void;
 }

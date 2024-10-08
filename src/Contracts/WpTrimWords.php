@@ -18,5 +18,5 @@ interface WpTrimWords
  * @param string $more      Optional. What to append if $text needs to be trimmed. Default '&hellip;'.
  * @return string Trimmed text.
  */
-    public function wpTrimWords(string $text, int $numWords, string $more): string;
+    public function wpTrimWords(string $text, int $numWords = 55, string $more = null): string;
 }

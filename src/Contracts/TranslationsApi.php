@@ -13,5 +13,5 @@ interface TranslationsApi
  * @param array|object $args Translation API arguments. Optional.
  * @return array|\WP_Error On success an associative array of translations, WP_Error on failure.
  */
-    public function translationsApi(string $type, array|object $args): array|\WP_Error;
+    public function translationsApi(string $type, array|object $args = null): array|\WP_Error;
 }

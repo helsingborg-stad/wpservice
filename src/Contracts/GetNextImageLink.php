@@ -16,5 +16,5 @@ interface GetNextImageLink
  * @param string|false $text Optional. Link text. Default false.
  * @return string Markup for next image link.
  */
-    public function getNextImageLink(string|array $size, string|false $text): string;
+    public function getNextImageLink(string|array $size = 'thumbnail', string|false $text = false): string;
 }

@@ -73,5 +73,5 @@ interface GetOption
  *               from a database stored option value. If there is no option in the database,
  *               boolean `false` is returned.
  */
-    public function getOption(string $option, mixed $defaultValue): mixed;
+    public function getOption(string $option, mixed $defaultValue = false): mixed;
 }

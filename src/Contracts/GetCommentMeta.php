@@ -22,5 +22,5 @@ interface GetCommentMeta
  *               False for an invalid `$comment_id` (non-numeric, zero, or negative value).
  *               An empty string if a valid but non-existing comment ID is passed.
  */
-    public function getCommentMeta(int $commentId, string $key, bool $single): mixed;
+    public function getCommentMeta(int $commentId, string $key = '', bool $single = false): mixed;
 }

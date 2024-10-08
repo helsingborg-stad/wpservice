@@ -13,5 +13,5 @@ interface TheTags
  * @param string $sep    Optional. String to use between the tags. Default ', '.
  * @param string $after  Optional. String to use after the tags. Default empty.
  */
-    public function theTags(string $before, string $sep, string $after): void;
+    public function theTags(string $before = null, string $sep = ', ', string $after = ''): void;
 }

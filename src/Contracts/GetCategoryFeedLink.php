@@ -17,5 +17,5 @@ interface GetCategoryFeedLink
  *                                 Default is the value of get_default_feed().
  * @return string Link to the feed for the category specified by `$cat`.
  */
-    public function getCategoryFeedLink(int|object $cat, string $feed): string;
+    public function getCategoryFeedLink(int|object $cat, string $feed = ''): string;
 }

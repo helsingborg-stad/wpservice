@@ -24,5 +24,5 @@ interface GetFileData
  *                                Default empty string.
  * @return string[] Array of file header values keyed by header name.
  */
-    public function getFileData(string $file, array $defaultHeaders, string $context): array;
+    public function getFileData(string $file, array $defaultHeaders, string $context = ''): array;
 }

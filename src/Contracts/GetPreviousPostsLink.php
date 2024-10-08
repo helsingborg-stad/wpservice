@@ -14,5 +14,5 @@ interface GetPreviousPostsLink
  * @param string $label Optional. Previous page link text.
  * @return string|void HTML-formatted previous page link.
  */
-    public function getPreviousPostsLink(string $label): string;
+    public function getPreviousPostsLink(string $label = null): string;
 }

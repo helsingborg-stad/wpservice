@@ -15,5 +15,5 @@ interface GetPostTypeArchiveFeedLink
  * @return string|false The post type feed permalink. False if the post type
  *                      does not exist or does not have an archive.
  */
-    public function getPostTypeArchiveFeedLink(string $postType, string $feed): string|false;
+    public function getPostTypeArchiveFeedLink(string $postType, string $feed = ''): string|false;
 }

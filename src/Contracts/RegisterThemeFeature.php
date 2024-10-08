@@ -45,5 +45,5 @@ interface RegisterThemeFeature
  * }
  * @return true|\WP_Error True if the theme feature was successfully registered, a WP_Error object if not.
  */
-    public function registerThemeFeature(string $feature, array $args): true|\WP_Error;
+    public function registerThemeFeature(string $feature, array $args = []): true|\WP_Error;
 }

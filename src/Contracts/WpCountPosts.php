@@ -24,5 +24,5 @@ interface WpCountPosts
  * @return \stdClass An object containing the number of posts for each status,
  *                  or an empty object if the post type does not exist.
  */
-    public function wpCountPosts(string $type, string $perm): \stdClass;
+    public function wpCountPosts(string $type = 'post', string $perm = ''): \stdClass;
 }

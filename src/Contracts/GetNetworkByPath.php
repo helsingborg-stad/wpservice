@@ -16,5 +16,5 @@ interface GetNetworkByPath
  * @param int|null $segments Path segments to use. Defaults to null, or the full path.
  * @return \WP_Network|false Network object if successful. False when no network is found.
  */
-    public function getNetworkByPath(string $domain, string $path, int|null $segments): \WP_Network|false;
+    public function getNetworkByPath(string $domain, string $path, int|null $segments = null): \WP_Network|false;
 }

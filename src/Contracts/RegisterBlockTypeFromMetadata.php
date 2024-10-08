@@ -23,5 +23,5 @@ interface RegisterBlockTypeFromMetadata
  *                               on accepted arguments. Default empty array.
  * @return \WP_Block_Type|false The registered block type on success, or false on failure.
  */
-    public function registerBlockTypeFromMetadata(string $fileOrFolder, array $args): \WP_Block_Type|false;
+    public function registerBlockTypeFromMetadata(string $fileOrFolder, array $args = []): \WP_Block_Type|false;
 }

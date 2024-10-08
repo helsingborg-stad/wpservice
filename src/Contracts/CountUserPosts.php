@@ -19,5 +19,5 @@ interface CountUserPosts
  * @param bool $publicOnly Optional. Whether to only return counts for public posts. Default false.
  * @return string Number of posts the user has written in this post type.
  */
-    public function countUserPosts(int $userid, array|string $postType, bool $publicOnly): string;
+    public function countUserPosts(int $userid, array|string $postType = 'post', bool $publicOnly = false): string;
 }

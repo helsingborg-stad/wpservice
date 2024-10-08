@@ -16,5 +16,5 @@ interface WpGetCanonicalUrl
  * @return string|false The canonical URL. False if the post does not exist
  *                      or has not been published yet.
  */
-    public function wpGetCanonicalUrl(int|\WP_Post $post): string|false;
+    public function wpGetCanonicalUrl(int|\WP_Post $post = null): string|false;
 }

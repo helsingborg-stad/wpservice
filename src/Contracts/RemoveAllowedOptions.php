@@ -15,5 +15,5 @@ interface RemoveAllowedOptions
  * @param string|array $options
  * @return array
  */
-    public function removeAllowedOptions(array $delOptions, string|array $options): array;
+    public function removeAllowedOptions(array $delOptions, string|array $options = ''): array;
 }

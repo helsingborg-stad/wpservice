@@ -17,5 +17,5 @@ interface RestHandleMultiTypeSchema
  * @param string $param The parameter name, used in error messages.
  * @return string
  */
-    public function restHandleMultiTypeSchema(mixed $value, array $args, string $param): string;
+    public function restHandleMultiTypeSchema(mixed $value, array $args, string $param = ''): string;
 }

@@ -13,5 +13,5 @@ interface GetCoreUpdates
  *                       set $options['available'] to false to skip not-dismissed updates.
  * @return array|false Array of the update objects on success, false on failure.
  */
-    public function getCoreUpdates(array $options): array|false;
+    public function getCoreUpdates(array $options = []): array|false;
 }

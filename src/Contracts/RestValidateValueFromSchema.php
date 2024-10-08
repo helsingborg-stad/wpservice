@@ -26,5 +26,5 @@ interface RestValidateValueFromSchema
  * @param string $param The parameter name, used in error messages.
  * @return true|\WP_Error
  */
-    public function restValidateValueFromSchema(mixed $value, array $args, string $param): true|\WP_Error;
+    public function restValidateValueFromSchema(mixed $value, array $args, string $param = ''): true|\WP_Error;
 }

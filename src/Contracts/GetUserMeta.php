@@ -22,5 +22,5 @@ interface GetUserMeta
  *               False for an invalid `$user_id` (non-numeric, zero, or negative value).
  *               An empty string if a valid but non-existing user ID is passed.
  */
-    public function getUserMeta(int $userId, string $key, bool $single): mixed;
+    public function getUserMeta(int $userId, string $key = '', bool $single = false): mixed;
 }

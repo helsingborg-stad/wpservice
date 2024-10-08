@@ -20,5 +20,5 @@ interface AddRewriteTag
  * @param string $regex Regular expression to substitute the tag for in rewrite rules.
  * @param string $query Optional. String to append to the rewritten query. Must end in '='. Default empty.
  */
-    public function addRewriteTag(string $tag, string $regex, string $query): void;
+    public function addRewriteTag(string $tag, string $regex, string $query = ''): void;
 }

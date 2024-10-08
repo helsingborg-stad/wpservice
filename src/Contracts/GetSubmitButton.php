@@ -25,5 +25,5 @@ interface GetSubmitButton
  *                                       Default empty string.
  * @return string Submit button HTML.
  */
-    public function getSubmitButton(string $text, string $type, string $name, bool $wrap, array|string $otherAttributes): string;
+    public function getSubmitButton(string $text = '', string $type = 'primary large', string $name = 'submit', bool $wrap = true, array|string $otherAttributes = ''): string;
 }

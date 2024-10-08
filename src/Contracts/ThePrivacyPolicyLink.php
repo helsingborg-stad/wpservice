@@ -12,5 +12,5 @@ interface ThePrivacyPolicyLink
  * @param string $before Optional. Display before privacy policy link. Default empty.
  * @param string $after  Optional. Display after privacy policy link. Default empty.
  */
-    public function thePrivacyPolicyLink(string $before, string $after): void;
+    public function thePrivacyPolicyLink(string $before = '', string $after = ''): void;
 }

@@ -26,5 +26,5 @@ interface UpdateCommentMeta
  *                  false on failure or if the value passed to the function
  *                  is the same as the one that is already in the database.
  */
-    public function updateCommentMeta(int $commentId, string $metaKey, mixed $metaValue, mixed $prevValue): int|bool;
+    public function updateCommentMeta(int $commentId, string $metaKey, mixed $metaValue, mixed $prevValue = ''): int|bool;
 }

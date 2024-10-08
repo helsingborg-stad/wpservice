@@ -23,5 +23,5 @@ interface WpGetObjectTerms
  *                                                  or WP_Error if any of the taxonomies do not exist.
  *                                                  See WP_Term_Query::get_terms() for more information.
  */
-    public function wpGetObjectTerms(int|array $objectIds, string|array $taxonomies, array|string $args): array|string|\WP_Error;
+    public function wpGetObjectTerms(int|array $objectIds, string|array $taxonomies, array|string $args = []): array|string|\WP_Error;
 }

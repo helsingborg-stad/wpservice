@@ -21,5 +21,5 @@ interface GetPostStati
  *                               Default 'and'.
  * @return string[]|stdClass[] A list of post status names or objects.
  */
-    public function getPostStati(array|string $args, string $output, string $operator): array;
+    public function getPostStati(array|string $args = [], string $output = 'names', string $operator = 'and'): array;
 }

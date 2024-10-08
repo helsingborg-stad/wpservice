@@ -19,5 +19,5 @@ interface WpTempnam
  * @param string $dir      Optional. Directory to store the file in. Default empty.
  * @return string A writable filename.
  */
-    public function wpTempnam(string $filename, string $dir): string;
+    public function wpTempnam(string $filename = '', string $dir = ''): string;
 }

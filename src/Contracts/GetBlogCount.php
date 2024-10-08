@@ -16,5 +16,5 @@ interface GetBlogCount
  * @param int|null $networkId ID of the network. Default is the current network.
  * @return int Number of active sites on the network.
  */
-    public function getBlogCount(int|null $networkId): int;
+    public function getBlogCount(int|null $networkId = null): int;
 }

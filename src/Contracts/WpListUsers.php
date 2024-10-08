@@ -33,5 +33,5 @@ interface WpListUsers
  * }
  * @return string|null The output if echo is false. Otherwise null.
  */
-    public function wpListUsers(string|array $args): string|null;
+    public function wpListUsers(string|array $args = []): string|null;
 }

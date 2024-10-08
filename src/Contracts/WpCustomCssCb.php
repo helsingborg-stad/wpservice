@@ -9,5 +9,5 @@ interface WpCustomCssCb
  *
  * @since 4.7.0
  */
-    public function wpCustomCssCb(): void;
+public function wpCustomCssCb(): void;
 }

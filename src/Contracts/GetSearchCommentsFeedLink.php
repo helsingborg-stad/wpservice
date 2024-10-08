@@ -16,5 +16,5 @@ interface GetSearchCommentsFeedLink
  *                             Default is the value of get_default_feed().
  * @return string The comments feed search results permalink.
  */
-    public function getSearchCommentsFeedLink(string $searchQuery, string $feed): string;
+    public function getSearchCommentsFeedLink(string $searchQuery = '', string $feed = ''): string;
 }

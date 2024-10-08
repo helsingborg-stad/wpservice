@@ -14,5 +14,5 @@ interface BlockCoreNavigationBuildCssColors
  *
  * @return array Colors CSS classes and inline styles.
  */
-    public function blockCoreNavigationBuildCssColors(array $attributes): array;
+public function blockCoreNavigationBuildCssColors(array $attributes): array;
 }

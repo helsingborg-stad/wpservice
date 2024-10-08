@@ -21,5 +21,5 @@ interface EscUrl
  *                An empty string is returned if `$url` specifies a protocol other than
  *                those in `$protocols`, or if `$url` contains an empty string.
  */
-    public function escUrl(string $url, array $protocols, string $context): string;
+    public function escUrl(string $url, array $protocols = null, string $context = 'display'): string;
 }

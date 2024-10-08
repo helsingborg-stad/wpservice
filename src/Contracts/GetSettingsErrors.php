@@ -40,5 +40,5 @@ interface GetSettingsErrors
  *     }
  * }
  */
-    public function getSettingsErrors(string $setting, bool $sanitize): array;
+    public function getSettingsErrors(string $setting = '', bool $sanitize = false): array;
 }

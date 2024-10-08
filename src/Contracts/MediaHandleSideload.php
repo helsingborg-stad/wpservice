@@ -16,5 +16,5 @@ interface MediaHandleSideload
  * @param array $postData  Optional. Post data to override. Default empty array.
  * @return int|\WP_Error The ID of the attachment or a WP_Error on failure.
  */
-    public function mediaHandleSideload(array $fileArray, int $postId, string $desc, array $postData): int|\WP_Error;
+    public function mediaHandleSideload(array $fileArray, int $postId = 0, string $desc = null, array $postData = []): int|\WP_Error;
 }

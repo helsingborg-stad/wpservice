@@ -18,5 +18,5 @@ interface ApplyBlockHooksToContent
  *                                                  Default: 'insert_hooked_blocks'.
  * @return string The serialized markup.
  */
-    public function applyBlockHooksToContent(string $content, \WP_Block_Template|\WP_Post|array $context, callable $callback): string;
+    public function applyBlockHooksToContent(string $content, \WP_Block_Template|\WP_Post|array $context, callable $callback = null): string;
 }

@@ -15,5 +15,5 @@ interface WpPostMimeTypeWhere
  *                                         Default empty.
  * @return string The SQL AND clause for mime searching.
  */
-    public function wpPostMimeTypeWhere(string|array $postMimeTypes, string $tableAlias): string;
+    public function wpPostMimeTypeWhere(string|array $postMimeTypes, string $tableAlias = ''): string;
 }

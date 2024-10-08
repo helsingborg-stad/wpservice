@@ -19,5 +19,5 @@ interface IsPostTypeArchive
  *                                    to check against. Default empty.
  * @return bool Whether the query is for an existing post type archive page.
  */
-    public function isPostTypeArchive(string|array $postTypes): bool;
+    public function isPostTypeArchive(string|array $postTypes = ''): bool;
 }

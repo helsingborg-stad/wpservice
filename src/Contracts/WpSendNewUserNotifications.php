@@ -18,5 +18,5 @@ interface WpSendNewUserNotifications
  *                        or an empty string (admin only), 'user', or 'both' (admin and user).
  *                        Default 'both'.
  */
-    public function wpSendNewUserNotifications(int $userId, string $notify): void;
+    public function wpSendNewUserNotifications(int $userId, string $notify = 'both'): void;
 }

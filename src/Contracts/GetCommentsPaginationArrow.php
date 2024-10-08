@@ -18,5 +18,5 @@ interface GetCommentsPaginationArrow
  *                                  Accepts 'next' or 'previous'. Default 'next'.
  * @return string|null The pagination arrow HTML or null if there is none.
  */
-    public function getCommentsPaginationArrow(\WP_Block $block, string $paginationType): string|null;
+    public function getCommentsPaginationArrow(\WP_Block $block, string $paginationType = 'next'): string|null;
 }

@@ -9,5 +9,5 @@ interface WpShakeJs
  *
  * @since 3.0.0
  */
-    public function wpShakeJs(): void;
+public function wpShakeJs(): void;
 }

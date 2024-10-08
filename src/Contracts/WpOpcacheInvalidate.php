@@ -22,5 +22,5 @@ interface WpOpcacheInvalidate
  * @return bool True if opcache was invalidated for `$filepath`, or there was nothing to invalidate.
  *              False if opcache invalidation is not available, or is disabled via filter.
  */
-    public function wpOpcacheInvalidate(string $filepath, bool $force): bool;
+    public function wpOpcacheInvalidate(string $filepath, bool $force = false): bool;
 }

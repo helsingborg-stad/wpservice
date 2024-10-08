@@ -24,5 +24,5 @@ interface TheAuthor
  * @param bool $deprecatedEcho Deprecated. Use get_the_author(). Echo the string or return it.
  * @return string The author's display name, from get_the_author().
  */
-    public function theAuthor(string $deprecated, bool $deprecatedEcho): string;
+    public function theAuthor(string $deprecated = '', bool $deprecatedEcho = true): string;
 }

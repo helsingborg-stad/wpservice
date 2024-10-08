@@ -30,5 +30,5 @@ interface WpAdminCssColor
  *     @type string $current SVG icon color of current admin menu link.
  * }
  */
-    public function wpAdminCssColor(string $key, string $name, string $url, array $colors, array $icons): void;
+public function wpAdminCssColor(string $key, string $name, string $url, array $colors = [], array $icons = []): void;
 }

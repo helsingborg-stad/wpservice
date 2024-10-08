@@ -26,5 +26,5 @@ interface WpEmbedDefaults
  *     @type int $1 The embed height.
  * }
  */
-    public function wpEmbedDefaults(string $url): array;
+    public function wpEmbedDefaults(string $url = ''): array;
 }

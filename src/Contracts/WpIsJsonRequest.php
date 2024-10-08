@@ -12,5 +12,5 @@ interface WpIsJsonRequest
  * @return bool True if `Accepts` or `Content-Type` headers contain `application/json`.
  *              False otherwise.
  */
-    public function wpIsJsonRequest(): bool;
+public function wpIsJsonRequest(): bool;
 }

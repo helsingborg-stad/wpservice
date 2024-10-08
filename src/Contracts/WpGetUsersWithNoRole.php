@@ -15,5 +15,5 @@ interface WpGetUsersWithNoRole
  * @param int|null $siteId Optional. The site ID to get users with no role for. Defaults to the current site.
  * @return string[] Array of user IDs as strings.
  */
-    public function wpGetUsersWithNoRole(int|null $siteId): array;
+    public function wpGetUsersWithNoRole(int|null $siteId = null): array;
 }

@@ -13,5 +13,5 @@ interface WpDashboardTriggerWidgetControl
  *
  * @param int|false $widgetControlId Optional. Registered widget ID. Default false.
  */
-    public function wpDashboardTriggerWidgetControl(int|false $widgetControlId): void;
+    public function wpDashboardTriggerWidgetControl(int|false $widgetControlId = false): void;
 }

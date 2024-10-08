@@ -13,5 +13,5 @@ interface WpHighPriorityElementFlag
  * @param bool $value Optional. Used to change the static variable. Default null.
  * @return bool Returns true if high-priority element was marked already, otherwise false.
  */
-    public function wpHighPriorityElementFlag(bool $value): bool;
+    public function wpHighPriorityElementFlag(bool $value = null): bool;
 }

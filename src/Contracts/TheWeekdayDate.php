@@ -19,5 +19,5 @@ interface TheWeekdayDate
  * @param string $before Optional. Output before the date. Default empty.
  * @param string $after  Optional. Output after the date. Default empty.
  */
-    public function theWeekdayDate(string $before, string $after): void;
+    public function theWeekdayDate(string $before = '', string $after = ''): void;
 }

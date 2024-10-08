@@ -13,5 +13,5 @@ interface TheTime
  *                       was written. Accepts 'G', 'U', or PHP date format.
  *                       Defaults to the 'time_format' option.
  */
-    public function theTime(string $format): void;
+    public function theTime(string $format = ''): void;
 }

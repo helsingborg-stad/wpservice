@@ -25,5 +25,5 @@ interface WpEditor
  *                          Should not contain square brackets.
  * @param array $settings  See _WP_Editors::parse_settings() for description.
  */
-    public function wpEditor(string $content, string $editorId, array $settings): void;
+    public function wpEditor(string $content, string $editorId, array $settings = []): void;
 }

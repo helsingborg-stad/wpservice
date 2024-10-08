@@ -13,5 +13,5 @@ interface UpdatePostThumbnailCache
  *
  * @param \WP_Query $wpQuery Optional. A WP_Query instance. Defaults to the $wp_query global.
  */
-    public function updatePostThumbnailCache(\WP_Query $wpQuery): void;
+    public function updatePostThumbnailCache(\WP_Query $wpQuery = null): void;
 }

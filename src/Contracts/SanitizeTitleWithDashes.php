@@ -19,5 +19,5 @@ interface SanitizeTitleWithDashes
  *                          or stripped entirely. Default 'display'.
  * @return string The sanitized title.
  */
-    public function sanitizeTitleWithDashes(string $title, string $rawTitle, string $context): string;
+    public function sanitizeTitleWithDashes(string $title, string $rawTitle = '', string $context = 'display'): string;
 }

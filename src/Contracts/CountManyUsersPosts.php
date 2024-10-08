@@ -16,5 +16,5 @@ interface CountManyUsersPosts
  * @param bool $publicOnly Optional. Only return counts for public posts.  Defaults to false.
  * @return string[] Amount of posts each user has written, as strings, keyed by user ID.
  */
-    public function countManyUsersPosts(array $users, string|array $postType, bool $publicOnly): array;
+    public function countManyUsersPosts(array $users, string|array $postType = 'post', bool $publicOnly = false): array;
 }

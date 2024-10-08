@@ -26,5 +26,5 @@ interface GetPageOfComment
  * }
  * @return int|null Comment page number or null on error.
  */
-    public function getPageOfComment(int $commentId, array $args): int|null;
+    public function getPageOfComment(int $commentId, array $args = []): int|null;
 }

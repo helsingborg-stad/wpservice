@@ -14,5 +14,5 @@ interface _ex
  * @param string $domain  Optional. Text domain. Unique identifier for retrieving translated strings.
  *                        Default 'default'.
  */
-    public function _ex(string $text, string $context, string $domain): void;
+    public function _ex(string $text, string $context, string $domain = 'default'): void;
 }

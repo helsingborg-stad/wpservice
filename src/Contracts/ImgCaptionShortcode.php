@@ -33,5 +33,5 @@ interface ImgCaptionShortcode
  * @param string $content Optional. Shortcode content. Default empty string.
  * @return string HTML content to display the caption.
  */
-    public function imgCaptionShortcode(array $attr, string $content): string;
+    public function imgCaptionShortcode(array $attr, string $content = ''): string;
 }

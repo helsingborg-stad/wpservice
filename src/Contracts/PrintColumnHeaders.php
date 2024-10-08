@@ -12,5 +12,5 @@ interface PrintColumnHeaders
  * @param string|\WP_Screen $screen  The screen hook name or screen object.
  * @param bool $withId Whether to set the ID attribute or not.
  */
-    public function printColumnHeaders(string|\WP_Screen $screen, bool $withId): void;
+    public function printColumnHeaders(string|\WP_Screen $screen, bool $withId = true): void;
 }

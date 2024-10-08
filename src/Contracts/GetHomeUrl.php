@@ -19,5 +19,5 @@ interface GetHomeUrl
  *                             'http', 'https', 'relative', 'rest', or null. Default null.
  * @return string Home URL link with optional path appended.
  */
-    public function getHomeUrl(int|null $blogId, string $path, string|null $scheme): string;
+    public function getHomeUrl(int|null $blogId = null, string $path = '', string|null $scheme = null): string;
 }

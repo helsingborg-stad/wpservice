@@ -11,5 +11,5 @@ interface TheHeaderImageTag
  *
  * @param array $attr Optional. Attributes for the image markup. Default empty.
  */
-    public function theHeaderImageTag(array $attr): void;
+    public function theHeaderImageTag(array $attr = []): void;
 }

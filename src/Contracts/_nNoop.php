@@ -33,5 +33,5 @@ interface _nNoop
  *     @type string|null $domain   Text domain.
  * }
  */
-    public function _nNoop(string $singular, string $plural, string $domain): array;
+    public function _nNoop(string $singular, string $plural, string $domain = null): array;
 }

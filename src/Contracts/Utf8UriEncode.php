@@ -15,5 +15,5 @@ interface Utf8UriEncode
  * @param bool $encodeAsciiCharacters Whether to encode ascii characters such as < " '
  * @return string String with Unicode encoded for URI.
  */
-    public function utf8UriEncode(string $utf8String, int $length, bool $encodeAsciiCharacters): string;
+    public function utf8UriEncode(string $utf8String, int $length = 0, bool $encodeAsciiCharacters = false): string;
 }

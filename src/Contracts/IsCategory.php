@@ -22,5 +22,5 @@ interface IsCategory
  *                                            to check against. Default empty.
  * @return bool Whether the query is for an existing category archive page.
  */
-    public function isCategory(int|string|array $category): bool;
+    public function isCategory(int|string|array $category = ''): bool;
 }

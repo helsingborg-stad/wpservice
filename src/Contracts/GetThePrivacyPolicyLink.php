@@ -15,5 +15,5 @@ interface GetThePrivacyPolicyLink
  * @return string Markup for the link and surrounding elements. Empty string if it
  *                doesn't exist.
  */
-    public function getThePrivacyPolicyLink(string $before, string $after): string;
+    public function getThePrivacyPolicyLink(string $before = '', string $after = ''): string;
 }

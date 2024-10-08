@@ -15,5 +15,5 @@ interface TheModifiedDate
  * @param bool $display Optional. Whether to echo the date or return it. Default true.
  * @return string|void String if retrieving.
  */
-    public function theModifiedDate(string $format, string $before, string $after, bool $display): string;
+    public function theModifiedDate(string $format = '', string $before = '', string $after = '', bool $display = true): string;
 }

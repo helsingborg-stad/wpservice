@@ -21,5 +21,5 @@ interface GetBoundaryPost
  * @param string $taxonomy       Optional. Taxonomy, if `$in_same_term` is true. Default 'category'.
  * @return array|null Array containing the boundary post object if successful, null otherwise.
  */
-    public function getBoundaryPost(bool $inSameTerm, array|string $excludedTerms, bool $start, string $taxonomy): array|null;
+    public function getBoundaryPost(bool $inSameTerm = false, array|string $excludedTerms = '', bool $start = true, string $taxonomy = 'category'): array|null;
 }

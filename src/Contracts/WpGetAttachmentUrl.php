@@ -14,5 +14,5 @@ interface WpGetAttachmentUrl
  * @param int $attachmentId Optional. Attachment post ID. Defaults to global $post.
  * @return string|false Attachment URL, otherwise false.
  */
-    public function wpGetAttachmentUrl(int $attachmentId): string|false;
+    public function wpGetAttachmentUrl(int $attachmentId = 0): string|false;
 }

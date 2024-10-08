@@ -23,5 +23,5 @@ interface GetUserOption
  * @param string $deprecated Use get_option() to check for an option in the options table.
  * @return mixed User option value on success, false on failure.
  */
-    public function getUserOption(string $option, int $user, string $deprecated): mixed;
+    public function getUserOption(string $option, int $user = 0, string $deprecated = ''): mixed;
 }

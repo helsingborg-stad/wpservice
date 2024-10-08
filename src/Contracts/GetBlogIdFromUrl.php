@@ -20,5 +20,5 @@ interface GetBlogIdFromUrl
  * @param string $path   Optional. Not required for subdomain installations. Default '/'.
  * @return int 0 if no blog found, otherwise the ID of the matching blog.
  */
-    public function getBlogIdFromUrl(string $domain, string $path): int;
+    public function getBlogIdFromUrl(string $domain, string $path = '/'): int;
 }

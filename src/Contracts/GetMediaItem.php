@@ -15,5 +15,5 @@ interface GetMediaItem
  * @param string|array $args          Optional. Override defaults.
  * @return string HTML form for attachment.
  */
-    public function getMediaItem(int $attachmentId, string|array $args): string;
+    public function getMediaItem(int $attachmentId, string|array $args = null): string;
 }

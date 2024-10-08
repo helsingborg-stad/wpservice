@@ -12,5 +12,5 @@ interface GetPostFormat
  * @param int|\WP_Post|null $post Optional. Post ID or post object. Defaults to the current post in the loop.
  * @return string|false The format if successful. False otherwise.
  */
-    public function getPostFormat(int|\WP_Post|null $post): string|false;
+    public function getPostFormat(int|\WP_Post|null $post = null): string|false;
 }

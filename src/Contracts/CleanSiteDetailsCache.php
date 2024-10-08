@@ -11,5 +11,5 @@ interface CleanSiteDetailsCache
  *
  * @param int $siteId Optional. Site ID. Default is the current site ID.
  */
-    public function cleanSiteDetailsCache(int $siteId): void;
+    public function cleanSiteDetailsCache(int $siteId = 0): void;
 }

@@ -51,5 +51,5 @@ interface WpInsertTerm
  *     @type int|string $term_taxonomy_id The new term taxonomy ID. Can be a numeric string.
  * }
  */
-    public function wpInsertTerm(string $term, string $taxonomy, array|string $args): array|\WP_Error;
+    public function wpInsertTerm(string $term, string $taxonomy, array|string $args = []): array|\WP_Error;
 }

@@ -17,5 +17,5 @@ interface AddTermMeta
  * @return int|false|\WP_Error Meta ID on success, false on failure.
  *                            WP_Error when term_id is ambiguous between taxonomies.
  */
-    public function addTermMeta(int $termId, string $metaKey, mixed $metaValue, bool $unique): int|false|\WP_Error;
+    public function addTermMeta(int $termId, string $metaKey, mixed $metaValue, bool $unique = false): int|false|\WP_Error;
 }

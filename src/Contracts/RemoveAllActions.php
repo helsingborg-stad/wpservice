@@ -14,5 +14,5 @@ interface RemoveAllActions
  *                             Default false.
  * @return true Always returns true.
  */
-    public function removeAllActions(string $hookName, int|false $priority): true;
+    public function removeAllActions(string $hookName, int|false $priority = false): true;
 }

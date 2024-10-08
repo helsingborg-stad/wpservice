@@ -18,5 +18,5 @@ interface WpParseArgs
  *                                      Default empty array.
  * @return array Merged user defined values with defaults.
  */
-    public function wpParseArgs(string|array|object $args, array $defaults): array;
+    public function wpParseArgs(string|array|object $args, array $defaults = []): array;
 }

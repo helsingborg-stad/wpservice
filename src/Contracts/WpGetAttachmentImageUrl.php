@@ -16,5 +16,5 @@ interface WpGetAttachmentImageUrl
  * @return string|false Attachment URL or false if no image is available. If `$size` does not match
  *                      any registered image size, the original image URL will be returned.
  */
-    public function wpGetAttachmentImageUrl(int $attachmentId, string|array $size, bool $icon): string|false;
+    public function wpGetAttachmentImageUrl(int $attachmentId, string|array $size = 'thumbnail', bool $icon = false): string|false;
 }

@@ -26,5 +26,5 @@ interface WpFilterContentTags
  *                        Defaults to `current_filter()` when not set.
  * @return string Converted content with images modified.
  */
-    public function wpFilterContentTags(string $content, string $context): string;
+    public function wpFilterContentTags(string $content, string $context = null): string;
 }

@@ -20,5 +20,5 @@ interface InjectIgnoredHookedBlocksMetadataAttributes
  * @param \WP_REST_Request $deprecated Deprecated. Not used.
  * @return \stdClass|\WP_Error The updated object representing a template or template part.
  */
-    public function injectIgnoredHookedBlocksMetadataAttributes(\stdClass $changes, \WP_REST_Request $deprecated): \stdClass|\WP_Error;
+    public function injectIgnoredHookedBlocksMetadataAttributes(\stdClass $changes, \WP_REST_Request $deprecated = null): \stdClass|\WP_Error;
 }

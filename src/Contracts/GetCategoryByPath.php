@@ -25,5 +25,5 @@ interface GetCategoryByPath
  *                              respectively. Default OBJECT.
  * @return \WP_Term|array|\WP_Error|null Type is based on $output value.
  */
-    public function getCategoryByPath(string $categoryPath, bool $fullMatch, string $output): \WP_Term|array|\WP_Error|null;
+    public function getCategoryByPath(string $categoryPath, bool $fullMatch = true, string $output = OBJECT): \WP_Term|array|\WP_Error|null;
 }

@@ -9,5 +9,5 @@ interface WpCleanThemeJsonCache
  *
  * @since 6.2.0
  */
-    public function wpCleanThemeJsonCache(): void;
+public function wpCleanThemeJsonCache(): void;
 }

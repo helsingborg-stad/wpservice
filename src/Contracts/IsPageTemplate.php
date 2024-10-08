@@ -22,5 +22,5 @@ interface IsPageTemplate
  * @param string|string[] $template The specific template filename or array of templates to match.
  * @return bool True on success, false on failure.
  */
-    public function isPageTemplate(string|array $template): bool;
+    public function isPageTemplate(string|array $template = ''): bool;
 }

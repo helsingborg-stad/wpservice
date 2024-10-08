@@ -39,5 +39,5 @@ interface TraverseAndSerializeBlocks
  *                                Its string return value will be appended to the serialized block markup.
  * @return string Serialized block markup.
  */
-    public function traverseAndSerializeBlocks(array $blocks, callable $preCallback, callable $postCallback): string;
+    public function traverseAndSerializeBlocks(array $blocks, callable $preCallback = null, callable $postCallback = null): string;
 }

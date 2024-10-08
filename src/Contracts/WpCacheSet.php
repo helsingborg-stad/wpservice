@@ -22,5 +22,5 @@ interface WpCacheSet
  *                           Default 0 (no expiration).
  * @return bool True on success, false on failure.
  */
-    public function wpCacheSet(int|string $key, mixed $data, string $group, int $expire): bool;
+    public function wpCacheSet(int|string $key, mixed $data, string $group = '', int $expire = 0): bool;
 }

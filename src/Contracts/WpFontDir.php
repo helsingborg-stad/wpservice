@@ -21,5 +21,5 @@ interface WpFontDir
  *     @type string|false $error   False or error message.
  * }
  */
-    public function wpFontDir(bool $createDir): array;
+    public function wpFontDir(bool $createDir = true): array;
 }

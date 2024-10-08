@@ -31,5 +31,5 @@ interface WpDeleteTerm
  * @return bool|int|\WP_Error True on success, false if term does not exist. Zero on attempted
  *                           deletion of default Category. WP_Error if the taxonomy does not exist.
  */
-    public function wpDeleteTerm(int $term, string $taxonomy, array|string $args): bool|int|\WP_Error;
+    public function wpDeleteTerm(int $term, string $taxonomy, array|string $args = []): bool|int|\WP_Error;
 }

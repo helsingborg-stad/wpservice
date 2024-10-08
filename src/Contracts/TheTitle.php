@@ -15,5 +15,5 @@ interface TheTitle
  * @return void|string Void if `$display` argument is true or the title is empty,
  *                     current post title if `$display` is false.
  */
-    public function theTitle(string $before, string $after, bool $display): string;
+    public function theTitle(string $before = '', string $after = '', bool $display = true): string;
 }

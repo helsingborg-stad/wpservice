@@ -15,5 +15,5 @@ interface GetBodyClass
  *                                   to add to the class list. Default empty.
  * @return string[] Array of class names.
  */
-    public function getBodyClass(string|array $cssClass): array;
+    public function getBodyClass(string|array $cssClass = ''): array;
 }

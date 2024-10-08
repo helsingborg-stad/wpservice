@@ -18,5 +18,5 @@ interface FilterBlockContent
  *                                          Defaults to the result of wp_allowed_protocols().
  * @return string The filtered and sanitized content result.
  */
-    public function filterBlockContent(string $text, array|string $allowedHtml, array $allowedProtocols): string;
+    public function filterBlockContent(string $text, array|string $allowedHtml = 'post', array $allowedProtocols = []): string;
 }

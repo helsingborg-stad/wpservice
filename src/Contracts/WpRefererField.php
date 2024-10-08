@@ -15,5 +15,5 @@ interface WpRefererField
  * @param bool $display Optional. Whether to echo or return the referer field. Default true.
  * @return string Referer field HTML markup.
  */
-    public function wpRefererField(bool $display): string;
+    public function wpRefererField(bool $display = true): string;
 }

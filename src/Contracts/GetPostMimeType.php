@@ -15,5 +15,5 @@ interface GetPostMimeType
  * @param int|\WP_Post $post Optional. Post ID or post object. Defaults to global $post.
  * @return string|false The mime type on success, false on failure.
  */
-    public function getPostMimeType(int|\WP_Post $post): string|false;
+    public function getPostMimeType(int|\WP_Post $post = null): string|false;
 }

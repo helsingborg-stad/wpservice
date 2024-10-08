@@ -12,5 +12,5 @@ interface GetParentThemeFilePath
  * @param string $file Optional. File to return the path for in the template directory.
  * @return string The path of the file.
  */
-    public function getParentThemeFilePath(string $file): string;
+    public function getParentThemeFilePath(string $file = ''): string;
 }

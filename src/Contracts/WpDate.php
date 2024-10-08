@@ -22,5 +22,5 @@ interface WpDate
  *                                from site settings.
  * @return string|false The date, translated if locale specifies it. False on invalid timestamp input.
  */
-    public function wpDate(string $format, int $timestamp, \DateTimeZone $timezone): string|false;
+    public function wpDate(string $format, int $timestamp = null, \DateTimeZone $timezone = null): string|false;
 }

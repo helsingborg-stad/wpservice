@@ -29,5 +29,5 @@ interface WpInitializeSite
  * }
  * @return true|\WP_Error True on success, or error object on failure.
  */
-    public function wpInitializeSite(int|\WP_Site $siteId, array $args): true|\WP_Error;
+    public function wpInitializeSite(int|\WP_Site $siteId, array $args = []): true|\WP_Error;
 }

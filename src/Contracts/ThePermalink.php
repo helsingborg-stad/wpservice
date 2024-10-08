@@ -12,5 +12,5 @@ interface ThePermalink
  *
  * @param int|\WP_Post $post Optional. Post ID or post object. Default is the global `$post`.
  */
-    public function thePermalink(int|\WP_Post $post): void;
+    public function thePermalink(int|\WP_Post $post = 0): void;
 }

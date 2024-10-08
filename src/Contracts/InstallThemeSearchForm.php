@@ -11,5 +11,5 @@ interface InstallThemeSearchForm
  *
  * @param bool $typeSelector
  */
-    public function installThemeSearchForm(bool $typeSelector): void;
+    public function installThemeSearchForm(bool $typeSelector = true): void;
 }

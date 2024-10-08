@@ -14,5 +14,5 @@ interface WpStyleIs
  *                       Accepts 'enqueued', 'registered', 'queue', 'to_do', and 'done'.
  * @return bool Whether style is queued.
  */
-    public function wpStyleIs(string $handle, string $status): bool;
+    public function wpStyleIs(string $handle, string $status = 'enqueued'): bool;
 }

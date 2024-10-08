@@ -23,5 +23,5 @@ interface TheTaxonomies
  *     @type string      $after  Displays after the taxonomies. Default empty string.
  * }
  */
-    public function theTaxonomies(array $args): void;
+    public function theTaxonomies(array $args = []): void;
 }

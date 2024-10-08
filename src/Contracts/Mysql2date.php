@@ -24,5 +24,5 @@ interface Mysql2date
  * @return string|int|false Integer if `$format` is 'U' or 'G', string otherwise.
  *                          False on failure.
  */
-    public function mysql2date(string $format, string $date, bool $translate): string|int|false;
+    public function mysql2date(string $format, string $date, bool $translate = true): string|int|false;
 }

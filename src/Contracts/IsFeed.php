@@ -19,5 +19,5 @@ interface IsFeed
  *                                         to check against. Default empty.
  * @return bool Whether the query is for a feed.
  */
-    public function isFeed(string|array $feeds): bool;
+    public function isFeed(string|array $feeds = ''): bool;
 }

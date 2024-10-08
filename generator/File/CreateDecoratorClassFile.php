@@ -6,11 +6,19 @@ use WpService\Generator\Function\FunctionInterface;
 
 class CreateDecoratorClassFile implements ClassFileInterface
 {
+    /**
+     * Create a new instance of the class.
+     *
+     * @param string $name
+     * @param string $namespace
+     * @param array $implements
+     * @param string[] $functionsAsStrings
+     */
     private function __construct(
         private string $name,
         private string $namespace,
         private array $implements,
-        private array $functions
+        private array $functionsAsStrings
     ) {
     }
 
@@ -22,11 +30,6 @@ class CreateDecoratorClassFile implements ClassFileInterface
     public function getFileName(): string
     {
         return $this->getName() . '.php';
-    }
-
-    public function getFunctions(): array
-    {
-        return $this->functions;
     }
 
     /**
@@ -44,13 +47,9 @@ class CreateDecoratorClassFile implements ClassFileInterface
 
     public function __toString(): string
     {
-        $namespace          = $this->getNamespace();
-        $implements         = join(", ", $this->getImplements());
-        $formattedFunctions = array_map(
-            fn (FunctionInterface $function) => $this->formatFunction($function),
-            $this->getFunctions()
-        );
-        $formattedFunctions = join("\n", $formattedFunctions);
+        $namespace  = $this->getNamespace();
+        $implements = join(", ", $this->getImplements());
+        $functions  = implode("\n", $this->functionsAsStrings);
 
         return <<<PHP
         <?php
@@ -71,30 +70,27 @@ class CreateDecoratorClassFile implements ClassFileInterface
             {
             }
 
-            {$formattedFunctions}
+            {$functions}
         }
 
         PHP;
     }
 
-    private function formatFunction(FunctionInterface $function): string
-    {
-        $parameters = $function->getParameters();
-        $parameters = array_map(fn ($parameter) => $parameter->getType() . ' $' . $parameter->getName(), $parameters);
-        $parameters = join(", ", $parameters);
-        return <<<PHP
-        /**
-         * @inheritDoc
-         */
-        public function {$function->getName()}({$parameters}): {$function->getReturnType()}
-        {
-            {$function->getFunctionBody()}
-        }
-        PHP;
-    }
-
-    public static function create(string $name, string $namespace, array $implements, array $functions): ClassFileInterface
-    {
-        return new self($name, $namespace, $implements, $functions);
+    /**
+     * Format a function for the class.
+     *
+     * @param string $name
+     * @param string $namespace
+     * @param array $implements
+     * @param string[] $functionsAsStrings
+     * @return ClassFileInterface
+     */
+    public static function create(
+        string $name,
+        string $namespace,
+        array $implements,
+        array $functionsAsStrings
+    ): ClassFileInterface {
+        return new self($name, $namespace, $implements, $functionsAsStrings);
     }
 }

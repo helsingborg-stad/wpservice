@@ -28,5 +28,5 @@ interface GetPostClass
  * @param int|\WP_Post $post      Optional. Post ID or post object.
  * @return string[] Array of class names.
  */
-    public function getPostClass(string|array $cssClass, int|\WP_Post $post): array;
+    public function getPostClass(string|array $cssClass = '', int|\WP_Post $post = null): array;
 }

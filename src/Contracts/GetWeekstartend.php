@@ -18,5 +18,5 @@ interface GetWeekstartend
  *     @type int $end   The week end date as a Unix timestamp.
  * }
  */
-    public function getWeekstartend(string $mysqlstring, int|string $startOfWeek): array;
+    public function getWeekstartend(string $mysqlstring, int|string $startOfWeek = ''): array;
 }

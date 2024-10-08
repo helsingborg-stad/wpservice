@@ -21,5 +21,5 @@ interface GetPostsByAuthorSql
  *                                     $current_user.  Default false.
  * @return string SQL WHERE code that can be added to a query.
  */
-    public function getPostsByAuthorSql(string|array $postType, bool $full, int $postAuthor, bool $publicOnly): string;
+    public function getPostsByAuthorSql(string|array $postType, bool $full = true, int $postAuthor = null, bool $publicOnly = false): string;
 }

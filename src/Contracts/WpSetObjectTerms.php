@@ -27,5 +27,5 @@ interface WpSetObjectTerms
  * @param bool $append    Optional. If false will delete difference of terms. Default false.
  * @return array|\WP_Error Term taxonomy IDs of the affected terms or WP_Error on failure.
  */
-    public function wpSetObjectTerms(int $objectId, string|int|array $terms, string $taxonomy, bool $append): array|\WP_Error;
+    public function wpSetObjectTerms(int $objectId, string|int|array $terms, string $taxonomy, bool $append = false): array|\WP_Error;
 }

@@ -16,5 +16,5 @@ interface ConfirmBlogSignup
  * @param string $userEmail The user's email address.
  * @param array $meta       Any additional meta from the {@see 'add_signup_meta'} filter in validate_blog_signup().
  */
-    public function confirmBlogSignup(string $domain, string $path, string $blogTitle, string $userName, string $userEmail, array $meta): void;
+    public function confirmBlogSignup(string $domain, string $path, string $blogTitle, string $userName = '', string $userEmail = '', array $meta = []): void;
 }

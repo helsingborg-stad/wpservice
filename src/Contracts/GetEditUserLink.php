@@ -12,5 +12,5 @@ interface GetEditUserLink
  * @param int $userId Optional. User ID. Defaults to the current user.
  * @return string URL to edit user page or empty string.
  */
-    public function getEditUserLink(int $userId): string;
+    public function getEditUserLink(int $userId = null): string;
 }

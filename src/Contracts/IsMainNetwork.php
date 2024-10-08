@@ -12,5 +12,5 @@ interface IsMainNetwork
  * @param int $networkId Optional. Network ID to test. Defaults to current network.
  * @return bool True if $network_id is the main network, or if not running Multisite.
  */
-    public function isMainNetwork(int $networkId): bool;
+    public function isMainNetwork(int $networkId = null): bool;
 }

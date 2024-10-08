@@ -13,5 +13,5 @@ interface WpCreateCategories
  * @param int $postId    Optional. The post ID. Default empty.
  * @return int[] Array of IDs of categories assigned to the given post.
  */
-    public function wpCreateCategories(array $categories, int|string $postId): array;
+    public function wpCreateCategories(array $categories, int|string $postId = ''): array;
 }

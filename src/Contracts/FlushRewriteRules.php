@@ -14,5 +14,5 @@ interface FlushRewriteRules
  * @param bool $hard Whether to update .htaccess (hard flush) or just update
  *                   rewrite_rules option (soft flush). Default is true (hard).
  */
-    public function flushRewriteRules(bool $hard): void;
+    public function flushRewriteRules(bool $hard = true): void;
 }

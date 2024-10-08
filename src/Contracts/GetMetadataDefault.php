@@ -21,5 +21,5 @@ interface GetMetadataDefault
  * @return mixed An array of default values if `$single` is false.
  *               The default value of the meta field if `$single` is true.
  */
-    public function getMetadataDefault(string $metaType, int $objectId, string $metaKey, bool $single): mixed;
+    public function getMetadataDefault(string $metaType, int $objectId, string $metaKey, bool $single = false): mixed;
 }

@@ -16,5 +16,5 @@ interface RemoveAllFilters
  *                             Default false.
  * @return true Always returns true.
  */
-    public function removeAllFilters(string $hookName, int|false $priority): true;
+    public function removeAllFilters(string $hookName, int|false $priority = false): true;
 }

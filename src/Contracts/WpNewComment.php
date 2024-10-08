@@ -51,5 +51,5 @@ interface WpNewComment
  *                        executing wp_die()? Default false.
  * @return int|false|\WP_Error The ID of the comment on success, false or WP_Error on failure.
  */
-    public function wpNewComment(array $commentdata, bool $wpError): int|false|\WP_Error;
+    public function wpNewComment(array $commentdata, bool $wpError = false): int|false|\WP_Error;
 }

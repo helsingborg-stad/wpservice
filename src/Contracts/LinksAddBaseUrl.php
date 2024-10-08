@@ -19,5 +19,5 @@ interface LinksAddBaseUrl
  * @param array $attrs   The attributes which should be processed.
  * @return string The processed content.
  */
-    public function linksAddBaseUrl(string $content, string $base, array $attrs): string;
+    public function linksAddBaseUrl(string $content, string $base, array $attrs = []): string;
 }

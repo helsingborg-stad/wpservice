@@ -19,5 +19,5 @@ interface WpScriptIs
  *                       Accepts 'enqueued', 'registered', 'queue', 'to_do', and 'done'.
  * @return bool Whether the script is queued.
  */
-    public function wpScriptIs(string $handle, string $status): bool;
+    public function wpScriptIs(string $handle, string $status = 'enqueued'): bool;
 }

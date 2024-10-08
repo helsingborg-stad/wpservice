@@ -15,5 +15,5 @@ interface GetRegisteredMetaKeys
  * @param string $objectSubtype Optional. The subtype of the object type. Default empty string.
  * @return array[] List of registered metadata args, keyed by their meta keys.
  */
-    public function getRegisteredMetaKeys(string $objectType, string $objectSubtype): array;
+    public function getRegisteredMetaKeys(string $objectType, string $objectSubtype = ''): array;
 }

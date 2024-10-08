@@ -15,5 +15,5 @@ interface GetTermLink
  * @param string $taxonomy Optional. Taxonomy. Default empty.
  * @return string|\WP_Error URL of the taxonomy term archive on success, WP_Error if term does not exist.
  */
-    public function getTermLink(\WP_Term|int|string $term, string $taxonomy): string|\WP_Error;
+    public function getTermLink(\WP_Term|int|string $term, string $taxonomy = ''): string|\WP_Error;
 }

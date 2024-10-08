@@ -29,5 +29,5 @@ interface WpGetScheduledEvent
  *     @type int          $interval  Optional. The interval time in seconds for the schedule. Only present for recurring events.
  * }
  */
-    public function wpGetScheduledEvent(string $hook, array $args, int|null $timestamp): object|false;
+    public function wpGetScheduledEvent(string $hook, array $args = [], int|null $timestamp = null): object|false;
 }

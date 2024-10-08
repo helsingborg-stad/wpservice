@@ -27,5 +27,5 @@ interface WpClearScheduledHook
  *                            events were registered with the hook and arguments combination), false or WP_Error
  *                            if unscheduling one or more events fail.
  */
-    public function wpClearScheduledHook(string $hook, array $args, bool $wpError): int|false|\WP_Error;
+    public function wpClearScheduledHook(string $hook, array $args = [], bool $wpError = false): int|false|\WP_Error;
 }

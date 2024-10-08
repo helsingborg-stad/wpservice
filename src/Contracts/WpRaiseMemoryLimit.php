@@ -17,5 +17,5 @@ interface WpRaiseMemoryLimit
  *                        invoked. Default 'admin'.
  * @return int|string|false The limit that was set or false on failure.
  */
-    public function wpRaiseMemoryLimit(string $context): int|string|false;
+    public function wpRaiseMemoryLimit(string $context = 'admin'): int|string|false;
 }

@@ -28,5 +28,5 @@ interface WpCountComments
  *     @type int $all            The total number of pending or approved comments.
  * }
  */
-    public function wpCountComments(int $postId): \stdClass;
+    public function wpCountComments(int $postId = 0): \stdClass;
 }

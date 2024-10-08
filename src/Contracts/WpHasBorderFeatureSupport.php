@@ -20,5 +20,5 @@ interface WpHasBorderFeatureSupport
  * @param mixed $defaultValue Fallback value for feature support, defaults to false.
  * @return bool Whether the feature is supported.
  */
-    public function wpHasBorderFeatureSupport(\WP_Block_Type $blockType, string $feature, mixed $defaultValue): bool;
+    public function wpHasBorderFeatureSupport(\WP_Block_Type $blockType, string $feature, mixed $defaultValue = false): bool;
 }

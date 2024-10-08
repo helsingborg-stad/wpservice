@@ -21,5 +21,5 @@ interface ShortcodeAtts
  * @param string $shortcode Optional. The name of the shortcode, provided for context to enable filtering
  * @return array Combined and filtered attribute list.
  */
-    public function shortcodeAtts(array $pairs, array $atts, string $shortcode): array;
+    public function shortcodeAtts(array $pairs, array $atts, string $shortcode = ''): array;
 }

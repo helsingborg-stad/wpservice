@@ -25,5 +25,5 @@ interface WpGetComputedFluidTypographyValue
  * }
  * @return string|null A font-size value using clamp() on success, otherwise null.
  */
-    public function wpGetComputedFluidTypographyValue(array $args): string|null;
+    public function wpGetComputedFluidTypographyValue(array $args = []): string|null;
 }

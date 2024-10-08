@@ -16,5 +16,5 @@ interface WpGetInlineScriptTag
  * @param array $attributes Optional. Key-value pairs representing `<script>` tag attributes.
  * @return string String containing inline JavaScript code wrapped around `<script>` tag.
  */
-    public function wpGetInlineScriptTag(string $data, array $attributes): string;
+    public function wpGetInlineScriptTag(string $data, array $attributes = []): string;
 }

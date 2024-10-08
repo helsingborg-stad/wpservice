@@ -22,5 +22,5 @@ interface DeleteUserMeta
  *                           Must be serializable if non-scalar. Default empty.
  * @return bool True on success, false on failure.
  */
-    public function deleteUserMeta(int $userId, string $metaKey, mixed $metaValue): bool;
+    public function deleteUserMeta(int $userId, string $metaKey, mixed $metaValue = ''): bool;
 }

@@ -18,5 +18,5 @@ interface WpHtmlExcerpt
  * @param string $more  Optional. What to append if $str needs to be trimmed. Defaults to empty string.
  * @return string The excerpt.
  */
-    public function wpHtmlExcerpt(string $str, int $count, string $more): string;
+    public function wpHtmlExcerpt(string $str, int $count, string $more = null): string;
 }

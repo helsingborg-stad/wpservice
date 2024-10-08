@@ -23,5 +23,5 @@ interface GetThePostsPagination
  * }
  * @return string Markup for pagination links.
  */
-    public function getThePostsPagination(array $args): string;
+    public function getThePostsPagination(array $args = []): string;
 }

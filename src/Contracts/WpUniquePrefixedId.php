@@ -18,5 +18,5 @@ interface WpUniquePrefixedId
  * @param string $prefix Optional. Prefix for the returned ID. Default empty string.
  * @return string Incremental ID per prefix.
  */
-    public function wpUniquePrefixedId(string $prefix): string;
+    public function wpUniquePrefixedId(string $prefix = ''): string;
 }

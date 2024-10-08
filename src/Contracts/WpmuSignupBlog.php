@@ -18,5 +18,5 @@ interface WpmuSignupBlog
  * @param string $userEmail The user's email address.
  * @param array $meta       Optional. Signup meta data. By default, contains the requested privacy setting and lang_id.
  */
-    public function wpmuSignupBlog(string $domain, string $path, string $title, string $user, string $userEmail, array $meta): void;
+    public function wpmuSignupBlog(string $domain, string $path, string $title, string $user, string $userEmail, array $meta = []): void;
 }

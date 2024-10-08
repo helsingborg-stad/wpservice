@@ -14,5 +14,5 @@ interface WpAdminCssUri
  * @param string $file file relative to wp-admin/ without its ".css" extension.
  * @return string
  */
-    public function wpAdminCssUri(string $file): string;
+public function wpAdminCssUri(string $file = 'wp-admin'): string;
 }

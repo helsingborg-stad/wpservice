@@ -9,5 +9,5 @@ interface WpEnqueueGlobalStylesCssCustomProperties
  *
  * @since 5.9.0
  */
-    public function wpEnqueueGlobalStylesCssCustomProperties(): void;
+public function wpEnqueueGlobalStylesCssCustomProperties(): void;
 }

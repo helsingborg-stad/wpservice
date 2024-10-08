@@ -19,5 +19,5 @@ interface GetThemeRootUri
  *                                       preventing the need for a get_raw_theme_root() call. Default empty.
  * @return string Themes directory URI.
  */
-    public function getThemeRootUri(string $stylesheetOrTemplate, string $themeRoot): string;
+    public function getThemeRootUri(string $stylesheetOrTemplate = '', string $themeRoot = ''): string;
 }

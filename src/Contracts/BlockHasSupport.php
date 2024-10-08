@@ -15,5 +15,5 @@ interface BlockHasSupport
  * @param mixed $defaultValue Optional. Fallback value for feature support. Default false.
  * @return bool Whether the feature is supported.
  */
-    public function blockHasSupport(\WP_Block_Type $blockType, string|array $feature, mixed $defaultValue): bool;
+    public function blockHasSupport(\WP_Block_Type $blockType, string|array $feature, mixed $defaultValue = false): bool;
 }

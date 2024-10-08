@@ -24,5 +24,5 @@ interface GetPlugins
  * @param string $pluginFolder Optional. Relative path to single plugin folder.
  * @return array[] Array of arrays of plugin data, keyed by plugin file name. See get_plugin_data().
  */
-    public function getPlugins(string $pluginFolder): array;
+    public function getPlugins(string $pluginFolder = ''): array;
 }

@@ -18,5 +18,5 @@ interface HomeUrl
  *                            'http', 'https', 'relative', 'rest', or null. Default null.
  * @return string Home URL link with optional path appended.
  */
-    public function homeUrl(string $path, string|null $scheme): string;
+    public function homeUrl(string $path = '', string|null $scheme = null): string;
 }

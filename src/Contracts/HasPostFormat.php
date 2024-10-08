@@ -14,5 +14,5 @@ interface HasPostFormat
  * @return bool True if the post has any of the given formats (or any format, if no format specified),
  *              false otherwise.
  */
-    public function hasPostFormat(string|array $format, \WP_Post|int|null $post): bool;
+    public function hasPostFormat(string|array $format = [], \WP_Post|int|null $post = null): bool;
 }

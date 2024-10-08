@@ -23,5 +23,5 @@ interface WpCountTerms
  * @return string|\WP_Error Numeric string containing the number of terms in that
  *                         taxonomy or WP_Error if the taxonomy does not exist.
  */
-    public function wpCountTerms(array|string $args, array|string $deprecated): string|\WP_Error;
+    public function wpCountTerms(array|string $args = [], array|string $deprecated = ''): string|\WP_Error;
 }

@@ -13,5 +13,5 @@ interface GetMainSiteId
  *                        Defaults to the current network.
  * @return int The ID of the main site.
  */
-    public function getMainSiteId(int $networkId): int;
+    public function getMainSiteId(int $networkId = null): int;
 }

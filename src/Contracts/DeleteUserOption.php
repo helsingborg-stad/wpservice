@@ -21,5 +21,5 @@ interface DeleteUserOption
  *                            Default false (blog specific).
  * @return bool True on success, false on failure.
  */
-    public function deleteUserOption(int $userId, string $optionName, bool $isGlobal): bool;
+    public function deleteUserOption(int $userId, string $optionName, bool $isGlobal = false): bool;
 }

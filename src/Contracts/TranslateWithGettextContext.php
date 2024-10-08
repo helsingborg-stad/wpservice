@@ -20,5 +20,5 @@ interface TranslateWithGettextContext
  *                        Default 'default'.
  * @return string Translated text on success, original text on failure.
  */
-    public function translateWithGettextContext(string $text, string $context, string $domain): string;
+    public function translateWithGettextContext(string $text, string $context, string $domain = 'default'): string;
 }

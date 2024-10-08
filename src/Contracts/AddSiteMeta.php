@@ -16,5 +16,5 @@ interface AddSiteMeta
  *                           Default false.
  * @return int|false Meta ID on success, false on failure.
  */
-    public function addSiteMeta(int $siteId, string $metaKey, mixed $metaValue, bool $unique): int|false;
+    public function addSiteMeta(int $siteId, string $metaKey, mixed $metaValue, bool $unique = false): int|false;
 }

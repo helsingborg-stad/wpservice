@@ -18,5 +18,5 @@ interface GetQueryTemplate
  * @param string[] $templates An optional list of template candidates.
  * @return string Full path to template file.
  */
-    public function getQueryTemplate(string $type, array $templates): string;
+    public function getQueryTemplate(string $type, array $templates = []): string;
 }

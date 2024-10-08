@@ -20,5 +20,5 @@ interface WpCountAttachments
  *                                   MIME patterns. Default empty.
  * @return \stdClass An object containing the attachment counts by mime type.
  */
-    public function wpCountAttachments(string|array $mimeType): \stdClass;
+    public function wpCountAttachments(string|array $mimeType = ''): \stdClass;
 }

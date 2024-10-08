@@ -15,5 +15,5 @@ interface PostReplyLink
  * @param int|\WP_Post $post Optional. Post ID or WP_Post object the comment is going to be displayed on.
  *                          Default current post.
  */
-    public function postReplyLink(array $args, int|\WP_Post $post): void;
+    public function postReplyLink(array $args = [], int|\WP_Post $post = null): void;
 }

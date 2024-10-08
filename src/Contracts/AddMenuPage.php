@@ -36,5 +36,5 @@ interface AddMenuPage
  * @param int|float $position   Optional. The position in the menu order this item should appear.
  * @return string The resulting page's hook_suffix.
  */
-    public function addMenuPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback, string $iconUrl, int|float $position): string;
+    public function addMenuPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, string $iconUrl = '', int|float $position = null): string;
 }

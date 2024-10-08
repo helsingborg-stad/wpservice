@@ -23,5 +23,5 @@ interface WpOembedGet
  * }
  * @return string|false The embed HTML on success, false on failure.
  */
-    public function wpOembedGet(string $url, array|string $args): string|false;
+    public function wpOembedGet(string $url, array|string $args = ''): string|false;
 }

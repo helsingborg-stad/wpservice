@@ -12,5 +12,5 @@ interface WpWidgetRssOutput
  * @param string|array|object $rss  RSS url.
  * @param array $args Widget arguments.
  */
-    public function wpWidgetRssOutput(string|array|object $rss, array $args): void;
+    public function wpWidgetRssOutput(string|array|object $rss, array $args = []): void;
 }

@@ -27,5 +27,5 @@ interface WpStarRating
  * }
  * @return string Star rating HTML.
  */
-    public function wpStarRating(array $args): string;
+    public function wpStarRating(array $args = []): string;
 }

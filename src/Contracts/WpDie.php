@@ -52,5 +52,5 @@ interface WpDie
  *     @type bool   $exit           Whether to exit the process after completion. Default true.
  * }
  */
-    public function wpDie(string|\WP_Error $message, string|int $title, string|array|int $args): void;
+    public function wpDie(string|\WP_Error $message = '', string|int $title = '', string|array|int $args = []): void;
 }

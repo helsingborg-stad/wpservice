@@ -14,5 +14,5 @@ interface GetCommentIdFields
  *                               Defaults to the current global post.
  * @return string Hidden input HTML for replying to comments.
  */
-    public function getCommentIdFields(int|\WP_Post|null $post): string;
+    public function getCommentIdFields(int|\WP_Post|null $post = null): string;
 }

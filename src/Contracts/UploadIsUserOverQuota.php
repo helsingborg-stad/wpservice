@@ -13,5 +13,5 @@ interface UploadIsUserOverQuota
  *                              a warning message is displayed. Default true.
  * @return bool True if user is over upload space quota, otherwise false.
  */
-    public function uploadIsUserOverQuota(bool $displayMessage): bool;
+    public function uploadIsUserOverQuota(bool $displayMessage = true): bool;
 }

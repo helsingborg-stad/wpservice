@@ -2,15 +2,13 @@
 
 namespace WpService\Generator\File;
 
-use WpService\Generator\Function\FunctionInterface;
-
 class CreateFakeServiceClassFile implements ClassFileInterface
 {
     private function __construct(
         private string $name,
         private string $namespace,
         private array $implements,
-        private array $functions
+        private array $functionsAsStrings
     ) {
     }
 
@@ -22,11 +20,6 @@ class CreateFakeServiceClassFile implements ClassFileInterface
     public function getFileName(): string
     {
         return $this->getName() . '.php';
-    }
-
-    public function getFunctions(): array
-    {
-        return $this->functions;
     }
 
     /**
@@ -44,13 +37,9 @@ class CreateFakeServiceClassFile implements ClassFileInterface
 
     public function __toString(): string
     {
-        $namespace          = $this->getNamespace();
-        $implements         = join(", ", $this->getImplements());
-        $formattedFunctions = array_map(
-            fn (FunctionInterface $function) => $this->formatFunction($function),
-            $this->getFunctions()
-        );
-        $formattedFunctions = join("\n", $formattedFunctions);
+        $namespace  = $this->getNamespace();
+        $implements = join(", ", $this->getImplements());
+        $functions  = implode("\n\n", $this->functionsAsStrings);
 
         return <<<PHP
         <?php
@@ -109,40 +98,24 @@ class CreateFakeServiceClassFile implements ClassFileInterface
                 return \$this->returnValues[\$method] ?? \$default;
             }
 
-            {$formattedFunctions}
+            {$functions}
         }
 
         PHP;
     }
 
-    private function formatFunction(FunctionInterface $function): string
-    {
-        $parameters = $this->getParametersString($function);
-        return <<<PHP
-        /**
-         * @inheritDoc
-         */
-        public function {$function->getName()}({$parameters}): {$function->getReturnType()}
-        {
-            {$function->getFunctionBody()}
-        }
-        PHP;
-    }
-
-    private function getParametersString(FunctionInterface $function): string
-    {
-        $parameters = array_map(function ($parameter) {
-            if ($parameter->getDefault() !== null) {
-                return "{$parameter->getType()} \${$parameter->getName()} = {$parameter->getDefault()}";
-            }
-
-            return $parameter->getType() . ' $' . $parameter->getName();
-        }, $function->getParameters());
-        return join(", ", $parameters);
-    }
-
-    public static function create(string $name, string $namespace, array $implements, array $functions): ClassFileInterface
-    {
-        return new self($name, $namespace, $implements, $functions);
+    /**
+     * @param string $name
+     * @param string $namespace
+     * @param array $implements
+     * @param string[] $functionsAsStrings
+     */
+    public static function create(
+        string $name,
+        string $namespace,
+        array $implements,
+        array $functionsAsStrings
+    ): ClassFileInterface {
+        return new self($name, $namespace, $implements, $functionsAsStrings);
     }
 }

@@ -20,5 +20,5 @@ interface GetCommentClass
  * @param int|\WP_Post $post       Optional. Post ID or WP_Post object. Default current post.
  * @return string[] An array of classes.
  */
-    public function getCommentClass(string|array $cssClass, int|\WP_Comment $commentId, int|\WP_Post $post): array;
+    public function getCommentClass(string|array $cssClass = '', int|\WP_Comment $commentId = null, int|\WP_Post $post = null): array;
 }

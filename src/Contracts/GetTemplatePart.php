@@ -30,5 +30,5 @@ interface GetTemplatePart
  *                          Default empty array.
  * @return void|false Void on success, false if the template does not exist.
  */
-    public function getTemplatePart(string $slug, string|null $name, array $args): false;
+    public function getTemplatePart(string $slug, string|null $name = null, array $args = []): false;
 }

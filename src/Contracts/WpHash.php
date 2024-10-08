@@ -13,5 +13,5 @@ interface WpHash
      * @param string $scheme Authentication scheme (auth, secure_auth, logged_in, nonce).
      * @return string Hash of $data.
      */
-    public function wpHash(string $data, string $scheme): string;
+    public function wpHash(string $data, string $scheme = 'auth'): string;
 }

@@ -25,5 +25,5 @@ interface GetPost
  * @return \WP_Post|array|null Type corresponding to $output on success or null on failure.
  *                            When $output is OBJECT, a `WP_Post` instance is returned.
  */
-    public function getPost(int|\WP_Post|null $post, string $output, string $filter): \WP_Post|array|null;
+    public function getPost(int|\WP_Post|null $post = null, string $output = OBJECT, string $filter = 'raw'): \WP_Post|array|null;
 }

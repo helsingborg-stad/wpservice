@@ -18,5 +18,5 @@ interface SiteUrl
  * @param string|null $scheme Optional. Scheme to give the site URL context. See set_url_scheme().
  * @return string Site URL link with optional path appended.
  */
-    public function siteUrl(string $path, string|null $scheme): string;
+    public function siteUrl(string $path = '', string|null $scheme = null): string;
 }

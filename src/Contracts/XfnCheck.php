@@ -19,5 +19,5 @@ interface XfnCheck
  *                                 Default empty string.
  * @param mixed $deprecated       Deprecated. Not used.
  */
-    public function xfnCheck(string $xfnRelationship, string $xfnValue, mixed $deprecated): void;
+    public function xfnCheck(string $xfnRelationship, string $xfnValue = '', mixed $deprecated = ''): void;
 }

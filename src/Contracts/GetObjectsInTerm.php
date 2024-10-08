@@ -30,5 +30,5 @@ interface GetObjectsInTerm
  * @return string[]|WP_Error An array of object IDs as numeric strings on success,
  *                           WP_Error if the taxonomy does not exist.
  */
-    public function getObjectsInTerm(int|array $termIds, string|array $taxonomies, array|string $args): array|\WP_Error;
+    public function getObjectsInTerm(int|array $termIds, string|array $taxonomies, array|string $args = []): array|\WP_Error;
 }

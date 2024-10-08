@@ -20,5 +20,5 @@ interface CommentExists
  * @param string $timezone       Timezone. Accepts 'blog' or 'gmt'. Default 'blog'.
  * @return string|null Comment post ID on success.
  */
-    public function commentExists(string $commentAuthor, string $commentDate, string $timezone): string|null;
+    public function commentExists(string $commentAuthor, string $commentDate, string $timezone = 'blog'): string|null;
 }

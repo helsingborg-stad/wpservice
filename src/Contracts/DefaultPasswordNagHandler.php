@@ -11,5 +11,5 @@ interface DefaultPasswordNagHandler
  *
  * @param false $errors Deprecated.
  */
-    public function defaultPasswordNagHandler(false $errors): void;
+    public function defaultPasswordNagHandler(false $errors = false): void;
 }

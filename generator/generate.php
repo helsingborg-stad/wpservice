@@ -27,6 +27,8 @@ use WpService\Generator\Function\{
     FunctionWithSanitizedTypes,
     FunctionWithDecoratorFunctionBody,
     FunctionWithFakeFunctionBody};
+use WpService\Generator\Function\FunctionToString\FunctionToDefinitionString;
+use WpService\Generator\Function\FunctionToString\FunctionToString;
 use WpService\Generator\Function\IsValidFunction\IsPrivateFunction;
 use WpService\Generator\Function\IsValidFunction\IsValidFunction;
 use WpService\Generator\Function\IsValidFunction\FunctionHasDocBlock;
@@ -130,10 +132,15 @@ $allFunctions = array_filter($allFunctions, fn($function) => !str_contains($func
 
 // $allFunctions = array_filter($allFunctions, fn($function) => $function->getOriginalName() === 'add_action');
 
-$libPath             = dirname(__FILE__) . "/../src";
-$contractsPath       = $libPath . "/Contracts";
-$serviceContractPath = $libPath . "/WpService.php";
-$contracts           = array_map(fn($function) => CreateInterfaceFileFromFunction::create($function, 'WpService\Contracts'), $allFunctions);
+$libPath                    = dirname(__FILE__) . "/../src";
+$contractsPath              = $libPath . "/Contracts";
+$serviceContractPath        = $libPath . "/WpService.php";
+$functionToDefinitionString = new FunctionToDefinitionString();
+$contracts                  = array_map(fn($function) => CreateInterfaceFileFromFunction::create(
+    $function->getName(),
+    'WpService\Contracts',
+    $functionToDefinitionString->functionToString($function)
+), $allFunctions);
 
 /**
  * Create a contract file for each function
@@ -156,10 +163,12 @@ echo "Created contract file: {$serviceContractFileName}\n";
 /**
  * Create a service class file
  */
-$functionsWithNativeBody    = array_map(fn($function) => new FunctionWithNativeFunctionBody($function), $allFunctions);
-$nativeServiceClass         = CreateServiceClassFile::create('NativeWpService', 'WpService\Implementations', ['\WpService\WpService'], $functionsWithNativeBody);
-$nativeServiceClassFileName = $nativeServiceClass->getFileName();
-$nativeServiceClassPath     = "{$libPath}/Implementations/{$nativeServiceClassFileName}";
+$functionToString                   = new FunctionToString();
+$functionsWithNativeBody            = array_map(fn($function) => new FunctionWithNativeFunctionBody($function), $allFunctions);
+$functionsWithNativeBodiesAsStrings = array_map(fn($function) => $functionToString->functionToString($function), $functionsWithNativeBody);
+$nativeServiceClass                 = CreateServiceClassFile::create('NativeWpService', 'WpService\Implementations', ['\WpService\WpService'], $functionsWithNativeBodiesAsStrings);
+$nativeServiceClassFileName         = $nativeServiceClass->getFileName();
+$nativeServiceClassPath             = "{$libPath}/Implementations/{$nativeServiceClassFileName}";
 
 file_put_contents($nativeServiceClassPath, $nativeServiceClass->__toString());
 echo "Created service class file: {$nativeServiceClassFileName}\n";
@@ -167,10 +176,11 @@ echo "Created service class file: {$nativeServiceClassFileName}\n";
 /**
  * Create a service decorator class file
  */
-$functionsWithDecoratorBody    = array_map(fn($function) => new FunctionWithDecoratorFunctionBody($function), $allFunctions);
-$decoratorServiceClass         = CreateDecoratorClassFile::create('WpServiceDecorator', 'WpService\Implementations', ['\WpService\WpService'], $functionsWithDecoratorBody);
-$decoratorServiceClassFileName = $decoratorServiceClass->getFileName();
-$decoratorServiceClassPath     = "{$libPath}/Implementations/{$decoratorServiceClassFileName}";
+$functionsWithDecoratorBody            = array_map(fn($function) => new FunctionWithDecoratorFunctionBody($function), $allFunctions);
+$functionsWithDecoratorBodiesAsStrings = array_map(fn($function) => $functionToString->functionToString($function), $functionsWithDecoratorBody);
+$decoratorServiceClass                 = CreateDecoratorClassFile::create('WpServiceDecorator', 'WpService\Implementations', ['\WpService\WpService'], $functionsWithDecoratorBodiesAsStrings);
+$decoratorServiceClassFileName         = $decoratorServiceClass->getFileName();
+$decoratorServiceClassPath             = "{$libPath}/Implementations/{$decoratorServiceClassFileName}";
 
 file_put_contents($decoratorServiceClassPath, $decoratorServiceClass->__toString());
 echo "Created service class file: {$decoratorServiceClassFileName}\n";
@@ -178,7 +188,7 @@ echo "Created service class file: {$decoratorServiceClassFileName}\n";
 /**
  * Create a lazy service decorator class file
  */
-$lazyDecoratorServiceClass         = CreateLazyDecoratorClassFile::create('WpServiceLazyDecorator', 'WpService\Implementations', ['\WpService\WpService'], $functionsWithDecoratorBody);
+$lazyDecoratorServiceClass         = CreateLazyDecoratorClassFile::create('WpServiceLazyDecorator', 'WpService\Implementations', ['\WpService\WpService'], $functionsWithDecoratorBodiesAsStrings);
 $lazyDecoratorServiceClassFileName = $lazyDecoratorServiceClass->getFileName();
 $lazyDecoratorServiceClassPath     = "{$libPath}/Implementations/{$lazyDecoratorServiceClassFileName}";
 
@@ -188,10 +198,11 @@ echo "Created service class file: {$lazyDecoratorServiceClassFileName}\n";
 /**
  * Create a fake service decorator class file
  */
-$functionsWithFakeBody    = array_map(fn($function) => new FunctionWithFakeFunctionBody($function), $allFunctions);
-$fakeServiceClass         = CreateFakeServiceClassFile::create('FakeWpService', 'WpService\Implementations', ['\WpService\WpService'], $functionsWithFakeBody);
-$fakeServiceClassFileName = $fakeServiceClass->getFileName();
-$fakeServiceClassPath     = "{$libPath}/Implementations/{$fakeServiceClassFileName}";
+$functionsWithFakeBody            = array_map(fn($function) => new FunctionWithFakeFunctionBody($function), $allFunctions);
+$functionsWithFakeBodiesAsStrings = array_map(fn($function) => $functionToString->functionToString($function), $functionsWithFakeBody);
+$fakeServiceClass                 = CreateFakeServiceClassFile::create('FakeWpService', 'WpService\Implementations', ['\WpService\WpService'], $functionsWithFakeBodiesAsStrings);
+$fakeServiceClassFileName         = $fakeServiceClass->getFileName();
+$fakeServiceClassPath             = "{$libPath}/Implementations/{$fakeServiceClassFileName}";
 
 file_put_contents($fakeServiceClassPath, $fakeServiceClass->__toString());
 echo "Created service class file: {$fakeServiceClassFileName}\n";

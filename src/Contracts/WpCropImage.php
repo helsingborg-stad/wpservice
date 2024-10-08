@@ -20,5 +20,5 @@ interface WpCropImage
  * @param string|false $dstFile Optional. The destination file to write to.
  * @return string|\WP_Error New filepath on success, WP_Error on failure.
  */
-    public function wpCropImage(string|int $src, int $srcX, int $srcY, int $srcW, int $srcH, int $dstW, int $dstH, bool $srcAbs, string|false $dstFile): string|\WP_Error;
+    public function wpCropImage(string|int $src, int $srcX, int $srcY, int $srcW, int $srcH, int $dstW, int $dstH, bool $srcAbs = false, string|false $dstFile = false): string|\WP_Error;
 }

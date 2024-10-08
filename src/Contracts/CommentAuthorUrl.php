@@ -13,5 +13,5 @@ interface CommentAuthorUrl
  * @param int|\WP_Comment $commentId Optional. WP_Comment or the ID of the comment for which to print the author's URL.
  *                                   Default current comment.
  */
-    public function commentAuthorUrl(int|\WP_Comment $commentId): void;
+    public function commentAuthorUrl(int|\WP_Comment $commentId = 0): void;
 }

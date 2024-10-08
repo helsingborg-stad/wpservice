@@ -14,5 +14,5 @@ interface WpUntrashPostComments
  * @param int|\WP_Post|null $post Optional. Post ID or post object. Defaults to global $post.
  * @return true|void
  */
-    public function wpUntrashPostComments(int|\WP_Post|null $post): true;
+    public function wpUntrashPostComments(int|\WP_Post|null $post = null): true;
 }

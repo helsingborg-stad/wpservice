@@ -20,5 +20,5 @@ interface GetSamplePermalink
  *     @type string $1 The post name.
  * }
  */
-    public function getSamplePermalink(int|\WP_Post $post, string|null $title, string|null $name): array;
+    public function getSamplePermalink(int|\WP_Post $post, string|null $title = null, string|null $name = null): array;
 }

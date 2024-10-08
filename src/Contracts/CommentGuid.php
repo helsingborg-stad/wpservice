@@ -11,5 +11,5 @@ interface CommentGuid
  *
  * @param int|\WP_Comment $commentId Optional comment object or ID. Defaults to global comment object.
  */
-    public function commentGuid(int|\WP_Comment $commentId): void;
+    public function commentGuid(int|\WP_Comment $commentId = null): void;
 }

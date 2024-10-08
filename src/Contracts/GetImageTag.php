@@ -26,5 +26,5 @@ interface GetImageTag
  *                            width and height values in pixels (in that order). Default 'medium'.
  * @return string HTML IMG element for given image attachment.
  */
-    public function getImageTag(int $id, string $alt, string $title, string $align, string|array $size): string;
+    public function getImageTag(int $id, string $alt, string $title, string $align, string|array $size = 'medium'): string;
 }

@@ -13,5 +13,5 @@ interface GetAttachmentFieldsToEdit
  * @param array $errors
  * @return array
  */
-    public function getAttachmentFieldsToEdit(\WP_Post $post, array $errors): array;
+    public function getAttachmentFieldsToEdit(\WP_Post $post, array $errors = null): array;
 }

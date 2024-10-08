@@ -19,5 +19,5 @@ interface IsAttachment
  *                                              to check against. Default empty.
  * @return bool Whether the query is for an existing attachment page.
  */
-    public function isAttachment(int|string|array $attachment): bool;
+    public function isAttachment(int|string|array $attachment = ''): bool;
 }

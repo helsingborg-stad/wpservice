@@ -22,5 +22,5 @@ interface GetTermParentsList
  * }
  * @return string|\WP_Error A list of term parents on success, WP_Error or empty string on failure.
  */
-    public function getTermParentsList(int $termId, string $taxonomy, string|array $args): string|\WP_Error;
+    public function getTermParentsList(int $termId, string $taxonomy, string|array $args = []): string|\WP_Error;
 }

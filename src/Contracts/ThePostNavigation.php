@@ -12,5 +12,5 @@ interface ThePostNavigation
  * @param array $args Optional. See get_the_post_navigation() for available arguments.
  *                    Default empty array.
  */
-    public function thePostNavigation(array $args): void;
+    public function thePostNavigation(array $args = []): void;
 }

@@ -18,5 +18,5 @@ interface WpInteractivityGetContext
  * @param string $storeNamespace Optional. The unique store namespace identifier.
  * @return array The context for the specified store namespace.
  */
-    public function wpInteractivityGetContext(string $storeNamespace): array;
+    public function wpInteractivityGetContext(string $storeNamespace = null): array;
 }

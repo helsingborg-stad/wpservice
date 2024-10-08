@@ -19,5 +19,5 @@ interface NextPostLink
  *                                     Default empty.
  * @param string $taxonomy       Optional. Taxonomy, if `$in_same_term` is true. Default 'category'.
  */
-    public function nextPostLink(string $format, string $link, bool $inSameTerm, array|string $excludedTerms, string $taxonomy): void;
+    public function nextPostLink(string $format = '%link &raquo;', string $link = '%title', bool $inSameTerm = false, array|string $excludedTerms = '', string $taxonomy = 'category'): void;
 }

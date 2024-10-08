@@ -16,5 +16,5 @@ interface EscAttr__
  *                       Default 'default'.
  * @return string Translated text on success, original text on failure.
  */
-    public function escAttr__(string $text, string $domain): string;
+    public function escAttr__(string $text, string $domain = 'default'): string;
 }

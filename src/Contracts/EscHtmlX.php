@@ -18,5 +18,5 @@ interface EscHtmlX
  *                        Default 'default'.
  * @return string Translated text.
  */
-    public function escHtmlX(string $text, string $context, string $domain): string;
+    public function escHtmlX(string $text, string $context, string $domain = 'default'): string;
 }

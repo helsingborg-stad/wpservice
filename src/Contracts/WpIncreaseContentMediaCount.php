@@ -13,5 +13,5 @@ interface WpIncreaseContentMediaCount
  * @param int $amount Optional. Amount to increase by. Default 1.
  * @return int The latest content media count, after the increase.
  */
-    public function wpIncreaseContentMediaCount(int $amount): int;
+    public function wpIncreaseContentMediaCount(int $amount = 1): int;
 }

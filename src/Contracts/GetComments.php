@@ -15,5 +15,5 @@ interface GetComments
  *                           for information on accepted arguments. Default empty string.
  * @return WP_Comment[]|int[]|int List of comments or number of found comments if `$count` argument is true.
  */
-    public function getComments(string|array $args): array|int;
+    public function getComments(string|array $args = ''): array|int;
 }

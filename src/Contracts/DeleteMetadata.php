@@ -27,5 +27,5 @@ interface DeleteMetadata
  *                           matching metadata entries for the specified object_id. Default false.
  * @return bool True on successful delete, false on failure.
  */
-    public function deleteMetadata(string $metaType, int $objectId, string $metaKey, mixed $metaValue, bool $deleteAll): bool;
+    public function deleteMetadata(string $metaType, int $objectId, string $metaKey, mixed $metaValue = '', bool $deleteAll = false): bool;
 }

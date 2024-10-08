@@ -51,5 +51,5 @@ interface GetBloginfo
  * @param string $filter Optional. How to filter what is retrieved. Default 'raw'.
  * @return string Mostly string values, might be empty.
  */
-    public function getBloginfo(string $show, string $filter): string;
+    public function getBloginfo(string $show = '', string $filter = 'raw'): string;
 }

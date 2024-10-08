@@ -16,5 +16,5 @@ interface GetLastcommentmodified
  * @param string $timezone Which timezone to use in reference to 'gmt', 'blog', or 'server' locations.
  * @return string|false Last comment modified date on success, false on failure.
  */
-    public function getLastcommentmodified(string $timezone): string|false;
+    public function getLastcommentmodified(string $timezone = 'server'): string|false;
 }

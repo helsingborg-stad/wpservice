@@ -19,5 +19,5 @@ interface EscUrlRaw
  *                            Defaults to return value of wp_allowed_protocols().
  * @return string The cleaned URL after sanitize_url() is run.
  */
-    public function escUrlRaw(string $url, array $protocols): string;
+    public function escUrlRaw(string $url, array $protocols = null): string;
 }

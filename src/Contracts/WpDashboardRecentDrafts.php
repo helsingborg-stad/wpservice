@@ -11,5 +11,5 @@ interface WpDashboardRecentDrafts
  *
  * @param WP_Post[]|false $drafts Optional. Array of posts to display. Default false.
  */
-    public function wpDashboardRecentDrafts(array|false $drafts): void;
+    public function wpDashboardRecentDrafts(array|false $drafts = false): void;
 }

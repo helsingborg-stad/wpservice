@@ -16,5 +16,5 @@ interface WpAddPostTags
  *                              separated by commas. Default empty.
  * @return array|false|\WP_Error Array of affected term IDs. WP_Error or false on failure.
  */
-    public function wpAddPostTags(int $postId, string|array $tags): array|false|\WP_Error;
+    public function wpAddPostTags(int $postId = 0, string|array $tags = ''): array|false|\WP_Error;
 }

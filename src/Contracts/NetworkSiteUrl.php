@@ -20,5 +20,5 @@ interface NetworkSiteUrl
  *                            'http', 'https', or 'relative'. Default null.
  * @return string Site URL link with optional path appended.
  */
-    public function networkSiteUrl(string $path, string|null $scheme): string;
+    public function networkSiteUrl(string $path = '', string|null $scheme = null): string;
 }

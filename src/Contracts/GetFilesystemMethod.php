@@ -30,5 +30,5 @@ interface GetFilesystemMethod
  *                                             Default false.
  * @return string The transport to use, see description for valid return values.
  */
-    public function getFilesystemMethod(array $args, string $context, bool $allowRelaxedFileOwnership): string;
+    public function getFilesystemMethod(array $args = [], string $context = '', bool $allowRelaxedFileOwnership = false): string;
 }

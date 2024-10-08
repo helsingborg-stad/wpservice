@@ -22,5 +22,5 @@ interface WpEnqueueStoredStyles
  *                          Default to whether the `SCRIPT_DEBUG` constant is defined.
  * }
  */
-    public function wpEnqueueStoredStyles(array $options): void;
+    public function wpEnqueueStoredStyles(array $options = []): void;
 }

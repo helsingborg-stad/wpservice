@@ -18,5 +18,5 @@ interface WpListSort
  * @param bool $preserveKeys Optional. Whether to preserve keys. Default false.
  * @return array The sorted array.
  */
-    public function wpListSort(array $inputList, string|array $orderby, string $order, bool $preserveKeys): array;
+    public function wpListSort(array $inputList, string|array $orderby = [], string $order = 'ASC', bool $preserveKeys = false): array;
 }

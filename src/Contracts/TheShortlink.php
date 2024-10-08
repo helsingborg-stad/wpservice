@@ -18,5 +18,5 @@ interface TheShortlink
  * @param string $before Optional HTML to display before the link. Default empty.
  * @param string $after  Optional HTML to display after the link. Default empty.
  */
-    public function theShortlink(string $text, string $title, string $before, string $after): void;
+    public function theShortlink(string $text = '', string $title = '', string $before = '', string $after = ''): void;
 }

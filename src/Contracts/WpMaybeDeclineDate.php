@@ -19,5 +19,5 @@ interface WpMaybeDeclineDate
  * @param string $format Optional. Date format to check. Default empty string.
  * @return string The date, declined if locale specifies it.
  */
-    public function wpMaybeDeclineDate(string $date, string $format): string;
+    public function wpMaybeDeclineDate(string $date, string $format = ''): string;
 }

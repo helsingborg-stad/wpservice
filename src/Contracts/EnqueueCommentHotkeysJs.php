@@ -9,5 +9,5 @@ interface EnqueueCommentHotkeysJs
  *
  * @since 2.7.0
  */
-    public function enqueueCommentHotkeysJs(): void;
+public function enqueueCommentHotkeysJs(): void;
 }

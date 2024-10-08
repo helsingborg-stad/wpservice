@@ -15,5 +15,5 @@ interface GetOembedEndpointUrl
  * @param string $format    Optional. The requested response format. Default 'json'.
  * @return string The oEmbed endpoint URL.
  */
-    public function getOembedEndpointUrl(string $permalink, string $format): string;
+    public function getOembedEndpointUrl(string $permalink = '', string $format = 'json'): string;
 }

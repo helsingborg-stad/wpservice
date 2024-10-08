@@ -20,5 +20,5 @@ interface GetRegisteredMetadata
  * @return mixed A single value or array of values for a key if specified. An array of all registered keys
  *               and values for an object ID if not. False if a given $meta_key is not registered.
  */
-    public function getRegisteredMetadata(string $objectType, int $objectId, string $metaKey): mixed;
+    public function getRegisteredMetadata(string $objectType, int $objectId, string $metaKey = ''): mixed;
 }

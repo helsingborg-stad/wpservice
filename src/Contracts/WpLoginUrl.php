@@ -14,5 +14,5 @@ interface WpLoginUrl
  *                             Default false.
  * @return string The login URL. Not HTML-encoded.
  */
-    public function wpLoginUrl(string $redirect, bool $forceReauth): string;
+    public function wpLoginUrl(string $redirect = '', bool $forceReauth = false): string;
 }

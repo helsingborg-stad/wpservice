@@ -13,5 +13,5 @@ interface GetAttachedMedia
  * @param int|\WP_Post $post Optional. Post ID or WP_Post object. Default is global $post.
  * @return WP_Post[] Array of media attached to the given post.
  */
-    public function getAttachedMedia(string $type, int|\WP_Post $post): array;
+    public function getAttachedMedia(string $type, int|\WP_Post $post = 0): array;
 }

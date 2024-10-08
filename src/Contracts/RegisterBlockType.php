@@ -22,5 +22,5 @@ interface RegisterBlockType
  *
  * @return \WP_Block_Type|false The registered block type on success, or false on failure.
  */
-    public function registerBlockType(string|\WP_Block_Type $blockType, array $args): \WP_Block_Type|false;
+    public function registerBlockType(string|\WP_Block_Type $blockType, array $args = []): \WP_Block_Type|false;
 }

@@ -34,5 +34,5 @@ interface SafecssFilterAttr
  * @param string $deprecated Not used.
  * @return string Filtered string of CSS rules.
  */
-    public function safecssFilterAttr(string $css, string $deprecated): string;
+public function safecssFilterAttr(string $css, string $deprecated = ''): string;
 }

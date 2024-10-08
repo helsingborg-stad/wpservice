@@ -13,5 +13,5 @@ interface WpPrivacyAnonymizeData
  * @param string $data Optional. The data to be anonymized. Default empty string.
  * @return string The anonymous data for the requested type.
  */
-    public function wpPrivacyAnonymizeData(string $type, string $data): string;
+    public function wpPrivacyAnonymizeData(string $type, string $data = ''): string;
 }

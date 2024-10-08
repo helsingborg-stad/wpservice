@@ -26,5 +26,5 @@ interface TheWidget
  *                                 Default `</h2>`.
  * }
  */
-    public function theWidget(string $widget, array $instance, array $args): void;
+    public function theWidget(string $widget, array $instance = [], array $args = []): void;
 }

@@ -18,5 +18,5 @@ interface WpSuspendCacheInvalidation
  * @param bool $suspend Optional. Whether to suspend or enable cache invalidation. Default true.
  * @return bool The current suspend setting.
  */
-    public function wpSuspendCacheInvalidation(bool $suspend): bool;
+    public function wpSuspendCacheInvalidation(bool $suspend = true): bool;
 }

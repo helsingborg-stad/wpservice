@@ -13,5 +13,5 @@ interface WpDashboardQuickPress
  *
  * @param string|false $errorMsg Optional. Error message. Default false.
  */
-    public function wpDashboardQuickPress(string|false $errorMsg): void;
+    public function wpDashboardQuickPress(string|false $errorMsg = false): void;
 }

@@ -22,5 +22,5 @@ interface LoadThemeTextdomain
  *                             Default false.
  * @return bool True when textdomain is successfully loaded, false otherwise.
  */
-    public function loadThemeTextdomain(string $domain, string|false $path): bool;
+    public function loadThemeTextdomain(string $domain, string|false $path = false): bool;
 }

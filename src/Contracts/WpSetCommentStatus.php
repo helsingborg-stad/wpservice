@@ -19,5 +19,5 @@ interface WpSetCommentStatus
  * @param bool $wpError       Whether to return a WP_Error object if there is a failure. Default false.
  * @return bool|\WP_Error True on success, false or WP_Error on failure.
  */
-    public function wpSetCommentStatus(int|\WP_Comment $commentId, string $commentStatus, bool $wpError): bool|\WP_Error;
+    public function wpSetCommentStatus(int|\WP_Comment $commentId, string $commentStatus, bool $wpError = false): bool|\WP_Error;
 }

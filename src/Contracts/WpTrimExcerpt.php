@@ -20,5 +20,5 @@ interface WpTrimExcerpt
  * @param WP_Post|object|int $post Optional. WP_Post instance or Post ID/object. Default null.
  * @return string The excerpt.
  */
-    public function wpTrimExcerpt(string $text, int|object $post): string;
+    public function wpTrimExcerpt(string $text = '', int|object $post = null): string;
 }

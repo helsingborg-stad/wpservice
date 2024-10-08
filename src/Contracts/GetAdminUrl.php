@@ -16,5 +16,5 @@ interface GetAdminUrl
  *                          force_ssl_admin() and is_ssl().
  * @return string Admin URL link with optional path appended.
  */
-    public function getAdminUrl(int|null $blogId, string $path, string $scheme): string;
+    public function getAdminUrl(int|null $blogId = null, string $path = '', string $scheme = 'admin'): string;
 }

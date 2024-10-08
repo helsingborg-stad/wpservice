@@ -21,5 +21,5 @@ interface ResumePlugin
  * @return true|\WP_Error True on success, false if `$plugin` was not paused,
  *                       `WP_Error` on failure.
  */
-    public function resumePlugin(string $plugin, string $redirect): true|\WP_Error;
+    public function resumePlugin(string $plugin, string $redirect = ''): true|\WP_Error;
 }

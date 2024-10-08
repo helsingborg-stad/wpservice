@@ -11,5 +11,5 @@ interface WpIsJsonpRequest
  *
  * @return bool True if JSONP request, false otherwise.
  */
-    public function wpIsJsonpRequest(): bool;
+public function wpIsJsonpRequest(): bool;
 }

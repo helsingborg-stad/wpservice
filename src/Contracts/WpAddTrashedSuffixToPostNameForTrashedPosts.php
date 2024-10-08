@@ -18,5 +18,5 @@ interface WpAddTrashedSuffixToPostNameForTrashedPosts
  * @param string $postName Post slug.
  * @param int $postId   Optional. Post ID that should be ignored. Default 0.
  */
-    public function wpAddTrashedSuffixToPostNameForTrashedPosts(string $postName, int $postId): void;
+    public function wpAddTrashedSuffixToPostNameForTrashedPosts(string $postName, int $postId = 0): void;
 }

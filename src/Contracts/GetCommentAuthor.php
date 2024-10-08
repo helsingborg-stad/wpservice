@@ -17,5 +17,5 @@ interface GetCommentAuthor
  *                                   Default current comment.
  * @return string The comment author
  */
-    public function getCommentAuthor(int|\WP_Comment $commentId): string;
+    public function getCommentAuthor(int|\WP_Comment $commentId = 0): string;
 }

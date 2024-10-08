@@ -47,5 +47,5 @@ interface GetPages
  *                         specified post type is not hierarchical or the specified status is not
  *                         supported by the post type.
  */
-    public function getPages(array|string $args): array|false;
+    public function getPages(array|string $args = []): array|false;
 }

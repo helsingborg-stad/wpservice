@@ -18,5 +18,5 @@ interface WpmuSignupUser
  * @param string $userEmail The user's email address.
  * @param array $meta       Optional. Signup meta data. Default empty array.
  */
-    public function wpmuSignupUser(string $user, string $userEmail, array $meta): void;
+    public function wpmuSignupUser(string $user, string $userEmail, array $meta = []): void;
 }

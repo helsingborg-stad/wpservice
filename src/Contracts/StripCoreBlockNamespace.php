@@ -14,5 +14,5 @@ interface StripCoreBlockNamespace
  *                                e.g. Classic blocks have their name set to null. Default null.
  * @return string Block name to use for serialization.
  */
-    public function stripCoreBlockNamespace(string|null $blockName): string;
+    public function stripCoreBlockNamespace(string|null $blockName = null): string;
 }

@@ -21,5 +21,5 @@ interface SanitizePostField
  *                        'db', 'display', 'attribute' and 'js'. Default 'display'.
  * @return mixed Sanitized value.
  */
-    public function sanitizePostField(string $field, mixed $value, int $postId, string $context): mixed;
+    public function sanitizePostField(string $field, mixed $value, int $postId, string $context = 'display'): mixed;
 }

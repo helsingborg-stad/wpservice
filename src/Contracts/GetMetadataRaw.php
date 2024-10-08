@@ -22,5 +22,5 @@ interface GetMetadataRaw
  *               or if `$meta_type` is not specified.
  *               Null if the value does not exist.
  */
-    public function getMetadataRaw(string $metaType, int $objectId, string $metaKey, bool $single): mixed;
+    public function getMetadataRaw(string $metaType, int $objectId, string $metaKey = '', bool $single = false): mixed;
 }

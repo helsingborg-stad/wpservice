@@ -11,9 +11,11 @@
   <coverage processUncoveredFiles="true">
     <include>
       <directory suffix=".php">./src</directory>
+      <directory suffix=".php">./generator</directory>
     </include>
     <exclude>
       <directory suffix=".test.php">./src</directory>
+      <directory suffix=".test.php">./generator</directory>
     </exclude>
     <report>
       <text outputFile="php://stdout" showUncoveredFiles="true"/>

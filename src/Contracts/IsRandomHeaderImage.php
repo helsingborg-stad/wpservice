@@ -17,5 +17,5 @@ interface IsRandomHeaderImage
  *                     'default', 'uploaded'. Default 'any'.
  * @return bool
  */
-    public function isRandomHeaderImage(string $type): bool;
+    public function isRandomHeaderImage(string $type = 'any'): bool;
 }

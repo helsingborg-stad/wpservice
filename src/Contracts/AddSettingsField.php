@@ -39,5 +39,5 @@ interface AddSettingsField
  *                             field is output.
  * }
  */
-    public function addSettingsField(string $id, string $title, callable $callback, string $page, string $section, array $args): void;
+    public function addSettingsField(string $id, string $title, callable $callback, string $page, string $section = 'default', array $args = []): void;
 }

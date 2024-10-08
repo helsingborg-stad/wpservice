@@ -23,5 +23,5 @@ interface GetCalendar
  * @param bool $display Optional. Whether to display the calendar output. Default true.
  * @return void|string Void if `$display` argument is true, calendar HTML if `$display` is false.
  */
-    public function getCalendar(bool $initial, bool $display): string;
+    public function getCalendar(bool $initial = true, bool $display = true): string;
 }

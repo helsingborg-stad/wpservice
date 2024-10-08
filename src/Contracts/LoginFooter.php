@@ -14,5 +14,5 @@ interface LoginFooter
  *
  * @param string $inputId Which input to auto-focus.
  */
-    public function loginFooter(string $inputId): void;
+    public function loginFooter(string $inputId = ''): void;
 }

@@ -18,5 +18,5 @@ interface PluginsUrl
  *                       Typically this is done by passing `__FILE__` as the argument.
  * @return string Plugins URL link with optional paths appended.
  */
-    public function pluginsUrl(string $path, string $plugin): string;
+    public function pluginsUrl(string $path = '', string $plugin = ''): string;
 }

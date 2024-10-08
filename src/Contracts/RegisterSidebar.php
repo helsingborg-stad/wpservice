@@ -57,5 +57,5 @@ interface RegisterSidebar
  * }
  * @return string Sidebar ID added to $wp_registered_sidebars global.
  */
-    public function registerSidebar(array|string $args): string;
+    public function registerSidebar(array|string $args = []): string;
 }

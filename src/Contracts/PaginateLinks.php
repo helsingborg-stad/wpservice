@@ -83,5 +83,5 @@ interface PaginateLinks
  * @return string|string[]|void String of page links or array of page links, depending on 'type' argument.
  *                              Void if total number of pages is less than 2.
  */
-    public function paginateLinks(string|array $args): string|array;
+    public function paginateLinks(string|array $args = ''): string|array;
 }

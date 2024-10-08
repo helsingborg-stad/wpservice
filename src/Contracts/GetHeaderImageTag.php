@@ -13,5 +13,5 @@ interface GetHeaderImageTag
  *                              to override the default attributes. Default empty.
  * @return string HTML image element markup or empty string on failure.
  */
-    public function getHeaderImageTag(array $attr): string;
+    public function getHeaderImageTag(array $attr = []): string;
 }

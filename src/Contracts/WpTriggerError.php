@@ -20,5 +20,5 @@ interface WpTriggerError
  * @param int $errorLevel   Optional. The designated error type for this error.
  *                              Only works with E_USER family of constants. Default E_USER_NOTICE.
  */
-    public function wpTriggerError(string $functionName, string $message, int $errorLevel): void;
+    public function wpTriggerError(string $functionName, string $message, int $errorLevel = E_USER_NOTICE): void;
 }

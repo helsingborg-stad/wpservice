@@ -21,5 +21,5 @@ interface UserTrailingslashit
  *                            for use in the filter. Default empty string.
  * @return string The URL with the trailing slash appended or stripped.
  */
-    public function userTrailingslashit(string $url, string $typeOfUrl): string;
+    public function userTrailingslashit(string $url, string $typeOfUrl = ''): string;
 }

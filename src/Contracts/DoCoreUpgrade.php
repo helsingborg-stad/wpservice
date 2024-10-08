@@ -13,5 +13,5 @@ interface DoCoreUpgrade
  *
  * @param bool $reinstall
  */
-    public function doCoreUpgrade(bool $reinstall): void;
+    public function doCoreUpgrade(bool $reinstall = false): void;
 }

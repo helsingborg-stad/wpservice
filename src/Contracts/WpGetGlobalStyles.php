@@ -29,5 +29,5 @@ interface WpGetGlobalStyles
  * }
  * @return mixed The styles array or individual style value to retrieve.
  */
-    public function wpGetGlobalStyles(array $path, array $context): mixed;
+    public function wpGetGlobalStyles(array $path = [], array $context = []): mixed;
 }

@@ -24,5 +24,5 @@ interface WpFindHierarchyLoopTortoiseHare
  * @return mixed Scalar ID of some arbitrary member of the loop, or array of IDs of all members of loop if
  *               $_return_loop
  */
-    public function wpFindHierarchyLoopTortoiseHare(callable $callback, int $start, array $override, array $callbackArgs, bool $returnLoop): mixed;
+    public function wpFindHierarchyLoopTortoiseHare(callable $callback, int $start, array $override = [], array $callbackArgs = [], bool $returnLoop = false): mixed;
 }

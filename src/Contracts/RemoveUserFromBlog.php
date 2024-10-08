@@ -22,5 +22,5 @@ interface RemoveUserFromBlog
  * @param int $reassign Optional. ID of the user to whom to reassign posts. Default 0.
  * @return true|\WP_Error True on success or a WP_Error object if the user doesn't exist.
  */
-    public function removeUserFromBlog(int $userId, int $blogId, int $reassign): true|\WP_Error;
+    public function removeUserFromBlog(int $userId, int $blogId = 0, int $reassign = 0): true|\WP_Error;
 }

@@ -18,5 +18,5 @@ interface EscAttrX
  *                        Default 'default'.
  * @return string Translated text.
  */
-    public function escAttrX(string $text, string $context, string $domain): string;
+    public function escAttrX(string $text, string $context, string $domain = 'default'): string;
 }

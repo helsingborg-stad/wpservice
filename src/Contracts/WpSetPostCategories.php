@@ -19,5 +19,5 @@ interface WpSetPostCategories
  *                                   If false, replace the categories with the new categories.
  * @return array|false|\WP_Error Array of term taxonomy IDs of affected categories. WP_Error or false on failure.
  */
-    public function wpSetPostCategories(int $postId, array|int $postCategories, bool $append): array|false|\WP_Error;
+    public function wpSetPostCategories(int $postId = 0, array|int $postCategories = [], bool $append = false): array|false|\WP_Error;
 }

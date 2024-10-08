@@ -13,5 +13,5 @@ interface ImageAlignInputFields
  * @param string $checked
  * @return string
  */
-    public function imageAlignInputFields(\WP_Post $post, string $checked): string;
+    public function imageAlignInputFields(\WP_Post $post, string $checked = ''): string;
 }

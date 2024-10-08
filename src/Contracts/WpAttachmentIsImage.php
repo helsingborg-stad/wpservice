@@ -18,5 +18,5 @@ interface WpAttachmentIsImage
  * @param int|\WP_Post $post Optional. Attachment ID or object. Default is global $post.
  * @return bool Whether the attachment is an image.
  */
-    public function wpAttachmentIsImage(int|\WP_Post $post): bool;
+    public function wpAttachmentIsImage(int|\WP_Post $post = null): bool;
 }

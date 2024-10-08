@@ -35,5 +35,5 @@ interface WpRegisterScriptModule
  *                                   is set to false, the version number is the currently installed WordPress version.
  *                                   If $version is set to null, no version is added.
  */
-    public function wpRegisterScriptModule(string $id, string $src, array $deps, string|false|null $version): void;
+    public function wpRegisterScriptModule(string $id, string $src, array $deps = [], string|false|null $version = false): void;
 }

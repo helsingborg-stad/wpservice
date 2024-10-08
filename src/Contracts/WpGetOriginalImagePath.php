@@ -19,5 +19,5 @@ interface WpGetOriginalImagePath
  * @param bool $unfiltered Optional. Passed through to `get_attached_file()`. Default false.
  * @return string|false Path to the original image file or false if the attachment is not an image.
  */
-    public function wpGetOriginalImagePath(int $attachmentId, bool $unfiltered): string|false;
+    public function wpGetOriginalImagePath(int $attachmentId, bool $unfiltered = false): string|false;
 }

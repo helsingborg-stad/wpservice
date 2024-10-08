@@ -17,5 +17,5 @@ interface GetAttachmentLink
  * @param bool $leavename Optional. Whether to keep the page name. Default false.
  * @return string The attachment permalink.
  */
-    public function getAttachmentLink(int|\WP_Post $post, bool $leavename): string;
+    public function getAttachmentLink(int|\WP_Post $post = null, bool $leavename = false): string;
 }

@@ -16,5 +16,5 @@ interface WpOembedAddProvider
  * @param string $provider The URL to the oEmbed provider.
  * @param bool $regex    Optional. Whether the `$format` parameter is in a RegEx format. Default false.
  */
-    public function wpOembedAddProvider(string $format, string $provider, bool $regex): void;
+    public function wpOembedAddProvider(string $format, string $provider, bool $regex = false): void;
 }

@@ -9,5 +9,5 @@ interface OptionsGeneralAddJs
  *
  * @since 3.5.0
  */
-    public function optionsGeneralAddJs(): void;
+public function optionsGeneralAddJs(): void;
 }

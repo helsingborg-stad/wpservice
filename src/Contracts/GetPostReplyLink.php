@@ -27,5 +27,5 @@ interface GetPostReplyLink
  *                             Default current post.
  * @return string|false|null Link to show comment form, if successful. False, if comments are closed.
  */
-    public function getPostReplyLink(array $args, int|\WP_Post $post): string|false|null;
+    public function getPostReplyLink(array $args = [], int|\WP_Post $post = null): string|false|null;
 }

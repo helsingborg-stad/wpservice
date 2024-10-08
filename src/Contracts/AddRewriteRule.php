@@ -20,5 +20,5 @@ interface AddRewriteRule
  * @param string $after Optional. Priority of the new rule. Accepts 'top'
  *                            or 'bottom'. Default 'bottom'.
  */
-    public function addRewriteRule(string $regex, string|array $query, string $after): void;
+    public function addRewriteRule(string $regex, string|array $query, string $after = 'bottom'): void;
 }

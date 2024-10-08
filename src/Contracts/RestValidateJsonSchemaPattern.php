@@ -13,5 +13,5 @@ interface RestValidateJsonSchemaPattern
  * @param string $value   The value to check.
  * @return bool           True if the pattern matches the given value, false otherwise.
  */
-    public function restValidateJsonSchemaPattern(string $pattern, string $value): bool;
+public function restValidateJsonSchemaPattern(string $pattern, string $value): bool;
 }

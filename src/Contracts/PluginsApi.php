@@ -97,5 +97,5 @@ interface PluginsApi
  *         {@link https://developer.wordpress.org/reference/functions/plugins_api/ function reference article}
  *         for more information on the make-up of possible return values depending on the value of `$action`.
  */
-    public function pluginsApi(string $action, array|object $args): array|object;
+    public function pluginsApi(string $action, array|object $args = []): array|object;
 }

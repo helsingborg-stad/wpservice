@@ -21,5 +21,5 @@ interface GetCategories
  * }
  * @return array List of category objects.
  */
-    public function getCategories(string|array $args): array;
+    public function getCategories(string|array $args = ''): array;
 }

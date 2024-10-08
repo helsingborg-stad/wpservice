@@ -15,5 +15,5 @@ interface WpGetDbSchema
  * @param int $blogId Optional. The site ID for which to retrieve SQL. Default is the current site ID.
  * @return string The SQL needed to create the requested tables.
  */
-    public function wpGetDbSchema(string $scope, int $blogId): string;
+    public function wpGetDbSchema(string $scope = 'all', int $blogId = null): string;
 }

@@ -26,5 +26,5 @@ interface MakeAfterBlockVisitor
  * @return callable A function that returns the serialized markup for the given block,
  *                  including the markup for any hooked blocks after it.
  */
-    public function makeAfterBlockVisitor(array $hookedBlocks, \WP_Block_Template|\WP_Post|array $context, callable $callback): callable;
+    public function makeAfterBlockVisitor(array $hookedBlocks, \WP_Block_Template|\WP_Post|array $context, callable $callback = null): callable;
 }

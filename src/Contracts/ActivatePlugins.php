@@ -21,5 +21,5 @@ interface ActivatePlugins
  * @param bool $silent       Prevent calling activation hooks. Default false.
  * @return true|\WP_Error True when finished or WP_Error if there were errors during a plugin activation.
  */
-    public function activatePlugins(string|array $plugins, string $redirect, bool $networkWide, bool $silent): true|\WP_Error;
+    public function activatePlugins(string|array $plugins, string $redirect = '', bool $networkWide = false, bool $silent = false): true|\WP_Error;
 }

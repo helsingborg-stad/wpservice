@@ -53,5 +53,5 @@ interface AddRewriteEndpoint
  * @param string|bool $queryVar Name of the corresponding query variable. Pass `false` to skip registering a query_var
  *                               for this endpoint. Defaults to the value of `$name`.
  */
-    public function addRewriteEndpoint(string $name, int $places, string|bool $queryVar): void;
+    public function addRewriteEndpoint(string $name, int $places, string|bool $queryVar = true): void;
 }

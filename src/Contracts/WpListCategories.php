@@ -54,5 +54,5 @@ interface WpListCategories
  * @return void|string|false Void if 'echo' argument is true, HTML list of categories if 'echo' is false.
  *                           False if the taxonomy does not exist.
  */
-    public function wpListCategories(array|string $args): string|false;
+    public function wpListCategories(array|string $args = ''): string|false;
 }

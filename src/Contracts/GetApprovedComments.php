@@ -21,5 +21,5 @@ interface GetApprovedComments
  * @return WP_Comment[]|int[]|int The approved comments, or number of comments if `$count`
  *                                argument is true.
  */
-    public function getApprovedComments(int $postId, array $args): array|int;
+    public function getApprovedComments(int $postId, array $args = []): array|int;
 }

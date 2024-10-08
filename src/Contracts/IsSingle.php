@@ -26,5 +26,5 @@ interface IsSingle
  *                                        to check against. Default empty.
  * @return bool Whether the query is for an existing single post.
  */
-    public function isSingle(int|string|array $post): bool;
+    public function isSingle(int|string|array $post = ''): bool;
 }

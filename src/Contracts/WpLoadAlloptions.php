@@ -16,5 +16,5 @@ interface WpLoadAlloptions
  *                          from the persistent cache. Default false.
  * @return array List of all options.
  */
-    public function wpLoadAlloptions(bool $forceCache): array;
+    public function wpLoadAlloptions(bool $forceCache = false): array;
 }

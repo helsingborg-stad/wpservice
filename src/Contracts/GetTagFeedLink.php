@@ -14,5 +14,5 @@ interface GetTagFeedLink
  *                                 Default is the value of get_default_feed().
  * @return string                  The feed permalink for the given tag.
  */
-    public function getTagFeedLink(int|object $tag, string $feed): string;
+    public function getTagFeedLink(int|object $tag, string $feed = ''): string;
 }

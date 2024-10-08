@@ -26,5 +26,5 @@ interface GetCategory
  * @return object|array|WP_Error|null Category data in type defined by $output parameter.
  *                                    WP_Error if $category is empty, null if it does not exist.
  */
-    public function getCategory(int|object $category, string $output, string $filter): array|null|object;
+    public function getCategory(int|object $category, string $output = OBJECT, string $filter = 'raw'): array|null|object;
 }

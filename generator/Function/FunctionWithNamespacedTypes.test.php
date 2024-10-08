@@ -91,6 +91,11 @@ class FunctionWithNamespacedTypesTest extends TestCase
             {
                 $this->type = $type;
             }
+
+            public function getDefault(): ?string
+            {
+                return null;
+            }
         };
     }
 

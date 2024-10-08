@@ -15,5 +15,5 @@ interface IsEmail
  * @param bool $deprecated Deprecated.
  * @return string|false Valid email address on success, false on failure.
  */
-    public function isEmail(string $email, bool $deprecated): string|false;
+    public function isEmail(string $email, bool $deprecated = false): string|false;
 }

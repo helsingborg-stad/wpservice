@@ -17,5 +17,5 @@ interface SanitizeMeta
  * @param string $objectSubtype Optional. The subtype of the object type. Default empty string.
  * @return mixed Sanitized $meta_value.
  */
-    public function sanitizeMeta(string $metaKey, mixed $metaValue, string $objectType, string $objectSubtype): mixed;
+    public function sanitizeMeta(string $metaKey, mixed $metaValue, string $objectType, string $objectSubtype = ''): mixed;
 }

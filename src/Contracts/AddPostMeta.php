@@ -18,5 +18,5 @@ interface AddPostMeta
  *                           Default false.
  * @return int|false Meta ID on success, false on failure.
  */
-    public function addPostMeta(int $postId, string $metaKey, mixed $metaValue, bool $unique): int|false;
+    public function addPostMeta(int $postId, string $metaKey, mixed $metaValue, bool $unique = false): int|false;
 }

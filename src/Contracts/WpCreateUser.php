@@ -20,5 +20,5 @@ interface WpCreateUser
  * @return int|\WP_Error The newly created user's ID or a WP_Error object if the user could not
  *                      be created.
  */
-    public function wpCreateUser(string $username, string $password, string $email): int|\WP_Error;
+    public function wpCreateUser(string $username, string $password, string $email = ''): int|\WP_Error;
 }

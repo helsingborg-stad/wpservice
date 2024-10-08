@@ -20,5 +20,5 @@ interface SetSiteTransient
  * @param int $expiration Optional. Time until expiration in seconds. Default 0 (no expiration).
  * @return bool True if the value was set, false otherwise.
  */
-    public function setSiteTransient(string $transient, mixed $value, int $expiration): bool;
+    public function setSiteTransient(string $transient, mixed $value, int $expiration = 0): bool;
 }

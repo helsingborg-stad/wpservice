@@ -19,5 +19,5 @@ interface SanitizeUser
  *                         Default false.
  * @return string The sanitized username, after passing through filters.
  */
-    public function sanitizeUser(string $username, bool $strict): string;
+    public function sanitizeUser(string $username, bool $strict = false): string;
 }

@@ -43,5 +43,5 @@ interface GetBookmarks
  * }
  * @return object[] List of bookmark row objects.
  */
-    public function getBookmarks(string|array $args): array;
+    public function getBookmarks(string|array $args = ''): array;
 }

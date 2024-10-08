@@ -22,5 +22,5 @@ interface GetAdjacentPostLink
  * @param string $taxonomy       Optional. Taxonomy, if `$in_same_term` is true. Default 'category'.
  * @return string The link URL of the previous or next post in relation to the current post.
  */
-    public function getAdjacentPostLink(string $format, string $link, bool $inSameTerm, array|string $excludedTerms, bool $previous, string $taxonomy): string;
+    public function getAdjacentPostLink(string $format, string $link, bool $inSameTerm = false, array|string $excludedTerms = '', bool $previous = true, string $taxonomy = 'category'): string;
 }

@@ -14,5 +14,5 @@ interface WpCredits
  * @param string $locale  WordPress locale. Defaults to the current user's locale.
  * @return array|false A list of all of the contributors, or false on error.
  */
-    public function wpCredits(string $version, string $locale): array|false;
+    public function wpCredits(string $version = '', string $locale = ''): array|false;
 }

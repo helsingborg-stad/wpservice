@@ -17,5 +17,5 @@ interface IsSerialized
  * @param bool $strict Optional. Whether to be strict about the end of the string. Default true.
  * @return bool False if not serialized and true if it was.
  */
-    public function isSerialized(string $data, bool $strict): bool;
+    public function isSerialized(string $data, bool $strict = true): bool;
 }

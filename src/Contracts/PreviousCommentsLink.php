@@ -11,5 +11,5 @@ interface PreviousCommentsLink
  *
  * @param string $label Optional. Label for comments link text. Default empty.
  */
-    public function previousCommentsLink(string $label): void;
+    public function previousCommentsLink(string $label = ''): void;
 }

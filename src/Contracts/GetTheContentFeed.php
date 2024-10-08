@@ -14,5 +14,5 @@ interface GetTheContentFeed
  * @param string $feedType The type of feed. rss2 | atom | rss | rdf
  * @return string The filtered content.
  */
-    public function getTheContentFeed(string $feedType): string;
+    public function getTheContentFeed(string $feedType = null): string;
 }

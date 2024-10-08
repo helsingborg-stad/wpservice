@@ -14,5 +14,5 @@ interface WpGetUserContactMethods
  * @param \WP_User|null $user Optional. WP_User object.
  * @return string[] Array of contact method labels keyed by contact method.
  */
-    public function wpGetUserContactMethods(\WP_User|null $user): array;
+    public function wpGetUserContactMethods(\WP_User|null $user = null): array;
 }

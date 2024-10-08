@@ -33,5 +33,5 @@ interface WpRegisterScript
  * }
  * @return bool Whether the script has been registered. True on success, false on failure.
  */
-    public function wpRegisterScript(string $handle, string|false $src, array $deps, string|bool|null $ver, array|bool $args): bool;
+    public function wpRegisterScript(string $handle, string|false $src, array $deps = [], string|bool|null $ver = false, array|bool $args = []): bool;
 }

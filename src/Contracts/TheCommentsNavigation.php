@@ -11,5 +11,5 @@ interface TheCommentsNavigation
  *
  * @param array $args See get_the_comments_navigation() for available arguments. Default empty array.
  */
-    public function theCommentsNavigation(array $args): void;
+    public function theCommentsNavigation(array $args = []): void;
 }

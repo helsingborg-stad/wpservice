@@ -22,5 +22,5 @@ interface FormatForEditor
  *                               It is usually either 'html' or 'tinymce'.
  * @return string The formatted text after filter is applied.
  */
-    public function formatForEditor(string $text, string $defaultEditor): string;
+    public function formatForEditor(string $text, string $defaultEditor = null): string;
 }

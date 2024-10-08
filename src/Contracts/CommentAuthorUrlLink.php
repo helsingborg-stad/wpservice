@@ -19,5 +19,5 @@ interface CommentAuthorUrlLink
  * @param int|\WP_Comment $comment   Optional. Comment ID or WP_Comment object.
  *                                  Default is the current comment.
  */
-    public function commentAuthorUrlLink(string $linkText, string $before, string $after, int|\WP_Comment $comment): void;
+    public function commentAuthorUrlLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment $comment = 0): void;
 }

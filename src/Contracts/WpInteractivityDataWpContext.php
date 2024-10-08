@@ -23,5 +23,5 @@ interface WpInteractivityDataWpContext
  * @return string A complete `data-wp-context` directive with a JSON encoded value representing the context array and
  *                the store namespace if specified.
  */
-    public function wpInteractivityDataWpContext(array $context, string $storeNamespace): string;
+    public function wpInteractivityDataWpContext(array $context, string $storeNamespace = ''): string;
 }

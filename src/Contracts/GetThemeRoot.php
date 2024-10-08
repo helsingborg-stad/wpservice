@@ -17,5 +17,5 @@ interface GetThemeRoot
  *                                       Default is to leverage the main theme root.
  * @return string Themes directory path.
  */
-    public function getThemeRoot(string $stylesheetOrTemplate): string;
+    public function getThemeRoot(string $stylesheetOrTemplate = ''): string;
 }

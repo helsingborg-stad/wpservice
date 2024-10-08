@@ -23,5 +23,5 @@ interface WpInteractivityState
  * @return array The state for the specified store namespace. This will be the updated state if a $state argument was
  *               provided.
  */
-    public function wpInteractivityState(string $storeNamespace, array $state): array;
+    public function wpInteractivityState(string $storeNamespace = null, array $state = []): array;
 }

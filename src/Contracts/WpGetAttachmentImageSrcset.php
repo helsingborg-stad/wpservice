@@ -18,5 +18,5 @@ interface WpGetAttachmentImageSrcset
  *                                    Default null.
  * @return string|false A 'srcset' value string or false.
  */
-    public function wpGetAttachmentImageSrcset(int $attachmentId, string|array $size, array|null $imageMeta): string|false;
+    public function wpGetAttachmentImageSrcset(int $attachmentId, string|array $size = 'medium', array|null $imageMeta = null): string|false;
 }

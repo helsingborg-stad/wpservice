@@ -20,5 +20,5 @@ interface FormatToEdit
  *                          Default false.
  * @return string The text after the filter (and possibly htmlspecialchars()) has been run.
  */
-    public function formatToEdit(string $content, bool $richText): string;
+    public function formatToEdit(string $content, bool $richText = false): string;
 }

@@ -15,5 +15,5 @@ interface GetSite
  * @param \WP_Site|int|null $site Optional. Site to retrieve. Default is the current site.
  * @return \WP_Site|null The site object or null if not found.
  */
-    public function getSite(\WP_Site|int|null $site): \WP_Site|null;
+    public function getSite(\WP_Site|int|null $site = null): \WP_Site|null;
 }

@@ -50,5 +50,5 @@ interface WpGenerateTagCloud
  * }
  * @return string|string[] Tag cloud as a string or an array, depending on 'format' argument.
  */
-    public function wpGenerateTagCloud(array $tags, string|array $args): string|array;
+    public function wpGenerateTagCloud(array $tags, string|array $args = ''): string|array;
 }

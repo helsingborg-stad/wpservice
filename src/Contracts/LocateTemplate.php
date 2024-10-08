@@ -25,5 +25,5 @@ interface LocateTemplate
  *                                     Default empty array.
  * @return string The template filename if one is located.
  */
-    public function locateTemplate(string|array $templateNames, bool $load, bool $loadOnce, array $args): string;
+    public function locateTemplate(string|array $templateNames, bool $load = false, bool $loadOnce = true, array $args = []): string;
 }

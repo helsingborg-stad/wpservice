@@ -20,5 +20,5 @@ interface WpSetScriptTranslations
  * @param string $path   Optional. The full file path to the directory containing translation files.
  * @return bool True if the text domain was successfully localized, false otherwise.
  */
-    public function wpSetScriptTranslations(string $handle, string $domain, string $path): bool;
+    public function wpSetScriptTranslations(string $handle, string $domain = 'default', string $path = ''): bool;
 }

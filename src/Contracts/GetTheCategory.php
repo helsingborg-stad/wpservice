@@ -17,5 +17,5 @@ interface GetTheCategory
  * @param int $postId Optional. The post ID. Defaults to current post ID.
  * @return WP_Term[] Array of WP_Term objects, one for each category assigned to the post.
  */
-    public function getTheCategory(int|false $postId): array;
+    public function getTheCategory(int|false $postId = false): array;
 }

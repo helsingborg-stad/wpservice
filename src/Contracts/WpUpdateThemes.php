@@ -20,5 +20,5 @@ interface WpUpdateThemes
  *
  * @param array $extraStats Extra statistics to report to the WordPress.org API.
  */
-    public function wpUpdateThemes(array $extraStats): void;
+    public function wpUpdateThemes(array $extraStats = []): void;
 }

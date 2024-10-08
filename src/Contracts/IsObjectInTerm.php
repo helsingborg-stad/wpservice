@@ -19,5 +19,5 @@ interface IsObjectInTerm
  *                                             to check against. Default null.
  * @return bool|\WP_Error WP_Error on input error.
  */
-    public function isObjectInTerm(int $objectId, string $taxonomy, int|string|array $terms): bool|\WP_Error;
+    public function isObjectInTerm(int $objectId, string $taxonomy, int|string|array $terms = null): bool|\WP_Error;
 }

@@ -60,5 +60,5 @@ interface GetAvatar
      * }
      * @return string|false `<img>` tag for the user's avatar. False on failure.
      */
-    public function getAvatar(mixed $idOrEmail, int $size, string $defaultValue, string $alt, array $args): string|false;
+    public function getAvatar(mixed $idOrEmail, int $size = 96, string $defaultValue = '', string $alt = '', array $args = null): string|false;
 }

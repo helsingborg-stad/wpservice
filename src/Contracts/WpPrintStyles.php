@@ -18,5 +18,5 @@ interface WpPrintStyles
  * @param string|bool|array $handles Styles to be printed. Default 'false'.
  * @return string[] On success, an array of handles of processed WP_Dependencies items; otherwise, an empty array.
  */
-    public function wpPrintStyles(string|bool|array $handles): array;
+    public function wpPrintStyles(string|bool|array $handles = false): array;
 }

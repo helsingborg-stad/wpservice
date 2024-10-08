@@ -16,5 +16,5 @@ interface DeletePlugins
  * @return bool|null|\WP_Error True on success, false if `$plugins` is empty, `WP_Error` on failure.
  *                            `null` if filesystem credentials are required to proceed.
  */
-    public function deletePlugins(array $plugins, string $deprecated): bool|null|\WP_Error;
+    public function deletePlugins(array $plugins, string $deprecated = ''): bool|null|\WP_Error;
 }

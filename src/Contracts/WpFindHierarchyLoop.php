@@ -17,5 +17,5 @@ interface WpFindHierarchyLoop
  * @param array $callbackArgs Optional. Additional arguments to send to $callback. Default empty array.
  * @return array IDs of all members of loop.
  */
-    public function wpFindHierarchyLoop(callable $callback, int $start, int $startParent, array $callbackArgs): array;
+    public function wpFindHierarchyLoop(callable $callback, int $start, int $startParent, array $callbackArgs = []): array;
 }

@@ -19,5 +19,5 @@ interface SanitizeHtmlClass
  *                          Default empty string.
  * @return string The sanitized value.
  */
-    public function sanitizeHtmlClass(string $classname, string $fallback): string;
+    public function sanitizeHtmlClass(string $classname, string $fallback = ''): string;
 }

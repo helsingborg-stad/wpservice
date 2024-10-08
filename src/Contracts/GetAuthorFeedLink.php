@@ -17,5 +17,5 @@ interface GetAuthorFeedLink
  *                          Default is the value of get_default_feed().
  * @return string Link to the feed for the author specified by $author_id.
  */
-    public function getAuthorFeedLink(int $authorId, string $feed): string;
+    public function getAuthorFeedLink(int $authorId, string $feed = ''): string;
 }

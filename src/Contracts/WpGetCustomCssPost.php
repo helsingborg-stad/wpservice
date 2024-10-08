@@ -12,5 +12,5 @@ interface WpGetCustomCssPost
  * @param string $stylesheet Optional. A theme object stylesheet name. Defaults to the active theme.
  * @return \WP_Post|null The custom_css post or null if none exists.
  */
-    public function wpGetCustomCssPost(string $stylesheet): \WP_Post|null;
+public function wpGetCustomCssPost(string $stylesheet = ''): \WP_Post|null;
 }

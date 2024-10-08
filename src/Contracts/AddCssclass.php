@@ -13,5 +13,5 @@ interface AddCssclass
  * @param string $classes      The string to add the CSS class to.
  * @return string The string with the CSS class added.
  */
-    public function addCssclass(string $classToAdd, string $classes): string;
+public function addCssclass(string $classToAdd, string $classes): string;
 }

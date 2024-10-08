@@ -17,5 +17,5 @@ interface GetPostCustom
  *               False for an invalid `$post_id` (non-numeric, zero, or negative value).
  *               An empty string if a valid but non-existing post ID is passed.
  */
-    public function getPostCustom(int $postId): mixed;
+    public function getPostCustom(int $postId = 0): mixed;
 }

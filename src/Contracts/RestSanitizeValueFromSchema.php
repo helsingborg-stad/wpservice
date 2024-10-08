@@ -17,5 +17,5 @@ interface RestSanitizeValueFromSchema
  * @param string $param The parameter name, used in error messages.
  * @return mixed|WP_Error The sanitized value or a WP_Error instance if the value cannot be safely sanitized.
  */
-    public function restSanitizeValueFromSchema(mixed $value, array $args, string $param): mixed;
+    public function restSanitizeValueFromSchema(mixed $value, array $args, string $param = ''): mixed;
 }

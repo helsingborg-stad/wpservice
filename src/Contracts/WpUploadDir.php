@@ -41,5 +41,5 @@ interface WpUploadDir
  *     @type string|false $error   False or error message.
  * }
  */
-    public function wpUploadDir(string|null $time, bool $createDir, bool $refreshCache): array;
+    public function wpUploadDir(string|null $time = null, bool $createDir = true, bool $refreshCache = false): array;
 }

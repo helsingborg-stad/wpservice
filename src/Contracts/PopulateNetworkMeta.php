@@ -15,5 +15,5 @@ interface PopulateNetworkMeta
  * @param int $networkId Network ID to populate meta for.
  * @param array $meta       Optional. Custom meta $key => $value pairs to use. Default empty array.
  */
-    public function populateNetworkMeta(int $networkId, array $meta): void;
+    public function populateNetworkMeta(int $networkId, array $meta = []): void;
 }

@@ -23,5 +23,5 @@ interface GetAdminPageParent
  *                            of a standard WordPress admin page). Default empty string.
  * @return string The parent file of the current admin page.
  */
-    public function getAdminPageParent(string $parentPage): string;
+    public function getAdminPageParent(string $parentPage = ''): string;
 }

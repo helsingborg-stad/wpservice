@@ -13,5 +13,5 @@ interface MediaUploadTypeUrlForm
  * @param object $errors
  * @param int $id
  */
-    public function mediaUploadTypeUrlForm(string $type, object $errors, int $id): void;
+    public function mediaUploadTypeUrlForm(string $type = null, object $errors = null, int $id = null): void;
 }

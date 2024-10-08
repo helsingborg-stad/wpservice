@@ -16,5 +16,5 @@ interface GetTheModifiedTime
  * @param int|\WP_Post $post   Optional. Post ID or WP_Post object. Default current post.
  * @return string|int|false Formatted date string or Unix timestamp. False on failure.
  */
-    public function getTheModifiedTime(string $format, int|\WP_Post $post): string|int|false;
+    public function getTheModifiedTime(string $format = '', int|\WP_Post $post = null): string|int|false;
 }

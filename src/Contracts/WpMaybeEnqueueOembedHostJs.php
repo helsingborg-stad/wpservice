@@ -15,5 +15,5 @@ interface WpMaybeEnqueueOembedHostJs
  * @param string $html Embed markup.
  * @return string Embed markup (without modifications).
  */
-    public function wpMaybeEnqueueOembedHostJs(string $html): string;
+public function wpMaybeEnqueueOembedHostJs(string $html): string;
 }

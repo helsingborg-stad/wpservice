@@ -33,5 +33,5 @@ interface SettingsErrors
  * @param bool $hideOnUpdate If set to true errors will not be shown if the settings page has
  *                               already been submitted.
  */
-    public function settingsErrors(string $setting, bool $sanitize, bool $hideOnUpdate): void;
+    public function settingsErrors(string $setting = '', bool $sanitize = false, bool $hideOnUpdate = false): void;
 }

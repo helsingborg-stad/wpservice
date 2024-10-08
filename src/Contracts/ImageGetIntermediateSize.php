@@ -39,5 +39,5 @@ interface ImageGetIntermediateSize
  *     @type string $url    URL of image.
  * }
  */
-    public function imageGetIntermediateSize(int $postId, string|array $size): array|false;
+    public function imageGetIntermediateSize(int $postId, string|array $size = 'thumbnail'): array|false;
 }

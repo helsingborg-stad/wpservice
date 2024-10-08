@@ -13,5 +13,5 @@ interface Iso8601ToDatetime
  * @param string $timezone    Optional. If set to 'gmt' returns the result in UTC. Default 'user'.
  * @return string|false The date and time in MySQL DateTime format - Y-m-d H:i:s, or false on failure.
  */
-    public function iso8601ToDatetime(string $dateString, string $timezone): string|false;
+    public function iso8601ToDatetime(string $dateString, string $timezone = 'user'): string|false;
 }

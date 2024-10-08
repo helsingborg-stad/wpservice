@@ -18,5 +18,5 @@ interface SanitizeUrl
  *                            Defaults to return value of wp_allowed_protocols().
  * @return string The cleaned URL after esc_url() is run with the 'db' context.
  */
-    public function sanitizeUrl(string $url, array $protocols): string;
+    public function sanitizeUrl(string $url, array $protocols = null): string;
 }

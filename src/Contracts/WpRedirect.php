@@ -31,5 +31,5 @@ interface WpRedirect
      * @param string|false $xRedirectBy Optional. The application doing the redirect or false to omit. Default 'WordPress'.
      * @return bool False if the redirect was canceled, true otherwise.
      */
-    public function wpRedirect(string $location, int $status, string|false $xRedirectBy): bool;
+    public function wpRedirect(string $location, int $status = 302, string|false $xRedirectBy = 'WordPress'): bool;
 }

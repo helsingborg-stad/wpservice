@@ -17,5 +17,5 @@ interface SingleTagTitle
  * @param bool $display Optional. Whether to display or retrieve title. Default true.
  * @return string|void Title when retrieving.
  */
-    public function singleTagTitle(string $prefix, bool $display): string;
+    public function singleTagTitle(string $prefix = '', bool $display = true): string;
 }

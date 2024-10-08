@@ -17,5 +17,5 @@ interface IframeHeader
  * @param string $title      Optional. Title of the Iframe page. Default empty.
  * @param bool $deprecated Not used.
  */
-    public function iframeHeader(string $title, bool $deprecated): void;
+    public function iframeHeader(string $title = '', bool $deprecated = false): void;
 }

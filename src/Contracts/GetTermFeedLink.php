@@ -18,5 +18,5 @@ interface GetTermFeedLink
  *                                     Default is the value of get_default_feed().
  * @return string|false Link to the feed for the term specified by `$term` and `$taxonomy`.
  */
-    public function getTermFeedLink(int|object $term, string $taxonomy, string $feed): string|false;
+    public function getTermFeedLink(int|object $term, string $taxonomy = '', string $feed = ''): string|false;
 }

@@ -18,5 +18,5 @@ interface PostCommentsFeedLink
  * @param string $feed      Optional. Feed type. Possible values include 'rss2', 'atom'.
  *                          Default is the value of get_default_feed().
  */
-    public function postCommentsFeedLink(string $linkText, int|string $postId, string $feed): void;
+    public function postCommentsFeedLink(string $linkText = '', int|string $postId = '', string $feed = ''): void;
 }

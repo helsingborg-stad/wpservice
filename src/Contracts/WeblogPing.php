@@ -12,5 +12,5 @@ interface WeblogPing
  * @param string $server Host of blog to connect to.
  * @param string $path Path to send the ping.
  */
-    public function weblogPing(string $server, string $path): void;
+    public function weblogPing(string $server = '', string $path = ''): void;
 }

@@ -39,5 +39,5 @@ interface GetArchivesLink
  * @param bool $selected Optional. Set to true if the current page is the selected archive page.
  * @return string HTML link content for archive.
  */
-    public function getArchivesLink(string $url, string $text, string $format, string $before, string $after, bool $selected): string;
+    public function getArchivesLink(string $url, string $text, string $format = 'html', string $before = '', string $after = '', bool $selected = false): string;
 }

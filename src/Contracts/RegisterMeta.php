@@ -55,5 +55,5 @@ interface RegisterMeta
  *              Registering a meta key with distinct sanitize and auth callbacks will fire those callbacks,
  *              but will not add to the global registry.
  */
-    public function registerMeta(string $objectType, string $metaKey, array $args, string|array $deprecated): bool;
+    public function registerMeta(string $objectType, string $metaKey, array $args, string|array $deprecated = null): bool;
 }

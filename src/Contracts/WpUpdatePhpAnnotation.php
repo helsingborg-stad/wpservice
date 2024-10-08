@@ -20,5 +20,5 @@ interface WpUpdatePhpAnnotation
  *
  * @return string|void
  */
-    public function wpUpdatePhpAnnotation(string $before, string $after, bool $display): string;
+    public function wpUpdatePhpAnnotation(string $before = '<p class="description">', string $after = '</p>', bool $display = true): string;
 }

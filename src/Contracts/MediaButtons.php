@@ -13,5 +13,5 @@ interface MediaButtons
  *
  * @param string $editorId
  */
-    public function mediaButtons(string $editorId): void;
+    public function mediaButtons(string $editorId = 'content'): void;
 }

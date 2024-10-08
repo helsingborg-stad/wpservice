@@ -26,5 +26,5 @@ interface WpmuSignupUserNotification
  * @param array $meta       Optional. Signup meta data. Default empty array.
  * @return bool
  */
-    public function wpmuSignupUserNotification(string $userLogin, string $userEmail, string $key, array $meta): bool;
+    public function wpmuSignupUserNotification(string $userLogin, string $userEmail, string $key, array $meta = []): bool;
 }

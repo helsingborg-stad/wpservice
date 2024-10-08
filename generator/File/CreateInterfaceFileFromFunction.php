@@ -6,8 +6,11 @@ use WpService\Generator\Function\FunctionInterface;
 
 class CreateInterfaceFileFromFunction implements InterfaceFileInterface
 {
-    private function __construct(private FunctionInterface $function, private string $namespace)
-    {
+    private function __construct(
+        private string $name,
+        private string $namespace,
+        private string $functionAsString
+    ) {
     }
 
     public function getFileName(): string
@@ -17,7 +20,7 @@ class CreateInterfaceFileFromFunction implements InterfaceFileInterface
 
     public function getName(): string
     {
-        return ucfirst($this->function->getName());
+        return ucfirst($this->name);
     }
 
     /**
@@ -35,27 +38,19 @@ class CreateInterfaceFileFromFunction implements InterfaceFileInterface
 
     public function __toString(): string
     {
-        $contractName = ucfirst($this->function->getName());
-        $returnType   = $this->function->getReturnType();
-        $params       = $this->function->getParameters();
-        $functionName = $this->function->getName();
-        $docBlock     = $this->function->getDocBlock();
+        $contractName = ucfirst($this->getName());
         $namespace    = $this->getNamespace();
 
         $contract  = "<?php\n\nnamespace {$namespace};\n\n";
         $contract .= "interface $contractName\n{\n";
-        $contract .= "    {$docBlock}\n";
-        $contract .= "    public function $functionName(";
-        $contract .= implode(', ', array_map(function ($param) {
-            return $param->getType() . ' $' . $param->getName();
-        }, $params));
-        $contract .= "): $returnType;\n}";
+        $contract .= "    {$this->functionAsString}\n";
+        $contract .= "}\n";
 
         return $contract;
     }
 
-    public static function create(FunctionInterface $function, string $namespace): InterfaceFileInterface
+    public static function create(string $name, string $namespace, string $functionAsString): InterfaceFileInterface
     {
-        return new self($function, $namespace);
+        return new self($name, $namespace, $functionAsString);
     }
 }

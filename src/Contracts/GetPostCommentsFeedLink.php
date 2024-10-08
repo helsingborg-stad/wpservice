@@ -14,5 +14,5 @@ interface GetPostCommentsFeedLink
  *                        Default is the value of get_default_feed().
  * @return string The permalink for the comments feed for the given post on success, empty string on failure.
  */
-    public function getPostCommentsFeedLink(int $postId, string $feed): string;
+    public function getPostCommentsFeedLink(int $postId = 0, string $feed = ''): string;
 }

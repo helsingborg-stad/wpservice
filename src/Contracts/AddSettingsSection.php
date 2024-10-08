@@ -35,5 +35,5 @@ interface AddSettingsSection
  *     @type string $section_class  The class name to use for the section. Default empty.
  * }
  */
-    public function addSettingsSection(string $id, string $title, callable $callback, string $page, array $args): void;
+    public function addSettingsSection(string $id, string $title, callable $callback, string $page, array $args = []): void;
 }

@@ -15,5 +15,5 @@ interface AddAllowedOptions
  * @param string|array $options
  * @return array
  */
-    public function addAllowedOptions(array $newOptions, string|array $options): array;
+    public function addAllowedOptions(array $newOptions, string|array $options = ''): array;
 }

@@ -26,5 +26,5 @@ interface IsSingular
  * @return bool Whether the query is for an existing single post
  *              or any of the given post types.
  */
-    public function isSingular(string|array $postTypes): bool;
+    public function isSingular(string|array $postTypes = ''): bool;
 }

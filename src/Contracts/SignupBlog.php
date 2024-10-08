@@ -15,5 +15,5 @@ interface SignupBlog
  * @param string $blogTitle The site title.
  * @param \WP_Error|string $errors     A WP_Error object containing existing errors. Defaults to empty string.
  */
-    public function signupBlog(string $userName, string $userEmail, string $blogname, string $blogTitle, \WP_Error|string $errors): void;
+    public function signupBlog(string $userName = '', string $userEmail = '', string $blogname = '', string $blogTitle = '', \WP_Error|string $errors = ''): void;
 }

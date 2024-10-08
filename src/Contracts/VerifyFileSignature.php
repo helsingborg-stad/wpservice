@@ -15,5 +15,5 @@ interface VerifyFileSignature
  * @return bool|\WP_Error True on success, false if verification not attempted,
  *                       or WP_Error describing an error condition.
  */
-    public function verifyFileSignature(string $filename, string|array $signatures, string|false $filenameForErrors): bool|\WP_Error;
+    public function verifyFileSignature(string $filename, string|array $signatures, string|false $filenameForErrors = false): bool|\WP_Error;
 }

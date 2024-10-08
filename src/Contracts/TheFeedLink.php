@@ -13,5 +13,5 @@ interface TheFeedLink
  * @param string $feed   Optional. Feed type. Possible values include 'rss2', 'atom'.
  *                       Default is the value of get_default_feed().
  */
-    public function theFeedLink(string $anchor, string $feed): void;
+    public function theFeedLink(string $anchor, string $feed = ''): void;
 }

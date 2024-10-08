@@ -13,5 +13,5 @@ interface WpImageEditorSupports
  *                           Default empty array.
  * @return bool True if an eligible editor is found; false otherwise.
  */
-    public function wpImageEditorSupports(string|array $args): bool;
+    public function wpImageEditorSupports(string|array $args = []): bool;
 }

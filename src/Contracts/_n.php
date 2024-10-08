@@ -24,5 +24,5 @@ interface _n
  *                       Default 'default'.
  * @return string The translated singular or plural form.
  */
-    public function _n(string $single, string $plural, int $number, string $domain): string;
+    public function _n(string $single, string $plural, int $number, string $domain = 'default'): string;
 }

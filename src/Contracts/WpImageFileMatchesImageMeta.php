@@ -19,5 +19,5 @@ interface WpImageFileMatchesImageMeta
  * @param int $attachmentId  Optional. The image attachment ID. Default 0.
  * @return bool Whether the image meta is for this image file.
  */
-    public function wpImageFileMatchesImageMeta(string $imageLocation, array $imageMeta, int $attachmentId): bool;
+    public function wpImageFileMatchesImageMeta(string $imageLocation, array $imageMeta, int $attachmentId = 0): bool;
 }

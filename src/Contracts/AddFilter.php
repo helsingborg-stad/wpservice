@@ -68,5 +68,5 @@ interface AddFilter
  * @param int $acceptedArgs Optional. The number of arguments the function accepts. Default 1.
  * @return true Always returns true.
  */
-    public function addFilter(string $hookName, callable $callback, int $priority, int $acceptedArgs): true;
+    public function addFilter(string $hookName, callable $callback, int $priority = 10, int $acceptedArgs = 1): true;
 }

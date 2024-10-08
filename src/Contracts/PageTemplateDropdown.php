@@ -13,5 +13,5 @@ interface PageTemplateDropdown
  * @param string $defaultTemplate Optional. The template file name. Default empty.
  * @param string $postType        Optional. Post type to get templates for. Default 'page'.
  */
-    public function pageTemplateDropdown(string $defaultTemplate, string $postType): void;
+    public function pageTemplateDropdown(string $defaultTemplate = '', string $postType = 'page'): void;
 }

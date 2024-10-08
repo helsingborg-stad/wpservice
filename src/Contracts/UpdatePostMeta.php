@@ -26,5 +26,5 @@ interface UpdatePostMeta
  *                  false on failure or if the value passed to the function
  *                  is the same as the one that is already in the database.
  */
-    public function updatePostMeta(int $postId, string $metaKey, mixed $metaValue, mixed $prevValue): int|bool;
+    public function updatePostMeta(int $postId, string $metaKey, mixed $metaValue, mixed $prevValue = ''): int|bool;
 }

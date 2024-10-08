@@ -14,5 +14,5 @@ interface GetNetworks
  * @return array|int List of WP_Network objects, a list of network IDs when 'fields' is set to 'ids',
  *                   or the number of networks when 'count' is passed as a query var.
  */
-    public function getNetworks(string|array $args): array|int;
+    public function getNetworks(string|array $args = []): array|int;
 }

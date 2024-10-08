@@ -12,5 +12,5 @@ interface WpGetAttachmentCaption
  * @param int $postId Optional. Attachment ID. Default is the ID of the global `$post`.
  * @return string|false Attachment caption on success, false on failure.
  */
-    public function wpGetAttachmentCaption(int $postId): string|false;
+    public function wpGetAttachmentCaption(int $postId = 0): string|false;
 }

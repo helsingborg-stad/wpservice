@@ -16,5 +16,5 @@ interface GetRawThemeRoot
  *                                       Defaults to false, meaning the cache is used.
  * @return string Theme root.
  */
-    public function getRawThemeRoot(string $stylesheetOrTemplate, bool $skipCache): string;
+    public function getRawThemeRoot(string $stylesheetOrTemplate, bool $skipCache = false): string;
 }

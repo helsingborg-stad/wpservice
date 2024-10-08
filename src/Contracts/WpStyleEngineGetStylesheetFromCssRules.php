@@ -53,5 +53,5 @@ interface WpStyleEngineGetStylesheetFromCssRules
  * }
  * @return string A string of compiled CSS declarations, or empty string.
  */
-    public function wpStyleEngineGetStylesheetFromCssRules(array $cssRules, array $options): string;
+public function wpStyleEngineGetStylesheetFromCssRules(array $cssRules, array $options = []): string;
 }

@@ -13,5 +13,5 @@ interface WpMaybeTransitionSiteStatusesOnUpdate
  * @param \WP_Site|null $oldSite Optional. If $new_site has been updated, this must be the previous
  *                               state of that site. Default null.
  */
-    public function wpMaybeTransitionSiteStatusesOnUpdate(\WP_Site $newSite, \WP_Site|null $oldSite): void;
+    public function wpMaybeTransitionSiteStatusesOnUpdate(\WP_Site $newSite, \WP_Site|null $oldSite = null): void;
 }

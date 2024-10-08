@@ -17,5 +17,5 @@ interface WpCommentReply
  *                          otherwise WP_Comments_List_Table. Default 'single'.
  * @param bool $tableRow Optional. Whether to use a table instead of a div element. Default true.
  */
-    public function wpCommentReply(int $position, bool $checkbox, string $mode, bool $tableRow): void;
+    public function wpCommentReply(int $position = 1, bool $checkbox = false, string $mode = 'single', bool $tableRow = true): void;
 }

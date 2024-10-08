@@ -12,5 +12,5 @@ interface BodyClass
  * @param string|string[] $cssClass Optional. Space-separated string or array of class names
  *                                   to add to the class list. Default empty.
  */
-    public function bodyClass(string|array $cssClass): void;
+    public function bodyClass(string|array $cssClass = ''): void;
 }

@@ -13,5 +13,5 @@ interface MetaForm
  *
  * @param \WP_Post $post Optional. The post being edited.
  */
-    public function metaForm(\WP_Post $post): void;
+    public function metaForm(\WP_Post $post = null): void;
 }

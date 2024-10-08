@@ -13,5 +13,5 @@ interface WpAttachmentIs
  * @param int|\WP_Post $post Optional. Attachment ID or object. Default is global $post.
  * @return bool True if an accepted type or a matching file extension, false otherwise.
  */
-    public function wpAttachmentIs(string $type, int|\WP_Post $post): bool;
+    public function wpAttachmentIs(string $type, int|\WP_Post $post = null): bool;
 }

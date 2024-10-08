@@ -18,5 +18,5 @@ interface WpGetTheme
  * @return \WP_Theme Theme object. Be sure to check the object's exists() method
  *                  if you need to confirm the theme's existence.
  */
-    public function wpGetTheme(string $stylesheet, string $themeRoot): \WP_Theme;
+    public function wpGetTheme(string $stylesheet = '', string $themeRoot = ''): \WP_Theme;
 }

@@ -21,5 +21,5 @@ interface DoActionDeprecated
  * @param string $replacement Optional. The hook that should have been used. Default empty.
  * @param string $message     Optional. A message regarding the change. Default empty.
  */
-    public function doActionDeprecated(string $hookName, array $args, string $version, string $replacement, string $message): void;
+    public function doActionDeprecated(string $hookName, array $args, string $version, string $replacement = '', string $message = ''): void;
 }

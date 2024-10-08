@@ -18,5 +18,5 @@ interface GetBloginfoRss
  * @param string $show See get_bloginfo() for possible values.
  * @return string
  */
-    public function getBloginfoRss(string $show): string;
+    public function getBloginfoRss(string $show = ''): string;
 }

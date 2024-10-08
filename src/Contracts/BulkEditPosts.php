@@ -18,5 +18,5 @@ interface BulkEditPosts
  *                              Defaults to the `$_POST` superglobal.
  * @return array
  */
-    public function bulkEditPosts(array|null $postData): array;
+    public function bulkEditPosts(array|null $postData = null): array;
 }

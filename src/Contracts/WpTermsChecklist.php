@@ -31,5 +31,5 @@ interface WpTermsChecklist
  * }
  * @return string HTML list of input elements.
  */
-    public function wpTermsChecklist(int $postId, array|string $args): string;
+    public function wpTermsChecklist(int $postId = 0, array|string $args = []): string;
 }

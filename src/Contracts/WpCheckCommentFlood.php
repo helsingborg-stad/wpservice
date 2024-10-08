@@ -22,5 +22,5 @@ interface WpCheckCommentFlood
  *                          returning without executing wp_die() or die(). Default false.
  * @return bool Whether comment flooding is occurring.
  */
-    public function wpCheckCommentFlood(bool $isFlood, string $ip, string $email, string $date, bool $avoidDie): bool;
+    public function wpCheckCommentFlood(bool $isFlood, string $ip, string $email, string $date, bool $avoidDie = false): bool;
 }

@@ -17,5 +17,5 @@ interface WpPrepareSiteData
  * @return array|\WP_Error Site data ready for a database transaction, or WP_Error in case a validation
  *                        error occurred.
  */
-    public function wpPrepareSiteData(array $data, array $defaults, \WP_Site|null $oldSite): array|\WP_Error;
+    public function wpPrepareSiteData(array $data, array $defaults, \WP_Site|null $oldSite = null): array|\WP_Error;
 }

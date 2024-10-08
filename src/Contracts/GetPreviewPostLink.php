@@ -18,5 +18,5 @@ interface GetPreviewPostLink
  *                                  post permalink. Default empty.
  * @return string|null URL used for the post preview, or null if the post does not exist.
  */
-    public function getPreviewPostLink(int|\WP_Post $post, array $queryArgs, string $previewLink): string|null;
+    public function getPreviewPostLink(int|\WP_Post $post = null, array $queryArgs = [], string $previewLink = ''): string|null;
 }

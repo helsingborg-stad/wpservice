@@ -13,5 +13,5 @@ interface GetUserSetting
  * @param string|false $defaultValue Optional. Default value to return when $name is not set. Default false.
  * @return mixed The last saved user setting or the default value/false if it doesn't exist.
  */
-    public function getUserSetting(string $name, string|false $defaultValue): mixed;
+    public function getUserSetting(string $name, string|false $defaultValue = false): mixed;
 }

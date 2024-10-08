@@ -9,5 +9,5 @@ interface ExportAddJs
  *
  * @since 3.5.0
  */
-    public function exportAddJs(): void;
+public function exportAddJs(): void;
 }

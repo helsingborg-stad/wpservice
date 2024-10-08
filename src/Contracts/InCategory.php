@@ -28,5 +28,5 @@ interface InCategory
  * @param int|\WP_Post $post     Optional. Post to check. Defaults to the current post.
  * @return bool True if the current post is in any of the given categories.
  */
-    public function inCategory(int|string|array $category, int|\WP_Post $post): bool;
+    public function inCategory(int|string|array $category, int|\WP_Post $post = null): bool;
 }

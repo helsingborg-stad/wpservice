@@ -21,5 +21,5 @@ interface AdjacentPostLink
  *                                     Default true.
  * @param string $taxonomy       Optional. Taxonomy, if `$in_same_term` is true. Default 'category'.
  */
-    public function adjacentPostLink(string $format, string $link, bool $inSameTerm, array|string $excludedTerms, bool $previous, string $taxonomy): void;
+    public function adjacentPostLink(string $format, string $link, bool $inSameTerm = false, array|string $excludedTerms = '', bool $previous = true, string $taxonomy = 'category'): void;
 }

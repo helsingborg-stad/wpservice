@@ -23,5 +23,5 @@ interface WpAdminNotice
  *     @type bool     $paragraph_wrap     Optional. Whether to wrap the message in paragraph tags. Default true.
  * }
  */
-    public function wpAdminNotice(string $message, array $args): void;
+    public function wpAdminNotice(string $message, array $args = []): void;
 }

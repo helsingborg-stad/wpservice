@@ -35,5 +35,5 @@ interface WpInsertLink
  * @param bool $wpError Optional. Whether to return a WP_Error object on failure. Default false.
  * @return int|\WP_Error Value 0 or WP_Error on failure. The link ID on success.
  */
-    public function wpInsertLink(array $linkdata, bool $wpError): int|\WP_Error;
+    public function wpInsertLink(array $linkdata, bool $wpError = false): int|\WP_Error;
 }

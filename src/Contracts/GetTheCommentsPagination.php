@@ -22,5 +22,5 @@ interface GetTheCommentsPagination
  * }
  * @return string Markup for pagination links.
  */
-    public function getTheCommentsPagination(array $args): string;
+    public function getTheCommentsPagination(array $args = []): string;
 }

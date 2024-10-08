@@ -29,5 +29,5 @@ interface ImageDownsize
  *     @type bool   $3 Whether the image is a resized image.
  * }
  */
-    public function imageDownsize(int $id, string|array $size): array|false;
+    public function imageDownsize(int $id, string|array $size = 'medium'): array|false;
 }

@@ -20,5 +20,5 @@ interface LoginHeader
  * @param string $message  Optional. Message to display in header. Default empty.
  * @param \WP_Error|null $wpError Optional. The error to pass. Defaults to a WP_Error instance.
  */
-    public function loginHeader(string|null $title, string $message, \WP_Error|null $wpError): void;
+    public function loginHeader(string|null $title = null, string $message = '', \WP_Error|null $wpError = null): void;
 }

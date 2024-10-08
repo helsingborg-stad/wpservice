@@ -12,13 +12,6 @@ interface ClassFileInterface extends FileInterface
     public function getName(): string;
 
     /**
-     * Get the functions of the file
-     *
-     * @return FunctionInterface[]
-     */
-    public function getFunctions(): array;
-
-    /**
      * Get the implements of the file
      *
      * @return string[]

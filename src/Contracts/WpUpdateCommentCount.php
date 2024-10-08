@@ -25,5 +25,5 @@ interface WpUpdateCommentCount
  * @return bool|void True on success, false on failure or if post with ID does
  *                   not exist.
  */
-    public function wpUpdateCommentCount(int|null $postId, bool $doDeferred): bool;
+    public function wpUpdateCommentCount(int|null $postId, bool $doDeferred = false): bool;
 }

@@ -12,5 +12,5 @@ interface SetCurrentScreen
  * @param string|\WP_Screen $hookName Optional. The hook name (also known as the hook suffix) used to determine the screen,
  *                                    or an existing screen object.
  */
-    public function setCurrentScreen(string|\WP_Screen $hookName): void;
+    public function setCurrentScreen(string|\WP_Screen $hookName = ''): void;
 }

@@ -21,5 +21,5 @@ interface GetAttachedFile
  *                            Default false.
  * @return string|false The file path to where the attached file should be, false otherwise.
  */
-    public function getAttachedFile(int $attachmentId, bool $unfiltered): string|false;
+    public function getAttachedFile(int $attachmentId, bool $unfiltered = false): string|false;
 }

@@ -17,5 +17,5 @@ interface GetPostModifiedTime
  * @return string|int|false Formatted date string or Unix timestamp if `$format` is 'U' or 'G'.
  *                          False on failure.
  */
-    public function getPostModifiedTime(string $format, bool $gmt, int|\WP_Post $post, bool $translate): string|int|false;
+    public function getPostModifiedTime(string $format = 'U', bool $gmt = false, int|\WP_Post $post = null, bool $translate = false): string|int|false;
 }

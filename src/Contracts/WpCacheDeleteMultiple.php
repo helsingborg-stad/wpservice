@@ -17,5 +17,5 @@ interface WpCacheDeleteMultiple
  * @return bool[] Array of return values, grouped by key. Each value is either
  *                true on success, or false if the contents were not deleted.
  */
-    public function wpCacheDeleteMultiple(array $keys, string $group): array;
+    public function wpCacheDeleteMultiple(array $keys, string $group = ''): array;
 }

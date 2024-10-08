@@ -22,5 +22,5 @@ interface GetLastpostdate
  * @param string $postType Optional. The post type to check. Default 'any'.
  * @return string The date of the last post, or false on failure.
  */
-    public function getLastpostdate(string $timezone, string $postType): string;
+    public function getLastpostdate(string $timezone = 'server', string $postType = 'any'): string;
 }

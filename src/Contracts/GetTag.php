@@ -26,5 +26,5 @@ interface GetTag
  * @return \WP_Term|array|\WP_Error|null Tag data in type defined by $output parameter.
  *                                     WP_Error if $tag is empty, null if it does not exist.
  */
-    public function getTag(int|object $tag, string $output, string $filter): \WP_Term|array|\WP_Error|null;
+    public function getTag(int|object $tag, string $output = OBJECT, string $filter = 'raw'): \WP_Term|array|\WP_Error|null;
 }

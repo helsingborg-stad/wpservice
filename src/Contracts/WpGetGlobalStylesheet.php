@@ -18,5 +18,5 @@ interface WpGetGlobalStylesheet
  *                     - for themes with theme.json: 'variables', 'presets', 'styles'.
  * @return string Stylesheet.
  */
-    public function wpGetGlobalStylesheet(array $types): string;
+    public function wpGetGlobalStylesheet(array $types = []): string;
 }

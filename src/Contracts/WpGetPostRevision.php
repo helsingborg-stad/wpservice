@@ -16,5 +16,5 @@ interface WpGetPostRevision
  * @param string $filter Optional sanitization filter. See sanitize_post(). Default 'raw'.
  * @return \WP_Post|array|null WP_Post (or array) on success, or null on failure.
  */
-    public function wpGetPostRevision(int|\WP_Post $post, string $output, string $filter): \WP_Post|array|null;
+    public function wpGetPostRevision(int|\WP_Post $post, string $output = OBJECT, string $filter = 'raw'): \WP_Post|array|null;
 }

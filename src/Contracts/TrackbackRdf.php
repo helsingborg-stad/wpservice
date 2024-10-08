@@ -13,5 +13,5 @@ interface TrackbackRdf
  *
  * @param int|string $deprecated Not used (Was $timezone = 0).
  */
-    public function trackbackRdf(int|string $deprecated): void;
+    public function trackbackRdf(int|string $deprecated = ''): void;
 }

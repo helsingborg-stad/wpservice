@@ -26,5 +26,5 @@ interface WPFilesystem
  * @return bool|null True on success, false on failure,
  *                   null if the filesystem method class file does not exist.
  */
-    public function wPFilesystem(array|false $args, string|false $context, bool $allowRelaxedFileOwnership): bool|null;
+    public function wPFilesystem(array|false $args = false, string|false $context = false, bool $allowRelaxedFileOwnership = false): bool|null;
 }

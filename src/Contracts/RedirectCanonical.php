@@ -34,5 +34,5 @@ interface RedirectCanonical
  * @param bool $doRedirect   Optional. Redirect to the new URL.
  * @return string|void The string of the URL, if redirect needed.
  */
-    public function redirectCanonical(string $requestedUrl, bool $doRedirect): string;
+    public function redirectCanonical(string $requestedUrl = null, bool $doRedirect = true): string;
 }

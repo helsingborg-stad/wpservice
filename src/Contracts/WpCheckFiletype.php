@@ -21,5 +21,5 @@ interface WpCheckFiletype
  *     @type string|false $type File mime type, or false if the file doesn't match a mime type.
  * }
  */
-    public function wpCheckFiletype(string $filename, array|null $mimes): array;
+    public function wpCheckFiletype(string $filename, array|null $mimes = null): array;
 }

@@ -16,5 +16,5 @@ interface MediaHandleUpload
  * @param array $overrides Optional. Override the wp_handle_upload() behavior.
  * @return int|\WP_Error ID of the attachment or a WP_Error object on failure.
  */
-    public function mediaHandleUpload(string $fileId, int $postId, array $postData, array $overrides): int|\WP_Error;
+    public function mediaHandleUpload(string $fileId, int $postId, array $postData = [], array $overrides = []): int|\WP_Error;
 }

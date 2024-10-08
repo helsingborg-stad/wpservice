@@ -13,5 +13,5 @@ interface Bloginfo
  *
  * @param string $show Optional. Site information to display. Default empty.
  */
-    public function bloginfo(string $show): void;
+    public function bloginfo(string $show = ''): void;
 }

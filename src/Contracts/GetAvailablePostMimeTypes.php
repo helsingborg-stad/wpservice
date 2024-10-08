@@ -14,5 +14,5 @@ interface GetAvailablePostMimeTypes
  * @param string $type
  * @return string[] An array of MIME types.
  */
-    public function getAvailablePostMimeTypes(string $type): array;
+    public function getAvailablePostMimeTypes(string $type = 'attachment'): array;
 }

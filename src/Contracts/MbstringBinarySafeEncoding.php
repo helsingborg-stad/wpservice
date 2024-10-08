@@ -27,5 +27,5 @@ interface MbstringBinarySafeEncoding
  * @param bool $reset Optional. Whether to reset the encoding back to a previously-set encoding.
  *                    Default false.
  */
-    public function mbstringBinarySafeEncoding(bool $reset): void;
+    public function mbstringBinarySafeEncoding(bool $reset = false): void;
 }

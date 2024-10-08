@@ -18,5 +18,5 @@ interface WpCacheIncr
  * @param string $group  Optional. The group the key is in. Default empty.
  * @return int|false The item's new value on success, false on failure.
  */
-    public function wpCacheIncr(int|string $key, int $offset, string $group): int|false;
+    public function wpCacheIncr(int|string $key, int $offset = 1, string $group = ''): int|false;
 }

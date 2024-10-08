@@ -11,5 +11,5 @@ interface WpThemeHasThemeJson
  *
  * @return bool Returns true if theme or its parent has a theme.json file, false otherwise.
  */
-    public function wpThemeHasThemeJson(): bool;
+public function wpThemeHasThemeJson(): bool;
 }

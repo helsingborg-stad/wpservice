@@ -11,5 +11,5 @@ interface FindPostsDiv
  *
  * @param string $foundAction Optional. The value of the 'found_action' input field. Default empty string.
  */
-    public function findPostsDiv(string $foundAction): void;
+    public function findPostsDiv(string $foundAction = ''): void;
 }

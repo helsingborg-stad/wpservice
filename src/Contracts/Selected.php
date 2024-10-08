@@ -18,5 +18,5 @@ interface Selected
  *                        Default true.
  * @return string HTML attribute or empty string.
  */
-    public function selected(mixed $selected, mixed $current, bool $display): string;
+    public function selected(mixed $selected, mixed $current = true, bool $display = true): string;
 }

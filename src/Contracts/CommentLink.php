@@ -12,5 +12,5 @@ interface CommentLink
  *
  * @param int|\WP_Comment $comment Optional. Comment object or ID. Defaults to global comment object.
  */
-    public function commentLink(int|\WP_Comment $comment): void;
+    public function commentLink(int|\WP_Comment $comment = null): void;
 }

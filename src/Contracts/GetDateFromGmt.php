@@ -16,5 +16,5 @@ interface GetDateFromGmt
  * @param string $format      The format string for the returned date. Default 'Y-m-d H:i:s'.
  * @return string Formatted version of the date, in the site's timezone.
  */
-    public function getDateFromGmt(string $dateString, string $format): string;
+    public function getDateFromGmt(string $dateString, string $format = 'Y-m-d H:i:s'): string;
 }

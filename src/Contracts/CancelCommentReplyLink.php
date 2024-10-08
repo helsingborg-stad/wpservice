@@ -12,5 +12,5 @@ interface CancelCommentReplyLink
  * @param string $linkText Optional. Text to display for cancel reply link. If empty,
  *                     defaults to 'Click here to cancel reply'. Default empty.
  */
-    public function cancelCommentReplyLink(string $linkText): void;
+    public function cancelCommentReplyLink(string $linkText = ''): void;
 }

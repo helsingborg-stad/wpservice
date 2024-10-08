@@ -23,5 +23,5 @@ interface GetThePostThumbnail
  * @param string|array $attr Optional. Query string or array of attributes. Default empty.
  * @return string The post thumbnail image tag.
  */
-    public function getThePostThumbnail(int|\WP_Post $post, string|array $size, string|array $attr): string;
+    public function getThePostThumbnail(int|\WP_Post $post = null, string|array $size = 'post-thumbnail', string|array $attr = ''): string;
 }

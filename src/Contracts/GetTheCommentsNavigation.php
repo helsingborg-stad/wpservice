@@ -24,5 +24,5 @@ interface GetTheCommentsNavigation
  * }
  * @return string Markup for comments links.
  */
-    public function getTheCommentsNavigation(array $args): string;
+    public function getTheCommentsNavigation(array $args = []): string;
 }

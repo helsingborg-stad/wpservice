@@ -40,5 +40,5 @@ interface WpListAuthors
  * }
  * @return void|string Void if 'echo' argument is true, list of authors if 'echo' is false.
  */
-    public function wpListAuthors(string|array $args): string;
+    public function wpListAuthors(string|array $args = ''): string;
 }

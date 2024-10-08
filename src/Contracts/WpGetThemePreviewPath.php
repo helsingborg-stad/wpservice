@@ -12,5 +12,5 @@ interface WpGetThemePreviewPath
  * @param string $currentStylesheet The current theme's stylesheet or template path.
  * @return string The previewed theme's stylesheet or template path.
  */
-    public function wpGetThemePreviewPath(string $currentStylesheet): string;
+    public function wpGetThemePreviewPath(string $currentStylesheet = null): string;
 }

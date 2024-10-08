@@ -48,5 +48,5 @@ interface WpNavMenu
  * @return void|string|false Void if 'echo' argument is true, menu output if 'echo' is false.
  *                           False if there are no items or no menu was found.
  */
-    public function wpNavMenu(array $args): string|false;
+    public function wpNavMenu(array $args = []): string|false;
 }

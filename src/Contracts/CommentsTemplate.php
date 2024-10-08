@@ -40,5 +40,5 @@ interface CommentsTemplate
  * @param bool $separateComments Optional. Whether to separate the comments by comment type.
  *                                  Default false.
  */
-    public function commentsTemplate(string $file, bool $separateComments): void;
+    public function commentsTemplate(string $file = '/comments.php', bool $separateComments = false): void;
 }

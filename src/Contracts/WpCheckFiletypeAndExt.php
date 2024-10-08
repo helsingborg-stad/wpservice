@@ -29,5 +29,5 @@ interface WpCheckFiletypeAndExt
  *     @type string|false $proper_filename File name with its correct extension, or false if it cannot be determined.
  * }
  */
-    public function wpCheckFiletypeAndExt(string $file, string $filename, array|null $mimes): array;
+    public function wpCheckFiletypeAndExt(string $file, string $filename, array|null $mimes = null): array;
 }

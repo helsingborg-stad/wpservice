@@ -13,5 +13,5 @@ interface WpmuDeleteBlog
  * @param int $blogId Site ID.
  * @param bool $drop    True if site's database tables should be dropped. Default false.
  */
-    public function wpmuDeleteBlog(int $blogId, bool $drop): void;
+    public function wpmuDeleteBlog(int $blogId, bool $drop = false): void;
 }

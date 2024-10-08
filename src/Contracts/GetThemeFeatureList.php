@@ -39,5 +39,5 @@ interface GetThemeFeatureList
  * @param bool $api Optional. Whether try to fetch tags from the WordPress.org API. Defaults to true.
  * @return array Array of features keyed by category with translations keyed by slug.
  */
-    public function getThemeFeatureList(bool $api): array;
+    public function getThemeFeatureList(bool $api = true): array;
 }

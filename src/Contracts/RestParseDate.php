@@ -14,5 +14,5 @@ interface RestParseDate
  *                          the timestamp's timezone. Default false.
  * @return int|false Unix timestamp on success, false on failure.
  */
-    public function restParseDate(string $date, bool $forceUtc): int|false;
+    public function restParseDate(string $date, bool $forceUtc = false): int|false;
 }

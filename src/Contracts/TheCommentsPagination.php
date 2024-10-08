@@ -11,5 +11,5 @@ interface TheCommentsPagination
  *
  * @param array $args See get_the_comments_pagination() for available arguments. Default empty array.
  */
-    public function theCommentsPagination(array $args): void;
+    public function theCommentsPagination(array $args = []): void;
 }

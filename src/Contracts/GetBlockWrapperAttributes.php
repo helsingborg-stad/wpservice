@@ -13,5 +13,5 @@ interface GetBlockWrapperAttributes
  * @param string[] $extraAttributes Optional. Array of extra attributes to render on the block wrapper.
  * @return string String of HTML attributes.
  */
-    public function getBlockWrapperAttributes(array $extraAttributes): string;
+    public function getBlockWrapperAttributes(array $extraAttributes = []): string;
 }

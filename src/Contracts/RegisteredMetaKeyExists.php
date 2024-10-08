@@ -17,5 +17,5 @@ interface RegisteredMetaKeyExists
  * @return bool True if the meta key is registered to the object type and, if provided,
  *              the object subtype. False if not.
  */
-    public function registeredMetaKeyExists(string $objectType, string $metaKey, string $objectSubtype): bool;
+    public function registeredMetaKeyExists(string $objectType, string $metaKey, string $objectSubtype = ''): bool;
 }

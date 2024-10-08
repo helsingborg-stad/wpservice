@@ -14,5 +14,5 @@ interface WpLogoutUrl
  * @param string $redirect Path to redirect to on logout.
  * @return string The logout URL. Note: HTML-encoded via esc_html() in wp_nonce_url().
  */
-    public function wpLogoutUrl(string $redirect): string;
+    public function wpLogoutUrl(string $redirect = ''): string;
 }

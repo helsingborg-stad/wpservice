@@ -11,5 +11,5 @@ interface FeedLinks
  *
  * @param array $args Optional arguments.
  */
-    public function feedLinks(array $args): void;
+    public function feedLinks(array $args = []): void;
 }

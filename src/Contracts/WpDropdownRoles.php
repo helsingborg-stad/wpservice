@@ -11,5 +11,5 @@ interface WpDropdownRoles
  *
  * @param string $selected Slug for the role that should be already selected.
  */
-    public function wpDropdownRoles(string $selected): void;
+    public function wpDropdownRoles(string $selected = ''): void;
 }

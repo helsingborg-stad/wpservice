@@ -16,5 +16,5 @@ interface GetBlockFileTemplate
  *                              Default 'wp_template'.
  * @return \WP_Block_Template|null The found block template, or null if there isn't one.
  */
-    public function getBlockFileTemplate(string $id, string $templateType): \WP_Block_Template|null;
+    public function getBlockFileTemplate(string $id, string $templateType = 'wp_template'): \WP_Block_Template|null;
 }

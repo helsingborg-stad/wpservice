@@ -19,5 +19,5 @@ interface LoadChildThemeTextdomain
  *                             Default false.
  * @return bool True when the theme textdomain is successfully loaded, false otherwise.
  */
-    public function loadChildThemeTextdomain(string $domain, string|false $path): bool;
+    public function loadChildThemeTextdomain(string $domain, string|false $path = false): bool;
 }

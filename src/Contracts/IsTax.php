@@ -30,5 +30,5 @@ interface IsTax
  *              True for custom taxonomy archive pages, false for built-in taxonomies
  *              (category and tag archives).
  */
-    public function isTax(string|array $taxonomy, int|string|array $term): bool;
+    public function isTax(string|array $taxonomy = '', int|string|array $term = ''): bool;
 }

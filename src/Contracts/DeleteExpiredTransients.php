@@ -18,5 +18,5 @@ interface DeleteExpiredTransients
  *
  * @param bool $forceDb Optional. Force cleanup to run against the database even when an external object cache is used.
  */
-    public function deleteExpiredTransients(bool $forceDb): void;
+    public function deleteExpiredTransients(bool $forceDb = false): void;
 }

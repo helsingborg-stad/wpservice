@@ -16,5 +16,5 @@ interface IsMainSite
  * @return bool True if $site_id is the main site of the network, or if not
  *              running Multisite.
  */
-    public function isMainSite(int $siteId, int $networkId): bool;
+    public function isMainSite(int $siteId = null, int $networkId = null): bool;
 }

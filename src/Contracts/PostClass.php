@@ -13,5 +13,5 @@ interface PostClass
  *                                   Default empty.
  * @param int|\WP_Post $post      Optional. Post ID or post object. Defaults to the global `$post`.
  */
-    public function postClass(string|array $cssClass, int|\WP_Post $post): void;
+    public function postClass(string|array $cssClass = '', int|\WP_Post $post = null): void;
 }

@@ -21,5 +21,5 @@ interface GetSiteUrl
  *                             'relative'. Default null.
  * @return string Site URL link with optional path appended.
  */
-    public function getSiteUrl(int|null $blogId, string $path, string|null $scheme): string;
+    public function getSiteUrl(int|null $blogId = null, string $path = '', string|null $scheme = null): string;
 }

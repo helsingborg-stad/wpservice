@@ -20,5 +20,5 @@ interface GetTaxonomies
  *                         Default 'and'.
  * @return string[]|WP_Taxonomy[] An array of taxonomy names or objects.
  */
-    public function getTaxonomies(array $args, string $output, string $operator): array;
+    public function getTaxonomies(array $args = [], string $output = 'names', string $operator = 'and'): array;
 }

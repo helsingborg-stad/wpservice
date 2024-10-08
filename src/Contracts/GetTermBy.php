@@ -42,5 +42,5 @@ interface GetTermBy
  * @return \WP_Term|array|false WP_Term instance (or array) on success, depending on the `$output` value.
  *                             False if `$taxonomy` does not exist or `$term` was not found.
  */
-    public function getTermBy(string $field, string|int $value, string $taxonomy, string $output, string $filter): \WP_Term|array|false;
+    public function getTermBy(string $field, string|int $value, string $taxonomy = '', string $output = OBJECT, string $filter = 'raw'): \WP_Term|array|false;
 }

@@ -13,5 +13,5 @@ interface ImageLinkInputFields
  * @param string $urlType
  * @return string
  */
-    public function imageLinkInputFields(\WP_Post $post, string $urlType): string;
+    public function imageLinkInputFields(\WP_Post $post, string $urlType = ''): string;
 }

@@ -17,5 +17,5 @@ interface LoadDefaultTextdomain
  * @param string $locale Optional. Locale to load. Default is the value of get_locale().
  * @return bool Whether the textdomain was loaded.
  */
-    public function loadDefaultTextdomain(string $locale): bool;
+    public function loadDefaultTextdomain(string $locale = null): bool;
 }

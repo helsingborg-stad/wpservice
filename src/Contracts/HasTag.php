@@ -27,5 +27,5 @@ interface HasTag
  * @return bool True if the current post has any of the given tags
  *              (or any tag, if no tag specified). False otherwise.
  */
-    public function hasTag(string|int|array $tag, int|\WP_Post $post): bool;
+    public function hasTag(string|int|array $tag = '', int|\WP_Post $post = null): bool;
 }

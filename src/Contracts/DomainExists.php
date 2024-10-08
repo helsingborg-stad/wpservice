@@ -21,5 +21,5 @@ interface DomainExists
  *                           Default 1.
  * @return int|null The site ID if the site name exists, null otherwise.
  */
-    public function domainExists(string $domain, string $path, int $networkId): int|null;
+    public function domainExists(string $domain, string $path, int $networkId = 1): int|null;
 }

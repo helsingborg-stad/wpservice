@@ -34,5 +34,5 @@ interface IsUtf8Charset
  *                                  Default value is to infer from "blog_charset" option.
  * @return bool Whether the slug represents the UTF-8 encoding.
  */
-    public function isUtf8Charset(string|null $blogCharset): bool;
+    public function isUtf8Charset(string|null $blogCharset = null): bool;
 }

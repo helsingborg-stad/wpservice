@@ -18,5 +18,5 @@ interface DeactivatePlugins
  *                                      A value of null will deactivate plugins for both the network
  *                                      and the current site. Multisite only. Default null.
  */
-    public function deactivatePlugins(string|array $plugins, bool $silent, bool|null $networkWide): void;
+    public function deactivatePlugins(string|array $plugins, bool $silent = false, bool|null $networkWide = null): void;
 }

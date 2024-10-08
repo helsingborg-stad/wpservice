@@ -18,5 +18,5 @@ interface WpEnqueueBlockSupportStyles
  * @param string $style    String containing the CSS styles to be added.
  * @param int $priority To set the priority for the add_action.
  */
-    public function wpEnqueueBlockSupportStyles(string $style, int $priority): void;
+    public function wpEnqueueBlockSupportStyles(string $style, int $priority = 10): void;
 }

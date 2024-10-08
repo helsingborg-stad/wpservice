@@ -12,5 +12,5 @@ interface InstallSearchForm
  *
  * @param bool $deprecated Not used.
  */
-    public function installSearchForm(bool $deprecated): void;
+    public function installSearchForm(bool $deprecated = true): void;
 }

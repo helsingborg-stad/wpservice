@@ -18,5 +18,5 @@ interface GetNextPostLink
  * @param string $taxonomy       Optional. Taxonomy, if `$in_same_term` is true. Default 'category'.
  * @return string The link URL of the next post in relation to the current post.
  */
-    public function getNextPostLink(string $format, string $link, bool $inSameTerm, array|string $excludedTerms, string $taxonomy): string;
+    public function getNextPostLink(string $format = '%link &raquo;', string $link = '%title', bool $inSameTerm = false, array|string $excludedTerms = '', string $taxonomy = 'category'): string;
 }

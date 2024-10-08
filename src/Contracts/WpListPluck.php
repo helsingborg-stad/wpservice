@@ -22,5 +22,5 @@ interface WpListPluck
  *               corresponding to `$index_key`. If `$index_key` is null, array keys from the original
  *               `$input_list` will be preserved in the results.
  */
-    public function wpListPluck(array $inputList, int|string $field, int|string $indexKey): array;
+    public function wpListPluck(array $inputList, int|string $field, int|string $indexKey = null): array;
 }

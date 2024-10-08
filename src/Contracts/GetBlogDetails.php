@@ -17,5 +17,5 @@ interface GetBlogDetails
  *                                  Default is true.
  * @return \WP_Site|false Blog details on success. False on failure.
  */
-    public function getBlogDetails(int|string|array $fields, bool $getAll): \WP_Site|false;
+    public function getBlogDetails(int|string|array $fields = null, bool $getAll = true): \WP_Site|false;
 }

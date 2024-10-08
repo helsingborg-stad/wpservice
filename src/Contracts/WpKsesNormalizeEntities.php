@@ -21,5 +21,5 @@ interface WpKsesNormalizeEntities
  *                        Default 'html'.
  * @return string Content with normalized entities.
  */
-    public function wpKsesNormalizeEntities(string $content, string $context): string;
+    public function wpKsesNormalizeEntities(string $content, string $context = 'html'): string;
 }

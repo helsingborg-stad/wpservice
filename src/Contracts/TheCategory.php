@@ -15,5 +15,5 @@ interface TheCategory
  *                          Default empty string.
  * @param int $postId   Optional. ID of the post to retrieve categories for. Defaults to the current post.
  */
-    public function theCategory(string $separator, string $parents, int|false $postId): void;
+    public function theCategory(string $separator = '', string $parents = '', int|false $postId = false): void;
 }

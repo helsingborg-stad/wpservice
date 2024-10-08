@@ -13,5 +13,5 @@ interface WpBasename
  * @param string $suffix If the filename ends in suffix this will also be cut off.
  * @return string
  */
-    public function wpBasename(string $path, string $suffix): string;
+    public function wpBasename(string $path, string $suffix = ''): string;
 }

@@ -13,5 +13,5 @@ interface GetTermsToEdit
  * @param string $taxonomy Optional. The taxonomy for which to retrieve terms. Default 'post_tag'.
  * @return string|false|\WP_Error
  */
-    public function getTermsToEdit(int $postId, string $taxonomy): string|false|\WP_Error;
+    public function getTermsToEdit(int $postId, string $taxonomy = 'post_tag'): string|false|\WP_Error;
 }

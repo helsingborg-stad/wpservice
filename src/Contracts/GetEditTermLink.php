@@ -18,5 +18,5 @@ interface GetEditTermLink
  *                                        with the taxonomy.
  * @return string|null The edit term link URL for the given term, or null on failure.
  */
-    public function getEditTermLink(int|object $term, string $taxonomy, string $objectType): string|null;
+    public function getEditTermLink(int|object $term, string $taxonomy = '', string $objectType = ''): string|null;
 }

@@ -14,5 +14,5 @@ interface WpNonceUrl
  * @param string $name      Optional. Nonce name. Default '_wpnonce'.
  * @return string Escaped URL with nonce action added.
  */
-    public function wpNonceUrl(string $actionurl, int|string $action, string $name): string;
+    public function wpNonceUrl(string $actionurl, int|string $action, string $name = '_wpnonce'): string;
 }

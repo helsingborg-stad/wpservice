@@ -13,5 +13,5 @@ interface FormatCodeLang
  * @return string The language corresponding to $code if it exists. If it does not exist,
  *                then the first two letters of $code is returned.
  */
-    public function formatCodeLang(string $code): string;
+    public function formatCodeLang(string $code = ''): string;
 }

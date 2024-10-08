@@ -24,5 +24,5 @@ interface GetMetaSql
  *     @type string $where SQL fragment to append to the main WHERE clause.
  * }
  */
-    public function getMetaSql(array $metaQuery, string $type, string $primaryTable, string $primaryIdColumn, object $context): array|false;
+    public function getMetaSql(array $metaQuery, string $type, string $primaryTable, string $primaryIdColumn, object $context = null): array|false;
 }

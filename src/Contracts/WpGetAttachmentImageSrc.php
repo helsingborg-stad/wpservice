@@ -22,5 +22,5 @@ interface WpGetAttachmentImageSrc
  *     @type bool   $3 Whether the image is a resized image.
  * }
  */
-    public function wpGetAttachmentImageSrc(int $attachmentId, string|array $size, bool $icon): array|false;
+    public function wpGetAttachmentImageSrc(int $attachmentId, string|array $size = 'thumbnail', bool $icon = false): array|false;
 }

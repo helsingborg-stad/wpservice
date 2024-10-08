@@ -15,5 +15,5 @@ interface WpForcePlainPostPermalink
  *                                 with the filter property set to 'sample'.
  * @return bool Whether to use a plain permalink structure.
  */
-    public function wpForcePlainPostPermalink(\WP_Post|int|null $post, bool|null $sample): bool;
+    public function wpForcePlainPostPermalink(\WP_Post|int|null $post = null, bool|null $sample = null): bool;
 }

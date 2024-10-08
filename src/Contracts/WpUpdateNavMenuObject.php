@@ -15,5 +15,5 @@ interface WpUpdateNavMenuObject
  * @param array $menuData The array of menu data.
  * @return int|\WP_Error Menu ID on success, WP_Error object on failure.
  */
-    public function wpUpdateNavMenuObject(int $menuId, array $menuData): int|\WP_Error;
+    public function wpUpdateNavMenuObject(int $menuId = 0, array $menuData = []): int|\WP_Error;
 }

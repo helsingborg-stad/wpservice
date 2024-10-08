@@ -12,5 +12,5 @@ interface ForceSslContent
  * @param bool $force
  * @return bool True if forced, false if not forced.
  */
-    public function forceSslContent(bool|string $force): bool;
+    public function forceSslContent(bool|string $force = ''): bool;
 }

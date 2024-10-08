@@ -22,5 +22,5 @@ interface SanitizeTerm
  *                               'attribute', or 'js'. Default 'display'.
  * @return array|object Term with all fields sanitized.
  */
-    public function sanitizeTerm(array|object $term, string $taxonomy, string $context): array|object;
+    public function sanitizeTerm(array|object $term, string $taxonomy, string $context = 'display'): array|object;
 }

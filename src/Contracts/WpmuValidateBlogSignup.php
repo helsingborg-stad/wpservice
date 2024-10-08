@@ -38,5 +38,5 @@ interface WpmuValidateBlogSignup
  *     @type WP_Error       $errors     WP_Error containing any errors found.
  * }
  */
-    public function wpmuValidateBlogSignup(string $blogname, string $blogTitle, \WP_User|string $user): array;
+    public function wpmuValidateBlogSignup(string $blogname, string $blogTitle, \WP_User|string $user = ''): array;
 }

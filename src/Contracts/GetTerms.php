@@ -56,5 +56,5 @@ interface GetTerms
  *                                                  or WP_Error if any of the taxonomies do not exist.
  *                                                  See the function description for more information.
  */
-    public function getTerms(array|string $args, array|string $deprecated): array|string|\WP_Error;
+    public function getTerms(array|string $args = [], array|string $deprecated = ''): array|string|\WP_Error;
 }

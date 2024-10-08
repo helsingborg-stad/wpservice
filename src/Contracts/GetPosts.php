@@ -35,5 +35,5 @@ interface GetPosts
  * }
  * @return WP_Post[]|int[] Array of post objects or post IDs.
  */
-    public function getPosts(array $args): array;
+    public function getPosts(array $args = null): array;
 }

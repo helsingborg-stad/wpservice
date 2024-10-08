@@ -15,5 +15,5 @@ interface GetThePostThumbnailUrl
  * @return string|false Post thumbnail URL or false if no image is available. If `$size` does not match
  *                      any registered image size, the original image URL will be returned.
  */
-    public function getThePostThumbnailUrl(int|\WP_Post $post, string|array $size): string|false;
+    public function getThePostThumbnailUrl(int|\WP_Post $post = null, string|array $size = 'post-thumbnail'): string|false;
 }

@@ -25,5 +25,5 @@ interface MoveDir
  *                          Default false.
  * @return true|\WP_Error True on success, WP_Error on failure.
  */
-    public function moveDir(string $from, string $to, bool $overwrite): true|\WP_Error;
+    public function moveDir(string $from, string $to, bool $overwrite = false): true|\WP_Error;
 }

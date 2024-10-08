@@ -21,5 +21,5 @@ interface LinksAddTarget
  * @param string[] $tags    An array of tags to apply to.
  * @return string The processed content.
  */
-    public function linksAddTarget(string $content, string $target, array $tags): string;
+    public function linksAddTarget(string $content, string $target = '_blank', array $tags = []): string;
 }

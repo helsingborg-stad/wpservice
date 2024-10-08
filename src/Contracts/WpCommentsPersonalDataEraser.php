@@ -22,5 +22,5 @@ interface WpCommentsPersonalDataEraser
  *     @type bool     $done           Whether the eraser is finished.
  * }
  */
-    public function wpCommentsPersonalDataEraser(string $emailAddress, int $page): array;
+    public function wpCommentsPersonalDataEraser(string $emailAddress, int $page = 1): array;
 }

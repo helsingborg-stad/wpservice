@@ -26,5 +26,5 @@ interface WpCheckPassword
      * @param string|int $userId  Optional. User ID.
      * @return bool False, if the $password does not match the hashed password.
      */
-    public function wpCheckPassword(string $password, string $hash, string|int $userId): bool;
+    public function wpCheckPassword(string $password, string $hash, string|int $userId = ''): bool;
 }

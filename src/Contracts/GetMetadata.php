@@ -32,5 +32,5 @@ interface GetMetadata
  *               or if `$meta_type` is not specified.
  *               An empty string if a valid but non-existing object ID is passed.
  */
-    public function getMetadata(string $metaType, int $objectId, string $metaKey, bool $single): mixed;
+    public function getMetadata(string $metaType, int $objectId, string $metaKey = '', bool $single = false): mixed;
 }

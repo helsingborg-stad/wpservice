@@ -22,5 +22,5 @@ interface WpUniqueFilename
  * @param callable $uniqueFilenameCallback Callback. Default null.
  * @return string New filename, if given wasn't unique.
  */
-    public function wpUniqueFilename(string $dir, string $filename, callable $uniqueFilenameCallback): string;
+    public function wpUniqueFilename(string $dir, string $filename, callable $uniqueFilenameCallback = null): string;
 }

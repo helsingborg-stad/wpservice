@@ -16,5 +16,5 @@ interface AdjacentPostsRelLink
  *                                     Default empty.
  * @param string $taxonomy       Optional. Taxonomy, if `$in_same_term` is true. Default 'category'.
  */
-    public function adjacentPostsRelLink(string $title, bool $inSameTerm, array|string $excludedTerms, string $taxonomy): void;
+    public function adjacentPostsRelLink(string $title = '%title', bool $inSameTerm = false, array|string $excludedTerms = '', string $taxonomy = 'category'): void;
 }

@@ -18,5 +18,5 @@ interface AddCommentMeta
  *                           Default false.
  * @return int|false Meta ID on success, false on failure.
  */
-    public function addCommentMeta(int $commentId, string $metaKey, mixed $metaValue, bool $unique): int|false;
+    public function addCommentMeta(int $commentId, string $metaKey, mixed $metaValue, bool $unique = false): int|false;
 }

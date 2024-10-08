@@ -22,5 +22,5 @@ interface IsAuthor
  *                                          to check against. Default empty.
  * @return bool Whether the query is for an existing author archive page.
  */
-    public function isAuthor(int|string|array $author): bool;
+    public function isAuthor(int|string|array $author = ''): bool;
 }

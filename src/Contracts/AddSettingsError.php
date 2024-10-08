@@ -29,5 +29,5 @@ interface AddSettingsError
  * @param string $type    Optional. Message type, controls HTML class. Possible values include 'error',
  *                        'success', 'warning', 'info'. Default 'error'.
  */
-    public function addSettingsError(string $setting, string $code, string $message, string $type): void;
+    public function addSettingsError(string $setting, string $code, string $message, string $type = 'error'): void;
 }

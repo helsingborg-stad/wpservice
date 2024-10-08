@@ -22,5 +22,5 @@ interface GetPostsNavLink
  * }
  * @return string The posts link navigation.
  */
-    public function getPostsNavLink(string|array $args): string;
+    public function getPostsNavLink(string|array $args = []): string;
 }

@@ -23,5 +23,5 @@ interface WpDeleteAttachment
  *                           Default false.
  * @return \WP_Post|false|null Post data on success, false or null on failure.
  */
-    public function wpDeleteAttachment(int $postId, bool $forceDelete): \WP_Post|false|null;
+    public function wpDeleteAttachment(int $postId, bool $forceDelete = false): \WP_Post|false|null;
 }

@@ -13,5 +13,5 @@ interface WpGetBlockNameFromThemeJsonPath
  * @param array $path An array of keys describing the path to a property in theme.json.
  * @return string Identified block name, or empty string if none found.
  */
-    public function wpGetBlockNameFromThemeJsonPath(array $path): string;
+public function wpGetBlockNameFromThemeJsonPath(array $path): string;
 }

@@ -18,5 +18,5 @@ interface NextPostRelLink
  *                                     Default empty.
  * @param string $taxonomy       Optional. Taxonomy, if `$in_same_term` is true. Default 'category'.
  */
-    public function nextPostRelLink(string $title, bool $inSameTerm, array|string $excludedTerms, string $taxonomy): void;
+    public function nextPostRelLink(string $title = '%title', bool $inSameTerm = false, array|string $excludedTerms = '', string $taxonomy = 'category'): void;
 }

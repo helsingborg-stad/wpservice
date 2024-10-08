@@ -24,5 +24,5 @@ interface AddAction
  * @param int $acceptedArgs   Optional. The number of arguments the function accepts. Default 1.
  * @return true Always returns true.
  */
-    public function addAction(string $hookName, callable $callback, int $priority, int $acceptedArgs): true;
+    public function addAction(string $hookName, callable $callback, int $priority = 10, int $acceptedArgs = 1): true;
 }

@@ -398,5 +398,5 @@ interface RemoveAccents
  *                       Defaults to the current locale.
  * @return string Filtered string with replaced "nice" characters.
  */
-    public function removeAccents(string $text, string $locale): string;
+    public function removeAccents(string $text, string $locale = ''): string;
 }

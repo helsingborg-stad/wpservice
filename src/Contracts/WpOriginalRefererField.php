@@ -18,5 +18,5 @@ interface WpOriginalRefererField
  *                             Default 'current'.
  * @return string Original referer field.
  */
-    public function wpOriginalRefererField(bool $display, string $jumpBackTo): string;
+    public function wpOriginalRefererField(bool $display = true, string $jumpBackTo = 'current'): string;
 }

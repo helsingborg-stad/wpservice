@@ -26,5 +26,5 @@ interface AddEditorStyle
  * @param array|string $stylesheet Optional. Stylesheet name or array thereof, relative to theme root.
  *                                 Defaults to 'editor-style.css'
  */
-    public function addEditorStyle(array|string $stylesheet): void;
+    public function addEditorStyle(array|string $stylesheet = 'editor-style.css'): void;
 }

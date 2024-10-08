@@ -26,5 +26,5 @@ interface ImageResizeDimensions
  * }
  * @return array|false Returned array matches parameters for `imagecopyresampled()`. False on failure.
  */
-    public function imageResizeDimensions(int $origW, int $origH, int $destW, int $destH, bool|array $crop): array|false;
+    public function imageResizeDimensions(int $origW, int $origH, int $destW, int $destH, bool|array $crop = false): array|false;
 }

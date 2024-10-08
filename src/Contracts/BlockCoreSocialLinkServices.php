@@ -14,5 +14,5 @@ interface BlockCoreSocialLinkServices
  *
  * @return array|string
  */
-    public function blockCoreSocialLinkServices(string $service, string $field): array|string;
+    public function blockCoreSocialLinkServices(string $service = '', string $field = ''): array|string;
 }

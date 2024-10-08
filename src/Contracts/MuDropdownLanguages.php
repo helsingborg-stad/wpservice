@@ -12,5 +12,5 @@ interface MuDropdownLanguages
  * @param string[] $langFiles Optional. An array of the language files. Default empty array.
  * @param string $current    Optional. The current language code. Default empty.
  */
-    public function muDropdownLanguages(array $langFiles, string $current): void;
+    public function muDropdownLanguages(array $langFiles = [], string $current = ''): void;
 }

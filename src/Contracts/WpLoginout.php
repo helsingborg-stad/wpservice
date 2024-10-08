@@ -16,5 +16,5 @@ interface WpLoginout
  * @param bool $display  Default to echo and not return the link.
  * @return void|string Void if `$display` argument is true, log in/out link if `$display` is false.
  */
-    public function wpLoginout(string $redirect, bool $display): string;
+    public function wpLoginout(string $redirect = '', bool $display = true): string;
 }

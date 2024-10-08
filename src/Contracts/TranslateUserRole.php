@@ -24,5 +24,5 @@ interface TranslateUserRole
  *                       Default 'default'.
  * @return string Translated role name on success, original name on failure.
  */
-    public function translateUserRole(string $name, string $domain): string;
+    public function translateUserRole(string $name, string $domain = 'default'): string;
 }

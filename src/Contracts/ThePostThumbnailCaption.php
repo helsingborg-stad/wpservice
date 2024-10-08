@@ -11,5 +11,5 @@ interface ThePostThumbnailCaption
  *
  * @param int|\WP_Post $post Optional. Post ID or WP_Post object. Default is global `$post`.
  */
-    public function thePostThumbnailCaption(int|\WP_Post $post): void;
+    public function thePostThumbnailCaption(int|\WP_Post $post = null): void;
 }

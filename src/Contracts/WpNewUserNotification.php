@@ -19,5 +19,5 @@ interface WpNewUserNotification
      * @param string $notify     Optional. Type of notification that should happen. Accepts 'admin' or an empty
      *                           string (admin only), 'user', or 'both' (admin and user). Default empty.
      */
-    public function wpNewUserNotification(int $userId, null $deprecated, string $notify): void;
+    public function wpNewUserNotification(int $userId, null $deprecated = null, string $notify = ''): void;
 }

@@ -23,5 +23,5 @@ interface WpConstrainDimensions
  *     @type int $1 The height in pixels.
  * }
  */
-    public function wpConstrainDimensions(int $currentWidth, int $currentHeight, int $maxWidth, int $maxHeight): array;
+    public function wpConstrainDimensions(int $currentWidth, int $currentHeight, int $maxWidth = 0, int $maxHeight = 0): array;
 }

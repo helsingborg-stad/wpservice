@@ -29,5 +29,5 @@ interface GetCommentLink
  * }
  * @return string The permalink to the given comment.
  */
-    public function getCommentLink(\WP_Comment|int|null $comment, array $args): string;
+    public function getCommentLink(\WP_Comment|int|null $comment = null, array $args = []): string;
 }

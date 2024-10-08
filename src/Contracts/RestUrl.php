@@ -15,5 +15,5 @@ interface RestUrl
  * @param string $scheme Optional. Sanitization scheme. Default 'rest'.
  * @return string Full URL to the endpoint.
  */
-    public function restUrl(string $path, string $scheme): string;
+    public function restUrl(string $path = '', string $scheme = 'rest'): string;
 }

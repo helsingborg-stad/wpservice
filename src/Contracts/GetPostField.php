@@ -24,5 +24,5 @@ interface GetPostField
  *                             or 'display'. Default 'display'.
  * @return string The value of the post field on success, empty string on failure.
  */
-    public function getPostField(string $field, int|\WP_Post $post, string $context): string;
+    public function getPostField(string $field, int|\WP_Post $post = null, string $context = 'display'): string;
 }

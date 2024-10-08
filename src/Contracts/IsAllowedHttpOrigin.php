@@ -12,5 +12,5 @@ interface IsAllowedHttpOrigin
  * @param string|null $origin Origin URL. If not provided, the value of get_http_origin() is used.
  * @return string Origin URL if allowed, empty string if not.
  */
-    public function isAllowedHttpOrigin(string|null $origin): string;
+    public function isAllowedHttpOrigin(string|null $origin = null): string;
 }

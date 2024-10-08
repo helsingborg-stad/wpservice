@@ -19,5 +19,5 @@ interface GetBookmark
  * @param string $filter   Optional. How to sanitize bookmark fields. Default 'raw'.
  * @return array|object|null Type returned depends on $output value.
  */
-    public function getBookmark(int|\stdClass $bookmark, string $output, string $filter): array|object|null;
+    public function getBookmark(int|\stdClass $bookmark, string $output = OBJECT, string $filter = 'raw'): array|object|null;
 }

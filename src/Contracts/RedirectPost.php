@@ -11,5 +11,5 @@ interface RedirectPost
  *
  * @param int $postId Optional. Post ID.
  */
-    public function redirectPost(int|string $postId): void;
+    public function redirectPost(int|string $postId = ''): void;
 }

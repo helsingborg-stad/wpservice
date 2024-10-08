@@ -20,5 +20,5 @@ interface GetBlockTemplates
  * @param string $templateType Template type. Either 'wp_template' or 'wp_template_part'.
  * @return WP_Block_Template[] Array of block templates.
  */
-    public function getBlockTemplates(array $query, string $templateType): array;
+    public function getBlockTemplates(array $query = [], string $templateType = 'wp_template'): array;
 }

@@ -18,5 +18,5 @@ interface WpSetPostTags
  *                              replace the tags with the new tags. Default false.
  * @return array|false|\WP_Error Array of term taxonomy IDs of affected terms. WP_Error or false on failure.
  */
-    public function wpSetPostTags(int $postId, string|array $tags, bool $append): array|false|\WP_Error;
+    public function wpSetPostTags(int $postId = 0, string|array $tags = '', bool $append = false): array|false|\WP_Error;
 }

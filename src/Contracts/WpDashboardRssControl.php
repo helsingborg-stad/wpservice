@@ -14,5 +14,5 @@ interface WpDashboardRssControl
  * @param string $widgetId
  * @param array $formInputs
  */
-    public function wpDashboardRssControl(string $widgetId, array $formInputs): void;
+    public function wpDashboardRssControl(string $widgetId, array $formInputs = []): void;
 }

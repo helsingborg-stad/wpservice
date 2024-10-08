@@ -11,5 +11,5 @@ interface DisplayHeader
  *
  * @param string $bodyClasses
  */
-    public function displayHeader(string $bodyClasses): void;
+    public function displayHeader(string $bodyClasses = ''): void;
 }

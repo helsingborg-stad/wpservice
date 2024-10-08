@@ -13,5 +13,5 @@ interface GetMediaEmbeddedInContent
  * @param string[] $types   An array of media types: 'audio', 'video', 'object', 'embed', or 'iframe'.
  * @return string[] Array of found HTML media elements.
  */
-    public function getMediaEmbeddedInContent(string $content, array $types): array;
+    public function getMediaEmbeddedInContent(string $content, array $types = null): array;
 }

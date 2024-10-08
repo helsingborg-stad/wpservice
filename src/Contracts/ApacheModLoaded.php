@@ -15,5 +15,5 @@ interface ApacheModLoaded
  * @param bool $defaultValue Optional. The default return value if the module is not found. Default false.
  * @return bool Whether the specified module is loaded.
  */
-    public function apacheModLoaded(string $mod, bool $defaultValue): bool;
+    public function apacheModLoaded(string $mod, bool $defaultValue = false): bool;
 }

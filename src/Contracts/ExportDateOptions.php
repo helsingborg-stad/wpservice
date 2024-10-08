@@ -14,5 +14,5 @@ interface ExportDateOptions
  *
  * @param string $postType The post type. Default 'post'.
  */
-    public function exportDateOptions(string $postType): void;
+    public function exportDateOptions(string $postType = 'post'): void;
 }

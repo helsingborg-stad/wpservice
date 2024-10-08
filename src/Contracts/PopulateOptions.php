@@ -16,5 +16,5 @@ interface PopulateOptions
  *
  * @param array $options Optional. Custom option $key => $value pairs to use. Default empty array.
  */
-    public function populateOptions(array $options): void;
+    public function populateOptions(array $options = []): void;
 }

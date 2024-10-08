@@ -25,5 +25,5 @@ interface WpKses
  *                                          Defaults to the result of wp_allowed_protocols().
  * @return string Filtered content containing only the allowed HTML.
  */
-    public function wpKses(string $content, array|string $allowedHtml, array $allowedProtocols): string;
+    public function wpKses(string $content, array|string $allowedHtml, array $allowedProtocols = []): string;
 }

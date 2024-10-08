@@ -14,5 +14,5 @@ interface WpIsLargeUserCount
  * @param int|null $networkId ID of the network. Defaults to the current network.
  * @return bool Whether the site has a large number of users.
  */
-    public function wpIsLargeUserCount(int|null $networkId): bool;
+    public function wpIsLargeUserCount(int|null $networkId = null): bool;
 }

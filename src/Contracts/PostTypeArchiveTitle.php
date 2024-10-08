@@ -16,5 +16,5 @@ interface PostTypeArchiveTitle
  * @param bool $display Optional. Whether to display or retrieve title. Default true.
  * @return string|void Title when retrieving, null when displaying or failure.
  */
-    public function postTypeArchiveTitle(string $prefix, bool $display): string;
+    public function postTypeArchiveTitle(string $prefix = '', bool $display = true): string;
 }

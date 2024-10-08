@@ -24,5 +24,5 @@ interface DoingAction
  *                               which checks if any action is currently being run.
  * @return bool Whether the action is currently in the stack.
  */
-    public function doingAction(string|null $hookName): bool;
+    public function doingAction(string|null $hookName = null): bool;
 }

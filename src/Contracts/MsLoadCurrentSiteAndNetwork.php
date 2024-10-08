@@ -34,5 +34,5 @@ interface MsLoadCurrentSiteAndNetwork
  *                     False if bootstrap could not be properly completed.
  *                     Redirect URL if parts exist, but the request as a whole can not be fulfilled.
  */
-    public function msLoadCurrentSiteAndNetwork(string $domain, string $path, bool $subdomain): bool|string;
+    public function msLoadCurrentSiteAndNetwork(string $domain, string $path, bool $subdomain = false): bool|string;
 }

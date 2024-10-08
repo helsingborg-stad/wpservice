@@ -34,5 +34,5 @@ interface RequestFilesystemCredentials
  *                    false if they are required but have not been provided,
  *                    array of credentials if they are required and have been provided.
  */
-    public function requestFilesystemCredentials(string $formPost, string $type, bool|\WP_Error $error, string $context, array $extraFields, bool $allowRelaxedFileOwnership): bool|array;
+    public function requestFilesystemCredentials(string $formPost, string $type = '', bool|\WP_Error $error = false, string $context = '', array $extraFields = null, bool $allowRelaxedFileOwnership = false): bool|array;
 }

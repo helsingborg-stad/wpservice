@@ -15,5 +15,5 @@ interface Wp
  *
  * @param string|array $queryVars Default WP_Query arguments.
  */
-    public function wp(string|array $queryVars): void;
+    public function wp(string|array $queryVars = ''): void;
 }

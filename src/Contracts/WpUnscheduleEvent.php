@@ -24,5 +24,5 @@ interface WpUnscheduleEvent
  * @param bool $wpError  Optional. Whether to return a WP_Error on failure. Default false.
  * @return bool|\WP_Error True if event successfully unscheduled. False or WP_Error on failure.
  */
-    public function wpUnscheduleEvent(int $timestamp, string $hook, array $args, bool $wpError): bool|\WP_Error;
+    public function wpUnscheduleEvent(int $timestamp, string $hook, array $args = [], bool $wpError = false): bool|\WP_Error;
 }

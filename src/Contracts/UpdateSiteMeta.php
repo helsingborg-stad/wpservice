@@ -24,5 +24,5 @@ interface UpdateSiteMeta
  *                  false on failure or if the value passed to the function
  *                  is the same as the one that is already in the database.
  */
-    public function updateSiteMeta(int $siteId, string $metaKey, mixed $metaValue, mixed $prevValue): int|bool;
+    public function updateSiteMeta(int $siteId, string $metaKey, mixed $metaValue, mixed $prevValue = ''): int|bool;
 }

@@ -15,5 +15,5 @@ interface EditTagLink
  * @param \WP_Term $tag    Optional. Term object. If null, the queried object will be inspected.
  *                        Default null.
  */
-    public function editTagLink(string $link, string $before, string $after, \WP_Term $tag): void;
+    public function editTagLink(string $link = '', string $before = '', string $after = '', \WP_Term $tag = null): void;
 }

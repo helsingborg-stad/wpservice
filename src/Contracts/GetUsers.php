@@ -15,5 +15,5 @@ interface GetUsers
  *                    for more information on accepted arguments.
  * @return array List of users.
  */
-    public function getUsers(array $args): array;
+    public function getUsers(array $args = []): array;
 }

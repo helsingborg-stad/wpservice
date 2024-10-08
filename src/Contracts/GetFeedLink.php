@@ -15,5 +15,5 @@ interface GetFeedLink
  *                     Default is the value of get_default_feed().
  * @return string The feed permalink.
  */
-    public function getFeedLink(string $feed): string;
+    public function getFeedLink(string $feed = ''): string;
 }

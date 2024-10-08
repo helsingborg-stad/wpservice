@@ -20,5 +20,5 @@ interface WpPopularTermsChecklist
  * @param bool $display      Optional. Whether to display the list as well. Default true.
  * @return int[] Array of popular term IDs.
  */
-    public function wpPopularTermsChecklist(string $taxonomy, int $defaultTerm, int $number, bool $display): array;
+    public function wpPopularTermsChecklist(string $taxonomy, int $defaultTerm = 0, int $number = 10, bool $display = true): array;
 }

@@ -18,5 +18,5 @@ interface WpResolvePostDate
  * @param string $postDateGmt The GMT date in mysql format (`Y-m-d H:i:s`).
  * @return string|false A valid Gregorian-calendar date string, or false on failure.
  */
-    public function wpResolvePostDate(string $postDate, string $postDateGmt): string|false;
+    public function wpResolvePostDate(string $postDate = '', string $postDateGmt = ''): string|false;
 }

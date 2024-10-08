@@ -13,5 +13,5 @@ interface WpLoadCoreSiteOptions
  *
  * @param int $networkId Optional. Network ID of network for which to prime network options cache. Defaults to current network.
  */
-    public function wpLoadCoreSiteOptions(int $networkId): void;
+    public function wpLoadCoreSiteOptions(int $networkId = null): void;
 }

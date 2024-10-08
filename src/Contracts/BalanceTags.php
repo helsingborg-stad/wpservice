@@ -13,5 +13,5 @@ interface BalanceTags
  * @param bool $force If true, forces balancing, ignoring the value of the option. Default false.
  * @return string Balanced text
  */
-    public function balanceTags(string $text, bool $force): string;
+    public function balanceTags(string $text, bool $force = false): string;
 }

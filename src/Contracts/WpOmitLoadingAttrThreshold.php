@@ -16,5 +16,5 @@ interface WpOmitLoadingAttrThreshold
  *                    Default false.
  * @return int The number of content media elements to not lazy-load.
  */
-    public function wpOmitLoadingAttrThreshold(bool $force): int;
+    public function wpOmitLoadingAttrThreshold(bool $force = false): int;
 }

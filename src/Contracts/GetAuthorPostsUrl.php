@@ -15,5 +15,5 @@ interface GetAuthorPostsUrl
  * @param string $authorNicename Optional. The author's nicename (slug). Default empty.
  * @return string The URL to the author's page.
  */
-    public function getAuthorPostsUrl(int $authorId, string $authorNicename): string;
+    public function getAuthorPostsUrl(int $authorId, string $authorNicename = ''): string;
 }

@@ -16,5 +16,5 @@ interface GetPostThumbnailId
  * @return int|false Post thumbnail ID (which can be 0 if the thumbnail is not set),
  *                   or false if the post does not exist.
  */
-    public function getPostThumbnailId(int|\WP_Post $post): int|false;
+    public function getPostThumbnailId(int|\WP_Post $post = null): int|false;
 }

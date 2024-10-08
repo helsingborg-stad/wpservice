@@ -12,5 +12,5 @@ interface GetCliArgs
  * @param bool $required
  * @return mixed
  */
-    public function getCliArgs(string $param, bool $required): mixed;
+    public function getCliArgs(string $param, bool $required = false): mixed;
 }

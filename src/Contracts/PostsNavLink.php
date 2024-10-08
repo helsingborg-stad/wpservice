@@ -13,5 +13,5 @@ interface PostsNavLink
  * @param string $prelabel Optional. Label for previous pages. Default empty.
  * @param string $nxtlabel Optional Label for next pages. Default empty.
  */
-    public function postsNavLink(string $sep, string $prelabel, string $nxtlabel): void;
+    public function postsNavLink(string $sep = '', string $prelabel = '', string $nxtlabel = ''): void;
 }

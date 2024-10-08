@@ -22,5 +22,5 @@ interface HasAction
  *                  anything registered. When checking a specific function, the priority
  *                  of that hook is returned, or false if the function is not attached.
  */
-    public function hasAction(string $hookName, callable|string|array|false $callback): bool|int;
+    public function hasAction(string $hookName, callable|string|array|false $callback = false): bool|int;
 }

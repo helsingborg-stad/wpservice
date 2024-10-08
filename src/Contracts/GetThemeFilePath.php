@@ -15,5 +15,5 @@ interface GetThemeFilePath
  * @param string $file Optional. File to search for in the stylesheet directory.
  * @return string The path of the file.
  */
-    public function getThemeFilePath(string $file): string;
+    public function getThemeFilePath(string $file = ''): string;
 }

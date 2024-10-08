@@ -21,5 +21,5 @@ interface GetBlogOption
  * @param mixed $defaultValue Optional. Default value to return if the option does not exist.
  * @return mixed Value set for the option.
  */
-    public function getBlogOption(int $id, string $option, mixed $defaultValue): mixed;
+    public function getBlogOption(int $id, string $option, mixed $defaultValue = false): mixed;
 }

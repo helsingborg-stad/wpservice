@@ -20,5 +20,5 @@ interface WpSetAuthCookie
      *                              string which means the value of `is_ssl()` will be used.
      * @param string $token    Optional. User's session token to use for this cookie.
      */
-    public function wpSetAuthCookie(int $userId, bool $remember, bool|string $secure, string $token): void;
+    public function wpSetAuthCookie(int $userId, bool $remember = false, bool|string $secure = '', string $token = ''): void;
 }

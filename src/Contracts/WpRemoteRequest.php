@@ -35,5 +35,5 @@ interface WpRemoteRequest
  *     @type WP_HTTP_Requests_Response|null $http_response Raw HTTP response object.
  * }
  */
-    public function wpRemoteRequest(string $url, array $args): array|\WP_Error;
+    public function wpRemoteRequest(string $url, array $args = []): array|\WP_Error;
 }

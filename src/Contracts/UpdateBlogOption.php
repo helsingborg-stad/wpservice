@@ -15,5 +15,5 @@ interface UpdateBlogOption
  * @param mixed $deprecated Not used.
  * @return bool True if the value was updated, false otherwise.
  */
-    public function updateBlogOption(int $id, string $option, mixed $value, mixed $deprecated): bool;
+    public function updateBlogOption(int $id, string $option, mixed $value, mixed $deprecated = null): bool;
 }

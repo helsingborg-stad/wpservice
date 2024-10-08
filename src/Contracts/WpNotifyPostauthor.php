@@ -13,5 +13,5 @@ interface WpNotifyPostauthor
      * @param string $deprecated Not used.
      * @return bool True on completion. False if no email addresses were specified.
      */
-    public function wpNotifyPostauthor(int|\WP_Comment $commentId, string $deprecated): bool;
+    public function wpNotifyPostauthor(int|\WP_Comment $commentId, string $deprecated = null): bool;
 }

@@ -25,5 +25,5 @@ interface SizeFormat
  * @param int $decimals Optional. Precision of number of decimal places. Default 0.
  * @return string|false Number string on success, false on failure.
  */
-    public function sizeFormat(int|string $bytes, int $decimals): string|false;
+    public function sizeFormat(int|string $bytes, int $decimals = 0): string|false;
 }

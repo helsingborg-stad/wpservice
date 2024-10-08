@@ -14,5 +14,5 @@ interface GetSearchLink
  * @param string $query Optional. The query string to use. If empty the current query is used. Default empty.
  * @return string The search permalink.
  */
-    public function getSearchLink(string $query): string;
+    public function getSearchLink(string $query = ''): string;
 }

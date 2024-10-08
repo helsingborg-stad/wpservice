@@ -31,5 +31,5 @@ interface ApplyFiltersDeprecated
  * @param string $message     Optional. A message regarding the change. Default empty.
  * @return mixed The filtered value after all hooked functions are applied to it.
  */
-    public function applyFiltersDeprecated(string $hookName, array $args, string $version, string $replacement, string $message): mixed;
+    public function applyFiltersDeprecated(string $hookName, array $args, string $version, string $replacement = '', string $message = ''): mixed;
 }

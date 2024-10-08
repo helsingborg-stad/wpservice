@@ -17,5 +17,5 @@ interface WpIsLargeNetwork
  * @param int|null $networkId ID of the network. Default is the current network.
  * @return bool True if the network meets the criteria for large. False otherwise.
  */
-    public function wpIsLargeNetwork(string $using, int|null $networkId): bool;
+    public function wpIsLargeNetwork(string $using = 'sites', int|null $networkId = null): bool;
 }

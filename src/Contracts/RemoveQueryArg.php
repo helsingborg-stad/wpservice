@@ -17,5 +17,5 @@ interface RemoveQueryArg
  * @param false|string $query Optional. When false uses the current URL. Default false.
  * @return string New URL query string.
  */
-    public function removeQueryArg(string|array $key, false|string $query): string;
+    public function removeQueryArg(string|array $key, false|string $query = false): string;
 }

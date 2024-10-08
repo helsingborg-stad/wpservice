@@ -16,5 +16,5 @@ interface GetTheTime
  * @return string|int|false Formatted date string or Unix timestamp if `$format` is 'U' or 'G'.
  *                          False on failure.
  */
-    public function getTheTime(string $format, int|\WP_Post $post): string|int|false;
+    public function getTheTime(string $format = '', int|\WP_Post $post = null): string|int|false;
 }

@@ -19,5 +19,5 @@ interface WpRand
      *                 Accepts positive integers. Defaults to 4294967295.
      * @return int A random non-negative number between min and max.
      */
-    public function wpRand(int $min, int $max): int;
+    public function wpRand(int $min = null, int $max = null): int;
 }

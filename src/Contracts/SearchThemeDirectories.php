@@ -14,5 +14,5 @@ interface SearchThemeDirectories
  * @param bool $force Optional. Whether to force a new directory scan. Default false.
  * @return array|false Valid themes found on success, false on failure.
  */
-    public function searchThemeDirectories(bool $force): array|false;
+    public function searchThemeDirectories(bool $force = false): array|false;
 }
