@@ -2,17 +2,17 @@
 
 namespace WpService\Contracts;
 
-use WP_Error;
-use WP_Term;
-
-interface IsWPError
+interface IsWpError
 {
     /**
-     * Check whether variable is a WP_Error object.
-     *
-     * @param mixed $thing
-     *
-     * @return bool
-     */
-    public function isWPError(mixed $thing): bool;
+ * Checks whether the given variable is a WordPress Error.
+ *
+ * Returns whether `$thing` is an instance of the `WP_Error` class.
+ *
+ * @since 2.1.0
+ *
+ * @param mixed $thing The variable to check.
+ * @return bool Whether the variable is an instance of WP_Error.
+ */
+    public function isWpError(mixed $thing): bool;
 }

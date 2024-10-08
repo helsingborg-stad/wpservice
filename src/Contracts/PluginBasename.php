@@ -4,10 +4,17 @@ namespace WpService\Contracts;
 
 interface PluginBasename
 {
-  /**
-   * Get the filesystem directory path (with trailing slash) for the plugin __FILE__ passed in.
-   *
-   * @return string
-   */
+    /**
+ * Gets the basename of a plugin.
+ *
+ * This method extracts the name of a plugin from its filename.
+ *
+ * @since 1.5.0
+ *
+ * @global array $wp_plugin_paths
+ *
+ * @param string $file The filename of plugin.
+ * @return string The name of a plugin.
+ */
     public function pluginBasename(string $file): string;
 }

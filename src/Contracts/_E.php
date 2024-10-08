@@ -2,19 +2,16 @@
 
 namespace WpService\Contracts;
 
-/**
- * Interface _E
- *
- * This interface defines the contract for the _e() method, which is used for translating and echoing a string.
- */
-interface _E // phpcs:ignore
+interface _e
 {
     /**
-     * Translates and echoes a string.
-     *
-     * @param string $text The text to be translated and echoed.
-     * @param string $domain The text domain. Default is 'default'.
-     * @return void
-     */
-    public function _e($text, $domain = 'default'): void; // phpcs:ignore
+ * Displays translated text.
+ *
+ * @since 1.2.0
+ *
+ * @param string $text   Text to translate.
+ * @param string $domain Optional. Text domain. Unique identifier for retrieving translated strings.
+ *                       Default 'default'.
+ */
+    public function _e(string $text, string $domain): void;
 }

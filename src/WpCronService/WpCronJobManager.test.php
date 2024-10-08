@@ -14,20 +14,20 @@ class WpCronJobManagerTest extends TestCase
     public function testRegisterCronJobShouldAddACronJobToTheManager()
     {
         $job       = new WpCronJob('test_hook', time(), 'interval', fn() => null, ['arg1', 'arg2']);
-        $wpService = new FakeWpService(['nextScheduled' => false]);
+        $wpService = new FakeWpService(['wpScheduleEvent' => true, 'nextScheduled' => false, 'addAction' => true]);
         $manager   = new WpCronJobManager('prefix_', $wpService);
 
         $manager->register($job);
 
         $this->assertCount(1, $wpService->methodCalls['addAction']);
-        $this->assertCount(1, $wpService->methodCalls['scheduleEvent']);
+        $this->assertCount(1, $wpService->methodCalls['wpScheduleEvent']);
         $this->assertEquals(
             ['prefix_' . $job->getHookName(), $job->getCallback()],
             $wpService->methodCalls['addAction'][0]
         );
         $this->assertEquals(
             [time(), $job->getSchedule(), 'prefix_' . $job->getHookName(), $job->getArgs()],
-            $wpService->methodCalls['scheduleEvent'][0]
+            $wpService->methodCalls['wpScheduleEvent'][0]
         );
     }
 
@@ -37,13 +37,13 @@ class WpCronJobManagerTest extends TestCase
     public function testRegisterCronJobShouldNotAddACronJobToTheManagerIfAlreadyScheduled()
     {
         $job       = new WpCronJob('test_hook', time(), 'daily', fn() => null, ['arg1', 'arg2']);
-        $wpService = new FakeWpService(['getCronArray' => $this->getCronArray()]);
+        $wpService = new FakeWpService(['wpScheduleEvent' => false, 'getOption' => $this->getCronArray(), 'addAction' => true]);
         $manager   = new WpCronJobManager('prefix_', $wpService);
 
         $manager->register($job);
 
         $this->assertCount(1, $wpService->methodCalls['addAction']);
-        $this->assertArrayNotHasKey('scheduleEvent', $wpService->methodCalls);
+        $this->assertArrayNotHasKey('wpScheduleEvent', $wpService->methodCalls);
     }
 
     /**
@@ -52,15 +52,15 @@ class WpCronJobManagerTest extends TestCase
     public function testDelete()
     {
         $job       = new WpCronJob('test_hook', time(), 'daily', fn() => null, ['arg1', 'arg2']);
-        $wpService = new FakeWpService(['getCronArray' => $this->getCronArray()]);
+        $wpService = new FakeWpService(['wpClearScheduledHook' => 1, 'getOption' => $this->getCronArray()]);
         $manager   = new WpCronJobManager('prefix_', $wpService);
 
         $manager->delete($job);
 
-        $this->assertCount(1, $wpService->methodCalls['clearScheduledHook']);
+        $this->assertCount(1, $wpService->methodCalls['wpClearScheduledHook']);
         $this->assertEquals(
             ['prefix_test_hook', ['arg1', 'arg2']],
-            $wpService->methodCalls['clearScheduledHook'][0]
+            $wpService->methodCalls['wpClearScheduledHook'][0]
         );
     }
 
@@ -69,15 +69,15 @@ class WpCronJobManagerTest extends TestCase
      */
     public function testDeleteAll()
     {
-        $wpService = new FakeWpService(['getCronArray' => $this->getCronArray()]);
+        $wpService = new FakeWpService(['wpClearScheduledHook' => 1, 'getOption' => $this->getCronArray()]);
         $manager   = new WpCronJobManager('prefix_', $wpService);
 
         $manager->deleteAll();
 
-        $this->assertCount(1, $wpService->methodCalls['clearScheduledHook']);
+        $this->assertCount(1, $wpService->methodCalls['wpClearScheduledHook']);
         $this->assertEquals(
             [ 'prefix_test_hook', ['arg1', 'arg2'] ],
-            $wpService->methodCalls['clearScheduledHook'][0]
+            $wpService->methodCalls['wpClearScheduledHook'][0]
         );
     }
 

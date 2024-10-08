@@ -2,12 +2,14 @@
 
 namespace WpService\Contracts;
 
-interface GetTheId
+interface GetTheID
 {
     /**
-     * Get the ID of the current post.
-     *
-     * @return int|false The ID or false if not available.
-     */
-    public function getTheId(): int|false;
+ * Retrieves the ID of the current item in the WordPress Loop.
+ *
+ * @since 2.1.0
+ *
+ * @return int|false The ID of the current item in the WordPress Loop. False if $post is not set.
+ */
+    public function getTheID(): int|false;
 }

@@ -2,15 +2,15 @@
 
 namespace WpService\Contracts;
 
-use WP_Post;
-
 interface GetPostParent
 {
     /**
-     * Get the parent post of a given post.
-     *
-     * @param int|WP_Post|null $postId The ID or WP_Post object of the post.
-     * @return WP_Post|null The parent post object, or null if no parent post exists.
-     */
-    public function getPostParent(int|WP_Post|null $postId): ?WP_Post;
+ * Retrieves the parent post object for the given post.
+ *
+ * @since 5.7.0
+ *
+ * @param int|\WP_Post|null $post Optional. Post ID or WP_Post object. Default is global $post.
+ * @return \WP_Post|null Parent post object, or null if there isn't one.
+ */
+    public function getPostParent(int|\WP_Post|null $post): \WP_Post|null;
 }

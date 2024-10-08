@@ -2,14 +2,24 @@
 
 namespace WpService\Contracts;
 
-interface RemoveSubMenuPage
+interface RemoveSubmenuPage
 {
     /**
-     * Remove a sub-menu page.
-     *
-     * @param string $parentSlug The parent menu slug.
-     * @param string $menuSlug   The sub-menu slug.
-     * @return array|false       An array of removed sub-menu page data or false on failure.
-     */
-    public function removeSubMenuPage(string $parentSlug, string $menuSlug): array|false;
+ * Removes an admin submenu.
+ *
+ * Example usage:
+ *
+ *  - `remove_submenu_page( 'themes.php', 'nav-menus.php' )`
+ *  - `remove_submenu_page( 'tools.php', 'plugin_submenu_slug' )`
+ *  - `remove_submenu_page( 'plugin_menu_slug', 'plugin_submenu_slug' )`
+ *
+ * @since 3.1.0
+ *
+ * @global array $submenu
+ *
+ * @param string $menuSlug    The slug for the parent menu.
+ * @param string $submenuSlug The slug of the submenu.
+ * @return array|false The removed submenu on success, false if not found.
+ */
+    public function removeSubmenuPage(string $menuSlug, string $submenuSlug): array|false;
 }

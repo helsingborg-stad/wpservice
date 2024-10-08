@@ -2,11 +2,9 @@
 
 namespace WpService\Contracts;
 
-use WP_Post;
-
 interface GetObjectTaxonomies
 {
-/**
+    /**
  * Returns the names or objects of the taxonomies which are registered for the requested object or object type,
  * such as a post object or post type name.
  *
@@ -18,13 +16,14 @@ interface GetObjectTaxonomies
  *
  *     Array( 'category', 'post_tag' )
  *
- * @see https://developer.wordpress.org/reference/functions/get_object_taxonomies/
+ * @since 2.3.0
  *
+ * @global WP_Taxonomy[] $wp_taxonomies The registered taxonomies.
  *
- * @param string|string[]|WP_Post $object_type Name of the type of taxonomy object, or an object (row from posts).
- * @param string                  $output      Optional. The type of output to return in the array. Accepts either
+ * @param string|string[]|WP_Post $objectType Name of the type of taxonomy object, or an object (row from posts).
+ * @param string $output      Optional. The type of output to return in the array. Accepts either
  *                                             'names' or 'objects'. Default 'names'.
  * @return string[]|WP_Taxonomy[] The names or objects of all taxonomies of `$object_type`.
  */
-    public function getObjectTaxonomies(string|array $objectType, string $output = 'names'): array;
+    public function getObjectTaxonomies(string|array|\WP_Post $objectType, string $output): array;
 }

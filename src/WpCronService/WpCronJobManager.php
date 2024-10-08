@@ -3,12 +3,8 @@
 namespace WpCronService;
 
 use Generator;
-use WpService\Contracts\AddAction;
-use WpService\Contracts\ClearScheduledHook;
-use WpService\Contracts\GetCronArray;
-use WpService\Contracts\NextScheduled;
-use WpService\Contracts\ScheduleEvent;
 use WpCronService\WpCronJob\WpCronJobInterface;
+use WpService\WpService;
 
 /**
  * Class WpCronJobManager
@@ -25,12 +21,10 @@ class WpCronJobManager implements WpCronJobManagerInterface
 
     /**
      * WpCronJobManager constructor.
-     *
-     * @param AddAction&NextScheduled&ScheduleEvent&GetCronArray&ClearScheduledHook $wpService
      */
     public function __construct(
         public string $hookPrefix,
-        private AddAction&NextScheduled&ScheduleEvent&GetCronArray&ClearScheduledHook $wpService
+        private WpService $wpService
     ) {
     }
 
@@ -51,7 +45,7 @@ class WpCronJobManager implements WpCronJobManagerInterface
         }
 
         $this->delete($job);
-        $this->wpService->scheduleEvent(time(), $job->getSchedule(), $hookName, $job->getArgs());
+        $this->wpService->wpScheduleEvent(time(), $job->getSchedule(), $hookName, $job->getArgs());
     }
 
     /**
@@ -64,7 +58,7 @@ class WpCronJobManager implements WpCronJobManagerInterface
 
         foreach ($this->getAllCronJobs() as $cronJob) {
             if ($cronJob['hookName'] === $hookName) {
-                $this->wpService->clearScheduledHook($cronJob['hookName'], $cronJob['args']);
+                $this->wpService->wpClearScheduledHook($cronJob['hookName'], $cronJob['args']);
             }
         }
     }
@@ -75,7 +69,7 @@ class WpCronJobManager implements WpCronJobManagerInterface
     public function deleteAll(): void
     {
         foreach ($this->getAllCronJobs() as $cronJob) {
-            $this->wpService->clearScheduledHook($cronJob['hookName'], $cronJob['args']);
+            $this->wpService->wpClearScheduledHook($cronJob['hookName'], $cronJob['args']);
         }
     }
 
@@ -117,7 +111,7 @@ class WpCronJobManager implements WpCronJobManagerInterface
      */
     private function getAllCronJobs(): Generator
     {
-        foreach ($this->wpService->getCronArray() as $timestamp => $jobsByHookName) {
+        foreach ($this->getCronArray() as $timestamp => $jobsByHookName) {
             foreach ($jobsByHookName as $hookName => $cronJobsById) {
                 if (strpos($hookName, $this->hookPrefix) !== 0) {
                     continue;
@@ -132,6 +126,22 @@ class WpCronJobManager implements WpCronJobManagerInterface
                 }
             }
         }
+    }
+
+    /**
+     * Get the cron array.
+     *
+     * @return array
+     */
+    private function getCronArray(): array
+    {
+        $cron = $this->wpService->getOption('cron');
+
+        if (! is_array($cron)) {
+            return array();
+        }
+
+        return $cron;
     }
 
     /**
