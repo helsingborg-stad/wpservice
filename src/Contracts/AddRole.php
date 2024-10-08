@@ -2,17 +2,18 @@
 
 namespace WpService\Contracts;
 
-use WP_Role;
-
 interface AddRole
 {
     /**
-     * Add a role.
+     * Adds a role, if it does not exist.
      *
-     * @param string $role The role name.
-     * @param string $displayName The display name of the role.
-     * @param array $capabilities The capabilities of the role.
-     * @return WP_Role|null The added role object, or null on failure.
+     * @since 2.0.0
+     *
+     * @param string $role         Role name.
+     * @param string $displayName Display name for role.
+     * @param bool[] $capabilities List of capabilities keyed by the capability name,
+     *                             e.g. array( 'edit_posts' => true, 'delete_posts' => false ).
+     * @return \WP_Role|void WP_Role object, if the role is added.
      */
-    public function addRole(string $role, string $displayName, array $capabilities): ?WP_Role;
+    public function addRole(string $role, string $displayName, array $capabilities = []): mixed;
 }

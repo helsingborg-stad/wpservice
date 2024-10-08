@@ -5,9 +5,11 @@ namespace WpService\Contracts;
 interface GetStylesheetDirectoryUri
 {
     /**
-     * Retrieves the URI of the stylesheet directory.
+     * Retrieves stylesheet directory URI for the active theme.
      *
-     * @return string
+     * @since 1.5.0
+     *
+     * @return string URI to active theme's stylesheet directory.
      */
     public function getStylesheetDirectoryUri(): string;
 }

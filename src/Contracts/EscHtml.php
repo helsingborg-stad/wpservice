@@ -5,10 +5,12 @@ namespace WpService\Contracts;
 interface EscHtml
 {
     /**
-     * Escapes HTML entities in a string.
+     * Escaping for HTML blocks.
      *
-     * @param string $text The input string.
-     * @return string The escaped string.
+     * @since 2.8.0
+     *
+     * @param string $text
+     * @return string
      */
     public function escHtml(string $text): string;
 }

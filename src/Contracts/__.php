@@ -2,19 +2,19 @@
 
 namespace WpService\Contracts;
 
-/**
- * The __ interface.
- *
- * This interface defines a method for translating text strings.
- */
-interface __ // phpcs:ignore
+interface __
 {
     /**
-     * Translate a text string.
+     * Retrieves the translation of $text.
      *
-     * @param string $text The text string to be translated.
-     * @param string $domain The text domain to use for the translation. Default is 'default'.
-     * @return string The translated text string.
+     * If there is no translation, or the text domain isn't loaded, the original text is returned.
+     *
+     * @since 2.1.0
+     *
+     * @param string $text   Text to translate.
+     * @param string $domain Optional. Text domain. Unique identifier for retrieving translated strings.
+     *                       Default 'default'.
+     * @return string Translated text.
      */
-    public function __($text, $domain = 'default'): string; // phpcs:ignore
+    public function __(string $text, string $domain = 'default'): string;
 }

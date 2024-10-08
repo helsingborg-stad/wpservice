@@ -5,10 +5,15 @@ namespace WpService\Contracts;
 interface GetUsers
 {
     /**
-     * Retrieves users based on the provided arguments.
+     * Retrieves list of users matching criteria.
      *
-     * @param array $args The arguments to filter the users.
-     * @return WP_User[] The array of users matching the provided arguments.
+     * @since 3.1.0
+     *
+     * @see WP_User_Query
+     *
+     * @param array $args Optional. Arguments to retrieve users. See WP_User_Query::prepare_query()
+     *                    for more information on accepted arguments.
+     * @return array List of users.
      */
-    public function getUsers(array $args): array;
+    public function getUsers(array $args = []): array;
 }

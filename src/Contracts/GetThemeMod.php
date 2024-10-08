@@ -2,8 +2,6 @@
 
 namespace WpService\Contracts;
 
-use WP_Post;
-
 interface GetThemeMod
 {
     /**
@@ -14,8 +12,10 @@ interface GetThemeMod
      * PHP function with the template directory URI as the first value and the
      * stylesheet directory URI as the second value.
      *
+     * @since 2.1.0
+     *
      * @param string $name          Theme modification name.
-     * @param mixed  $defaultValue  Optional. Theme modification default value. Default false.
+     * @param mixed $defaultValue Optional. Theme modification default value. Default false.
      * @return mixed Theme modification value.
      */
     public function getThemeMod(string $name, mixed $defaultValue = false): mixed;

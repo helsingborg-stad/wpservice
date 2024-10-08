@@ -2,3 +2,5 @@
 .phpunit.result.cache
 composer.lock
 .coverage
+/generate.log
+/wordpress
