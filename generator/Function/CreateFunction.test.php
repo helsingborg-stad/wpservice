@@ -82,6 +82,40 @@ class CreateFunctionTest extends TestCase
         $this->assertEquals('[]', $params[0]->getDefault());
     }
 
+    /**
+     * @testdox params can be defined like @param mixed ...$args.
+     */
+    public function testGetParametersWithMixedArgs() {
+        $stub     = $this->getStubStatementForFunction('spreadParameters');
+        $function = CreateFunction::create($stub);
+
+        $params = $function->getParameters();
+
+        $this->assertCount(2, $params);
+        $this->assertEquals('string', $params[0]->getType());
+        $this->assertEquals('foo', $params[0]->getName());
+        
+        $this->assertEquals('mixed', $params[1]->getType());
+        $this->assertEquals('bar', $params[1]->getName());
+        $this->assertTrue($params[1]->isSpread());
+    }
+
+    /**
+     * @testdox fallback reads param type from docblock
+     */
+    public function testGetParametersWithDocBlockType() {
+        $stub     = $this->getStubStatementForFunction('typesOnlyInDocBlock');
+        $function = CreateFunction::create($stub);
+
+        $params = $function->getParameters();
+
+        $this->assertEquals('string', $params[0]->getType());
+        $this->assertEquals('foo', $params[0]->getName());
+        
+        $this->assertEquals('int', $params[1]->getType());
+        $this->assertEquals('bar', $params[1]->getName());
+    }
+
     private function getStubStatementForFunction(string $functionName): Function_
     {
         $generator = new StubsGenerator(StubsGenerator::FUNCTIONS);

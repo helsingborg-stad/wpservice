@@ -9,4 +9,5 @@ interface ParameterInterface
     public function getDefault(): ?string;
     public function setType(string $type): void;
     public function setName(string $name): void;
+    public function isSpread(): bool;
 }

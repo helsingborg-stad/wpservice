@@ -19,6 +19,7 @@ class SanitizeStringDefaultInput implements ParameterDecoratorInterface
         return CreateParameter::create(
             $this->getType(),
             $this->inner->getName(),
+            $this->inner->isSpread(),
             $this->inner->getDefault()
         );
     }

@@ -74,7 +74,7 @@ class FunctionWithNamespacedTypes implements FunctionInterface
     {
         $asArray = explode('|', $type);
         $asArray = array_map(fn($item) => trim($item), $asArray);
-        $asArray = array_map(fn($item) => ltrim($item, '\\'), $asArray);
+        $asArray = array_map(fn($item) => ltrim($item, "\\"), $asArray);
         $asArray = array_map(fn($item) => in_array($item, self::BASIC_TYPES) ? $item : '\\' . $item, $asArray);
 
         return implode('|', $asArray);

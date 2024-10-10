@@ -38,7 +38,7 @@ use WpService\Generator\Function\Parameter\SanitizeIntDefaultInput;
 use WpService\Generator\Function\Parameter\SanitizeStringDefaultInput;
 
 $generator = new StubsGenerator(StubsGenerator::FUNCTIONS);
-$wordpress = dirname(__FILE__) . '/../vendor/wordpress';
+$wordpress = dirname(__FILE__) . '/../wordpress';
 
 $finder = \StubsGenerator\Finder::create()
     ->in($wordpress)

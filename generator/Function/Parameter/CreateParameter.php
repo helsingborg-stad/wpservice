@@ -7,6 +7,7 @@ class CreateParameter implements ParameterInterface
     private function __construct(
         private string $type,
         private string $name,
+        private bool $spread,
         private ?string $default
     ) {
     }
@@ -36,8 +37,13 @@ class CreateParameter implements ParameterInterface
         return $this->default ?? null;
     }
 
-    public static function create(string $type, string $name, ?string $default): ParameterInterface
+    public function isSpread(): bool
     {
-        return new self($type, $name, $default);
+        return $this->spread;
+    }
+
+    public static function create(string $type, string $name, bool $spread, ?string $default): ParameterInterface
+    {
+        return new self($type, $name, $spread, $default);
     }
 }
