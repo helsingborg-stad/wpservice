@@ -141,6 +141,10 @@ class WpCronJobManager implements WpCronJobManagerInterface
             return array();
         }
 
+        if (isset($cron['version'])) {
+            unset($cron['version']);
+        }
+
         return $cron;
     }
 
