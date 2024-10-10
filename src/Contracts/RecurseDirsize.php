@@ -26,5 +26,5 @@ interface RecurseDirsize
      *                                            Defaults to the value of `dirsize_cache` transient.
      * @return int|false|null Size in bytes if a valid directory. False if not. Null if timeout.
      */
-    public function recurseDirsize(string $directory, string|array $exclude = null, int $maxExecutionTime = null, array $directoryCache = null): int|false|null;
+    public function recurseDirsize(string $directory, string|array $exclude = null, int $maxExecutionTime = null, array &$directoryCache = null): int|false|null;
 }

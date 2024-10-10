@@ -92,9 +92,24 @@ class FunctionWithNamespacedTypesTest extends TestCase
                 $this->type = $type;
             }
 
+            public function isSpread(): bool
+            {
+                return false;
+            }
+
             public function getDefault(): ?string
             {
                 return null;
+            }
+
+            public function isByReference(): bool
+            {
+                return false;
+            }
+
+            public function __toString(): string
+            {
+                return '';
             }
         };
     }

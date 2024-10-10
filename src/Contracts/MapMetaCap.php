@@ -39,5 +39,5 @@ interface MapMetaCap
      * @param mixed  ...$args Optional further parameters, typically starting with an object ID.
      * @return string[] Primitive capabilities required of the user.
      */
-    public function mapMetaCap(string $cap, int $userId): array;
+    public function mapMetaCap(string $cap, int $userId, mixed ...$args): array;
 }

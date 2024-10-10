@@ -14,5 +14,5 @@ interface UpdatePostCaches
      * @param bool $updateTermCache Optional. Whether to update the term cache. Default true.
      * @param bool $updateMetaCache Optional. Whether to update the meta cache. Default true.
      */
-    public function updatePostCaches(array $posts, string $postType = 'post', bool $updateTermCache = true, bool $updateMetaCache = true): void;
+    public function updatePostCaches(array &$posts, string $postType = 'post', bool $updateTermCache = true, bool $updateMetaCache = true): void;
 }

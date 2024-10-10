@@ -14,5 +14,5 @@ interface WpRecursiveKsort
      *
      * @param array $inputArray The array to sort, passed by reference.
      */
-    public function wpRecursiveKsort(array $inputArray): void;
+    public function wpRecursiveKsort(array &$inputArray): void;
 }

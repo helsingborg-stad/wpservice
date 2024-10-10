@@ -46,6 +46,10 @@ class FunctionWithNamespacedTypes implements FunctionInterface
         $params = array_map(fn($param) => clone $param, $this->inner->getParameters());
 
         foreach ($params as $index => $param) {
+            if (empty($param->getType())) {
+                continue;
+            }
+
             $params[$index]->setType($this->nameSpaceType($param->getType()));
         }
 
@@ -74,7 +78,7 @@ class FunctionWithNamespacedTypes implements FunctionInterface
     {
         $asArray = explode('|', $type);
         $asArray = array_map(fn($item) => trim($item), $asArray);
-        $asArray = array_map(fn($item) => ltrim($item, '\\'), $asArray);
+        $asArray = array_map(fn($item) => ltrim($item, "\\"), $asArray);
         $asArray = array_map(fn($item) => in_array($item, self::BASIC_TYPES) ? $item : '\\' . $item, $asArray);
 
         return implode('|', $asArray);

@@ -62,38 +62,22 @@ class CreateFunction implements FunctionInterface
         $name       = $function_->name->name;
         $returnType = $matches[1] ?? 'void';
 
-        // Get input params and their types from docblock
-        preg_match_all('/@param\s+([^\s]+)\s+\$([^\s]+)/', $docblock, $matches, PREG_SET_ORDER);
+        foreach ($function_->params as $param) {
+            $paramName = $param->var->name;
+            $paramType = isset($param->type, $param->type->name)
+                ? $param->type->name
+                : self::getParamTypeFromDocBlock($paramName, $docblock);
 
-        foreach ($matches as $match) {
-            // Find default value of parameter in the function declaration
-            $default = null;
-
-
-            foreach ($function_->params as $param) {
-                $default = null;
-
-                if ($param->var->name === $match[2]) {
-                    if (isset($param->default)) {
-                        if ($param->default instanceof String_) {
-                            $default = "'{$param->default->value}'";
-                        } elseif ($param->default instanceof ConstFetch) {
-                            $default = $param->default->name->parts[0];
-                        } elseif ($param->default instanceof LNumber) {
-                            $default = $param->default->value;
-                        } elseif ($param->default instanceof Array_) {
-                            $default = '[]';
-                        }
-                    }
-
-                    break;
-                }
-            }
-
-            $params[] = CreateParameter::create($match[1], $match[2], $default ?? null);
+            $params[] = CreateParameter::create(
+                $paramType,
+                $param->var->name,
+                $param->variadic,
+                $param->byRef,
+                self::getParamDefaultValue($param)
+            );
         }
 
-        /**
+        /*
          * Apply decorators to parameters
          */
         $params = array_map(function ($param) use ($parameterDecorators) {
@@ -104,5 +88,37 @@ class CreateFunction implements FunctionInterface
         }, $params);
 
         return new self($name, $returnType, $params, $docblock);
+    }
+
+    private static function getParamTypeFromDocBlock(string $paramName, string $docblock): string
+    {
+        // $re = '/@param\s(.+)\$([a-zA-Z|_]+)+\s/m';
+        $re = '/@param\s+([a-zA-Z|\||_|\\\\|\[\]|\d]+\s+)+(\.{3})?\$([a-zA-Z|_|\d]+\s+)/m';
+        preg_match_all($re, $docblock, $matches, PREG_SET_ORDER, 0);
+
+        foreach ($matches as $match) {
+            if (trim($match[3]) === $paramName) {
+                return trim($match[1]);
+            }
+        }
+
+        return '';
+    }
+
+    private static function getParamDefaultValue(\PhpParser\Node\Param $param): ?string
+    {
+        if (isset($param->default)) {
+            if ($param->default instanceof String_) {
+                return "'{$param->default->value}'";
+            } elseif ($param->default instanceof ConstFetch) {
+                return $param->default->name->parts[0];
+            } elseif ($param->default instanceof LNumber) {
+                return $param->default->value;
+            } elseif ($param->default instanceof Array_) {
+                return '[]';
+            }
+        }
+
+        return null;
     }
 }

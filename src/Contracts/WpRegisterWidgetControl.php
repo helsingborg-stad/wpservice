@@ -30,5 +30,5 @@ interface WpRegisterWidgetControl
      * }
      * @param mixed      ...$params        Optional additional parameters to pass to the callback function when it's called.
      */
-    public function wpRegisterWidgetControl(int|string $id, string $name, callable $controlCallback, array $options = []): void;
+    public function wpRegisterWidgetControl(int|string $id, string $name, callable $controlCallback, array $options = [], mixed ...$params): void;
 }

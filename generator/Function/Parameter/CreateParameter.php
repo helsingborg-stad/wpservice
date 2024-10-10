@@ -7,6 +7,8 @@ class CreateParameter implements ParameterInterface
     private function __construct(
         private string $type,
         private string $name,
+        private bool $spread,
+        private bool $byReference,
         private ?string $default
     ) {
     }
@@ -36,8 +38,30 @@ class CreateParameter implements ParameterInterface
         return $this->default ?? null;
     }
 
-    public static function create(string $type, string $name, ?string $default): ParameterInterface
+    public function isSpread(): bool
     {
-        return new self($type, $name, $default);
+        return $this->spread;
+    }
+
+    public function isByReference(): bool
+    {
+        return $this->byReference;
+    }
+
+    public function __toString(): string
+    {
+        $param  = $this->getType() ? $this->getType() . ' ' : '';
+        $param .= $this->isByReference() ? '&' : '';
+        $param .= $this->isSpread() ? '...' : '';
+        $param .= '$';
+        $param .= $this->getName();
+        $param .= empty($this->getDefault()) && $this->getDefault() !== '0' ? '' : ' = ' . $this->getDefault();
+
+        return $param;
+    }
+
+    public static function create(string $type, string $name, bool $spread, bool $byReference, ?string $default): ParameterInterface
+    {
+        return new self($type, $name, $spread, $byReference, $default);
     }
 }

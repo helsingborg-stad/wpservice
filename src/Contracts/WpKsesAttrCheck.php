@@ -18,5 +18,5 @@ interface WpKsesAttrCheck
      * @param array $allowedHtml The full list of allowed elements and attributes.
      * @return bool Whether or not the attribute is allowed.
      */
-    public function wpKsesAttrCheck(string $name, string $value, string $whole, string $vless, string $element, array $allowedHtml): bool;
+    public function wpKsesAttrCheck(string &$name, string &$value, string &$whole, string $vless, string $element, array $allowedHtml): bool;
 }

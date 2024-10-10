@@ -4,7 +4,7 @@
  * @param bool $foo
  * @return bool
  */
-function booleanDefaultInput(string $foo = true): bool
+function booleanDefaultInput(bool $foo = true): bool
 {
     return $foo;
 }

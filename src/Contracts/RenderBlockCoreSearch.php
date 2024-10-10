@@ -11,9 +11,9 @@ interface RenderBlockCoreSearch
      *
      * @param array $attributes The block attributes.
      * @param string $content    The saved content.
-     * @param \WP_Block $block      The parsed block.
+     * @param WP_Block $block      The parsed block.
      *
      * @return string The search block markup.
      */
-    public function renderBlockCoreSearch(array $attributes, string $content, \WP_Block $block): string;
+    public function renderBlockCoreSearch(array $attributes): string;
 }

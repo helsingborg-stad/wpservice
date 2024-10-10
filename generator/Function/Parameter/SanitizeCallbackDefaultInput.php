@@ -19,6 +19,8 @@ class SanitizeCallbackDefaultInput implements ParameterDecoratorInterface
         return CreateParameter::create(
             $this->inner->getType(),
             $this->inner->getName(),
+            $this->inner->isSpread(),
+            $this->inner->isByReference(),
             $this->getDefault() ?? null
         );
     }

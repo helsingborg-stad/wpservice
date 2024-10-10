@@ -12,5 +12,5 @@ interface WpAddId3TagData
      * @param array $metadata An existing array with data.
      * @param array $data Data supplied by ID3 tags.
      */
-    public function wpAddId3TagData(array $metadata, array $data): void;
+    public function wpAddId3TagData(array &$metadata, array $data): void;
 }

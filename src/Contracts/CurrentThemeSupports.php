@@ -23,5 +23,5 @@ interface CurrentThemeSupports
      * @param mixed  ...$args Optional extra arguments to be checked against certain features.
      * @return bool True if the active theme supports the feature, false otherwise.
      */
-    public function currentThemeSupports(string $feature): bool;
+    public function currentThemeSupports(string $feature, mixed ...$args): bool;
 }

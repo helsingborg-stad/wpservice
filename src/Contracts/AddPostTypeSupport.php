@@ -41,5 +41,5 @@ interface AddPostTypeSupport
      *                                feature strings or a single string.
      * @param mixed        ...$args   Optional extra arguments to pass along with certain features.
      */
-    public function addPostTypeSupport(string $postType, string|array $feature): void;
+    public function addPostTypeSupport(string $postType, string|array $feature, mixed ...$args): void;
 }

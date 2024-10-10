@@ -41,5 +41,5 @@ interface DoAction
      * @param mixed  ...$arg    Optional. Additional arguments which are passed on to the
      *                          functions hooked to the action. Default empty.
      */
-    public function doAction(string $hookName): void;
+    public function doAction(string $hookName, mixed ...$arg): void;
 }

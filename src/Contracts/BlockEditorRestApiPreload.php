@@ -17,5 +17,5 @@ interface BlockEditorRestApiPreload
      * @param (string|string[])[] $preloadPaths        List of paths to preload.
      * @param \WP_Block_Editor_Context $blockEditorContext The current block editor context.
      */
-    public function blockEditorRestApiPreload(string|array $preloadPaths, \WP_Block_Editor_Context $blockEditorContext): void;
+    public function blockEditorRestApiPreload(array $preloadPaths, \WP_Block_Editor_Context $blockEditorContext): void;
 }

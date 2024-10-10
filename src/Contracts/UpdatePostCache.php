@@ -11,5 +11,5 @@ interface UpdatePostCache
      *
      * @param WP_Post[] $posts Array of post objects (passed by reference).
      */
-    public function updatePostCache(array $posts): void;
+    public function updatePostCache(array &$posts): void;
 }

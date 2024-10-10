@@ -27,5 +27,5 @@ interface CurrentUserCanForBlog
      * @param mixed  ...$args    Optional further parameters, typically starting with an object ID.
      * @return bool Whether the user has the given capability.
      */
-    public function currentUserCanForBlog(int $blogId, string $capability): bool;
+    public function currentUserCanForBlog(int $blogId, string $capability, mixed ...$args): bool;
 }

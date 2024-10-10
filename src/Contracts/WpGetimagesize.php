@@ -15,5 +15,5 @@ interface WpGetimagesize
      * @param array $imageInfo Optional. Extended image information (passed by reference).
      * @return array|false Array of image information or false on failure.
      */
-    public function wpGetimagesize(string $filename, array $imageInfo = null): array|false;
+    public function wpGetimagesize(string $filename, array &$imageInfo = null): array|false;
 }
