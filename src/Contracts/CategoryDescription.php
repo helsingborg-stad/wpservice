@@ -12,5 +12,5 @@ interface CategoryDescription
      * @param int $category Optional. Category ID. Defaults to the current category ID.
      * @return string Category description, if available.
      */
-    public function categoryDescription(int $category): string;
+    public function categoryDescription(int $category = 0): string;
 }

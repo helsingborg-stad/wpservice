@@ -14,5 +14,5 @@ interface GetCommentType
      *                                   Default current comment.
      * @return string The comment type.
      */
-    public function getCommentType(int|\WP_Comment $commentId): string;
+    public function getCommentType(int|\WP_Comment $commentId = 0): string;
 }

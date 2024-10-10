@@ -12,5 +12,5 @@ interface GetCommentsLink
      * @param int|\WP_Post $post Optional. Post ID or WP_Post object. Default is global $post.
      * @return string The link to the comments.
      */
-    public function getCommentsLink(int|\WP_Post $post): string;
+    public function getCommentsLink(int|\WP_Post $post = 0): string;
 }

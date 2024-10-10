@@ -16,5 +16,5 @@ interface GetTheTagList
      * @return string|false|\WP_Error A list of tags on success, false if there are no terms,
      *                               WP_Error on failure.
      */
-    public function getTheTagList(string $before = '', string $sep = '', string $after = '', int $postId): string|false|\WP_Error;
+    public function getTheTagList(string $before = '', string $sep = '', string $after = '', int $postId = 0): string|false|\WP_Error;
 }

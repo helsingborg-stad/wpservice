@@ -18,5 +18,5 @@ interface WpCalculateImageSizes
      *                                    is needed when using the image size name as argument for `$size`. Default 0.
      * @return string|false A valid source size value for use in a 'sizes' attribute or false.
      */
-    public function wpCalculateImageSizes(string|array $size, string|null $imageSrc = null, array|null $imageMeta = null, int $attachmentId): string|false;
+    public function wpCalculateImageSizes(string|array $size, string|null $imageSrc = null, array|null $imageMeta = null, int $attachmentId = 0): string|false;
 }

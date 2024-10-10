@@ -14,5 +14,5 @@ interface EditUser
      * @param int $userId Optional. User ID.
      * @return int|\WP_Error User ID of the updated user or WP_Error on failure.
      */
-    public function editUser(int $userId): int|\WP_Error;
+    public function editUser(int $userId = 0): int|\WP_Error;
 }

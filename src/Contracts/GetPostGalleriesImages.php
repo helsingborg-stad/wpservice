@@ -15,5 +15,5 @@ interface GetPostGalleriesImages
      * @return array A list of lists, each containing image srcs parsed.
      *               from an expanded shortcode
      */
-    public function getPostGalleriesImages(int|\WP_Post $post): array;
+    public function getPostGalleriesImages(int|\WP_Post $post = 0): array;
 }

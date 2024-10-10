@@ -810,7 +810,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function editLink(int $linkId): int|\WP_Error
+    public function editLink(int $linkId = 0): int|\WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -837,7 +837,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetLinkCats(int $linkId): array
+    public function wpGetLinkCats(int $linkId = 0): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -864,7 +864,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpSetLinkCats(int $linkId, array $linkCategories = []): void
+    public function wpSetLinkCats(int $linkId = 0, array $linkCategories = []): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -1728,7 +1728,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function mediaHandleSideload(array $fileArray, int $postId, string $desc = null, array $postData = []): int|\WP_Error
+    public function mediaHandleSideload(array $fileArray, int $postId = 0, string $desc = null, array $postData = []): int|\WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -1780,7 +1780,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function mediaSideloadImage(string $file, int $postId, string $desc = null, string $returnType = 'html'): string|int|\WP_Error
+    public function mediaSideloadImage(string $file, int $postId = 0, string $desc = null, string $returnType = 'html'): string|int|\WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -2795,7 +2795,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpSaveNavMenuItems(int $menuId, array $menuData = []): array
+    public function wpSaveNavMenuItems(int $menuId = 0, array $menuData = []): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -2804,7 +2804,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetNavMenuToEdit(int $menuId): string|\WP_Error
+    public function wpGetNavMenuToEdit(int $menuId = 0): string|\WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -3988,7 +3988,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCreateCategory(int|string $catName, int $categoryParent): int|\WP_Error
+    public function wpCreateCategory(int|string $catName, int $categoryParent = 0): int|\WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -4069,7 +4069,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCategoryChecklist(int $postId, int $descendantsAndSelf, array|false $selectedCats = false, array|false $popularCats = false, \Walker $walker = null, bool $checkedOntop = true): void
+    public function wpCategoryChecklist(int $postId = 0, int $descendantsAndSelf = 0, array|false $selectedCats = false, array|false $popularCats = false, \Walker $walker = null, bool $checkedOntop = true): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -4077,16 +4077,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpTermsChecklist(int $postId, array|string $args = []): string
-    {
-        $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->getReturnValue(__FUNCTION__, func_get_args());
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function wpPopularTermsChecklist(string $taxonomy, int $defaultTerm, int $number = 10, bool $display = true): array
+    public function wpTermsChecklist(int $postId = 0, array|string $args = []): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -4095,7 +4086,16 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpLinkCategoryChecklist(int $linkId): void
+    public function wpPopularTermsChecklist(string $taxonomy, int $defaultTerm = 0, int $number = 10, bool $display = true): array
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpLinkCategoryChecklist(int $linkId = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -4143,7 +4143,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function touchTime(int|bool $edit = 1, int|bool $forPost = 1, int $tabIndex, int|bool $multi): void
+    public function touchTime(int|bool $edit = 1, int|bool $forPost = 1, int $tabIndex = 0, int|bool $multi = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -4159,7 +4159,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function parentDropdown(int $defaultPage, int $parentPage, int $level, int|\WP_Post $post = null): mixed
+    public function parentDropdown(int $defaultPage = 0, int $parentPage = 0, int $level = 0, int|\WP_Post $post = null): mixed
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -4784,7 +4784,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function editUser(int $userId): int|\WP_Error
+    public function editUser(int $userId = 0): int|\WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -5679,7 +5679,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function generateBlockAssetHandle(string $blockName, string $fieldName, int $index): string
+    public function generateBlockAssetHandle(string $blockName, string $fieldName, int $index = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -5697,7 +5697,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function registerBlockScriptModuleId(array $metadata, string $fieldName, int $index): string|false
+    public function registerBlockScriptModuleId(array $metadata, string $fieldName, int $index = 0): string|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -5706,7 +5706,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function registerBlockScriptHandle(array $metadata, string $fieldName, int $index): string|false
+    public function registerBlockScriptHandle(array $metadata, string $fieldName, int $index = 0): string|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -5715,7 +5715,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function registerBlockStyleHandle(array $metadata, string $fieldName, int $index): string|false
+    public function registerBlockStyleHandle(array $metadata, string $fieldName, int $index = 0): string|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -6636,7 +6636,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpLatestCommentsDraftOrPostTitle(int|\WP_Post $post): string
+    public function wpLatestCommentsDraftOrPostTitle(int|\WP_Post $post = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -7092,7 +7092,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function blockCorePageListRenderNestedPageList(bool $openSubmenusOnClick, bool $showSubmenuIcons, bool $isNavigationChild, array $nestedPages, bool $isNested, array $activePageAncestorIds = [], array $colors = [], int $depth): string
+    public function blockCorePageListRenderNestedPageList(bool $openSubmenusOnClick, bool $showSubmenuIcons, bool $isNavigationChild, array $nestedPages, bool $isNested, array $activePageAncestorIds = [], array $colors = [], int $depth = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -7969,7 +7969,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCacheAdd(int|string $key, mixed $data, string $group = '', int $expire): bool
+    public function wpCacheAdd(int|string $key, mixed $data, string $group = '', int $expire = 0): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -7978,7 +7978,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCacheAddMultiple(array $data, string $group = '', int $expire): array
+    public function wpCacheAddMultiple(array $data, string $group = '', int $expire = 0): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -7987,7 +7987,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCacheReplace(int|string $key, mixed $data, string $group = '', int $expire): bool
+    public function wpCacheReplace(int|string $key, mixed $data, string $group = '', int $expire = 0): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -7996,7 +7996,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCacheSet(int|string $key, mixed $data, string $group = '', int $expire): bool
+    public function wpCacheSet(int|string $key, mixed $data, string $group = '', int $expire = 0): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -8005,7 +8005,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCacheSetMultiple(array $data, string $group = '', int $expire): array
+    public function wpCacheSetMultiple(array $data, string $group = '', int $expire = 0): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -8377,7 +8377,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function categoryDescription(int $category): string
+    public function categoryDescription(int $category = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -8458,7 +8458,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getTheTags(int|\WP_Post $post): array|false|\WP_Error
+    public function getTheTags(int|\WP_Post $post = 0): array|false|\WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -8467,7 +8467,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getTheTagList(string $before = '', string $sep = '', string $after = '', int $postId): string|false|\WP_Error
+    public function getTheTagList(string $before = '', string $sep = '', string $after = '', int $postId = 0): string|false|\WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -8484,7 +8484,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function tagDescription(int $tag): string
+    public function tagDescription(int $tag = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -8493,7 +8493,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function termDescription(int $term, null $deprecated = null): string
+    public function termDescription(int $term = 0, null $deprecated = null): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -8725,7 +8725,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentAuthor(int|\WP_Comment $commentId): string
+    public function getCommentAuthor(int|\WP_Comment $commentId = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -8734,7 +8734,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function commentAuthor(int|\WP_Comment $commentId): void
+    public function commentAuthor(int|\WP_Comment $commentId = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -8742,7 +8742,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentAuthorEmail(int|\WP_Comment $commentId): string
+    public function getCommentAuthorEmail(int|\WP_Comment $commentId = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -8751,7 +8751,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function commentAuthorEmail(int|\WP_Comment $commentId): void
+    public function commentAuthorEmail(int|\WP_Comment $commentId = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -8776,7 +8776,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentAuthorLink(int|\WP_Comment $commentId): string
+    public function getCommentAuthorLink(int|\WP_Comment $commentId = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -8785,7 +8785,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function commentAuthorLink(int|\WP_Comment $commentId): void
+    public function commentAuthorLink(int|\WP_Comment $commentId = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -8793,24 +8793,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentAuthorIP(int|\WP_Comment $commentId): string
-    {
-        $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->getReturnValue(__FUNCTION__, func_get_args());
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function commentAuthorIP(int|\WP_Comment $commentId): void
-    {
-        $this->registerFunctionCall(__FUNCTION__, func_get_args());
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function getCommentAuthorUrl(int|\WP_Comment $commentId): string
+    public function getCommentAuthorIP(int|\WP_Comment $commentId = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -8819,7 +8802,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function commentAuthorUrl(int|\WP_Comment $commentId): void
+    public function commentAuthorIP(int|\WP_Comment $commentId = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -8827,7 +8810,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentAuthorUrlLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment $comment): string
+    public function getCommentAuthorUrl(int|\WP_Comment $commentId = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -8836,7 +8819,24 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function commentAuthorUrlLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment $comment): void
+    public function commentAuthorUrl(int|\WP_Comment $commentId = 0): void
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getCommentAuthorUrlLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment $comment = 0): string
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function commentAuthorUrlLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment $comment = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -8862,7 +8862,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentDate(string $format = '', int|\WP_Comment $commentId): string
+    public function getCommentDate(string $format = '', int|\WP_Comment $commentId = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -8871,7 +8871,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function commentDate(string $format = '', int|\WP_Comment $commentId): void
+    public function commentDate(string $format = '', int|\WP_Comment $commentId = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -8879,7 +8879,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentExcerpt(int|\WP_Comment $commentId): string
+    public function getCommentExcerpt(int|\WP_Comment $commentId = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -8888,7 +8888,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function commentExcerpt(int|\WP_Comment $commentId): void
+    public function commentExcerpt(int|\WP_Comment $commentId = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -8922,7 +8922,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentsLink(int|\WP_Post $post): string
+    public function getCommentsLink(int|\WP_Post $post = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -8939,7 +8939,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentsNumber(int|\WP_Post $post): string|int
+    public function getCommentsNumber(int|\WP_Post $post = 0): string|int
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -8948,7 +8948,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function commentsNumber(string|false $zero = false, string|false $one = false, string|false $more = false, int|\WP_Post $post): void
+    public function commentsNumber(string|false $zero = false, string|false $one = false, string|false $more = false, int|\WP_Post $post = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -8956,16 +8956,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentsNumberText(string|false $zero = false, string|false $one = false, string|false $more = false, int|\WP_Post $post): string
-    {
-        $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->getReturnValue(__FUNCTION__, func_get_args());
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function getCommentText(int|\WP_Comment $commentId, array $args = []): string
+    public function getCommentsNumberText(string|false $zero = false, string|false $one = false, string|false $more = false, int|\WP_Post $post = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -8974,15 +8965,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function commentText(int|\WP_Comment $commentId, array $args = []): void
-    {
-        $this->registerFunctionCall(__FUNCTION__, func_get_args());
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function getCommentTime(string $format = '', bool $gmt = false, bool $translate = true, int|\WP_Comment $commentId): string
+    public function getCommentText(int|\WP_Comment $commentId = 0, array $args = []): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -8991,7 +8974,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function commentTime(string $format = '', int|\WP_Comment $commentId): void
+    public function commentText(int|\WP_Comment $commentId = 0, array $args = []): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -8999,7 +8982,24 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentType(int|\WP_Comment $commentId): string
+    public function getCommentTime(string $format = '', bool $gmt = false, bool $translate = true, int|\WP_Comment $commentId = 0): string
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function commentTime(string $format = '', int|\WP_Comment $commentId = 0): void
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getCommentType(int|\WP_Comment $commentId = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -9240,7 +9240,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentCount(int $postId): array
+    public function getCommentCount(int $postId = 0): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -9389,7 +9389,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCountComments(int $postId): \stdClass
+    public function wpCountComments(int $postId = 0): \stdClass
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -9627,7 +9627,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function genericPing(int $postId): int
+    public function genericPing(int $postId = 0): int
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -9829,7 +9829,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function spawnCron(int $gmtTime): bool
+    public function spawnCron(int $gmtTime = 0): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -10301,7 +10301,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getTheTitleRss(int|\WP_Post $post): string
+    public function getTheTitleRss(int|\WP_Post $post = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -10653,7 +10653,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function utf8UriEncode(string $utf8String, int $length, bool $encodeAsciiCharacters = false): string
+    public function utf8UriEncode(string $utf8String, int $length = 0, bool $encodeAsciiCharacters = false): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -10887,7 +10887,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function antispambot(string $emailAddress, int $hexEncoding): string
+    public function antispambot(string $emailAddress, int $hexEncoding = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -11047,7 +11047,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function humanTimeDiff(int $from, int $to): string
+    public function humanTimeDiff(int $from, int $to = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -11494,7 +11494,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function currentTime(string $type, int|bool $gmt): int|string
+    public function currentTime(string $type, int|bool $gmt = 0): int|string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -11557,7 +11557,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function numberFormatI18n(float $number, int $decimals): string
+    public function numberFormatI18n(float $number, int $decimals = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -11566,7 +11566,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function sizeFormat(int|string $bytes, int $decimals): string|false
+    public function sizeFormat(int|string $bytes, int $decimals = 0): string|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -12138,7 +12138,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpJsonEncode(mixed $value, int $flags, int $depth = 512): string|false
+    public function wpJsonEncode(mixed $value, int $flags = 0, int $depth = 512): string|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -12147,7 +12147,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpSendJson(mixed $response, int $statusCode = null, int $flags): void
+    public function wpSendJson(mixed $response, int $statusCode = null, int $flags = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -12155,7 +12155,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpSendJsonSuccess(mixed $value = null, int $statusCode = null, int $flags): void
+    public function wpSendJsonSuccess(mixed $value = null, int $statusCode = null, int $flags = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -12163,7 +12163,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpSendJsonError(mixed $value = null, int $statusCode = null, int $flags): void
+    public function wpSendJsonError(mixed $value = null, int $statusCode = null, int $flags = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -12530,7 +12530,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpDebugBacktraceSummary(string $ignoreClass = null, int $skipFrames, bool $pretty = true): string|array
+    public function wpDebugBacktraceSummary(string $ignoreClass = null, int $skipFrames = 0, bool $pretty = true): string|array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -13221,7 +13221,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getSiteIconUrl(int $size = 512, string $url = '', int $blogId): string
+    public function getSiteIconUrl(int $size = 512, string $url = '', int $blogId = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -13230,7 +13230,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function siteIconUrl(int $size = 512, string $url = '', int $blogId): void
+    public function siteIconUrl(int $size = 512, string $url = '', int $blogId = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -13238,16 +13238,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function hasSiteIcon(int $blogId): bool
-    {
-        $this->registerFunctionCall(__FUNCTION__, func_get_args());
-        return $this->getReturnValue(__FUNCTION__, func_get_args());
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function hasCustomLogo(int $blogId): bool
+    public function hasSiteIcon(int $blogId = 0): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -13256,7 +13247,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCustomLogo(int $blogId): string
+    public function hasCustomLogo(int $blogId = 0): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -13265,7 +13256,16 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function theCustomLogo(int $blogId): void
+    public function getCustomLogo(int $blogId = 0): string
+    {
+        $this->registerFunctionCall(__FUNCTION__, func_get_args());
+        return $this->getReturnValue(__FUNCTION__, func_get_args());
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function theCustomLogo(int $blogId = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -14644,7 +14644,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getUserLocale(int|\WP_User $user): string
+    public function getUserLocale(int|\WP_User $user = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -15045,7 +15045,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function thePermalink(int|\WP_Post $post): void
+    public function thePermalink(int|\WP_Post $post = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -15079,7 +15079,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getThePermalink(int|\WP_Post $post, bool $leavename = false): string|false
+    public function getThePermalink(int|\WP_Post $post = 0, bool $leavename = false): string|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -15088,7 +15088,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPermalink(int|\WP_Post $post, bool $leavename = false): string|false
+    public function getPermalink(int|\WP_Post $post = 0, bool $leavename = false): string|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -15097,7 +15097,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostPermalink(int|\WP_Post $post, bool $leavename = false, bool $sample = false): string|false
+    public function getPostPermalink(int|\WP_Post $post = 0, bool $leavename = false, bool $sample = false): string|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -15168,7 +15168,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostCommentsFeedLink(int $postId, string $feed = ''): string
+    public function getPostCommentsFeedLink(int $postId = 0, string $feed = ''): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -15310,7 +15310,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getEditPostLink(int|\WP_Post $post, string $context = 'display'): string|null
+    public function getEditPostLink(int|\WP_Post $post = 0, string $context = 'display'): string|null
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -15319,7 +15319,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function editPostLink(string $text = null, string $before = '', string $after = '', int|\WP_Post $post, string $cssClass = 'post-edit-link'): void
+    public function editPostLink(string $text = null, string $before = '', string $after = '', int|\WP_Post $post = 0, string $cssClass = 'post-edit-link'): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -15327,7 +15327,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getDeletePostLink(int|\WP_Post $post, string $deprecated = '', bool $forceDelete = false): mixed
+    public function getDeletePostLink(int|\WP_Post $post = 0, string $deprecated = '', bool $forceDelete = false): mixed
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -15336,7 +15336,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getEditCommentLink(int|\WP_Comment $commentId): mixed
+    public function getEditCommentLink(int|\WP_Comment $commentId = 0): mixed
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -15353,7 +15353,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getEditBookmarkLink(int|\stdClass $link): mixed
+    public function getEditBookmarkLink(int|\stdClass $link = 0): mixed
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -15516,7 +15516,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getNextPostsPageLink(int $maxPage): mixed
+    public function getNextPostsPageLink(int $maxPage = 0): mixed
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -15525,7 +15525,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function nextPosts(int $maxPage, bool $display = true): mixed
+    public function nextPosts(int $maxPage = 0, bool $display = true): mixed
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -15534,7 +15534,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getNextPostsLink(string $label = null, int $maxPage): mixed
+    public function getNextPostsLink(string $label = null, int $maxPage = 0): mixed
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -15543,7 +15543,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function nextPostsLink(string $label = null, int $maxPage): void
+    public function nextPostsLink(string $label = null, int $maxPage = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -15654,7 +15654,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentsPagenumLink(int $pagenum = 1, int $maxPage): string
+    public function getCommentsPagenumLink(int $pagenum = 1, int $maxPage = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -15663,7 +15663,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getNextCommentsLink(string $label = '', int $maxPage): mixed
+    public function getNextCommentsLink(string $label = '', int $maxPage = 0): mixed
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -15672,7 +15672,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function nextCommentsLink(string $label = '', int $maxPage): void
+    public function nextCommentsLink(string $label = '', int $maxPage = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -15875,7 +15875,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getDashboardUrl(int $userId, string $path = '', string $scheme = 'admin'): string
+    public function getDashboardUrl(int $userId = 0, string $path = '', string $scheme = 'admin'): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -15884,7 +15884,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getEditProfileUrl(int $userId, string $scheme = 'admin'): string
+    public function getEditProfileUrl(int $userId = 0, string $scheme = 'admin'): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -15910,7 +15910,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetShortlink(int $id, string $context = 'post', bool $allowSlugs = true): string
+    public function wpGetShortlink(int $id = 0, string $context = 'post', bool $allowSlugs = true): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -16112,7 +16112,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function timerStop(int|bool $display, int $precision = 3): string
+    public function timerStop(int|bool $display = 0, int $precision = 3): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -16457,7 +16457,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function addImageSize(string $name, int $width, int $height, bool|array $crop = false): void
+    public function addImageSize(string $name, int $width = 0, int $height = 0, bool|array $crop = false): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -16483,7 +16483,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function setPostThumbnailSize(int $width, int $height, bool|array $crop = false): void
+    public function setPostThumbnailSize(int $width = 0, int $height = 0, bool|array $crop = false): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -16500,7 +16500,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpConstrainDimensions(int $currentWidth, int $currentHeight, int $maxWidth, int $maxHeight): array
+    public function wpConstrainDimensions(int $currentWidth, int $currentHeight, int $maxWidth = 0, int $maxHeight = 0): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -16599,7 +16599,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCalculateImageSrcset(array $sizeArray, string $imageSrc, array $imageMeta, int $attachmentId): string|false
+    public function wpCalculateImageSrcset(array $sizeArray, string $imageSrc, array $imageMeta, int $attachmentId = 0): string|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -16617,7 +16617,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCalculateImageSizes(string|array $size, string|null $imageSrc = null, array|null $imageMeta = null, int $attachmentId): string|false
+    public function wpCalculateImageSizes(string|array $size, string|null $imageSrc = null, array|null $imageMeta = null, int $attachmentId = 0): string|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -16626,7 +16626,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpImageFileMatchesImageMeta(string $imageLocation, array $imageMeta, int $attachmentId): bool
+    public function wpImageFileMatchesImageMeta(string $imageLocation, array $imageMeta, int $attachmentId = 0): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -16635,7 +16635,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpImageSrcGetDimensions(string $imageSrc, array $imageMeta, int $attachmentId): array|false
+    public function wpImageSrcGetDimensions(string $imageSrc, array $imageMeta, int $attachmentId = 0): array|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -16952,7 +16952,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getAttachedMedia(string $type, int|\WP_Post $post): array
+    public function getAttachedMedia(string $type, int|\WP_Post $post = 0): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -16979,7 +16979,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostGallery(int|\WP_Post $post, bool $html = true): string|array
+    public function getPostGallery(int|\WP_Post $post = 0, bool $html = true): string|array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -16988,7 +16988,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostGalleriesImages(int|\WP_Post $post): array
+    public function getPostGalleriesImages(int|\WP_Post $post = 0): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -16997,7 +16997,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostGalleryImages(int|\WP_Post $post): array
+    public function getPostGalleryImages(int|\WP_Post $post = 0): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -17346,7 +17346,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function refreshBlogDetails(int $blogId): void
+    public function refreshBlogDetails(int $blogId = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -17363,7 +17363,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function cleanSiteDetailsCache(int $siteId): void
+    public function cleanSiteDetailsCache(int $siteId = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -17478,7 +17478,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getLastUpdated(mixed $deprecated = '', int $start, int $quantity = 40): array
+    public function getLastUpdated(mixed $deprecated = '', int $start = 0, int $quantity = 40): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -17573,7 +17573,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function removeUserFromBlog(int $userId, int $blogId, int $reassign): true|\WP_Error
+    public function removeUserFromBlog(int $userId, int $blogId = 0, int $reassign = 0): true|\WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -18450,7 +18450,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function isNavMenuItem(int $menuItemId): bool
+    public function isNavMenuItem(int $menuItemId = 0): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -18477,7 +18477,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpUpdateNavMenuObject(int $menuId, array $menuData = []): int|\WP_Error
+    public function wpUpdateNavMenuObject(int $menuId = 0, array $menuData = []): int|\WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -18486,7 +18486,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpUpdateNavMenuItem(int $menuId, int $menuItemDbId, array $menuItemData = [], bool $fireAfterHooks = true): int|\WP_Error
+    public function wpUpdateNavMenuItem(int $menuId = 0, int $menuItemDbId = 0, array $menuItemData = [], bool $fireAfterHooks = true): int|\WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -18530,7 +18530,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetAssociatedNavMenuItems(int $objectId, string $objectType = 'post_type', string $taxonomy = ''): array
+    public function wpGetAssociatedNavMenuItems(int $objectId = 0, string $objectType = 'post_type', string $taxonomy = ''): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -18703,7 +18703,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function setTransient(string $transient, mixed $value, int $expiration): bool
+    public function setTransient(string $transient, mixed $value, int $expiration = 0): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -18862,7 +18862,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function setSiteTransient(string $transient, mixed $value, int $expiration): bool
+    public function setSiteTransient(string $transient, mixed $value, int $expiration = 0): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -19582,7 +19582,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getTheTitle(int|\WP_Post $post): string
+    public function getTheTitle(int|\WP_Post $post = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -19591,7 +19591,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function theGuid(int|\WP_Post $post): void
+    public function theGuid(int|\WP_Post $post = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -19599,7 +19599,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getTheGuid(int|\WP_Post $post): string
+    public function getTheGuid(int|\WP_Post $post = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -19642,7 +19642,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function hasExcerpt(int|\WP_Post $post): bool
+    public function hasExcerpt(int|\WP_Post $post = 0): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -19757,7 +19757,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function theAttachmentLink(int|\WP_Post $post, bool $fullsize = false, bool $deprecated = false, bool $permalink = false): void
+    public function theAttachmentLink(int|\WP_Post $post = 0, bool $fullsize = false, bool $deprecated = false, bool $permalink = false): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -19765,7 +19765,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetAttachmentLink(int|\WP_Post $post, string|array $size = 'thumbnail', bool $permalink = false, bool $icon = false, string|false $text = false, array|string $attr = ''): string
+    public function wpGetAttachmentLink(int|\WP_Post $post = 0, string|array $size = 'thumbnail', bool $permalink = false, bool $icon = false, string|false $text = false, array|string $attr = ''): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -19783,7 +19783,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getThePasswordForm(int|\WP_Post $post): string
+    public function getThePasswordForm(int|\WP_Post $post = 0): string
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -19828,7 +19828,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpListPostRevisions(int|\WP_Post $post, string $type = 'all'): void
+    public function wpListPostRevisions(int|\WP_Post $post = 0, string $type = 'all'): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -20180,7 +20180,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function setPostType(int $postId, string $postType = 'post'): int|false
+    public function setPostType(int $postId = 0, string $postType = 'post'): int|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20288,7 +20288,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostCustom(int $postId): mixed
+    public function getPostCustom(int $postId = 0): mixed
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20297,7 +20297,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostCustomKeys(int $postId): mixed
+    public function getPostCustomKeys(int $postId = 0): mixed
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20306,7 +20306,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostCustomValues(string $key = '', int $postId): array|null
+    public function getPostCustomValues(string $key = '', int $postId = 0): array|null
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20315,7 +20315,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function isSticky(int $postId): bool
+    public function isSticky(int $postId = 0): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20403,7 +20403,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpDeletePost(int $postId, bool $forceDelete = false): \WP_Post|false|null
+    public function wpDeletePost(int $postId = 0, bool $forceDelete = false): \WP_Post|false|null
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20412,7 +20412,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpTrashPost(int $postId): \WP_Post|false|null
+    public function wpTrashPost(int $postId = 0): \WP_Post|false|null
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20421,7 +20421,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpUntrashPost(int $postId): \WP_Post|false|null
+    public function wpUntrashPost(int $postId = 0): \WP_Post|false|null
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20448,7 +20448,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetPostCategories(int $postId, array $args = []): array|\WP_Error
+    public function wpGetPostCategories(int $postId = 0, array $args = []): array|\WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20457,7 +20457,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetPostTags(int $postId, array $args = []): array|\WP_Error
+    public function wpGetPostTags(int $postId = 0, array $args = []): array|\WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20466,7 +20466,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetPostTerms(int $postId, string|array $taxonomy = 'post_tag', array $args = []): array|\WP_Error
+    public function wpGetPostTerms(int $postId = 0, string|array $taxonomy = 'post_tag', array $args = []): array|\WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20536,7 +20536,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpAddPostTags(int $postId, string|array $tags = ''): array|false|\WP_Error
+    public function wpAddPostTags(int $postId = 0, string|array $tags = ''): array|false|\WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20545,7 +20545,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpSetPostTags(int $postId, string|array $tags = '', bool $append = false): array|false|\WP_Error
+    public function wpSetPostTags(int $postId = 0, string|array $tags = '', bool $append = false): array|false|\WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20554,7 +20554,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpSetPostTerms(int $postId, string|array $terms = '', string $taxonomy = 'post_tag', bool $append = false): array|false|\WP_Error
+    public function wpSetPostTerms(int $postId = 0, string|array $terms = '', string $taxonomy = 'post_tag', bool $append = false): array|false|\WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20563,7 +20563,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpSetPostCategories(int $postId, array|int $postCategories = [], bool $append = false): array|false|\WP_Error
+    public function wpSetPostCategories(int $postId = 0, array|int $postCategories = [], bool $append = false): array|false|\WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20659,7 +20659,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPageHierarchy(array &$pages, int $pageId): array
+    public function getPageHierarchy(array &$pages, int $pageId = 0): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20668,7 +20668,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPageUri(int|object $page): string|false
+    public function getPageUri(int|object $page = 0): string|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20695,7 +20695,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpInsertAttachment(string|array $args, string|false $file = false, int $parentPostId, bool $wpError = false, bool $fireAfterHooks = true): int|\WP_Error
+    public function wpInsertAttachment(string|array $args, string|false $file = false, int $parentPostId = 0, bool $wpError = false, bool $fireAfterHooks = true): int|\WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20722,7 +20722,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetAttachmentMetadata(int $attachmentId, bool $unfiltered = false): array|false
+    public function wpGetAttachmentMetadata(int $attachmentId = 0, bool $unfiltered = false): array|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20740,7 +20740,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetAttachmentUrl(int $attachmentId): string|false
+    public function wpGetAttachmentUrl(int $attachmentId = 0): string|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20749,7 +20749,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetAttachmentCaption(int $postId): string|false
+    public function wpGetAttachmentCaption(int $postId = 0): string|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20758,7 +20758,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetAttachmentThumbUrl(int $postId): string|false
+    public function wpGetAttachmentThumbUrl(int $postId = 0): string|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -20785,7 +20785,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpMimeTypeIcon(string|int $mime, string $preferredExt = '.png'): string|false
+    public function wpMimeTypeIcon(string|int $mime = 0, string $preferredExt = '.png'): string|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -22164,7 +22164,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetPostAutosave(int $postId, int $userId): \WP_Post|false
+    public function wpGetPostAutosave(int $postId, int $userId = 0): \WP_Post|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -22252,7 +22252,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetPostRevisions(int|\WP_Post $post, array|null $args = null): array
+    public function wpGetPostRevisions(int|\WP_Post $post = 0, array|null $args = null): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -22261,7 +22261,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetLatestRevisionIdAndTotalCount(int|\WP_Post $post): array|\WP_Error
+    public function wpGetLatestRevisionIdAndTotalCount(int|\WP_Post $post = 0): array|\WP_Error
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -22270,7 +22270,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetPostRevisionsUrl(int|\WP_Post $post): string|null
+    public function wpGetPostRevisionsUrl(int|\WP_Post $post = 0): string|null
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -23593,7 +23593,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getTheTaxonomies(int|\WP_Post $post, array $args = []): array
+    public function getTheTaxonomies(int|\WP_Post $post = 0, array $args = []): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -23602,7 +23602,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostTaxonomies(int|\WP_Post $post): array
+    public function getPostTaxonomies(int|\WP_Post $post = 0): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -23629,7 +23629,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getAncestors(int $objectId, string $objectType = '', string $resourceType = ''): array
+    public function getAncestors(int $objectId = 0, string $objectType = '', string $resourceType = ''): array
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -24759,7 +24759,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getUserOption(string $option, int $user, string $deprecated = ''): mixed
+    public function getUserOption(string $option, int $user = 0, string $deprecated = ''): mixed
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -24813,7 +24813,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function isUserMemberOfBlog(int $userId, int $blogId): bool
+    public function isUserMemberOfBlog(int $userId = 0, int $blogId = 0): bool
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());
@@ -24911,7 +24911,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function setupUserdata(int $forUserId): void
+    public function setupUserdata(int $forUserId = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -25635,7 +25635,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function confirmAnotherBlogSignup(string $domain, string $path, string $blogTitle, string $userName, string $userEmail = '', array $meta = [], int $blogId): void
+    public function confirmAnotherBlogSignup(string $domain, string $path, string $blogTitle, string $userName, string $userEmail = '', array $meta = [], int $blogId = 0): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }
@@ -25702,7 +25702,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function trackbackResponse(int|bool $error, string $errorMessage = ''): void
+    public function trackbackResponse(int|bool $error = 0, string $errorMessage = ''): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
     }

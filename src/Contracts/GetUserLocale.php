@@ -15,5 +15,5 @@ interface GetUserLocale
      * @param int|\WP_User $user User's ID or a WP_User object. Defaults to current user.
      * @return string The locale of the user.
      */
-    public function getUserLocale(int|\WP_User $user): string;
+    public function getUserLocale(int|\WP_User $user = 0): string;
 }

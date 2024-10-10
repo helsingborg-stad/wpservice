@@ -18,5 +18,5 @@ interface WpGetLatestRevisionIdAndTotalCount
      * @type int $count     The total count of revisions for the given post.
      * }
      */
-    public function wpGetLatestRevisionIdAndTotalCount(int|\WP_Post $post): array|\WP_Error;
+    public function wpGetLatestRevisionIdAndTotalCount(int|\WP_Post $post = 0): array|\WP_Error;
 }

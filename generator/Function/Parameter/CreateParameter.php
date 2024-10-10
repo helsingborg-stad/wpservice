@@ -55,7 +55,7 @@ class CreateParameter implements ParameterInterface
         $param .= $this->isSpread() ? '...' : '';
         $param .= '$';
         $param .= $this->getName();
-        $param .= !empty($this->getDefault()) ? ' = ' . $this->getDefault() : '';
+        $param .= empty($this->getDefault()) && $this->getDefault() !== '0' ? '' : ' = ' . $this->getDefault();
 
         return $param;
     }

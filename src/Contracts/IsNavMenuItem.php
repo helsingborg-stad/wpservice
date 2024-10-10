@@ -12,5 +12,5 @@ interface IsNavMenuItem
      * @param int $menuItemId The ID of the potential nav menu item.
      * @return bool Whether the given ID is that of a nav menu item.
      */
-    public function isNavMenuItem(int $menuItemId): bool;
+    public function isNavMenuItem(int $menuItemId = 0): bool;
 }

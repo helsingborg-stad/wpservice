@@ -21,5 +21,5 @@ interface WpDebugBacktraceSummary
      * @return string|array Either a string containing a reversed comma separated trace or an array
      *                      of individual calls.
      */
-    public function wpDebugBacktraceSummary(string $ignoreClass = null, int $skipFrames, bool $pretty = true): string|array;
+    public function wpDebugBacktraceSummary(string $ignoreClass = null, int $skipFrames = 0, bool $pretty = true): string|array;
 }

@@ -14,5 +14,5 @@ interface WpUntrashPost
      * @param int $postId Optional. Post ID. Default is the ID of the global `$post`.
      * @return \WP_Post|false|null Post data on success, false or null on failure.
      */
-    public function wpUntrashPost(int $postId): \WP_Post|false|null;
+    public function wpUntrashPost(int $postId = 0): \WP_Post|false|null;
 }

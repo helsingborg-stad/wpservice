@@ -13,5 +13,5 @@ interface NextPosts
      * @param bool $display  Optional. Whether to echo the link. Default true.
      * @return string|void The link URL for next posts page if `$display = false`.
      */
-    public function nextPosts(int $maxPage, bool $display = true): mixed;
+    public function nextPosts(int $maxPage = 0, bool $display = true): mixed;
 }

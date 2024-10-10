@@ -22,5 +22,5 @@ interface SetPostThumbnailSize
      * @type string $1 The y crop position. Accepts 'top', 'center', or 'bottom'.
      * }
      */
-    public function setPostThumbnailSize(int $width, int $height, bool|array $crop = false): void;
+    public function setPostThumbnailSize(int $width = 0, int $height = 0, bool|array $crop = false): void;
 }

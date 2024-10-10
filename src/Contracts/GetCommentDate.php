@@ -15,5 +15,5 @@ interface GetCommentDate
      *                                   Default current comment.
      * @return string The comment's date.
      */
-    public function getCommentDate(string $format = '', int|\WP_Comment $commentId): string;
+    public function getCommentDate(string $format = '', int|\WP_Comment $commentId = 0): string;
 }

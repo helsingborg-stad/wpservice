@@ -19,5 +19,5 @@ interface WpUpdateNavMenuItem
      * @param bool $fireAfterHooks Whether to fire the after insert hooks. Default true.
      * @return int|\WP_Error The menu item's database ID or WP_Error object on failure.
      */
-    public function wpUpdateNavMenuItem(int $menuId, int $menuItemDbId, array $menuItemData = [], bool $fireAfterHooks = true): int|\WP_Error;
+    public function wpUpdateNavMenuItem(int $menuId = 0, int $menuItemDbId = 0, array $menuItemData = [], bool $fireAfterHooks = true): int|\WP_Error;
 }

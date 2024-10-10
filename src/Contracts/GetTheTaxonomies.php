@@ -23,5 +23,5 @@ interface GetTheTaxonomies
      * }
      * @return string[] List of taxonomies.
      */
-    public function getTheTaxonomies(int|\WP_Post $post, array $args = []): array;
+    public function getTheTaxonomies(int|\WP_Post $post = 0, array $args = []): array;
 }

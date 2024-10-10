@@ -21,5 +21,5 @@ interface RegisterBlockScriptHandle
      * @return string|false Script handle provided directly or created through
      *                      script's registration, or false on failure.
      */
-    public function registerBlockScriptHandle(array $metadata, string $fieldName, int $index): string|false;
+    public function registerBlockScriptHandle(array $metadata, string $fieldName, int $index = 0): string|false;
 }

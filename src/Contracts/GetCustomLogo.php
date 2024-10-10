@@ -15,5 +15,5 @@ interface GetCustomLogo
      * @param int $blogId Optional. ID of the blog in question. Default is the ID of the current blog.
      * @return string Custom logo markup.
      */
-    public function getCustomLogo(int $blogId): string;
+    public function getCustomLogo(int $blogId = 0): string;
 }

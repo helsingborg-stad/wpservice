@@ -24,5 +24,5 @@ interface WpGetAttachmentMetadata
      * @type int    $filesize   File size of the attachment.
      * }
      */
-    public function wpGetAttachmentMetadata(int $attachmentId, bool $unfiltered = false): array|false;
+    public function wpGetAttachmentMetadata(int $attachmentId = 0, bool $unfiltered = false): array|false;
 }

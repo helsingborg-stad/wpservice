@@ -16,5 +16,5 @@ interface WpGetAssociatedNavMenuItems
      *                            of the tax that $object_id belongs to. Default empty.
      * @return int[] The array of menu item IDs; empty array if none.
      */
-    public function wpGetAssociatedNavMenuItems(int $objectId, string $objectType = 'post_type', string $taxonomy = ''): array;
+    public function wpGetAssociatedNavMenuItems(int $objectId = 0, string $objectType = 'post_type', string $taxonomy = ''): array;
 }

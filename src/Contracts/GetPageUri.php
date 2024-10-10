@@ -15,5 +15,5 @@ interface GetPageUri
      * @param WP_Post|object|int $page Optional. Page ID or WP_Post object. Default is global $post.
      * @return string|false Page URI, false on error.
      */
-    public function getPageUri(int|object $page): string|false;
+    public function getPageUri(int|object $page = 0): string|false;
 }

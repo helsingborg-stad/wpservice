@@ -18,5 +18,5 @@ interface GetCommentTime
      *                                   Default current comment.
      * @return string The formatted time.
      */
-    public function getCommentTime(string $format = '', bool $gmt = false, bool $translate = true, int|\WP_Comment $commentId): string;
+    public function getCommentTime(string $format = '', bool $gmt = false, bool $translate = true, int|\WP_Comment $commentId = 0): string;
 }

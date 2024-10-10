@@ -12,5 +12,5 @@ interface NextCommentsLink
      * @param string $label    Optional. Label for link text. Default empty.
      * @param int $maxPage Optional. Max page. Default 0.
      */
-    public function nextCommentsLink(string $label = '', int $maxPage): void;
+    public function nextCommentsLink(string $label = '', int $maxPage = 0): void;
 }

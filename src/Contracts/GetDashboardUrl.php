@@ -20,5 +20,5 @@ interface GetDashboardUrl
      *                        and is_ssl(). 'http' or 'https' can be passed to force those schemes.
      * @return string Dashboard URL link with optional path appended.
      */
-    public function getDashboardUrl(int $userId, string $path = '', string $scheme = 'admin'): string;
+    public function getDashboardUrl(int $userId = 0, string $path = '', string $scheme = 'admin'): string;
 }

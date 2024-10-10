@@ -14,5 +14,5 @@ interface GetEditProfileUrl
      *                        and is_ssl(). 'http' or 'https' can be passed to force those schemes.
      * @return string Dashboard URL link with optional path appended.
      */
-    public function getEditProfileUrl(int $userId, string $scheme = 'admin'): string;
+    public function getEditProfileUrl(int $userId = 0, string $scheme = 'admin'): string;
 }

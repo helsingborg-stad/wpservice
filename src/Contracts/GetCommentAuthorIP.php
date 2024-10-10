@@ -14,5 +14,5 @@ interface GetCommentAuthorIP
      *                                   Default current comment.
      * @return string Comment author's IP address, or an empty string if it's not available.
      */
-    public function getCommentAuthorIP(int|\WP_Comment $commentId): string;
+    public function getCommentAuthorIP(int|\WP_Comment $commentId = 0): string;
 }

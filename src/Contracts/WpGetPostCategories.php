@@ -23,5 +23,5 @@ interface WpGetPostCategories
      *                        is 'ids', an array of category IDs. If `$fields` is 'names', an array of category names.
      *                        WP_Error object if 'category' taxonomy doesn't exist.
      */
-    public function wpGetPostCategories(int $postId, array $args = []): array|\WP_Error;
+    public function wpGetPostCategories(int $postId = 0, array $args = []): array|\WP_Error;
 }

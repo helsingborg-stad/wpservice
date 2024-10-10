@@ -21,5 +21,5 @@ interface WpSetPostTerms
      *                               replace the terms with the new terms. Default false.
      * @return array|false|\WP_Error Array of term taxonomy IDs of affected terms. WP_Error or false on failure.
      */
-    public function wpSetPostTerms(int $postId, string|array $terms = '', string $taxonomy = 'post_tag', bool $append = false): array|false|\WP_Error;
+    public function wpSetPostTerms(int $postId = 0, string|array $terms = '', string $taxonomy = 'post_tag', bool $append = false): array|false|\WP_Error;
 }

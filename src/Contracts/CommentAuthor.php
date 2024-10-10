@@ -13,5 +13,5 @@ interface CommentAuthor
      * @param int|\WP_Comment $commentId Optional. WP_Comment or the ID of the comment for which to print the author.
      *                                   Default current comment.
      */
-    public function commentAuthor(int|\WP_Comment $commentId): void;
+    public function commentAuthor(int|\WP_Comment $commentId = 0): void;
 }

@@ -13,5 +13,5 @@ interface GetTheTitleRss
      * @param int|\WP_Post $post Optional. Post ID or WP_Post object. Default is global $post.
      * @return string Current post title.
      */
-    public function getTheTitleRss(int|\WP_Post $post): string;
+    public function getTheTitleRss(int|\WP_Post $post = 0): string;
 }

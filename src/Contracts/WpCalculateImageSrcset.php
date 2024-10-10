@@ -20,5 +20,5 @@ interface WpCalculateImageSrcset
      * @param int $attachmentId Optional. The image attachment ID. Default 0.
      * @return string|false The 'srcset' attribute value. False on error or when only one source exists.
      */
-    public function wpCalculateImageSrcset(array $sizeArray, string $imageSrc, array $imageMeta, int $attachmentId): string|false;
+    public function wpCalculateImageSrcset(array $sizeArray, string $imageSrc, array $imageMeta, int $attachmentId = 0): string|false;
 }

@@ -15,5 +15,5 @@ interface CommentsNumber
      * @param string|false $more Optional. Text for more than one comment. Default false.
      * @param int|\WP_Post $post Optional. Post ID or WP_Post object. Default is the global `$post`.
      */
-    public function commentsNumber(string|false $zero = false, string|false $one = false, string|false $more = false, int|\WP_Post $post): void;
+    public function commentsNumber(string|false $zero = false, string|false $one = false, string|false $more = false, int|\WP_Post $post = 0): void;
 }

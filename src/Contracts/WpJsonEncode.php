@@ -18,5 +18,5 @@ interface WpJsonEncode
  *                     greater than 0. Default 512.
  * @return string|false The JSON encoded string, or false if it cannot be encoded.
  */
-public function wpJsonEncode(mixed $value, int $flags, int $depth = 512): string|false;
+public function wpJsonEncode(mixed $value, int $flags = 0, int $depth = 512): string|false;
 }

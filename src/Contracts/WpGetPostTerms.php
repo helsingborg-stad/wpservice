@@ -21,5 +21,5 @@ interface WpGetPostTerms
      * @return array|\WP_Error Array of WP_Term objects on success or empty array if no terms were found.
      *                        WP_Error object if `$taxonomy` doesn't exist.
      */
-    public function wpGetPostTerms(int $postId, string|array $taxonomy = 'post_tag', array $args = []): array|\WP_Error;
+    public function wpGetPostTerms(int $postId = 0, string|array $taxonomy = 'post_tag', array $args = []): array|\WP_Error;
 }

@@ -16,5 +16,5 @@ interface CommentText
      *                                   Default current comment.
      * @param array $args       Optional. An array of arguments. Default empty array.
      */
-    public function commentText(int|\WP_Comment $commentId, array $args = []): void;
+    public function commentText(int|\WP_Comment $commentId = 0, array $args = []): void;
 }

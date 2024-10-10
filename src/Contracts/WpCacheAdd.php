@@ -20,5 +20,5 @@ interface WpCacheAdd
      *                           Default 0 (no expiration).
      * @return bool True on success, false if cache key and group already exist.
      */
-    public function wpCacheAdd(int|string $key, mixed $data, string $group = '', int $expire): bool;
+    public function wpCacheAdd(int|string $key, mixed $data, string $group = '', int $expire = 0): bool;
 }

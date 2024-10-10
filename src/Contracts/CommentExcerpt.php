@@ -13,5 +13,5 @@ interface CommentExcerpt
      * @param int|\WP_Comment $commentId Optional. WP_Comment or ID of the comment for which to print the excerpt.
      *                                   Default current comment.
      */
-    public function commentExcerpt(int|\WP_Comment $commentId): void;
+    public function commentExcerpt(int|\WP_Comment $commentId = 0): void;
 }

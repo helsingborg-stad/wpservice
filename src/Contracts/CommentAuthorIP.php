@@ -13,5 +13,5 @@ interface CommentAuthorIP
      * @param int|\WP_Comment $commentId Optional. WP_Comment or the ID of the comment for which to print the author's IP address.
      *                                   Default current comment.
      */
-    public function commentAuthorIP(int|\WP_Comment $commentId): void;
+    public function commentAuthorIP(int|\WP_Comment $commentId = 0): void;
 }

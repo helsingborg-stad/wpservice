@@ -18,5 +18,5 @@ interface GetCommentText
      * @param array $args       Optional. An array of arguments. Default empty array.
      * @return string The comment content.
      */
-    public function getCommentText(int|\WP_Comment $commentId, array $args = []): string;
+    public function getCommentText(int|\WP_Comment $commentId = 0, array $args = []): string;
 }

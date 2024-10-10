@@ -27,5 +27,5 @@ interface GetCommentAuthorUrlLink
      *                                  Default is the current comment.
      * @return string The HTML link between the $before and $after parameters.
      */
-    public function getCommentAuthorUrlLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment $comment): string;
+    public function getCommentAuthorUrlLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment $comment = 0): string;
 }

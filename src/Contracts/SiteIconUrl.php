@@ -13,5 +13,5 @@ interface SiteIconUrl
      * @param string $url     Optional. Fallback url if no site icon is found. Default empty.
      * @param int $blogId Optional. ID of the blog to get the site icon for. Default current blog.
      */
-    public function siteIconUrl(int $size = 512, string $url = '', int $blogId): void;
+    public function siteIconUrl(int $size = 512, string $url = '', int $blogId = 0): void;
 }

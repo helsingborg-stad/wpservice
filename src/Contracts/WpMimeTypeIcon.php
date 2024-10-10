@@ -14,5 +14,5 @@ interface WpMimeTypeIcon
      * @param string $preferredExt File format to prefer in return. Default '.png'.
      * @return string|false Icon, false otherwise.
      */
-    public function wpMimeTypeIcon(string|int $mime, string $preferredExt = '.png'): string|false;
+    public function wpMimeTypeIcon(string|int $mime = 0, string $preferredExt = '.png'): string|false;
 }

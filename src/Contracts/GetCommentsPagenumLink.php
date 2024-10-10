@@ -15,5 +15,5 @@ interface GetCommentsPagenumLink
      * @param int $maxPage Optional. The maximum number of comment pages. Default 0.
      * @return string The comments page number link URL.
      */
-    public function getCommentsPagenumLink(int $pagenum = 1, int $maxPage): string;
+    public function getCommentsPagenumLink(int $pagenum = 1, int $maxPage = 0): string;
 }

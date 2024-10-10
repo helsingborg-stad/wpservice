@@ -11,5 +11,5 @@ interface RefreshBlogDetails
      *
      * @param int $blogId Optional. Blog ID. Defaults to current blog.
      */
-    public function refreshBlogDetails(int $blogId): void;
+    public function refreshBlogDetails(int $blogId = 0): void;
 }

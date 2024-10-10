@@ -14,5 +14,5 @@ interface GetCommentAuthorEmail
      *                                   Default current comment.
      * @return string The current comment author's email
      */
-    public function getCommentAuthorEmail(int|\WP_Comment $commentId): string;
+    public function getCommentAuthorEmail(int|\WP_Comment $commentId = 0): string;
 }

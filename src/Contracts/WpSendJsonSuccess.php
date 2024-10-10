@@ -15,5 +15,5 @@ interface WpSendJsonSuccess
  * @param int $statusCode Optional. The HTTP status code to output. Default null.
  * @param int $flags       Optional. Options to be passed to json_encode(). Default 0.
  */
-public function wpSendJsonSuccess(mixed $value = null, int $statusCode = null, int $flags): void;
+public function wpSendJsonSuccess(mixed $value = null, int $statusCode = null, int $flags = 0): void;
 }

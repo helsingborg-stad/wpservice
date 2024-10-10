@@ -25,5 +25,5 @@ interface WpDeletePost
      *                           Default false.
      * @return \WP_Post|false|null Post data on success, false or null on failure.
      */
-    public function wpDeletePost(int $postId, bool $forceDelete = false): \WP_Post|false|null;
+    public function wpDeletePost(int $postId = 0, bool $forceDelete = false): \WP_Post|false|null;
 }

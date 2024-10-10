@@ -15,5 +15,5 @@ interface WpImageSrcGetDimensions
      * @return array|false Array with first element being the width and second element being the height,
      *                     or false if dimensions cannot be determined.
      */
-    public function wpImageSrcGetDimensions(string $imageSrc, array $imageMeta, int $attachmentId): array|false;
+    public function wpImageSrcGetDimensions(string $imageSrc, array $imageMeta, int $attachmentId = 0): array|false;
 }

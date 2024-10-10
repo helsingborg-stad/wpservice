@@ -16,5 +16,5 @@ interface GetCommentExcerpt
      *                                   Default current comment.
      * @return string The possibly truncated comment excerpt.
      */
-    public function getCommentExcerpt(int|\WP_Comment $commentId): string;
+    public function getCommentExcerpt(int|\WP_Comment $commentId = 0): string;
 }

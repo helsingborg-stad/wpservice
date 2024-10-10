@@ -19,5 +19,5 @@ interface RegisterBlockStyleHandle
      * @return string|false Style handle provided directly or created through
      *                      style's registration, or false on failure.
      */
-    public function registerBlockStyleHandle(array $metadata, string $fieldName, int $index): string|false;
+    public function registerBlockStyleHandle(array $metadata, string $fieldName, int $index = 0): string|false;
 }

@@ -19,5 +19,5 @@ interface WpCacheSetMultiple
      * @return bool[] Array of return values, grouped by key. Each value is either
      *                true on success, or false on failure.
      */
-    public function wpCacheSetMultiple(array $data, string $group = '', int $expire): array;
+    public function wpCacheSetMultiple(array $data, string $group = '', int $expire = 0): array;
 }

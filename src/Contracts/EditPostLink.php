@@ -16,5 +16,5 @@ interface EditPostLink
      * @param int|\WP_Post $post      Optional. Post ID or post object. Default is the global `$post`.
      * @param string $cssClass Optional. Add custom class to link. Default 'post-edit-link'.
      */
-    public function editPostLink(string $text = null, string $before = '', string $after = '', int|\WP_Post $post, string $cssClass = 'post-edit-link'): void;
+    public function editPostLink(string $text = null, string $before = '', string $after = '', int|\WP_Post $post = 0, string $cssClass = 'post-edit-link'): void;
 }

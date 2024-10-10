@@ -16,5 +16,5 @@ interface GetDeletePostLink
      * @param bool $forceDelete Optional. Whether to bypass Trash and force deletion. Default false.
      * @return string|void The delete post link URL for the given post.
      */
-    public function getDeletePostLink(int|\WP_Post $post, string $deprecated = '', bool $forceDelete = false): mixed;
+    public function getDeletePostLink(int|\WP_Post $post = 0, string $deprecated = '', bool $forceDelete = false): mixed;
 }

@@ -13,5 +13,5 @@ interface SpawnCron
      * @param int $gmtTime Optional. Unix timestamp (UTC). Default 0 (current time is used).
      * @return bool True if spawned, false if no events spawned.
      */
-    public function spawnCron(int $gmtTime): bool;
+    public function spawnCron(int $gmtTime = 0): bool;
 }

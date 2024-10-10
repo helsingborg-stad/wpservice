@@ -13,5 +13,5 @@ interface CommentAuthorLink
      * @param int|\WP_Comment $commentId Optional. WP_Comment or the ID of the comment for which to print the author's link.
      *                                   Default current comment.
      */
-    public function commentAuthorLink(int|\WP_Comment $commentId): void;
+    public function commentAuthorLink(int|\WP_Comment $commentId = 0): void;
 }

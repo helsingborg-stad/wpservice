@@ -24,5 +24,5 @@ interface WpLatestCommentsDraftOrPostTitle
      * @param int|\WP_Post $post Optional. Post ID or WP_Post object. Default is global $post.
      * @return string The post title if set; "(no title)" if no title is set.
      */
-    public function wpLatestCommentsDraftOrPostTitle(int|\WP_Post $post): string;
+    public function wpLatestCommentsDraftOrPostTitle(int|\WP_Post $post = 0): string;
 }

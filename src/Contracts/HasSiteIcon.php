@@ -12,5 +12,5 @@ interface HasSiteIcon
      * @param int $blogId Optional. ID of the blog in question. Default current blog.
      * @return bool Whether the site has a site icon or not.
      */
-    public function hasSiteIcon(int $blogId): bool;
+    public function hasSiteIcon(int $blogId = 0): bool;
 }

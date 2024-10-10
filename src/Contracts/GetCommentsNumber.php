@@ -13,5 +13,5 @@ interface GetCommentsNumber
      * @return string|int If the post exists, a numeric string representing the number of comments
      *                    the post has, otherwise 0.
      */
-    public function getCommentsNumber(int|\WP_Post $post): string|int;
+    public function getCommentsNumber(int|\WP_Post $post = 0): string|int;
 }

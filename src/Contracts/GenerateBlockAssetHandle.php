@@ -18,5 +18,5 @@ interface GenerateBlockAssetHandle
      *                           Default 0.
      * @return string Generated asset name for the block's field.
      */
-    public function generateBlockAssetHandle(string $blockName, string $fieldName, int $index): string;
+    public function generateBlockAssetHandle(string $blockName, string $fieldName, int $index = 0): string;
 }

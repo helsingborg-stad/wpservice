@@ -20,5 +20,5 @@ interface WpCacheReplace
      *                           Default 0 (no expiration).
      * @return bool True if contents were replaced, false if original value does not exist.
      */
-    public function wpCacheReplace(int|string $key, mixed $data, string $group = '', int $expire): bool;
+    public function wpCacheReplace(int|string $key, mixed $data, string $group = '', int $expire = 0): bool;
 }
