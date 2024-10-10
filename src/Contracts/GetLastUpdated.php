@@ -17,5 +17,5 @@ interface GetLastUpdated
      * @param int $quantity   Optional. The maximum number of blogs to retrieve. Default 40.
      * @return array The list of blogs.
      */
-    public function getLastUpdated(mixed $deprecated = '', int $start = 0, int $quantity = 40): array;
+    public function getLastUpdated(mixed $deprecated = '', int $start, int $quantity = 40): array;
 }

@@ -14,5 +14,5 @@ interface CommentTime
      * @param int|\WP_Comment $commentId Optional. WP_Comment or ID of the comment for which to print the time.
      *                                   Default current comment.
      */
-    public function commentTime(string $format = '', int|\WP_Comment $commentId = 0): void;
+    public function commentTime(string $format = '', int|\WP_Comment $commentId): void;
 }

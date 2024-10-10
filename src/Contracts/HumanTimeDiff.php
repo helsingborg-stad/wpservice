@@ -17,5 +17,5 @@ interface HumanTimeDiff
      * @param int $to   Optional. Unix timestamp to end the time difference. Default becomes time() if not set.
      * @return string Human-readable time difference.
      */
-    public function humanTimeDiff(int $from, int $to = 0): string;
+    public function humanTimeDiff(int $from, int $to): string;
 }

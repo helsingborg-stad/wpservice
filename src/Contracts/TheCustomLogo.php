@@ -11,5 +11,5 @@ interface TheCustomLogo
      *
      * @param int $blogId Optional. ID of the blog in question. Default is the ID of the current blog.
      */
-    public function theCustomLogo(int $blogId = 0): void;
+    public function theCustomLogo(int $blogId): void;
 }

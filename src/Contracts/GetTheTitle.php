@@ -16,5 +16,5 @@ interface GetTheTitle
      * @param int|\WP_Post $post Optional. Post ID or WP_Post object. Default is global $post.
      * @return string
      */
-    public function getTheTitle(int|\WP_Post $post = 0): string;
+    public function getTheTitle(int|\WP_Post $post): string;
 }

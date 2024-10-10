@@ -19,5 +19,5 @@ interface GetEditPostLink
      * @return string|null The edit post link for the given post. Null if the post type does not exist
      *                     or does not allow an editing UI.
      */
-    public function getEditPostLink(int|\WP_Post $post = 0, string $context = 'display'): string|null;
+    public function getEditPostLink(int|\WP_Post $post, string $context = 'display'): string|null;
 }

@@ -19,5 +19,5 @@ interface RegisterBlockScriptModuleId
      *                           items passed. Default 0.
      * @return string|false Script module ID or false on failure.
      */
-    public function registerBlockScriptModuleId(array $metadata, string $fieldName, int $index = 0): string|false;
+    public function registerBlockScriptModuleId(array $metadata, string $fieldName, int $index): string|false;
 }

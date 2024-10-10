@@ -13,5 +13,5 @@ interface BlockCoreNavigationSubmenuBuildCssFontSizes
  * @param array $context Navigation block context.
  * @return array Font size CSS classes and inline styles.
  */
-public function blockCoreNavigationSubmenuBuildCssFontSizes(mixed $context): array;
+public function blockCoreNavigationSubmenuBuildCssFontSizes(array $context): array;
 }

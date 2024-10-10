@@ -15,5 +15,5 @@ interface NumberFormatI18n
      * @param int $decimals Optional. Precision of the number of decimal places. Default 0.
      * @return string Converted number in string format.
      */
-    public function numberFormatI18n(float $number, int $decimals = 0): string;
+    public function numberFormatI18n(float $number, int $decimals): string;
 }

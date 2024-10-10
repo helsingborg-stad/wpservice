@@ -17,5 +17,5 @@ interface StylesForBlockCoreSearch
      *
      * @return array Style HTML attribute.
      */
-    public function stylesForBlockCoreSearch(mixed $attributes): array;
+    public function stylesForBlockCoreSearch(array $attributes): array;
 }

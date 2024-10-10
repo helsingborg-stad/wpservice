@@ -681,7 +681,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function editLink(int $linkId = 0): int|\WP_Error
+    public function editLink(int $linkId): int|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -702,7 +702,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetLinkCats(int $linkId = 0): array
+    public function wpGetLinkCats(int $linkId): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -723,7 +723,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpSetLinkCats(int $linkId = 0, array $linkCategories = []): void
+    public function wpSetLinkCats(int $linkId, array $linkCategories = []): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -1101,7 +1101,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function verifyFileMd5(string $filename, mixed $expectedMd5): bool|\WP_Error
+    public function verifyFileMd5(string $filename, string $expectedMd5): bool|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -1423,7 +1423,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function mediaHandleSideload(array $fileArray, int $postId = 0, string $desc = null, array $postData = []): int|\WP_Error
+    public function mediaHandleSideload(array $fileArray, int $postId, string $desc = null, array $postData = []): int|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -1465,7 +1465,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function mediaSideloadImage(string $file, int $postId = 0, string $desc = null, string $returnType = 'html'): string|int|\WP_Error
+    public function mediaSideloadImage(string $file, int $postId, string $desc = null, string $returnType = 'html'): string|int|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -2305,14 +2305,14 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpSaveNavMenuItems(int $menuId = 0, array $menuData = []): array
+    public function wpSaveNavMenuItems(int $menuId, array $menuData = []): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpGetNavMenuToEdit(int $menuId = 0): string|\WP_Error
+    public function wpGetNavMenuToEdit(int $menuId): string|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -3264,7 +3264,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCreateCategory(int|string $catName, int $categoryParent = 0): int|\WP_Error
+    public function wpCreateCategory(int|string $catName, int $categoryParent): int|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -3327,28 +3327,28 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCategoryChecklist(int $postId = 0, int $descendantsAndSelf = 0, array|false $selectedCats = false, array|false $popularCats = false, \Walker $walker = null, bool $checkedOntop = true): void
+    public function wpCategoryChecklist(int $postId, int $descendantsAndSelf, array|false $selectedCats = false, array|false $popularCats = false, \Walker $walker = null, bool $checkedOntop = true): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpTermsChecklist(int $postId = 0, array|string $args = []): string
+    public function wpTermsChecklist(int $postId, array|string $args = []): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpPopularTermsChecklist(string $taxonomy, int $defaultTerm = 0, int $number = 10, bool $display = true): array
+    public function wpPopularTermsChecklist(string $taxonomy, int $defaultTerm, int $number = 10, bool $display = true): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpLinkCategoryChecklist(int $linkId = 0): void
+    public function wpLinkCategoryChecklist(int $linkId): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -3390,7 +3390,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function touchTime(int|bool $edit = 1, int|bool $forPost = 1, int $tabIndex = 0, int|bool $multi = 0): void
+    public function touchTime(int|bool $edit = 1, int|bool $forPost = 1, int $tabIndex, int|bool $multi): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -3404,7 +3404,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function parentDropdown(int $defaultPage = 0, int $parentPage = 0, int $level = 0, int|\WP_Post $post = null): mixed
+    public function parentDropdown(int $defaultPage, int $parentPage, int $level, int|\WP_Post $post = null): mixed
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -3915,7 +3915,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function editUser(int $userId = 0): int|\WP_Error
+    public function editUser(int $userId): int|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -4517,7 +4517,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpRenderElementsClassName(mixed $blockContent, mixed $block): string
+    public function wpRenderElementsClassName(string $blockContent, array $block): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -4650,7 +4650,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function generateBlockAssetHandle(string $blockName, string $fieldName, int $index = 0): string
+    public function generateBlockAssetHandle(string $blockName, string $fieldName, int $index): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -4664,21 +4664,21 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function registerBlockScriptModuleId(array $metadata, string $fieldName, int $index = 0): string|false
+    public function registerBlockScriptModuleId(array $metadata, string $fieldName, int $index): string|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function registerBlockScriptHandle(array $metadata, string $fieldName, int $index = 0): string|false
+    public function registerBlockScriptHandle(array $metadata, string $fieldName, int $index): string|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function registerBlockStyleHandle(array $metadata, string $fieldName, int $index = 0): string|false
+    public function registerBlockStyleHandle(array $metadata, string $fieldName, int $index): string|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -5336,21 +5336,21 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function blockCoreHomeLinkBuildCssColors(mixed $context): array
+    public function blockCoreHomeLinkBuildCssColors(array $context): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function blockCoreHomeLinkBuildCssFontSizes(mixed $context): array
+    public function blockCoreHomeLinkBuildCssFontSizes(array $context): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function blockCoreHomeLinkBuildLiWrapperAttributes(mixed $context): string
+    public function blockCoreHomeLinkBuildLiWrapperAttributes(array $context): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -5420,7 +5420,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpLatestCommentsDraftOrPostTitle(int|\WP_Post $post = 0): string
+    public function wpLatestCommentsDraftOrPostTitle(int|\WP_Post $post): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -5532,14 +5532,14 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function blockCoreNavigationLinkBuildCssColors(mixed $context, mixed $attributes, mixed $isSubMenu = false): array
+    public function blockCoreNavigationLinkBuildCssColors(array $context, array $attributes, bool $isSubMenu = false): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function blockCoreNavigationLinkBuildCssFontSizes(mixed $context): array
+    public function blockCoreNavigationLinkBuildCssFontSizes(array $context): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -5595,7 +5595,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function blockCoreNavigationSubmenuBuildCssFontSizes(mixed $context): array
+    public function blockCoreNavigationSubmenuBuildCssFontSizes(array $context): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -5770,21 +5770,21 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function blockCorePageListBuildCssColors(mixed $attributes, mixed $context): array
+    public function blockCorePageListBuildCssColors(array $attributes, array $context): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function blockCorePageListBuildCssFontSizes(mixed $context): array
+    public function blockCorePageListBuildCssFontSizes(array $context): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function blockCorePageListRenderNestedPageList(bool $openSubmenusOnClick, bool $showSubmenuIcons, bool $isNavigationChild, array $nestedPages, bool $isNested, array $activePageAncestorIds = [], array $colors = [], int $depth = 0): string
+    public function blockCorePageListRenderNestedPageList(bool $openSubmenusOnClick, bool $showSubmenuIcons, bool $isNavigationChild, array $nestedPages, bool $isNested, array $activePageAncestorIds = [], array $colors = [], int $depth): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -5826,7 +5826,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function renderBlockCorePostAuthorBiography(mixed $attributes, mixed $content, mixed $block): string
+    public function renderBlockCorePostAuthorBiography(array $attributes, string $content, \WP_Block $block): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -5840,7 +5840,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function renderBlockCorePostAuthorName(mixed $attributes, mixed $content, mixed $block): string
+    public function renderBlockCorePostAuthorName(array $attributes, string $content, \WP_Block $block): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -5854,7 +5854,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function renderBlockCorePostAuthor(mixed $attributes, mixed $content, mixed $block): string
+    public function renderBlockCorePostAuthor(array $attributes, string $content, \WP_Block $block): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -6197,7 +6197,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function stylesForBlockCoreSearch(mixed $attributes): array
+    public function stylesForBlockCoreSearch(array $attributes): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -6498,35 +6498,35 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCacheAdd(int|string $key, mixed $data, string $group = '', int $expire = 0): bool
+    public function wpCacheAdd(int|string $key, mixed $data, string $group = '', int $expire): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpCacheAddMultiple(array $data, string $group = '', int $expire = 0): array
+    public function wpCacheAddMultiple(array $data, string $group = '', int $expire): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpCacheReplace(int|string $key, mixed $data, string $group = '', int $expire = 0): bool
+    public function wpCacheReplace(int|string $key, mixed $data, string $group = '', int $expire): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpCacheSet(int|string $key, mixed $data, string $group = '', int $expire = 0): bool
+    public function wpCacheSet(int|string $key, mixed $data, string $group = '', int $expire): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpCacheSetMultiple(array $data, string $group = '', int $expire = 0): array
+    public function wpCacheSetMultiple(array $data, string $group = '', int $expire): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -6820,7 +6820,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function categoryDescription(int $category = 0): string
+    public function categoryDescription(int $category): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -6883,14 +6883,14 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getTheTags(int|\WP_Post $post = 0): array|false|\WP_Error
+    public function getTheTags(int|\WP_Post $post): array|false|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getTheTagList(string $before = '', string $sep = '', string $after = '', int $postId = 0): string|false|\WP_Error
+    public function getTheTagList(string $before = '', string $sep = '', string $after = '', int $postId): string|false|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -6904,14 +6904,14 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function tagDescription(int $tag = 0): string
+    public function tagDescription(int $tag): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function termDescription(int $term = 0, null $deprecated = null): string
+    public function termDescription(int $term, null $deprecated = null): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -7009,7 +7009,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function catIsAncestorOf(mixed $cat1, mixed $cat2): bool
+    public function catIsAncestorOf(int|object $cat1, int|object $cat2): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -7093,28 +7093,28 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentAuthor(int|\WP_Comment $commentId = 0): string
+    public function getCommentAuthor(int|\WP_Comment $commentId): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function commentAuthor(int|\WP_Comment $commentId = 0): void
+    public function commentAuthor(int|\WP_Comment $commentId): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getCommentAuthorEmail(int|\WP_Comment $commentId = 0): string
+    public function getCommentAuthorEmail(int|\WP_Comment $commentId): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function commentAuthorEmail(int|\WP_Comment $commentId = 0): void
+    public function commentAuthorEmail(int|\WP_Comment $commentId): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -7135,56 +7135,56 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentAuthorLink(int|\WP_Comment $commentId = 0): string
+    public function getCommentAuthorLink(int|\WP_Comment $commentId): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function commentAuthorLink(int|\WP_Comment $commentId = 0): void
+    public function commentAuthorLink(int|\WP_Comment $commentId): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getCommentAuthorIP(int|\WP_Comment $commentId = 0): string
+    public function getCommentAuthorIP(int|\WP_Comment $commentId): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function commentAuthorIP(int|\WP_Comment $commentId = 0): void
+    public function commentAuthorIP(int|\WP_Comment $commentId): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getCommentAuthorUrl(int|\WP_Comment $commentId = 0): string
+    public function getCommentAuthorUrl(int|\WP_Comment $commentId): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function commentAuthorUrl(int|\WP_Comment $commentId = 0): void
+    public function commentAuthorUrl(int|\WP_Comment $commentId): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getCommentAuthorUrlLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment $comment = 0): string
+    public function getCommentAuthorUrlLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment $comment): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function commentAuthorUrlLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment $comment = 0): void
+    public function commentAuthorUrlLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment $comment): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -7205,28 +7205,28 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentDate(string $format = '', int|\WP_Comment $commentId = 0): string
+    public function getCommentDate(string $format = '', int|\WP_Comment $commentId): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function commentDate(string $format = '', int|\WP_Comment $commentId = 0): void
+    public function commentDate(string $format = '', int|\WP_Comment $commentId): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getCommentExcerpt(int|\WP_Comment $commentId = 0): string
+    public function getCommentExcerpt(int|\WP_Comment $commentId): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function commentExcerpt(int|\WP_Comment $commentId = 0): void
+    public function commentExcerpt(int|\WP_Comment $commentId): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -7254,70 +7254,70 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentsLink(int|\WP_Post $post = 0): string
+    public function getCommentsLink(int|\WP_Post $post): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function commentsLink(string $deprecated = '', mixed $deprecated2 = ''): void
+    public function commentsLink(string $deprecated = '', string $deprecated2 = ''): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getCommentsNumber(int|\WP_Post $post = 0): string|int
+    public function getCommentsNumber(int|\WP_Post $post): string|int
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function commentsNumber(string|false $zero = false, string|false $one = false, string|false $more = false, int|\WP_Post $post = 0): void
+    public function commentsNumber(string|false $zero = false, string|false $one = false, string|false $more = false, int|\WP_Post $post): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getCommentsNumberText(string|false $zero = false, string|false $one = false, string|false $more = false, int|\WP_Post $post = 0): string
+    public function getCommentsNumberText(string|false $zero = false, string|false $one = false, string|false $more = false, int|\WP_Post $post): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getCommentText(int|\WP_Comment $commentId = 0, array $args = []): string
+    public function getCommentText(int|\WP_Comment $commentId, array $args = []): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function commentText(int|\WP_Comment $commentId = 0, array $args = []): void
+    public function commentText(int|\WP_Comment $commentId, array $args = []): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getCommentTime(string $format = '', bool $gmt = false, bool $translate = true, int|\WP_Comment $commentId = 0): string
+    public function getCommentTime(string $format = '', bool $gmt = false, bool $translate = true, int|\WP_Comment $commentId): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function commentTime(string $format = '', int|\WP_Comment $commentId = 0): void
+    public function commentTime(string $format = '', int|\WP_Comment $commentId): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getCommentType(int|\WP_Comment $commentId = 0): string
+    public function getCommentType(int|\WP_Comment $commentId): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -7513,7 +7513,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentCount(int $postId = 0): array
+    public function getCommentCount(int $postId): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -7632,7 +7632,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCountComments(int $postId = 0): \stdClass
+    public function wpCountComments(int $postId): \stdClass
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -7821,7 +7821,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function genericPing(int $postId = 0): int
+    public function genericPing(int $postId): int
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -7982,7 +7982,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function spawnCron(int $gmtTime = 0): bool
+    public function spawnCron(int $gmtTime): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -8367,7 +8367,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getTheTitleRss(int|\WP_Post $post = 0): string
+    public function getTheTitleRss(int|\WP_Post $post): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -8654,7 +8654,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function utf8UriEncode(mixed $utf8String, int $length = 0, bool $encodeAsciiCharacters = false): string
+    public function utf8UriEncode(string $utf8String, int $length, bool $encodeAsciiCharacters = false): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -8787,7 +8787,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function untrailingslashit(mixed $value): string
+    public function untrailingslashit($value): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -8836,7 +8836,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function antispambot(string $emailAddress, int $hexEncoding = 0): string
+    public function antispambot(string $emailAddress, int $hexEncoding): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -8962,7 +8962,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function humanTimeDiff(int $from, int $to = 0): string
+    public function humanTimeDiff(int $from, int $to): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -9312,7 +9312,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function currentTime(string $type, int|bool $gmt = 0): int|string
+    public function currentTime(string $type, int|bool $gmt): int|string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -9361,14 +9361,14 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function numberFormatI18n(float $number, int $decimals = 0): string
+    public function numberFormatI18n(float $number, int $decimals): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function sizeFormat(int|string $bytes, int $decimals = 0): string|false
+    public function sizeFormat(int|string $bytes, int $decimals): string|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -9473,7 +9473,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function addQueryArg(mixed ...$args): string
+    public function addQueryArg(...$args): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -9823,28 +9823,28 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpJsonEncode(mixed $value, int $flags = 0, int $depth = 512): string|false
+    public function wpJsonEncode(mixed $value, int $flags, int $depth = 512): string|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpSendJson(mixed $response, int $statusCode = null, int $flags = 0): void
+    public function wpSendJson(mixed $response, int $statusCode = null, int $flags): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpSendJsonSuccess(mixed $value = null, int $statusCode = null, int $flags = 0): void
+    public function wpSendJsonSuccess(mixed $value = null, int $statusCode = null, int $flags): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpSendJsonError(mixed $value = null, int $statusCode = null, int $flags = 0): void
+    public function wpSendJsonError(mixed $value = null, int $statusCode = null, int $flags): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -10138,7 +10138,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpDebugBacktraceSummary(string $ignoreClass = null, int $skipFrames = 0, bool $pretty = true): string|array
+    public function wpDebugBacktraceSummary(string $ignoreClass = null, int $skipFrames, bool $pretty = true): string|array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -10299,7 +10299,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpPrivacyAnonymizeIp(string $ipAddr, mixed $ipv6Fallback = false): string
+    public function wpPrivacyAnonymizeIp(string $ipAddr, bool $ipv6Fallback = false): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -10474,7 +10474,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpLocalizeScript(string $handle, string $objectName, mixed $l10n): bool
+    public function wpLocalizeScript(string $handle, string $objectName, array $l10n): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -10691,42 +10691,42 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getSiteIconUrl(int $size = 512, string $url = '', int $blogId = 0): string
+    public function getSiteIconUrl(int $size = 512, string $url = '', int $blogId): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function siteIconUrl(int $size = 512, string $url = '', int $blogId = 0): void
+    public function siteIconUrl(int $size = 512, string $url = '', int $blogId): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function hasSiteIcon(int $blogId = 0): bool
+    public function hasSiteIcon(int $blogId): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function hasCustomLogo(int $blogId = 0): bool
+    public function hasCustomLogo(int $blogId): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getCustomLogo(int $blogId = 0): string
+    public function getCustomLogo(int $blogId): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function theCustomLogo(int $blogId = 0): void
+    public function theCustomLogo(int $blogId): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -11825,7 +11825,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getUserLocale(int|\WP_User $user = 0): string
+    public function getUserLocale(int|\WP_User $user): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -12140,7 +12140,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function thePermalink(int|\WP_Post $post = 0): void
+    public function thePermalink(int|\WP_Post $post): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -12168,21 +12168,21 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getThePermalink(int|\WP_Post $post = 0, bool $leavename = false): string|false
+    public function getThePermalink(int|\WP_Post $post, bool $leavename = false): string|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getPermalink(int|\WP_Post $post = 0, bool $leavename = false): string|false
+    public function getPermalink(int|\WP_Post $post, bool $leavename = false): string|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getPostPermalink(int|\WP_Post $post = 0, bool $leavename = false, bool $sample = false): string|false
+    public function getPostPermalink(int|\WP_Post $post, bool $leavename = false, bool $sample = false): string|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -12238,7 +12238,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostCommentsFeedLink(int $postId = 0, string $feed = ''): string
+    public function getPostCommentsFeedLink(int $postId, string $feed = ''): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -12350,28 +12350,28 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getEditPostLink(int|\WP_Post $post = 0, string $context = 'display'): string|null
+    public function getEditPostLink(int|\WP_Post $post, string $context = 'display'): string|null
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function editPostLink(string $text = null, string $before = '', string $after = '', int|\WP_Post $post = 0, string $cssClass = 'post-edit-link'): void
+    public function editPostLink(string $text = null, string $before = '', string $after = '', int|\WP_Post $post, string $cssClass = 'post-edit-link'): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getDeletePostLink(int|\WP_Post $post = 0, string $deprecated = '', bool $forceDelete = false): mixed
+    public function getDeletePostLink(int|\WP_Post $post, string $deprecated = '', bool $forceDelete = false): mixed
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getEditCommentLink(int|\WP_Comment $commentId = 0): mixed
+    public function getEditCommentLink(int|\WP_Comment $commentId): mixed
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -12385,7 +12385,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getEditBookmarkLink(int|\stdClass $link = 0): mixed
+    public function getEditBookmarkLink(int|\stdClass $link): mixed
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -12518,28 +12518,28 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getNextPostsPageLink(int $maxPage = 0): mixed
+    public function getNextPostsPageLink(int $maxPage): mixed
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function nextPosts(int $maxPage = 0, bool $display = true): mixed
+    public function nextPosts(int $maxPage, bool $display = true): mixed
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getNextPostsLink(string $label = null, int $maxPage = 0): mixed
+    public function getNextPostsLink(string $label = null, int $maxPage): mixed
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function nextPostsLink(string $label = null, int $maxPage = 0): void
+    public function nextPostsLink(string $label = null, int $maxPage): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -12630,21 +12630,21 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentsPagenumLink(int $pagenum = 1, int $maxPage = 0): string
+    public function getCommentsPagenumLink(int $pagenum = 1, int $maxPage): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getNextCommentsLink(string $label = '', int $maxPage = 0): mixed
+    public function getNextCommentsLink(string $label = '', int $maxPage): mixed
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function nextCommentsLink(string $label = '', int $maxPage = 0): void
+    public function nextCommentsLink(string $label = '', int $maxPage): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -12805,14 +12805,14 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getDashboardUrl(int $userId = 0, string $path = '', string $scheme = 'admin'): string
+    public function getDashboardUrl(int $userId, string $path = '', string $scheme = 'admin'): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getEditProfileUrl(int $userId = 0, string $scheme = 'admin'): string
+    public function getEditProfileUrl(int $userId, string $scheme = 'admin'): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -12833,7 +12833,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetShortlink(int $id = 0, string $context = 'post', bool $allowSlugs = true): string
+    public function wpGetShortlink(int $id, string $context = 'post', bool $allowSlugs = true): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -12994,7 +12994,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function timerStop(int|bool $display = 0, int $precision = 3): string
+    public function timerStop(int|bool $display, int $precision = 3): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -13267,7 +13267,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function addImageSize(string $name, int $width = 0, int $height = 0, bool|array $crop = false): void
+    public function addImageSize(string $name, int $width, int $height, bool|array $crop = false): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -13288,7 +13288,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function setPostThumbnailSize(int $width = 0, int $height = 0, bool|array $crop = false): void
+    public function setPostThumbnailSize(int $width, int $height, bool|array $crop = false): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -13302,7 +13302,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpConstrainDimensions(int $currentWidth, int $currentHeight, int $maxWidth = 0, int $maxHeight = 0): array
+    public function wpConstrainDimensions(int $currentWidth, int $currentHeight, int $maxWidth, int $maxHeight): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -13379,7 +13379,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCalculateImageSrcset(array $sizeArray, string $imageSrc, array $imageMeta, int $attachmentId = 0): string|false
+    public function wpCalculateImageSrcset(array $sizeArray, string $imageSrc, array $imageMeta, int $attachmentId): string|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -13393,21 +13393,21 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCalculateImageSizes(string|array $size, string|null $imageSrc = null, array|null $imageMeta = null, int $attachmentId = 0): string|false
+    public function wpCalculateImageSizes(string|array $size, string|null $imageSrc = null, array|null $imageMeta = null, int $attachmentId): string|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpImageFileMatchesImageMeta(string $imageLocation, array $imageMeta, int $attachmentId = 0): bool
+    public function wpImageFileMatchesImageMeta(string $imageLocation, array $imageMeta, int $attachmentId): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpImageSrcGetDimensions(string $imageSrc, array $imageMeta, int $attachmentId = 0): array|false
+    public function wpImageSrcGetDimensions(string $imageSrc, array $imageMeta, int $attachmentId): array|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -13659,7 +13659,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getAttachedMedia(string $type, int|\WP_Post $post = 0): array
+    public function getAttachedMedia(string $type, int|\WP_Post $post): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -13680,21 +13680,21 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostGallery(int|\WP_Post $post = 0, bool $html = true): string|array
+    public function getPostGallery(int|\WP_Post $post, bool $html = true): string|array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getPostGalleriesImages(int|\WP_Post $post = 0): array
+    public function getPostGalleriesImages(int|\WP_Post $post): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getPostGalleryImages(int|\WP_Post $post = 0): array
+    public function getPostGalleryImages(int|\WP_Post $post): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -13967,7 +13967,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function refreshBlogDetails(int $blogId = 0): void
+    public function refreshBlogDetails(int $blogId): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -13981,7 +13981,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function cleanSiteDetailsCache(int $siteId = 0): void
+    public function cleanSiteDetailsCache(int $siteId): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -14072,7 +14072,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getLastUpdated(mixed $deprecated = '', int $start = 0, int $quantity = 40): array
+    public function getLastUpdated(mixed $deprecated = '', int $start, int $quantity = 40): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -14149,7 +14149,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function removeUserFromBlog(int $userId, int $blogId = 0, int $reassign = 0): true|\WP_Error
+    public function removeUserFromBlog(int $userId, int $blogId, int $reassign): true|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -14856,7 +14856,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function isNavMenuItem(int $menuItemId = 0): bool
+    public function isNavMenuItem(int $menuItemId): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -14877,14 +14877,14 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpUpdateNavMenuObject(int $menuId = 0, array $menuData = []): int|\WP_Error
+    public function wpUpdateNavMenuObject(int $menuId, array $menuData = []): int|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpUpdateNavMenuItem(int $menuId = 0, int $menuItemDbId = 0, array $menuItemData = [], bool $fireAfterHooks = true): int|\WP_Error
+    public function wpUpdateNavMenuItem(int $menuId, int $menuItemDbId, array $menuItemData = [], bool $fireAfterHooks = true): int|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -14919,7 +14919,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetAssociatedNavMenuItems(int $objectId = 0, string $objectType = 'post_type', string $taxonomy = ''): array
+    public function wpGetAssociatedNavMenuItems(int $objectId, string $objectType = 'post_type', string $taxonomy = ''): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -15059,7 +15059,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function setTransient(string $transient, mixed $value, int $expiration = 0): bool
+    public function setTransient(string $transient, mixed $value, int $expiration): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -15185,7 +15185,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function setSiteTransient(string $transient, mixed $value, int $expiration = 0): bool
+    public function setSiteTransient(string $transient, mixed $value, int $expiration): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -15759,21 +15759,21 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getTheTitle(int|\WP_Post $post = 0): string
+    public function getTheTitle(int|\WP_Post $post): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function theGuid(int|\WP_Post $post = 0): void
+    public function theGuid(int|\WP_Post $post): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getTheGuid(int|\WP_Post $post = 0): string
+    public function getTheGuid(int|\WP_Post $post): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -15808,7 +15808,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function hasExcerpt(int|\WP_Post $post = 0): bool
+    public function hasExcerpt(int|\WP_Post $post): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -15899,14 +15899,14 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function theAttachmentLink(int|\WP_Post $post = 0, bool $fullsize = false, bool $deprecated = false, bool $permalink = false): void
+    public function theAttachmentLink(int|\WP_Post $post, bool $fullsize = false, bool $deprecated = false, bool $permalink = false): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpGetAttachmentLink(int|\WP_Post $post = 0, string|array $size = 'thumbnail', bool $permalink = false, bool $icon = false, string|false $text = false, array|string $attr = ''): string
+    public function wpGetAttachmentLink(int|\WP_Post $post, string|array $size = 'thumbnail', bool $permalink = false, bool $icon = false, string|false $text = false, array|string $attr = ''): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -15920,7 +15920,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getThePasswordForm(int|\WP_Post $post = 0): string
+    public function getThePasswordForm(int|\WP_Post $post): string
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -15955,7 +15955,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpListPostRevisions(int|\WP_Post $post = 0, string $type = 'all'): void
+    public function wpListPostRevisions(int|\WP_Post $post, string $type = 'all'): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -16235,7 +16235,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function setPostType(int $postId = 0, string $postType = 'post'): int|false
+    public function setPostType(int $postId, string $postType = 'post'): int|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -16319,28 +16319,28 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostCustom(int $postId = 0): mixed
+    public function getPostCustom(int $postId): mixed
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getPostCustomKeys(int $postId = 0): mixed
+    public function getPostCustomKeys(int $postId): mixed
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getPostCustomValues(string $key = '', int $postId = 0): array|null
+    public function getPostCustomValues(string $key = '', int $postId): array|null
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function isSticky(int $postId = 0): bool
+    public function isSticky(int $postId): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -16410,21 +16410,21 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpDeletePost(int $postId = 0, bool $forceDelete = false): \WP_Post|false|null
+    public function wpDeletePost(int $postId, bool $forceDelete = false): \WP_Post|false|null
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpTrashPost(int $postId = 0): \WP_Post|false|null
+    public function wpTrashPost(int $postId): \WP_Post|false|null
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpUntrashPost(int $postId = 0): \WP_Post|false|null
+    public function wpUntrashPost(int $postId): \WP_Post|false|null
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -16445,21 +16445,21 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetPostCategories(int $postId = 0, array $args = []): array|\WP_Error
+    public function wpGetPostCategories(int $postId, array $args = []): array|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpGetPostTags(int $postId = 0, array $args = []): array|\WP_Error
+    public function wpGetPostTags(int $postId, array $args = []): array|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpGetPostTerms(int $postId = 0, string|array $taxonomy = 'post_tag', array $args = []): array|\WP_Error
+    public function wpGetPostTerms(int $postId, string|array $taxonomy = 'post_tag', array $args = []): array|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -16515,28 +16515,28 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpAddPostTags(int $postId = 0, string|array $tags = ''): array|false|\WP_Error
+    public function wpAddPostTags(int $postId, string|array $tags = ''): array|false|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpSetPostTags(int $postId = 0, string|array $tags = '', bool $append = false): array|false|\WP_Error
+    public function wpSetPostTags(int $postId, string|array $tags = '', bool $append = false): array|false|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpSetPostTerms(int $postId = 0, string|array $terms = '', string $taxonomy = 'post_tag', bool $append = false): array|false|\WP_Error
+    public function wpSetPostTerms(int $postId, string|array $terms = '', string $taxonomy = 'post_tag', bool $append = false): array|false|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpSetPostCategories(int $postId = 0, array|int $postCategories = [], bool $append = false): array|false|\WP_Error
+    public function wpSetPostCategories(int $postId, array|int $postCategories = [], bool $append = false): array|false|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -16613,14 +16613,14 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPageHierarchy(array &$pages, int $pageId = 0): array
+    public function getPageHierarchy(array &$pages, int $pageId): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getPageUri(int|object $page = 0): string|false
+    public function getPageUri(int|object $page): string|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -16641,7 +16641,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpInsertAttachment(string|array $args, string|false $file = false, int $parentPostId = 0, bool $wpError = false, bool $fireAfterHooks = true): int|\WP_Error
+    public function wpInsertAttachment(string|array $args, string|false $file = false, int $parentPostId, bool $wpError = false, bool $fireAfterHooks = true): int|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -16662,7 +16662,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetAttachmentMetadata(int $attachmentId = 0, bool $unfiltered = false): array|false
+    public function wpGetAttachmentMetadata(int $attachmentId, bool $unfiltered = false): array|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -16676,21 +16676,21 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetAttachmentUrl(int $attachmentId = 0): string|false
+    public function wpGetAttachmentUrl(int $attachmentId): string|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpGetAttachmentCaption(int $postId = 0): string|false
+    public function wpGetAttachmentCaption(int $postId): string|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpGetAttachmentThumbUrl(int $postId = 0): string|false
+    public function wpGetAttachmentThumbUrl(int $postId): string|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -16711,7 +16711,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpMimeTypeIcon(string|int $mime = 0, string $preferredExt = '.png'): string|false
+    public function wpMimeTypeIcon(string|int $mime, string $preferredExt = '.png'): string|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -17810,7 +17810,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetPostAutosave(int $postId, int $userId = 0): \WP_Post|false
+    public function wpGetPostAutosave(int $postId, int $userId): \WP_Post|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -17880,21 +17880,21 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetPostRevisions(int|\WP_Post $post = 0, array|null $args = null): array
+    public function wpGetPostRevisions(int|\WP_Post $post, array|null $args = null): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpGetLatestRevisionIdAndTotalCount(int|\WP_Post $post = 0): array|\WP_Error
+    public function wpGetLatestRevisionIdAndTotalCount(int|\WP_Post $post): array|\WP_Error
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function wpGetPostRevisionsUrl(int|\WP_Post $post = 0): string|null
+    public function wpGetPostRevisionsUrl(int|\WP_Post $post): string|null
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -18769,7 +18769,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function termIsAncestorOf(mixed $term1, mixed $term2, string $taxonomy): bool
+    public function termIsAncestorOf(int|object $term1, int|object $term2, string $taxonomy): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -18965,14 +18965,14 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getTheTaxonomies(int|\WP_Post $post = 0, array $args = []): array
+    public function getTheTaxonomies(int|\WP_Post $post, array $args = []): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
     /**
      * @inheritDoc
      */
-    public function getPostTaxonomies(int|\WP_Post $post = 0): array
+    public function getPostTaxonomies(int|\WP_Post $post): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -18993,7 +18993,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getAncestors(int $objectId = 0, string $objectType = '', string $resourceType = ''): array
+    public function getAncestors(int $objectId, string $objectType = '', string $resourceType = ''): array
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -19896,7 +19896,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getUserOption(string $option, int $user = 0, string $deprecated = ''): mixed
+    public function getUserOption(string $option, int $user, string $deprecated = ''): mixed
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -19938,7 +19938,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function isUserMemberOfBlog(int $userId = 0, int $blogId = 0): bool
+    public function isUserMemberOfBlog(int $userId, int $blogId): bool
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -20015,7 +20015,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function setupUserdata(int $forUserId = 0): void
+    public function setupUserdata(int $forUserId): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -20603,7 +20603,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function confirmAnotherBlogSignup(string $domain, string $path, string $blogTitle, string $userName, string $userEmail = '', array $meta = [], int $blogId = 0): void
+    public function confirmAnotherBlogSignup(string $domain, string $path, string $blogTitle, string $userName, string $userEmail = '', array $meta = [], int $blogId): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
@@ -20659,7 +20659,7 @@ class WpServiceLazyDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function trackbackResponse(int|bool $error = 0, string $errorMessage = ''): void
+    public function trackbackResponse(int|bool $error, string $errorMessage = ''): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }

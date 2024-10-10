@@ -18,5 +18,5 @@ interface SetPostType
      *                          name a few. Default 'post'.
      * @return int|false Amount of rows changed. Should be 1 for success and 0 for failure.
      */
-    public function setPostType(int $postId = 0, string $postType = 'post'): int|false;
+    public function setPostType(int $postId, string $postType = 'post'): int|false;
 }

@@ -12,5 +12,5 @@ interface HasCustomLogo
      * @param int $blogId Optional. ID of the blog in question. Default is the ID of the current blog.
      * @return bool Whether the site has a custom logo or not.
      */
-    public function hasCustomLogo(int $blogId = 0): bool;
+    public function hasCustomLogo(int $blogId): bool;
 }

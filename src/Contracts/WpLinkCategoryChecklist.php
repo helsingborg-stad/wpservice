@@ -11,5 +11,5 @@ interface WpLinkCategoryChecklist
      *
      * @param int $linkId Optional. The link ID. Default 0.
      */
-    public function wpLinkCategoryChecklist(int $linkId = 0): void;
+    public function wpLinkCategoryChecklist(int $linkId): void;
 }

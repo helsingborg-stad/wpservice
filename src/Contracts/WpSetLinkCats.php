@@ -12,5 +12,5 @@ interface WpSetLinkCats
      * @param int $linkId         ID of the link to update.
      * @param int[] $linkCategories Array of link category IDs to add the link to.
      */
-    public function wpSetLinkCats(int $linkId = 0, array $linkCategories = []): void;
+    public function wpSetLinkCats(int $linkId, array $linkCategories = []): void;
 }

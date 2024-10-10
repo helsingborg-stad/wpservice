@@ -15,5 +15,5 @@ interface WpGetPostRevisions
      * @param array|null $args Optional. Arguments for retrieving post revisions. Default null.
      * @return WP_Post[]|int[] Array of revision objects or IDs, or an empty array if none.
      */
-    public function wpGetPostRevisions(int|\WP_Post $post = 0, array|null $args = null): array;
+    public function wpGetPostRevisions(int|\WP_Post $post, array|null $args = null): array;
 }

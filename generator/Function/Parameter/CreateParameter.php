@@ -50,16 +50,14 @@ class CreateParameter implements ParameterInterface
 
     public function __toString(): string
     {
-        $paramName  = $this->isByReference() ? '&' : '';
-        $paramName .= $this->isSpread() ? '...' : '';
-        $paramName .= '$';
-        $paramName .= $this->getName();
+        $param  = $this->getType() ? $this->getType() . ' ' : '';
+        $param .= $this->isByReference() ? '&' : '';
+        $param .= $this->isSpread() ? '...' : '';
+        $param .= '$';
+        $param .= $this->getName();
+        $param .= !empty($this->getDefault()) ? ' = ' . $this->getDefault() : '';
 
-        if ($this->getDefault() !== null) {
-            return "{$this->getType()} {$paramName} = {$this->getDefault()}";
-        }
-
-            return "{$this->getType()} {$paramName}";
+        return $param;
     }
 
     public static function create(string $type, string $name, bool $spread, bool $byReference, ?string $default): ParameterInterface

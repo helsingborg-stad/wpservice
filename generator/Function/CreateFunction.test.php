@@ -139,20 +139,6 @@ class CreateFunctionTest extends TestCase
     }
 
     /**
-     * @testdox parameter type WP_Post[] is converted to 'array'
-     */
-    public function testGetParametersWithWpPostArray()
-    {
-        $stub     = $this->getStubStatementForFunction('parameterPassedByReference');
-        $function = CreateFunction::create($stub);
-
-        $params = $function->getParameters();
-
-        $this->assertEquals('foo', $params[0]->getName());
-        $this->assertEquals('array', $params[0]->getType());
-    }
-
-    /**
      * @testdox function plugin_dir_path() param $file has type string
      */
     public function testGetParametersWithDocBlockTypeFromPluginDirPath()
@@ -164,6 +150,19 @@ class CreateFunctionTest extends TestCase
 
         $this->assertEquals('string', $params[0]->getType());
         $this->assertEquals('file', $params[0]->getName());
+    }
+
+    /**
+     * @testdox parameter gets type 'array' if it is defined as such in docblock
+     */
+    public function testGetParametersWithArrayAsTypeInDocBlock()
+    {
+        $stub     = $this->getStubStatementForFunction('parameterWithArrayAsTypeInDocBlock');
+        $function = CreateFunction::create($stub);
+
+        $params = $function->getParameters();
+
+        $this->assertEquals('array', $params[0]->getType());
     }
 
     private function getStubStatementForFunction(string $functionName): Function_

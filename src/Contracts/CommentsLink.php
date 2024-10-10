@@ -12,5 +12,5 @@ interface CommentsLink
      * @param string $deprecated   Not Used.
      * @param string $deprecated2 Not Used.
      */
-    public function commentsLink(string $deprecated = '', mixed $deprecated2 = ''): void;
+    public function commentsLink(string $deprecated = '', string $deprecated2 = ''): void;
 }

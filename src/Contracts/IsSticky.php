@@ -19,5 +19,5 @@ interface IsSticky
      * @param int $postId Optional. Post ID. Default is the ID of the global `$post`.
      * @return bool Whether post is sticky.
      */
-    public function isSticky(int $postId = 0): bool;
+    public function isSticky(int $postId): bool;
 }

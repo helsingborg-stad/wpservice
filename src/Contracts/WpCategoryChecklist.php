@@ -23,5 +23,5 @@ interface WpCategoryChecklist
      * @param bool $checkedOntop        Optional. Whether to move checked items out of the hierarchy and to
      *                                          the top of the list. Default true.
      */
-    public function wpCategoryChecklist(int $postId = 0, int $descendantsAndSelf = 0, array|false $selectedCats = false, array|false $popularCats = false, \Walker $walker = null, bool $checkedOntop = true): void;
+    public function wpCategoryChecklist(int $postId, int $descendantsAndSelf, array|false $selectedCats = false, array|false $popularCats = false, \Walker $walker = null, bool $checkedOntop = true): void;
 }

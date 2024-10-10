@@ -14,5 +14,5 @@ interface CommentDate
      * @param int|\WP_Comment $commentId WP_Comment or ID of the comment for which to print the date.
      *                                   Default current comment.
      */
-    public function commentDate(string $format = '', int|\WP_Comment $commentId = 0): void;
+    public function commentDate(string $format = '', int|\WP_Comment $commentId): void;
 }

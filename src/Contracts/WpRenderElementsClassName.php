@@ -16,5 +16,5 @@ interface WpRenderElementsClassName
      * @param array $block         Block object.
      * @return string                Filtered block content.
      */
-    public function wpRenderElementsClassName(mixed $blockContent, mixed $block): string;
+    public function wpRenderElementsClassName(string $blockContent, array $block): string;
 }

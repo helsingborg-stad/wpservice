@@ -31,5 +31,5 @@ interface WpInsertAttachment
      * @param bool $fireAfterHooks Optional. Whether to fire the after insert hooks. Default true.
      * @return int|\WP_Error The attachment ID on success. The value 0 or WP_Error on failure.
      */
-    public function wpInsertAttachment(string|array $args, string|false $file = false, int $parentPostId = 0, bool $wpError = false, bool $fireAfterHooks = true): int|\WP_Error;
+    public function wpInsertAttachment(string|array $args, string|false $file = false, int $parentPostId, bool $wpError = false, bool $fireAfterHooks = true): int|\WP_Error;
 }

@@ -15,5 +15,5 @@ interface GetNextCommentsLink
      * @param int $maxPage Optional. Max page. Default 0.
      * @return string|void HTML-formatted link for the next page of comments.
      */
-    public function getNextCommentsLink(string $label = '', int $maxPage = 0): mixed;
+    public function getNextCommentsLink(string $label = '', int $maxPage): mixed;
 }

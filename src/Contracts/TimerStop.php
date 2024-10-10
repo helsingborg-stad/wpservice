@@ -19,5 +19,5 @@ interface TimerStop
      * @return string The "second.microsecond" finished time calculation. The number is formatted
      *                for human consumption, both localized and rounded.
      */
-    public function timerStop(int|bool $display = 0, int $precision = 3): string;
+    public function timerStop(int|bool $display, int $precision = 3): string;
 }

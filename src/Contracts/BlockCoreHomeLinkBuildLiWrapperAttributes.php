@@ -12,5 +12,5 @@ interface BlockCoreHomeLinkBuildLiWrapperAttributes
      * @param array $context    Home link block context.
      * @return string The li wrapper attributes.
      */
-    public function blockCoreHomeLinkBuildLiWrapperAttributes(mixed $context): string;
+    public function blockCoreHomeLinkBuildLiWrapperAttributes(array $context): string;
 }

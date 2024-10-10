@@ -14,5 +14,5 @@ interface TermDescription
      * @param null $deprecated Deprecated. Not used.
      * @return string Term description, if available.
      */
-    public function termDescription(int $term = 0, null $deprecated = null): string;
+    public function termDescription(int $term, null $deprecated = null): string;
 }

@@ -19,5 +19,5 @@ interface CommentAuthorEmail
      * @param int|\WP_Comment $commentId Optional. WP_Comment or the ID of the comment for which to print the author's email.
      *                                   Default current comment.
      */
-    public function commentAuthorEmail(int|\WP_Comment $commentId = 0): void;
+    public function commentAuthorEmail(int|\WP_Comment $commentId): void;
 }

@@ -24,5 +24,5 @@ interface WpGetShortlink
      * @return string A shortlink or an empty string if no shortlink exists for the requested resource or if shortlinks
      *                are not enabled.
      */
-    public function wpGetShortlink(int $id = 0, string $context = 'post', bool $allowSlugs = true): string;
+    public function wpGetShortlink(int $id, string $context = 'post', bool $allowSlugs = true): string;
 }

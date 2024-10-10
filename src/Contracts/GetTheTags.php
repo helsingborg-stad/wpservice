@@ -13,5 +13,5 @@ interface GetTheTags
      * @return WP_Term[]|false|WP_Error Array of WP_Term objects on success, false if there are no terms
      *                                  or the post does not exist, WP_Error on failure.
      */
-    public function getTheTags(int|\WP_Post $post = 0): array|false|\WP_Error;
+    public function getTheTags(int|\WP_Post $post): array|false|\WP_Error;
 }

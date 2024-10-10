@@ -19,5 +19,5 @@ interface WpGetPostAutosave
      * @param int $userId Optional. The post author ID. Default 0.
      * @return \WP_Post|false The autosaved data or false on failure or when no autosave exists.
      */
-    public function wpGetPostAutosave(int $postId, int $userId = 0): \WP_Post|false;
+    public function wpGetPostAutosave(int $postId, int $userId): \WP_Post|false;
 }

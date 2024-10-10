@@ -15,5 +15,5 @@ interface WpListPostRevisions
      * @param int|\WP_Post $post Optional. Post ID or WP_Post object. Default is global $post.
      * @param string $type 'all' (default), 'revision' or 'autosave'
      */
-    public function wpListPostRevisions(int|\WP_Post $post = 0, string $type = 'all'): void;
+    public function wpListPostRevisions(int|\WP_Post $post, string $type = 'all'): void;
 }

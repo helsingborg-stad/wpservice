@@ -93,22 +93,16 @@ class CreateFunction implements FunctionInterface
     private static function getParamTypeFromDocBlock(string $paramName, string $docblock): string
     {
         // $re = '/@param\s(.+)\$([a-zA-Z|_]+)+\s/m';
-        $re = '/@param\s([a-zA-Z|\||_|\\\\|\[\]]+\s+)+\$([a-zA-Z|_]+\s+)/';
+        $re = '/@param\s+([a-zA-Z|\||_|\\\\|\[\]|\d]+\s+)+(\.{3})?\$([a-zA-Z|_|\d]+\s+)/m';
         preg_match_all($re, $docblock, $matches, PREG_SET_ORDER, 0);
 
         foreach ($matches as $match) {
-            if (trim($match[2]) === $paramName) {
-                $type = trim($match[1]);
-
-                $types = explode('|', $type);
-                $types = array_map(fn ($type) => str_ends_with($type, '[]') ? 'array' : $type, $types);
-                $type  = implode('|', $types);
-
-                return $type;
+            if (trim($match[3]) === $paramName) {
+                return trim($match[1]);
             }
         }
 
-        return 'mixed';
+        return '';
     }
 
     private static function getParamDefaultValue(\PhpParser\Node\Param $param): ?string

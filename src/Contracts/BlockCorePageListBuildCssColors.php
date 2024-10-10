@@ -14,5 +14,5 @@ interface BlockCorePageListBuildCssColors
  * @param array $context    Navigation block context.
  * @return array Colors CSS classes and inline styles.
  */
-public function blockCorePageListBuildCssColors(mixed $attributes, mixed $context): array;
+public function blockCorePageListBuildCssColors(array $attributes, array $context): array;
 }

@@ -13,5 +13,5 @@ interface WpSaveNavMenuItems
      * @param array[] $menuData The unsanitized POSTed menu item data.
      * @return int[] The database IDs of the items saved
      */
-    public function wpSaveNavMenuItems(int $menuId = 0, array $menuData = []): array;
+    public function wpSaveNavMenuItems(int $menuId, array $menuData = []): array;
 }

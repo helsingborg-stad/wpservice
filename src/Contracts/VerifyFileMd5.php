@@ -15,5 +15,5 @@ interface VerifyFileMd5
      * @return bool|\WP_Error True on success, false when the MD5 format is unknown/unexpected,
      *                       WP_Error on failure.
      */
-    public function verifyFileMd5(string $filename, mixed $expectedMd5): bool|\WP_Error;
+    public function verifyFileMd5(string $filename, string $expectedMd5): bool|\WP_Error;
 }

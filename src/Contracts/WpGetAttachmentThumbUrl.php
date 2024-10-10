@@ -13,5 +13,5 @@ interface WpGetAttachmentThumbUrl
      * @param int $postId Optional. Attachment ID. Default is the ID of the global `$post`.
      * @return string|false Thumbnail URL on success, false on failure.
      */
-    public function wpGetAttachmentThumbUrl(int $postId = 0): string|false;
+    public function wpGetAttachmentThumbUrl(int $postId): string|false;
 }

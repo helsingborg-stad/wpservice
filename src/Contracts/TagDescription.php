@@ -12,5 +12,5 @@ interface TagDescription
      * @param int $tag Optional. Tag ID. Defaults to the current tag ID.
      * @return string Tag description, if available.
      */
-    public function tagDescription(int $tag = 0): string;
+    public function tagDescription(int $tag): string;
 }

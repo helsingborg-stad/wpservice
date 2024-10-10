@@ -14,5 +14,5 @@ interface TheAttachmentLink
      * @param bool $deprecated Deprecated. Not used.
      * @param bool $permalink Optional. Whether to include permalink. Default false.
      */
-    public function theAttachmentLink(int|\WP_Post $post = 0, bool $fullsize = false, bool $deprecated = false, bool $permalink = false): void;
+    public function theAttachmentLink(int|\WP_Post $post, bool $fullsize = false, bool $deprecated = false, bool $permalink = false): void;
 }

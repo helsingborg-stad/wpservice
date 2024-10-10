@@ -30,5 +30,5 @@ interface WpLocalizeScript
      * @param array $l10n        The data itself. The data can be either a single or multi-dimensional array.
      * @return bool True if the script was successfully localized, false otherwise.
      */
-    public function wpLocalizeScript(string $handle, string $objectName, mixed $l10n): bool;
+    public function wpLocalizeScript(string $handle, string $objectName, array $l10n): bool;
 }

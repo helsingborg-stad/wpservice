@@ -20,5 +20,5 @@ interface WpGetAttachmentLink
      * @param array|string $attr      Optional. Array or string of attributes. Default empty.
      * @return string HTML content.
      */
-    public function wpGetAttachmentLink(int|\WP_Post $post = 0, string|array $size = 'thumbnail', bool $permalink = false, bool $icon = false, string|false $text = false, array|string $attr = ''): string;
+    public function wpGetAttachmentLink(int|\WP_Post $post, string|array $size = 'thumbnail', bool $permalink = false, bool $icon = false, string|false $text = false, array|string $attr = ''): string;
 }

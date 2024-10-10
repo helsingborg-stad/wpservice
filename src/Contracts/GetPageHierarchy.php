@@ -16,5 +16,5 @@ interface GetPageHierarchy
      * @param int $pageId Optional. Parent page ID. Default 0.
      * @return string[] Array of post names keyed by ID and arranged by hierarchy. Children immediately follow their parents.
      */
-    public function getPageHierarchy(array &$pages, int $pageId = 0): array;
+    public function getPageHierarchy(array &$pages, int $pageId): array;
 }

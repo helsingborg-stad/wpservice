@@ -15,5 +15,5 @@ interface IsUserMemberOfBlog
      * @param int $blogId Optional. ID of the blog to check. Defaults to the current site.
      * @return bool
      */
-    public function isUserMemberOfBlog(int $userId = 0, int $blogId = 0): bool;
+    public function isUserMemberOfBlog(int $userId, int $blogId): bool;
 }

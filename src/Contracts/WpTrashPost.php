@@ -17,5 +17,5 @@ interface WpTrashPost
      *                     if `EMPTY_TRASH_DAYS` equals true.
      * @return \WP_Post|false|null Post data on success, false or null on failure.
      */
-    public function wpTrashPost(int $postId = 0): \WP_Post|false|null;
+    public function wpTrashPost(int $postId): \WP_Post|false|null;
 }

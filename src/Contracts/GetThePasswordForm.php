@@ -12,5 +12,5 @@ interface GetThePasswordForm
      * @param int|\WP_Post $post Optional. Post ID or WP_Post object. Default is global $post.
      * @return string HTML content for password form for password protected post.
      */
-    public function getThePasswordForm(int|\WP_Post $post = 0): string;
+    public function getThePasswordForm(int|\WP_Post $post): string;
 }

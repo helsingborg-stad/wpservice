@@ -16,5 +16,5 @@ interface GetTheGuid
      * @param int|\WP_Post $post Optional. Post ID or post object. Default is global $post.
      * @return string
      */
-    public function getTheGuid(int|\WP_Post $post = 0): string;
+    public function getTheGuid(int|\WP_Post $post): string;
 }

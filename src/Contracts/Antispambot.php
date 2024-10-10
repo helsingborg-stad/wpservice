@@ -13,5 +13,5 @@ interface Antispambot
      * @param int $hexEncoding  Optional. Set to 1 to enable hex encoding.
      * @return string Converted email address.
      */
-    public function antispambot(string $emailAddress, int $hexEncoding = 0): string;
+    public function antispambot(string $emailAddress, int $hexEncoding): string;
 }

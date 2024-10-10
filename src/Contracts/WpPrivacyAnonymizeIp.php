@@ -14,5 +14,5 @@ interface WpPrivacyAnonymizeIp
      *                              to anonymize it are not present. Default false, return `::` (unspecified address).
      * @return string  The anonymized IP address.
      */
-    public function wpPrivacyAnonymizeIp(string $ipAddr, mixed $ipv6Fallback = false): string;
+    public function wpPrivacyAnonymizeIp(string $ipAddr, bool $ipv6Fallback = false): string;
 }

@@ -11,8 +11,8 @@ interface RenderBlockCorePostAuthorName
      *
      * @param array $attributes Block attributes.
      * @param string $content    Block default content.
-     * @param WP_Block $block      Block instance.
+     * @param \WP_Block $block      Block instance.
      * @return string Returns the rendered post author name block.
      */
-    public function renderBlockCorePostAuthorName(mixed $attributes, mixed $content, mixed $block): string;
+    public function renderBlockCorePostAuthorName(array $attributes, string $content, \WP_Block $block): string;
 }

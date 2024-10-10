@@ -23,5 +23,5 @@ interface CurrentTime
      * @param int|bool $gmt  Optional. Whether to use GMT timezone. Default false.
      * @return int|string Integer if `$type` is 'timestamp' or 'U', string otherwise.
      */
-    public function currentTime(string $type, int|bool $gmt = 0): int|string;
+    public function currentTime(string $type, int|bool $gmt): int|string;
 }

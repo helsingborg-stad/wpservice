@@ -17,5 +17,5 @@ interface GetPostPermalink
      * @param bool $sample    Optional. Is it a sample permalink. Default false.
      * @return string|false The post permalink URL. False if the post does not exist.
      */
-    public function getPostPermalink(int|\WP_Post $post = 0, bool $leavename = false, bool $sample = false): string|false;
+    public function getPostPermalink(int|\WP_Post $post, bool $leavename = false, bool $sample = false): string|false;
 }

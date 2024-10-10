@@ -16,5 +16,5 @@ interface GetCommentsNumberText
      * @param int|\WP_Post $post Optional. Post ID or WP_Post object. Default is the global `$post`.
      * @return string Language string for the number of comments a post has.
      */
-    public function getCommentsNumberText(string|false $zero = false, string|false $one = false, string|false $more = false, int|\WP_Post $post = 0): string;
+    public function getCommentsNumberText(string|false $zero = false, string|false $one = false, string|false $more = false, int|\WP_Post $post): string;
 }

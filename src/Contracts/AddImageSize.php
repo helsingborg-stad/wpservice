@@ -23,5 +23,5 @@ interface AddImageSize
      * @type string $1 The y crop position. Accepts 'top', 'center', or 'bottom'.
      * }
      */
-    public function addImageSize(string $name, int $width = 0, int $height = 0, bool|array $crop = false): void;
+    public function addImageSize(string $name, int $width, int $height, bool|array $crop = false): void;
 }

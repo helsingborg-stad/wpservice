@@ -4,6 +4,6 @@
  * @param string $foo
  * @param mixed ...$bar
  */
-function spreadParameters(string $foo, mixed ...$bar)
+function spreadParameters($foo, ...$bar)
 {
 }

@@ -13,5 +13,5 @@ interface BlockCoreNavigationLinkBuildCssFontSizes
  * @param array $context Navigation block context.
  * @return array Font size CSS classes and inline styles.
  */
-public function blockCoreNavigationLinkBuildCssFontSizes(mixed $context): array;
+public function blockCoreNavigationLinkBuildCssFontSizes(array $context): array;
 }

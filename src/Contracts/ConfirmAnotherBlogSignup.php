@@ -18,5 +18,5 @@ interface ConfirmAnotherBlogSignup
      * @param array $meta       Any additional meta from the {@see 'add_signup_meta'} filter in validate_blog_signup().
      * @param int $blogId    The site ID.
      */
-    public function confirmAnotherBlogSignup(string $domain, string $path, string $blogTitle, string $userName, string $userEmail = '', array $meta = [], int $blogId = 0): void;
+    public function confirmAnotherBlogSignup(string $domain, string $path, string $blogTitle, string $userName, string $userEmail = '', array $meta = [], int $blogId): void;
 }

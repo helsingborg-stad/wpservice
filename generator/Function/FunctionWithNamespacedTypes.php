@@ -46,6 +46,10 @@ class FunctionWithNamespacedTypes implements FunctionInterface
         $params = array_map(fn($param) => clone $param, $this->inner->getParameters());
 
         foreach ($params as $index => $param) {
+            if (empty($param->getType())) {
+                continue;
+            }
+
             $params[$index]->setType($this->nameSpaceType($param->getType()));
         }
 

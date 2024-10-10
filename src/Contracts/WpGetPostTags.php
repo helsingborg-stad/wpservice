@@ -20,5 +20,5 @@ interface WpGetPostTags
      * @return array|\WP_Error Array of WP_Term objects on success or empty array if no tags were found.
      *                        WP_Error object if 'post_tag' taxonomy doesn't exist.
      */
-    public function wpGetPostTags(int $postId = 0, array $args = []): array|\WP_Error;
+    public function wpGetPostTags(int $postId, array $args = []): array|\WP_Error;
 }

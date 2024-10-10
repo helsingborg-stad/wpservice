@@ -21,5 +21,5 @@ interface SetupUserdata
      *
      * @param int $forUserId Optional. User ID to set up global data. Default 0.
      */
-    public function setupUserdata(int $forUserId = 0): void;
+    public function setupUserdata(int $forUserId): void;
 }

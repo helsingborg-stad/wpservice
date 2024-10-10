@@ -19,5 +19,5 @@ interface WpCacheAddMultiple
      * @return bool[] Array of return values, grouped by key. Each value is either
      *                true on success, or false if cache key and group already exist.
      */
-    public function wpCacheAddMultiple(array $data, string $group = '', int $expire = 0): array;
+    public function wpCacheAddMultiple(array $data, string $group = '', int $expire): array;
 }
