@@ -16,5 +16,5 @@ interface CatIsAncestorOf
      * @param int|object $cat2 The child category.
      * @return bool Whether $cat2 is child of $cat1.
      */
-    public function catIsAncestorOf(int|object $cat1, int|object $cat2): bool;
+    public function catIsAncestorOf(mixed $cat1, mixed $cat2): bool;
 }

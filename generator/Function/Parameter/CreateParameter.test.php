@@ -11,7 +11,7 @@ class CreateParameterTest extends TestCase
      */
     public function testCreateParameter(): void
     {
-        $parameter = CreateParameter::create('string', 'name', true, '[]');
+        $parameter = CreateParameter::create('string', 'name', true, false, '[]');
         $this->assertEquals('string', $parameter->getType());
         $this->assertEquals('name', $parameter->getName());
         $this->assertTrue($parameter->isSpread());

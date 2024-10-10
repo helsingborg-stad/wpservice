@@ -41,5 +41,5 @@ interface AddQueryArg
      * @param string $url   Optional. A URL to act upon.
      * @return string New URL query string (unescaped).
      */
-    public function addQueryArg(string|array $key, string $value, string $url): string;
+    public function addQueryArg(mixed ...$args): string;
 }

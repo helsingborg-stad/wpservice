@@ -16,5 +16,5 @@ interface TermIsAncestorOf
      * @param string $taxonomy Taxonomy name that $term1 and `$term2` belong to.
      * @return bool Whether `$term2` is a child of `$term1`.
      */
-    public function termIsAncestorOf(int|object $term1, int|object $term2, string $taxonomy): bool;
+    public function termIsAncestorOf(mixed $term1, mixed $term2, string $taxonomy): bool;
 }

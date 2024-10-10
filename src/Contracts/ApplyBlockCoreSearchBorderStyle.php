@@ -19,5 +19,5 @@ interface ApplyBlockCoreSearchBorderStyle
      * @param array $buttonStyles  Current collection of button styles.
      * @param array $inputStyles   Current collection of input styles.
      */
-    public function applyBlockCoreSearchBorderStyle(array $attributes, string $property, string $side, array $wrapperStyles, array $buttonStyles, array $inputStyles): void;
+    public function applyBlockCoreSearchBorderStyle(array $attributes, string $property, string $side, array &$wrapperStyles, array &$buttonStyles, array &$inputStyles): void;
 }

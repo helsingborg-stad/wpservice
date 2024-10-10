@@ -16,5 +16,5 @@ interface WpIframe
      * @param callable $contentFunc Function that outputs the content.
      * @param mixed    ...$args      Optional additional parameters to pass to the callback function when it's called.
      */
-    public function wpIframe(callable $contentFunc): void;
+    public function wpIframe(callable $contentFunc, mixed ...$args): void;
 }

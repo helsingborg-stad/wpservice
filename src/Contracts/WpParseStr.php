@@ -12,5 +12,5 @@ interface WpParseStr
      * @param string $inputString The string to be parsed.
      * @param array $result       Variables will be stored in this array.
      */
-    public function wpParseStr(string $inputString, array $result): void;
+    public function wpParseStr(string $inputString, array &$result): void;
 }

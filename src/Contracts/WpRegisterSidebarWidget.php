@@ -37,5 +37,5 @@ interface WpRegisterSidebarWidget
      * }
      * @param mixed      ...$params       Optional additional parameters to pass to the callback function when it's called.
      */
-    public function wpRegisterSidebarWidget(int|string $id, string $name, callable $outputCallback, array $options = []): void;
+    public function wpRegisterSidebarWidget(int|string $id, string $name, callable $outputCallback, array $options = [], mixed ...$params): void;
 }

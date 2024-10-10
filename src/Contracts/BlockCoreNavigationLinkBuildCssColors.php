@@ -15,5 +15,5 @@ interface BlockCoreNavigationLinkBuildCssColors
  * @param bool $isSubMenu Whether the link is part of a sub-menu.
  * @return array Colors CSS classes and inline styles.
  */
-public function blockCoreNavigationLinkBuildCssColors(array $context, array $attributes, bool $isSubMenu = false): array;
+public function blockCoreNavigationLinkBuildCssColors(mixed $context, mixed $attributes, mixed $isSubMenu = false): array;
 }

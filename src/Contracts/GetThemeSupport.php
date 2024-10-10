@@ -23,5 +23,5 @@ interface GetThemeSupport
      * @param mixed  ...$args Optional extra arguments to be checked against certain features.
      * @return mixed The array of extra arguments or the value for the registered feature.
      */
-    public function getThemeSupport(string $feature): mixed;
+    public function getThemeSupport(string $feature, mixed ...$args): mixed;
 }

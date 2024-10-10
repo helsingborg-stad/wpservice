@@ -17,5 +17,5 @@ interface WalkCategoryTree
      * @param mixed ...$args Elements array, maximum hierarchical depth and optional additional arguments.
      * @return string
      */
-    public function walkCategoryTree(): string;
+    public function walkCategoryTree(mixed ...$args): string;
 }

@@ -17,5 +17,5 @@ interface WalkPageDropdownTree
      * @param mixed ...$args Elements array, maximum hierarchical depth and optional additional arguments.
      * @return string
      */
-    public function walkPageDropdownTree(): string;
+    public function walkPageDropdownTree(mixed ...$args): string;
 }

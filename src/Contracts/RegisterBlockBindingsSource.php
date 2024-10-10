@@ -78,7 +78,7 @@ interface RegisterBlockBindingsSource
      *                                            - @param array $sourceArgs    Array containing source arguments
      *                                                                              used to look up the override value,
      *                                                                              i.e. {"key": "foo"}.
-     *                                            - @param \WP_Block $blockInstance The block instance.
+     *                                            - @param WP_Block $blockInstance The block instance.
      *                                            - @param string $attributeName The name of an attribute.
      *                                        The callback has a mixed return type; it may return a string to override
      *                                        the block's original value, null, false to remove an attribute, etc.
@@ -86,5 +86,5 @@ interface RegisterBlockBindingsSource
      * }
      * @return \WP_Block_Bindings_Source|false Source when the registration was successful, or `false` on failure.
      */
-    public function registerBlockBindingsSource(string $sourceName, array $sourceProperties, array $sourceArgs, \WP_Block $blockInstance, string $attributeName): \WP_Block_Bindings_Source|false;
+    public function registerBlockBindingsSource(string $sourceName, array $sourceProperties): \WP_Block_Bindings_Source|false;
 }

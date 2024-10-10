@@ -26,5 +26,5 @@ interface UserCan
      * @param mixed       ...$args    Optional further parameters, typically starting with an object ID.
      * @return bool Whether the user has the given capability.
      */
-    public function userCan(int|\WP_User $user, string $capability): bool;
+    public function userCan(int|\WP_User $user, string $capability, mixed ...$args): bool;
 }

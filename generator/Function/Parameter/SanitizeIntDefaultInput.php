@@ -20,6 +20,7 @@ class SanitizeIntDefaultInput implements ParameterDecoratorInterface
             $this->getType(),
             $this->inner->getName(),
             $this->inner->isSpread(),
+            $this->inner->isByReference(),
             $this->inner->getDefault()
         );
     }

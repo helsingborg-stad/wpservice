@@ -16,7 +16,8 @@ class CreateFunction implements FunctionInterface
         private string $returnType,
         private array $params,
         private string $docblock
-    ) {}
+    ) {
+    }
 
     public function getOriginalName(): string
     {
@@ -62,7 +63,6 @@ class CreateFunction implements FunctionInterface
         $returnType = $matches[1] ?? 'void';
 
         foreach ($function_->params as $param) {
-
             $paramName = $param->var->name;
             $paramType = isset($param->type, $param->type->name)
                 ? $param->type->name
@@ -72,11 +72,12 @@ class CreateFunction implements FunctionInterface
                 $paramType,
                 $param->var->name,
                 $param->variadic,
+                $param->byRef,
                 self::getParamDefaultValue($param)
             );
         }
 
-        /**
+        /*
          * Apply decorators to parameters
          */
         $params = array_map(function ($param) use ($parameterDecorators) {
@@ -91,12 +92,19 @@ class CreateFunction implements FunctionInterface
 
     private static function getParamTypeFromDocBlock(string $paramName, string $docblock): string
     {
-        $re = '/@param\s(.+)\$(.+)\s/m';
+        // $re = '/@param\s(.+)\$([a-zA-Z|_]+)+\s/m';
+        $re = '/@param\s([a-zA-Z|\||_|\\\\|\[\]]+\s+)+\$([a-zA-Z|_]+\s+)/';
         preg_match_all($re, $docblock, $matches, PREG_SET_ORDER, 0);
 
         foreach ($matches as $match) {
-            if ($match[2] === $paramName) {
-                return trim($match[1]);
+            if (trim($match[2]) === $paramName) {
+                $type = trim($match[1]);
+
+                $types = explode('|', $type);
+                $types = array_map(fn ($type) => str_ends_with($type, '[]') ? 'array' : $type, $types);
+                $type  = implode('|', $types);
+
+                return $type;
             }
         }
 
@@ -116,7 +124,7 @@ class CreateFunction implements FunctionInterface
                 return '[]';
             }
         }
-        
+
         return null;
     }
 }

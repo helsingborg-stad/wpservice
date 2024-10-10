@@ -12,5 +12,5 @@ interface SeparateComments
      * @param WP_Comment[] $comments Array of comments
      * @return WP_Comment[] Array of comments keyed by comment_type.
      */
-    public function separateComments(array $comments): array;
+    public function separateComments(array &$comments): array;
 }

@@ -101,6 +101,16 @@ class FunctionWithNamespacedTypesTest extends TestCase
             {
                 return null;
             }
+
+            public function isByReference(): bool
+            {
+                return false;
+            }
+
+            public function __toString(): string
+            {
+                return '';
+            }
         };
     }
 

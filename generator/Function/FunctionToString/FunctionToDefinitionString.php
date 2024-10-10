@@ -14,28 +14,11 @@ class FunctionToDefinitionString implements FunctionToStringInterface
      */
     public function functionToString(FunctionInterface $function): string
     {
-        $parameters = $this->getParametersString($function);
+        $parameters     = array_map(fn ($parameter) => $parameter->__toString(), $function->getParameters());
+        $parameters     = join(", ", $parameters);
         $docBlockOutput = empty($function->getDocBlock()) ? '' : $function->getDocBlock() . "\n";
-        $functionOutput = "public function {$function->getName()}({$parameters}): {$function->getReturnType()};"; 
+        $functionOutput = "public function {$function->getName()}({$parameters}): {$function->getReturnType()};";
 
         return "{$docBlockOutput}{$functionOutput}";
-    }
-
-    /**
-     * Get the parameters as a string.
-     */
-    private function getParametersString(FunctionInterface $function): string
-    {
-        $parameters = array_map(function ($parameter) {
-            $paramName = $parameter->isSpread() ? '...' : '';
-            $paramName .= '$';
-            $paramName .= $parameter->getName();
-            if ($parameter->getDefault() !== null) {
-                return "{$parameter->getType()} {$paramName} = {$parameter->getDefault()}";
-            }
-
-            return "{$parameter->getType()} {$paramName}";
-        }, $function->getParameters());
-        return join(", ", $parameters);
     }
 }

@@ -43,7 +43,7 @@ $wordpress = dirname(__FILE__) . '/../wordpress';
 $finder = \StubsGenerator\Finder::create()
     ->in($wordpress)
     ->notPath('wp-admin/press-this.php')
-    ->notPath('wp-admin/includes/class-avif-info.php')
+    ->notPath('wp-includes/class-avif-info.php')
     ->notPath('wp-admin/includes/class-pclzip.php')
     ->notPath('wp-includes/class-pclzip.php')
     ->notPath('wp-admin/includes/noop.php')

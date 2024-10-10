@@ -17,5 +17,5 @@ interface WpSprintf
      * @param mixed  ...$args Arguments to be formatted into the $pattern string.
      * @return string The formatted string.
      */
-    public function wpSprintf(string $pattern): string;
+    public function wpSprintf(string $pattern, mixed ...$args): string;
 }

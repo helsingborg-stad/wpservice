@@ -59,6 +59,7 @@ class CamelCasedFunction implements FunctionInterface
                 $param->getType(),
                 $this->camelCase($param->getName()),
                 $param->isSpread(),
+                $param->isByReference(),
                 $param->getDefault()
             ),
             $this->inner->getParameters()

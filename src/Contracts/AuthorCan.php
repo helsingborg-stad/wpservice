@@ -26,5 +26,5 @@ interface AuthorCan
      * @param mixed       ...$args    Optional further parameters, typically starting with an object ID.
      * @return bool Whether the post author has the given capability.
      */
-    public function authorCan(int|\WP_Post $post, string $capability): bool;
+    public function authorCan(int|\WP_Post $post, string $capability, mixed ...$args): bool;
 }

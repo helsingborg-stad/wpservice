@@ -44,5 +44,5 @@ interface ApplyFilters
      * @param mixed  ...$args   Optional. Additional parameters to pass to the callback functions.
      * @return mixed The filtered value after all hooked functions are applied to it.
      */
-    public function applyFilters(string $hookName, mixed $value): mixed;
+    public function applyFilters(string $hookName, mixed $value, mixed ...$args): mixed;
 }
