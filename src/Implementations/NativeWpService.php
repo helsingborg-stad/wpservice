@@ -1004,7 +1004,7 @@ class NativeWpService implements \WpService\WpService
      */
     public function wpDashboardCachedRssWidget(string $widgetId, callable $callback, array $checkUrls = [], mixed ...$args): bool
     {
-        return wp_dashboard_cached_rss_widget($widgetId, $callback, $checkUrls, $args);
+        return wp_dashboard_cached_rss_widget($widgetId, $callback, $checkUrls, ...$args);
     }
 
     /**
@@ -1620,7 +1620,7 @@ class NativeWpService implements \WpService\WpService
      */
     public function wpIframe(callable $contentFunc, mixed ...$args): void
     {
-        wp_iframe($contentFunc, $args);
+        wp_iframe($contentFunc, ...$args);
     }
 
     /**
@@ -7596,7 +7596,7 @@ class NativeWpService implements \WpService\WpService
      */
     public function mapMetaCap(string $cap, int $userId, mixed ...$args): array
     {
-        return map_meta_cap($cap, $userId, $args);
+        return map_meta_cap($cap, $userId, ...$args);
     }
 
     /**
@@ -7604,7 +7604,7 @@ class NativeWpService implements \WpService\WpService
      */
     public function currentUserCan(string $capability, mixed ...$args): bool
     {
-        return current_user_can($capability, $args);
+        return current_user_can($capability, ...$args);
     }
 
     /**
@@ -7612,7 +7612,7 @@ class NativeWpService implements \WpService\WpService
      */
     public function currentUserCanForBlog(int $blogId, string $capability, mixed ...$args): bool
     {
-        return current_user_can_for_blog($blogId, $capability, $args);
+        return current_user_can_for_blog($blogId, $capability, ...$args);
     }
 
     /**
@@ -7620,7 +7620,7 @@ class NativeWpService implements \WpService\WpService
      */
     public function authorCan(int|\WP_Post $post, string $capability, mixed ...$args): bool
     {
-        return author_can($post, $capability, $args);
+        return author_can($post, $capability, ...$args);
     }
 
     /**
@@ -7628,7 +7628,7 @@ class NativeWpService implements \WpService\WpService
      */
     public function userCan(int|\WP_User $user, string $capability, mixed ...$args): bool
     {
-        return user_can($user, $capability, $args);
+        return user_can($user, $capability, ...$args);
     }
 
     /**
@@ -7828,7 +7828,7 @@ class NativeWpService implements \WpService\WpService
      */
     public function walkCategoryTree(mixed ...$args): string
     {
-        return walk_category_tree($args);
+        return walk_category_tree(...$args);
     }
 
     /**
@@ -7836,7 +7836,7 @@ class NativeWpService implements \WpService\WpService
      */
     public function walkCategoryDropdownTree(mixed ...$args): string
     {
-        return walk_category_dropdown_tree($args);
+        return walk_category_dropdown_tree(...$args);
     }
 
     /**
@@ -10412,7 +10412,7 @@ class NativeWpService implements \WpService\WpService
      */
     public function wpSprintf(string $pattern, mixed ...$args): string
     {
-        return wp_sprintf($pattern, $args);
+        return wp_sprintf($pattern, ...$args);
     }
 
     /**
@@ -10812,7 +10812,7 @@ class NativeWpService implements \WpService\WpService
      */
     public function addQueryArg(...$args): string
     {
-        return add_query_arg($args);
+        return add_query_arg(...$args);
     }
 
     /**
@@ -17700,7 +17700,7 @@ class NativeWpService implements \WpService\WpService
      */
     public function applyFilters(string $hookName, mixed $value, mixed ...$args): mixed
     {
-        return apply_filters($hookName, $value, $args);
+        return apply_filters($hookName, $value, ...$args);
     }
 
     /**
@@ -17772,7 +17772,7 @@ class NativeWpService implements \WpService\WpService
      */
     public function doAction(string $hookName, mixed ...$arg): void
     {
-        do_action($hookName, $arg);
+        do_action($hookName, ...$arg);
     }
 
     /**
@@ -18148,7 +18148,7 @@ class NativeWpService implements \WpService\WpService
      */
     public function walkPageDropdownTree(mixed ...$args): string
     {
-        return walk_page_dropdown_tree($args);
+        return walk_page_dropdown_tree(...$args);
     }
 
     /**
@@ -18500,7 +18500,7 @@ class NativeWpService implements \WpService\WpService
      */
     public function addPostTypeSupport(string $postType, string|array $feature, mixed ...$args): void
     {
-        add_post_type_support($postType, $feature, $args);
+        add_post_type_support($postType, $feature, ...$args);
     }
 
     /**
@@ -22444,7 +22444,7 @@ class NativeWpService implements \WpService\WpService
      */
     public function addThemeSupport(string $feature, mixed ...$args): mixed
     {
-        return add_theme_support($feature, $args);
+        return add_theme_support($feature, ...$args);
     }
 
     /**
@@ -22452,7 +22452,7 @@ class NativeWpService implements \WpService\WpService
      */
     public function getThemeSupport(string $feature, mixed ...$args): mixed
     {
-        return get_theme_support($feature, $args);
+        return get_theme_support($feature, ...$args);
     }
 
     /**
@@ -22468,7 +22468,7 @@ class NativeWpService implements \WpService\WpService
      */
     public function currentThemeSupports(string $feature, mixed ...$args): bool
     {
-        return current_theme_supports($feature, $args);
+        return current_theme_supports($feature, ...$args);
     }
 
     /**
@@ -23236,7 +23236,7 @@ class NativeWpService implements \WpService\WpService
      */
     public function wpRegisterSidebarWidget(int|string $id, string $name, callable $outputCallback, array $options = [], mixed ...$params): void
     {
-        wp_register_sidebar_widget($id, $name, $outputCallback, $options, $params);
+        wp_register_sidebar_widget($id, $name, $outputCallback, $options, ...$params);
     }
 
     /**
@@ -23268,7 +23268,7 @@ class NativeWpService implements \WpService\WpService
      */
     public function wpRegisterWidgetControl(int|string $id, string $name, callable $controlCallback, array $options = [], mixed ...$params): void
     {
-        wp_register_widget_control($id, $name, $controlCallback, $options, $params);
+        wp_register_widget_control($id, $name, $controlCallback, $options, ...$params);
     }
 
     /**
