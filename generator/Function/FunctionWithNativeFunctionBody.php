@@ -2,6 +2,8 @@
 
 namespace WpService\Generator\Function;
 
+use WpService\Generator\Function\Parameter\ParameterInterface;
+
 class FunctionWithNativeFunctionBody implements FunctionInterface
 {
     public function __construct(
@@ -39,11 +41,23 @@ class FunctionWithNativeFunctionBody implements FunctionInterface
         $return = $this->getReturnType() === 'void' ? '' : 'return ';
 
         $parameters = $this->getParameters();
-        $parameters = array_map(fn($param) => '$' . $param->getName(), $parameters);
-        $parameters = implode(', ', $parameters);
+        $parameters = $this->parametersToString($parameters);
 
         return <<<PHP
         {$return}{$this->getOriginalName()}({$parameters});
         PHP;
+    }
+
+    private function parametersToString(array $parameters): string
+    {
+        $parameters = array_map(fn($param) => $this->parameterToString($param), $parameters);
+        return implode(', ', $parameters);
+    }
+
+    private function parameterToString(ParameterInterface $parameter): string
+    {
+        $string  = $parameter->isSpread() ? '...' : '';
+        $string .= '$' . $parameter->getName();
+        return $string;
     }
 }
