@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface WpPageReloadOnBackButtonJs
 {
-    /**
+/**
  * Outputs JS that reloads the page if the user navigated to it with the Back or Forward button.
  *
  * Used on the Edit Post and Add New Post screens. Needed to ensure the page is not loaded from browser cache,

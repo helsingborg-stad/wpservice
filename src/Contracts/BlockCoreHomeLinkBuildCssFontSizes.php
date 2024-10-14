@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface BlockCoreHomeLinkBuildCssFontSizes
 {
-    /**
+/**
  * Build an array with CSS classes and inline styles defining the font sizes
  * which will be applied to the home link markup in the front-end.
  *

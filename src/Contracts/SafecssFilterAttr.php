@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface SafecssFilterAttr
 {
-    /**
+/**
  * Filters an inline style attribute and removes disallowed rules.
  *
  * @since 2.8.1

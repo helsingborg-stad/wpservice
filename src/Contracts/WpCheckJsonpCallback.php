@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface WpCheckJsonpCallback
 {
-    /**
+/**
  * Checks that a JSONP callback is a valid JavaScript callback name.
  *
  * Only allows alphanumeric characters and the dot character in callback

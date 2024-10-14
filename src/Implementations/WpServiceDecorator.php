@@ -3,26 +3,28 @@
 namespace WpService\Implementations;
 
 /**
- * Class WpServiceDecorator
+ * class WpServiceDecorator
  */
 class WpServiceDecorator implements \WpService\WpService
 {
-    /**
-     * Class constructor.
-     *
-     * @param \WpService\WpService $inner The inner WPService instance.
-     */
+            /**
+             * Class constructor.
+             *
+             * @param \WpService\WpService $inner The inner WPService instance.
+             */
     public function __construct(private \WpService\WpService $inner)
     {
     }
 
-        /**
-         * @inheritDoc
-         */
+
+    /**
+     * @inheritDoc
+     */
     public function doActivateHeader(): void
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -30,6 +32,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -37,6 +40,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -44,6 +48,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -51,6 +56,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -58,6 +64,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -65,6 +72,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -72,6 +80,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -79,6 +88,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -86,6 +96,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -93,6 +104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -100,6 +112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -107,6 +120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -114,6 +128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -121,6 +136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -128,6 +144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -135,6 +152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -142,6 +160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -149,6 +168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -156,6 +176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -163,6 +184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -170,6 +192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -177,6 +200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -184,6 +208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -191,6 +216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -198,6 +224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -205,6 +232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -212,6 +240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -219,6 +248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -226,6 +256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -233,6 +264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -240,6 +272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -247,6 +280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -254,6 +288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -261,6 +296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -268,6 +304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -275,6 +312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -282,6 +320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -289,6 +328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -296,6 +336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -303,6 +344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -310,6 +352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -317,6 +360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -324,6 +368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -331,6 +376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -338,6 +384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -345,6 +392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -352,6 +400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -359,6 +408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -366,6 +416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -373,6 +424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -380,6 +432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -387,6 +440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -394,6 +448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -401,6 +456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -408,6 +464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -415,6 +472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -422,6 +480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -429,6 +488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -436,6 +496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -443,6 +504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -450,6 +512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -457,6 +520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -464,6 +528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -471,6 +536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -478,6 +544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -485,6 +552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -492,6 +560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -499,6 +568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -506,6 +576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -513,6 +584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -520,6 +592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -527,6 +600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -534,6 +608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -541,6 +616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -548,6 +624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -555,6 +632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -562,6 +640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -569,6 +648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -576,6 +656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -583,6 +664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -590,6 +672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -597,6 +680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -604,6 +688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -611,6 +696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -618,6 +704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -625,6 +712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -632,6 +720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -639,6 +728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -646,6 +736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -653,6 +744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -660,6 +752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -667,6 +760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -674,6 +768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -681,6 +776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -688,6 +784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -695,6 +792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -702,6 +800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -709,6 +808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -716,6 +816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -723,6 +824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -730,6 +832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -737,6 +840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -744,6 +848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -751,6 +856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -758,6 +864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -765,6 +872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -772,6 +880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -779,6 +888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -786,6 +896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -793,6 +904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -800,6 +912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -807,6 +920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -814,6 +928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -821,6 +936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -828,6 +944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -835,6 +952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -842,6 +960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -849,6 +968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -856,6 +976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -863,6 +984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -870,6 +992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -877,6 +1000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -884,6 +1008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -891,6 +1016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -898,6 +1024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -905,6 +1032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -912,6 +1040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -919,6 +1048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -926,6 +1056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -933,6 +1064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -940,6 +1072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -947,6 +1080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -954,6 +1088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -961,6 +1096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -968,6 +1104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -975,6 +1112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -982,6 +1120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -989,6 +1128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -996,6 +1136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1003,6 +1144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1010,6 +1152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1017,6 +1160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1024,6 +1168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1031,6 +1176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1038,6 +1184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1045,6 +1192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1052,6 +1200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1059,6 +1208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1066,6 +1216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1073,6 +1224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1080,6 +1232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1087,6 +1240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1094,6 +1248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1101,6 +1256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1108,6 +1264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1115,6 +1272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1122,6 +1280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1129,6 +1288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1136,6 +1296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1143,6 +1304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1150,6 +1312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1157,6 +1320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1164,6 +1328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1171,6 +1336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1178,6 +1344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1185,6 +1352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1192,6 +1360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1199,6 +1368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1206,6 +1376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1213,6 +1384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1220,6 +1392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1227,6 +1400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1234,6 +1408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1241,6 +1416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1248,6 +1424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1255,6 +1432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1262,6 +1440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1269,6 +1448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1276,6 +1456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1283,6 +1464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1290,6 +1472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1297,6 +1480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1304,6 +1488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1311,6 +1496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1318,6 +1504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1325,6 +1512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1332,6 +1520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1339,6 +1528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1346,6 +1536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1353,6 +1544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1360,6 +1552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1367,6 +1560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1374,6 +1568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1381,6 +1576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1388,6 +1584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1395,6 +1592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1402,6 +1600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1409,6 +1608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1416,6 +1616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1423,6 +1624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1430,6 +1632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1437,6 +1640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1444,6 +1648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1451,6 +1656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1458,6 +1664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1465,6 +1672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1472,6 +1680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1479,6 +1688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1486,6 +1696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1493,6 +1704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1500,6 +1712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1507,6 +1720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1514,6 +1728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1521,6 +1736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1528,6 +1744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1535,6 +1752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1542,6 +1760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1549,6 +1768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1556,6 +1776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1563,6 +1784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1570,6 +1792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1577,6 +1800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1584,6 +1808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1591,6 +1816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1598,6 +1824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1605,6 +1832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1612,6 +1840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1619,6 +1848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1626,6 +1856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1633,6 +1864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1640,6 +1872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1647,6 +1880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1654,6 +1888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1661,6 +1896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1668,6 +1904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1675,6 +1912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1682,6 +1920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1689,6 +1928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1696,6 +1936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1703,6 +1944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1710,6 +1952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1717,6 +1960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1724,6 +1968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1731,6 +1976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1738,6 +1984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1745,6 +1992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1752,6 +2000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1759,6 +2008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1766,6 +2016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1773,6 +2024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1780,6 +2032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1787,6 +2040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1794,6 +2048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1801,6 +2056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1808,6 +2064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1815,6 +2072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1822,6 +2080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1829,6 +2088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1836,6 +2096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1843,6 +2104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1850,6 +2112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1857,6 +2120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1864,6 +2128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1871,6 +2136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1878,6 +2144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1885,6 +2152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1892,6 +2160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1899,6 +2168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1906,6 +2176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1913,6 +2184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1920,6 +2192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1927,6 +2200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1934,6 +2208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1941,6 +2216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1948,6 +2224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1955,6 +2232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1962,6 +2240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1969,6 +2248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1976,6 +2256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1983,6 +2264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1990,6 +2272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -1997,6 +2280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2004,6 +2288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2011,6 +2296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2018,6 +2304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2025,6 +2312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2032,6 +2320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2039,6 +2328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2046,6 +2336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2053,6 +2344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2060,6 +2352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2067,6 +2360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2074,6 +2368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2081,6 +2376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2088,6 +2384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2095,6 +2392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2102,6 +2400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2109,6 +2408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2116,6 +2416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2123,6 +2424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2130,6 +2432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2137,6 +2440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2144,6 +2448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2151,6 +2456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2158,6 +2464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2165,6 +2472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2172,6 +2480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2179,6 +2488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2186,6 +2496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2193,6 +2504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2200,6 +2512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2207,6 +2520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2214,6 +2528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2221,6 +2536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2228,6 +2544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2235,6 +2552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2242,6 +2560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2249,6 +2568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2256,6 +2576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2263,6 +2584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2270,6 +2592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2277,6 +2600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2284,6 +2608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2291,6 +2616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2298,6 +2624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2305,6 +2632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2312,6 +2640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2319,6 +2648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2326,6 +2656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2333,6 +2664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2340,6 +2672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2347,6 +2680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2354,6 +2688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2361,6 +2696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2368,6 +2704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2375,6 +2712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2382,6 +2720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2389,6 +2728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2396,6 +2736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2403,6 +2744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2410,6 +2752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2417,6 +2760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2424,6 +2768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2431,6 +2776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2438,6 +2784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2445,6 +2792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2452,6 +2800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2459,6 +2808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2466,6 +2816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2473,6 +2824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2480,6 +2832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2487,6 +2840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2494,6 +2848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2501,6 +2856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2508,6 +2864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2515,6 +2872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2522,6 +2880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2529,6 +2888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2536,6 +2896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2543,6 +2904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2550,6 +2912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2557,6 +2920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2564,6 +2928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2571,6 +2936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2578,6 +2944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2585,6 +2952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2592,6 +2960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2599,6 +2968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2606,6 +2976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2613,6 +2984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2620,6 +2992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2627,6 +3000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2634,6 +3008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2641,6 +3016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2648,6 +3024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2655,6 +3032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2662,6 +3040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2669,6 +3048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2676,6 +3056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2683,6 +3064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2690,6 +3072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2697,6 +3080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2704,6 +3088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2711,6 +3096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2718,6 +3104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2725,6 +3112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2732,6 +3120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2739,6 +3128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2746,6 +3136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2753,6 +3144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2760,6 +3152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2767,6 +3160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2774,6 +3168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2781,6 +3176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2788,6 +3184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2795,6 +3192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2802,6 +3200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2809,6 +3208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2816,6 +3216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2823,6 +3224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2830,6 +3232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2837,6 +3240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2844,6 +3248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2851,6 +3256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2858,6 +3264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2865,6 +3272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2872,6 +3280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2879,6 +3288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2886,6 +3296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2893,6 +3304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2900,6 +3312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2907,6 +3320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2914,6 +3328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2921,6 +3336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2928,6 +3344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2935,6 +3352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2942,6 +3360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2949,6 +3368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2956,6 +3376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2963,6 +3384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2970,6 +3392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2977,6 +3400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2984,6 +3408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2991,6 +3416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -2998,6 +3424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3005,6 +3432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3012,6 +3440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3019,6 +3448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3026,6 +3456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3033,6 +3464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3040,6 +3472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3047,6 +3480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3054,6 +3488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3061,6 +3496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3068,6 +3504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3075,6 +3512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3082,6 +3520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3089,6 +3528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3096,6 +3536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3103,6 +3544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3110,6 +3552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3117,6 +3560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3124,6 +3568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3131,6 +3576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3138,6 +3584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3145,6 +3592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3152,6 +3600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3159,6 +3608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3166,6 +3616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3173,6 +3624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3180,6 +3632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3187,6 +3640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3194,6 +3648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3201,6 +3656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3208,6 +3664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3215,6 +3672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3222,6 +3680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3229,6 +3688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3236,6 +3696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3243,6 +3704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3250,6 +3712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3257,6 +3720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3264,6 +3728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3271,6 +3736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3278,6 +3744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3285,6 +3752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3292,6 +3760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3299,6 +3768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3306,6 +3776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3313,6 +3784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3320,6 +3792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3327,6 +3800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3334,6 +3808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3341,6 +3816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3348,6 +3824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3355,6 +3832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3362,6 +3840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3369,6 +3848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3376,6 +3856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3383,6 +3864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3390,6 +3872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3397,6 +3880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3404,6 +3888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3411,6 +3896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3418,6 +3904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3425,6 +3912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3432,6 +3920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3439,6 +3928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3446,6 +3936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3453,6 +3944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3460,6 +3952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3467,6 +3960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3474,6 +3968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3481,6 +3976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3488,6 +3984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3495,6 +3992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3502,6 +4000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3509,6 +4008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3516,6 +4016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3523,6 +4024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3530,6 +4032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3537,6 +4040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3544,6 +4048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3551,6 +4056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3558,6 +4064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3565,6 +4072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3572,6 +4080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3579,6 +4088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3586,6 +4096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3593,6 +4104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3600,6 +4112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3607,6 +4120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3614,6 +4128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3621,6 +4136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3628,6 +4144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3635,6 +4152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3642,6 +4160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3649,6 +4168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3656,6 +4176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3663,6 +4184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3670,6 +4192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3677,6 +4200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3684,6 +4208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3691,6 +4216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3698,6 +4224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3705,6 +4232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3712,6 +4240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3719,6 +4248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3726,6 +4256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3733,6 +4264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3740,6 +4272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3747,6 +4280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3754,6 +4288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3761,6 +4296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3768,6 +4304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3775,6 +4312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3782,6 +4320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3789,6 +4328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3796,6 +4336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3803,6 +4344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3810,6 +4352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3817,6 +4360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3824,6 +4368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3831,6 +4376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3838,6 +4384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3845,6 +4392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3852,6 +4400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3859,6 +4408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3866,6 +4416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3873,6 +4424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3880,6 +4432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3887,6 +4440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3894,6 +4448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3901,6 +4456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3908,6 +4464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3915,6 +4472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3922,6 +4480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3929,6 +4488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3936,6 +4496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3943,6 +4504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3950,6 +4512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3957,6 +4520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3964,6 +4528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3971,6 +4536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3978,6 +4544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3985,6 +4552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3992,6 +4560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -3999,6 +4568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4006,6 +4576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4013,6 +4584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4020,6 +4592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4027,6 +4600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4034,6 +4608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4041,6 +4616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4048,6 +4624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4055,6 +4632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4062,6 +4640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4069,6 +4648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4076,6 +4656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4083,6 +4664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4090,6 +4672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4097,6 +4680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4104,6 +4688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4111,6 +4696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4118,6 +4704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4125,6 +4712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4132,6 +4720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4139,6 +4728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4146,6 +4736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4153,6 +4744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4160,6 +4752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4167,6 +4760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4174,6 +4768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4181,6 +4776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4188,6 +4784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4195,6 +4792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4202,6 +4800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4209,6 +4808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4216,6 +4816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4223,6 +4824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4230,6 +4832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4237,6 +4840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4244,6 +4848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4251,6 +4856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4258,6 +4864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4265,6 +4872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4272,6 +4880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4279,6 +4888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4286,6 +4896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4293,6 +4904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4300,6 +4912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4307,6 +4920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4314,6 +4928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4321,6 +4936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4328,6 +4944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4335,6 +4952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4342,6 +4960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4349,6 +4968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4356,6 +4976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4363,6 +4984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4370,6 +4992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4377,6 +5000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4384,6 +5008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4391,6 +5016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4398,6 +5024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4405,6 +5032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4412,6 +5040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4419,6 +5048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4426,6 +5056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4433,6 +5064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4440,6 +5072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4447,6 +5080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4454,6 +5088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4461,6 +5096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4468,6 +5104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4475,6 +5112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4482,6 +5120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4489,6 +5128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4496,6 +5136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4503,6 +5144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4510,6 +5152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4517,6 +5160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4524,6 +5168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4531,6 +5176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4538,6 +5184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4545,6 +5192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4552,6 +5200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4559,6 +5208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4566,6 +5216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4573,6 +5224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4580,6 +5232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4587,6 +5240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4594,6 +5248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4601,6 +5256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4608,6 +5264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4615,6 +5272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4622,6 +5280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4629,6 +5288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4636,6 +5296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4643,6 +5304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4650,6 +5312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4657,6 +5320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4664,6 +5328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4671,6 +5336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4678,6 +5344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4685,6 +5352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4692,6 +5360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4699,6 +5368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4706,6 +5376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4713,6 +5384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4720,6 +5392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4727,6 +5400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4734,6 +5408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4741,6 +5416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4748,6 +5424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4755,6 +5432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4762,6 +5440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4769,6 +5448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4776,6 +5456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4783,6 +5464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4790,6 +5472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4797,6 +5480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4804,6 +5488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4811,6 +5496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4818,6 +5504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4825,6 +5512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4832,6 +5520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4839,6 +5528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4846,6 +5536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4853,6 +5544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4860,6 +5552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4867,6 +5560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4874,6 +5568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4881,6 +5576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4888,6 +5584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4895,6 +5592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4902,6 +5600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4909,6 +5608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4916,6 +5616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4923,6 +5624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4930,6 +5632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4937,6 +5640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4944,6 +5648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4951,6 +5656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4958,6 +5664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4965,6 +5672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4972,6 +5680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4979,6 +5688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4986,6 +5696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -4993,6 +5704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5000,6 +5712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5007,6 +5720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5014,6 +5728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5021,6 +5736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5028,6 +5744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5035,6 +5752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5042,6 +5760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5049,6 +5768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5056,6 +5776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5063,6 +5784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5070,6 +5792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5077,6 +5800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5084,6 +5808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5091,6 +5816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5098,6 +5824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5105,6 +5832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5112,6 +5840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5119,6 +5848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5126,6 +5856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5133,6 +5864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5140,6 +5872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5147,6 +5880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5154,6 +5888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5161,6 +5896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5168,6 +5904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5175,6 +5912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5182,6 +5920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5189,6 +5928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5196,6 +5936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5203,6 +5944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5210,6 +5952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5217,6 +5960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5224,6 +5968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5231,6 +5976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5238,6 +5984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5245,6 +5992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5252,6 +6000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5259,6 +6008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5266,6 +6016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5273,6 +6024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5280,6 +6032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5287,6 +6040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5294,6 +6048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5301,6 +6056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5308,6 +6064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5315,6 +6072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5322,6 +6080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5329,6 +6088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5336,6 +6096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5343,6 +6104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5350,6 +6112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5357,6 +6120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5364,6 +6128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5371,6 +6136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5378,6 +6144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5385,6 +6152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5392,6 +6160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5399,6 +6168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5406,6 +6176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5413,6 +6184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5420,6 +6192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5427,6 +6200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5434,6 +6208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5441,6 +6216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5448,6 +6224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5455,6 +6232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5462,6 +6240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5469,6 +6248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5476,6 +6256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5483,6 +6264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5490,6 +6272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5497,6 +6280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5504,6 +6288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5511,6 +6296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5518,6 +6304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5525,6 +6312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5532,6 +6320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5539,6 +6328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5546,6 +6336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5553,6 +6344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5560,6 +6352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5567,6 +6360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5574,6 +6368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5581,6 +6376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5588,6 +6384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5595,6 +6392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5602,6 +6400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5609,6 +6408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5616,6 +6416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5623,6 +6424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5630,6 +6432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5637,6 +6440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5644,6 +6448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5651,6 +6456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5658,6 +6464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5665,6 +6472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5672,6 +6480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5679,6 +6488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5686,6 +6496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5693,6 +6504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5700,6 +6512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5707,6 +6520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5714,6 +6528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5721,6 +6536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5728,6 +6544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5735,6 +6552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5742,6 +6560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5749,6 +6568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5756,6 +6576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5763,6 +6584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5770,6 +6592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5777,6 +6600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5784,6 +6608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5791,6 +6616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5798,6 +6624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5805,6 +6632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5812,6 +6640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5819,6 +6648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5826,6 +6656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5833,6 +6664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5840,6 +6672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5847,6 +6680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5854,6 +6688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5861,6 +6696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5868,6 +6704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5875,6 +6712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5882,6 +6720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5889,6 +6728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5896,6 +6736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5903,6 +6744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5910,6 +6752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5917,6 +6760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5924,6 +6768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5931,6 +6776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5938,6 +6784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5945,6 +6792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5952,6 +6800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5959,6 +6808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5966,6 +6816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5973,6 +6824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5980,6 +6832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5987,6 +6840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -5994,6 +6848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6001,6 +6856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6008,6 +6864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6015,6 +6872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6022,6 +6880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6029,6 +6888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6036,6 +6896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6043,6 +6904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6050,6 +6912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6057,6 +6920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6064,6 +6928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6071,6 +6936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6078,6 +6944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6085,6 +6952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6092,6 +6960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6099,6 +6968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6106,6 +6976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6113,6 +6984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6120,6 +6992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6127,6 +7000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6134,6 +7008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6141,6 +7016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6148,6 +7024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6155,6 +7032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6162,6 +7040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6169,6 +7048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6176,6 +7056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6183,6 +7064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6190,6 +7072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6197,6 +7080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6204,6 +7088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6211,6 +7096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6218,6 +7104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6225,6 +7112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6232,6 +7120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6239,6 +7128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6246,6 +7136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6253,6 +7144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6260,6 +7152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6267,6 +7160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6274,6 +7168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6281,6 +7176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6288,6 +7184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6295,6 +7192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6302,6 +7200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6309,6 +7208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6316,6 +7216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6323,6 +7224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6330,6 +7232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6337,6 +7240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6344,6 +7248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6351,6 +7256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6358,6 +7264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6365,6 +7272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6372,6 +7280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6379,6 +7288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6386,6 +7296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6393,6 +7304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6400,6 +7312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6407,6 +7320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6414,6 +7328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6421,6 +7336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6428,6 +7344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6435,6 +7352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6442,6 +7360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6449,6 +7368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6456,6 +7376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6463,6 +7384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6470,6 +7392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6477,6 +7400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6484,6 +7408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6491,6 +7416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6498,6 +7424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6505,6 +7432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6512,6 +7440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6519,6 +7448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6526,6 +7456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6533,6 +7464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6540,6 +7472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6547,6 +7480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6554,6 +7488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6561,6 +7496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6568,6 +7504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6575,6 +7512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6582,6 +7520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6589,6 +7528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6596,6 +7536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6603,6 +7544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6610,6 +7552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6617,6 +7560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6624,6 +7568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6631,6 +7576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6638,6 +7584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6645,6 +7592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6652,6 +7600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6659,6 +7608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6666,6 +7616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6673,6 +7624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6680,6 +7632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6687,6 +7640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6694,6 +7648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6701,6 +7656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6708,6 +7664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6715,6 +7672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6722,6 +7680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6729,6 +7688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6736,6 +7696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6743,6 +7704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6750,6 +7712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6757,6 +7720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6764,6 +7728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6771,6 +7736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6778,6 +7744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6785,6 +7752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6792,6 +7760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6799,6 +7768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6806,6 +7776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6813,6 +7784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6820,6 +7792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6827,6 +7800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6834,6 +7808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6841,6 +7816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6848,6 +7824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6855,6 +7832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6862,6 +7840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6869,6 +7848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6876,6 +7856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6883,6 +7864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6890,6 +7872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6897,6 +7880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6904,6 +7888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6911,6 +7896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6918,6 +7904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6925,6 +7912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6932,6 +7920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6939,6 +7928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6946,6 +7936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6953,6 +7944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6960,6 +7952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6967,6 +7960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6974,6 +7968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6981,6 +7976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6988,6 +7984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -6995,6 +7992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7002,6 +8000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7009,6 +8008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7016,6 +8016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7023,6 +8024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7030,6 +8032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7037,6 +8040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7044,6 +8048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7051,6 +8056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7058,6 +8064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7065,6 +8072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7072,6 +8080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7079,6 +8088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7086,6 +8096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7093,6 +8104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7100,6 +8112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7107,6 +8120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7114,6 +8128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7121,6 +8136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7128,6 +8144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7135,6 +8152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7142,6 +8160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7149,6 +8168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7156,6 +8176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7163,6 +8184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7170,6 +8192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7177,6 +8200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7184,6 +8208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7191,6 +8216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7198,6 +8224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7205,6 +8232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7212,6 +8240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7219,6 +8248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7226,6 +8256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7233,6 +8264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7240,6 +8272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7247,6 +8280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7254,6 +8288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7261,6 +8296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7268,6 +8304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7275,6 +8312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7282,6 +8320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7289,6 +8328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7296,6 +8336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7303,6 +8344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7310,6 +8352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7317,6 +8360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7324,6 +8368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7331,6 +8376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7338,6 +8384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7345,6 +8392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7352,6 +8400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7359,6 +8408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7366,6 +8416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7373,6 +8424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7380,6 +8432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7387,6 +8440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7394,6 +8448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7401,6 +8456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7408,6 +8464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7415,6 +8472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7422,6 +8480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7429,6 +8488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7436,6 +8496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7443,6 +8504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7450,6 +8512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7457,6 +8520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7464,6 +8528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7471,6 +8536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7478,6 +8544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7485,6 +8552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7492,6 +8560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7499,6 +8568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7506,6 +8576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7513,6 +8584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7520,6 +8592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7527,6 +8600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7534,6 +8608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7541,6 +8616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7548,6 +8624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7555,6 +8632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7562,6 +8640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7569,6 +8648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7576,6 +8656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7583,6 +8664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7590,6 +8672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7597,6 +8680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7604,6 +8688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7611,6 +8696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7618,6 +8704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7625,6 +8712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7632,6 +8720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7639,6 +8728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7646,6 +8736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7653,6 +8744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7660,6 +8752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7667,6 +8760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7674,6 +8768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7681,6 +8776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7688,6 +8784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7695,6 +8792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7702,6 +8800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7709,6 +8808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7716,6 +8816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7723,6 +8824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7730,6 +8832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7737,6 +8840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7744,6 +8848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7751,6 +8856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7758,6 +8864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7765,6 +8872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7772,6 +8880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7779,6 +8888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7786,6 +8896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7793,6 +8904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7800,6 +8912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7807,6 +8920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7814,6 +8928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7821,6 +8936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7828,6 +8944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7835,6 +8952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7842,6 +8960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7849,6 +8968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7856,6 +8976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7863,6 +8984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7870,6 +8992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7877,6 +9000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7884,6 +9008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7891,6 +9016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7898,6 +9024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7905,6 +9032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7912,6 +9040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7919,6 +9048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7926,6 +9056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7933,6 +9064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7940,6 +9072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7947,6 +9080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7954,6 +9088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7961,6 +9096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7968,6 +9104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7975,6 +9112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7982,6 +9120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7989,6 +9128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -7996,6 +9136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8003,6 +9144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8010,6 +9152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8017,6 +9160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8024,6 +9168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8031,6 +9176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8038,6 +9184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8045,6 +9192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8052,6 +9200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8059,6 +9208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8066,6 +9216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8073,6 +9224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8080,6 +9232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8087,6 +9240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8094,6 +9248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8101,6 +9256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8108,6 +9264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8115,6 +9272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8122,6 +9280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8129,6 +9288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8136,6 +9296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8143,6 +9304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8150,6 +9312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8157,6 +9320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8164,6 +9328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8171,6 +9336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8178,6 +9344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8185,6 +9352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8192,6 +9360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8199,6 +9368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8206,6 +9376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8213,6 +9384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8220,6 +9392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8227,6 +9400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8234,6 +9408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8241,6 +9416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8248,6 +9424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8255,6 +9432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8262,6 +9440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8269,6 +9448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8276,6 +9456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8283,6 +9464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8290,6 +9472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8297,6 +9480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8304,6 +9488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8311,6 +9496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8318,6 +9504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8325,6 +9512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8332,6 +9520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8339,6 +9528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8346,6 +9536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8353,6 +9544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8360,6 +9552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8367,6 +9560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8374,6 +9568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8381,6 +9576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8388,6 +9584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8395,6 +9592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8402,6 +9600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8409,6 +9608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8416,6 +9616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8423,6 +9624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8430,6 +9632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8437,6 +9640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8444,6 +9648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8451,6 +9656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8458,6 +9664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8465,6 +9672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8472,6 +9680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8479,6 +9688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8486,6 +9696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8493,6 +9704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8500,6 +9712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8507,6 +9720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8514,6 +9728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8521,6 +9736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8528,6 +9744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8535,6 +9752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8542,6 +9760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8549,6 +9768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8556,6 +9776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8563,6 +9784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8570,6 +9792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8577,6 +9800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8584,6 +9808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8591,6 +9816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8598,6 +9824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8605,6 +9832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8612,6 +9840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8619,6 +9848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8626,6 +9856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8633,6 +9864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8640,6 +9872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8647,6 +9880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8654,6 +9888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8661,6 +9896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8668,6 +9904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8675,6 +9912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8682,6 +9920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8689,6 +9928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8696,6 +9936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8703,6 +9944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8710,6 +9952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8717,6 +9960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8724,6 +9968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8731,6 +9976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8738,6 +9984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8745,6 +9992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8752,6 +10000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8759,6 +10008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8766,6 +10016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8773,6 +10024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8780,6 +10032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8787,6 +10040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8794,6 +10048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8801,6 +10056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8808,6 +10064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8815,6 +10072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8822,6 +10080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8829,6 +10088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8836,6 +10096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8843,6 +10104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8850,6 +10112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8857,6 +10120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8864,6 +10128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8871,6 +10136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8878,6 +10144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8885,6 +10152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8892,6 +10160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8899,6 +10168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8906,6 +10176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8913,6 +10184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8920,6 +10192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8927,6 +10200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8934,6 +10208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8941,6 +10216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8948,6 +10224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8955,6 +10232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8962,6 +10240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8969,6 +10248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8976,6 +10256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8983,6 +10264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8990,6 +10272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -8997,6 +10280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9004,6 +10288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9011,6 +10296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9018,6 +10304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9025,6 +10312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9032,6 +10320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9039,6 +10328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9046,6 +10336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9053,6 +10344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9060,6 +10352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9067,6 +10360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9074,6 +10368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9081,6 +10376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9088,6 +10384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9095,6 +10392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9102,6 +10400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9109,6 +10408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9116,6 +10416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9123,6 +10424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9130,6 +10432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9137,6 +10440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9144,6 +10448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9151,6 +10456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9158,6 +10464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9165,6 +10472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9172,6 +10480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9179,6 +10488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9186,6 +10496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9193,6 +10504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9200,6 +10512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9207,6 +10520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9214,6 +10528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9221,6 +10536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9228,6 +10544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9235,6 +10552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9242,6 +10560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9249,6 +10568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9256,6 +10576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9263,6 +10584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9270,6 +10592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9277,6 +10600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9284,6 +10608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9291,6 +10616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9298,6 +10624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9305,6 +10632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9312,6 +10640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9319,6 +10648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9326,6 +10656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9333,6 +10664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9340,6 +10672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9347,6 +10680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9354,6 +10688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9361,6 +10696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9368,6 +10704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9375,6 +10712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9382,6 +10720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9389,6 +10728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9396,6 +10736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9403,6 +10744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9410,6 +10752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9417,6 +10760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9424,6 +10768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9431,6 +10776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9438,6 +10784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9445,6 +10792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9452,6 +10800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9459,6 +10808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9466,6 +10816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9473,6 +10824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9480,6 +10832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9487,6 +10840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9494,6 +10848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9501,6 +10856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9508,6 +10864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9515,6 +10872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9522,6 +10880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9529,6 +10888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9536,6 +10896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9543,6 +10904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9550,6 +10912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9557,6 +10920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9564,6 +10928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9571,6 +10936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9578,6 +10944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9585,6 +10952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9592,6 +10960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9599,6 +10968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9606,6 +10976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9613,6 +10984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9620,6 +10992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9627,6 +11000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9634,6 +11008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9641,6 +11016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9648,6 +11024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9655,6 +11032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9662,6 +11040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9669,6 +11048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9676,6 +11056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9683,6 +11064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9690,6 +11072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9697,6 +11080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9704,6 +11088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9711,6 +11096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9718,6 +11104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9725,6 +11112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9732,6 +11120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9739,6 +11128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9746,6 +11136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9753,6 +11144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9760,6 +11152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9767,6 +11160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9774,6 +11168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9781,6 +11176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9788,6 +11184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9795,6 +11192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9802,6 +11200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9809,6 +11208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9816,6 +11216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9823,6 +11224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9830,6 +11232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9837,6 +11240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9844,6 +11248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9851,6 +11256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9858,6 +11264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9865,6 +11272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9872,6 +11280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9879,6 +11288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9886,6 +11296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9893,6 +11304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9900,6 +11312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9907,6 +11320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9914,6 +11328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9921,6 +11336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9928,6 +11344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9935,6 +11352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9942,6 +11360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9949,6 +11368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9956,6 +11376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9963,6 +11384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9970,6 +11392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9977,6 +11400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9984,6 +11408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9991,6 +11416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -9998,6 +11424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10005,6 +11432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10012,6 +11440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10019,6 +11448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10026,6 +11456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10033,6 +11464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10040,6 +11472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10047,6 +11480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10054,6 +11488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10061,6 +11496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10068,6 +11504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10075,6 +11512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10082,6 +11520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10089,6 +11528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10096,6 +11536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10103,6 +11544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10110,6 +11552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10117,6 +11560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10124,6 +11568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10131,6 +11576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10138,6 +11584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10145,6 +11592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10152,6 +11600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10159,6 +11608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10166,6 +11616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10173,6 +11624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10180,6 +11632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10187,6 +11640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10194,6 +11648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10201,6 +11656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10208,6 +11664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10215,6 +11672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10222,6 +11680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10229,6 +11688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10236,6 +11696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10243,6 +11704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10250,6 +11712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10257,6 +11720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10264,6 +11728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10271,6 +11736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10278,6 +11744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10285,6 +11752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10292,6 +11760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10299,6 +11768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10306,6 +11776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10313,6 +11784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10320,6 +11792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10327,6 +11800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10334,6 +11808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10341,6 +11816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10348,6 +11824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10355,6 +11832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10362,6 +11840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10369,6 +11848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10376,6 +11856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10383,6 +11864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10390,6 +11872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10397,6 +11880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10404,6 +11888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10411,6 +11896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10418,6 +11904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10425,6 +11912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10432,6 +11920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10439,6 +11928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10446,6 +11936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10453,6 +11944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10460,6 +11952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10467,6 +11960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10474,6 +11968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10481,6 +11976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10488,6 +11984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10495,6 +11992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10502,6 +12000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10509,6 +12008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10516,6 +12016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10523,6 +12024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10530,6 +12032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10537,6 +12040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10544,6 +12048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10551,6 +12056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10558,6 +12064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10565,6 +12072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10572,6 +12080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10579,6 +12088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10586,6 +12096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10593,6 +12104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10600,6 +12112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10607,6 +12120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10614,6 +12128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10621,6 +12136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10628,6 +12144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10635,6 +12152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10642,6 +12160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10649,6 +12168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10656,6 +12176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10663,6 +12184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10670,6 +12192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10677,6 +12200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10684,6 +12208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10691,6 +12216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10698,6 +12224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10705,6 +12232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10712,6 +12240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10719,6 +12248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10726,6 +12256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10733,6 +12264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10740,6 +12272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10747,6 +12280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10754,6 +12288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10761,6 +12296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10768,6 +12304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10775,6 +12312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10782,6 +12320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10789,6 +12328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10796,6 +12336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10803,6 +12344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10810,6 +12352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10817,6 +12360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10824,6 +12368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10831,6 +12376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10838,6 +12384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10845,6 +12392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10852,6 +12400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10859,6 +12408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10866,6 +12416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10873,6 +12424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10880,6 +12432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10887,6 +12440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10894,6 +12448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10901,6 +12456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10908,6 +12464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10915,6 +12472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10922,6 +12480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10929,6 +12488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10936,6 +12496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10943,6 +12504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10950,6 +12512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10957,6 +12520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10964,6 +12528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10971,6 +12536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10978,6 +12544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10985,6 +12552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10992,6 +12560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -10999,6 +12568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11006,6 +12576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11013,6 +12584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11020,6 +12592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11027,6 +12600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11034,6 +12608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11041,6 +12616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11048,6 +12624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11055,6 +12632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11062,6 +12640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11069,6 +12648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11076,6 +12656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11083,6 +12664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11090,6 +12672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11097,6 +12680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11104,6 +12688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11111,6 +12696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11118,6 +12704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11125,6 +12712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11132,6 +12720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11139,6 +12728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11146,6 +12736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11153,6 +12744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11160,6 +12752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11167,6 +12760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11174,6 +12768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11181,6 +12776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11188,6 +12784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11195,6 +12792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11202,6 +12800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11209,6 +12808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11216,6 +12816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11223,6 +12824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11230,6 +12832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11237,6 +12840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11244,6 +12848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11251,6 +12856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11258,6 +12864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11265,6 +12872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11272,6 +12880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11279,6 +12888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11286,6 +12896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11293,6 +12904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11300,6 +12912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11307,6 +12920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11314,6 +12928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11321,6 +12936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11328,6 +12944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11335,6 +12952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11342,6 +12960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11349,6 +12968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11356,6 +12976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11363,6 +12984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11370,6 +12992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11377,6 +13000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11384,6 +13008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11391,6 +13016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11398,6 +13024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11405,6 +13032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11412,6 +13040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11419,6 +13048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11426,6 +13056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11433,6 +13064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11440,6 +13072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11447,6 +13080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11454,6 +13088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11461,6 +13096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11468,6 +13104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11475,6 +13112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11482,6 +13120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11489,6 +13128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11496,6 +13136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11503,6 +13144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11510,6 +13152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11517,6 +13160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11524,6 +13168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11531,6 +13176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11538,6 +13184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11545,6 +13192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11552,6 +13200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11559,6 +13208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11566,6 +13216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11573,6 +13224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11580,6 +13232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11587,6 +13240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11594,6 +13248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11601,6 +13256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11608,6 +13264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11615,6 +13272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11622,6 +13280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11629,6 +13288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11636,6 +13296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11643,6 +13304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11650,6 +13312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11657,6 +13320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11664,6 +13328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11671,6 +13336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11678,6 +13344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11685,6 +13352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11692,6 +13360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11699,6 +13368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11706,6 +13376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11713,6 +13384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11720,6 +13392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11727,6 +13400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11734,6 +13408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11741,6 +13416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11748,6 +13424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11755,6 +13432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11762,6 +13440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11769,6 +13448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11776,6 +13456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11783,6 +13464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11790,6 +13472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11797,6 +13480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11804,6 +13488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11811,6 +13496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11818,6 +13504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11825,6 +13512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11832,6 +13520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11839,6 +13528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11846,6 +13536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11853,6 +13544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11860,6 +13552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11867,6 +13560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11874,6 +13568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11881,6 +13576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11888,6 +13584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11895,6 +13592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11902,6 +13600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11909,6 +13608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11916,6 +13616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11923,6 +13624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11930,6 +13632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11937,6 +13640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11944,6 +13648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11951,6 +13656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11958,6 +13664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11965,6 +13672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11972,6 +13680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11979,6 +13688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11986,6 +13696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -11993,6 +13704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12000,6 +13712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12007,6 +13720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12014,6 +13728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12021,6 +13736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12028,6 +13744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12035,6 +13752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12042,6 +13760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12049,6 +13768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12056,6 +13776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12063,6 +13784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12070,6 +13792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12077,6 +13800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12084,6 +13808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12091,6 +13816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12098,6 +13824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12105,6 +13832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12112,6 +13840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12119,6 +13848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12126,6 +13856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12133,6 +13864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12140,6 +13872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12147,6 +13880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12154,6 +13888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12161,6 +13896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12168,6 +13904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12175,6 +13912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12182,6 +13920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12189,6 +13928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12196,6 +13936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12203,6 +13944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12210,6 +13952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12217,6 +13960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12224,6 +13968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12231,6 +13976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12238,6 +13984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12245,6 +13992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12252,6 +14000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12259,6 +14008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12266,6 +14016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12273,6 +14024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12280,6 +14032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12287,6 +14040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12294,6 +14048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12301,6 +14056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12308,6 +14064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12315,6 +14072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12322,6 +14080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12329,6 +14088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12336,6 +14096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12343,6 +14104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12350,6 +14112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12357,6 +14120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12364,6 +14128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12371,6 +14136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12378,6 +14144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12385,6 +14152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12392,6 +14160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12399,6 +14168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12406,6 +14176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12413,6 +14184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12420,6 +14192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12427,6 +14200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12434,6 +14208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12441,6 +14216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12448,6 +14224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12455,6 +14232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12462,6 +14240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12469,6 +14248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12476,6 +14256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12483,6 +14264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12490,6 +14272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12497,6 +14280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12504,6 +14288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12511,6 +14296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12518,6 +14304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12525,6 +14312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12532,6 +14320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12539,6 +14328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12546,6 +14336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12553,6 +14344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12560,6 +14352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12567,6 +14360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12574,6 +14368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12581,6 +14376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12588,6 +14384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12595,6 +14392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12602,6 +14400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12609,6 +14408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12616,6 +14416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12623,6 +14424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12630,6 +14432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12637,6 +14440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12644,6 +14448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12651,6 +14456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12658,6 +14464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12665,6 +14472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12672,6 +14480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12679,6 +14488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12686,6 +14496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12693,6 +14504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12700,6 +14512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12707,6 +14520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12714,6 +14528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12721,6 +14536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12728,6 +14544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12735,6 +14552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12742,6 +14560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12749,6 +14568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12756,6 +14576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12763,6 +14584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12770,6 +14592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12777,6 +14600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12784,6 +14608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12791,6 +14616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12798,6 +14624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12805,6 +14632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12812,6 +14640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12819,6 +14648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12826,6 +14656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12833,6 +14664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12840,6 +14672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12847,6 +14680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12854,6 +14688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12861,6 +14696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12868,6 +14704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12875,6 +14712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12882,6 +14720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12889,6 +14728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12896,6 +14736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12903,6 +14744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12910,6 +14752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12917,6 +14760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12924,6 +14768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12931,6 +14776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12938,6 +14784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12945,6 +14792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12952,6 +14800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12959,6 +14808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12966,6 +14816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12973,6 +14824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12980,6 +14832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12987,6 +14840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -12994,6 +14848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13001,6 +14856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13008,6 +14864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13015,6 +14872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13022,6 +14880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13029,6 +14888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13036,6 +14896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13043,6 +14904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13050,6 +14912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13057,6 +14920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13064,6 +14928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13071,6 +14936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13078,6 +14944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13085,6 +14952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13092,6 +14960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13099,6 +14968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13106,6 +14976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13113,6 +14984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13120,6 +14992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13127,6 +15000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13134,6 +15008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13141,6 +15016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13148,6 +15024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13155,6 +15032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13162,6 +15040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13169,6 +15048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13176,6 +15056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13183,6 +15064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13190,6 +15072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13197,6 +15080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13204,6 +15088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13211,6 +15096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13218,6 +15104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13225,6 +15112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13232,6 +15120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13239,6 +15128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13246,6 +15136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13253,6 +15144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13260,6 +15152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13267,6 +15160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13274,6 +15168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13281,6 +15176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13288,6 +15184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13295,6 +15192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13302,6 +15200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13309,6 +15208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13316,6 +15216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13323,6 +15224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13330,6 +15232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13337,6 +15240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13344,6 +15248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13351,6 +15256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13358,6 +15264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13365,6 +15272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13372,6 +15280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13379,6 +15288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13386,6 +15296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13393,6 +15304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13400,6 +15312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13407,6 +15320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13414,6 +15328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13421,6 +15336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13428,6 +15344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13435,6 +15352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13442,6 +15360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13449,6 +15368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13456,6 +15376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13463,6 +15384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13470,6 +15392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13477,6 +15400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13484,6 +15408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13491,6 +15416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13498,6 +15424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13505,6 +15432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13512,6 +15440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13519,6 +15448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13526,6 +15456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13533,6 +15464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13540,6 +15472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13547,6 +15480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13554,6 +15488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13561,6 +15496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13568,6 +15504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13575,6 +15512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13582,6 +15520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13589,6 +15528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13596,6 +15536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13603,6 +15544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13610,6 +15552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13617,6 +15560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13624,6 +15568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13631,6 +15576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13638,6 +15584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13645,6 +15592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13652,6 +15600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13659,6 +15608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13666,6 +15616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13673,6 +15624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13680,6 +15632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13687,6 +15640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13694,6 +15648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13701,6 +15656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13708,6 +15664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13715,6 +15672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13722,6 +15680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13729,6 +15688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13736,6 +15696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13743,6 +15704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13750,6 +15712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13757,6 +15720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13764,6 +15728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13771,6 +15736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13778,6 +15744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13785,6 +15752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13792,6 +15760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13799,6 +15768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13806,6 +15776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13813,6 +15784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13820,6 +15792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13827,6 +15800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13834,6 +15808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13841,6 +15816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13848,6 +15824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13855,6 +15832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13862,6 +15840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13869,6 +15848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13876,6 +15856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13883,6 +15864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13890,6 +15872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13897,6 +15880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13904,6 +15888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13911,6 +15896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13918,6 +15904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13925,6 +15912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13932,6 +15920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13939,6 +15928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13946,6 +15936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13953,6 +15944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13960,6 +15952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13967,6 +15960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13974,6 +15968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13981,6 +15976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13988,6 +15984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -13995,6 +15992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14002,6 +16000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14009,6 +16008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14016,6 +16016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14023,6 +16024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14030,6 +16032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14037,6 +16040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14044,6 +16048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14051,6 +16056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14058,6 +16064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14065,6 +16072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14072,6 +16080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14079,6 +16088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14086,6 +16096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14093,6 +16104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14100,6 +16112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14107,6 +16120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14114,6 +16128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14121,6 +16136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14128,6 +16144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14135,6 +16152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14142,6 +16160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14149,6 +16168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14156,6 +16176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14163,6 +16184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14170,6 +16192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14177,6 +16200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14184,6 +16208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14191,6 +16216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14198,6 +16224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14205,6 +16232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14212,6 +16240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14219,6 +16248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14226,6 +16256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14233,6 +16264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14240,6 +16272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14247,6 +16280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14254,6 +16288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14261,6 +16296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14268,6 +16304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14275,6 +16312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14282,6 +16320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14289,6 +16328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14296,6 +16336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14303,6 +16344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14310,6 +16352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14317,6 +16360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14324,6 +16368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14331,6 +16376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14338,6 +16384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14345,6 +16392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14352,6 +16400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14359,6 +16408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14366,6 +16416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14373,6 +16424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14380,6 +16432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14387,6 +16440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14394,6 +16448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14401,6 +16456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14408,6 +16464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14415,6 +16472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14422,6 +16480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14429,6 +16488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14436,6 +16496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14443,6 +16504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14450,6 +16512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14457,6 +16520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14464,6 +16528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14471,6 +16536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14478,6 +16544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14485,6 +16552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14492,6 +16560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14499,6 +16568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14506,6 +16576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14513,6 +16584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14520,6 +16592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14527,6 +16600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14534,6 +16608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14541,6 +16616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14548,6 +16624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14555,6 +16632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14562,6 +16640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14569,6 +16648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14576,6 +16656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14583,6 +16664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14590,6 +16672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14597,6 +16680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14604,6 +16688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14611,6 +16696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14618,6 +16704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14625,6 +16712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14632,6 +16720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14639,6 +16728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14646,6 +16736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14653,6 +16744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14660,6 +16752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14667,6 +16760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14674,6 +16768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14681,6 +16776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14688,6 +16784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14695,6 +16792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14702,6 +16800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14709,6 +16808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14716,6 +16816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14723,6 +16824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14730,6 +16832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14737,6 +16840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14744,6 +16848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14751,6 +16856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14758,6 +16864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14765,6 +16872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14772,6 +16880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14779,6 +16888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14786,6 +16896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14793,6 +16904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14800,6 +16912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14807,6 +16920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14814,6 +16928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14821,6 +16936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14828,6 +16944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14835,6 +16952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14842,6 +16960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14849,6 +16968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14856,6 +16976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14863,6 +16984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14870,6 +16992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14877,6 +17000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14884,6 +17008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14891,6 +17016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14898,6 +17024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14905,6 +17032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14912,6 +17040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14919,6 +17048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14926,6 +17056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14933,6 +17064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14940,6 +17072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14947,6 +17080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14954,6 +17088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14961,6 +17096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14968,6 +17104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14975,6 +17112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14982,6 +17120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14989,6 +17128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -14996,6 +17136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15003,6 +17144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15010,6 +17152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15017,6 +17160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15024,6 +17168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15031,6 +17176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15038,6 +17184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15045,6 +17192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15052,6 +17200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15059,6 +17208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15066,6 +17216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15073,6 +17224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15080,6 +17232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15087,6 +17240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15094,6 +17248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15101,6 +17256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15108,6 +17264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15115,6 +17272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15122,6 +17280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15129,6 +17288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15136,6 +17296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15143,6 +17304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15150,6 +17312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15157,6 +17320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15164,6 +17328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15171,6 +17336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15178,6 +17344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15185,6 +17352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15192,6 +17360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15199,6 +17368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15206,6 +17376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15213,6 +17384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15220,6 +17392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15227,6 +17400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15234,6 +17408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15241,6 +17416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15248,6 +17424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15255,6 +17432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15262,6 +17440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15269,6 +17448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15276,6 +17456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15283,6 +17464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15290,6 +17472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15297,6 +17480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15304,6 +17488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15311,6 +17496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15318,6 +17504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15325,6 +17512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15332,6 +17520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15339,6 +17528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15346,6 +17536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15353,6 +17544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15360,6 +17552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15367,6 +17560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15374,6 +17568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15381,6 +17576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15388,6 +17584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15395,6 +17592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15402,6 +17600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15409,6 +17608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15416,6 +17616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15423,6 +17624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15430,6 +17632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15437,6 +17640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15444,6 +17648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15451,6 +17656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15458,6 +17664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15465,6 +17672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15472,6 +17680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15479,6 +17688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15486,6 +17696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15493,6 +17704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15500,6 +17712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15507,6 +17720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15514,6 +17728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15521,6 +17736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15528,6 +17744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15535,6 +17752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15542,6 +17760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15549,6 +17768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15556,6 +17776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15563,6 +17784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15570,6 +17792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15577,6 +17800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15584,6 +17808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15591,6 +17816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15598,6 +17824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15605,6 +17832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15612,6 +17840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15619,6 +17848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15626,6 +17856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15633,6 +17864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15640,6 +17872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15647,6 +17880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15654,6 +17888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15661,6 +17896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15668,6 +17904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15675,6 +17912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15682,6 +17920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15689,6 +17928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15696,6 +17936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15703,6 +17944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15710,6 +17952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15717,6 +17960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15724,6 +17968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15731,6 +17976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15738,6 +17984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15745,6 +17992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15752,6 +18000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15759,6 +18008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15766,6 +18016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15773,6 +18024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15780,6 +18032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15787,6 +18040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15794,6 +18048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15801,6 +18056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15808,6 +18064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15815,6 +18072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15822,6 +18080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15829,6 +18088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15836,6 +18096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15843,6 +18104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15850,6 +18112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15857,6 +18120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15864,6 +18128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15871,6 +18136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15878,6 +18144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15885,6 +18152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15892,6 +18160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15899,6 +18168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15906,6 +18176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15913,6 +18184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15920,6 +18192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15927,6 +18200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15934,6 +18208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15941,6 +18216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15948,6 +18224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15955,6 +18232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15962,6 +18240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15969,6 +18248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15976,6 +18256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15983,6 +18264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15990,6 +18272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -15997,6 +18280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16004,6 +18288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16011,6 +18296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16018,6 +18304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16025,6 +18312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16032,6 +18320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16039,6 +18328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16046,6 +18336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16053,6 +18344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16060,6 +18352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16067,6 +18360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16074,6 +18368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16081,6 +18376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16088,6 +18384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16095,6 +18392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16102,6 +18400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16109,6 +18408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16116,6 +18416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16123,6 +18424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16130,6 +18432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16137,6 +18440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16144,6 +18448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16151,6 +18456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16158,6 +18464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16165,6 +18472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16172,6 +18480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16179,6 +18488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16186,6 +18496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16193,6 +18504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16200,6 +18512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16207,6 +18520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16214,6 +18528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16221,6 +18536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16228,6 +18544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16235,6 +18552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16242,6 +18560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16249,6 +18568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16256,6 +18576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16263,6 +18584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16270,6 +18592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16277,6 +18600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16284,6 +18608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16291,6 +18616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16298,6 +18624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16305,6 +18632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16312,6 +18640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16319,6 +18648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16326,6 +18656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16333,6 +18664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16340,6 +18672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16347,6 +18680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16354,6 +18688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16361,6 +18696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16368,6 +18704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16375,6 +18712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16382,6 +18720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16389,6 +18728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16396,6 +18736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16403,6 +18744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16410,6 +18752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16417,6 +18760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16424,6 +18768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16431,6 +18776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16438,6 +18784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16445,6 +18792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16452,6 +18800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16459,6 +18808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16466,6 +18816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16473,6 +18824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16480,6 +18832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16487,6 +18840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16494,6 +18848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16501,6 +18856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16508,6 +18864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16515,6 +18872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16522,6 +18880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16529,6 +18888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16536,6 +18896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16543,6 +18904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16550,6 +18912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16557,6 +18920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16564,6 +18928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16571,6 +18936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16578,6 +18944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16585,6 +18952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16592,6 +18960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16599,6 +18968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16606,6 +18976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16613,6 +18984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16620,6 +18992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16627,6 +19000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16634,6 +19008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16641,6 +19016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16648,6 +19024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16655,6 +19032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16662,6 +19040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16669,6 +19048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16676,6 +19056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16683,6 +19064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16690,6 +19072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16697,6 +19080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16704,6 +19088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16711,6 +19096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16718,6 +19104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16725,6 +19112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16732,6 +19120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16739,6 +19128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16746,6 +19136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16753,6 +19144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16760,6 +19152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16767,6 +19160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16774,6 +19168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16781,6 +19176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16788,6 +19184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16795,6 +19192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16802,6 +19200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16809,6 +19208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16816,6 +19216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16823,6 +19224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16830,6 +19232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16837,6 +19240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16844,6 +19248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16851,6 +19256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16858,6 +19264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16865,6 +19272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16872,6 +19280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16879,6 +19288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16886,6 +19296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16893,6 +19304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16900,6 +19312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16907,6 +19320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16914,6 +19328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16921,6 +19336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16928,6 +19344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16935,6 +19352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16942,6 +19360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16949,6 +19368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16956,6 +19376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16963,6 +19384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16970,6 +19392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16977,6 +19400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16984,6 +19408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16991,6 +19416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -16998,6 +19424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17005,6 +19432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17012,6 +19440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17019,6 +19448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17026,6 +19456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17033,6 +19464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17040,6 +19472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17047,6 +19480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17054,6 +19488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17061,6 +19496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17068,6 +19504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17075,6 +19512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17082,6 +19520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17089,6 +19528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17096,6 +19536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17103,6 +19544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17110,6 +19552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17117,6 +19560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17124,6 +19568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17131,6 +19576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17138,6 +19584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17145,6 +19592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17152,6 +19600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17159,6 +19608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17166,6 +19616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17173,6 +19624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17180,6 +19632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17187,6 +19640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17194,6 +19648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17201,6 +19656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17208,6 +19664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17215,6 +19672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17222,6 +19680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17229,6 +19688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17236,6 +19696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17243,6 +19704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17250,6 +19712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17257,6 +19720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17264,6 +19728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17271,6 +19736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17278,6 +19744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17285,6 +19752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17292,6 +19760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17299,6 +19768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17306,6 +19776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17313,6 +19784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17320,6 +19792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17327,6 +19800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17334,6 +19808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17341,6 +19816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17348,6 +19824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17355,6 +19832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17362,6 +19840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17369,6 +19848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17376,6 +19856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17383,6 +19864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17390,6 +19872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17397,6 +19880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17404,6 +19888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17411,6 +19896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17418,6 +19904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17425,6 +19912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17432,6 +19920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17439,6 +19928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17446,6 +19936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17453,6 +19944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17460,6 +19952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17467,6 +19960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17474,6 +19968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17481,6 +19976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17488,6 +19984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17495,6 +19992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17502,6 +20000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17509,6 +20008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17516,6 +20016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17523,6 +20024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17530,6 +20032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17537,6 +20040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17544,6 +20048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17551,6 +20056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17558,6 +20064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17565,6 +20072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17572,6 +20080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17579,6 +20088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17586,6 +20096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17593,6 +20104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17600,6 +20112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17607,6 +20120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17614,6 +20128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17621,6 +20136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17628,6 +20144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17635,6 +20152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17642,6 +20160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17649,6 +20168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17656,6 +20176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17663,6 +20184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17670,6 +20192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17677,6 +20200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17684,6 +20208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17691,6 +20216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17698,6 +20224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17705,6 +20232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17712,6 +20240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17719,6 +20248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17726,6 +20256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17733,6 +20264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17740,6 +20272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17747,6 +20280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17754,6 +20288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17761,6 +20296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17768,6 +20304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17775,6 +20312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17782,6 +20320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17789,6 +20328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17796,6 +20336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17803,6 +20344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17810,6 +20352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17817,6 +20360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17824,6 +20368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17831,6 +20376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17838,6 +20384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17845,6 +20392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17852,6 +20400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17859,6 +20408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17866,6 +20416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17873,6 +20424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17880,6 +20432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17887,6 +20440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17894,6 +20448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17901,6 +20456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17908,6 +20464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17915,6 +20472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17922,6 +20480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17929,6 +20488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17936,6 +20496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17943,6 +20504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17950,6 +20512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17957,6 +20520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17964,6 +20528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17971,6 +20536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17978,6 +20544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17985,6 +20552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17992,6 +20560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -17999,6 +20568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18006,6 +20576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18013,6 +20584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18020,6 +20592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18027,6 +20600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18034,6 +20608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18041,6 +20616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18048,6 +20624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18055,6 +20632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18062,6 +20640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18069,6 +20648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18076,6 +20656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18083,6 +20664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18090,6 +20672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18097,6 +20680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18104,6 +20688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18111,6 +20696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18118,6 +20704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18125,6 +20712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18132,6 +20720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18139,6 +20728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18146,6 +20736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18153,6 +20744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18160,6 +20752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18167,6 +20760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18174,6 +20768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18181,6 +20776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18188,6 +20784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18195,6 +20792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18202,6 +20800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18209,6 +20808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18216,6 +20816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18223,6 +20824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18230,6 +20832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18237,6 +20840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18244,6 +20848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18251,6 +20856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18258,6 +20864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18265,6 +20872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18272,6 +20880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18279,6 +20888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18286,6 +20896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18293,6 +20904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18300,6 +20912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18307,6 +20920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18314,6 +20928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18321,6 +20936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18328,6 +20944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18335,6 +20952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18342,6 +20960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18349,6 +20968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18356,6 +20976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18363,6 +20984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18370,6 +20992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18377,6 +21000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18384,6 +21008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18391,6 +21016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18398,6 +21024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18405,6 +21032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18412,6 +21040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18419,6 +21048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18426,6 +21056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18433,6 +21064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18440,6 +21072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18447,6 +21080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18454,6 +21088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18461,6 +21096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18468,6 +21104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18475,6 +21112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18482,6 +21120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18489,6 +21128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18496,6 +21136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18503,6 +21144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18510,6 +21152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18517,6 +21160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18524,6 +21168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18531,6 +21176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18538,6 +21184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18545,6 +21192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18552,6 +21200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18559,6 +21208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18566,6 +21216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18573,6 +21224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18580,6 +21232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18587,6 +21240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18594,6 +21248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18601,6 +21256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18608,6 +21264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18615,6 +21272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18622,6 +21280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18629,6 +21288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18636,6 +21296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18643,6 +21304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18650,6 +21312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18657,6 +21320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18664,6 +21328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18671,6 +21336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18678,6 +21344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18685,6 +21352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18692,6 +21360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18699,6 +21368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18706,6 +21376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18713,6 +21384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18720,6 +21392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18727,6 +21400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18734,6 +21408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18741,6 +21416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18748,6 +21424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18755,6 +21432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18762,6 +21440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18769,6 +21448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18776,6 +21456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18783,6 +21464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18790,6 +21472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18797,6 +21480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18804,6 +21488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18811,6 +21496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18818,6 +21504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18825,6 +21512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18832,6 +21520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18839,6 +21528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18846,6 +21536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18853,6 +21544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18860,6 +21552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18867,6 +21560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18874,6 +21568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18881,6 +21576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18888,6 +21584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18895,6 +21592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18902,6 +21600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18909,6 +21608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18916,6 +21616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18923,6 +21624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18930,6 +21632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18937,6 +21640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18944,6 +21648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18951,6 +21656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18958,6 +21664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18965,6 +21672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18972,6 +21680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18979,6 +21688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18986,6 +21696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -18993,6 +21704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19000,6 +21712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19007,6 +21720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19014,6 +21728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19021,6 +21736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19028,6 +21744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19035,6 +21752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19042,6 +21760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19049,6 +21768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19056,6 +21776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19063,6 +21784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19070,6 +21792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19077,6 +21800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19084,6 +21808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19091,6 +21816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19098,6 +21824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19105,6 +21832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19112,6 +21840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19119,6 +21848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19126,6 +21856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19133,6 +21864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19140,6 +21872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19147,6 +21880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19154,6 +21888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19161,6 +21896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19168,6 +21904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19175,6 +21912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19182,6 +21920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19189,6 +21928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19196,6 +21936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19203,6 +21944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19210,6 +21952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19217,6 +21960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19224,6 +21968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19231,6 +21976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19238,6 +21984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19245,6 +21992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19252,6 +22000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19259,6 +22008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19266,6 +22016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19273,6 +22024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19280,6 +22032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19287,6 +22040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19294,6 +22048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19301,6 +22056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19308,6 +22064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19315,6 +22072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19322,6 +22080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19329,6 +22088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19336,6 +22096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19343,6 +22104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19350,6 +22112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19357,6 +22120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19364,6 +22128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19371,6 +22136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19378,6 +22144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19385,6 +22152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19392,6 +22160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19399,6 +22168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19406,6 +22176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19413,6 +22184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19420,6 +22192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19427,6 +22200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19434,6 +22208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19441,6 +22216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19448,6 +22224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19455,6 +22232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19462,6 +22240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19469,6 +22248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19476,6 +22256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19483,6 +22264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19490,6 +22272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19497,6 +22280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19504,6 +22288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19511,6 +22296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19518,6 +22304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19525,6 +22312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19532,6 +22320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19539,6 +22328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19546,6 +22336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19553,6 +22344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19560,6 +22352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19567,6 +22360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19574,6 +22368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19581,6 +22376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19588,6 +22384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19595,6 +22392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19602,6 +22400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19609,6 +22408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19616,6 +22416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19623,6 +22424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19630,6 +22432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19637,6 +22440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19644,6 +22448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19651,6 +22456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19658,6 +22464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19665,6 +22472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19672,6 +22480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19679,6 +22488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19686,6 +22496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19693,6 +22504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19700,6 +22512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19707,6 +22520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19714,6 +22528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19721,6 +22536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19728,6 +22544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19735,6 +22552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19742,6 +22560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19749,6 +22568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19756,6 +22576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19763,6 +22584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19770,6 +22592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19777,6 +22600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19784,6 +22608,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19791,6 +22616,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19798,6 +22624,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19805,6 +22632,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19812,6 +22640,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19819,6 +22648,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19826,6 +22656,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19833,6 +22664,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19840,6 +22672,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19847,6 +22680,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19854,6 +22688,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19861,6 +22696,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19868,6 +22704,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19875,6 +22712,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19882,6 +22720,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19889,6 +22728,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19896,6 +22736,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19903,6 +22744,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19910,6 +22752,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19917,6 +22760,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19924,6 +22768,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19931,6 +22776,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19938,6 +22784,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19945,6 +22792,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19952,6 +22800,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19959,6 +22808,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19966,6 +22816,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19973,6 +22824,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19980,6 +22832,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19987,6 +22840,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -19994,6 +22848,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20001,6 +22856,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20008,6 +22864,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20015,6 +22872,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20022,6 +22880,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20029,6 +22888,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20036,6 +22896,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20043,6 +22904,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20050,6 +22912,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20057,6 +22920,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20064,6 +22928,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20071,6 +22936,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20078,6 +22944,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20085,6 +22952,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20092,6 +22960,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20099,6 +22968,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20106,6 +22976,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20113,6 +22984,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20120,6 +22992,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20127,6 +23000,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20134,6 +23008,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20141,6 +23016,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20148,6 +23024,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20155,6 +23032,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20162,6 +23040,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20169,6 +23048,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20176,6 +23056,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20183,6 +23064,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20190,6 +23072,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20197,6 +23080,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20204,6 +23088,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20211,6 +23096,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20218,6 +23104,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20225,6 +23112,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20232,6 +23120,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20239,6 +23128,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20246,6 +23136,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20253,6 +23144,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20260,6 +23152,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20267,6 +23160,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20274,6 +23168,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20281,6 +23176,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20288,6 +23184,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20295,6 +23192,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20302,6 +23200,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20309,6 +23208,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20316,6 +23216,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20323,6 +23224,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20330,6 +23232,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20337,6 +23240,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20344,6 +23248,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20351,6 +23256,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20358,6 +23264,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20365,6 +23272,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20372,6 +23280,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20379,6 +23288,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20386,6 +23296,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20393,6 +23304,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20400,6 +23312,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20407,6 +23320,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20414,6 +23328,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20421,6 +23336,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20428,6 +23344,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20435,6 +23352,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20442,6 +23360,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20449,6 +23368,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20456,6 +23376,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20463,6 +23384,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20470,6 +23392,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20477,6 +23400,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20484,6 +23408,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20491,6 +23416,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20498,6 +23424,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20505,6 +23432,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20512,6 +23440,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20519,6 +23448,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20526,6 +23456,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20533,6 +23464,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20540,6 +23472,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20547,6 +23480,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20554,6 +23488,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20561,6 +23496,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20568,6 +23504,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20575,6 +23512,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20582,6 +23520,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20589,6 +23528,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20596,6 +23536,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20603,6 +23544,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20610,6 +23552,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20617,6 +23560,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20624,6 +23568,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20631,6 +23576,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20638,6 +23584,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20645,6 +23592,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
          $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */
@@ -20652,6 +23600,7 @@ class WpServiceDecorator implements \WpService\WpService
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
+
     /**
      * @inheritDoc
      */

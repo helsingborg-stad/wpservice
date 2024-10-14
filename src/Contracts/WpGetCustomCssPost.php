@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface WpGetCustomCssPost
 {
-    /**
+/**
  * Fetches the `custom_css` post for a given theme.
  *
  * @since 4.7.0

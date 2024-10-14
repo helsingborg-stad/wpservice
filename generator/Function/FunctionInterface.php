@@ -2,8 +2,6 @@
 
 namespace WpService\Generator\Function;
 
-use Stringable;
-
 interface FunctionInterface
 {
     /**

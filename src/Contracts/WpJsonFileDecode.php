@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface WpJsonFileDecode
 {
-    /**
+/**
  * Reads and decodes a JSON file.
  *
  * @since 5.9.0

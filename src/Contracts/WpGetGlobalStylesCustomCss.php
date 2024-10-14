@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface WpGetGlobalStylesCustomCss
 {
-    /**
+/**
  * Gets the global styles custom CSS from theme.json.
  *
  * @since 6.2.0

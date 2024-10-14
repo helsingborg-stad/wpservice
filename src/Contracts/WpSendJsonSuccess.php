@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface WpSendJsonSuccess
 {
-    /**
+/**
  * Sends a JSON response back to an Ajax request, indicating success.
  *
  * @since 3.5.0

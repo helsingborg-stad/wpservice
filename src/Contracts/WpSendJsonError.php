@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface WpSendJsonError
 {
-    /**
+/**
  * Sends a JSON response back to an Ajax request, indicating failure.
  *
  * If the `$value` parameter is a WP_Error object, the errors

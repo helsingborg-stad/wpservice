@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface WpMaybeEnqueueOembedHostJs
 {
-    /**
+/**
  * Enqueue the wp-embed script if the provided oEmbed HTML contains a post embed.
  *
  * In order to only enqueue the wp-embed script on pages that actually contain post embeds, this function checks if the

@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface BlockCoreNavigationLinkBuildCssColors
 {
-    /**
+/**
  * Build an array with CSS classes and inline styles defining the colors
  * which will be applied to the navigation markup in the front-end.
  *

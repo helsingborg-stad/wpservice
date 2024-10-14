@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface WpPrepareAttachmentForJs
 {
-    /**
+/**
  * Prepares an attachment post object for JS, where it is expected
  * to be JSON-encoded and fit into an Attachment model.
  *

@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface WpAdminCss
 {
-    /**
+/**
  * Enqueues or directly prints a stylesheet link to the specified CSS file.
  *
  * "Intelligently" decides to enqueue or to print the CSS file. If the
