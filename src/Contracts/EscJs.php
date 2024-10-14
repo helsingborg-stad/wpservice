@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface EscJs
 {
-    /**
+/**
  * Escapes single quotes, `"`, `<`, `>`, `&`, and fixes line endings.
  *
  * Escapes text strings for echoing in JS. It is intended to be used for inline JS

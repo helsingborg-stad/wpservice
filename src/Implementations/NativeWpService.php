@@ -3,13 +3,13 @@
 namespace WpService\Implementations;
 
 /**
- * Class NativeWpService
+ * class NativeWpService
  */
 class NativeWpService implements \WpService\WpService
 {
-        /**
-         * @inheritDoc
-         */
+    /**
+     * @inheritDoc
+     */
     public function doActivateHeader(): void
     {
         do_activate_header();

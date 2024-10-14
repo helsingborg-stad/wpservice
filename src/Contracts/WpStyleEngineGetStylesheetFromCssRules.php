@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface WpStyleEngineGetStylesheetFromCssRules
 {
-    /**
+/**
  * Returns compiled CSS from a collection of selectors and declarations.
  * Useful for returning a compiled stylesheet from any collection of CSS selector + declarations.
  *

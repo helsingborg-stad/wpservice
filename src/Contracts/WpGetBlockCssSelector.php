@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface WpGetBlockCssSelector
 {
-    /**
+/**
  * Determines the CSS selector for the block type and property provided,
  * returning it if available.
  *

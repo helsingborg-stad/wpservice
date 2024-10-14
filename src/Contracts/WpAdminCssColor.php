@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface WpAdminCssColor
 {
-    /**
+/**
  * Registers an admin color scheme css file.
  *
  * Allows a plugin to register a new admin color scheme. For example:

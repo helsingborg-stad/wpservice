@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface WpIsJsonMediaType
 {
-    /**
+/**
  * Checks whether a string is a valid JSON Media Type.
  *
  * @since 5.6.0

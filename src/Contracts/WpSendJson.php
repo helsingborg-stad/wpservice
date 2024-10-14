@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface WpSendJson
 {
-    /**
+/**
  * Sends a JSON response back to an Ajax request.
  *
  * @since 3.5.0

@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface AddCssclass
 {
-    /**
+/**
  * Adds a CSS class to a string.
  *
  * @since 2.7.0

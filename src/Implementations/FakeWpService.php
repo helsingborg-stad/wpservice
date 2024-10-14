@@ -3,27 +3,29 @@
 namespace WpService\Implementations;
 
 /**
- * Class FakeWpService
+ * class FakeWpService
  */
 class FakeWpService implements \WpService\WpService
 {
     public array $methodCalls = [];
 
-    /**
-     * Class constructor.
-     *
-     * @param array $returnValues
-     */
+
+            /**
+             * Class constructor.
+             *
+             * @param array $returnValues
+             */
     public function __construct(private array $returnValues = [])
     {
     }
 
-    /**
-     * Registers a function call.
-     *
-     * @param string $method
-     * @param array $methodArguments
-     */
+
+            /**
+             * Registers a function call.
+             *
+             * @param string $method
+             * @param array $methodArguments
+             */
     private function registerFunctionCall(string $method, array $methodArguments): void
     {
         if (!isset($this->methodCalls[$method])) {
@@ -33,14 +35,15 @@ class FakeWpService implements \WpService\WpService
         $this->methodCalls[$method][] = $methodArguments;
     }
 
-    /**
-     * Retrieves the return value for a given method.
-     *
-     * @param string $method The name of the method.
-     * @param array $methodArgs The arguments to be passed to the method.
-     * @param mixed $default The default value to return if the method does not have a return value.
-     * @return mixed The return value of the method, or the default value if the method does not have a return value.
-     */
+
+            /**
+             * Retrieves the return value for a given method.
+             *
+             * @param string $method The name of the method.
+             * @param array $methodArgs The arguments to be passed to the method.
+             * @param mixed $default The default value to return if the method does not have a return value.
+             * @return mixed The return value of the method, or the default value if the method does not have a return value.
+             */
     private function getReturnValue($method, array $methodArgs = [], $default = null): mixed
     {
         if (!isset($this->returnValues[$method])) {
@@ -54,9 +57,9 @@ class FakeWpService implements \WpService\WpService
         return $this->returnValues[$method] ?? $default;
     }
 
-        /**
-         * @inheritDoc
-         */
+    /**
+     * @inheritDoc
+     */
     public function doActivateHeader(): void
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());

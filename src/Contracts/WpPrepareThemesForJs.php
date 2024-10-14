@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface WpPrepareThemesForJs
 {
-    /**
+/**
  * Prepares themes for JavaScript.
  *
  * @since 3.8.0

@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface RestValidateJsonSchemaPattern
 {
-    /**
+/**
  * Validates if the JSON Schema pattern matches a value.
  *
  * @since 5.6.0

@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface WpJsonEncode
 {
-    /**
+/**
  * Encodes a variable into JSON, with some confidence checks.
  *
  * @since 4.1.0

@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface WpPrepareRevisionsForJs
 {
-    /**
+/**
  * Prepare revisions for JavaScript.
  *
  * @since 3.6.0

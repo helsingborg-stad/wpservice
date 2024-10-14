@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface WpGetCustomCss
 {
-    /**
+/**
  * Fetches the saved Custom CSS content for rendering.
  *
  * @since 4.7.0

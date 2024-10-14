@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface WpUpdateCustomCssPost
 {
-    /**
+/**
  * Updates the `custom_css` post for a given theme.
  *
  * Inserts a `custom_css` post when one doesn't yet exist.

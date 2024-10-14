@@ -4,7 +4,7 @@ namespace WpService\Contracts;
 
 interface BlockCorePageListBuildCssFontSizes
 {
-    /**
+/**
  * Build an array with CSS classes and inline styles defining the font sizes
  * which will be applied to the pages markup in the front-end when it is a descendant of navigation.
  *
