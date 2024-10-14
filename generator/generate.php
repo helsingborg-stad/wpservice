@@ -89,7 +89,7 @@ $fileBuilder                = new FileBuilder($allFunctions);
 $fileDirector               = new FileDirector($fileBuilder);
 $functionToDefinitionString = new FunctionToDefinitionString();
 
-foreach ($allFunctions as $function) {
+$contractFiles = array_map(function ($function) use ($fileBuilder, $functionToDefinitionString) {
     $upperCaseName = ucfirst($function->getName());
     $file          = $fileBuilder
         ->reset()
@@ -101,9 +101,11 @@ foreach ($allFunctions as $function) {
         ->getFile();
 
     file_put_contents($file->getFilePath(), (string)$file);
-};
 
-$fileDirector->makeServiceInterfaceFile(array_map(fn ($function) => "Contracts\\{$function->getName()}", $allFunctions));
+    return $file;
+}, $allFunctions);
+
+$fileDirector->makeServiceInterfaceFile(array_map(fn($file) => "Contracts\\{$file->getName()}", $contractFiles));
 $fileDirector->makeNativeFile();
 $fileDirector->makeDecoratorFile();
 $fileDirector->makeLazyDecoratorFile();
