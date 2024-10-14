@@ -63,6 +63,13 @@ interface FileBuilderInterface
     public function setFunctionsAsStrings(array $functionsAsStrings): FileBuilderInterface;
 
     /**
+     * Use native functions in the file
+     *
+     * @return FileBuilderInterface
+     */
+    public function withNativeFunctions(): FileBuilderInterface;
+
+    /**
      * Use decorator functions in the file
      *
      * @return FileBuilderInterface

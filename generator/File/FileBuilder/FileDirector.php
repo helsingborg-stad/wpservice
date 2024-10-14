@@ -2,12 +2,8 @@
 
 namespace WpService\Generator\File\FileBuilder;
 
-use WpService\Generator\File\FileBuilder\Templates\TemplateInterface;
 use WpService\Generator\File\FileInterface;
 use WpService\Generator\File\FileType;
-use WpService\Generator\Function\CreateFunction;
-use WpService\Generator\Function\FunctionToString\FunctionToString;
-use WpService\Generator\Function\FunctionWithFakeFunctionBody;
 
 /**
  * FileDirector
@@ -31,9 +27,9 @@ class FileDirector
      * @param string[] $implements
      * @return FileInterface
      */
-    public function makeServiceInterfaceFile(array $extends = []): void
+    public function makeServiceInterfaceFile(array $extends = []): FileInterface
     {
-        $file = $this->builder
+        return $this->builder
             ->reset()
             ->setNamespace('WpService')
             ->setName('WpService')
@@ -41,8 +37,6 @@ class FileDirector
             ->setExtends($extends)
             ->setFile("{$this->basePath}/WpService.php")
             ->getFile();
-
-        $this->writeFile($file);
     }
 
     /**
@@ -50,9 +44,9 @@ class FileDirector
      *
      * @return FileInterface
      */
-    public function makeNativeFile()
+    public function makeNativeFile(): FileInterface
     {
-        $file = $this->builder
+        return $this->builder
             ->reset()
             ->setNamespace('WpService\Implementations')
             ->setName('NativeWpService')
@@ -61,8 +55,6 @@ class FileDirector
             ->setFile("{$this->basePath}/Implementations/NativeWpService.php")
             ->withNativeFunctions()
             ->getFile();
-
-        $this->writeFile($file);
     }
 
     /**
@@ -70,9 +62,9 @@ class FileDirector
      *
      * @return FileInterface
      */
-    public function makeDecoratorFile()
+    public function makeDecoratorFile(): FileInterface
     {
-        $file = $this->builder
+        return $this->builder
             ->reset()
             ->setNamespace('WpService\Implementations')
             ->setName('WpServiceDecorator')
@@ -81,8 +73,6 @@ class FileDirector
             ->setFile("{$this->basePath}/Implementations/WpServiceDecorator.php")
             ->withDecoratorFunctions()
             ->getFile();
-
-        $this->writeFile($file);
     }
 
     /**
@@ -90,9 +80,9 @@ class FileDirector
      *
      * @return FileInterface
      */
-    public function makeLazyDecoratorFile()
+    public function makeLazyDecoratorFile(): FileInterface
     {
-        $file = $this->builder
+        return $this->builder
             ->reset()
             ->setNamespace('WpService\Implementations')
             ->setName('WpServiceLazyDecorator')
@@ -101,8 +91,6 @@ class FileDirector
             ->setFile("{$this->basePath}/Implementations/WpServiceLazyDecorator.php")
             ->withLazyDecoratorFunctions()
             ->getFile();
-
-        $this->writeFile($file);
     }
 
     /**
@@ -110,9 +98,9 @@ class FileDirector
      *
      * @return FileInterface
      */
-    public function makeFakeServiceFile(): void
+    public function makeFakeServiceFile(): FileInterface
     {
-        $file = $this->builder
+        return $this->builder
             ->reset()
             ->setNamespace('WpService\Implementations')
             ->setName('FakeWpService')
@@ -121,15 +109,5 @@ class FileDirector
             ->setFile("{$this->basePath}/Implementations/FakeWpService.php")
             ->withFakeFunctions()
             ->getFile();
-
-        $this->writeFile($file);
-    }
-
-    /**
-     * Write the file
-     */
-    private function writeFile(FileInterface $file): void
-    {
-        file_put_contents($file->getFilePath(), (string) $file);
     }
 }
