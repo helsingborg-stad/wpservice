@@ -12,7 +12,6 @@ use PhpParser\Node\Stmt\Namespace_;
 use StubsGenerator\StubsGenerator;
 use WpService\Generator\File\FileBuilder\FileBuilder;
 use WpService\Generator\File\FileBuilder\FileDirector;
-use WpService\Generator\File\FileType;
 use WpService\Generator\Function\{
     CamelCasedFunction,
     ConvertTypedArrayInputTypeToArray,
@@ -61,56 +60,46 @@ function extractFunctionsFromStubs($result): array
     return array_filter($functions_, fn($stmt) => get_class($stmt) === Function_::class);
 }
 
-// Extract functions from stubs
-$functions_ = extractFunctionsFromStubs($result);
+// Extract function definitions from stubs
+$functionDefinitions = extractFunctionsFromStubs($result);
 
 // Create functions
-$allFunctions = array_map(fn($stmt) => CreateFunction::create($stmt, [
+$functions = array_map(fn($stmt) => CreateFunction::create($stmt, [
     new SanitizeCallbackDefaultInput(),
     new SanitizeIntDefaultInput(),
     new SanitizeStringDefaultInput()
-]), $functions_);
+]), $functionDefinitions);
 
-// Filter functions
+// Filter out invalid and unwanted functions
 $functionValidator = IsValidFunction::create();
 $functionValidator = new IsPrivateFunction($functionValidator);
 $functionValidator = new FunctionHasDocBlock($functionValidator);
 $functionValidator = new InvalidateDeprecatedFunction($functionValidator);
-$allFunctions      = array_filter($allFunctions, fn($function) =>$functionValidator->isValidFunction($function));
+$functions         = array_filter($functions, fn($function) =>$functionValidator->isValidFunction($function));
 
-// Function decorators
-$allFunctions = array_map(fn($function) => new CamelCasedFunction($function), $allFunctions);
-$allFunctions = array_map(fn($function) => new ConvertTypedArrayReturnTypeToArray($function), $allFunctions);
-$allFunctions = array_map(fn($function) => new ConvertTypedArrayInputTypeToArray($function), $allFunctions);
-$allFunctions = array_map(fn($function) => new FunctionWithSanitizedTypes($function), $allFunctions);
-$allFunctions = array_map(fn($function) => new FunctionWithNamespacedTypes($function), $allFunctions);
-$allFunctions = array_map(fn($function) => new FunctionWithoutInvalidVoidReturnType($function), $allFunctions);
+// Decorate functions
+$functions = array_map(fn($function) => new CamelCasedFunction($function), $functions);
+$functions = array_map(fn($function) => new ConvertTypedArrayReturnTypeToArray($function), $functions);
+$functions = array_map(fn($function) => new ConvertTypedArrayInputTypeToArray($function), $functions);
+$functions = array_map(fn($function) => new FunctionWithSanitizedTypes($function), $functions);
+$functions = array_map(fn($function) => new FunctionWithNamespacedTypes($function), $functions);
+$functions = array_map(fn($function) => new FunctionWithoutInvalidVoidReturnType($function), $functions);
 
 // File creation dependencies
-$fileBuilder                = new FileBuilder($allFunctions);
+$fileBuilder                = new FileBuilder($functions);
 $fileDirector               = new FileDirector($fileBuilder);
 $functionToDefinitionString = new FunctionToDefinitionString();
 
 // Create contract files
-$contractFiles = array_map(function ($function) use ($fileBuilder, $functionToDefinitionString) {
-    $upperCaseName = ucfirst($function->getName());
-    return  $fileBuilder
-        ->reset()
-        ->setType(FileType::INTERFACE_TYPE)
-        ->setName($upperCaseName)
-        ->setNamespace('WpService\Contracts')
-        ->setFile(dirname(__FILE__) . "/../src/Contracts/{$upperCaseName}.php")
-        ->setFunctionsAsStrings([$functionToDefinitionString->functionToString($function)])
-        ->getFile();
-}, $allFunctions);
+$contractFiles = array_map([$fileDirector, 'buildContractFile'], $functions);
 
 // Create service files
 $serviceFiles = [
-    $fileDirector->makeServiceInterfaceFile(array_map(fn($file) => "Contracts\\{$file->getName()}", $contractFiles)),
-    $fileDirector->makeNativeFile(),
-    $fileDirector->makeDecoratorFile(),
-    $fileDirector->makeLazyDecoratorFile(),
-    $fileDirector->makeFakeServiceFile()
+    $fileDirector->buildServiceInterfaceFile(array_map(fn($file) => "Contracts\\{$file->getName()}", $contractFiles)),
+    $fileDirector->buildNativeFile(),
+    $fileDirector->buildDecoratorFile(),
+    $fileDirector->buildLazyDecoratorFile(),
+    $fileDirector->buildFakeServiceFile()
 ];
 
 // Write files

@@ -63,6 +63,14 @@ interface FileBuilderInterface
     public function setFunctionsAsStrings(array $functionsAsStrings): FileBuilderInterface;
 
     /**
+     * Use contract functions in the file
+     *
+     * @param array $functions
+     * @return FileBuilderInterface
+     */
+    public function withContractFunctions(array $functions): FileBuilderInterface;
+
+    /**
      * Use native functions in the file
      *
      * @return FileBuilderInterface

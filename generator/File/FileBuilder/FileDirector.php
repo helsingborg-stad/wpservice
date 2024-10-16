@@ -4,13 +4,15 @@ namespace WpService\Generator\File\FileBuilder;
 
 use WpService\Generator\File\FileInterface;
 use WpService\Generator\File\FileType;
+use WpService\Generator\Function\FunctionInterface;
 
 /**
  * FileDirector
  */
 class FileDirector
 {
-    private string $basePath = __DIR__ . '/../../../src';
+    private string $basePath     = __DIR__ . '/../../../src';
+    private string $contractPath = __DIR__ . '/../../../src/Contracts';
 
     /**
      * Constructor
@@ -22,12 +24,32 @@ class FileDirector
     }
 
     /**
+     * Build a contract file from a function.
+     *
+     * @param FunctionInterface $function
+     * @return FileInterface
+     */
+    public function buildContractFile(FunctionInterface $function): FileInterface
+    {
+        $uppercaseFunctionName = ucfirst($function->getName());
+
+        return $this->builder
+            ->reset()
+            ->setNamespace('WpService\Contracts')
+            ->setName($uppercaseFunctionName)
+            ->setType(FileType::INTERFACE_TYPE)
+            ->withContractFunctions([$function])
+            ->setFile("{$this->basePath}/Contracts/{$uppercaseFunctionName}.php")
+            ->getFile();
+    }
+
+    /**
      * Build a service interface file.
      *
      * @param string[] $implements
      * @return FileInterface
      */
-    public function makeServiceInterfaceFile(array $extends = []): FileInterface
+    public function buildServiceInterfaceFile(array $extends = []): FileInterface
     {
         return $this->builder
             ->reset()
@@ -44,7 +66,7 @@ class FileDirector
      *
      * @return FileInterface
      */
-    public function makeNativeFile(): FileInterface
+    public function buildNativeFile(): FileInterface
     {
         return $this->builder
             ->reset()
@@ -62,7 +84,7 @@ class FileDirector
      *
      * @return FileInterface
      */
-    public function makeDecoratorFile(): FileInterface
+    public function buildDecoratorFile(): FileInterface
     {
         return $this->builder
             ->reset()
@@ -80,7 +102,7 @@ class FileDirector
      *
      * @return FileInterface
      */
-    public function makeLazyDecoratorFile(): FileInterface
+    public function buildLazyDecoratorFile(): FileInterface
     {
         return $this->builder
             ->reset()
@@ -98,7 +120,7 @@ class FileDirector
      *
      * @return FileInterface
      */
-    public function makeFakeServiceFile(): FileInterface
+    public function buildFakeServiceFile(): FileInterface
     {
         return $this->builder
             ->reset()

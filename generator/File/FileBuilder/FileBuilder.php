@@ -8,6 +8,7 @@ use WpService\Generator\File\FileBuilder\Templates\FakeServiceTemplate;
 use WpService\Generator\File\FileBuilder\Templates\LazyDecoratorServiceTemplate;
 use WpService\Generator\File\FileInterface;
 use WpService\Generator\File\FileType;
+use WpService\Generator\Function\FunctionToString\FunctionToDefinitionString;
 use WpService\Generator\Function\FunctionToString\FunctionToString;
 use WpService\Generator\Function\FunctionWithDecoratorFunctionBody;
 use WpService\Generator\Function\FunctionWithFakeFunctionBody;
@@ -108,13 +109,27 @@ class FileBuilder implements FileBuilderInterface
     /**
      * @inheritDoc
      */
+    public function withContractFunctions(array $functions): FileBuilderInterface
+    {
+        $functionToString = new FunctionToDefinitionString();
+        $functions        = array_map([$functionToString, 'functionToString'], $functions);
+
+        $this->setFunctionsAsStrings($functions);
+
+        return $this;
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function withNativeFunctions(): FileBuilderInterface
     {
         $functionToString = new FunctionToString();
         $functions        = array_map(fn($function) => new FunctionWithNativeFunctionBody($function), $this->originalFunctions);
-        $functions        = array_map(fn($function) => $functionToString->functionToString($function), $functions);
+        $functions        = array_map([$functionToString, 'functionToString'], $functions);
 
-        $this->functionsAsStrings = $functions;
+        $this->setFunctionsAsStrings($functions);
+
         return $this;
     }
 
@@ -125,10 +140,11 @@ class FileBuilder implements FileBuilderInterface
     {
         $functionToString = new FunctionToString();
         $functions        = array_map(fn($function) => new FunctionWithDecoratorFunctionBody($function), $this->originalFunctions);
-        $functions        = array_map(fn($function) => $functionToString->functionToString($function), $functions);
+        $functions        = array_map([$functionToString, 'functionToString'], $functions);
         array_unshift($functions, ...(new DecoratorServiceTemplate())->getTemplateFunctions());
 
-        $this->functionsAsStrings = $functions;
+        $this->setFunctionsAsStrings($functions);
+
         return $this;
     }
 
@@ -139,10 +155,11 @@ class FileBuilder implements FileBuilderInterface
     {
         $functionToString = new FunctionToString();
         $functions        = array_map(fn($function) => new FunctionWithDecoratorFunctionBody($function), $this->originalFunctions);
-        $functions        = array_map(fn($function) => $functionToString->functionToString($function), $functions);
+        $functions        = array_map([$functionToString, 'functionToString'], $functions);
         array_unshift($functions, ...(new LazyDecoratorServiceTemplate())->getTemplateFunctions());
 
-        $this->functionsAsStrings = $functions;
+        $this->setFunctionsAsStrings($functions);
+
         return $this;
     }
 
@@ -153,10 +170,11 @@ class FileBuilder implements FileBuilderInterface
     {
         $functionToString = new FunctionToString();
         $functions        = array_map(fn($function) => new FunctionWithFakeFunctionBody($function), $this->originalFunctions);
-        $functions        = array_map(fn($function) => $functionToString->functionToString($function), $functions);
+        $functions        = array_map([$functionToString, 'functionToString'], $functions);
         array_unshift($functions, ...(new FakeServiceTemplate())->getTemplateFunctions());
 
-        $this->functionsAsStrings = $functions;
+        $this->setFunctionsAsStrings($functions);
+
         return $this;
     }
 
