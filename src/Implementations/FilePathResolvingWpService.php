@@ -26,28 +26,28 @@ class FilePathResolvingWpService extends WpServiceDecorator
     /**
      * @inheritDoc
      */
-    public function registerScript(
+    public function wpRegisterScript(
         string $handle,
-        string $src = '',
+        string|false $src,
         array $deps = array(),
         string|bool|null $ver = false,
-        bool $in_footer = true
-    ): void {
+        array|bool $args = array()
+    ): bool {
         $src = $this->filePathResolver->resolve($src);
-        $this->inner->{__FUNCTION__}(...func_get_args());
+        return $this->inner->{__FUNCTION__}(...func_get_args());
     }
 
     /**
      * @inheritDoc
      */
-    public function registerStyle(
+    public function wpRegisterStyle(
         string $handle,
-        string $src = '',
+        string|false $src = '',
         array $deps = array(),
         string|bool|null $ver = false,
         string $media = 'all'
-    ): void {
+    ): bool {
         $src = $this->filePathResolver->resolve($src);
-        $this->inner->{__FUNCTION__}(...func_get_args());
+        return $this->inner->{__FUNCTION__}(...func_get_args());
     }
 }
