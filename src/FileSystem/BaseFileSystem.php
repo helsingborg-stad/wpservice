@@ -25,7 +25,7 @@ class BaseFileSystem implements FileSystem
         if ($wp_filesystem instanceof WP_Filesystem_Direct) {
             $this->fileSystem = $wp_filesystem;
         } else {
-            throw new \Exception('Filesystem is not direct');
+            throw new \Exception('Filesystem is not direct. File system detected: ' . get_class($wp_filesystem));
         }
     }
 
