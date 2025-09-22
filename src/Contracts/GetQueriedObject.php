@@ -13,7 +13,7 @@ interface GetQueriedObject
  *
  * @global WP_Query $wp_query WordPress Query object.
  *
- * @return \WP_Term|\WP_Post_Type|\WP_Post|\WP_User|null The queried object.
+ * @return \WP_Term|\WP_Post_Type|\WP_Post|\WP_User|null|false The queried object.
  */
-    public function getQueriedObject(): \WP_Term|\WP_Post_Type|\WP_Post|\WP_User|null;
+    public function getQueriedObject(): \WP_Term|\WP_Post_Type|\WP_Post|\WP_User|null|false;
 }

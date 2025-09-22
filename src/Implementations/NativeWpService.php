@@ -19314,7 +19314,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getQueriedObject(): \WP_Term|\WP_Post_Type|\WP_Post|\WP_User|null
+    public function getQueriedObject(): \WP_Term|\WP_Post_Type|\WP_Post|\WP_User|null|false
     {
         return get_queried_object();
     }
