@@ -21037,7 +21037,7 @@ class FakeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getQueriedObject(): \WP_Term|\WP_Post_Type|\WP_Post|\WP_User|null
+    public function getQueriedObject(): \WP_Term|\WP_Post_Type|\WP_Post|\WP_User|null|false
     {
         $this->registerFunctionCall(__FUNCTION__, func_get_args());
         return $this->getReturnValue(__FUNCTION__, func_get_args());

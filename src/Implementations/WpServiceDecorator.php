@@ -19324,7 +19324,7 @@ class WpServiceDecorator implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getQueriedObject(): \WP_Term|\WP_Post_Type|\WP_Post|\WP_User|null
+    public function getQueriedObject(): \WP_Term|\WP_Post_Type|\WP_Post|\WP_User|null|false
     {
         return  $this->inner->{__FUNCTION__}(...func_get_args());
     }
