@@ -111,7 +111,7 @@ class CreateFunction implements FunctionInterface
             if ($param->default instanceof String_) {
                 return "'{$param->default->value}'";
             } elseif ($param->default instanceof ConstFetch) {
-                return $param->default->name->parts[0];
+                return $param->default->name->getParts()[0];
             } elseif ($param->default instanceof LNumber) {
                 return $param->default->value;
             } elseif ($param->default instanceof Array_) {

@@ -2,14 +2,11 @@
 
 namespace WpService\Implementations;
 
-use WpService\WpService;
-use WP_Error;
-use WP_Post;
-use WP_REST_Response;
-use WP_Role;
-use WP_Screen;
 use WP_Term;
+use WP_Post_Type;
+use WP_Post;
 use WP_User;
+use WpService\WpService;
 
 /**
  * Class WpServiceDecorator
@@ -56,5 +53,25 @@ class WpServiceWithTypecastedReturns extends WpServiceDecorator
         }
 
         return $queryVarValue; //Default, should be a string
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getQueriedObject(): WP_Term|WP_Post_Type|WP_Post|WP_User|null
+    {
+        $queryVarValue = $this->inner->{__FUNCTION__}(...func_get_args());
+
+        if (
+            is_a($queryVarValue, WP_Term::class) ||
+            is_a($queryVarValue, WP_Post_Type::class) ||
+            is_a($queryVarValue, WP_Post::class) ||
+            is_a($queryVarValue, WP_User::class) ||
+            is_null($queryVarValue)
+        ) {
+            return $queryVarValue;
+        }
+
+        return null;
     }
 }
