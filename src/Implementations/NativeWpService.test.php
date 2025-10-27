@@ -14,4 +14,26 @@ class NativeWpServiceTest extends TestCase
         $service = new NativeWpService();
         $this->assertInstanceOf(NativeWpService::class, $service);
     }
+
+    /**
+     * @testdox getQueriedObject method accepts false return value from WordPress function
+     */
+    public function testGetQueriedObjectAcceptsFalseReturn()
+    {
+        // Mock the global get_queried_object function to return false
+        if (!function_exists('get_queried_object')) {
+            function get_queried_object() {
+                return false;
+            }
+        }
+
+        $service = new NativeWpService();
+        
+        // This should not throw a TypeError
+        $result = $service->getQueriedObject();
+        
+        // Verify that false is returned correctly
+        $this->assertFalse($result);
+        $this->assertIsBool($result);
+    }
 }
