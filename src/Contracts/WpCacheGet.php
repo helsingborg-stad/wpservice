@@ -16,9 +16,9 @@ interface WpCacheGet
  * @param string $group Optional. Where the cache contents are grouped. Default empty.
  * @param bool $force Optional. Whether to force an update of the local cache
  *                          from the persistent cache. Default false.
- * @param bool $found Optional. Whether the key was found in the cache (passed by reference).
+ * @param bool|null $found Optional. Whether the key was found in the cache (passed by reference).
  *                          Disambiguates a return of false, a storable value. Default null.
  * @return mixed|false The cache contents on success, false on failure to retrieve contents.
  */
-    public function wpCacheGet(int|string $key, string $group = '', bool $force = false, bool &$found = null): mixed;
+    public function wpCacheGet(int|string $key, string $group = '', bool $force = false, bool|null &$found = null): mixed;
 }

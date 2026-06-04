@@ -7,8 +7,8 @@ interface IsActiveWidget
 /**
  * Determines whether a given widget is displayed on the front end.
  *
- * Either $callback or $id_base can be used
- * $id_base is the first argument when extending WP_Widget class
+ * Either $callback or $id_base can be used.
+ * $id_base is the first argument when extending WP_Widget class.
  * Without the optional $widget_id parameter, returns the ID of the first sidebar
  * in which the first instance of the widget with the given callback or $id_base is found.
  * With the $widget_id parameter, returns the ID of the sidebar where

@@ -11,7 +11,7 @@ interface PrintAdminStyles
  *
  * @global bool $concatenate_scripts
  *
- * @return array
+ * @return string[] Handles of the styles that were printed.
  */
     public function printAdminStyles(): array;
 }

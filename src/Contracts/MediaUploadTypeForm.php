@@ -13,5 +13,5 @@ interface MediaUploadTypeForm
  * @param array $errors
  * @param int|\WP_Error $id
  */
-    public function mediaUploadTypeForm(string $type = 'file', array $errors = null, int|\WP_Error $id = null): void;
+    public function mediaUploadTypeForm(string $type = 'file', array|null $errors = null, int|\WP_Error|null $id = null): void;
 }

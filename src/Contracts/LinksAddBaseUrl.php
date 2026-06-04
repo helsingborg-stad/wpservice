@@ -16,7 +16,7 @@ interface LinksAddBaseUrl
  *
  * @param string $content String to search for links in.
  * @param string $base    The base URL to prefix to links.
- * @param array $attrs   The attributes which should be processed.
+ * @param string[] $attrs   The attributes which should be processed.
  * @return string The processed content.
  */
     public function linksAddBaseUrl(string $content, string $base, array $attrs = []): string;

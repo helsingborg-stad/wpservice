@@ -10,8 +10,10 @@ interface RenderBlockCoreTermDescription
  * @since 5.9.0
  *
  * @param array $attributes Block attributes.
+ * @param string $content    Block default content.
+ * @param \WP_Block $block      Block instance.
  *
  * @return string Returns the description of the current taxonomy term, if available
  */
-    public function renderBlockCoreTermDescription(array $attributes): string;
+    public function renderBlockCoreTermDescription(array $attributes, string $content, \WP_Block $block): string;
 }

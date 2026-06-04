@@ -9,7 +9,7 @@ interface RenderBlockCoreLegacyWidget
  *
  * @since 5.8.0
  *
- * @global int $wp_widget_factory.
+ * @global WP_Widget_Factory $wp_widget_factory.
  *
  * @param array $attributes The block attributes.
  *

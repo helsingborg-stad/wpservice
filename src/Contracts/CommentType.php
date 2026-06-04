@@ -9,9 +9,9 @@ interface CommentType
  *
  * @since 0.71
  *
- * @param string|false $commenttxt   Optional. String to display for comment type. Default false.
- * @param string|false $trackbacktxt Optional. String to display for trackback type. Default false.
- * @param string|false $pingbacktxt  Optional. String to display for pingback type. Default false.
+ * @param string|false $commentText   Optional. String to display for comment type. Default false.
+ * @param string|false $trackbackText Optional. String to display for trackback type. Default false.
+ * @param string|false $pingbackText  Optional. String to display for pingback type. Default false.
  */
-    public function commentType(string|false $commenttxt = false, string|false $trackbacktxt = false, string|false $pingbacktxt = false): void;
+    public function commentType(string|false $commentText = false, string|false $trackbackText = false, string|false $pingbackText = false): void;
 }

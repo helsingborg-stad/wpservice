@@ -13,5 +13,5 @@ interface IsUserSpammy
  *                             or user login name as a string.
  * @return bool
  */
-    public function isUserSpammy(string|\WP_User $user = null): bool;
+    public function isUserSpammy(string|\WP_User|null $user = null): bool;
 }

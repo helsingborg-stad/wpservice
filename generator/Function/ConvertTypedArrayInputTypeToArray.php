@@ -44,6 +44,7 @@ class ConvertTypedArrayInputTypeToArray implements FunctionInterface
         $type    = trim($type, '()');
         $asArray = explode('|', $type);
         $asArray = array_map(fn($item) => trim($item), $asArray);
+        $asArray = array_map(fn($item) => preg_replace('/^array<.*$/', 'array', $item), $asArray);
         $asArray = array_map(fn($item) => preg_match('/\[\]$/', $item) ? 'array' : $item, $asArray);
         $asArray = array_unique($asArray);
 

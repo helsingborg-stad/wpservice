@@ -9,7 +9,7 @@ interface FixPhpmailerMessageid
  *
  * @since MU (3.0.0)
  *
- * @param \PHPMailer $phpmailer The PHPMailer instance (passed by reference).
+ * @param \PHPMailer\PHPMailer\PHPMailer $phpmailer The PHPMailer instance (passed by reference).
  */
-    public function fixPhpmailerMessageid(\PHPMailer $phpmailer): void;
+    public function fixPhpmailerMessageid(\PHPMailer\PHPMailer\PHPMailer $phpmailer): void;
 }

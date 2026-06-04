@@ -11,6 +11,8 @@ interface WpSafeRemoteGet
  * URL. The URL, and every URL it redirects to, are validated with wp_http_validate_url()
  * to avoid Server Side Request Forgery attacks (SSRF).
  *
+ * The only supported protocols are `http` and `https`.
+ *
  * @since 3.6.0
  *
  * @see wp_remote_request() For more information on the response array format.
@@ -23,6 +25,7 @@ interface WpSafeRemoteGet
  * @param array $args Optional. Request arguments. Default empty array.
  *                     See WP_Http::request() for information on accepted arguments.
  * @return array|\WP_Error The response or WP_Error on failure.
+ *                        See WP_Http::request() for information on return value.
  */
     public function wpSafeRemoteGet(string $url, array $args = []): array|\WP_Error;
 }

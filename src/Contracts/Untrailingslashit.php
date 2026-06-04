@@ -12,8 +12,8 @@ interface Untrailingslashit
  *
  * @since 2.2.0
  *
- * @param string $text Value from which trailing slashes will be removed.
+ * @param string $value Value from which trailing slashes will be removed.
  * @return string String without the trailing slashes.
  */
-    public function untrailingslashit($value): string;
+    public function untrailingslashit(string $value): string;
 }

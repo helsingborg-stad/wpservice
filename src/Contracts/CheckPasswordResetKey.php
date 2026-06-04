@@ -14,9 +14,7 @@ interface CheckPasswordResetKey
  *
  * @since 3.1.0
  *
- * @global PasswordHash $wp_hasher Portable PHP password hashing framework instance.
- *
- * @param string $key       Hash to validate sending user's password.
+ * @param string $key       The password reset key.
  * @param string $login     The user login.
  * @return \WP_User|\WP_Error WP_User object on success, WP_Error object for invalid or expired keys.
  */

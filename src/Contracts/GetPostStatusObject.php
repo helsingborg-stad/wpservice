@@ -9,9 +9,9 @@ interface GetPostStatusObject
  *
  * @since 3.0.0
  *
- * @global stdClass[] $wp_post_statuses List of post statuses.
- *
  * @see register_post_status()
+ *
+ * @global stdClass[] $wp_post_statuses List of post statuses.
  *
  * @param string $postStatus The name of a registered post status.
  * @return \stdClass|null A post status object.

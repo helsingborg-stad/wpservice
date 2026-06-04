@@ -7,6 +7,8 @@ interface WpRemoteGet
 /**
  * Performs an HTTP request using the GET method and returns its response.
  *
+ * Important: If the URL is user-controlled, use `wp_safe_remote_get()` instead.
+ *
  * @since 2.7.0
  *
  * @see wp_remote_request() For more information on the response array format.
@@ -16,6 +18,7 @@ interface WpRemoteGet
  * @param array $args Optional. Request arguments. Default empty array.
  *                     See WP_Http::request() for information on accepted arguments.
  * @return array|\WP_Error The response or WP_Error on failure.
+ *                        See WP_Http::request() for information on return value.
  */
     public function wpRemoteGet(string $url, array $args = []): array|\WP_Error;
 }

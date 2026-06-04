@@ -14,6 +14,7 @@ interface RegisterBlockTypeFromMetadata
  * @since 6.3.0 Added `selectors` field.
  * @since 6.4.0 Added support for `blockHooks` field.
  * @since 6.5.0 Added support for `allowedBlocks`, `viewScriptModule`, and `viewStyle` fields.
+ * @since 6.7.0 Allow PHP filename as `variations` argument.
  *
  * @param string $fileOrFolder Path to the JSON file with metadata definition for
  *                               the block or path to the folder where the `block.json` file is located.

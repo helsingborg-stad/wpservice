@@ -17,7 +17,7 @@ interface RegisterSidebar
  * on what other plugins and themes are installed.
  *
  * If theme support for 'widgets' has not yet been added when this function is
- * called, it will be automatically enabled through the use of add_theme_support()
+ * called, it will be automatically enabled through the use of add_theme_support().
  *
  * @since 2.2.0
  * @since 5.6.0 Added the `before_sidebar` and `after_sidebar` arguments.

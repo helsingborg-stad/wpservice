@@ -5,7 +5,7 @@ namespace WpService\Contracts;
 interface WpRegisterSidebarWidget
 {
 /**
- * Register an instance of a widget.
+ * Registers an instance of a widget.
  *
  * The default widget option is 'classname' that can be overridden.
  *

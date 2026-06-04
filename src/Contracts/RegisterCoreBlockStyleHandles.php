@@ -12,8 +12,6 @@ interface RegisterCoreBlockStyleHandles
  * avoids unnecessary logic and filesystem lookups in the other function.
  *
  * @since 6.3.0
- *
- * @global string $wp_version The WordPress version string.
  */
     public function registerCoreBlockStyleHandles(): void;
 }

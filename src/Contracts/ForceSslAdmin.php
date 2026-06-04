@@ -9,8 +9,8 @@ interface ForceSslAdmin
  *
  * @since 2.6.0
  *
- * @param string|bool $force Optional. Whether to force SSL in admin screens. Default null.
+ * @param string|bool|null $force Optional. Whether to force SSL in admin screens. Default null.
  * @return bool True if forced, false if not forced.
  */
-    public function forceSslAdmin(string|bool $force = null): bool;
+    public function forceSslAdmin(string|bool|null $force = null): bool;
 }

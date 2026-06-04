@@ -4,8 +4,10 @@ namespace WpService\Generator\Function;
 
 use PhpParser\Node\Expr\Array_;
 use PhpParser\Node\Expr\ConstFetch;
+use PhpParser\Node\NullableType;
 use PhpParser\Node\Scalar\LNumber;
 use PhpParser\Node\Scalar\String_;
+use PhpParser\Node\UnionType;
 use WpService\Generator\Function\Parameter\CreateParameter;
 use PhpParser\Node\Stmt\Function_;
 
@@ -60,13 +62,11 @@ class CreateFunction implements FunctionInterface
         preg_match('/@return\s+([^\s]+)/', $docblock, $matches);
 
         $name       = $function_->name->name;
-        $returnType = $matches[1] ?? 'void';
+        $returnType = self::getReturnTypeFromAst($function_) ?? $matches[1] ?? 'void';
 
         foreach ($function_->params as $param) {
             $paramName = $param->var->name;
-            $paramType = isset($param->type, $param->type->name)
-                ? $param->type->name
-                : self::getParamTypeFromDocBlock($paramName, $docblock);
+            $paramType = self::getParamType($param, $paramName, $docblock);
 
             $params[] = CreateParameter::create(
                 $paramType,
@@ -88,6 +88,47 @@ class CreateFunction implements FunctionInterface
         }, $params);
 
         return new self($name, $returnType, $params, $docblock);
+    }
+
+    private static function getParamType(\PhpParser\Node\Param $param, string $paramName, string $docblock): string
+    {
+        if (!isset($param->type)) {
+            return self::getParamTypeFromDocBlock($paramName, $docblock);
+        }
+
+        if ($param->type instanceof NullableType) {
+            $inner    = $param->type->type;
+            $typeName = $inner->name ?? (string) $inner;
+            return $typeName . '|null';
+        }
+
+        if (isset($param->type->name)) {
+            return $param->type->name;
+        }
+
+        return self::getParamTypeFromDocBlock($paramName, $docblock);
+    }
+
+    private static function getReturnTypeFromAst(Function_ $function_): ?string
+    {
+        if (!isset($function_->returnType)) {
+            return null;
+        }
+
+        return self::typeNodeToString($function_->returnType);
+    }
+
+    private static function typeNodeToString(\PhpParser\Node $typeNode): string
+    {
+        if ($typeNode instanceof NullableType) {
+            return self::typeNodeToString($typeNode->type) . '|null';
+        }
+
+        if ($typeNode instanceof UnionType) {
+            return implode('|', array_map(fn($t) => self::typeNodeToString($t), $typeNode->types));
+        }
+
+        return $typeNode->name ?? (string) $typeNode;
     }
 
     private static function getParamTypeFromDocBlock(string $paramName, string $docblock): string

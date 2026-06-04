@@ -18,17 +18,19 @@ interface UpdateOption
  *
  * @since 1.0.0
  * @since 4.2.0 The `$autoload` parameter was added.
+ * @since 6.7.0 The autoload values 'yes' and 'no' are deprecated.
  *
  * @global wpdb $wpdb WordPress database abstraction object.
  *
  * @param string $option   Name of the option to update. Expected to not be SQL-escaped.
  * @param mixed $value    Option value. Must be serializable if non-scalar. Expected to not be SQL-escaped.
  * @param bool|null $autoload Optional. Whether to load the option when WordPress starts up.
- *                            Accepts a boolean, or `null` to stick with the initial value or, if no initial value is set,
- *                            to leave the decision up to default heuristics in WordPress.
- *                            For existing options,
- *                            `$autoload` can only be updated using `update_option()` if `$value` is also changed.
- *                            For backward compatibility 'yes' and 'no' are also accepted.
+ *                            Accepts a boolean, or `null` to stick with the initial value or, if no initial value is
+ *                            set, to leave the decision up to default heuristics in WordPress.
+ *                            For existing options, `$autoload` can only be updated using `update_option()` if `$value`
+ *                            is also changed.
+ *                            For backward compatibility 'yes' and 'no' are also accepted, though using these values is
+ *                            deprecated.
  *                            Autoloading too many options can lead to performance problems, especially if the
  *                            options are not frequently used. For options which are accessed across several places
  *                            in the frontend, it is recommended to autoload them, by using true.

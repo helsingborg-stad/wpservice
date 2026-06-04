@@ -5,7 +5,7 @@ namespace WpService\Contracts;
 interface WpSidebarDescription
 {
 /**
- * Retrieve description for a sidebar.
+ * Retrieves description for a sidebar.
  *
  * When registering sidebars a 'description' parameter can be included that
  * describes the sidebar for display on the widget administration panel.

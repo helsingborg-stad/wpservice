@@ -9,8 +9,6 @@ interface WpGenerateUserRequestKey
  *
  * @since 4.9.6
  *
- * @global PasswordHash $wp_hasher Portable PHP password hashing framework instance.
- *
  * @param int $requestId Request ID.
  * @return string Confirmation key.
  */

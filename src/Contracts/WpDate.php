@@ -17,10 +17,10 @@ interface WpDate
  * @global WP_Locale $wp_locale WordPress date and time locale object.
  *
  * @param string $format    PHP date format.
- * @param int $timestamp Optional. Unix timestamp. Defaults to current time.
- * @param \DateTimeZone $timezone  Optional. Timezone to output result in. Defaults to timezone
- *                                from site settings.
+ * @param int|null $timestamp Optional. Unix timestamp. Defaults to current time.
+ * @param \DateTimeZone|null $timezone  Optional. Timezone to output result in. Defaults to timezone
+ *                                     from site settings.
  * @return string|false The date, translated if locale specifies it. False on invalid timestamp input.
  */
-    public function wpDate(string $format, int $timestamp = null, \DateTimeZone $timezone = null): string|false;
+    public function wpDate(string $format, int|null $timestamp = null, \DateTimeZone|null $timezone = null): string|false;
 }

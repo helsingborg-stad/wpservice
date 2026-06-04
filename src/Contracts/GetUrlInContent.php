@@ -9,8 +9,8 @@ interface GetUrlInContent
  *
  * @since 3.6.0
  *
- * @param string $content A string which might contain a URL.
- * @return string|false The found URL.
+ * @param string $content A string which might contain an `A` element with a non-empty `href` attribute.
+ * @return string|false Database-escaped URL via {@see esc_url()} if found, otherwise `false`.
  */
     public function getUrlInContent(string $content): string|false;
 }

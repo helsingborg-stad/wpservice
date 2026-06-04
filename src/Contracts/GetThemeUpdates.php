@@ -9,7 +9,7 @@ interface GetThemeUpdates
  *
  * @since 2.9.0
  *
- * @return array
+ * @return WP_Theme[]
  */
     public function getThemeUpdates(): array;
 }

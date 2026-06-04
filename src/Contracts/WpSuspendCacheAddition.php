@@ -20,5 +20,5 @@ interface WpSuspendCacheAddition
  *                      Defaults to not changing the current setting.
  * @return bool The current suspend setting.
  */
-    public function wpSuspendCacheAddition(bool $suspend = null): bool;
+    public function wpSuspendCacheAddition(bool|null $suspend = null): bool;
 }

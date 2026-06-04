@@ -12,6 +12,8 @@ interface EscUrl
  * is applied to the returned cleaned URL.
  *
  * @since 2.8.0
+ * @since 6.9.0 Prepends `https://` to the URL if it does not already contain a scheme
+ *              and the first item in `$protocols` is 'https'.
  *
  * @param string $url       The URL to be cleaned.
  * @param string[] $protocols Optional. An array of acceptable protocols.
@@ -21,5 +23,5 @@ interface EscUrl
  *                An empty string is returned if `$url` specifies a protocol other than
  *                those in `$protocols`, or if `$url` contains an empty string.
  */
-    public function escUrl(string $url, array $protocols = null, string $context = 'display'): string;
+    public function escUrl(string $url, array|null $protocols = null, string $context = 'display'): string;
 }

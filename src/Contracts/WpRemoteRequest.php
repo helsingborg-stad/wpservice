@@ -13,6 +13,8 @@ interface WpRemoteRequest
  *  - Default 'POST' for wp_remote_post()
  *  - Default 'HEAD' for wp_remote_head()
  *
+ * Important: If the URL is user-controlled, use `wp_safe_remote_request()` instead.
+ *
  * @since 2.7.0
  *
  * @see WP_Http::request() For information on default arguments.
@@ -20,20 +22,8 @@ interface WpRemoteRequest
  * @param string $url  URL to retrieve.
  * @param array $args Optional. Request arguments. Default empty array.
  *                     See WP_Http::request() for information on accepted arguments.
- * @return array|\WP_Error {
- *     The response array or a WP_Error on failure.
- *
- * @type string[]                       $headers       Array of response headers keyed by their name.
- * @type string                         $body          Response body.
- * @type array                          $response      {
- *         Data about the HTTP response.
- *
- * @type int|false    $code    HTTP response code.
- * @type string|false $message HTTP response message.
- *     }
- * @type WP_HTTP_Cookie[]               $cookies       Array of response cookies.
- * @type WP_HTTP_Requests_Response|null $http_response Raw HTTP response object.
- * }
+ * @return array|\WP_Error The response array or a WP_Error on failure.
+ *                        See WP_Http::request() for information on return value.
  */
     public function wpRemoteRequest(string $url, array $args = []): array|\WP_Error;
 }

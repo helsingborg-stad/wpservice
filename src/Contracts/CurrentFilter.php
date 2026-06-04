@@ -11,7 +11,7 @@ interface CurrentFilter
  *
  * @global string[] $wp_current_filter Stores the list of current filters with the current one last
  *
- * @return string Hook name of the current filter.
+ * @return string|false Hook name of the current filter, false if no filter is running.
  */
-    public function currentFilter(): string;
+    public function currentFilter(): string|false;
 }

@@ -15,10 +15,10 @@ interface AddNetworkOption
  *
  * @global wpdb $wpdb WordPress database abstraction object.
  *
- * @param int $networkId ID of the network. Can be null to default to the current network ID.
+ * @param int|null $networkId ID of the network. Can be null to default to the current network ID.
  * @param string $option     Name of the option to add. Expected to not be SQL-escaped.
  * @param mixed $value      Option value, can be anything. Expected to not be SQL-escaped.
  * @return bool True if the option was added, false otherwise.
  */
-    public function addNetworkOption(int $networkId, string $option, mixed $value): bool;
+    public function addNetworkOption(int|null $networkId, string $option, mixed $value): bool;
 }
