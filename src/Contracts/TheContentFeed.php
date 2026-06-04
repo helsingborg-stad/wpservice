@@ -11,5 +11,5 @@ interface TheContentFeed
  *
  * @param string $feedType The type of feed. rss2 | atom | rss | rdf
  */
-    public function theContentFeed(string $feedType = null): void;
+    public function theContentFeed(string|null $feedType = null): void;
 }

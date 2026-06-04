@@ -11,7 +11,10 @@ interface SetPostThumbnail
  *
  * @param int|\WP_Post $post         Post ID or post object where thumbnail should be attached.
  * @param int $thumbnailId Thumbnail to attach.
- * @return int|bool True on success, false on failure.
+ * @return int|bool Post meta ID if the key didn't exist (ie. this is the first time that
+ *                  a thumbnail has been saved for the post), true on successful update,
+ *                  false on failure or if the value passed is the same as the one that
+ *                  is already in the database.
  */
     public function setPostThumbnail(int|\WP_Post $post, int $thumbnailId): int|bool;
 }

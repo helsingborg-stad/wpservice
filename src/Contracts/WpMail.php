@@ -18,9 +18,23 @@ interface WpMail
  * The default charset is based on the charset used on the blog. The charset can
  * be set using the {@see 'wp_mail_charset'} filter.
  *
+ * When using the `$embeds` parameter to embed images for use in HTML emails,
+ * reference the embedded file in your HTML with a `cid:` URL whose value
+ * matches the file's Content-ID. By default, the Content-ID (`cid`) used for
+ * each embedded file is the key in the embeds array, unless modified via the
+ * {@see 'wp_mail_embed_args'} filter. For example:
+ *
+ * `<img src="cid:0" alt="Logo">`
+ * `<img src="cid:my-image" alt="Image">`
+ *
+ * You may also customize the Content-ID for each file by using the
+ * {@see 'wp_mail_embed_args'} filter and setting the `cid` value.
+ *
  * @since 1.2.1
  * @since 5.5.0 is_email() is used for email validation,
  *              instead of PHPMailer's default validator.
+ * @since 6.9.0 Added $embeds parameter.
+ * @since 6.9.0 Improved Content-Type header handling for multipart messages.
  *
  * @global PHPMailer\PHPMailer\PHPMailer $phpmailer
  *
@@ -29,7 +43,8 @@ interface WpMail
  * @param string $message     Message contents.
  * @param string|string[] $headers     Optional. Additional headers.
  * @param string|string[] $attachments Optional. Paths to files to attach.
+ * @param string|string[] $embeds      Optional. Paths to files to embed.
  * @return bool Whether the email was sent successfully.
  */
-    public function wpMail(string|array $to, string $subject, string $message, string|array $headers = '', string|array $attachments = []): bool;
+    public function wpMail(string|array $to, string $subject, string $message, string|array $headers = '', string|array $attachments = [], string|array $embeds = []): bool;
 }

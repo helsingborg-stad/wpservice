@@ -10,9 +10,10 @@ interface WpScriptAddData
  * Works only if the script has already been registered.
  *
  * Possible values for $key and $value:
- * 'conditional' string Comments for IE 6, lte IE 7, etc.
+ * 'strategy' string 'defer' or 'async'.
  *
  * @since 4.2.0
+ * @since 6.9.0 Updated possible values to remove reference to 'conditional' and add 'strategy'.
  *
  * @see WP_Dependencies::add_data()
  *

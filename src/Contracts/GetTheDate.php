@@ -5,7 +5,7 @@ namespace WpService\Contracts;
 interface GetTheDate
 {
 /**
- * Retrieves the date on which the post was written.
+ * Retrieves the date of the post.
  *
  * Unlike the_date() this function will always return the date.
  * Modify output with the {@see 'get_the_date'} filter.
@@ -16,5 +16,5 @@ interface GetTheDate
  * @param int|\WP_Post $post   Optional. Post ID or WP_Post object. Default current post.
  * @return string|int|false Date the current post was written. False on failure.
  */
-    public function getTheDate(string $format = '', int|\WP_Post $post = null): string|int|false;
+    public function getTheDate(string $format = '', int|\WP_Post|null $post = null): string|int|false;
 }

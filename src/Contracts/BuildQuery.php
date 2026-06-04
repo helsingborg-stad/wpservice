@@ -5,10 +5,10 @@ namespace WpService\Contracts;
 interface BuildQuery
 {
 /**
- * Builds URL query based on an associative and, or indexed array.
+ * Builds a URL query based on an associative or indexed array.
  *
- * This is a convenient function for easily building url queries. It sets the
- * separator to '&' and uses _http_build_query() function.
+ * This is a convenient function for easily building URL queries.
+ * It sets the separator to '&' and uses the _http_build_query() function.
  *
  * @since 2.3.0
  *

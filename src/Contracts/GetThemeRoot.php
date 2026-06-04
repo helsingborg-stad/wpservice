@@ -11,7 +11,7 @@ interface GetThemeRoot
  *
  * @since 1.5.0
  *
- * @global array $wp_theme_directories
+ * @global string[] $wp_theme_directories
  *
  * @param string $stylesheetOrTemplate Optional. The stylesheet or template name of the theme.
  *                                       Default is to leverage the main theme root.

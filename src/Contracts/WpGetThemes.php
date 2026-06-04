@@ -12,7 +12,7 @@ interface WpGetThemes
  *
  * @since 3.4.0
  *
- * @global array $wp_theme_directories
+ * @global string[] $wp_theme_directories
  *
  * @param array $args {
  *     Optional. The search arguments.

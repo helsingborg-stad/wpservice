@@ -14,7 +14,7 @@ interface GetSingularTemplate
  *
  * @see get_query_template()
  *
- * @return string Full path to singular template file
+ * @return string Full path to singular template file.
  */
     public function getSingularTemplate(): string;
 }

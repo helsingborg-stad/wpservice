@@ -5,7 +5,7 @@ namespace WpService\Contracts;
 interface WpAdminBarEditSiteMenu
 {
 /**
- * Adds the "Edit site" link to the Toolbar.
+ * Adds the "Edit Site" link to the Toolbar.
  *
  * @since 5.9.0
  * @since 6.3.0 Added `$_wp_current_template_id` global for editing of current template directly from the admin bar.

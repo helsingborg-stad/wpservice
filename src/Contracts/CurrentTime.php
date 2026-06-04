@@ -19,9 +19,9 @@ interface CurrentTime
  * @since 5.3.0 Now returns an integer if `$type` is 'U'. Previously a string was returned.
  *
  * @param string $type Type of time to retrieve. Accepts 'mysql', 'timestamp', 'U',
- *                       or PHP date format string (e.g. 'Y-m-d').
- * @param int|bool $gmt  Optional. Whether to use GMT timezone. Default false.
+ *                     or PHP date format string (e.g. 'Y-m-d').
+ * @param bool $gmt  Optional. Whether to use GMT timezone. Default false.
  * @return int|string Integer if `$type` is 'timestamp' or 'U', string otherwise.
  */
-    public function currentTime(string $type, int|bool $gmt = 0): int|string;
+    public function currentTime(string $type, bool $gmt = false): int|string;
 }

@@ -13,9 +13,9 @@ interface DeleteNetworkOption
  *
  * @global wpdb $wpdb WordPress database abstraction object.
  *
- * @param int $networkId ID of the network. Can be null to default to the current network ID.
+ * @param int|null $networkId ID of the network. Can be null to default to the current network ID.
  * @param string $option     Name of the option to delete. Expected to not be SQL-escaped.
  * @return bool True if the option was deleted, false otherwise.
  */
-    public function deleteNetworkOption(int $networkId, string $option): bool;
+    public function deleteNetworkOption(int|null $networkId, string $option): bool;
 }

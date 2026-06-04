@@ -14,7 +14,7 @@ interface WpPrintHeadScripts
  *
  * @global WP_Scripts $wp_scripts
  *
- * @return array
+ * @return string[] Handles of the scripts that were printed.
  */
     public function wpPrintHeadScripts(): array;
 }

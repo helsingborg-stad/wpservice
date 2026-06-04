@@ -5,7 +5,7 @@ namespace WpService\Contracts;
 interface DynamicSidebar
 {
 /**
- * Display dynamic sidebar.
+ * Displays dynamic sidebar.
  *
  * By default this displays the default sidebar or 'sidebar-1'. If your theme specifies the 'id' or
  * 'name' parameter for its registered sidebars you can pass an ID or name as the $index parameter.

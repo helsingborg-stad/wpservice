@@ -5,7 +5,7 @@ namespace WpService\Contracts;
 interface TheDate
 {
 /**
- * Displays or retrieves the date the current post was written (once per date)
+ * Displays or retrieves the date of the post (once per date).
  *
  * Will only output the date if the current post's date is different from the
  * previous one output.
@@ -13,8 +13,8 @@ interface TheDate
  * i.e. Only one date listing will show per day worth of posts shown in the loop, even if the
  * function is called several times for each post.
  *
- * HTML output can be filtered with 'the_date'.
- * Date string output can be filtered with 'get_the_date'.
+ * HTML output can be filtered with {@see 'the_date'}.
+ * Date string output can be filtered with {@see 'get_the_date'}.
  *
  * @since 0.71
  *

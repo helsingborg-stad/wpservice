@@ -15,5 +15,5 @@ interface RenderBlockCoreBlock
  *
  * @return string Rendered HTML of the referenced block.
  */
-    public function renderBlockCoreBlock(array $attributes): string;
+    public function renderBlockCoreBlock(array $attributes, $content, $blockInstance): string;
 }

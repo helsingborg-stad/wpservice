@@ -165,6 +165,21 @@ class CreateFunctionTest extends TestCase
         $this->assertEquals('array', $params[0]->getType());
     }
 
+    /**
+     * @testdox NullableType node (?string) is converted to string|null
+     */
+    public function testNullableTypeParamIsConvertedToUnion()
+    {
+        $stub   = $this->getStubStatementForFunction('nullableTypeParam');
+        $function = CreateFunction::create($stub);
+
+        $params = $function->getParameters();
+
+        $this->assertCount(1, $params);
+        $this->assertEquals('string|null', $params[0]->getType());
+        $this->assertEquals('locale', $params[0]->getName());
+    }
+
     private function getStubStatementForFunction(string $functionName): Function_
     {
         $generator = new StubsGenerator(StubsGenerator::FUNCTIONS);

@@ -23,9 +23,9 @@ interface GetPostReplyLink
  * @type string $before     Text or HTML to add before the reply link. Default empty.
  * @type string $after      Text or HTML to add after the reply link. Default empty.
  * }
- * @param int|\WP_Post $post    Optional. Post ID or WP_Post object the comment is going to be displayed on.
- *                             Default current post.
- * @return string|false|null Link to show comment form, if successful. False, if comments are closed.
+ * @param int|\WP_Post $post Optional. Post ID or WP_Post object the comment is going to be displayed on.
+ *                          Default current post.
+ * @return string|false Link to show comment form on success. False if comments are closed.
  */
-    public function getPostReplyLink(array $args = [], int|\WP_Post $post = null): string|false|null;
+    public function getPostReplyLink(array $args = [], int|\WP_Post|null $post = null): string|false;
 }

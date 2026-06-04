@@ -5,7 +5,7 @@ namespace WpService\Contracts;
 interface TheTime
 {
 /**
- * Displays the time at which the post was written.
+ * Displays the time of the post.
  *
  * @since 0.71
  *

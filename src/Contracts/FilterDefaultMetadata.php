@@ -14,8 +14,8 @@ interface FilterDefaultMetadata
  * @param string $metaKey  Metadata key.
  * @param bool $single    If true, return only the first value of the specified `$meta_key`.
  *                          This parameter has no effect if `$meta_key` is not specified.
- * @param string $metaType Type of object metadata is for. Accepts 'post', 'comment', 'term', 'user',
- *                          or any other object type with an associated meta table.
+ * @param string $metaType Type of object metadata is for. Accepts 'blog', 'post', 'comment', 'term',
+ *                          'user', or any other object type with an associated meta table.
  * @return mixed An array of default values if `$single` is false.
  *               The default value of the meta field if `$single` is true.
  */

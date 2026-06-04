@@ -14,5 +14,5 @@ interface WpIsUuid
  *                       to accept any UUID version. Otherwise, only version allowed is `4`.
  * @return bool The string is a valid UUID or false on failure.
  */
-    public function wpIsUuid(mixed $uuid, int $version = null): bool;
+    public function wpIsUuid(mixed $uuid, int|null $version = null): bool;
 }

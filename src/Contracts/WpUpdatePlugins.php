@@ -9,14 +9,12 @@ interface WpUpdatePlugins
  *
  * Despite its name this function does not actually perform any updates, it only checks for available updates.
  *
- * A list of all plugins installed is sent to WP, along with the site locale.
+ * A list of all plugins installed is sent to api.wordpress.org, along with the site locale.
  *
  * Checks against the WordPress server at api.wordpress.org. Will only check
  * if WordPress isn't installing.
  *
  * @since 2.3.0
- *
- * @global string $wp_version The WordPress version string.
  *
  * @param array $extraStats Extra statistics to report to the WordPress.org API.
  */

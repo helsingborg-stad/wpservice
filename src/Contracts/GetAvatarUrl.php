@@ -9,7 +9,7 @@ interface GetAvatarUrl
  *
  * @since 4.2.0
  *
- * @param mixed $idOrEmail The avatar to retrieve a URL for. Accepts a user ID, Gravatar MD5 hash,
+ * @param mixed $idOrEmail The avatar to retrieve a URL for. Accepts a user ID, Gravatar SHA-256 or MD5 hash,
  *                           user email, WP_User object, WP_Post object, or WP_Comment object.
  * @param array $args {
  *     Optional. Arguments to use instead of the default arguments.
@@ -22,6 +22,8 @@ interface GetAvatarUrl
  *                                  - 'monsterid' (a monster)
  *                                  - 'wavatar' (a cartoon face)
  *                                  - 'identicon' (the "quilt", a geometric pattern)
+ *                                  - 'initials' (initials based avatar with background color)
+ *                                  - 'color' (generated background color)
  *                                  - 'mystery', 'mm', or 'mysteryman' (The Oyster Man)
  *                                  - 'blank' (transparent GIF)
  *                                  - 'gravatar_default' (the Gravatar logo)
@@ -42,5 +44,5 @@ interface GetAvatarUrl
  * }
  * @return string|false The URL of the avatar on success, false on failure.
  */
-    public function getAvatarUrl(mixed $idOrEmail, array $args = null): string|false;
+    public function getAvatarUrl(mixed $idOrEmail, array|null $args = null): string|false;
 }

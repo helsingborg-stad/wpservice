@@ -11,6 +11,8 @@ interface UpdateTermMeta
  *
  * If the meta field for the term does not exist, it will be added.
  *
+ * For historical reasons both the meta key and the meta value are expected to be "slashed" (slashes escaped) on input.
+ *
  * @since 4.4.0
  *
  * @param int $termId    Term ID.

@@ -20,7 +20,7 @@ interface WpDeletePost
  * @see wp_delete_attachment()
  * @see wp_trash_post()
  *
- * @param int $postId      Optional. Post ID. Default 0.
+ * @param int $postId      Post ID. (The default of 0 is for historical reasons; providing it is incorrect.)
  * @param bool $forceDelete Optional. Whether to bypass Trash and force deletion.
  *                           Default false.
  * @return \WP_Post|false|null Post data on success, false or null on failure.

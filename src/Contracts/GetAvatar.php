@@ -23,6 +23,8 @@ interface GetAvatar
  *                              - 'monsterid' (a monster)
  *                              - 'wavatar' (a cartoon face)
  *                              - 'identicon' (the "quilt", a geometric pattern)
+ *                              - 'initials' (initials based avatar with background color)
+ *                              - 'color' (generated background color)
  *                              - 'mystery', 'mm', or 'mysteryman' (The Oyster Man)
  *                              - 'blank' (transparent GIF)
  *                              - 'gravatar_default' (the Gravatar logo)
@@ -60,5 +62,5 @@ interface GetAvatar
  * }
  * @return string|false `<img>` tag for the user's avatar. False on failure.
  */
-    public function getAvatar(mixed $idOrEmail, int $size = 96, string $defaultValue = '', string $alt = '', array $args = null): string|false;
+    public function getAvatar(mixed $idOrEmail, int $size = 96, string $defaultValue = '', string $alt = '', array|null $args = null): string|false;
 }

@@ -7,10 +7,12 @@ interface UpdateSiteMeta
 /**
  * Updates metadata for a site.
  *
- * Use the $prev_value parameter to differentiate between meta fields with the
+ * Use the `$prev_value` parameter to differentiate between meta fields with the
  * same key and site ID.
  *
  * If the meta field for the site does not exist, it will be added.
+ *
+ * For historical reasons both the meta key and the meta value are expected to be "slashed" (slashes escaped) on input.
  *
  * @since 5.1.0
  *

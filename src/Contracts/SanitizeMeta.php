@@ -12,8 +12,8 @@ interface SanitizeMeta
  *
  * @param string $metaKey       Metadata key.
  * @param mixed $metaValue     Metadata value to sanitize.
- * @param string $objectType    Type of object metadata is for. Accepts 'post', 'comment', 'term', 'user',
- *                               or any other object type with an associated meta table.
+ * @param string $objectType    Type of object metadata is for. Accepts 'blog', 'post', 'comment', 'term',
+ *                               'user', or any other object type with an associated meta table.
  * @param string $objectSubtype Optional. The subtype of the object type. Default empty string.
  * @return mixed Sanitized $meta_value.
  */

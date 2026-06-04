@@ -922,7 +922,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpAddDashboardWidget(string $widgetId, string $widgetName, callable $callback, callable $controlCallback = null, array $callbackArgs = null, string $context = 'normal', string $priority = 'core'): void
+    public function wpAddDashboardWidget(string $widgetId, string $widgetName, callable $callback, callable|null $controlCallback = null, array|null $callbackArgs = null, string $context = 'normal', string $priority = 'core'): void
     {
         wp_add_dashboard_widget($widgetId, $widgetName, $callback, $controlCallback, $callbackArgs, $context, $priority);
     }
@@ -1314,7 +1314,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function requestFilesystemCredentials(string $formPost, string $type = '', bool|\WP_Error $error = false, string $context = '', array $extraFields = null, bool $allowRelaxedFileOwnership = false): bool|array
+    public function requestFilesystemCredentials(string $formPost, string $type = '', bool|\WP_Error $error = false, string $context = '', array|null $extraFields = null, bool $allowRelaxedFileOwnership = false): bool|array
     {
         return request_filesystem_credentials($formPost, $type, $error, $context, $extraFields, $allowRelaxedFileOwnership);
     }
@@ -1610,7 +1610,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function mediaHandleSideload(array $fileArray, int $postId = 0, string $desc = null, array $postData = []): int|\WP_Error
+    public function mediaHandleSideload(array $fileArray, int $postId = 0, string|null $desc = null, array $postData = []): int|\WP_Error
     {
         return media_handle_sideload($fileArray, $postId, $desc, $postData);
     }
@@ -1634,7 +1634,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getUploadIframeSrc(string $type = null, int $postId = null, string $tab = null): string
+    public function getUploadIframeSrc(string|null $type = null, int|null $postId = null, string|null $tab = null): string
     {
         return get_upload_iframe_src($type, $postId, $tab);
     }
@@ -1658,7 +1658,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function mediaSideloadImage(string $file, int $postId = 0, string $desc = null, string $returnType = 'html'): string|int|\WP_Error
+    public function mediaSideloadImage(string $file, int $postId = 0, string|null $desc = null, string $returnType = 'html'): string|int|\WP_Error
     {
         return media_sideload_image($file, $postId, $desc, $returnType);
     }
@@ -1746,7 +1746,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getAttachmentFieldsToEdit(\WP_Post $post, array $errors = null): array
+    public function getAttachmentFieldsToEdit(\WP_Post $post, array|null $errors = null): array
     {
         return get_attachment_fields_to_edit($post, $errors);
     }
@@ -1762,7 +1762,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getMediaItem(int $attachmentId, string|array $args = null): string
+    public function getMediaItem(int $attachmentId, string|array|null $args = null): string
     {
         return get_media_item($attachmentId, $args);
     }
@@ -1770,7 +1770,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCompatMediaMarkup(int $attachmentId, array $args = null): array
+    public function getCompatMediaMarkup(int $attachmentId, array|null $args = null): array
     {
         return get_compat_media_markup($attachmentId, $args);
     }
@@ -1786,7 +1786,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function mediaUploadForm(array $errors = null): void
+    public function mediaUploadForm(array|null $errors = null): void
     {
         media_upload_form($errors);
     }
@@ -1794,7 +1794,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function mediaUploadTypeForm(string $type = 'file', array $errors = null, int|\WP_Error $id = null): void
+    public function mediaUploadTypeForm(string $type = 'file', array|null $errors = null, int|\WP_Error|null $id = null): void
     {
         media_upload_type_form($type, $errors, $id);
     }
@@ -1802,7 +1802,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function mediaUploadTypeUrlForm(string $type = null, object $errors = null, int $id = null): void
+    public function mediaUploadTypeUrlForm(string|null $type = null, object|null $errors = null, int|null $id = null): void
     {
         media_upload_type_url_form($type, $errors, $id);
     }
@@ -2362,14 +2362,6 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpAdminHeaders(): void
-    {
-        wp_admin_headers();
-    }
-
-    /**
-     * @inheritDoc
-     */
     public function wpPageReloadOnBackButtonJs(): void
     {
         wp_page_reload_on_back_button_js();
@@ -2554,6 +2546,14 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
+    public function wpEnsureEditableRole(string $role): void
+    {
+        wp_ensure_editable_role($role);
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function wpNavMenuSetup(): void
     {
         wp_nav_menu_setup();
@@ -2626,7 +2626,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetNavMenuToEdit(int $menuId = 0): string|\WP_Error
+    public function wpGetNavMenuToEdit(int $menuId = 0): string|\WP_Error|null
     {
         return wp_get_nav_menu_to_edit($menuId);
     }
@@ -2954,7 +2954,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function addMenuPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, string $iconUrl = '', int|float $position = null): string
+    public function addMenuPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable|null $callback = null, string $iconUrl = '', int|float|null $position = null): string
     {
         return add_menu_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $iconUrl, $position);
     }
@@ -2962,7 +2962,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function addSubmenuPage(string $parentSlug, string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int|float $position = null): string|false
+    public function addSubmenuPage(string $parentSlug, string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable|null $callback = null, int|float|null $position = null): string|false
     {
         return add_submenu_page($parentSlug, $pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
@@ -2970,7 +2970,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function addManagementPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
+    public function addManagementPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable|null $callback = null, int|null $position = null): string|false
     {
         return add_management_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
@@ -2978,7 +2978,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function addOptionsPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
+    public function addOptionsPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable|null $callback = null, int|null $position = null): string|false
     {
         return add_options_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
@@ -2986,7 +2986,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function addThemePage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
+    public function addThemePage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable|null $callback = null, int|null $position = null): string|false
     {
         return add_theme_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
@@ -2994,7 +2994,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function addPluginsPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
+    public function addPluginsPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable|null $callback = null, int|null $position = null): string|false
     {
         return add_plugins_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
@@ -3002,7 +3002,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function addUsersPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
+    public function addUsersPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable|null $callback = null, int|null $position = null): string|false
     {
         return add_users_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
@@ -3010,7 +3010,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function addDashboardPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
+    public function addDashboardPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable|null $callback = null, int|null $position = null): string|false
     {
         return add_dashboard_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
@@ -3018,7 +3018,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function addPostsPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
+    public function addPostsPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable|null $callback = null, int|null $position = null): string|false
     {
         return add_posts_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
@@ -3026,7 +3026,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function addMediaPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
+    public function addMediaPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable|null $callback = null, int|null $position = null): string|false
     {
         return add_media_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
@@ -3034,7 +3034,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function addLinksPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
+    public function addLinksPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable|null $callback = null, int|null $position = null): string|false
     {
         return add_links_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
@@ -3042,7 +3042,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function addPagesPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
+    public function addPagesPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable|null $callback = null, int|null $position = null): string|false
     {
         return add_pages_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
@@ -3050,7 +3050,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function addCommentsPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable $callback = null, int $position = null): string|false
+    public function addCommentsPage(string $pageTitle, string $menuTitle, string $capability, string $menuSlug, callable|null $callback = null, int|null $position = null): string|false
     {
         return add_comments_page($pageTitle, $menuTitle, $capability, $menuSlug, $callback, $position);
     }
@@ -3410,7 +3410,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function redirectPost(int|string $postId = ''): void
+    public function redirectPost(int $postId = 0): void
     {
         redirect_post($postId);
     }
@@ -3506,7 +3506,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpPrepareRevisionsForJs(\WP_Post|int $post, int $selectedRevisionId, int $from = null): array
+    public function wpPrepareRevisionsForJs(\WP_Post|int $post, int $selectedRevisionId, int|null $from = null): array
     {
         return wp_prepare_revisions_for_js($post, $selectedRevisionId, $from);
     }
@@ -3522,7 +3522,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetDbSchema(string $scope = 'all', int $blogId = null): string
+    public function wpGetDbSchema(string $scope = 'all', int|null $blogId = null): string
     {
         return wp_get_db_schema($scope, $blogId);
     }
@@ -3698,7 +3698,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function categoryExists(int|string $catName, int $categoryParent = null): string|null
+    public function categoryExists(int|string $catName, int|null $categoryParent = null): string|null
     {
         return category_exists($catName, $categoryParent);
     }
@@ -3722,7 +3722,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCreateCategories(array $categories, int|string $postId = ''): array
+    public function wpCreateCategories(array $categories, int $postId = 0): array
     {
         return wp_create_categories($categories, $postId);
     }
@@ -3786,7 +3786,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCategoryChecklist(int $postId = 0, int $descendantsAndSelf = 0, array|false $selectedCats = false, array|false $popularCats = false, \Walker $walker = null, bool $checkedOntop = true): void
+    public function wpCategoryChecklist(int $postId = 0, int $descendantsAndSelf = 0, array|false $selectedCats = false, array|false $popularCats = false, \Walker|null $walker = null, bool $checkedOntop = true): void
     {
         wp_category_checklist($postId, $descendantsAndSelf, $selectedCats, $popularCats, $walker, $checkedOntop);
     }
@@ -3850,7 +3850,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function metaForm(\WP_Post $post = null): void
+    public function metaForm(\WP_Post|null $post = null): void
     {
         meta_form($post);
     }
@@ -3874,7 +3874,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function parentDropdown(int $defaultPage = 0, int $parentPage = 0, int $level = 0, int|\WP_Post $post = null): mixed
+    public function parentDropdown(int $defaultPage = 0, int $parentPage = 0, int $level = 0, int|\WP_Post|null $post = null): mixed
     {
         return parent_dropdown($defaultPage, $parentPage, $level, $post);
     }
@@ -3898,7 +3898,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function addMetaBox(string $id, string $title, callable $callback, string|array|\WP_Screen $screen = null, string $context = 'advanced', string $priority = 'default', array $callbackArgs = null): void
+    public function addMetaBox(string $id, string $title, callable $callback, string|array|\WP_Screen|null $screen = null, string $context = 'advanced', string $priority = 'default', array|null $callbackArgs = null): void
     {
         add_meta_box($id, $title, $callback, $screen, $context, $priority, $callbackArgs);
     }
@@ -4170,7 +4170,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpPrepareThemesForJs(array $themes = null): array
+    public function wpPrepareThemesForJs(array|null $themes = null): array
     {
         return wp_prepare_themes_for_js($themes);
     }
@@ -4218,7 +4218,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function translationsApi(string $type, array|object $args = null): array|\WP_Error
+    public function translationsApi(string $type, array|object|null $args = null): array|\WP_Error
     {
         return translations_api($type, $args);
     }
@@ -4490,7 +4490,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpDeleteUser(int $id, int $reassign = null): bool
+    public function wpDeleteUser(int $id, int|null $reassign = null): bool
     {
         return wp_delete_user($id, $reassign);
     }
@@ -4730,6 +4730,102 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
+    public function wpRegisterAbility(string $name, array $args): \WP_Ability|null
+    {
+        return wp_register_ability($name, $args);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpUnregisterAbility(string $name): \WP_Ability|null
+    {
+        return wp_unregister_ability($name);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpHasAbility(string $name): bool
+    {
+        return wp_has_ability($name);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpGetAbility(string $name): \WP_Ability|null
+    {
+        return wp_get_ability($name);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpGetAbilities(): array
+    {
+        return wp_get_abilities();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpRegisterAbilityCategory(string $slug, array $args): \WP_Ability_Category|null
+    {
+        return wp_register_ability_category($slug, $args);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpUnregisterAbilityCategory(string $slug): \WP_Ability_Category|null
+    {
+        return wp_unregister_ability_category($slug);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpHasAbilityCategory(string $slug): bool
+    {
+        return wp_has_ability_category($slug);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpGetAbilityCategory(string $slug): \WP_Ability_Category|null
+    {
+        return wp_get_ability_category($slug);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpGetAbilityCategories(): array
+    {
+        return wp_get_ability_categories();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpRegisterCoreAbilityCategories(): void
+    {
+        wp_register_core_ability_categories();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpRegisterCoreAbilities(): void
+    {
+        wp_register_core_abilities();
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function wpAdminBarRender(): void
     {
         wp_admin_bar_render();
@@ -4922,9 +5018,9 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getTheModifiedAuthor(): mixed
+    public function getTheModifiedAuthor(int|\WP_Post|null $post = null): string|null
     {
-        return get_the_modified_author();
+        return get_the_modified_author($post);
     }
 
     /**
@@ -5058,6 +5154,14 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
+    public function getBlockBindingsSupportedAttributes(string $blockType): array
+    {
+        return get_block_bindings_supported_attributes($blockType);
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function getDefaultBlockCategories(): array
     {
         return get_default_block_categories();
@@ -5138,6 +5242,14 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
+    public function wpInitializeSitePreviewHooks(): void
+    {
+        wp_initialize_site_preview_hooks();
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function wpGetBlockStyleVariationNameFromClass(string $classString): array|null
     {
         return wp_get_block_style_variation_name_from_class($classString);
@@ -5186,7 +5298,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getBlockThemeFolders(string $themeStylesheet = null): array
+    public function getBlockThemeFolders(string|null $themeStylesheet = null): array
     {
         return get_block_theme_folders($themeStylesheet);
     }
@@ -5282,9 +5394,33 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
+    public function wpRenderEmptyBlockTemplateWarning(\WP_Block_Template $blockTemplate): string
+    {
+        return wp_render_empty_block_template_warning($blockTemplate);
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function locateBlockTemplate(string $template, string $type, array $templates): string
     {
         return locate_block_template($template, $type, $templates);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function registerBlockTemplate(string $templateName, array|string $args = []): \WP_Block_Template|\WP_Error
+    {
+        return register_block_template($templateName, $args);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function unregisterBlockTemplate(string $templateName): \WP_Block_Template|\WP_Error
+    {
+        return unregister_block_template($templateName);
     }
 
     /**
@@ -5341,6 +5477,22 @@ class NativeWpService implements \WpService\WpService
     public function getBlockMetadataI18nSchema(): object
     {
         return get_block_metadata_i18n_schema();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpRegisterBlockTypesFromMetadataCollection(string $path, string $manifest = ''): void
+    {
+        wp_register_block_types_from_metadata_collection($path, $manifest);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpRegisterBlockMetadataCollection(string $path, string $manifest): void
+    {
+        wp_register_block_metadata_collection($path, $manifest);
     }
 
     /**
@@ -5474,7 +5626,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function filterBlockKsesValue(array|string $value, array|string $allowedHtml, array $allowedProtocols = [], array $blockContext = null): array|string
+    public function filterBlockKsesValue(array|string $value, array|string $allowedHtml, array $allowedProtocols = [], array|null $blockContext = null): array|string
     {
         return filter_block_kses_value($value, $allowedHtml, $allowedProtocols, $blockContext);
     }
@@ -5602,9 +5754,49 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
+    public function blockCoreAccordionItemRender(array $attributes, string $content): string
+    {
+        return block_core_accordion_item_render($attributes, $content);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function registerBlockCoreAccordionItem(): void
+    {
+        register_block_core_accordion_item();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function renderBlockCoreAccordion(array $attributes, string $content): string
+    {
+        return render_block_core_accordion($attributes, $content);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function registerBlockCoreAccordion(): void
+    {
+        register_block_core_accordion();
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCoreArchives(array $attributes): string
     {
         return render_block_core_archives($attributes);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function blockCoreArchivesBuildDropdownScript(string $dropdownId): string
+    {
+        return block_core_archives_build_dropdown_script($dropdownId);
     }
 
     /**
@@ -5642,9 +5834,9 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function renderBlockCoreBlock(array $attributes): string
+    public function renderBlockCoreBlock(array $attributes, $content, $blockInstance): string
     {
-        return render_block_core_block($attributes);
+        return render_block_core_block($attributes, $content, $blockInstance);
     }
 
     /**
@@ -5722,9 +5914,9 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function renderBlockCoreCategories(array $attributes): string
+    public function renderBlockCoreCategories(array $attributes, string $content, \WP_Block $block): string
     {
-        return render_block_core_categories($attributes);
+        return render_block_core_categories($attributes, $content, $block);
     }
 
     /**
@@ -6130,7 +6322,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function blockCoreImageGetLightboxSettings(array $block): array
+    public function blockCoreImageGetLightboxSettings(array $block): array|null
     {
         return block_core_image_get_lightbox_settings($block);
     }
@@ -6178,6 +6370,14 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
+    public function wpRegisterCoreBlockMetadataCollection(): void
+    {
+        wp_register_core_block_metadata_collection();
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function wpLatestCommentsDraftOrPostTitle(int|\WP_Post $post = 0): string
     {
         return wp_latest_comments_draft_or_post_title($post);
@@ -6186,7 +6386,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function renderBlockCoreLatestComments(array $attributes = []): string
+    public function renderBlockCoreLatestComments(array $attributes): string
     {
         return render_block_core_latest_comments($attributes);
     }
@@ -6530,46 +6730,6 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function blockCoreNavigationRemoveSerializedParentBlock(string $serializedBlock): string
-    {
-        return block_core_navigation_remove_serialized_parent_block($serializedBlock);
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function blockCoreNavigationMockParsedBlock(array $innerBlocks, \WP_Post $post): array
-    {
-        return block_core_navigation_mock_parsed_block($innerBlocks, $post);
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function blockCoreNavigationInsertHookedBlocks(array $innerBlocks, \WP_Post $post): string
-    {
-        return block_core_navigation_insert_hooked_blocks($innerBlocks, $post);
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function blockCoreNavigationSetIgnoredHookedBlocksMetadata(array $innerBlocks, \WP_Post $post): string
-    {
-        return block_core_navigation_set_ignored_hooked_blocks_metadata($innerBlocks, $post);
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function blockCoreNavigationInsertHookedBlocksIntoRestResponse(\WP_REST_Response $response, \WP_Post $post): \WP_REST_Response
-    {
-        return block_core_navigation_insert_hooked_blocks_into_rest_response($response, $post);
-    }
-
-    /**
-     * @inheritDoc
-     */
     public function registerBlockCorePageListItem(): void
     {
         register_block_core_page_list_item();
@@ -6690,6 +6850,22 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
+    public function renderBlockCorePostCommentsCount(array $attributes, string $content, \WP_Block $block): string
+    {
+        return render_block_core_post_comments_count($attributes, $content, $block);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function registerBlockCorePostCommentsCount(): void
+    {
+        register_block_core_post_comments_count();
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCorePostCommentsForm(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_post_comments_form($attributes, $content, $block);
@@ -6709,6 +6885,22 @@ class NativeWpService implements \WpService\WpService
     public function postCommentsFormBlockFormDefaults(array $fields): array
     {
         return post_comments_form_block_form_defaults($fields);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function renderBlockCorePostCommentsLink(array $attributes, string $content, \WP_Block $block): string
+    {
+        return render_block_core_post_comments_link($attributes, $content, $block);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function registerBlockCorePostCommentsLink(): void
+    {
+        register_block_core_post_comments_link();
     }
 
     /**
@@ -6858,6 +7050,30 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
+    public function blockCorePostTimeToReadWordCount(string $text, string $type): string
+    {
+        return block_core_post_time_to_read_word_count($text, $type);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function renderBlockCorePostTimeToRead(array $attributes, string $content, \WP_Block $block): string
+    {
+        return render_block_core_post_time_to_read($attributes, $content, $block);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function registerBlockCorePostTimeToRead(): void
+    {
+        register_block_core_post_time_to_read();
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function renderBlockCorePostTitle(array $attributes, string $content, \WP_Block $block): string
     {
         return render_block_core_post_title($attributes, $content, $block);
@@ -6954,9 +7170,9 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function renderBlockCoreQueryTitle(array $attributes): string
+    public function renderBlockCoreQueryTitle(array $attributes, $content, object $block): string
     {
-        return render_block_core_query_title($attributes);
+        return render_block_core_query_title($attributes, $content, $block);
     }
 
     /**
@@ -6965,6 +7181,22 @@ class NativeWpService implements \WpService\WpService
     public function registerBlockCoreQueryTitle(): void
     {
         register_block_core_query_title();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function renderBlockCoreQueryTotal(array $attributes, string $content, \WP_Block $block): string
+    {
+        return render_block_core_query_total($attributes, $content, $block);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function registerBlockCoreQueryTotal(): void
+    {
+        register_block_core_query_total();
     }
 
     /**
@@ -6986,7 +7218,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function blockCoreQueryDisableEnhancedPagination(array $parsedBlock): string
+    public function blockCoreQueryDisableEnhancedPagination(array $parsedBlock): array
     {
         return block_core_query_disable_enhanced_pagination($parsedBlock);
     }
@@ -7298,9 +7530,25 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function renderBlockCoreTermDescription(array $attributes): string
+    public function renderBlockCoreTermCount(array $attributes, string $content, \WP_Block $block): string
     {
-        return render_block_core_term_description($attributes);
+        return render_block_core_term_count($attributes, $content, $block);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function registerBlockCoreTermCount(): void
+    {
+        register_block_core_term_count();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function renderBlockCoreTermDescription(array $attributes, string $content, \WP_Block $block): string
+    {
+        return render_block_core_term_description($attributes, $content, $block);
     }
 
     /**
@@ -7309,6 +7557,54 @@ class NativeWpService implements \WpService\WpService
     public function registerBlockCoreTermDescription(): void
     {
         register_block_core_term_description();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function renderBlockCoreTermName(array $attributes, string $content, \WP_Block $block): string
+    {
+        return render_block_core_term_name($attributes, $content, $block);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function registerBlockCoreTermName(): void
+    {
+        register_block_core_term_name();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function renderBlockCoreTermTemplate(array $attributes, string $content, \WP_Block $block): string
+    {
+        return render_block_core_term_template($attributes, $content, $block);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function registerBlockCoreTermTemplate(): void
+    {
+        register_block_core_term_template();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function renderBlockCoreVideo(array $attributes, string $content): string
+    {
+        return render_block_core_video($attributes, $content);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function registerBlockCoreVideo(): void
+    {
+        register_block_core_video();
     }
 
     /**
@@ -7450,7 +7746,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCacheGet(int|string $key, string $group = '', bool $force = false, bool &$found = null): mixed
+    public function wpCacheGet(int|string $key, string $group = '', bool $force = false, bool|null &$found = null): mixed
     {
         return wp_cache_get($key, $group, $force, $found);
     }
@@ -7562,7 +7858,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function redirectCanonical(string $requestedUrl = null, bool $doRedirect = true): mixed
+    public function redirectCanonical(string|null $requestedUrl = null, bool $doRedirect = true): mixed
     {
         return redirect_canonical($requestedUrl, $doRedirect);
     }
@@ -7610,9 +7906,9 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function currentUserCanForBlog(int $blogId, string $capability, mixed ...$args): bool
+    public function currentUserCanForSite(int $siteId, string $capability, mixed ...$args): bool
     {
-        return current_user_can_for_blog($blogId, $capability, ...$args);
+        return current_user_can_for_site($siteId, $capability, ...$args);
     }
 
     /**
@@ -7634,6 +7930,14 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
+    public function userCanForSite(int|\WP_User $user, int $siteId, string $capability, mixed ...$args): bool
+    {
+        return user_can_for_site($user, $siteId, $capability, ...$args);
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function wpRoles(): \WP_Roles
     {
         return wp_roles();
@@ -7650,7 +7954,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function addRole(string $role, string $displayName, array $capabilities = []): mixed
+    public function addRole(string $role, string $displayName, $capabilities = []): mixed
     {
         return add_role($role, $displayName, $capabilities);
     }
@@ -7762,7 +8066,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function inCategory(int|string|array $category, int|\WP_Post $post = null): bool
+    public function inCategory(int|string|array $category, int|null|\WP_Post $post = null): bool
     {
         return in_category($category, $post);
     }
@@ -7866,7 +8170,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function theTags(string $before = null, string $sep = ', ', string $after = ''): void
+    public function theTags(string|null $before = null, string $sep = ', ', string $after = ''): void
     {
         the_tags($before, $sep, $after);
     }
@@ -7922,7 +8226,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function hasCategory(string|int|array $category = '', int|\WP_Post $post = null): bool
+    public function hasCategory(string|int|array $category = '', int|\WP_Post|null $post = null): bool
     {
         return has_category($category, $post);
     }
@@ -7930,7 +8234,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function hasTag(string|int|array $tag = '', int|\WP_Post $post = null): bool
+    public function hasTag(string|int|array $tag = '', int|\WP_Post|null $post = null): bool
     {
         return has_tag($tag, $post);
     }
@@ -7938,7 +8242,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function hasTerm(string|int|array $term = '', string $taxonomy = '', int|\WP_Post $post = null): bool
+    public function hasTerm(string|int|array $term = '', string $taxonomy = '', int|\WP_Post|null $post = null): bool
     {
         return has_term($term, $taxonomy, $post);
     }
@@ -7954,7 +8258,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCategory(int|object $category, string $output = OBJECT, string $filter = 'raw'): array|null|object
+    public function getCategory(int|object $category, string $output = OBJECT, string $filter = 'raw'): \WP_Term|array|\WP_Error|null
     {
         return get_category($category, $output, $filter);
     }
@@ -8042,14 +8346,6 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpSimplepieAutoload(string $class): void
-    {
-        wp_simplepie_autoload($class);
-    }
-
-    /**
-     * @inheritDoc
-     */
     public function registerBlockPatternCategory(string $categoryName, array $categoryProperties): bool
     {
         return register_block_pattern_category($categoryName, $categoryProperties);
@@ -8122,7 +8418,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function commentAuthorEmailLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment $comment = null): void
+    public function commentAuthorEmailLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment|null $comment = null): void
     {
         comment_author_email_link($linkText, $before, $after, $comment);
     }
@@ -8130,7 +8426,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentAuthorEmailLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment $comment = null): string
+    public function getCommentAuthorEmailLink(string $linkText = '', string $before = '', string $after = '', int|\WP_Comment|null $comment = null): string
     {
         return get_comment_author_email_link($linkText, $before, $after, $comment);
     }
@@ -8202,7 +8498,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function commentClass(string|array $cssClass = '', int|\WP_Comment $comment = null, int|\WP_Post $post = null, bool $display = true): mixed
+    public function commentClass(string|array $cssClass = '', int|\WP_Comment|null $comment = null, int|\WP_Post|null $post = null, bool $display = true): mixed
     {
         return comment_class($cssClass, $comment, $post, $display);
     }
@@ -8210,7 +8506,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentClass(string|array $cssClass = '', int|\WP_Comment $commentId = null, int|\WP_Post $post = null): array
+    public function getCommentClass(string|array $cssClass = '', int|\WP_Comment|null $commentId = null, int|\WP_Post|null $post = null): array
     {
         return get_comment_class($cssClass, $commentId, $post);
     }
@@ -8354,9 +8650,9 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function commentType(string|false $commenttxt = false, string|false $trackbacktxt = false, string|false $pingbacktxt = false): void
+    public function commentType(string|false $commentText = false, string|false $trackbackText = false, string|false $pingbackText = false): void
     {
-        comment_type($commenttxt, $trackbacktxt, $pingbacktxt);
+        comment_type($commentText, $trackbackText, $pingbackText);
     }
 
     /**
@@ -8386,7 +8682,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function commentsOpen(int|\WP_Post $post = null): bool
+    public function commentsOpen(int|\WP_Post|null $post = null): bool
     {
         return comments_open($post);
     }
@@ -8394,7 +8690,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function pingsOpen(int|\WP_Post $post = null): bool
+    public function pingsOpen(int|\WP_Post|null $post = null): bool
     {
         return pings_open($post);
     }
@@ -8426,7 +8722,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentReplyLink(array $args = [], int|\WP_Comment $comment = null, int|\WP_Post $post = null): string|false|null
+    public function getCommentReplyLink(array $args = [], int|\WP_Comment|null $comment = null, int|\WP_Post|null $post = null): string|false|null
     {
         return get_comment_reply_link($args, $comment, $post);
     }
@@ -8434,7 +8730,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function commentReplyLink(array $args = [], int|\WP_Comment $comment = null, int|\WP_Post $post = null): void
+    public function commentReplyLink(array $args = [], int|\WP_Comment|null $comment = null, int|\WP_Post|null $post = null): void
     {
         comment_reply_link($args, $comment, $post);
     }
@@ -8442,7 +8738,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostReplyLink(array $args = [], int|\WP_Post $post = null): string|false|null
+    public function getPostReplyLink(array $args = [], int|\WP_Post|null $post = null): string|false
     {
         return get_post_reply_link($args, $post);
     }
@@ -8450,7 +8746,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function postReplyLink(array $args = [], int|\WP_Post $post = null): void
+    public function postReplyLink(array $args = [], int|\WP_Post|null $post = null): void
     {
         post_reply_link($args, $post);
     }
@@ -8498,7 +8794,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpListComments(string|array $args = [], array $comments = null): mixed
+    public function wpListComments(string|array $args = [], array|null $comments = null): mixed
     {
         return wp_list_comments($args, $comments);
     }
@@ -8506,7 +8802,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function commentForm(array $args = [], int|\WP_Post $post = null): void
+    public function commentForm(array $args = [], int|\WP_Post|null $post = null): void
     {
         comment_form($args, $post);
     }
@@ -8530,7 +8826,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getComment(\WP_Comment|string|int $comment = null, string $output = OBJECT): \WP_Comment|array|null
+    public function getComment(\WP_Comment|string|int|null $comment = null, string $output = OBJECT): \WP_Comment|array|null
     {
         return get_comment($comment, $output);
     }
@@ -8666,7 +8962,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentPagesCount(array $comments = null, int $perPage = null, bool $threaded = null): int
+    public function getCommentPagesCount(array|null $comments = null, int|null $perPage = null, bool|null $threaded = null): int
     {
         return get_comment_pages_count($comments, $perPage, $threaded);
     }
@@ -8693,6 +8989,14 @@ class NativeWpService implements \WpService\WpService
     public function wpCheckCommentDataMaxLengths(array $commentData): \WP_Error|true
     {
         return wp_check_comment_data_max_lengths($commentData);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpCheckCommentData(array $commentData): int|string|\WP_Error
+    {
+        return wp_check_comment_data($commentData);
     }
 
     /**
@@ -8834,6 +9138,14 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
+    public function wpNewCommentViaRestNotifyPostauthor(\WP_Comment $comment): void
+    {
+        wp_new_comment_via_rest_notify_postauthor($comment);
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function wpSetCommentStatus(int|\WP_Comment $commentId, string $commentStatus, bool $wpError = false): bool|\WP_Error
     {
         return wp_set_comment_status($commentId, $commentStatus, $wpError);
@@ -8850,7 +9162,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpDeferCommentCounting(bool $defer = null): bool
+    public function wpDeferCommentCounting(bool|null $defer = null): bool
     {
         return wp_defer_comment_counting($defer);
     }
@@ -8930,9 +9242,9 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function pingback(string $content, int|\WP_Post $post): void
+    public function pingback(string $content, int|\WP_Post $post): array
     {
-        pingback($content, $post);
+        return pingback($content, $post);
     }
 
     /**
@@ -9042,6 +9354,14 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
+    public function wpCreateInitialCommentMeta(): void
+    {
+        wp_create_initial_comment_meta();
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function wpScheduleSingleEvent(int $timestamp, string $hook, array $args = [], bool $wpError = false): bool|\WP_Error
     {
         return wp_schedule_single_event($timestamp, $hook, $args, $wpError);
@@ -9114,9 +9434,9 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCron(): mixed
+    public function wpCron(): void
     {
-        return wp_cron();
+        wp_cron();
     }
 
     /**
@@ -9298,7 +9618,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostEmbedUrl(int|\WP_Post $post = null): string|false
+    public function getPostEmbedUrl(int|\WP_Post|null $post = null): string|false
     {
         return get_post_embed_url($post);
     }
@@ -9314,7 +9634,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostEmbedHtml(int $width, int $height, int|\WP_Post $post = null): string|false
+    public function getPostEmbedHtml(int $width, int $height, int|\WP_Post|null $post = null): string|false
     {
         return get_post_embed_html($width, $height, $post);
     }
@@ -9354,7 +9674,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpFilterOembedIframeTitleAttribute(string $result, object $data, string $url): string
+    public function wpFilterOembedIframeTitleAttribute(string|false $result, object $data, string $url): string|false
     {
         return wp_filter_oembed_iframe_title_attribute($result, $data, $url);
     }
@@ -9362,7 +9682,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpFilterOembedResult(string $result, object $data, string $url): string
+    public function wpFilterOembedResult(string|false $result, object $data, string $url): string|false
     {
         return wp_filter_oembed_result($result, $data, $url);
     }
@@ -9562,7 +9882,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getTheContentFeed(string $feedType = null): string
+    public function getTheContentFeed(string|null $feedType = null): string
     {
         return get_the_content_feed($feedType);
     }
@@ -9570,7 +9890,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function theContentFeed(string $feedType = null): void
+    public function theContentFeed(string|null $feedType = null): void
     {
         the_content_feed($feedType);
     }
@@ -9602,7 +9922,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function commentGuid(int|\WP_Comment $commentId = null): void
+    public function commentGuid(int|\WP_Comment|null $commentId = null): void
     {
         comment_guid($commentId);
     }
@@ -9610,7 +9930,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCommentGuid(int|\WP_Comment $commentId = null): string|false
+    public function getCommentGuid(int|\WP_Comment|null $commentId = null): string|false
     {
         return get_comment_guid($commentId);
     }
@@ -9618,7 +9938,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function commentLink(int|\WP_Comment $comment = null): void
+    public function commentLink(int|\WP_Comment|null $comment = null): void
     {
         comment_link($comment);
     }
@@ -9650,7 +9970,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getTheCategoryRss(string $type = null): string
+    public function getTheCategoryRss(string|null $type = null): string
     {
         return get_the_category_rss($type);
     }
@@ -9658,7 +9978,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function theCategoryRss(string $type = null): void
+    public function theCategoryRss(string|null $type = null): void
     {
         the_category_rss($type);
     }
@@ -9746,7 +10066,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function fetchFeed(string|array $url): \SimplePie|\WP_Error
+    public function fetchFeed(string|array $url): \SimplePie\SimplePie|\WP_Error
     {
         return fetch_feed($url);
     }
@@ -9757,6 +10077,14 @@ class NativeWpService implements \WpService\WpService
     public function wpPrintFontFaces(array $fonts = []): void
     {
         wp_print_font_faces($fonts);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpPrintFontFacesFromStyleVariations(): void
+    {
+        wp_print_font_faces_from_style_variations();
     }
 
     /**
@@ -9845,14 +10173,6 @@ class NativeWpService implements \WpService\WpService
     public function shortcodeUnautop(string $text): string
     {
         return shortcode_unautop($text);
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function seemsUtf8(string $str): bool
-    {
-        return seems_utf8($str);
     }
 
     /**
@@ -10026,7 +10346,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function untrailingslashit($value): string
+    public function untrailingslashit(string $value): string
     {
         return untrailingslashit($value);
     }
@@ -10122,38 +10442,6 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpTargetedLinkRel(string $text): string
-    {
-        return wp_targeted_link_rel($text);
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function wpTargetedLinkRelCallback(array $matches): string
-    {
-        return wp_targeted_link_rel_callback($matches);
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function wpInitTargetedLinkRelFilters(): void
-    {
-        wp_init_targeted_link_rel_filters();
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function wpRemoveTargetedLinkRelFilters(): void
-    {
-        wp_remove_targeted_link_rel_filters();
-    }
-
-    /**
-     * @inheritDoc
-     */
     public function translateSmiley(array $matches): string
     {
         return translate_smiley($matches);
@@ -10234,7 +10522,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpTrimExcerpt(string $text = '', int|object $post = null): string
+    public function wpTrimExcerpt(string $text = '', int|object|null $post = null): string
     {
         return wp_trim_excerpt($text, $post);
     }
@@ -10242,7 +10530,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpTrimWords(string $text, int $numWords = 55, string $more = null): string
+    public function wpTrimWords(string $text, int $numWords = 55, string|null $more = null): string
     {
         return wp_trim_words($text, $numWords, $more);
     }
@@ -10258,7 +10546,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function formatForEditor(string $text, string $defaultEditor = null): string
+    public function formatForEditor(string $text, string|null $defaultEditor = null): string
     {
         return format_for_editor($text, $defaultEditor);
     }
@@ -10274,7 +10562,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function escUrl(string $url, array $protocols = null, string $context = 'display'): string
+    public function escUrl(string $url, array|null $protocols = null, string $context = 'display'): string
     {
         return esc_url($url, $protocols, $context);
     }
@@ -10282,7 +10570,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function escUrlRaw(string $url, array $protocols = null): string
+    public function escUrlRaw(string $url, array|null $protocols = null): string
     {
         return esc_url_raw($url, $protocols);
     }
@@ -10290,7 +10578,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function sanitizeUrl(string $url, array $protocols = null): string
+    public function sanitizeUrl(string $url, array|null $protocols = null): string
     {
         return sanitize_url($url, $protocols);
     }
@@ -10426,7 +10714,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpHtmlExcerpt(string $str, int $count, string $more = null): string
+    public function wpHtmlExcerpt(string $str, int $count, string|null $more = null): string
     {
         return wp_html_excerpt($str, $count, $more);
     }
@@ -10626,7 +10914,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function currentTime(string $type, int|bool $gmt = 0): int|string
+    public function currentTime(string $type, bool $gmt = false): int|string
     {
         return current_time($type, $gmt);
     }
@@ -10666,7 +10954,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpDate(string $format, int $timestamp = null, \DateTimeZone $timezone = null): string|false
+    public function wpDate(string $format, int|null $timestamp = null, \DateTimeZone|null $timezone = null): string|false
     {
         return wp_date($format, $timestamp, $timezone);
     }
@@ -10754,7 +11042,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function xmlrpcGetpostcategory(string $content): string|array
+    public function xmlrpcGetpostcategory(string $content): array|string
     {
         return xmlrpc_getpostcategory($content);
     }
@@ -11106,7 +11394,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpUniqueFilename(string $dir, string $filename, callable $uniqueFilenameCallback = null): string
+    public function wpUniqueFilename(string $dir, string $filename, callable|null $uniqueFilenameCallback = null): string
     {
         return wp_unique_filename($dir, $filename, $uniqueFilenameCallback);
     }
@@ -11186,7 +11474,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getAllowedMimeTypes(int|\WP_User $user = null): array
+    public function getAllowedMimeTypes(int|\WP_User|null $user = null): array
     {
         return get_allowed_mime_types($user);
     }
@@ -11218,7 +11506,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpSendJson(mixed $response, int $statusCode = null, int $flags = 0): void
+    public function wpSendJson(mixed $response, int|null $statusCode = null, int $flags = 0): void
     {
         wp_send_json($response, $statusCode, $flags);
     }
@@ -11226,7 +11514,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpSendJsonSuccess(mixed $value = null, int $statusCode = null, int $flags = 0): void
+    public function wpSendJsonSuccess(mixed $value = null, int|null $statusCode = null, int $flags = 0): void
     {
         wp_send_json_success($value, $statusCode, $flags);
     }
@@ -11234,7 +11522,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpSendJsonError(mixed $value = null, int $statusCode = null, int $flags = 0): void
+    public function wpSendJsonError(mixed $value = null, int|null $statusCode = null, int $flags = 0): void
     {
         wp_send_json_error($value, $statusCode, $flags);
     }
@@ -11346,7 +11634,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpListPluck(array $inputList, int|string $field, int|string $indexKey = null): array
+    public function wpListPluck(array $inputList, int|string $field, int|string|null $indexKey = null): array
     {
         return wp_list_pluck($inputList, $field, $indexKey);
     }
@@ -11394,14 +11682,6 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function absint(mixed $maybeint): int
-    {
-        return absint($maybeint);
-    }
-
-    /**
-     * @inheritDoc
-     */
     public function wpTriggerError(string $functionName, string $message, int $errorLevel = E_USER_NOTICE): void
     {
         wp_trigger_error($functionName, $message, $errorLevel);
@@ -11442,7 +11722,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function forceSslAdmin(string|bool $force = null): bool
+    public function forceSslAdmin(string|bool|null $force = null): bool
     {
         return force_ssl_admin($force);
     }
@@ -11458,7 +11738,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpSuspendCacheAddition(bool $suspend = null): bool
+    public function wpSuspendCacheAddition(bool|null $suspend = null): bool
     {
         return wp_suspend_cache_addition($suspend);
     }
@@ -11474,7 +11754,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function isMainSite(int $siteId = null, int $networkId = null): bool
+    public function isMainSite(int|null $siteId = null, int|null $networkId = null): bool
     {
         return is_main_site($siteId, $networkId);
     }
@@ -11482,7 +11762,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getMainSiteId(int $networkId = null): int
+    public function getMainSiteId(int|null $networkId = null): int
     {
         return get_main_site_id($networkId);
     }
@@ -11490,7 +11770,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function isMainNetwork(int $networkId = null): bool
+    public function isMainNetwork(int|null $networkId = null): bool
     {
         return is_main_network($networkId);
     }
@@ -11522,7 +11802,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpTimezoneChoice(string $selectedZone, string $locale = null): string
+    public function wpTimezoneChoice(string $selectedZone, string|null $locale = null): string
     {
         return wp_timezone_choice($selectedZone, $locale);
     }
@@ -11562,6 +11842,14 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
+    public function wpAdminHeaders(): void
+    {
+        wp_admin_headers();
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function wpAllowedProtocols(): array
     {
         return wp_allowed_protocols();
@@ -11570,7 +11858,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpDebugBacktraceSummary(string $ignoreClass = null, int $skipFrames = 0, bool $pretty = true): string|array
+    public function wpDebugBacktraceSummary(string|null $ignoreClass = null, int $skipFrames = 0, bool $pretty = true): string|array
     {
         return wp_debug_backtrace_summary($ignoreClass, $skipFrames, $pretty);
     }
@@ -11658,9 +11946,9 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpDeleteFile(string $file): void
+    public function wpDeleteFile(string $file): bool
     {
-        wp_delete_file($file);
+        return wp_delete_file($file);
     }
 
     /**
@@ -11706,7 +11994,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpIsUuid(mixed $uuid, int $version = null): bool
+    public function wpIsUuid(mixed $uuid, int|null $version = null): bool
     {
         return wp_is_uuid($uuid, $version);
     }
@@ -11725,6 +12013,14 @@ class NativeWpService implements \WpService\WpService
     public function wpUniquePrefixedId(string $prefix = ''): string
     {
         return wp_unique_prefixed_id($prefix);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpUniqueIdFromValues(array $data, string $prefix = ''): string
+    {
+        return wp_unique_id_from_values($data, $prefix);
     }
 
     /**
@@ -11858,7 +12154,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getDirsize(string $directory, int $maxExecutionTime = null): int|false|null
+    public function getDirsize(string $directory, int|null $maxExecutionTime = null): int|false|null
     {
         return get_dirsize($directory, $maxExecutionTime);
     }
@@ -11866,7 +12162,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function recurseDirsize(string $directory, string|array $exclude = null, int $maxExecutionTime = null, array &$directoryCache = null): int|false|null
+    public function recurseDirsize(string $directory, string|array|null $exclude = null, int|null $maxExecutionTime = null, array|null &$directoryCache = null): int|false|null
     {
         return recurse_dirsize($directory, $exclude, $maxExecutionTime, $directoryCache);
     }
@@ -11877,6 +12173,14 @@ class NativeWpService implements \WpService\WpService
     public function cleanDirsizeCache(string $path): void
     {
         clean_dirsize_cache($path);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpGetWpVersion(): string
+    {
+        return wp_get_wp_version();
     }
 
     /**
@@ -11917,6 +12221,30 @@ class NativeWpService implements \WpService\WpService
     public function wpAdminNotice(string $message, array $args = []): void
     {
         wp_admin_notice($message, $args);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpIsHeicImageMimeType(string $mimeType): bool
+    {
+        return wp_is_heic_image_mime_type($mimeType);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpFastHash(string $message): string
+    {
+        return wp_fast_hash($message);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpVerifyFastHash(string $message, string $hash): bool
+    {
+        return wp_verify_fast_hash($message, $hash);
     }
 
     /**
@@ -12082,7 +12410,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getHeader(string $name = null, array $args = []): mixed
+    public function getHeader(string|null $name = null, array $args = []): mixed
     {
         return get_header($name, $args);
     }
@@ -12090,7 +12418,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getFooter(string $name = null, array $args = []): mixed
+    public function getFooter(string|null $name = null, array $args = []): mixed
     {
         return get_footer($name, $args);
     }
@@ -12098,7 +12426,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getSidebar(string $name = null, array $args = []): mixed
+    public function getSidebar(string|null $name = null, array $args = []): mixed
     {
         return get_sidebar($name, $args);
     }
@@ -12378,9 +12706,9 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getCalendar(bool $initial = true, bool $display = true): mixed
+    public function getCalendar(array $args = []): mixed
     {
-        return get_calendar($initial, $display);
+        return get_calendar($args);
     }
 
     /**
@@ -12418,7 +12746,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getTheDate(string $format = '', int|\WP_Post $post = null): string|int|false
+    public function getTheDate(string $format = '', int|\WP_Post|null $post = null): string|int|false
     {
         return get_the_date($format, $post);
     }
@@ -12434,7 +12762,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getTheModifiedDate(string $format = '', int|\WP_Post $post = null): string|int|false
+    public function getTheModifiedDate(string $format = '', int|\WP_Post|null $post = null): string|int|false
     {
         return get_the_modified_date($format, $post);
     }
@@ -12450,7 +12778,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getTheTime(string $format = '', int|\WP_Post $post = null): string|int|false
+    public function getTheTime(string $format = '', int|\WP_Post|null $post = null): string|int|false
     {
         return get_the_time($format, $post);
     }
@@ -12458,7 +12786,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostTime(string $format = 'U', bool $gmt = false, int|\WP_Post $post = null, bool $translate = false): string|int|false
+    public function getPostTime(string $format = 'U', bool $gmt = false, int|\WP_Post|null $post = null, bool $translate = false): string|int|false
     {
         return get_post_time($format, $gmt, $post, $translate);
     }
@@ -12466,7 +12794,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostDatetime(int|\WP_Post $post = null, string $field = 'date', string $source = 'local'): \DateTimeImmutable|false
+    public function getPostDatetime(int|\WP_Post|null $post = null, string $field = 'date', string $source = 'local'): \DateTimeImmutable|false
     {
         return get_post_datetime($post, $field, $source);
     }
@@ -12474,7 +12802,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostTimestamp(int|\WP_Post $post = null, string $field = 'date'): int|false
+    public function getPostTimestamp(int|\WP_Post|null $post = null, string $field = 'date'): int|false
     {
         return get_post_timestamp($post, $field);
     }
@@ -12490,7 +12818,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getTheModifiedTime(string $format = '', int|\WP_Post $post = null): string|int|false
+    public function getTheModifiedTime(string $format = '', int|\WP_Post|null $post = null): string|int|false
     {
         return get_the_modified_time($format, $post);
     }
@@ -12498,7 +12826,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostModifiedTime(string $format = 'U', bool $gmt = false, int|\WP_Post $post = null, bool $translate = false): string|int|false
+    public function getPostModifiedTime(string $format = 'U', bool $gmt = false, int|\WP_Post|null $post = null, bool $translate = false): string|int|false
     {
         return get_post_modified_time($format, $gmt, $post, $translate);
     }
@@ -12842,14 +13170,6 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetGlobalStylesCustomCss(): string
-    {
-        return wp_get_global_styles_custom_css();
-    }
-
-    /**
-     * @inheritDoc
-     */
     public function wpAddGlobalStylesForBlocks(): void
     {
         wp_add_global_styles_for_blocks();
@@ -13034,7 +13354,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpHttpSupports(array $capabilities = [], string $url = null): bool
+    public function wpHttpSupports(array $capabilities = [], string|null $url = null): bool
     {
         return wp_http_supports($capabilities, $url);
     }
@@ -13178,7 +13498,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpInteractivityState(string $storeNamespace = null, array $state = []): array
+    public function wpInteractivityState(string|null $storeNamespace = null, array $state = []): array
     {
         return wp_interactivity_state($storeNamespace, $state);
     }
@@ -13202,9 +13522,17 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpInteractivityGetContext(string $storeNamespace = null): array
+    public function wpInteractivityGetContext(string|null $storeNamespace = null): array
     {
         return wp_interactivity_get_context($storeNamespace);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpInteractivityGetElement(): array|null
+    {
+        return wp_interactivity_get_element();
     }
 
     /**
@@ -13322,7 +13650,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpKsesNoNull(string $content, array $options = null): string
+    public function wpKsesNoNull(string $content, array|null $options = null): string
     {
         return wp_kses_no_null($content, $options);
     }
@@ -13634,7 +13962,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function _nNoop(string $singular, string $plural, string $domain = null): array
+    public function _nNoop(string $singular, string $plural, string|null $domain = null): array
     {
         return _n_noop($singular, $plural, $domain);
     }
@@ -13642,7 +13970,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function _nxNoop(string $singular, string $plural, string $context, string $domain = null): array
+    public function _nxNoop(string $singular, string $plural, string $context, string|null $domain = null): array
     {
         return _nx_noop($singular, $plural, $context, $domain);
     }
@@ -13658,7 +13986,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function loadTextdomain(string $domain, string $mofile, string $locale = null): bool
+    public function loadTextdomain(string $domain, string $mofile, string|null $locale = null): bool
     {
         return load_textdomain($domain, $mofile, $locale);
     }
@@ -13674,7 +14002,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function loadDefaultTextdomain(string $locale = null): bool
+    public function loadDefaultTextdomain(string|null $locale = null): bool
     {
         return load_default_textdomain($locale);
     }
@@ -13754,7 +14082,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getAvailableLanguages(string $dir = null): array
+    public function getAvailableLanguages(string|null $dir = null): array
     {
         return get_available_languages($dir);
     }
@@ -13858,6 +14186,14 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
+    public function hasTranslation(string $singular, string $textdomain = 'default', string|null $locale = null): bool
+    {
+        return has_translation($singular, $textdomain, $locale);
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function thePermalink(int|\WP_Post $post = 0): void
     {
         the_permalink($post);
@@ -13914,7 +14250,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPageLink(int|\WP_Post|false $post = false, bool $leavename = false, bool $sample = false): string
+    public function getPageLink(int|\WP_Post $post = 0, bool $leavename = false, bool $sample = false): string
     {
         return get_page_link($post, $leavename, $sample);
     }
@@ -13922,7 +14258,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getAttachmentLink(int|\WP_Post $post = null, bool $leavename = false): string
+    public function getAttachmentLink(int|\WP_Post|null $post = null, bool $leavename = false): string
     {
         return get_attachment_link($post, $leavename);
     }
@@ -13978,7 +14314,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function postCommentsFeedLink(string $linkText = '', int|string $postId = '', string $feed = ''): void
+    public function postCommentsFeedLink(string $linkText = '', int $postId = 0, string $feed = ''): void
     {
         post_comments_feed_link($linkText, $postId, $feed);
     }
@@ -14026,7 +14362,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function editTagLink(string $link = '', string $before = '', string $after = '', \WP_Term $tag = null): void
+    public function editTagLink(string $link = '', string $before = '', string $after = '', \WP_Term|null $tag = null): void
     {
         edit_tag_link($link, $before, $after, $tag);
     }
@@ -14090,7 +14426,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPreviewPostLink(int|\WP_Post $post = null, array $queryArgs = [], string $previewLink = ''): string|null
+    public function getPreviewPostLink(int|\WP_Post|null $post = null, array $queryArgs = [], string $previewLink = ''): string|null
     {
         return get_preview_post_link($post, $queryArgs, $previewLink);
     }
@@ -14106,7 +14442,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function editPostLink(string $text = null, string $before = '', string $after = '', int|\WP_Post $post = 0, string $cssClass = 'post-edit-link'): void
+    public function editPostLink(string|null $text = null, string $before = '', string $after = '', int|\WP_Post $post = 0, string $cssClass = 'post-edit-link'): void
     {
         edit_post_link($text, $before, $after, $post, $cssClass);
     }
@@ -14122,15 +14458,15 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getEditCommentLink(int|\WP_Comment $commentId = 0): mixed
+    public function getEditCommentLink(int|\WP_Comment $commentId = 0, string $context = 'display'): mixed
     {
-        return get_edit_comment_link($commentId);
+        return get_edit_comment_link($commentId, $context);
     }
 
     /**
      * @inheritDoc
      */
-    public function editCommentLink(string $text = null, string $before = '', string $after = ''): void
+    public function editCommentLink(string|null $text = null, string $before = '', string $after = ''): void
     {
         edit_comment_link($text, $before, $after);
     }
@@ -14146,7 +14482,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function editBookmarkLink(string $link = '', string $before = '', string $after = '', int $bookmark = null): void
+    public function editBookmarkLink(string $link = '', string $before = '', string $after = '', int|null $bookmark = null): void
     {
         edit_bookmark_link($link, $before, $after, $bookmark);
     }
@@ -14154,7 +14490,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getEditUserLink(int $userId = null): string
+    public function getEditUserLink(int|null $userId = null): string
     {
         return get_edit_user_link($userId);
     }
@@ -14306,7 +14642,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getNextPostsLink(string $label = null, int $maxPage = 0): mixed
+    public function getNextPostsLink(string|null $label = null, int $maxPage = 0): mixed
     {
         return get_next_posts_link($label, $maxPage);
     }
@@ -14314,7 +14650,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function nextPostsLink(string $label = null, int $maxPage = 0): void
+    public function nextPostsLink(string|null $label = null, int $maxPage = 0): void
     {
         next_posts_link($label, $maxPage);
     }
@@ -14338,7 +14674,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPreviousPostsLink(string $label = null): mixed
+    public function getPreviousPostsLink(string|null $label = null): mixed
     {
         return get_previous_posts_link($label);
     }
@@ -14346,7 +14682,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function previousPostsLink(string $label = null): void
+    public function previousPostsLink(string|null $label = null): void
     {
         previous_posts_link($label);
     }
@@ -14426,9 +14762,9 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getNextCommentsLink(string $label = '', int $maxPage = 0): mixed
+    public function getNextCommentsLink(string $label = '', int $maxPage = 0, int|null $page = null): mixed
     {
-        return get_next_comments_link($label, $maxPage);
+        return get_next_comments_link($label, $maxPage, $page);
     }
 
     /**
@@ -14442,9 +14778,9 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPreviousCommentsLink(string $label = ''): mixed
+    public function getPreviousCommentsLink(string $label = '', int|null $page = null): mixed
     {
-        return get_previous_comments_link($label);
+        return get_previous_comments_link($label, $page);
     }
 
     /**
@@ -14634,7 +14970,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetCanonicalUrl(int|\WP_Post $post = null): string|false
+    public function wpGetCanonicalUrl(int|\WP_Post|null $post = null): string|false
     {
         return wp_get_canonical_url($post);
     }
@@ -14682,7 +15018,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getAvatarUrl(mixed $idOrEmail, array $args = null): string|false
+    public function getAvatarUrl(mixed $idOrEmail, array|null $args = null): string|false
     {
         return get_avatar_url($idOrEmail, $args);
     }
@@ -14698,7 +15034,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getAvatarData(mixed $idOrEmail, array $args = null): array
+    public function getAvatarData(mixed $idOrEmail, array|null $args = null): array
     {
         return get_avatar_data($idOrEmail, $args);
     }
@@ -14850,7 +15186,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpUsingExtObjectCache(bool $using = null): bool
+    public function wpUsingExtObjectCache(bool|null $using = null): bool
     {
         return wp_using_ext_object_cache($using);
     }
@@ -14946,6 +15282,14 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
+    public function absint(mixed $maybeint): int
+    {
+        return absint($maybeint);
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function getCurrentBlogId(): int
     {
         return get_current_blog_id();
@@ -14962,7 +15306,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpInstalling(bool $isInstalling = null): bool
+    public function wpInstalling(bool|null $isInstalling = null): bool
     {
         return wp_installing($isInstalling);
     }
@@ -15122,7 +15466,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function imageConstrainSizeForEditor(int $width, int $height, string|array $size = 'medium', string $context = null): array
+    public function imageConstrainSizeForEditor(int $width, int $height, string|array $size = 'medium', string|null $context = null): array
     {
         return image_constrain_size_for_editor($width, $height, $size, $context);
     }
@@ -15330,9 +15674,33 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpFilterContentTags(string $content, string $context = null): string
+    public function wpFilterContentTags(string $content, string|null $context = null): string
     {
         return wp_filter_content_tags($content, $context);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpImgTagAddAutoSizes(string $image): string
+    {
+        return wp_img_tag_add_auto_sizes($image);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpSizesAttributeIncludesValidAuto(string $sizesAttr): bool
+    {
+        return wp_sizes_attribute_includes_valid_auto($sizesAttr);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpEnqueueImgAutoSizesContainCssFix(): void
+    {
+        wp_enqueue_img_auto_sizes_contain_css_fix();
     }
 
     /**
@@ -15602,7 +15970,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getMediaEmbeddedInContent(string $content, array $types = null): array
+    public function getMediaEmbeddedInContent(string $content, array|null $types = null): array
     {
         return get_media_embedded_in_content($content, $types);
     }
@@ -15690,7 +16058,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetimagesize(string $filename, array &$imageInfo = null): array|false
+    public function wpGetimagesize(string $filename, array|null &$imageInfo = null): array|false
     {
         return wp_getimagesize($filename, $imageInfo);
     }
@@ -15826,7 +16194,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getMetaSql(array $metaQuery, string $type, string $primaryTable, string $primaryIdColumn, object $context = null): array|false
+    public function getMetaSql(array $metaQuery, string $type, string $primaryTable, string $primaryIdColumn, object|null $context = null): array|false
     {
         return get_meta_sql($metaQuery, $type, $primaryTable, $primaryIdColumn, $context);
     }
@@ -15850,7 +16218,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function registerMeta(string $objectType, string $metaKey, array $args, string|array $deprecated = null): bool
+    public function registerMeta(string $objectType, string $metaKey, array $args, string|array|null $deprecated = null): bool
     {
         return register_meta($objectType, $metaKey, $args, $deprecated);
     }
@@ -15938,7 +16306,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getBlogDetails(int|string|array $fields = null, bool $getAll = true): \WP_Site|false
+    public function getBlogDetails(int|string|array|null $fields = null, bool $getAll = true): \WP_Site|false
     {
         return get_blog_details($fields, $getAll);
     }
@@ -16002,7 +16370,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function switchToBlog(int $newBlogId, bool $deprecated = null): true
+    public function switchToBlog(int $newBlogId, bool|null $deprecated = null): true
     {
         return switch_to_blog($newBlogId, $deprecated);
     }
@@ -16074,7 +16442,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpCountSites(int $networkId = null): array
+    public function wpCountSites(int|null $networkId = null): array
     {
         return wp_count_sites($networkId);
     }
@@ -16418,7 +16786,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function fixPhpmailerMessageid(\PHPMailer $phpmailer): void
+    public function fixPhpmailerMessageid(\PHPMailer\PHPMailer\PHPMailer $phpmailer): void
     {
         fix_phpmailer_messageid($phpmailer);
     }
@@ -16426,7 +16794,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function isUserSpammy(string|\WP_User $user = null): bool
+    public function isUserSpammy(string|\WP_User|null $user = null): bool
     {
         return is_user_spammy($user);
     }
@@ -16458,7 +16826,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function forceSslContent(bool|string $force = ''): bool
+    public function forceSslContent(bool|null $force = null): bool
     {
         return force_ssl_content($force);
     }
@@ -17090,7 +17458,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpSetOptionsAutoload(array $options, string|bool $autoload): array
+    public function wpSetOptionsAutoload(array $options, bool $autoload): array
     {
         return wp_set_options_autoload($options, $autoload);
     }
@@ -17098,7 +17466,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpSetOptionAutoload(string $option, string|bool $autoload): bool
+    public function wpSetOptionAutoload(string $option, bool $autoload): bool
     {
         return wp_set_option_autoload($option, $autoload);
     }
@@ -17138,7 +17506,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpPrimeNetworkOptionCaches(int $networkId, array $options): void
+    public function wpPrimeNetworkOptionCaches(int|null $networkId, array $options): void
     {
         wp_prime_network_option_caches($networkId, $options);
     }
@@ -17146,7 +17514,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpLoadCoreSiteOptions(int $networkId = null): void
+    public function wpLoadCoreSiteOptions(int|null $networkId = null): void
     {
         wp_load_core_site_options($networkId);
     }
@@ -17290,7 +17658,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getNetworkOption(int $networkId, string $option, mixed $defaultValue = false): mixed
+    public function getNetworkOption(int|null $networkId, string $option, mixed $defaultValue = false): mixed
     {
         return get_network_option($networkId, $option, $defaultValue);
     }
@@ -17298,7 +17666,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function addNetworkOption(int $networkId, string $option, mixed $value): bool
+    public function addNetworkOption(int|null $networkId, string $option, mixed $value): bool
     {
         return add_network_option($networkId, $option, $value);
     }
@@ -17306,7 +17674,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function deleteNetworkOption(int $networkId, string $option): bool
+    public function deleteNetworkOption(int|null $networkId, string $option): bool
     {
         return delete_network_option($networkId, $option);
     }
@@ -17314,7 +17682,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function updateNetworkOption(int $networkId, string $option, mixed $value): bool
+    public function updateNetworkOption(int|null $networkId, string $option, mixed $value): bool
     {
         return update_network_option($networkId, $option, $value);
     }
@@ -17362,7 +17730,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function unregisterSetting(string $optionGroup, string $optionName, callable $deprecated = null): void
+    public function unregisterSetting(string $optionGroup, string $optionName, callable|null $deprecated = null): void
     {
         unregister_setting($optionGroup, $optionName, $deprecated);
     }
@@ -17434,9 +17802,9 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpMail(string|array $to, string $subject, string $message, string|array $headers = '', string|array $attachments = []): bool
+    public function wpMail(string|array $to, string $subject, string $message, string|array $headers = '', string|array $attachments = [], string|array $embeds = []): bool
     {
-        return wp_mail($to, $subject, $message, $headers, $attachments);
+        return wp_mail($to, $subject, $message, $headers, $attachments, $embeds);
     }
 
     /**
@@ -17562,7 +17930,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpNotifyPostauthor(int|\WP_Comment $commentId, string $deprecated = null): bool
+    public function wpNotifyPostauthor(int|\WP_Comment $commentId, string|null $deprecated = null): bool
     {
         return wp_notify_postauthor($commentId, $deprecated);
     }
@@ -17626,9 +17994,9 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpHash(string $data, string $scheme = 'auth'): string
+    public function wpHash(string $data, string $scheme = 'auth', string $algo = 'md5'): string
     {
-        return wp_hash($data, $scheme);
+        return wp_hash($data, $scheme, $algo);
     }
 
     /**
@@ -17650,6 +18018,14 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
+    public function wpPasswordNeedsRehash(string $hash, string|int $userId = ''): bool
+    {
+        return wp_password_needs_rehash($hash, $userId);
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function wpGeneratePassword(int $length = 12, bool $specialChars = true, bool $extraSpecialChars = false): string
     {
         return wp_generate_password($length, $specialChars, $extraSpecialChars);
@@ -17658,7 +18034,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpRand(int $min = null, int $max = null): int
+    public function wpRand(int|null $min = null, int|null $max = null): int
     {
         return wp_rand($min, $max);
     }
@@ -17674,7 +18050,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getAvatar(mixed $idOrEmail, int $size = 96, string $defaultValue = '', string $alt = '', array $args = null): string|false
+    public function getAvatar(mixed $idOrEmail, int $size = 96, string $defaultValue = '', string $alt = '', array|null $args = null): string|false
     {
         return get_avatar($idOrEmail, $size, $defaultValue, $alt, $args);
     }
@@ -17682,7 +18058,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpTextDiff(string $leftString, string $rightString, string|array $args = null): string
+    public function wpTextDiff(string $leftString, string $rightString, string|array|null $args = null): string
     {
         return wp_text_diff($leftString, $rightString, $args);
     }
@@ -17714,9 +18090,9 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function hasFilter(string $hookName, callable|string|array|false $callback = false): bool|int
+    public function hasFilter(string $hookName, callable|string|array|false $callback = false, int|false $priority = false): bool|int
     {
-        return has_filter($hookName, $callback);
+        return has_filter($hookName, $callback, $priority);
     }
 
     /**
@@ -17738,7 +18114,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function currentFilter(): string
+    public function currentFilter(): string|false
     {
         return current_filter();
     }
@@ -17786,9 +18162,9 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function hasAction(string $hookName, callable|string|array|false $callback = false): bool|int
+    public function hasAction(string $hookName, callable|string|array|false $callback = false, int|false $priority = false): bool|int
     {
-        return has_action($hookName, $callback);
+        return has_action($hookName, $callback, $priority);
     }
 
     /**
@@ -17810,7 +18186,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function currentAction(): string
+    public function currentAction(): string|false
     {
         return current_action();
     }
@@ -18018,7 +18394,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function theContent(string $moreLinkText = null, bool $stripTeaser = false): void
+    public function theContent(string|null $moreLinkText = null, bool $stripTeaser = false): void
     {
         the_content($moreLinkText, $stripTeaser);
     }
@@ -18026,7 +18402,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getTheContent(string $moreLinkText = null, bool $stripTeaser = false, int|object $post = null): string
+    public function getTheContent(string|null $moreLinkText = null, bool $stripTeaser = false, int|object|null $post = null): string
     {
         return get_the_content($moreLinkText, $stripTeaser, $post);
     }
@@ -18042,7 +18418,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getTheExcerpt(int|\WP_Post $post = null): string
+    public function getTheExcerpt(int|\WP_Post|null $post = null): string
     {
         return get_the_excerpt($post);
     }
@@ -18058,7 +18434,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function postClass(string|array $cssClass = '', int|\WP_Post $post = null): void
+    public function postClass(string|array $cssClass = '', int|\WP_Post|null $post = null): void
     {
         post_class($cssClass, $post);
     }
@@ -18066,7 +18442,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostClass(string|array $cssClass = '', int|\WP_Post $post = null): array
+    public function getPostClass(string|array $cssClass = '', int|\WP_Post|null $post = null): array
     {
         return get_post_class($cssClass, $post);
     }
@@ -18194,7 +18570,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPageTemplateSlug(int|\WP_Post $post = null): string|false
+    public function getPageTemplateSlug(int|\WP_Post|null $post = null): string|false
     {
         return get_page_template_slug($post);
     }
@@ -18242,7 +18618,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function hasPostThumbnail(int|\WP_Post $post = null): bool
+    public function hasPostThumbnail(int|\WP_Post|null $post = null): bool
     {
         return has_post_thumbnail($post);
     }
@@ -18250,7 +18626,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostThumbnailId(int|\WP_Post $post = null): int|false
+    public function getPostThumbnailId(int|\WP_Post|null $post = null): int|false
     {
         return get_post_thumbnail_id($post);
     }
@@ -18266,7 +18642,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function updatePostThumbnailCache(\WP_Query $wpQuery = null): void
+    public function updatePostThumbnailCache(\WP_Query|null $wpQuery = null): void
     {
         update_post_thumbnail_cache($wpQuery);
     }
@@ -18274,7 +18650,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getThePostThumbnail(int|\WP_Post $post = null, string|array $size = 'post-thumbnail', string|array $attr = ''): string
+    public function getThePostThumbnail(int|\WP_Post|null $post = null, string|array $size = 'post-thumbnail', string|array $attr = ''): string
     {
         return get_the_post_thumbnail($post, $size, $attr);
     }
@@ -18282,7 +18658,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getThePostThumbnailUrl(int|\WP_Post $post = null, string|array $size = 'post-thumbnail'): string|false
+    public function getThePostThumbnailUrl(int|\WP_Post|null $post = null, string|array $size = 'post-thumbnail'): string|false
     {
         return get_the_post_thumbnail_url($post, $size);
     }
@@ -18298,7 +18674,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getThePostThumbnailCaption(int|\WP_Post $post = null): string
+    public function getThePostThumbnailCaption(int|\WP_Post|null $post = null): string
     {
         return get_the_post_thumbnail_caption($post);
     }
@@ -18306,7 +18682,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function thePostThumbnailCaption(int|\WP_Post $post = null): void
+    public function thePostThumbnailCaption(int|\WP_Post|null $post = null): void
     {
         the_post_thumbnail_caption($post);
     }
@@ -18330,7 +18706,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function updateAttachedFile(int $attachmentId, string $file): bool
+    public function updateAttachedFile(int $attachmentId, string $file): int|bool
     {
         return update_attached_file($attachmentId, $file);
     }
@@ -18370,7 +18746,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostField(string $field, int|\WP_Post $post = null, string $context = 'display'): string
+    public function getPostField(string $field, int|\WP_Post|null $post = null, string $context = 'display'): int|string|array
     {
         return get_post_field($field, $post, $context);
     }
@@ -18378,7 +18754,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostMimeType(int|\WP_Post $post = null): string|false
+    public function getPostMimeType(int|\WP_Post|null $post = null): string|false
     {
         return get_post_mime_type($post);
     }
@@ -18386,7 +18762,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostStatus(int|\WP_Post $post = null): string|false
+    public function getPostStatus(int|\WP_Post|null $post = null): string|false
     {
         return get_post_status($post);
     }
@@ -18570,7 +18946,15 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPosts(array $args = null): array
+    public function isPostEmbeddable(int|\WP_Post|null $post = null): bool
+    {
+        return is_post_embeddable($post);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getPosts(array|null $args = null): array
     {
         return get_posts($args);
     }
@@ -19034,7 +19418,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpUpdateAttachmentMetadata(int $attachmentId, array $data): int|false
+    public function wpUpdateAttachmentMetadata(int $attachmentId, array $data): int|bool
     {
         return wp_update_attachment_metadata($attachmentId, $data);
     }
@@ -19066,7 +19450,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpAttachmentIs(string $type, int|\WP_Post $post = null): bool
+    public function wpAttachmentIs(string $type, int|\WP_Post|null $post = null): bool
     {
         return wp_attachment_is($type, $post);
     }
@@ -19074,7 +19458,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpAttachmentIsImage(int|\WP_Post $post = null): bool
+    public function wpAttachmentIsImage(int|\WP_Post|null $post = null): bool
     {
         return wp_attachment_is_image($post);
     }
@@ -19114,7 +19498,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getPostsByAuthorSql(string|array $postType, bool $full = true, int $postAuthor = null, bool $publicOnly = false): string
+    public function getPostsByAuthorSql(string|array $postType, bool $full = true, int|null $postAuthor = null, bool $publicOnly = false): string
     {
         return get_posts_by_author_sql($postType, $full, $postAuthor, $publicOnly);
     }
@@ -20378,7 +20762,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpRestorePostRevision(int|\WP_Post $revision, array $fields = null): int|false|null
+    public function wpRestorePostRevision(int|\WP_Post $revision, array|null $fields = null): int|false|null
     {
         return wp_restore_post_revision($revision, $fields);
     }
@@ -20810,14 +21194,6 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpEnqueueGlobalStylesCustomCss(): void
-    {
-        wp_enqueue_global_styles_custom_css();
-    }
-
-    /**
-     * @inheritDoc
-     */
     public function wpShouldLoadBlockEditorScriptsAndStyles(): bool
     {
         return wp_should_load_block_editor_scripts_and_styles();
@@ -20829,6 +21205,14 @@ class NativeWpService implements \WpService\WpService
     public function wpShouldLoadSeparateCoreBlockAssets(): bool
     {
         return wp_should_load_separate_core_block_assets();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpShouldLoadBlockAssetsOnDemand(): bool
+    {
+        return wp_should_load_block_assets_on_demand();
     }
 
     /**
@@ -20962,9 +21346,41 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpAddEditorClassicThemeStyles(array $editorSettings): array
+    public function wpEnqueueCommandPaletteAssets(): void
     {
-        return wp_add_editor_classic_theme_styles($editorSettings);
+        wp_enqueue_command_palette_assets();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpLoadClassicThemeBlockStylesOnDemand(): void
+    {
+        wp_load_classic_theme_block_styles_on_demand();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpHoistLatePrintedStyles(): void
+    {
+        wp_hoist_late_printed_styles();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpJsDatasetName(string $htmlAttributeName): string|null
+    {
+        return wp_js_dataset_name($htmlAttributeName);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpHtmlCustomDataAttributeName(string $jsDatasetName): string|null
+    {
+        return wp_html_custom_data_attribute_name($jsDatasetName);
     }
 
     /**
@@ -20978,17 +21394,17 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpRegisterScriptModule(string $id, string $src, array $deps = [], string|false|null $version = false): void
+    public function wpRegisterScriptModule(string $id, string $src, array $deps = [], string|false|null $version = false, array $args = []): void
     {
-        wp_register_script_module($id, $src, $deps, $version);
+        wp_register_script_module($id, $src, $deps, $version, $args);
     }
 
     /**
      * @inheritDoc
      */
-    public function wpEnqueueScriptModule(string $id, string $src = '', array $deps = [], string|false|null $version = false): void
+    public function wpEnqueueScriptModule(string $id, string $src = '', array $deps = [], string|false|null $version = false, array $args = []): void
     {
-        wp_enqueue_script_module($id, $src, $deps, $version);
+        wp_enqueue_script_module($id, $src, $deps, $version, $args);
     }
 
     /**
@@ -21005,6 +21421,14 @@ class NativeWpService implements \WpService\WpService
     public function wpDeregisterScriptModule(string $id): void
     {
         wp_deregister_script_module($id);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpDefaultScriptModules(): void
+    {
+        wp_default_script_modules();
     }
 
     /**
@@ -21074,7 +21498,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function getShortcodeRegex(array $tagnames = null): string
+    public function getShortcodeRegex(array|null $tagnames = null): string
     {
         return get_shortcode_regex($tagnames);
     }
@@ -21173,6 +21597,14 @@ class NativeWpService implements \WpService\WpService
     public function getSitemapUrl(string $name, string $subtypeName = '', int $page = 1): string|false
     {
         return get_sitemap_url($name, $subtypeName, $page);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpGetSpeculationRulesConfiguration(): array|null
+    {
+        return wp_get_speculation_rules_configuration();
     }
 
     /**
@@ -21426,7 +21858,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function termExists(int|string $term, string $taxonomy = '', int $parentTerm = null): mixed
+    public function termExists(int|string $term, string $taxonomy = '', int|null $parentTerm = null): mixed
     {
         return term_exists($term, $taxonomy, $parentTerm);
     }
@@ -21546,7 +21978,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpDeferTermCounting(bool $defer = null): bool
+    public function wpDeferTermCounting(bool|null $defer = null): bool
     {
         return wp_defer_term_counting($defer);
     }
@@ -21674,7 +22106,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function isObjectInTerm(int $objectId, string $taxonomy, int|string|array $terms = null): bool|\WP_Error
+    public function isObjectInTerm(int $objectId, string $taxonomy, int|string|array|null $terms = null): bool|\WP_Error
     {
         return is_object_in_term($objectId, $taxonomy, $terms);
     }
@@ -21922,7 +22354,31 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpGetThemePreviewPath(string $currentStylesheet = null): string
+    public function wpShouldOutputBufferTemplateForEnhancement(): bool
+    {
+        return wp_should_output_buffer_template_for_enhancement();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpStartTemplateEnhancementOutputBuffer(): bool
+    {
+        return wp_start_template_enhancement_output_buffer();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpFinalizeTemplateEnhancementOutputBuffer(string $output, int $phase): string
+    {
+        return wp_finalize_template_enhancement_output_buffer($output, $phase);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpGetThemePreviewPath(string|null $currentStylesheet = null): string
     {
         return wp_get_theme_preview_path($currentStylesheet);
     }
@@ -22746,6 +23202,14 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
+    public function getUser(int $userId): \WP_User|false
+    {
+        return get_user($userId);
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function getUsers(array $args = []): array
     {
         return get_users($args);
@@ -22978,7 +23442,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function retrievePassword(string $userLogin = null): true|\WP_Error
+    public function retrievePassword(string $userLogin = ''): true|\WP_Error
     {
         return retrieve_password($userLogin);
     }
@@ -23106,7 +23570,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpSendUserRequest(string $requestId): true|\WP_Error
+    public function wpSendUserRequest(int $requestId): true|\WP_Error
     {
         return wp_send_user_request($requestId);
     }
@@ -23122,7 +23586,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpValidateUserRequestKey(string $requestId, string $key): true|\WP_Error
+    public function wpValidateUserRequestKey(int $requestId, string $key): true|\WP_Error
     {
         return wp_validate_user_request_key($requestId, $key);
     }
@@ -23173,6 +23637,30 @@ class NativeWpService implements \WpService\WpService
     public function wpIsPasswordResetAllowedForUser(int|\WP_User $user): bool|\WP_Error
     {
         return wp_is_password_reset_allowed_for_user($user);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpIsValidUtf8(string $bytes): bool
+    {
+        return wp_is_valid_utf8($bytes);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpScrubUtf8(string $text): string
+    {
+        return wp_scrub_utf8($text);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function wpHasNoncharacters(string $text): bool
+    {
+        return wp_has_noncharacters($text);
     }
 
     /**
@@ -23362,7 +23850,7 @@ class NativeWpService implements \WpService\WpService
     /**
      * @inheritDoc
      */
-    public function wpWidgetRssForm(array|string $args, array $inputs = null): void
+    public function wpWidgetRssForm(array|string $args, array|null $inputs = null): void
     {
         wp_widget_rss_form($args, $inputs);
     }
