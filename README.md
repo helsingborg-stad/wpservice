@@ -25,6 +25,8 @@ Enable the use of global WordPress functions in plugins and themes where applyin
 
 ### Installation
 
+Requires PHP 8.2 or newer. PHP 8.2 through 8.5 are tested.
+
 1. Install the package via composer:
 ```bash
 composer require helsingborg-stad/wpservice
@@ -154,4 +156,4 @@ Distributed under the [MIT License][license-url].
 [issues-url]: https://github.com/helsingborg-stad/wpservice/issues
 [license-shield]: https://img.shields.io/github/license/helsingborg-stad/wpservice.svg?style=flat-square
 [license-url]: https://github.com/helsingborg-stad/wpservice/blob/main/LICENSE
-[php-versions-shield]: https://img.shields.io/badge/php-^8.1-777bb3.svg?logo=php&logoColor=white&labelColor=555555
+[php-versions-shield]: https://img.shields.io/badge/php-%5E8.2-777bb3.svg?logo=php&logoColor=white&labelColor=555555
