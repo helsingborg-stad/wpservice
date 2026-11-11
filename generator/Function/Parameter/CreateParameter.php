@@ -50,7 +50,18 @@ class CreateParameter implements ParameterInterface
 
     public function __toString(): string
     {
-        $param  = $this->getType() ? $this->getType() . ' ' : '';
+        $type = $this->getType();
+        if (
+            strtolower($this->getDefault() ?? '') === 'null'
+            && $type !== ''
+            && $type !== 'mixed'
+            && $type[0] !== '?'
+            && !in_array('null', explode('|', $type), true)
+        ) {
+            $type = str_contains($type, '|') ? $type . '|null' : '?' . $type;
+        }
+
+        $param  = $type ? $type . ' ' : '';
         $param .= $this->isByReference() ? '&' : '';
         $param .= $this->isSpread() ? '...' : '';
         $param .= '$';

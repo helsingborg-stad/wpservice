@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php-versions: ['8.2', '8.3']
+        php-versions: ['8.2', '8.3', '8.4', '8.5']
 
     steps:
     - uses: actions/checkout@v2
@@ -47,3 +47,17 @@ jobs:
 
     - name: Run unit tests
       run: composer test
+
+    - name: Check PHP syntax and compile-time deprecations
+      run: |
+        find src generator -name '*.php' -print0 | xargs -0 -n1 -P4 sh -c '
+          output=$(php -d error_reporting=32767 -d display_errors=1 -l "$0" 2>&1)
+          status=$?
+          case "$output" in
+            *"Deprecated:"*|*"Warning:"*|*"Fatal error:"*|*"Parse error:"*)
+              printf "%s\n" "$output"
+              exit 1
+              ;;
+          esac
+          exit "$status"
+        '

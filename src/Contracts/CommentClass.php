@@ -18,5 +18,5 @@ interface CommentClass
  *                                   Default true.
  * @return void|string Void if `$display` argument is true, comment classes if `$display` is false.
  */
-    public function commentClass(string|array $cssClass = '', int|\WP_Comment $comment = null, int|\WP_Post $post = null, bool $display = true): mixed;
+    public function commentClass(string|array $cssClass = '', int|\WP_Comment|null $comment = null, int|\WP_Post|null $post = null, bool $display = true): mixed;
 }
