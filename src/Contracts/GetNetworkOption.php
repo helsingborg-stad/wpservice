@@ -13,10 +13,10 @@ interface GetNetworkOption
  *
  * @global wpdb $wpdb WordPress database abstraction object.
  *
- * @param int $networkId    ID of the network. Can be null to default to the current network ID.
+ * @param int|null $networkId    ID of the network. Can be null to default to the current network ID.
  * @param string $option        Name of the option to retrieve. Expected to not be SQL-escaped.
  * @param mixed $defaultValue Optional. Value to return if the option doesn't exist. Default false.
  * @return mixed Value set for the option.
  */
-    public function getNetworkOption(int $networkId, string $option, mixed $defaultValue = false): mixed;
+    public function getNetworkOption(int|null $networkId, string $option, mixed $defaultValue = false): mixed;
 }

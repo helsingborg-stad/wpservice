@@ -35,5 +35,5 @@ interface AddMetaBox
  *                                              of the box array (which is the second parameter passed
  *                                              to your callback). Default null.
  */
-    public function addMetaBox(string $id, string $title, callable $callback, string|array|\WP_Screen $screen = null, string $context = 'advanced', string $priority = 'default', array $callbackArgs = null): void;
+    public function addMetaBox(string $id, string $title, callable $callback, string|array|\WP_Screen|null $screen = null, string $context = 'advanced', string $priority = 'default', array|null $callbackArgs = null): void;
 }

@@ -5,25 +5,22 @@ namespace WpService\Contracts;
 interface WpShouldLoadSeparateCoreBlockAssets
 {
 /**
- * Checks whether separate styles should be loaded for core blocks on-render.
+ * Checks whether separate styles should be loaded for core blocks.
  *
- * When this function returns true, other functions ensure that core blocks
- * only load their assets on-render, and each block loads its own, individual
- * assets. Third-party blocks only load their assets when rendered.
+ * When this function returns true, other functions ensure that core blocks use their own separate stylesheets.
+ * When this function returns false, all core blocks will use the single combined 'wp-block-library' stylesheet.
  *
- * When this function returns false, all core block assets are loaded regardless
- * of whether they are rendered in a page or not, because they are all part of
- * the `block-library/style.css` file. Assets for third-party blocks are always
- * enqueued regardless of whether they are rendered or not.
+ * As a side effect, the return value will by default result in block assets to be loaded on demand, via the
+ * {@see wp_should_load_block_assets_on_demand()} function. This behavior can be separately altered via that function.
  *
  * This only affects front end and not the block editor screens.
  *
+ * @since 5.8.0
+ * @see @see wp_should_load_block_assets_on_demand()
  * @see wp_enqueue_registered_block_scripts_and_styles()
  * @see register_block_style_handle()
  *
- * @since 5.8.0
- *
- * @return bool Whether separate assets will be loaded.
+ * @return bool Whether separate core block assets will be loaded.
  */
     public function wpShouldLoadSeparateCoreBlockAssets(): bool;
 }

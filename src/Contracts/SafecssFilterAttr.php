@@ -29,6 +29,7 @@ interface SafecssFilterAttr
  * @since 6.4.0 Added support for `writing-mode`.
  * @since 6.5.0 Added support for `background-repeat`.
  * @since 6.6.0 Added support for `grid-column`, `grid-row`, and `container-type`.
+ * @since 6.9.0 Added support for `white-space`.
  *
  * @param string $css        A string of CSS rules.
  * @param string $deprecated Not used.

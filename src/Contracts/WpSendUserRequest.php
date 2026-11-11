@@ -11,8 +11,8 @@ interface WpSendUserRequest
  *
  * @since 4.9.6
  *
- * @param string $requestId ID of the request created via wp_create_user_request().
+ * @param int $requestId ID of the request created via wp_create_user_request().
  * @return true|\WP_Error True on success, `WP_Error` on failure.
  */
-    public function wpSendUserRequest(string $requestId): true|\WP_Error;
+    public function wpSendUserRequest(int $requestId): true|\WP_Error;
 }

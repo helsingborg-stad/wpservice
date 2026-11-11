@@ -7,14 +7,13 @@ interface WpVersionCheck
 /**
  * Checks WordPress version against the newest version.
  *
- * The WordPress version, PHP version, and locale is sent.
+ * The WordPress version, PHP version, and locale is sent to api.wordpress.org.
  *
  * Checks against the WordPress server at api.wordpress.org. Will only check
  * if WordPress isn't installing.
  *
  * @since 2.3.0
  *
- * @global string $wp_version       Used to check against the newest WordPress version.
  * @global wpdb   $wpdb             WordPress database abstraction object.
  * @global string $wp_local_package Locale code of the package.
  *

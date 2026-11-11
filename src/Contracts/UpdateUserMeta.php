@@ -12,6 +12,8 @@ interface UpdateUserMeta
  *
  * If the meta field for the user does not exist, it will be added.
  *
+ * For historical reasons both the meta key and the meta value are expected to be "slashed" (slashes escaped) on input.
+ *
  * @since 3.0.0
  *
  * @link https://developer.wordpress.org/reference/functions/update_user_meta/

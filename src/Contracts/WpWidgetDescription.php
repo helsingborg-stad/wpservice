@@ -5,7 +5,7 @@ namespace WpService\Contracts;
 interface WpWidgetDescription
 {
 /**
- * Retrieve description for widget.
+ * Retrieves description for widget.
  *
  * When registering widgets, the options can also include 'description' that
  * describes the widget for display on the widget administration panel or

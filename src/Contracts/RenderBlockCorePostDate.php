@@ -8,6 +8,7 @@ interface RenderBlockCorePostDate
  * Renders the `core/post-date` block on the server.
  *
  * @since 5.8.0
+ * @since 6.9.0 Added `datetime` attribute and Block Bindings support.
  *
  * @param array $attributes Block attributes.
  * @param string $content    Block default content.

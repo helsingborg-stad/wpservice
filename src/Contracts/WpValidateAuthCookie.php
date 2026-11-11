@@ -19,6 +19,7 @@ interface WpValidateAuthCookie
  *
  * @param string $cookie Optional. If used, will validate contents instead of cookie's.
  * @param string $scheme Optional. The cookie scheme to use: 'auth', 'secure_auth', or 'logged_in'.
+ *                       Note: This does *not* default to 'auth' like other cookie functions.
  * @return int|false User ID if valid cookie, false if invalid.
  */
     public function wpValidateAuthCookie(string $cookie = '', string $scheme = ''): int|false;

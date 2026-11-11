@@ -5,7 +5,7 @@ namespace WpService\Contracts;
 interface WpWidgetRssOutput
 {
 /**
- * Display the RSS entries in a list.
+ * Displays the RSS entries in a list.
  *
  * @since 2.5.0
  *

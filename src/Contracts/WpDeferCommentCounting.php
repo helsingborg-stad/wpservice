@@ -17,5 +17,5 @@ interface WpDeferCommentCounting
  * @param bool $defer
  * @return bool
  */
-    public function wpDeferCommentCounting(bool $defer = null): bool;
+    public function wpDeferCommentCounting(bool|null $defer = null): bool;
 }

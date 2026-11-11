@@ -11,7 +11,7 @@ interface WpEditPostsQuery
  *
  * @param array|false $q Optional. Array of query variables to use to build the query.
  *                       Defaults to the `$_GET` superglobal.
- * @return array
+ * @return string[] An array of all the statuses for the queried post type.
  */
     public function wpEditPostsQuery(array|false $q = false): array;
 }

@@ -25,8 +25,8 @@ interface InCategory
  *
  * @param int|string|int[]|string[] $category Category ID, name, slug, or array of such
  *                                            to check against.
- * @param int|\WP_Post $post     Optional. Post to check. Defaults to the current post.
+ * @param int|null|\WP_Post $post     Optional. Post to check. Defaults to the current post.
  * @return bool True if the current post is in any of the given categories.
  */
-    public function inCategory(int|string|array $category, int|\WP_Post $post = null): bool;
+    public function inCategory(int|string|array $category, int|null|\WP_Post $post = null): bool;
 }

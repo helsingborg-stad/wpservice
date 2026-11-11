@@ -17,11 +17,11 @@ interface GetThePostThumbnail
  * @since 2.9.0
  * @since 4.4.0 `$post` can be a post ID or WP_Post object.
  *
- * @param int|\WP_Post $post Optional. Post ID or WP_Post object.  Default is global `$post`.
+ * @param int|\WP_Post|null $post Optional. Post ID or WP_Post object.  Default is global `$post`.
  * @param string|int[] $size Optional. Image size. Accepts any registered image size name, or an array of
- *                           width and height values in pixels (in that order). Default 'post-thumbnail'.
+ *                               width and height values in pixels (in that order). Default 'post-thumbnail'.
  * @param string|array $attr Optional. Query string or array of attributes. Default empty.
  * @return string The post thumbnail image tag.
  */
-    public function getThePostThumbnail(int|\WP_Post $post = null, string|array $size = 'post-thumbnail', string|array $attr = ''): string;
+    public function getThePostThumbnail(int|\WP_Post|null $post = null, string|array $size = 'post-thumbnail', string|array $attr = ''): string;
 }

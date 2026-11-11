@@ -13,8 +13,6 @@ interface WpGetPostAutosave
  *
  * @since 2.6.0
  *
- * @global wpdb $wpdb WordPress database abstraction object.
- *
  * @param int $postId The post ID.
  * @param int $userId Optional. The post author ID. Default 0.
  * @return \WP_Post|false The autosaved data or false on failure or when no autosave exists.

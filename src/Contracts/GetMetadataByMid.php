@@ -11,8 +11,8 @@ interface GetMetadataByMid
  *
  * @global wpdb $wpdb WordPress database abstraction object.
  *
- * @param string $metaType Type of object metadata is for. Accepts 'post', 'comment', 'term', 'user',
- *                          or any other object type with an associated meta table.
+ * @param string $metaType Type of object metadata is for. Accepts 'blog', 'post', 'comment', 'term',
+ *                          'user', or any other object type with an associated meta table.
  * @param int $metaId   ID for a specific meta row.
  * @return \stdClass|false {
  *     Metadata object, or boolean `false` if the metadata doesn't exist.
@@ -21,6 +21,7 @@ interface GetMetadataByMid
  * @type mixed  $meta_value The unserialized meta value.
  * @type string $meta_id    Optional. The meta ID when the meta type is any value except 'user'.
  * @type string $umeta_id   Optional. The meta ID when the meta type is 'user'.
+ * @type string $blog_id    Optional. The object ID when the meta type is 'blog'.
  * @type string $post_id    Optional. The object ID when the meta type is 'post'.
  * @type string $comment_id Optional. The object ID when the meta type is 'comment'.
  * @type string $term_id    Optional. The object ID when the meta type is 'term'.

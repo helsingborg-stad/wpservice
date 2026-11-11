@@ -11,7 +11,7 @@ interface Utf8UriEncode
  * @since 5.8.3 Added the `encode_ascii_characters` parameter.
  *
  * @param string $utf8String             String to encode.
- * @param int $length                  Max length of the string
+ * @param int $length                  Max length of the string.
  * @param bool $encodeAsciiCharacters Whether to encode ascii characters such as < " '
  * @return string String with Unicode encoded for URI.
  */

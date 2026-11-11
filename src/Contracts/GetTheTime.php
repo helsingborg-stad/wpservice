@@ -5,7 +5,7 @@ namespace WpService\Contracts;
 interface GetTheTime
 {
 /**
- * Retrieves the time at which the post was written.
+ * Retrieves the time of the post.
  *
  * @since 1.5.0
  *
@@ -16,5 +16,5 @@ interface GetTheTime
  * @return string|int|false Formatted date string or Unix timestamp if `$format` is 'U' or 'G'.
  *                          False on failure.
  */
-    public function getTheTime(string $format = '', int|\WP_Post $post = null): string|int|false;
+    public function getTheTime(string $format = '', int|\WP_Post|null $post = null): string|int|false;
 }

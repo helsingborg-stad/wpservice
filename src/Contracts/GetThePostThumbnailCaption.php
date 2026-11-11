@@ -9,8 +9,8 @@ interface GetThePostThumbnailCaption
  *
  * @since 4.6.0
  *
- * @param int|\WP_Post $post Optional. Post ID or WP_Post object. Default is global `$post`.
+ * @param int|\WP_Post|null $post Optional. Post ID or WP_Post object. Default is global `$post`.
  * @return string Post thumbnail caption.
  */
-    public function getThePostThumbnailCaption(int|\WP_Post $post = null): string;
+    public function getThePostThumbnailCaption(int|\WP_Post|null $post = null): string;
 }

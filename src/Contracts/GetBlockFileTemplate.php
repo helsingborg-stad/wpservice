@@ -5,9 +5,10 @@ namespace WpService\Contracts;
 interface GetBlockFileTemplate
 {
 /**
- * Retrieves a unified template object based on a theme file.
+ * Retrieves a unified template object based on a theme file or plugin registration.
  *
  * This is a fallback of get_block_template(), used when no templates are found in the database.
+ * Also checks for templates registered via the Template Registration API.
  *
  * @since 5.9.0
  *

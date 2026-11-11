@@ -9,7 +9,7 @@ interface GetPluginUpdates
  *
  * @since 2.9.0
  *
- * @return array
+ * @return object[]
  */
     public function getPluginUpdates(): array;
 }

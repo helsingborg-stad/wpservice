@@ -25,7 +25,7 @@ interface GetTemplatePart
  * @since 5.5.0 The `$args` parameter was added.
  *
  * @param string $slug The slug name for the generic template.
- * @param string|null $name Optional. The name of the specialized template.
+ * @param string|null $name Optional. The name of the specialized template. Default null.
  * @param array $args Optional. Additional arguments passed to the template.
  *                          Default empty array.
  * @return void|false Void on success, false if the template does not exist.

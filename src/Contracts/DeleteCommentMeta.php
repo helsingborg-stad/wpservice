@@ -11,6 +11,8 @@ interface DeleteCommentMeta
  * value, will keep from removing duplicate metadata with the same key. It also
  * allows removing all metadata matching key, if needed.
  *
+ * For historical reasons both the meta key and the meta value are expected to be "slashed" (slashes escaped) on input.
+ *
  * @since 2.9.0
  *
  * @link https://developer.wordpress.org/reference/functions/delete_comment_meta/

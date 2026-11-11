@@ -9,8 +9,8 @@ interface GetMetadataRaw
  *
  * @since 5.5.0
  *
- * @param string $metaType Type of object metadata is for. Accepts 'post', 'comment', 'term', 'user',
- *                          or any other object type with an associated meta table.
+ * @param string $metaType Type of object metadata is for. Accepts 'blog', 'post', 'comment', 'term',
+ *                          'user', or any other object type with an associated meta table.
  * @param int $objectId ID of the object metadata is for.
  * @param string $metaKey  Optional. Metadata key. If not specified, retrieve all metadata for
  *                          the specified object. Default empty string.

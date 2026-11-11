@@ -12,6 +12,7 @@ interface BuildQueryVarsFromQueryBlock
  *
  * @since 5.8.0
  * @since 6.1.0 Added `query_loop_block_query_vars` filter and `parents` support in query.
+ * @since 6.7.0 Added support for the `format` property in query.
  *
  * @param \WP_Block $block Block instance.
  * @param int $page  Current query's page.

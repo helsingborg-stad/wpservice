@@ -13,7 +13,7 @@ interface BlockCoreImageGetLightboxSettings
  *
  * @param array $block Block data.
  *
- * @return array Filtered block data.
+ * @return array|null Filtered block data.
  */
-    public function blockCoreImageGetLightboxSettings(array $block): array;
+    public function blockCoreImageGetLightboxSettings(array $block): array|null;
 }

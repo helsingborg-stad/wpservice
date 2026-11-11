@@ -7,6 +7,8 @@ interface DeleteTermMeta
 /**
  * Removes metadata matching criteria from a term.
  *
+ * For historical reasons both the meta key and the meta value are expected to be "slashed" (slashes escaped) on input.
+ *
  * @since 4.4.0
  *
  * @param int $termId    Term ID.

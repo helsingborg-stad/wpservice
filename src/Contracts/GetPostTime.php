@@ -5,7 +5,7 @@ namespace WpService\Contracts;
 interface GetPostTime
 {
 /**
- * Retrieves the time at which the post was written.
+ * Retrieves the localized time of the post.
  *
  * @since 2.0.0
  *
@@ -17,5 +17,5 @@ interface GetPostTime
  * @return string|int|false Formatted date string or Unix timestamp if `$format` is 'U' or 'G'.
  *                          False on failure.
  */
-    public function getPostTime(string $format = 'U', bool $gmt = false, int|\WP_Post $post = null, bool $translate = false): string|int|false;
+    public function getPostTime(string $format = 'U', bool $gmt = false, int|\WP_Post|null $post = null, bool $translate = false): string|int|false;
 }

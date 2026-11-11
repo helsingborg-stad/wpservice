@@ -13,12 +13,13 @@ interface WpSetOptionAutoloadValues
  * by the plugin which are generally autoloaded can be set to not autoload when the plugin is inactive.
  *
  * @since 6.4.0
+ * @since 6.7.0 The autoload values 'yes' and 'no' are deprecated.
  *
  * @global wpdb $wpdb WordPress database abstraction object.
  *
  * @param array $options Associative array of option names and their autoload values to set. The option names are
- *                       expected to not be SQL-escaped. The autoload values accept 'yes'|true to enable or 'no'|false
- *                       to disable.
+ *                       expected to not be SQL-escaped. The autoload values should be boolean values. For backward
+ *                       compatibility 'yes' and 'no' are also accepted, though using these values is deprecated.
  * @return array Associative array of all provided $options as keys and boolean values for whether their autoload value
  *               was updated.
  */

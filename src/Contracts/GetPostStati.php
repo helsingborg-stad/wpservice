@@ -9,9 +9,9 @@ interface GetPostStati
  *
  * @since 3.0.0
  *
- * @global stdClass[] $wp_post_statuses List of post statuses.
- *
  * @see register_post_status()
+ *
+ * @global stdClass[] $wp_post_statuses List of post statuses.
  *
  * @param array|string $args     Optional. Array or string of post status arguments to compare against
  *                               properties of the global `$wp_post_statuses objects`. Default empty array.

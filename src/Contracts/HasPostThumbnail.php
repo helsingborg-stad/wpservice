@@ -14,8 +14,8 @@ interface HasPostThumbnail
  * @since 2.9.0
  * @since 4.4.0 `$post` can be a post ID or WP_Post object.
  *
- * @param int|\WP_Post $post Optional. Post ID or WP_Post object. Default is global `$post`.
+ * @param int|\WP_Post|null $post Optional. Post ID or WP_Post object. Default is global `$post`.
  * @return bool Whether the post has an image attached.
  */
-    public function hasPostThumbnail(int|\WP_Post $post = null): bool;
+    public function hasPostThumbnail(int|\WP_Post|null $post = null): bool;
 }

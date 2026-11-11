@@ -15,5 +15,5 @@ interface WpUsingExtObjectCache
  * @param bool $using Whether external object cache is being used.
  * @return bool The current 'using' setting.
  */
-    public function wpUsingExtObjectCache(bool $using = null): bool;
+    public function wpUsingExtObjectCache(bool|null $using = null): bool;
 }

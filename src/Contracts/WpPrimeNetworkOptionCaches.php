@@ -15,8 +15,8 @@ interface WpPrimeNetworkOptionCaches
  *
  * @global wpdb $wpdb WordPress database abstraction object.
  *
- * @param int $networkId ID of the network. Can be null to default to the current network ID.
+ * @param int|null $networkId ID of the network. Can be null to default to the current network ID.
  * @param string[] $options    An array of option names to be loaded.
  */
-    public function wpPrimeNetworkOptionCaches(int $networkId, array $options): void;
+    public function wpPrimeNetworkOptionCaches(int|null $networkId, array $options): void;
 }

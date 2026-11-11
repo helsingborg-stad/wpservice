@@ -11,7 +11,7 @@ interface RegisterMeta
  * an object subtype is omitted, the meta key will be registered for the entire object type, however it can be partly
  * overridden in case a more specific meta key of the same name exists for the same object type and a subtype.
  *
- * If an object type does not support any subtypes, such as users or comments, you should commonly call this function
+ * If an object type does not support any subtypes, such as blogs, users, or comments, you should commonly call this function
  * without passing a subtype.
  *
  * @since 3.3.0
@@ -22,9 +22,10 @@ interface RegisterMeta
  * @since 5.3.0 Valid meta types expanded to include "array" and "object".
  * @since 5.5.0 The `$default` argument was added to the arguments array.
  * @since 6.4.0 The `$revisions_enabled` argument was added to the arguments array.
+ * @since 6.7.0 The `label` argument was added to the arguments array.
  *
- * @param string $objectType Type of object metadata is for. Accepts 'post', 'comment', 'term', 'user',
- *                                  or any other object type with an associated meta table.
+ * @param string $objectType Type of object metadata is for. Accepts 'blog', 'post', 'comment', 'term',
+ *                                  'user', or any other object type with an associated meta table.
  * @param string $metaKey    Meta key to register.
  * @param array $args {
  *     Data used to describe the meta key when registered.
@@ -33,6 +34,7 @@ interface RegisterMeta
  *                                         the meta key will be registered on the entire object type. Default empty.
  * @type string     $type              The type of data associated with this meta key.
  *                                         Valid values are 'string', 'boolean', 'integer', 'number', 'array', and 'object'.
+ * @type string     $label             A human-readable label of the data attached to this meta key.
  * @type string     $description       A description of the data attached to this meta key.
  * @type bool       $single            Whether the meta key has one value per object, or an array of values per object.
  * @type mixed      $default           The default value returned from get_metadata() if no value has been set yet.
@@ -55,5 +57,5 @@ interface RegisterMeta
  *              Registering a meta key with distinct sanitize and auth callbacks will fire those callbacks,
  *              but will not add to the global registry.
  */
-    public function registerMeta(string $objectType, string $metaKey, array $args, string|array $deprecated = null): bool;
+    public function registerMeta(string $objectType, string $metaKey, array $args, string|array|null $deprecated = null): bool;
 }

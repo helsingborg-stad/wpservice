@@ -19,10 +19,10 @@ interface GetTheCategoryList
  * @global WP_Rewrite $wp_rewrite WordPress rewrite component.
  *
  * @param string $separator Optional. Separator between the categories. By default, the links are placed
- *                          in an unordered list. An empty string will result in the default behavior.
+ *                             in an unordered list. An empty string will result in the default behavior.
  * @param string $parents   Optional. How to display the parents. Accepts 'multiple', 'single', or empty.
- *                          Default empty string.
- * @param int $postId   Optional. ID of the post to retrieve categories for. Defaults to the current post.
+ *                             Default empty string.
+ * @param int|false $postId   Optional. ID of the post to retrieve categories for. Defaults to the current post.
  * @return string Category list for a post.
  */
     public function getTheCategoryList(string $separator = '', string $parents = '', int|false $postId = false): string;

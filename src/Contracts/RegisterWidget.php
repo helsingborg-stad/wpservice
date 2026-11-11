@@ -5,7 +5,7 @@ namespace WpService\Contracts;
 interface RegisterWidget
 {
 /**
- * Register a widget
+ * Registers a widget.
  *
  * Registers a WP_Widget widget
  *

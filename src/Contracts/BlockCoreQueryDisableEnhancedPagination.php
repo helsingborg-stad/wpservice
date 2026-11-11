@@ -13,7 +13,7 @@ interface BlockCoreQueryDisableEnhancedPagination
  * @since 6.4.0
  *
  * @param array $parsedBlock The block being rendered.
- * @return string Returns the parsed block, unmodified.
+ * @return array Returns the parsed block, unmodified.
  */
-    public function blockCoreQueryDisableEnhancedPagination(array $parsedBlock): string;
+    public function blockCoreQueryDisableEnhancedPagination(array $parsedBlock): array;
 }

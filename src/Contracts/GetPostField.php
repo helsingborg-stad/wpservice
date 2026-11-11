@@ -22,7 +22,7 @@ interface GetPostField
  * @param int|\WP_Post $post    Optional. Post ID or post object. Defaults to global $post.
  * @param string $context Optional. How to filter the field. Accepts 'raw', 'edit', 'db',
  *                             or 'display'. Default 'display'.
- * @return string The value of the post field on success, empty string on failure.
+ * @return int|string|int[] The value of the post field on success, empty string on failure.
  */
-    public function getPostField(string $field, int|\WP_Post $post = null, string $context = 'display'): string;
+    public function getPostField(string $field, int|\WP_Post|null $post = null, string $context = 'display'): int|string|array;
 }

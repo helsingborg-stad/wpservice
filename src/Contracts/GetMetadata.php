@@ -19,8 +19,8 @@ interface GetMetadata
  * @see get_metadata_raw()
  * @see get_metadata_default()
  *
- * @param string $metaType Type of object metadata is for. Accepts 'post', 'comment', 'term', 'user',
- *                          or any other object type with an associated meta table.
+ * @param string $metaType Type of object metadata is for. Accepts 'blog', 'post', 'comment', 'term',
+ *                          'user', or any other object type with an associated meta table.
  * @param int $objectId ID of the object metadata is for.
  * @param string $metaKey  Optional. Metadata key. If not specified, retrieve all metadata for
  *                          the specified object. Default empty string.
@@ -30,7 +30,13 @@ interface GetMetadata
  *               The value of the meta field if `$single` is true.
  *               False for an invalid `$object_id` (non-numeric, zero, or negative value),
  *               or if `$meta_type` is not specified.
- *               An empty string if a valid but non-existing object ID is passed.
+ *               An empty array if a valid but non-existing object ID is passed and `$single` is false.
+ *               An empty string if a valid but non-existing object ID is passed and `$single` is true.
+ *               Note: Non-serialized values are returned as strings:
+ *               - false values are returned as empty strings ('')
+ *               - true values are returned as '1'
+ *               - numbers (both integer and float) are returned as strings
+ *               Arrays and objects retain their original type.
  */
     public function getMetadata(string $metaType, int $objectId, string $metaKey = '', bool $single = false): mixed;
 }

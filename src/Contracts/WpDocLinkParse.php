@@ -8,7 +8,7 @@ interface WpDocLinkParse
  * @since 2.8.0
  *
  * @param string $content
- * @return array
+ * @return string[] Array of function names.
  */
     public function wpDocLinkParse(string $content): array;
 }

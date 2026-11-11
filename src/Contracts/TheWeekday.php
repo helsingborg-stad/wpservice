@@ -5,7 +5,7 @@ namespace WpService\Contracts;
 interface TheWeekday
 {
 /**
- * Displays the weekday on which the post was written.
+ * Displays the localized weekday for the post.
  *
  * @since 0.71
  *

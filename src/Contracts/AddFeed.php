@@ -11,7 +11,7 @@ interface AddFeed
  *
  * @global WP_Rewrite $wp_rewrite WordPress rewrite component.
  *
- * @param string $feedname Feed name.
+ * @param string $feedname Feed name. Should not start with '_'.
  * @param callable $callback Callback to run on feed display.
  * @return string Feed action name.
  */

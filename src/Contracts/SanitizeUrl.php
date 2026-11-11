@@ -10,6 +10,8 @@ interface SanitizeUrl
  * @since 2.3.1
  * @since 2.8.0 Deprecated in favor of esc_url_raw().
  * @since 5.9.0 Restored (un-deprecated).
+ * @since 6.9.0 Prepends `https://` to the URL if it does not already contain a scheme
+ *              and the first item in `$protocols` is 'https'.
  *
  * @see esc_url()
  *
@@ -18,5 +20,5 @@ interface SanitizeUrl
  *                            Defaults to return value of wp_allowed_protocols().
  * @return string The cleaned URL after esc_url() is run with the 'db' context.
  */
-    public function sanitizeUrl(string $url, array $protocols = null): string;
+    public function sanitizeUrl(string $url, array|null $protocols = null): string;
 }

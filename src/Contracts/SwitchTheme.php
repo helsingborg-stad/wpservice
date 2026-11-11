@@ -12,7 +12,7 @@ interface SwitchTheme
  *
  * @since 2.5.0
  *
- * @global array                $wp_theme_directories
+ * @global string[]             $wp_theme_directories
  * @global WP_Customize_Manager $wp_customize
  * @global array                $sidebars_widgets
  * @global array                $wp_registered_sidebars

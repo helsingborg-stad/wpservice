@@ -36,7 +36,7 @@ interface GetArchivesLink
  * @param string $format   Optional. Can be 'link', 'option', 'html', or custom. Default 'html'.
  * @param string $before   Optional. Content to prepend to the description. Default empty.
  * @param string $after    Optional. Content to append to the description. Default empty.
- * @param bool $selected Optional. Set to true if the current page is the selected archive page.
+ * @param bool $selected Optional. Set to true if the current page is the selected archive page. Default false.
  * @return string HTML link content for archive.
  */
     public function getArchivesLink(string $url, string $text, string $format = 'html', string $before = '', string $after = '', bool $selected = false): string;

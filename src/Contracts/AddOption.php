@@ -18,6 +18,7 @@ interface AddOption
  *
  * @since 1.0.0
  * @since 6.6.0 The $autoload parameter's default value was changed to null.
+ * @since 6.7.0 The autoload values 'yes' and 'no' are deprecated.
  *
  * @global wpdb $wpdb WordPress database abstraction object.
  *
@@ -26,11 +27,12 @@ interface AddOption
  *                              Expected to not be SQL-escaped.
  * @param string $deprecated Optional. Description. Not used anymore.
  * @param bool|null $autoload   Optional. Whether to load the option when WordPress starts up.
- *                              Accepts a boolean, or `null` to leave the decision up to default heuristics in WordPress.
- *                              For backward compatibility 'yes' and 'no' are also accepted.
+ *                              Accepts a boolean, or `null` to leave the decision up to default heuristics in
+ *                              WordPress. For backward compatibility 'yes' and 'no' are also accepted, though using
+ *                              these values is deprecated.
  *                              Autoloading too many options can lead to performance problems, especially if the
  *                              options are not frequently used. For options which are accessed across several places
- *                              in the frontend, it is recommended to autoload them, by using 'yes'|true.
+ *                              in the frontend, it is recommended to autoload them, by using true.
  *                              For options which are accessed only on few specific URLs, it is recommended
  *                              to not autoload them, by using false.
  *                              Default is null, which means WordPress will determine the autoload value.

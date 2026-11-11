@@ -9,8 +9,6 @@ interface GetPasswordResetKey
  *
  * @since 4.4.0
  *
- * @global PasswordHash $wp_hasher Portable PHP password hashing framework instance.
- *
  * @param \WP_User $user User to retrieve password reset key for.
  * @return string|\WP_Error Password reset key on success. WP_Error on error.
  */

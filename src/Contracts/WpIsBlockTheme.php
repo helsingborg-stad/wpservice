@@ -9,6 +9,8 @@ interface WpIsBlockTheme
  *
  * @since 5.9.0
  *
+ * @global string[] $wp_theme_directories
+ *
  * @return bool Whether the active theme is a block-based theme or not.
  */
     public function wpIsBlockTheme(): bool;

@@ -9,9 +9,9 @@ interface BalanceTags
  *
  * @since 0.71
  *
- * @param string $text  Text to be balanced
+ * @param string $text  Text to be balanced.
  * @param bool $force If true, forces balancing, ignoring the value of the option. Default false.
- * @return string Balanced text
+ * @return string Balanced text.
  */
     public function balanceTags(string $text, bool $force = false): string;
 }

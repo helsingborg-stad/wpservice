@@ -14,5 +14,5 @@ interface WpPrepareThemesForJs
  *
  * @return array An associative array of theme data, sorted by name.
  */
-public function wpPrepareThemesForJs(array $themes = null): array;
+public function wpPrepareThemesForJs(array|null $themes = null): array;
 }

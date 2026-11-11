@@ -5,7 +5,7 @@ namespace WpService\Contracts;
 interface TheWidget
 {
 /**
- * Output an arbitrary widget as a template tag.
+ * Outputs an arbitrary widget as a template tag.
  *
  * @since 2.8.0
  *

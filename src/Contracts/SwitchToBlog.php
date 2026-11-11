@@ -26,5 +26,5 @@ interface SwitchToBlog
  * @param bool $deprecated  Not used.
  * @return true Always returns true.
  */
-    public function switchToBlog(int $newBlogId, bool $deprecated = null): true;
+    public function switchToBlog(int $newBlogId, bool|null $deprecated = null): true;
 }

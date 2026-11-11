@@ -7,7 +7,7 @@ interface WpEnqueueBlockStyle
 /**
  * Enqueues a stylesheet for a specific block.
  *
- * If the theme has opted-in to separate-styles loading,
+ * If the theme has opted-in to load block styles on demand,
  * then the stylesheet will be enqueued on-render,
  * otherwise when the block inits.
  *

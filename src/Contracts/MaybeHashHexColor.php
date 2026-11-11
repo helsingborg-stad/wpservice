@@ -12,8 +12,9 @@ interface MaybeHashHexColor
  *
  * @since 3.4.0
  *
- * @param string $color
- * @return string
+ * @param string $color The color value to add the hash prefix to. Can be with or without a #.
+ * @return string The color with the hash prefix if it's a valid hex color,
+ *                otherwise the original value.
  */
     public function maybeHashHexColor(string $color): string;
 }

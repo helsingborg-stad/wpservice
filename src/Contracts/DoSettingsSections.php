@@ -11,9 +11,10 @@ interface DoSettingsSections
  * to output all the sections and fields that were added to that $page with
  * add_settings_section() and add_settings_field()
  *
+ * @since 2.7.0
+ *
  * @global array $wp_settings_sections Storage array of all settings sections added to admin pages.
  * @global array $wp_settings_fields Storage array of settings fields and info about their pages/sections.
- * @since 2.7.0
  *
  * @param string $page The slug name of the page whose settings sections you want to output.
  */

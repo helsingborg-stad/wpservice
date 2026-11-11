@@ -51,7 +51,6 @@ interface WpPrepareAttachmentForJs
  *     @type string $url                   Direct URL to the attachment file (from wp-content).
  *     @type int    $width                 If the attachment is an image, represents the width of the image in pixels.
  * }
- *
  */
 public function wpPrepareAttachmentForJs(int|\WP_Post $attachment): mixed;
 }

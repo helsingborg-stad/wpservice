@@ -24,6 +24,7 @@ class ConvertTypedArrayReturnTypeToArray implements FunctionInterface
         $returnType = trim($this->inner->getReturnType(), '()');
         $asArray    = explode('|', $returnType);
         $asArray    = array_map(fn($item) => trim($item), $asArray);
+        $asArray    = array_map(fn($item) => preg_replace('/^array<.*$/', 'array', $item), $asArray);
         $asArray    = array_map(fn($item) => preg_match('/\[\]$/', $item) ? 'array' : $item, $asArray);
         $asArray    = array_unique($asArray);
 

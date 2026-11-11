@@ -9,7 +9,7 @@ interface CurrentAction
  *
  * @since 3.9.0
  *
- * @return string Hook name of the current action.
+ * @return string|false Hook name of the current action, false if no action is running.
  */
-    public function currentAction(): string;
+    public function currentAction(): string|false;
 }

@@ -8,6 +8,7 @@ interface RevokeSuperAdmin
  * Revokes Super Admin privileges.
  *
  * @since 3.0.0
+ * @since 6.9.0 Super admin privileges can be revoked regardless of email address.
  *
  * @global array $super_admins
  *

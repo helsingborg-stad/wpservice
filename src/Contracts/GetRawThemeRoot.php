@@ -9,7 +9,7 @@ interface GetRawThemeRoot
  *
  * @since 3.1.0
  *
- * @global array $wp_theme_directories
+ * @global string[] $wp_theme_directories
  *
  * @param string $stylesheetOrTemplate The stylesheet or template name of the theme.
  * @param bool $skipCache             Optional. Whether to skip the cache.

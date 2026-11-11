@@ -10,9 +10,9 @@ interface GetPostTypeObject
  * @since 3.0.0
  * @since 4.6.0 Object returned is now an instance of `WP_Post_Type`.
  *
- * @global array $wp_post_types List of post types.
- *
  * @see register_post_type()
+ *
+ * @global array $wp_post_types List of post types.
  *
  * @param string $postType The name of a registered post type.
  * @return \WP_Post_Type|null WP_Post_Type object if it exists, null otherwise.

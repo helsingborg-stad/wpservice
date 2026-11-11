@@ -15,6 +15,7 @@ interface WpGetTypographyFontSizeValue
  * @since 6.3.0 Using layout.wideSize as max viewport width, and logarithmic scale factor to calculate minimum font scale.
  * @since 6.4.0 Added configurable min and max viewport width values to the typography.fluid theme.json schema.
  * @since 6.6.0 Deprecated bool argument $should_use_fluid_typography.
+ * @since 6.7.0 Font size presets can enable fluid typography individually, even if it’s disabled globally.
  *
  * @param array $preset   {
  *     Required. fontSizes preset value as seen in theme.json.

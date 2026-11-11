@@ -9,10 +9,10 @@ interface WpCountTerms
  *
  * Default $args is 'hide_empty' which can be 'hide_empty=true' or array('hide_empty' => true).
  *
+ * {@internal The `$deprecated` parameter is parsed for backward compatibility only.}
+ *
  * @since 2.3.0
  * @since 5.6.0 Changed the function signature so that the `$args` array can be provided as the first parameter.
- *
- * @internal The `$deprecated` parameter is parsed for backward compatibility only.
  *
  * @param array|string $args       Optional. Array or string of arguments. See WP_Term_Query::__construct()
  *                                 for information on accepted arguments. Default empty array.

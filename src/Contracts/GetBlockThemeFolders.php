@@ -20,5 +20,5 @@ interface GetBlockThemeFolders
  * @type string $wp_template_part Theme-relative directory name for block template parts.
  * }
  */
-    public function getBlockThemeFolders(string $themeStylesheet = null): array;
+    public function getBlockThemeFolders(string|null $themeStylesheet = null): array;
 }

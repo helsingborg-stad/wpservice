@@ -8,8 +8,10 @@ interface GetAvatarData
  * Retrieves default data about the avatar.
  *
  * @since 4.2.0
+ * @since 6.7.0 Gravatar URLs always use HTTPS.
+ * @since 6.8.0 Gravatar URLs use the SHA-256 hashing algorithm.
  *
- * @param mixed $idOrEmail The avatar to retrieve. Accepts a user ID, Gravatar MD5 hash,
+ * @param mixed $idOrEmail The avatar to retrieve. Accepts a user ID, Gravatar SHA-256 or MD5 hash,
  *                           user email, WP_User object, WP_Post object, or WP_Comment object.
  * @param array $args {
  *     Optional. Arguments to use instead of the default arguments.
@@ -24,6 +26,8 @@ interface GetAvatarData
  *                                  - 'monsterid' (a monster)
  *                                  - 'wavatar' (a cartoon face)
  *                                  - 'identicon' (the "quilt", a geometric pattern)
+ *                                  - 'initials' (initials based avatar with background color)
+ *                                  - 'color' (generated background color)
  *                                  - 'mystery', 'mm', or 'mysteryman' (The Oyster Man)
  *                                  - 'blank' (transparent GIF)
  *                                  - 'gravatar_default' (the Gravatar logo)
@@ -38,6 +42,9 @@ interface GetAvatarData
  *                                  - 'X' (even more mature than above)
  *                                  Default is the value of the 'avatar_rating' option.
  * @type string $scheme         URL scheme to use. See set_url_scheme() for accepted values.
+ *                                  For Gravatars this setting is ignored and HTTPS is used to avoid
+ *                                  unnecessary redirects. The setting is retained for systems using
+ *                                  the {@see 'pre_get_avatar_data'} filter to customize avatars.
  *                                  Default null.
  * @type array  $processed_args When the function returns, the value will be the processed/sanitized $args
  *                                  plus a "found_avatar" guess. Pass as a reference. Default null.
@@ -52,5 +59,5 @@ interface GetAvatarData
  * @type string|false $url          The URL of the avatar that was found, or false.
  * }
  */
-    public function getAvatarData(mixed $idOrEmail, array $args = null): array;
+    public function getAvatarData(mixed $idOrEmail, array|null $args = null): array;
 }

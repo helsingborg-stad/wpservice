@@ -14,6 +14,8 @@ interface UpdatePostMeta
  *
  * Can be used in place of add_post_meta().
  *
+ * For historical reasons both the meta key and the meta value are expected to be "slashed" (slashes escaped) on input.
+ *
  * @since 1.5.0
  *
  * @param int $postId    Post ID.

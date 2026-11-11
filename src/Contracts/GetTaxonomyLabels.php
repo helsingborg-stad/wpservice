@@ -48,7 +48,7 @@ interface GetTaxonomyLabels
  * @type string $edit_item                  Default 'Edit Tag'/'Edit Category'.
  * @type string $view_item                  Default 'View Tag'/'View Category'.
  * @type string $update_item                Default 'Update Tag'/'Update Category'.
- * @type string $add_new_item               Default 'Add New Tag'/'Add New Category'.
+ * @type string $add_new_item               Default 'Add Tag'/'Add Category'.
  * @type string $new_item_name              Default 'New Tag Name'/'New Category Name'.
  * @type string $template_name              Default 'Tag Archives'/'Category Archives'.
  * @type string $separate_items_with_commas This label is only used for non-hierarchical taxonomies. Default

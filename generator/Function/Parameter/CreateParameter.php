@@ -50,7 +50,13 @@ class CreateParameter implements ParameterInterface
 
     public function __toString(): string
     {
-        $param  = $this->getType() ? $this->getType() . ' ' : '';
+        $type = $this->getType();
+
+        if ($type && $this->getDefault() === 'null' && !$this->typeIsNullable($type) && $type !== 'mixed') {
+            $type .= '|null';
+        }
+
+        $param  = $type ? $type . ' ' : '';
         $param .= $this->isByReference() ? '&' : '';
         $param .= $this->isSpread() ? '...' : '';
         $param .= '$';
@@ -58,6 +64,16 @@ class CreateParameter implements ParameterInterface
         $param .= empty($this->getDefault()) && $this->getDefault() !== '0' ? '' : ' = ' . $this->getDefault();
 
         return $param;
+    }
+
+    private function typeIsNullable(string $type): bool
+    {
+        if (str_starts_with($type, '?')) {
+            return true;
+        }
+
+        $types = array_map('trim', explode('|', $type));
+        return in_array('null', $types, true);
     }
 
     public static function create(string $type, string $name, bool $spread, bool $byReference, ?string $default): ParameterInterface

@@ -11,8 +11,8 @@ interface UpdateMetaCache
  *
  * @global wpdb $wpdb WordPress database abstraction object.
  *
- * @param string $metaType  Type of object metadata is for. Accepts 'post', 'comment', 'term', 'user',
- *                                 or any other object type with an associated meta table.
+ * @param string $metaType  Type of object metadata is for. Accepts 'blog', 'post', 'comment', 'term',
+ *                                 'user', or any other object type with an associated meta table.
  * @param string|int[] $objectIds Array or comma delimited list of object IDs to update cache for.
  * @return array|false Metadata cache for the specified objects, or false on failure.
  */

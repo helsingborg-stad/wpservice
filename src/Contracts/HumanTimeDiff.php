@@ -8,7 +8,7 @@ interface HumanTimeDiff
  * Determines the difference between two timestamps.
  *
  * The difference is returned in a human-readable format such as "1 hour",
- * "5 mins", "2 days".
+ * "5 minutes", "2 days".
  *
  * @since 1.5.0
  * @since 5.3.0 Added support for showing a difference in seconds.

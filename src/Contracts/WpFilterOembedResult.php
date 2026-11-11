@@ -14,10 +14,10 @@ interface WpFilterOembedResult
  *
  * @since 4.4.0
  *
- * @param string $result The oEmbed HTML result.
+ * @param string|false $result The oEmbed HTML result.
  * @param object $data   A data object result from an oEmbed provider.
  * @param string $url    The URL of the content to be embedded.
- * @return string The filtered and sanitized oEmbed result.
+ * @return string|false The filtered and sanitized oEmbed result.
  */
-    public function wpFilterOembedResult(string $result, object $data, string $url): string;
+    public function wpFilterOembedResult(string|false $result, object $data, string $url): string|false;
 }

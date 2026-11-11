@@ -9,7 +9,7 @@ interface GetHtmlSplitRegex
  *
  * @since 4.4.0
  *
- * @return string The regular expression
+ * @return string The regular expression.
  */
     public function getHtmlSplitRegex(): string;
 }

@@ -10,14 +10,16 @@ interface GetTaxonomyTemplate
  * The hierarchy for this template looks like:
  *
  * 1. taxonomy-{taxonomy_slug}-{term_slug}.php
- * 2. taxonomy-{taxonomy_slug}.php
- * 3. taxonomy.php
+ * 2. taxonomy-{taxonomy_slug}-{term_id}.php
+ * 3. taxonomy-{taxonomy_slug}.php
+ * 4. taxonomy.php
  *
  * An example of this is:
  *
  * 1. taxonomy-location-texas.php
- * 2. taxonomy-location.php
- * 3. taxonomy.php
+ * 2. taxonomy-location-67.php
+ * 3. taxonomy-location.php
+ * 4. taxonomy.php
  *
  * The template hierarchy and template path are filterable via the {@see '$type_template_hierarchy'}
  * and {@see '$type_template'} dynamic hooks, where `$type` is 'taxonomy'.
@@ -25,6 +27,7 @@ interface GetTaxonomyTemplate
  * @since 2.5.0
  * @since 4.7.0 The decoded form of `taxonomy-{taxonomy_slug}-{term_slug}.php` was added to the top of the
  *              template hierarchy when the term slug contains multibyte characters.
+ * @since 6.9.0 Added `taxonomy-{taxonomy_slug}-{term_id}.php` to the hierarchy.
  *
  * @see get_query_template()
  *

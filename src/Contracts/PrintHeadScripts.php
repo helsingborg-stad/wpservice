@@ -16,7 +16,7 @@ interface PrintHeadScripts
  *
  * @global bool $concatenate_scripts
  *
- * @return array
+ * @return string[] Handles of the scripts that were printed.
  */
     public function printHeadScripts(): array;
 }

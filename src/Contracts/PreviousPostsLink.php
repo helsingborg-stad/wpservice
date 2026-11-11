@@ -11,5 +11,5 @@ interface PreviousPostsLink
  *
  * @param string $label Optional. Previous page link text.
  */
-    public function previousPostsLink(string $label = null): void;
+    public function previousPostsLink(string|null $label = null): void;
 }

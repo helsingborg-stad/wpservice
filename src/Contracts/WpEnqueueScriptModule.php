@@ -11,6 +11,7 @@ interface WpEnqueueScriptModule
  * will be registered.
  *
  * @since 6.5.0
+ * @since 6.9.0 Added the $args parameter.
  *
  * @param string $id      The identifier of the script module. Should be unique. It will be used in the
  *                                   final import map.
@@ -36,6 +37,12 @@ interface WpEnqueueScriptModule
  *                                   It is added to the URL as a query string for cache busting purposes. If $version
  *                                   is set to false, the version number is the currently installed WordPress version.
  *                                   If $version is set to null, no version is added.
+ * @param array $args    {
+ *     Optional. An array of additional args. Default empty array.
+ *
+ * @type bool                $in_footer     Whether to print the script module in the footer. Only relevant to block themes. Default 'false'. Optional.
+ * @type 'auto'|'low'|'high' $fetchpriority Fetch priority. Default 'auto'. Optional.
+ * }
  */
-    public function wpEnqueueScriptModule(string $id, string $src = '', array $deps = [], string|false|null $version = false): void;
+    public function wpEnqueueScriptModule(string $id, string $src = '', array $deps = [], string|false|null $version = false, array $args = []): void;
 }

@@ -9,9 +9,9 @@ interface GetPostTypes
  *
  * @since 2.9.0
  *
- * @global array $wp_post_types List of post types.
- *
  * @see register_post_type() for accepted arguments.
+ *
+ * @global array $wp_post_types List of post types.
  *
  * @param array|string $args     Optional. An array of key => value arguments to match against
  *                               the post type objects. Default empty array.

@@ -12,8 +12,8 @@ interface GetRegisteredMetadata
  *
  * @since 4.6.0
  *
- * @param string $objectType Type of object metadata is for. Accepts 'post', 'comment', 'term', 'user',
- *                            or any other object type with an associated meta table.
+ * @param string $objectType Type of object metadata is for. Accepts 'blog', 'post', 'comment', 'term',
+ *                            'user', or any other object type with an associated meta table.
  * @param int $objectId   ID of the object the metadata is for.
  * @param string $metaKey    Optional. Registered metadata key. If not specified, retrieve all registered
  *                            metadata for the specified object.

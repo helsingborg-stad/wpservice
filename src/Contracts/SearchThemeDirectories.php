@@ -9,7 +9,7 @@ interface SearchThemeDirectories
  *
  * @since 2.9.0
  *
- * @global array $wp_theme_directories
+ * @global string[] $wp_theme_directories
  *
  * @param bool $force Optional. Whether to force a new directory scan. Default false.
  * @return array|false Valid themes found on success, false on failure.

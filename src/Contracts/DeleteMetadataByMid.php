@@ -11,8 +11,8 @@ interface DeleteMetadataByMid
  *
  * @global wpdb $wpdb WordPress database abstraction object.
  *
- * @param string $metaType Type of object metadata is for. Accepts 'post', 'comment', 'term', 'user',
- *                          or any other object type with an associated meta table.
+ * @param string $metaType Type of object metadata is for. Accepts 'blog', 'post', 'comment', 'term',
+ *                          'user', or any other object type with an associated meta table.
  * @param int $metaId   ID for a specific meta row.
  * @return bool True on successful delete, false on failure.
  */

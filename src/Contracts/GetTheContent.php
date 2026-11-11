@@ -22,5 +22,5 @@ interface GetTheContent
  * @param WP_Post|object|int $post           Optional. WP_Post instance or Post ID/object. Default null.
  * @return string
  */
-    public function getTheContent(string $moreLinkText = null, bool $stripTeaser = false, int|object $post = null): string;
+    public function getTheContent(string|null $moreLinkText = null, bool $stripTeaser = false, int|object|null $post = null): string;
 }

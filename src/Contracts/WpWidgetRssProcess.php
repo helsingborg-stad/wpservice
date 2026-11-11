@@ -5,7 +5,7 @@ namespace WpService\Contracts;
 interface WpWidgetRssProcess
 {
 /**
- * Process RSS feed widget data and optionally retrieve feed items.
+ * Processes RSS feed widget data and optionally retrieve feed items.
  *
  * The feed widget can not have more than 20 items or it will reset back to the
  * default, which is 10.

@@ -9,10 +9,10 @@ interface WpFilterOembedIframeTitleAttribute
  *
  * @since 5.2.0
  *
- * @param string $result The oEmbed HTML result.
+ * @param string|false $result The oEmbed HTML result.
  * @param object $data   A data object result from an oEmbed provider.
  * @param string $url    The URL of the content to be embedded.
- * @return string The filtered oEmbed result.
+ * @return string|false The filtered oEmbed result.
  */
-    public function wpFilterOembedIframeTitleAttribute(string $result, object $data, string $url): string;
+    public function wpFilterOembedIframeTitleAttribute(string|false $result, object $data, string $url): string|false;
 }

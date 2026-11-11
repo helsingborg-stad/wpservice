@@ -7,6 +7,9 @@ interface RestParseDate
 /**
  * Parses an RFC3339 time into a Unix timestamp.
  *
+ * Explicitly check for `false` to detect failure, as zero is a valid return
+ * value on success.
+ *
  * @since 4.4.0
  *
  * @param string $date      RFC3339 timestamp.

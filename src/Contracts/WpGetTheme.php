@@ -9,7 +9,7 @@ interface WpGetTheme
  *
  * @since 3.4.0
  *
- * @global array $wp_theme_directories
+ * @global string[] $wp_theme_directories
  *
  * @param string $stylesheet Optional. Directory name for the theme. Defaults to active theme.
  * @param string $themeRoot Optional. Absolute path of the theme root to look in.

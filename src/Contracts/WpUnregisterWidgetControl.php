@@ -5,7 +5,7 @@ namespace WpService\Contracts;
 interface WpUnregisterWidgetControl
 {
 /**
- * Remove control callback for widget.
+ * Removes control callback for widget.
  *
  * @since 2.2.0
  *

@@ -7,7 +7,7 @@ interface WpRescheduleEvent
 /**
  * Reschedules a recurring event.
  *
- * Mainly for internal use, this takes the UTC timestamp of a previously run
+ * Mainly for internal use, this takes the Unix timestamp (UTC) of a previously run
  * recurring event and reschedules it for its next run.
  *
  * To change upcoming scheduled events, use wp_schedule_event() to
